@@ -191,7 +191,7 @@ st.title("🎬 REDPAD AI Studio")
 st.caption("Content Automation Control Center • Version 2.1 (AI agents)")
 st.info(
     "AI Script Agent ও Bangla Voice Agent যুক্ত হয়েছে। API credentials যোগ করলে "
-    "স্ক্রিপ্ট ও MP3 ভয়েস তৈরি করা যাবে। ভিডিও জেনারেশন ও অটো-পাবলিশ এখনো নেই।"
+    "স্ক্রিপ্ট ও MP3 ভয়েস তৈরি করা যাবে। Video Studio-তে ডেমো MP4 তৈরি করা যায়। অটো-পাবলিশ এখনো নেই।"
 )
 
 channels = db_query("SELECT * FROM channels ORDER BY id DESC")
@@ -228,7 +228,7 @@ with tab_dashboard:
                 for item in items
             ],
             hide_index=True,
-            use_container_width=True,
+            width="stretch",
         )
     else:
         st.info("No content yet. Add a channel, then create a draft for review.")
@@ -329,6 +329,19 @@ with tab_content:
         if item["correction"]:
             st.warning(f"Last Correction Request: {item['correction']}")
 
+        # Review the actual saved render before making an approval decision.
+        has_video_table = db_query("SELECT name FROM sqlite_master WHERE type='table' AND name='content_video'")
+        if has_video_table:
+            previews = db_query("SELECT * FROM content_video WHERE content_id=?", (item["id"],))
+            if previews:
+                preview_path = Path(previews[0]["video_path"])
+                if preview_path.is_file():
+                    st.video(preview_path.read_bytes())
+                    st.download_button("Download review MP4", preview_path.read_bytes(),
+                                       file_name=preview_path.name, mime="video/mp4", key="review_video_download")
+                else:
+                    st.warning("Saved video is missing. Render it again before video approval.")
+
         with st.form(f"review_{item['id']}"):
             updated_script = st.text_area("Edit Script / Notes", value=item["script"], height=220)
             correction = st.text_area(
@@ -349,6 +362,13 @@ with tab_content:
                         "Submit for Review": "Awaiting review",
                         "Approve": "Approved",
                     }
+                    if updated_script != item["script"]:
+                        # An old video cannot represent a newly edited script.
+                        if has_video_table:
+                            db_execute("DELETE FROM content_video WHERE content_id=?", (item["id"],))
+                        if decision == "Approve":
+                            st.error("Script changed. Saved as awaiting review; regenerate the video before approving it.")
+                            statuses[decision] = "Awaiting review"
                     db_execute(
                         """UPDATE content SET script=?, correction=?, status=?, updated_at=?
                            WHERE id=?""",
@@ -404,6 +424,9 @@ with tab_ai:
                            WHERE id=?""",
                         (narration, datetime.now().strftime("%Y-%m-%d %H:%M"), current["id"]),
                     )
+                    # A regenerated script invalidates the previous video preview.
+                    if db_query("SELECT name FROM sqlite_master WHERE type='table' AND name='content_video'"):
+                        db_execute("DELETE FROM content_video WHERE content_id=?", (current["id"],))
                     st.success("Script generated. Review it before approval.")
                     st.rerun()
                 except Exception as exc:
@@ -475,7 +498,7 @@ with tab_ai:
         st.info(
             "AI generation never publishes anything. After listening, use "
             "Approval Dashboard to request corrections or approve the draft. "
-            "Video creation and posting are not enabled."
+            "Demo MP4 creation is available in Video Studio. Posting is not enabled."
         )
 
 st.divider()

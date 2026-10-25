@@ -57,10 +57,13 @@ jobs:
       - name: Test Streamlit app and Video Studio UI
         run: python tests/smoke_streamlit_ui.py
 
+      - name: Test narration mixing and duration validation
+        run: python tests/test_renderer.py
+
       - name: Save demo MP4 for download
         uses: actions/upload-artifact@v6
         with:
           name: redpad-video-demo
-          path: ci_artifacts/redpad-video-demo.mp4
+          path: ci_artifacts/*.mp4
           if-no-files-found: error
           retention-days: 7

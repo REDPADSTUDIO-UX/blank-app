@@ -4,6 +4,7 @@ Produces MP4 storyboard previews, not generative AI video or commercial AI music
 All drafts await human review; nothing is published.
 """
 from __future__ import annotations
+from contextlib import closing
 import hashlib
 import math
 import random
@@ -13,6 +14,7 @@ import sqlite3
 import subprocess
 import tempfile
 import wave
+from uuid import uuid4
 from datetime import datetime
 from pathlib import Path
 import streamlit as st
@@ -120,7 +122,7 @@ def inspect_audio_seconds(path, ff):
 
 def render_mp4(title, script, destination, portrait=True,
                mood="Suspense / Horror", narration=None):
-    """Four-scene 25-60 second HD-ish preview with original ambient audio.
+    """Four-scene 30 second low-resolution preview with original ambient audio.
     narration: optionally user-provided MP3 bytes, not an API call.
     """
     ff = ffmpeg_binary()
@@ -140,7 +142,10 @@ def render_mp4(title, script, destination, portrait=True,
             narration_file.write_bytes(narration)
         duration = 30.0
         if narration_file:
-            duration = max(12.0, min(80.0, inspect_audio_seconds(narration_file, ff) + 1.0))
+            duration = inspect_audio_seconds(narration_file, ff) + 1.0
+            if not 1.0 < duration <= 80.0:
+                raise ValueError("Narration must be nonempty and at most 79 seconds; split longer audio first.")
+            duration = max(12.0, duration)
         width,height = (360,640) if portrait else (640,360)
         stills = scene_images(work, title, portrait)
         clips=[]
@@ -173,7 +178,7 @@ def render_mp4(title, script, destination, portrait=True,
                 "voice":bool(narration_file),"bytes":destination.stat().st_size}
 
 def _query(db, sql, args=()):
-    with sqlite3.connect(db) as connection:
+    with closing(sqlite3.connect(db)) as connection:
         connection.row_factory=sqlite3.Row
         return [dict(row) for row in connection.execute(sql,args)]
 
@@ -187,7 +192,7 @@ def show_video_studio(db_path, media_dir):
     if not channels:
         st.warning("Add a channel in Channel Manager first.")
         return
-    with sqlite3.connect(db_path) as db:
+    with closing(sqlite3.connect(db_path)) as db, db:
         db.execute("""CREATE TABLE IF NOT EXISTS content_video(
            content_id INTEGER PRIMARY KEY,
            video_path TEXT NOT NULL,
@@ -210,7 +215,7 @@ def show_video_studio(db_path, media_dir):
     portrait=st.selectbox("Video ratio",["9:16 vertical","16:9 landscape"],key="vs_ratio").startswith("9:16")
     mood=st.selectbox("Background soundtrack",["Suspense / Horror","Calm / Documentary"],key="vs_mood")
     voice=st.file_uploader("Optional narration MP3 (e.g. Nabanita test)",type=["mp3"],key="vs_audio")
-    if st.button("🎬 Produce preview MP4",disabled=not ffmpeg_binary(),key="vs_render"):
+    if st.button("🎬 Generate demo MP4",disabled=not ffmpeg_binary(),key="vs_render"):
         if chosen and not chosen["script"].strip():
             st.error("Selected draft needs a script first.")
             return
@@ -221,15 +226,15 @@ def show_video_studio(db_path, media_dir):
                 seen={d["topic"] for d in drafts if d["channel_id"]==channel["id"]}
                 title,topic,script=demo_idea(channel,seen)
                 now=datetime.now().strftime("%Y-%m-%d %H:%M")
-                with sqlite3.connect(db_path) as db:
+                with closing(sqlite3.connect(db_path)) as db, db:
                     cid=db.execute(
                         """INSERT INTO content(channel_id,title,topic,script,status,created_at,updated_at)
                            VALUES (?,?,?,?,'Awaiting review',?,?)""",
                         (channel["id"],title,topic,script,now,now)).lastrowid
-            out=Path(media_dir)/"video"/f"draft_{cid}_{hashlib.sha256(script.encode()).hexdigest()[:9]}.mp4"
+            out=Path(media_dir)/"video"/f"draft_{cid}_{uuid4().hex[:12]}.mp4"
             with st.spinner("Rendering video, audio and edits…"):
                 result=render_mp4(title,script,out,portrait,mood,voice.getvalue() if voice else None)
-                with sqlite3.connect(db_path) as db:
+                with closing(sqlite3.connect(db_path)) as db, db:
                     db.execute(
                         """INSERT INTO content_video(content_id,video_path,seconds,voice_included,created_at)
                            VALUES (?,?,?,?,?)
@@ -237,11 +242,14 @@ def show_video_studio(db_path, media_dir):
                            video_path=excluded.video_path,seconds=excluded.seconds,
                            voice_included=excluded.voice_included,created_at=excluded.created_at""",
                         (cid,result["path"],result["seconds"],int(result["voice"]),datetime.now().isoformat(timespec="minutes")))
-            st.success(f"Draft #{cid} created. Not published. Review it in Approval Dashboard.")
-            st.video(Path(result["path"]).read_bytes())
-            st.download_button("Download MP4",Path(result["path"]).read_bytes(),file_name=out.name,mime="video/mp4")
+                    db.execute("UPDATE content SET status='Awaiting review', updated_at=? WHERE id=?",
+                               (datetime.now().isoformat(timespec="minutes"), cid))
+            st.session_state["vs_notice"] = f"Draft #{cid} rendered. Review the video in Approval Dashboard."
+            st.rerun()
         except Exception as exc:
             st.error(f"Preview error: {type(exc).__name__}: {exc}")
+    if "vs_notice" in st.session_state:
+        st.success(st.session_state.pop("vs_notice"))
     st.subheader("Saved previews")
     old=_query(db_path,"""SELECT v.*,c.title,c.status FROM content_video v
                        JOIN content c ON c.id=v.content_id ORDER BY v.created_at DESC LIMIT 12""")

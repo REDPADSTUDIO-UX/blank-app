@@ -6,11 +6,19 @@ production databases, social accounts, or the deployed Codespace.
 from __future__ import annotations
 
 import sqlite3
+import subprocess
+import sys
+import shutil
+import tempfile
 from pathlib import Path
 
 from streamlit.testing.v1 import AppTest
 
-ROOT = Path(__file__).resolve().parents[1]
+SOURCE = Path(__file__).resolve().parents[1]
+TEST_SPACE = tempfile.TemporaryDirectory(prefix="redpad-ui-test-")
+ROOT = Path(TEST_SPACE.name)
+for filename in ("streamlit_app.py", "redpad_video_studio.py"):
+    shutil.copy2(SOURCE / filename, ROOT / filename)
 DB = ROOT / "redpad_studio.db"
 
 
@@ -58,7 +66,64 @@ def main():
     assert 29 <= seconds <= 31 and voice == 0, "Unexpected demo video metadata"
     assert drafts == [("Awaiting review",)], f"Approval gate was bypassed: {drafts}"
     print("PASS: UI button creates playable MP4; draft awaits human approval")
+    artifact_dir = SOURCE / "ci_artifacts"
+    artifact_dir.mkdir(exist_ok=True)
+    shutil.copy2(path, artifact_dir / "redpad-ui-demo.mp4")
     print("PASS: preview", str(path), "size", Path(path).stat().st_size)
+    # Decode the whole file, not just its container header.
+    sys.path.insert(0, str(ROOT))
+    from redpad_video_studio import ffmpeg_binary
+    ff = ffmpeg_binary()
+    decoded = subprocess.run([ff, "-v", "error", "-i", path, "-f", "null", "-"],
+                             capture_output=True, timeout=60)
+    assert decoded.returncode == 0 and not decoded.stderr, decoded.stderr
+    assert len(at.get("video")) >= 2, "Video missing from review or saved previews"
+    downloads = at.get("download_button")
+    assert any(w.proto.label == "Download review MP4" for w in downloads)
+    assert any(w.proto.label == "Download MP4" for w in downloads)
+    for widget in downloads:
+        if "MP4" in widget.proto.label:
+            assert widget.proto.url.endswith(".mp4") and not widget.proto.disabled
+
+
+    def decision(value):
+        next(r for r in at.radio if r.label == "Review Decision").set_value(value)
+        next(b for b in at.button if b.label == "💾 Save Review Decision").click().run()
+        verify_no_exceptions(at, value)
+
+    def status():
+        with sqlite3.connect(DB) as db:
+            return db.execute("SELECT status FROM content WHERE id=1").fetchone()[0]
+
+    # Missing correction text must not change the review state.
+    decision("Request Changes")
+    assert status() == "Awaiting review"
+    next(w for w in at.text_area if w.label.startswith("Correction Instructions")).set_value("Improve ending")
+    decision("Request Changes")
+    assert status() == "Changes requested"
+    decision("Submit for Review")
+    assert status() == "Awaiting review"
+    decision("Approve")
+    assert status() == "Approved"
+
+    # Rendering another version must invalidate approval and use a fresh URL.
+    at.radio(key="vs_source").set_value("Existing draft").run()
+    at.selectbox(key="vs_ratio").set_value("16:9 landscape")
+    at.selectbox(key="vs_mood").set_value("Calm / Documentary")
+    at.button(key="vs_render").click().run()
+    verify_no_exceptions(at, "rerender")
+    assert status() == "Awaiting review", "New render retained old approval"
+    with sqlite3.connect(DB) as db:
+        new_path = db.execute("SELECT video_path FROM content_video WHERE content_id=1").fetchone()[0]
+    assert new_path != path and Path(new_path).is_file()
+    decision("Approve")
+    next(w for w in at.text_area if w.label == "Edit Script / Notes").set_value("Updated script")
+    decision("Approve")
+    assert status() == "Awaiting review", "Changed script approved against stale video"
+    with sqlite3.connect(DB) as db:
+        assert db.execute("SELECT count(*) FROM content_video").fetchone()[0] == 0
+    print("PASS: request changes, review, approve, rerender reset, stale video invalidation")
+    print("PASS: vertical and landscape renders; video and download widgets in both review and studio")
 
 
 if __name__ == "__main__":
