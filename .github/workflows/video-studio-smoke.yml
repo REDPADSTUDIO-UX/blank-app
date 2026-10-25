@@ -1,0 +1,55 @@
+name: Video Studio smoke test
+
+on:
+  push:
+    branches:
+      - feature/video-music-editing-studio
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  video-smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Compile app and video module
+        run: python -m compileall -q streamlit_app.py redpad_video_studio.py
+
+      - name: Render and validate a demo MP4
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from tempfile import TemporaryDirectory
+          import subprocess
+          from redpad_video_studio import ffmpeg_binary, render_mp4
+
+          ff = ffmpeg_binary()
+          assert ff, "FFmpeg is unavailable"
+          with TemporaryDirectory(prefix="redpad_ci_") as tmp:
+              mp4 = Path(tmp) / "ci_test.mp4"
+              result = render_mp4("CI horror demo", "A short Bengali video studio test", mp4, portrait=True)
+              assert mp4.is_file() and mp4.stat().st_size > 3000, "MP4 missing or empty"
+              assert result["seconds"] == 30.0, "Unexpected duration"
+              assert not result["voice"], "Test should not require narration credentials"
+              inspection = subprocess.run([ff, "-hide_banner", "-i", str(mp4)], text=True, capture_output=True, timeout=30)
+              assert "Video:" in inspection.stderr and "Audio:" in inspection.stderr, "Missing MP4 video or audio"
+              print("PASS: 30-second demo video and soundtrack encoded", mp4.stat().st_size, "bytes")
+          PY
