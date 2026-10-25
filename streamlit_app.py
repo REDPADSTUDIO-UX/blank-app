@@ -201,8 +201,8 @@ items = db_query(
        ORDER BY c.id DESC"""
 )
 
-tab_dashboard, tab_channels, tab_content, tab_ai = st.tabs(
-    ["📊 Dashboard", "📺 Channel Manager", "✅ Approval Dashboard", "🤖 AI Production"]
+tab_dashboard, tab_channels, tab_content, tab_ai, tab_video = st.tabs(
+    ["📊 Dashboard", "📺 Channel Manager", "✅ Approval Dashboard", "🤖 AI Production", "🎞️ Video Studio"]
 )
 
 with tab_dashboard:
@@ -480,3 +480,7 @@ with tab_ai:
 
 st.divider()
 st.caption("© 2026 REDPAD AI Studio | Human approval required before publishing")
+
+with tab_video:
+    from redpad_video_studio import show_video_studio
+    show_video_studio(DB_PATH, MEDIA_DIR)
