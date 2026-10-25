@@ -1,0 +1,5 @@
+streamlit>=1.61.1
+requests>=2.31
+openai>=1.50
+pillow>=10.0
+imageio-ffmpeg>=0.6
