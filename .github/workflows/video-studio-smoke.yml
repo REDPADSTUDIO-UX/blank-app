@@ -54,6 +54,9 @@ jobs:
           print("PASS: 30-second demo video and soundtrack encoded", mp4.stat().st_size, "bytes")
           PY
 
+      - name: Test Streamlit app and Video Studio UI
+        run: python tests/smoke_streamlit_ui.py
+
       - name: Save demo MP4 for download
         uses: actions/upload-artifact@v6
         with:
