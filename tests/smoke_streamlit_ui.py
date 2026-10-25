@@ -29,11 +29,11 @@ def main():
     print("PASS: Streamlit app opens and Video Studio tab is present")
 
     # Exercise channel creation via the real Streamlit UI widgets.
-    channel_form = at.form(key="add_channel")
-    inputs = channel_form.text_input
-    assert len(inputs) >= 2, "Channel form inputs missing"
-    inputs[0].set_value("REDPAD CI Horror")
-    inputs[1].set_value("Horror")
+    name_input = next((w for w in at.text_input if w.label == "Channel Name"), None)
+    niche_input = next((w for w in at.text_input if w.label == "Content Category / Niche"), None)
+    assert name_input is not None and niche_input is not None, "Channel form inputs missing"
+    name_input.set_value("REDPAD CI Horror")
+    niche_input.set_value("Horror")
     submit = next((b for b in at.button if b.label == "➕ Save Channel"), None)
     assert submit is not None, "Save Channel form button missing"
     submit.click().run()
