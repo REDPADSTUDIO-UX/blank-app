@@ -45,3 +45,8 @@ Cloud Browser was signed out of GitHub during this audit. The feature branch was
 The script model and Azure Bangla TTS integrations exist, but need working credentials/quota and real provider tests. Video Studio currently accepts narration by manual MP3 upload; the stored Azure recording is not automatically connected to rendering. Channel creation only stores local settings: it does not authorize a YouTube channel or Facebook Page. Publishing has no OAuth flow, token storage, upload client, scheduler, queue, retry logic or remote publish-status tracking. Preferred publishing time and videos-per-day are settings only.
 
 To complete production: connect script-to-scene planning and licensed visual sources, integrate narration/subtitles and higher-resolution editing, add durable database/media storage and a background job queue, implement YouTube/Facebook OAuth and upload adapters, then add scheduling in Asia/Dhaka, approval bound to the rendered version, retries/idempotency, upload status logs and private/test-channel end-to-end publishing tests. Agree provider budgets before enabling paid generation. Old unlinked renders need a retention/cleanup policy.
+
+
+## New AI Film Production beta
+
+The additive production section now has live Runway/Azure/OpenAI adapters, checkpointed scene editing and bilingual captions. See [AI_PRODUCTION_README.md](AI_PRODUCTION_README.md) for current capabilities, cost guards, offline/live distinctions and unverified live-provider limitations. Earlier audit notes above describe the original preview module.

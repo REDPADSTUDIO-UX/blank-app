@@ -19,6 +19,8 @@ TEST_SPACE = tempfile.TemporaryDirectory(prefix="redpad-ui-test-")
 ROOT = Path(TEST_SPACE.name)
 for filename in ("streamlit_app.py", "redpad_video_studio.py"):
     shutil.copy2(SOURCE / filename, ROOT / filename)
+shutil.copytree(SOURCE / "redpad_pipeline", ROOT / "redpad_pipeline")
+shutil.copytree(SOURCE / "assets", ROOT / "assets")
 DB = ROOT / "redpad_studio.db"
 
 

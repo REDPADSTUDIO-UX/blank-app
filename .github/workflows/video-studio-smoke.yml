@@ -31,7 +31,7 @@ jobs:
           python -m pip install -r requirements.txt
 
       - name: Compile app and video module
-        run: python -m compileall -q streamlit_app.py redpad_video_studio.py
+        run: python -m compileall -q streamlit_app.py redpad_video_studio.py redpad_pipeline
 
       - name: Render and validate a demo MP4
         run: |
@@ -60,10 +60,18 @@ jobs:
       - name: Test narration mixing and duration validation
         run: python tests/test_renderer.py
 
+      - name: Test production providers, paid-call guards, checkpoints and real editing
+        run: python tests/test_production_pipeline.py
+
+      - name: Test production UI and bilingual approval integration
+        run: python tests/test_production_ui.py
+
       - name: Save demo MP4 for download
         uses: actions/upload-artifact@v6
         with:
           name: redpad-video-demo
-          path: ci_artifacts/*.mp4
+          path: |
+            ci_artifacts/*.mp4
+            ci_artifacts/*.srt
           if-no-files-found: error
           retention-days: 7

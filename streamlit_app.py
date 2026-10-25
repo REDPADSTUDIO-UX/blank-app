@@ -342,6 +342,24 @@ with tab_content:
                 else:
                     st.warning("Saved video is missing. Render it again before video approval.")
 
+        # Production subtitles are tied to the same rendered file and script version.
+        if has_video_table and previews:
+            has_exports = db_query("SELECT name FROM sqlite_master WHERE type='table' AND name='production_exports'")
+            if has_exports:
+                exports = db_query("SELECT * FROM production_exports WHERE content_id=? AND video_path=?",
+                                   (item["id"], previews[0]["video_path"]))
+                if exports:
+                    export = exports[0]
+                    st.caption("Production type: " + export["mode"].upper() + " · scene-timed bilingual captions")
+                    if export["mode"] == "mock":
+                        st.warning("MOCK TEST: synthetic motion and test tone; no real AI footage or spoken Bangla.")
+                    for language in ("bn", "en"):
+                        subtitle = Path(export["video_path"]).with_name(f"subtitles.{language}.srt")
+                        if subtitle.is_file():
+                            st.download_button(f"Review {language.upper()} subtitles", subtitle.read_bytes(),
+                                               file_name=subtitle.name, mime="application/x-subrip",
+                                               key=f"review_srt_{language}_{item['id']}")
+
         with st.form(f"review_{item['id']}"):
             updated_script = st.text_area("Edit Script / Notes", value=item["script"], height=220)
             correction = st.text_area(
@@ -507,3 +525,6 @@ st.caption("© 2026 REDPAD AI Studio | Human approval required before publishing
 with tab_video:
     from redpad_video_studio import show_video_studio
     show_video_studio(DB_PATH, MEDIA_DIR)
+    st.divider()
+    from redpad_pipeline.ui import show_production_studio
+    show_production_studio(DB_PATH, MEDIA_DIR, get_secret)
