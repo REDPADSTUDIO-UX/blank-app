@@ -81,7 +81,9 @@ def main():
                         expect(page.get_by_role('button', name='Download BN subtitles', exact=True)).to_be_visible()
                         expect(page.get_by_role('button', name='Download EN subtitles', exact=True)).to_be_visible()
                         page.screenshot(path=str(artifacts / 'production-complete.png'))
-                        page.get_by_role('radio', name='Live AI — paid providers', exact=True).check()
+                        live_mode = page.get_by_role('radio', name='Live AI — paid providers', exact=True)
+                        live_mode.press('Space')  # Native keyboard selection avoids the custom radio's covered input.
+                        expect(live_mode).to_be_checked()
                         expect(page.get_by_role('button', name='🎬 Create AI production job', exact=True)).to_be_disabled()
                         assert page.locator('[data-testid="stException"]').count() == 0
                     except Exception:

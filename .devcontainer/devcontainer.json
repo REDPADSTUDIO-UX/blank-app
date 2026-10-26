@@ -23,8 +23,7 @@
   "portsAttributes": {
     "8503": {
       "label": "REDPAD AI Studio",
-      "onAutoForward": "openPreview",
-      "visibility": "private"
+      "onAutoForward": "openPreview"
     }
   },
   "forwardPorts": [
