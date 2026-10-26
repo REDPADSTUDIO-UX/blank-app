@@ -80,7 +80,8 @@ jobs:
           retention-days: 7
 
   browser-smoke-test:
-    runs-on: ubuntu-latest
+    # Match the pinned browser runtime to a supported OS, rather than moving latest.
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v6
