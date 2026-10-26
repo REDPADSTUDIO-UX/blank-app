@@ -65,7 +65,10 @@ def main():
                             expect(page.get_by_role('option').filter(has_text=family).first).to_be_visible()
                         page.screenshot(path=str(artifacts / 'multi-model-selection.png'))
                         page.keyboard.press('Escape')
-                        page.get_by_role('textbox', name='Topic / story / existing Bangla script', exact=True).fill('শেষ ট্রেন — free browser test')
+                        topic = page.get_by_role('textbox', name='Topic / story / existing Bangla script', exact=True)
+                        topic.fill('শেষ ট্রেন — free browser test')
+                        topic.press('Tab')  # Streamlit commits a textarea edit on blur.
+                        expect(page.get_by_role('button', name='🧪 Create offline production test', exact=True)).to_be_enabled(timeout=30000)
                         page.get_by_role('button', name='🧪 Create offline production test', exact=True).click()
                         expect(page.get_by_text('Status: complete', exact=False)).to_be_visible(timeout=180000)
                         output = page.get_by_role('button', name='Download production MP4', exact=True)
