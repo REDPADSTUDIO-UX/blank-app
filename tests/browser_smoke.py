@@ -49,7 +49,7 @@ def main():
                 else:
                     raise RuntimeError('Test app startup timeout')
                 with sync_playwright() as playwright:
-                    browser = playwright.chromium.launch(headless=True)
+                    browser = playwright.chromium.launch(channel='chrome', headless=True)
                     page = browser.new_page(viewport={'width': 1440, 'height': 1200})
                     try:
                         page.goto(f'http://127.0.0.1:{port}', wait_until='domcontentloaded')
@@ -89,11 +89,13 @@ def main():
                         expect(page.get_by_role('button', name='🎬 Create AI production job', exact=True)).to_be_disabled()
                         assert page.locator('[data-testid="stException"]').count() == 0
                     except Exception:
+                        diagnostics = page.locator('video').evaluate_all("els => els.map(v => ({readyState:v.readyState, networkState:v.networkState, duration:Number.isFinite(v.duration)?v.duration:null, error:v.error?.code, mp4:v.canPlayType('video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"')}))")
+                        (artifacts / 'video-diagnostics.json').write_text(__import__('json').dumps(diagnostics))
                         page.screenshot(path=str(artifacts / 'browser-failure.png'))
                         (artifacts / 'browser-dom.html').write_text(page.content(), encoding='utf-8')
                         raise
                     browser.close()
-                    print('PASS: real Chromium dashboard, all model families, free end-to-end job, MP4 download, subtitles, paid gate')
+                    print('PASS: real Chrome dashboard, all model families, free end-to-end job, MP4 download, subtitles, paid gate')
             finally:
                 process.terminate()
                 process.wait(timeout=15)
