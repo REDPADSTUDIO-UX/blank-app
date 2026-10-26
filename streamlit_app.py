@@ -13,6 +13,30 @@ import streamlit as st
 
 st.set_page_config(page_title="REDPAD AI Studio", page_icon="🎬", layout="wide")
 
+# Optional single-owner gate for externally hosted demos. Disabled by default
+# in local Codespaces and CI. No credentials are logged or committed to Git.
+if os.environ.get("REDPAD_REQUIRE_PREVIEW_LOGIN", "").lower() == "true":
+    import hmac as _redpad_hmac
+
+    _expected = os.environ.get("REDPAD_DASHBOARD_PASSWORD", "")
+    if not _expected:
+        st.error("Private preview is locked until its hosting password is configured.")
+        st.stop()
+    if not st.session_state.get("redpad_preview_authenticated", False):
+        st.title("🔐 REDPAD AI Studio — Private Preview")
+        st.caption("Access is restricted. Paid AI generation is disabled on this preview.")
+        with st.form("redpad_preview_signin"):
+            _entered = st.text_input("Preview password", type="password")
+            _submit = st.form_submit_button("Open dashboard")
+        if _submit:
+            if _redpad_hmac.compare_digest(_entered, _expected):
+                st.session_state["redpad_preview_authenticated"] = True
+                st.rerun()
+            else:
+                st.error("Incorrect preview password.")
+        st.stop()
+
+
 DB_PATH = Path(__file__).with_name("redpad_studio.db")
 MEDIA_DIR = Path(__file__).with_name("redpad_media")
 SCRIPT_MODEL = "gpt-4.1-mini"
