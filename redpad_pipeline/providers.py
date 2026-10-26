@@ -7,6 +7,7 @@ from urllib.parse import urljoin, urlparse
 import html
 import requests
 from .models import ProductionError, validate_plan
+from .video_models import resolve_model, scene_payload
 
 RUNWAY = 'https://api.dev.runwayml.com/v1'
 VERSION = '2024-11-06'
@@ -74,8 +75,9 @@ def safe_download(url, destination, session=None):
 class LiveGateway:
     mode = 'live'
 
-    def __init__(self, config, seconds, approved_usd, session=None):
-        config.require(seconds, approved_usd)
+    def __init__(self, config, seconds, approved_usd, session=None, video_model='gen4.5'):
+        self.video_model = resolve_model(video_model)
+        config.require(seconds, approved_usd, self.video_model)
         if not re.fullmatch(r'[a-z0-9-]+', config.azure_region):
             raise ProductionError('Invalid Azure region.')
         self.approved_seconds = seconds
@@ -134,8 +136,11 @@ class LiveGateway:
         temporary.replace(path)
 
     def submit_video(self, scene, ratio):
-        result = payload(request(self.session, 'POST', RUNWAY + '/text_to_video', headers=self.headers,
-            json={'model': 'gen4.5', 'promptText': scene['prompt'], 'duration': scene['seconds'], 'ratio': ratio}))
+        # The approved and checkpointed model is fixed. NEVER silently switch models
+        # after an uncertain billable POST; that could charge twice.
+        spec = scene_payload(self.video_model, scene, ratio)
+        result = payload(request(self.session, 'POST', RUNWAY + '/text_to_video',
+                                 headers=self.headers, json=spec))
         task_id = result.get('id')
         if not isinstance(task_id, str) or not re.fullmatch(r'[a-zA-Z0-9_-]{1,100}', task_id):
             raise ProductionError('Provider did not return a valid task ID; reconcile the submission in Runway.')
