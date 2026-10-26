@@ -7,6 +7,7 @@ from contextlib import closing
 from pathlib import Path
 import streamlit as st
 from .models import Config, ProductionError, estimate_usd, mock_plan, digest
+from .video_models import VIDEO_MODELS, AUTO, resolve_model, video_cost_usd
 from .providers import LiveGateway
 from .media import MockGateway, shaped_font
 from redpad_video_studio import ffmpeg_binary
@@ -17,7 +18,8 @@ def launch(db_path, root, config):
     state = load_state(root)
     if state['mode'] == 'live':
         plan = json.loads((root / 'plan.json').read_text(encoding='utf-8'))
-        gateway = LiveGateway(config, plan['seconds'], state['approved_usd'])
+        gateway = LiveGateway(config, plan['seconds'], state['approved_usd'],
+                              video_model=plan.get('video_model', 'gen4.5'))
     else:
         gateway = MockGateway()
     worker = threading.Thread(target=run_job, args=(db_path, root, gateway), daemon=True,
@@ -26,7 +28,7 @@ def launch(db_path, root, config):
 
 
 def show_production_studio(db_path, media_dir, get_secret):
-    st.subheader('🎥 AI Film Production — pipeline beta')
+    st.subheader('🎥 Multi-Model AI Video Production — beta')
     st.caption('Topic → Bangla script + English translation → moving scenes → narration → music/SFX → bilingual MP4 → human review')
     initialize(db_path)
     config = Config.load(get_secret)
@@ -38,7 +40,7 @@ def show_production_studio(db_path, media_dir, get_secret):
     mode = st.radio('Production mode', ['Offline mock test — free', 'Live AI — paid providers'], key='prod_mode')
     live = mode.startswith('Live')
     if live:
-        st.warning('Live uses OpenAI, Azure Speech and Runway Gen-4.5. No free generation is promised. Existing consumer subscriptions do not supply API credits.')
+        st.warning('Live requires OpenAI, Azure Speech and Runway Developer API credits. Available model options include Seedance, WAN, Kling, Grok and Runway; they are accessed via the Runway API, not separate vendor accounts. No free generation is promised.')
         required = [('RUNWAY_API_KEY', config.runway_key), ('OPENAI_API_KEY', config.openai_key),
                     ('AZURE_SPEECH_KEY', config.azure_key), ('AZURE_SPEECH_REGION', config.azure_region)]
         missing = [name for name, value in required if not value]
@@ -54,22 +56,30 @@ def show_production_studio(db_path, media_dir, get_secret):
     seconds = st.selectbox('Finished video length (seconds)', [30, 60, 120, 300, 600], key='prod_seconds')
     ratio = st.selectbox('Production aspect ratio', ['720:1280', '1280:720'], key='prod_ratio')
     voice = st.selectbox('Production Bangla voice', ['bn-BD-PradeepNeural', 'bn-BD-NabanitaNeural'], key='prod_voice')
+    model_choice = st.selectbox('Video generation model',
+        [AUTO] + list(VIDEO_MODELS),
+        format_func=lambda value: ('Automatic — lowest estimated cost' if value == AUTO
+                        else VIDEO_MODELS[value]['label']), key='prod_video_model')
+    video_model = resolve_model(model_choice)
+    st.caption(f"Selected model: {VIDEO_MODELS[video_model]['label']} · "
+               f"Estimated 720p video only: US${video_cost_usd(seconds, video_model):.2f} for {seconds}s. "
+               "No provider call has been made. Model pricing checked 26 Oct 2026.")
     music = st.file_uploader('Optional licensed background music (MP3/WAV, max 20 MB)', type=['mp3', 'wav'], key='prod_music')
     oversized_music = bool(music and music.size > 20 * 1024 * 1024)
     if oversized_music:
         st.error('Music file exceeds the 20 MB limit.')
-    quote = estimate_usd(seconds)
+    quote = estimate_usd(seconds, video_model)
     agreed = False
-    fingerprint = digest(json.dumps([topic, seconds, ratio, voice, channel_id,
+    fingerprint = digest(json.dumps([topic, seconds, ratio, voice, channel_id, model_choice, video_model,
                           hashlib.sha256(music.getbuffer()).hexdigest() if music and not oversized_music else '']))
     if st.session_state.get('prod_consent_fingerprint') != fingerprint or st.session_state.pop('prod_reset_consent', False):
         st.session_state['prod_consent'] = False
         st.session_state['prod_consent_fingerprint'] = fingerprint
     if live:
-        st.write(f'Planning estimate: US${quote:.2f} per job; video alone US${seconds*.12:.2f}. Taxes, reruns and pricing changes can increase actual billing. Checked 25 Oct 2026.')
+        st.write(f'Planning estimate: US${quote:.2f} per job; video alone US${video_cost_usd(seconds, video_model):.2f}. Taxes, reruns and pricing changes can increase actual billing. Checked 26 Oct 2026.')
         if config.max_job_usd < quote:
             st.info(f'Owner job limit REDPAD_MAX_JOB_USD must be at least US${quote:.2f}.')
-        st.caption('The displayed estimate is a local guard, not a provider invoice cap. Use provider-side billing controls too. No automatic billed retries.')
+        st.caption('Automatic selection resolves ONCE before approval; it is not an automatic paid retry or provider-failure fallback. Quote is a local guard, not a provider invoice cap. Use provider billing controls.')
         agreed = st.checkbox(f'I authorize this {seconds}s job at the displayed US${quote:.2f} estimate.', key='prod_consent')
     enabled = bool(topic.strip()) and not oversized_music and (not live or (agreed and config.paid_enabled and config.max_job_usd >= quote
               and all((config.runway_key, config.azure_key, config.azure_region, config.openai_key))))
@@ -81,11 +91,13 @@ def show_production_studio(db_path, media_dir, get_secret):
             if not ffmpeg_binary():
                 raise ProductionError('FFmpeg is unavailable.')
             if live:
-                gateway = LiveGateway(config, seconds, quote)
+                gateway = LiveGateway(config, seconds, quote, video_model=video_model)
                 with st.spinner('Planning the film and translating subtitles…'):
                     plan = gateway.plan(topic, seconds, ratio, voice)
+                    plan['video_model'] = video_model
             else:
                 plan = mock_plan(topic, seconds, ratio, voice)
+                plan['video_model'] = video_model
             root = create_job(db_path, media_dir, channel_id, plan, 'live' if live else 'mock', quote if live else 0)
             if music:
                 (root / 'music.upload').write_bytes(music.getvalue())
