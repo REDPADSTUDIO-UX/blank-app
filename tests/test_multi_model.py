@@ -83,6 +83,12 @@ class MultiModelContract(unittest.TestCase):
                 self.assertFalse(request_kwargs['allow_redirects'])
                 self.assertEqual(gateway.video_model, model)
 
+    def test_utf16_prompt_limit(self):
+        scene = mock_plan('Test')['scenes'][0]
+        scene['prompt'] = '🎬' * 501
+        with self.assertRaises(ProductionError):
+            scene_payload('gen4.5', scene, '720:1280')
+
     def test_saved_jobs_lock_model_before_billing(self):
         with tempfile.TemporaryDirectory(prefix='redpad-model-test-') as tmp:
             base = Path(tmp)

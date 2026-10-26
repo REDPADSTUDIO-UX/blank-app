@@ -7,6 +7,11 @@ on 2026-10-26 (USD 0.01 per credit), not live quotes or bill guarantees.
 """
 from .models import ProductionError
 
+VERIFIED_ON = "2026-10-26"
+API_ENDPOINT = "https://api.dev.runwayml.com/v1/text_to_video"
+OFFICIAL_INPUTS = "https://docs.dev.runwayml.com/assets/inputs/"
+OFFICIAL_PRICING = "https://docs.dev.runwayml.com/guides/pricing/"
+
 # Fixed 720p text-to-video capabilities: all options support a 6-second scene.
 # Do not silently substitute a different model after a billed submission.
 VIDEO_MODELS = {
@@ -78,10 +83,20 @@ def scene_payload(model, scene, ratio):
     if not 4 <= length <= 10:  # planner uses 6 seconds
         raise ProductionError('Selected model needs a scene between 4 and 10 seconds.')
     prompt = scene.get('prompt')
-    if not isinstance(prompt, str) or not 1 <= len(prompt) <= 1000:
+    if not isinstance(prompt, str) or not 1 <= len(prompt.encode("utf-16-le")) // 2 <= 1000:
         raise ProductionError('Scene prompt must be 1–1000 characters.')
     payload = {'model': model, 'promptText': prompt, 'duration': length, 'ratio': ratio}
     audio = VIDEO_MODELS[model]['audio']
     if audio is not None:
         payload['audio'] = audio
     return payload
+
+
+def catalog_rows(seconds=30):
+    """Public documentation snapshot only; this function never contacts a provider."""
+    return [{"Model": data["label"], "Model ID": model,
+             "USD / second (720p)": data["usd_per_second"],
+             f"{seconds}s video USD": video_cost_usd(seconds, model),
+             "Input": "Text prompt + duration + pixel ratio",
+             "Live validation": "Not run — paid calls blocked", "Verified": VERIFIED_ON}
+            for model, data in VIDEO_MODELS.items()]

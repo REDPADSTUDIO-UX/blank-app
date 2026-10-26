@@ -7,7 +7,7 @@ from contextlib import closing
 from pathlib import Path
 import streamlit as st
 from .models import Config, ProductionError, estimate_usd, mock_plan, digest
-from .video_models import VIDEO_MODELS, AUTO, resolve_model, video_cost_usd
+from .video_models import VIDEO_MODELS, AUTO, resolve_model, video_cost_usd, catalog_rows, OFFICIAL_PRICING, OFFICIAL_INPUTS
 from .providers import LiveGateway
 from .media import MockGateway, shaped_font
 from redpad_video_studio import ffmpeg_binary
@@ -34,8 +34,23 @@ def show_production_studio(db_path, media_dir, get_secret):
     config = Config.load(get_secret)
     with closing(sqlite3.connect(db_path)) as db:
         channels = db.execute('SELECT id,name FROM channels ORDER BY id DESC').fetchall()
+    st.write('Secure configuration status — presence only; no provider request')
+    badges = st.columns(3)
+    badges[0].metric('Runway secret', 'Present' if config.runway_key else 'Not available here')
+    badges[1].metric('Script secret', 'Present' if config.openai_key else 'Not available here')
+    badges[2].metric('Bangla voice credentials', 'Present' if config.azure_key and config.azure_region else 'Not available here')
+    st.caption('Presence does not prove validity, credit balance or model access. Codespaces secrets can be checked only inside that Codespace.')
+    with st.expander('Verified multi-model catalog and estimated costs', expanded=False):
+        st.dataframe(catalog_rows(), hide_index=True, width='stretch')
+        st.markdown(f'[Official API pricing]({OFFICIAL_PRICING}) · [Official input formats]({OFFICIAL_INPUTS})')
+        st.caption('All listed models use the Runway Developer API. Cheapest means the lowest listed 720p text-to-video price; no paid fallback retries.')
     if not channels:
-        st.info('Add a channel above before creating a production job.')
+        st.info('No channel yet. Start a clearly labelled demo channel below or add your own channel in Channel Manager.')
+        if st.button('🧪 Start free demo workspace', key='prod_demo_workspace'):
+            with closing(sqlite3.connect(db_path)) as db, db:
+                db.execute("INSERT INTO channels(name,platform,niche,videos_per_day,publish_time) VALUES (?,?,?,?,?)",
+                           ('REDPAD Demo (Mock)', 'YouTube', 'Horror demo — no publishing', 0, '18:00'))
+            st.rerun()
         return
     mode = st.radio('Production mode', ['Offline mock test — free', 'Live AI — paid providers'], key='prod_mode')
     live = mode.startswith('Live')

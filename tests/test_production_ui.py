@@ -22,6 +22,8 @@ def main():
             shutil.copytree(SOURCE / name, root / name)
         at = AppTest.from_file(str(root / 'streamlit_app.py'), default_timeout=240).run()
         assert not at.exception
+        assert any(w.key == 'prod_demo_workspace' for w in at.button)
+        assert any('Runway secret' == w.label for w in at.metric)
         next(w for w in at.text_input if w.label == 'Channel Name').set_value('Production test')
         next(w for w in at.text_input if w.label == 'Content Category / Niche').set_value('Horror')
         next(b for b in at.button if b.label == '➕ Save Channel').click().run()
@@ -29,6 +31,9 @@ def main():
         at.radio(key='prod_mode').set_value('Live AI — paid providers').run()
         at.text_area(key='prod_topic').set_value('শেষ ট্রেনের গল্প').run()
         assert at.button(key='prod_create').disabled, 'Paid calls available without server approval/credentials'
+        for choice in at.selectbox(key='prod_video_model').options:
+            assert choice
+        assert len(at.selectbox(key='prod_video_model').options) == 8
         at.radio(key='prod_mode').set_value('Offline mock test — free').run()
         # Only worker scheduling is replaced; real engine, FFmpeg and database run.
         def test_worker(db, job, config):
