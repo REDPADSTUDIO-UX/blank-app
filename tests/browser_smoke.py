@@ -54,6 +54,7 @@ def main():
                     try:
                         page.goto(f'http://127.0.0.1:{port}', wait_until='domcontentloaded')
                         expect(page.get_by_role('heading', name='🎬 REDPAD AI Studio', exact=True)).to_be_visible(timeout=30000)
+                        expect(page.get_by_text('Total Channels', exact=True)).to_be_visible()
                         page.screenshot(path=str(artifacts / 'dashboard.png'))
                         page.get_by_role('tab', name='🎞️ Video Studio', exact=True).click()
                         page.get_by_role('button', name='🧪 Start free demo workspace', exact=True).click()
@@ -80,6 +81,7 @@ def main():
                         assert destination.stat().st_size > 10000
                         expect(page.get_by_role('button', name='Download BN subtitles', exact=True)).to_be_visible()
                         expect(page.get_by_role('button', name='Download EN subtitles', exact=True)).to_be_visible()
+                        page.wait_for_function("() => { const all = document.querySelectorAll('video'); const v = all[all.length - 1]; return v && v.readyState >= 2 && v.duration >= 29; }", timeout=30000)
                         page.screenshot(path=str(artifacts / 'production-complete.png'))
                         live_mode = page.get_by_role('radio', name='Live AI — paid providers', exact=True)
                         live_mode.press('Space')  # Native keyboard selection avoids the custom radio's covered input.
