@@ -94,7 +94,9 @@ def run_job(db_path, root, gateway, max_polls=90, sleep=time.sleep):
             return state
         plan = validate_plan(json.loads((root / 'plan.json').read_text(encoding='utf-8')))
         if (state['plan_hash'] != digest(canonical(plan)) or gateway.mode != state['mode']
-                or (gateway.mode == 'live' and gateway.approved_seconds != plan['seconds'])):
+                or (gateway.mode == 'live' and (
+                    gateway.approved_seconds != plan['seconds'] or
+                    gateway.video_model != plan.get('video_model', 'gen4.5')))):
             raise ProductionError('Saved job plan or provider mode changed; create a fresh job.')
         state.update(phase='running', error='')
         write_json(root / 'state.json', state)
