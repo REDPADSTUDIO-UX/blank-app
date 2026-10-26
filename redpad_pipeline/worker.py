@@ -27,7 +27,8 @@ def main():
     state = load_state(root)
     import json
     plan = json.loads((root / 'plan.json').read_text())
-    gateway = LiveGateway(config, plan['seconds'], state['approved_usd']) if state['mode'] == 'live' else MockGateway()
+    gateway = LiveGateway(config, plan['seconds'], state['approved_usd'],
+                          video_model=plan.get('video_model', 'gen4.5')) if state['mode'] == 'live' else MockGateway()
     result = run_job(args.db, root, gateway)
     print(result['job_id'], result['phase'])
     raise SystemExit(0 if result['phase'] in ('complete', 'waiting') else 1)
