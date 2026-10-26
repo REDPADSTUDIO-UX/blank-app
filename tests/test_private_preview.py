@@ -33,7 +33,7 @@ def main():
             form_input.set_value("wrong-password")
             next(b for b in at.button if b.label == "Open dashboard").click().run()
             assert not at.tabs, "Incorrect password unlocked preview"
-            assert any("Incorrect" in x.message for x in at.error), "Missing login error"
+            assert any("Incorrect" in x.value for x in at.error), "Missing login error"
 
             next(x for x in at.text_input if x.label == "Preview password"
                  ).set_value(env["REDPAD_DASHBOARD_PASSWORD"])
@@ -48,7 +48,7 @@ def main():
             other = AppTest.from_file(str(workspace / "streamlit_app.py"),
                                       default_timeout=45).run()
             assert not other.tabs, "Preview unexpectedly opened without a password"
-            assert any("locked" in x.message for x in other.error)
+            assert any("locked" in x.value for x in other.error)
             print("PASS: missing server password fails closed")
 
 
