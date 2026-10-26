@@ -63,6 +63,9 @@ jobs:
       - name: Test production providers, paid-call guards, checkpoints and real editing
         run: python tests/test_production_pipeline.py
 
+      - name: Test multi-model selection and budget controls (offline)
+        run: python -m unittest tests/test_multi_model.py -v
+
       - name: Test production UI and bilingual approval integration
         run: python tests/test_production_ui.py
 
