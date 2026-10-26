@@ -28,10 +28,10 @@ class Config:
                    get('AZURE_SPEECH_REGION'), get('OPENAI_API_KEY'),
                    str(get('REDPAD_ENABLE_PAID_GENERATION')).lower() == 'true', cap)
 
-    def require(self, seconds, approved_usd):
+    def require(self, seconds, approved_usd, video_model='gen4.5'):
         if type(seconds) is not int or not 30 <= seconds <= 600:
             raise ProductionError('Live job duration must be 30–600 seconds.')
-        quote = estimate_usd(seconds)
+        quote = estimate_usd(seconds, video_model)
         if not self.paid_enabled:
             raise ProductionError('Paid generation is disabled by the server owner.')
         if not all((self.runway_key, self.azure_key, self.azure_region, self.openai_key)):
@@ -40,10 +40,10 @@ class Config:
             raise ProductionError('Explicit job cost approval and a sufficient server job limit are required.')
 
 
-def estimate_usd(seconds):
-    # Gen-4.5: 12 credits/sec, $0.01/credit (checked 2026-10-25).
-    # The additional $0.25 / 30s is a planning/TTS allowance, NOT a price guarantee.
-    return round(seconds * .12 + seconds / 30 * .25, 2)
+def estimate_usd(seconds, video_model='gen4.5'):
+    # Planning allowance only, not a provider invoice guarantee. Prices may change.
+    from .video_models import estimate_job_usd
+    return estimate_job_usd(seconds, video_model)
 
 
 def digest(text):
@@ -82,6 +82,13 @@ def validate_plan(plan):
         raise ProductionError('Unsupported aspect ratio.')
     if plan.get('voice') not in ('bn-BD-PradeepNeural', 'bn-BD-NabanitaNeural'):
         raise ProductionError('Unsupported Bangla voice.')
+    # Backward compatible: previous saved plans did not record the provider model.
+    if 'video_model' in plan:
+        from .video_models import resolve_model
+        chosen = plan['video_model']
+        if chosen == 'auto_lowest_cost':
+            raise ProductionError('Resolve automatic model selection before saving a job.')
+        resolve_model(chosen)
     return plan
 
 
