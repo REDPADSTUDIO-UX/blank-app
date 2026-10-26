@@ -66,6 +66,9 @@ jobs:
       - name: Test multi-model selection and budget controls (offline)
         run: python -m unittest tests/test_multi_model.py -v
 
+      - name: Test private Render dashboard login
+        run: python tests/test_private_preview.py
+
       - name: Test production UI and bilingual approval integration
         run: python tests/test_production_ui.py
 
