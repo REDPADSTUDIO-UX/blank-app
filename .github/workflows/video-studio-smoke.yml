@@ -72,6 +72,9 @@ jobs:
       - name: Test production UI and bilingual approval integration
         run: python tests/test_production_ui.py
 
+      - name: Test offline Storyboard Studio versioning, sketches and approval
+        run: python tests/test_storyboard.py
+
       - name: Test YouTube OAuth, approval and scheduling without Google requests
         run: python tests/test_youtube.py
 
