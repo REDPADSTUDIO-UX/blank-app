@@ -26,7 +26,9 @@ def main():
         for name in ('redpad_pipeline', 'assets'):
             shutil.copytree(SOURCE / name, root / name)
         env = dict(os.environ)
-        for key in ('RUNWAY_API_KEY', 'OPENAI_API_KEY', 'AZURE_SPEECH_KEY', 'AZURE_SPEECH_REGION'):
+        for key in ('RUNWAY_API_KEY', 'OPENAI_API_KEY', 'AZURE_SPEECH_KEY', 'AZURE_SPEECH_REGION',
+                    'GOOGLE_OAUTH_CLIENT_ID', 'GOOGLE_OAUTH_CLIENT_SECRET', 'GOOGLE_OAUTH_REDIRECT_URI',
+                    'REDPAD_YOUTUBE_DATABASE_URL', 'REDPAD_YOUTUBE_TOKEN_KEY'):
             env.pop(key, None)
         env['REDPAD_ENABLE_PAID_GENERATION'] = 'false'
         with socket.socket() as listener:
@@ -49,7 +51,7 @@ def main():
                 else:
                     raise RuntimeError('Test app startup timeout')
                 with sync_playwright() as playwright:
-                    browser = playwright.chromium.launch(channel='chrome', headless=True)
+                    browser = playwright.chromium.launch(channel=os.environ.get('REDPAD_TEST_BROWSER_CHANNEL', 'chrome'), headless=True)
                     page = browser.new_page(viewport={'width': 1440, 'height': 1200})
                     try:
                         page.goto(f'http://127.0.0.1:{port}', wait_until='domcontentloaded')
@@ -87,6 +89,15 @@ def main():
                         live_mode.press('Space')  # Native keyboard selection avoids the custom radio's covered input.
                         expect(live_mode).to_be_checked()
                         expect(page.get_by_role('button', name='🎬 Create AI production job', exact=True)).to_be_disabled()
+                        page.get_by_role('tab', name='🔗 YouTube Connect', exact=True).click()
+                        expect(page.locator('[data-testid="stMetric"]').filter(has_text='Nishikotha Google connection').get_by_text('Not connected', exact=True)).to_be_visible()
+                        page.get_by_role('button', name='Register Nishikotha in Studio (local only)', exact=True).click()
+                        expect(page.get_by_role('button', name='Prepare Google Connect', exact=True)).to_be_disabled()
+                        page.get_by_role('button', name='Connect MOCK channel — no Google authorization', exact=True).click()
+                        expect(page.get_by_text('MOCK connected', exact=True)).to_be_visible()
+                        expect(page.get_by_role('button', name='Live upload / publish — locked in this release', exact=True)).to_be_disabled()
+                        expect(page.locator('[data-testid="stMetric"]').filter(has_text='Nishikotha Google connection').get_by_text('Not connected', exact=True)).to_be_visible()
+                        page.screenshot(path=str(artifacts / 'youtube-connect-mock.png'))
                         assert page.locator('[data-testid="stException"]').count() == 0
                     except Exception:
                         diagnostics = page.locator('video').evaluate_all("els => els.map(v => ({readyState:v.readyState, networkState:v.networkState, duration:Number.isFinite(v.duration)?v.duration:null, error:v.error?.code, mp4:v.canPlayType('video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"')}))")
@@ -95,7 +106,7 @@ def main():
                         (artifacts / 'browser-dom.html').write_text(page.content(), encoding='utf-8')
                         raise
                     browser.close()
-                    print('PASS: real Chrome dashboard, all model families, free end-to-end job, MP4 download, subtitles, paid gate')
+                    print('PASS: real browser dashboard, model selector, free job, MP4, subtitles, paid gate, clearly separate YouTube mock connection and locked live writes')
             finally:
                 process.terminate()
                 process.wait(timeout=15)

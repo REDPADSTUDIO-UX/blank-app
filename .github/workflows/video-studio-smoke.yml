@@ -72,6 +72,12 @@ jobs:
       - name: Test production UI and bilingual approval integration
         run: python tests/test_production_ui.py
 
+      - name: Test YouTube OAuth, approval and scheduling without Google requests
+        run: python tests/test_youtube.py
+
+      - name: Test YouTube Connect dashboard with a real offline MP4
+        run: python tests/test_youtube_ui.py
+
       - name: Save demo MP4 for download
         uses: actions/upload-artifact@v6
         with:

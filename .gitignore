@@ -165,5 +165,7 @@ cython_debug/
 # REDPAD local state and generated test/media output
 redpad_studio.db
 redpad_studio.db-*
+redpad_youtube_mock.db
+redpad_youtube_mock.db-*
 redpad_media/
 ci_artifacts/
