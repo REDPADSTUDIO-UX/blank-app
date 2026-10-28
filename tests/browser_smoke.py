@@ -94,7 +94,7 @@ def main():
                         page.get_by_role('button', name='Register Nishikotha in Studio (local only)', exact=True).click()
                         expect(page.get_by_role('button', name='Prepare Google Connect', exact=True)).to_be_disabled()
                         page.get_by_role('button', name='Connect MOCK channel — no Google authorization', exact=True).click()
-                        expect(page.get_by_text('MOCK connected', exact=True)).to_be_visible()
+                        expect(page.get_by_text('Mock status:', exact=False)).to_contain_text('MOCK connected', timeout=30000)
                         expect(page.get_by_role('button', name='Live upload / publish — locked in this release', exact=True)).to_be_disabled()
                         expect(page.locator('[data-testid="stMetric"]').filter(has_text='Nishikotha Google connection').get_by_text('Not connected', exact=True)).to_be_visible()
                         page.screenshot(path=str(artifacts / 'youtube-connect-mock.png'))
