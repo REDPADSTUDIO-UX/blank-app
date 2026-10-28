@@ -104,17 +104,31 @@ instead of depending on a timer in a sleeping Render free web process.
 
 ### Current environment observation — 28 October 2026
 
-- Google Cloud Console displayed **Google Cloud access blocked**, requiring the
-  owner to enable 2-Step Verification/MFA. No security settings were changed,
-  no OAuth client was created, and no Google permission was accepted.
-- The original Render service `redpad-ai-studio-private-preview` was live on
-  `06915ba`, with auto-deploy off. Its dashboard showed one local channel and
-  one awaiting-review draft. It was not redeployed because preserving those
-  existing ephemeral records/media requires a backup/migration first.
-- Python 3.12 and locked Python 3.14 environments passed the new authorization
-  and widget tests. The local Chromium process could not start due to the
-  execution environment's socket restriction; the real-browser check is also
-  wired into GitHub CI, where its final result must be inspected separately.
+- Owner enabled MFA and completed the Google Auth Platform consent setup.
+- Google Cloud project `feisty-truth-434909-m6` has YouTube Data API v3 enabled.
+- Consent audience remains External / Testing. Only
+  `https://www.googleapis.com/auth/youtube.readonly` is configured, with
+  `rbpritam04@gmail.com` registered as the test user.
+- The owner explicitly authorized creation of the Web application OAuth client
+  **REDPAD AI Studio — Nishikotha Read Only**. The authorized callback is
+  `https://redpad-ai-studio-private-preview.onrender.com/`.
+- Client ID, Client Secret and redirect URI are stored in the existing Render
+  service's private environment settings under `GOOGLE_OAUTH_CLIENT_ID`,
+  `GOOGLE_OAUTH_CLIENT_SECRET` and `GOOGLE_OAUTH_REDIRECT_URI`. Values were
+  transferred directly in the browser without printing or committing them.
+  Saved values were compared to their originals using boolean-only checks;
+  secret fields were hidden again.
+- Render **Save only** was used. Deploy history still showed only the original
+  live deployment of `06915ba`; no deployment/restart was initiated. The
+  existing five environment variables were preserved.
+- No PostgreSQL vault exists in the confirmed Render workspace. Durable vault
+  configuration and its separate encryption key remain pending. No database,
+  billing, paid service, upload or publication was enabled.
+- The app has NOT completed the Google authorization redirect round trip and
+  Nishikotha is NOT yet connected to REDPAD. The new OAuth settings are saved
+  for a future backed-up/migrated deployment, not active in the old live build.
+- Both GitHub Actions runs for `f9e43bb` passed, including the real browser
+  check. Source/docs remain on the feature branch; main is unchanged.
 
 `tests/test_youtube.py`: offline HTTP contracts, encrypted credentials,
 state/PKCE/browser/owner checks, denial/expiry/replay, wrong channel, scope and
@@ -132,10 +146,11 @@ captures `youtube-connect-mock.png` in CI artifacts. No Google login occurs.
 
 Still required before claiming production publishing:
 
-1. Owner-approved Google Cloud OAuth project/client/consent configuration and
-   durable PostgreSQL provisioning, then real read-only connection to Nishikotha.
-   PostgreSQL integration and Google redirect round trip are not verified by
-   mocked HTTP or a memory vault.
+1. Provision a genuinely durable vault without enabling a paid service, retain
+   its separate encryption key securely, and complete the real read-only Google
+   authorization to Nishikotha. Cloud client/consent/API configuration is now
+   prepared; PostgreSQL integration and the Google redirect round trip remain
+   unverified by mocked HTTP or a memory vault.
 2. Back up/migrate existing Render source records and media; deploy and verify
    the new tab in the intended environment without data loss.
 3. Implement and audit the live resumable video-write transport and protected
