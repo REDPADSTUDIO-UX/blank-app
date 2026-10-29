@@ -395,6 +395,14 @@ with tab_content:
                 ["Save Draft", "Request Changes", "Submit for Review", "Approve"],
             )
             if st.form_submit_button("💾 Save Review Decision"):
+                # Video review never overrides the source storyboard approval.
+                if decision == "Approve" and has_video_table and previews:
+                    try:
+                        from redpad_pipeline.review_guard import ensure_current_source
+                        ensure_current_source(DB_PATH, MEDIA_DIR, item["id"])
+                    except Exception:
+                        st.error("Storyboard source or render manifest changed. Re-render and review the latest video.")
+                        decision = "Submit for Review"
                 if decision == "Request Changes" and not correction.strip():
                     st.error("Write your correction instructions first.")
                 else:
