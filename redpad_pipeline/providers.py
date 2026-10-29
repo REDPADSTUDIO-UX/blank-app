@@ -1,5 +1,8 @@
 """Documented REST adapters. No POST retries; all errors omit provider payloads/URLs."""
 import ipaddress
+import base64
+from hashlib import sha256
+from pathlib import Path
 import json
 import re
 import socket
@@ -84,6 +87,34 @@ class LiveGateway:
         self.config = config
         self.session = session or requests.Session()
         self.headers = {'Authorization': f'Bearer {config.runway_key}', 'X-Runway-Version': VERSION}
+        self.job_root = None
+
+    def bind_job(self, root):
+        """Bound to an immutable, checkpointed job before any billable request."""
+        self.job_root = Path(root).resolve()
+
+    def _approved_first_frame(self, scene):
+        """Encode only the exact approved local reference; never fetch arbitrary URLs."""
+        key = scene.get('image_key')
+        digest = scene.get('image_sha256')
+        if not isinstance(key, str) or not re.fullmatch(r'[0-9]+/shot_[0-9]{3}\.jpg', key):
+            raise ProductionError('Invalid storyboard image reference.')
+        if not isinstance(digest, str) or not re.fullmatch(r'[a-f0-9]{64}', digest):
+            raise ProductionError('Invalid storyboard image checksum.')
+        if self.job_root is None:
+            raise ProductionError('Video worker has not bound its saved job directory.')
+        media = self.job_root.parent.parent.resolve()
+        folder = (media / 'storyboards').resolve()
+        path = (folder / key).resolve()
+        if not path.is_relative_to(folder) or not path.is_file():
+            raise ProductionError('Approved storyboard image is missing.')
+        raw = path.read_bytes()
+        if len(raw) > 3 * 1024 * 1024 or sha256(raw).hexdigest() != digest:
+            raise ProductionError('Storyboard image differs from the approved reference.')
+        uri = 'data:image/jpeg;base64,' + base64.b64encode(raw).decode('ascii')
+        if len(uri) > 5 * 1024 * 1024:
+            raise ProductionError('Approved image exceeds the provider data-URI limit.')
+        return uri
 
     def plan(self, topic, seconds, ratio, voice):
         if seconds != self.approved_seconds:
@@ -139,7 +170,16 @@ class LiveGateway:
         # The approved and checkpointed model is fixed. NEVER silently switch models
         # after an uncertain billable POST; that could charge twice.
         spec = scene_payload(self.video_model, scene, ratio)
-        result = payload(request(self.session, 'POST', RUNWAY + '/text_to_video',
+        endpoint = '/text_to_video'
+        if scene.get('image_key'):
+            # Image-to-video request shape checked against Runway's official
+            # Gen-4.5 first-frame API contract. No network request is sent
+            # unless all existing spend/consent gates have passed.
+            if self.video_model != 'gen4.5':
+                raise ProductionError('Image-to-video first-frame input requires Gen-4.5.')
+            spec['promptImage'] = self._approved_first_frame(scene)
+            endpoint = '/image_to_video'
+        result = payload(request(self.session, 'POST', RUNWAY + endpoint,
                                  headers=self.headers, json=spec))
         task_id = result.get('id')
         if not isinstance(task_id, str) or not re.fullmatch(r'[a-zA-Z0-9_-]{1,100}', task_id):
