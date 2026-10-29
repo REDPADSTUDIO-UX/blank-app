@@ -41,6 +41,9 @@ def initialize(db_path):
 
 def create_job(db_path, media_dir, channel_id, plan, mode, approved_usd=0):
     validate_plan(plan)
+    if plan.get('source_storyboard'):
+        from .storyboard_live import verify_source
+        verify_source(db_path, media_dir, plan)
     if mode not in ('mock', 'live'):
         raise ProductionError('Unknown production mode.')
     initialize(db_path)
@@ -68,6 +71,9 @@ def load_state(root):
 
 
 def publish_to_review(db_path, root, plan, state, final):
+    if plan.get('source_storyboard'):
+        from .storyboard_live import verify_source
+        verify_source(db_path, Path(root).parent.parent, plan)
     with closing(sqlite3.connect(db_path)) as db, db:
         row = db.execute('SELECT script FROM content WHERE id=?', (state['content_id'],)).fetchone()
         if not row or digest(row[0]) != digest(narration(plan)):
@@ -101,8 +107,17 @@ def run_job(db_path, root, gateway, max_polls=90, sleep=time.sleep):
         state.update(phase='running', error='')
         write_json(root / 'state.json', state)
         try:
+            if hasattr(gateway, 'bind_job'):
+                gateway.bind_job(root)
+            if plan.get('source_storyboard'):
+                from .storyboard_live import verify_source
+                verify_source(db_path, root.parent.parent, plan)
             clips = []
             for i, scene in enumerate(plan['scenes']):
+                # Reject stale changes before any additional billed provider submission.
+                if plan.get('source_storyboard'):
+                    from .storyboard_live import verify_source
+                    verify_source(db_path, root.parent.parent, plan)
                 checkpoint = state['scenes'][i]
                 directory = root / f'scene_{i:03d}'
                 directory.mkdir(exist_ok=True)
