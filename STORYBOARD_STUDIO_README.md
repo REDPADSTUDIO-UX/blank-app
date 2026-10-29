@@ -16,10 +16,32 @@ Branch: `feature/video-music-editing-studio`. This release adds a standalone **�
 
 ## Deliberate limits
 
-This is a **storyboard planning/review module**. The sketches are local image compositions and are not outputs of AI image models. The exported shot plan is **not yet consumed shot-for-shot by the Runway video worker**; existing production functionality remains unchanged. The module does not initiate AI imagery, generation, video export, upload, publishing or scheduling. Real AI storyboard stills and direct approved-board-to-video dispatch require separate budget and integration review.
+The sketches are local image compositions, **not AI-generated images**. Approved storyboards can now produce free **animated MP4 animatics** directly in this tab. Their hand-edited, English-translated shot plans can also be selected as source inputs in **Live AI Production**, but live generation remains disabled unless the existing explicit provider budget and owner consent gates are enabled. No paid generation or account connection has been tested or authorized.
+
+The storyboard must be approved *again* after editing shots or continuity notes. Live model production requires a manually checked English translation, 4–10 seconds per shot, 30–600 seconds in total and a supported model. If an approved reference photo exists, the Gen-4.5 first-frame image-to-video provider adapter is available under paid-call gates. Without a real reference image the adapter uses text-to-video; schematic sketches are not submitted as AI-generated photos. Local reference photos and script are SHA/revision checked before billable requests.
+
+Do not confuse the offline animatic (FFmpeg animation of static pictures) with generative moving AI footage. Automatic cinematic AI still-image generation, live provider account/credits verification, premium Bangla TTS verification and a true production run remain outstanding.
 
 Data and reference images are still saved to the app's **existing local SQLite/media filesystem**. A Render free deployment may wipe these. No production Render deploy/migration may occur without independently checked backups and durable storage.
 
 ## Verification
 
 `tests/test_storyboard.py` exercises offline Bangla splitting, shot planning and sketch sizes, JSON export, update conflicts, human approval/reapproval, stale-script handling, image upload sanitization, media containment, and the real Streamlit UI with all HTTP requests forbidden. It runs inside the existing video-studio GitHub Actions CI alongside previous video/YouTube tests. No live Google authorization, paid API or external database is needed.
+
+
+## End-to-end video workflow added — 29 October 2026
+
+1. **Script:** Create a content draft in Approval Dashboard, then generate an offline storyboard.
+2. **Visual planning:** Edit shot durations, scene action, shot size, camera motion, sound cue, bilingual narration/translation, character/location/look continuity, and upload your own licensed/copyright-cleared image references if available.
+3. **Storyboard approval:** Explicit human approval; all edits reset the storyboard to Draft.
+4. **Free animatic:** **Render Approved Storyboard → MP4** animates reference images or clearly labelled schematic sketches with FFmpeg, burns Bangla captions, includes Bangla SRT tracks, procedural soundtrack, edit SFX, optional licensed music and optional uploaded spoken narration. Without voice upload, the output has **no spoken narration**, not a fake synthetic voice. The MP4 appears in the existing Approval Dashboard as **Awaiting review** and is downloadable.
+5. **Live AI path, code-only:** In **AI Production**, choose **Live AI → Approved Storyboard**. After human-entered English subtitle translations and valid scene durations, the shot-exact plan uses storyboard continuity prompts. Approved images use Runway Gen-4.5 \`/v1/image_to_video\` first-frame data URI; other scenes use \`/v1/text_to_video\`. Existing owner spend switch, per-job USD approval, credentials and checkpoint safety gates remain mandatory. The assistant did **not** initiate a billed request, and real provider compatibility and footage quality remain unverified.
+6. **Final review:** Saved script version, source storyboard revision and reference image hashes are checked again before approval. YouTube upload/publish remains disabled and unrelated to this production feature.
+
+### Testing
+- \`tests/test_storyboard_render.py\`: actual FFmpeg MP4 encode and decode, moving frames, soundtrack, Bangla subtitles, human final review, blocked stale sources, zero external calls.
+- \`tests/test_storyboard_live.py\`: human-translation and duration validation, immutable storyboard source binding, fake/stubbed Runway image-to-video first-frame request and rejection of altered reference bytes; no paid requests.
+- Existing full Video Studio, browser and YouTube mock tests continue running in GitHub Actions.
+
+### Deployment and persistence
+The existing original Render service has **not** been changed or redeployed. Its original SQLite database and media have **not** been fully backed up and restored. All new production files currently use local storage in a developer/test environment; a Render Free redeploy risks loss. Do **not** deploy, restart, migrate or enable paid calls until full backup and recovery checks are completed. A separate secure vault for real YouTube OAuth also remains pending.
