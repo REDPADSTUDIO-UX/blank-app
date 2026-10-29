@@ -116,6 +116,8 @@ def show_storyboard(db_path: Path, media_dir: Path):
     with st.form(f"sb_edit_{selected}_{index}_{board['revision']}"):
         narration = st.text_area("Narration / dialogue", value=shot["narration"], height=105)
         visual = st.text_area("Visual direction / frame action", value=shot["visual"], height=115)
+        english = st.text_area("English subtitle translation (needed for Live AI Production)",
+                               value=shot.get("english", ""), height=75)
         first, second, third = st.columns(3)
         with first:
             shot_type = st.selectbox("Shot size", SHOT_TYPES,
@@ -126,6 +128,9 @@ def show_storyboard(db_path: Path, media_dir: Path):
         with third:
             seconds = st.number_input("Duration (seconds)", min_value=2, max_value=20,
                                       value=shot["seconds"], step=1)
+        sfx_options = ["none", "whoosh", "impact", "chime"]
+        sfx = st.selectbox("Sound effect", sfx_options,
+                            index=sfx_options.index(shot.get("sfx", "none")))
         notes = st.text_area("Director / sound / lighting notes", value=shot["notes"], height=90)
         upload = st.file_uploader("Optional image reference (JPEG/PNG/WEBP, max 5 MB)",
                                   type=["jpg", "jpeg", "png", "webp"],
@@ -134,6 +139,7 @@ def show_storyboard(db_path: Path, media_dir: Path):
     if save_shot:
         try:
             updated = {**shot, "narration": narration, "visual": visual,
+                       "english": english, "sfx": sfx,
                        "shot_type": shot_type, "camera": camera,
                        "seconds": int(seconds), "notes": notes}
             if upload is not None:
