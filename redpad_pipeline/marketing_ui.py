@@ -38,7 +38,7 @@ def _notice(error):
 
 
 def _campaign_builder(db_path, demo_mode=False):
-    st.markdown("#### <icon> Campaign Builder") if False else st.subheader("🧭 Campaign Builder")
+    st.subheader("🧭 Campaign Builder")
     st.caption("Create a 7-day editorial growth sprint. Copy uses local story-aware templates, NOT a live LLM.")
     drafts=_drafts(db_path)
     options=["New campaign idea"]+[f"Linked draft #{c['id']} · {c['title']}" for c in drafts]
