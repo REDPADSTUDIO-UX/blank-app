@@ -75,6 +75,9 @@ jobs:
       - name: Test offline Storyboard Studio versioning, sketches and approval
         run: python tests/test_storyboard.py
 
+      - name: Render approved storyboard to an offline MP4 with Bangla captions
+        run: python tests/test_storyboard_render.py
+
       - name: Test YouTube OAuth, approval and scheduling without Google requests
         run: python tests/test_youtube.py
 
