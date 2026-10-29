@@ -165,5 +165,75 @@ def show_storyboard(db_path: Path, media_dir: Path):
                 st.rerun()
             except StoryboardError as error:
                 st.error(str(error))
-    st.caption("Export is for manual review/production planning; it does not trigger video generation. "
-               "Local image references require durable storage before deployment.")
+    st.divider()
+    st.subheader("🎞️ Storyboard → Offline Motion Animatic")
+    st.caption("Animates approved storyboard sketches or your reference photos with camera moves, "
+               "burned Bangla captions, soundtrack and cut cues. It does NOT call generative AI.")
+    if board["review_status"] != "Approved":
+        st.info("First approve the current storyboard. Rendering requires separate MP4 approval afterward.")
+    else:
+        from .storyboard_render import render_approved_board, AnimaticError
+        with st.form(f"sb_animatic_{selected}_{board['revision']}"):
+            mood = st.selectbox("Soundtrack preset", ["Suspense / Horror", "Calm / Documentary"],
+                                key=f"sb_mood_{selected}")
+            st.caption("Optional narration: upload a recorded Bangla MP3/WAV if you want spoken dialogue. "
+                       "Without it, the video has captions and music but NO spoken voice.")
+            recorded = st.file_uploader("Optional full narration audio (MP3/WAV, max 20 MB)",
+                                        type=["mp3", "wav"], key=f"sb_voice_{selected}")
+            licensed_music = st.file_uploader("Optional licensed music (MP3/WAV, max 20 MB)",
+                                              type=["mp3", "wav"], key=f"sb_music_{selected}")
+            requested = st.form_submit_button("Render Approved Storyboard → MP4",
+                                               disabled=not fresh)
+        if requested:
+            try:
+                if (recorded is not None and recorded.size > 20 * 1024 * 1024
+                        or licensed_music is not None and licensed_music.size > 20 * 1024 * 1024):
+                    raise AnimaticError("Uploaded audio must be 20 MB or smaller.")
+                with st.spinner("Rendering approved shot-by-shot storyboard; no API calls…"):
+                    result = render_approved_board(
+                        db_path, media_dir, selected,
+                        narration_audio=recorded.getvalue() if recorded is not None else None,
+                        music_audio=licensed_music.getvalue() if licensed_music is not None else None,
+                        mood=mood,
+                    )
+                st.session_state["sb_render_notice"] = (
+                    f"Animatic ready: {result['shots']} shots, {result['seconds']}s. "
+                    "Open Approval Dashboard for final review."
+                )
+                st.rerun()
+            except (StoryboardError, AnimaticError) as error:
+                st.error(str(error))
+            except Exception:
+                st.error("Offline video rendering failed. Source draft and approvals were not changed.")
+        if "sb_render_notice" in st.session_state:
+            st.success(st.session_state.pop("sb_render_notice"))
+        with sqlite3.connect(db_path) as db:
+            table = db.execute(
+                "SELECT name FROM sqlite_master WHERE type='table' AND name='content_video'"
+            ).fetchone()
+            output = db.execute(
+                "SELECT video_path, voice_included FROM content_video WHERE content_id=?",
+                (selected,),
+            ).fetchone() if table else None
+        if output and "storyboard_renders" in Path(output[0]).parts:
+            clip = Path(output[0])
+            if clip.is_file():
+                st.warning("OFFLINE ANIMATIC: uploaded images/sketches animated by FFmpeg. "
+                           "Not AI-generated video footage.")
+                st.video(clip.read_bytes())
+                st.download_button("Download Storyboard Animatic MP4", clip.read_bytes(),
+                                   file_name=f"redpad-storyboard-{selected}.mp4", mime="video/mp4",
+                                   key=f"sb_mp4_{selected}")
+                subs = clip.with_name("subtitles.bn.srt")
+                if subs.is_file():
+                    st.download_button("Download Bangla Storyboard SRT", subs.read_bytes(),
+                                       file_name=f"redpad-storyboard-{selected}.bn.srt",
+                                       mime="application/x-subrip", key=f"sb_srt_{selected}")
+                if not output[1]:
+                    st.caption("This animatic has NO spoken Bangla narration. "
+                               "Upload recorded audio to add real voice.")
+            else:
+                st.warning("Saved animatic file missing from local storage. Do not deploy without a backup.")
+    st.caption("The animatic is a separate free review path. "
+               "Generative image/video provider footage and automatic Bangla neural voice "
+               "still require supported model access and explicit spend approval.")
