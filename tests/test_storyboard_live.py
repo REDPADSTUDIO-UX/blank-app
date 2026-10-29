@@ -54,8 +54,8 @@ class StoryboardAI(unittest.TestCase):
             approved_to_plan(self.db, self.media, 1, 'bn-BD-PradeepNeural', 'gen4.5')
         self.board["shots"][0]["english"] = "A man appears."
         self.board["shots"][0]["seconds"] = 15
-        save_board(self.db, self.board, expected_revision=3)
-        approve_board(self.db, 1, 4)
+        save_board(self.db, self.board, expected_revision=4)
+        approve_board(self.db, 1, 5)
         with self.assertRaisesRegex(ProductionError, "4–10 seconds"):
             approved_to_plan(self.db, self.media, 1, 'bn-BD-PradeepNeural', 'gen4.5')
 
