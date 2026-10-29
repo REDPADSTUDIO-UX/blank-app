@@ -68,6 +68,7 @@ def draft_board(content_id: int, title: str, script: str, ratio: str = "16:9") -
             "number": index, "narration": narration, "visual": narration,
             "shot_type": kind, "camera": "Slow push-in" if kind == "Close-up" else "Static",
             "seconds": seconds, "notes": "", "reference_path": "",
+            "english": "", "sfx": "none",
         })
     return {
         "content_id": int(content_id), "title": str(title)[:160],
@@ -95,12 +96,17 @@ def validate_board(board: dict) -> dict:
             raise StoryboardError(f"Shot {i} has an unsupported camera setting.")
         if type(shot.get("seconds")) is not int or not 2 <= shot["seconds"] <= 20:
             raise StoryboardError(f"Shot {i} must last 2–20 seconds.")
+        if shot.get("sfx", "none") not in ("none", "whoosh", "impact", "chime"):
+            raise StoryboardError(f"Shot {i} has an unsupported sound cue.")
         for name, cap in (("narration", 700), ("visual", 900), ("notes", 800), ("reference_path", 512)):
             value = shot.get(name)
             if not isinstance(value, str) or len(value) > cap:
                 raise StoryboardError(f"Shot {i} has invalid {name}.")
             if name in ("narration", "visual") and not value.strip():
                 raise StoryboardError(f"Shot {i} needs narration and visual direction.")
+        english = shot.get("english", "")
+        if not isinstance(english, str) or len(english) > 350:
+            raise StoryboardError(f"Shot {i} English translation must be at most 350 characters.")
     return board
 
 
