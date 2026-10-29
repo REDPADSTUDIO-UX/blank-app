@@ -78,6 +78,9 @@ jobs:
       - name: Render approved storyboard to an offline MP4 with Bangla captions
         run: python tests/test_storyboard_render.py
 
+      - name: Verify approved storyboard to Live AI scene plans and image-to-video mocks
+        run: python -m unittest tests/test_storyboard_live.py -v
+
       - name: Test YouTube OAuth, approval and scheduling without Google requests
         run: python tests/test_youtube.py
 
