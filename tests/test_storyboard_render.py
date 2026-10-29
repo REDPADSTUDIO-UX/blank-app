@@ -70,6 +70,13 @@ class ApprovedAnimatic(unittest.TestCase):
             (final.parent / "frameB.png").read_bytes(),
             "Motion animatic was rendered as a static freeze"
         )
+        from redpad_pipeline.review_guard import ensure_current_source
+        ensure_current_source(self.db_path, self.media, 1)
+        with sqlite3.connect(self.db_path) as db:
+            db.execute("UPDATE storyboards SET review_status='Draft' WHERE content_id=1")
+        from redpad_pipeline.models import ProductionError
+        with self.assertRaisesRegex(ProductionError, "changed since rendering"):
+            ensure_current_source(self.db_path, self.media, 1)
         print("PASS: Approved storyboard -> real moving MP4, audio, Bangla SRT, final human review")
 
     def test_failed_or_draft_board_does_not_replace_existing_video(self):
@@ -83,6 +90,45 @@ class ApprovedAnimatic(unittest.TestCase):
             render_approved_board(self.db_path, self.media, 1)
         with sqlite3.connect(self.db_path) as db:
             self.assertEqual(db.execute("SELECT video_path FROM content_video").fetchone()[0], "original.mp4")
+
+
+class StoryboardDashboard(unittest.TestCase):
+    def test_render_button_real_streamlit_flow(self):
+        import shutil
+        from streamlit.testing.v1 import AppTest
+        with tempfile.TemporaryDirectory(prefix="redpad-board-ui-render-") as work:
+            target = Path(work)
+            for filename in ("streamlit_app.py", "redpad_video_studio.py"):
+                shutil.copy2(ROOT / filename, target / filename)
+            for folder in ("redpad_pipeline", "assets"):
+                shutil.copytree(ROOT / folder, target / folder)
+            with patch("requests.Session.request", side_effect=AssertionError("Paid/external call attempted")):
+                at = AppTest.from_file(str(target / "streamlit_app.py"), default_timeout=180).run()
+                self.assertFalse(at.exception, [str(e) for e in at.exception])
+                next(w for w in at.text_input if w.label == "Channel Name").set_value("Horror")
+                next(w for w in at.text_input if w.label == "Content Category / Niche").set_value("Horror")
+                next(b for b in at.button if b.label == "➕ Save Channel").click().run()
+                next(w for w in at.text_input if w.label == "Video Title").set_value("End-to-end test")
+                next(w for w in at.text_input if w.label == "Topic / Idea").set_value("Bangla horror")
+                next(w for w in at.text_area if w.label == "Script or Content Notes").set_value(
+                    "দরজা খুলল। অন্ধকার ঘরে ছায়া নড়ল। কেউ ফিরে তাকাল না।")
+                next(b for b in at.button if b.label == "📥 Submit Draft for Approval").click().run()
+                at.button(key="sb_create").click().run()
+                at.button(key="sb_approve").click().run()
+                button = next(b for b in at.button if b.label == "Render Approved Storyboard → MP4")
+                self.assertFalse(button.disabled)
+                button.click().run()
+                self.assertFalse(at.exception, [str(e) for e in at.exception])
+                self.assertTrue(any(b.proto.label == "Download Storyboard Animatic MP4"
+                                    for b in at.get("download_button")))
+                self.assertTrue(any(b.proto.label == "Download review MP4"
+                                    for b in at.get("download_button")))
+                with sqlite3.connect(target / "redpad_studio.db") as db:
+                    path, state = db.execute("""SELECT v.video_path,c.status FROM content_video v
+                        JOIN content c ON c.id=v.content_id""").fetchone()
+                self.assertTrue(Path(path).is_file())
+                self.assertEqual(state, "Awaiting review")
+        print("PASS: Browserless real Streamlit script -> storyboard -> approve -> MP4 -> review")
 
 
 if __name__ == "__main__":
