@@ -67,15 +67,67 @@ def show_production_studio(db_path, media_dir, get_secret):
         st.info('MOCK ONLY: moving test patterns + synthetic tone. No real AI footage or spoken Bangla. Tests editing, captions, downloads and approval without API calls. The sample story is a fixed fixture, not a generated response to your topic.')
     channel_id = st.selectbox('Production channel', [row[0] for row in channels],
                                format_func=lambda cid: next(row[1] for row in channels if row[0] == cid), key='prod_channel')
-    topic = st.text_area('Topic / story / existing Bangla script', max_chars=6000, key='prod_topic')
-    seconds = st.selectbox('Finished video length (seconds)', [30, 60, 120, 300, 600], key='prod_seconds')
-    ratio = st.selectbox('Production aspect ratio', ['720:1280', '1280:720'], key='prod_ratio')
+    source_type = (st.radio('Production script source',
+                            ['Topic or script', 'Approved Storyboard'],
+                            key='prod_source') if live else 'Topic or script')
+    storyboard_id = None
+    storyboard_preview = None
+    if source_type == 'Approved Storyboard':
+        from .storyboard import initialize as initialize_storyboard, load_board
+        initialize_storyboard(db_path)
+        with closing(sqlite3.connect(db_path)) as db:
+            approved = db.execute("""SELECT c.id,c.title FROM content c
+                JOIN storyboards s ON s.content_id=c.id
+                WHERE c.channel_id=? AND s.review_status='Approved'
+                ORDER BY c.id DESC""", (channel_id,)).fetchall()
+        if approved:
+            storyboard_id = st.selectbox(
+                'Approved storyboard to produce',
+                [row[0] for row in approved],
+                format_func=lambda cid: next(f'#{row[0]} · {row[1]}' for row in approved if row[0] == cid),
+                key='prod_board_id')
+            storyboard_preview = load_board(db_path, storyboard_id)
+        else:
+            st.warning('No approved storyboard exists for this channel. Approve one in Storyboard Studio first.')
+    topic = st.text_area('Topic / story / existing Bangla script', max_chars=6000,
+                         disabled=source_type == 'Approved Storyboard', key='prod_topic')
+    duration_options = [30, 60, 120, 300, 600]
+    if storyboard_preview:
+        storyboard_total = sum(s['seconds'] for s in storyboard_preview['shots'])
+        if 30 <= storyboard_total <= 600:
+            duration_options = [storyboard_total]
+    seconds = st.selectbox('Finished video length (seconds)', duration_options, key='prod_seconds')
+    ratio_options = ['720:1280', '1280:720']
+    selected_ratio = (0 if storyboard_preview and storyboard_preview['ratio'] == '9:16' else 1)
+    ratio = st.selectbox('Production aspect ratio', ratio_options,
+                         index=selected_ratio if storyboard_preview else 0,
+                         disabled=source_type == 'Approved Storyboard', key='prod_ratio')
     voice = st.selectbox('Production Bangla voice', ['bn-BD-PradeepNeural', 'bn-BD-NabanitaNeural'], key='prod_voice')
     model_choice = st.selectbox('Video generation model',
         [AUTO] + list(VIDEO_MODELS),
         format_func=lambda value: ('Automatic — lowest estimated cost' if value == AUTO
                         else VIDEO_MODELS[value]['label']), key='prod_video_model')
     video_model = resolve_model(model_choice)
+    storyboard_plan = None
+    storyboard_error = ''
+    if source_type == 'Approved Storyboard':
+        if storyboard_id is None:
+            storyboard_error = 'First approve a storyboard in Storyboard Studio.'
+        else:
+            try:
+                from .storyboard_live import approved_to_plan
+                storyboard_plan = approved_to_plan(db_path, media_dir, storyboard_id,
+                                                    voice, video_model)
+                refs = sum(bool(s.get('image_key')) for s in storyboard_plan['scenes'])
+                st.success(f"Approved storyboard ready: {len(storyboard_plan['scenes'])} exact shots, "
+                           f"{storyboard_plan['seconds']} seconds, {refs} first-frame reference images.")
+                st.caption('Only approved reference images are sent to image-to-video, '
+                           'and only with Gen-4.5. Other shots use text-to-video. '
+                           'No image or generation is submitted until explicit paid approval.')
+            except ProductionError as error:
+                storyboard_error = str(error)
+        if storyboard_error:
+            st.warning('Storyboard not ready for Live Production: ' + storyboard_error)
     st.caption(f"Selected model: {VIDEO_MODELS[video_model]['label']} · "
                f"Estimated 720p video only: US${video_cost_usd(seconds, video_model):.2f} for {seconds}s. "
                "No provider call has been made. Model pricing checked 26 Oct 2026.")
@@ -85,8 +137,12 @@ def show_production_studio(db_path, media_dir, get_secret):
         st.error('Music file exceeds the 20 MB limit.')
     quote = estimate_usd(seconds, video_model)
     agreed = False
-    fingerprint = digest(json.dumps([topic, seconds, ratio, voice, channel_id, model_choice, video_model,
-                          hashlib.sha256(music.getbuffer()).hexdigest() if music and not oversized_music else '']))
+    fingerprint = digest(json.dumps([
+        topic if source_type == 'Topic or script' else 'approved storyboard',
+        source_type, storyboard_id, storyboard_plan.get('source_storyboard') if storyboard_plan else None,
+        seconds, ratio, voice, channel_id, model_choice, video_model,
+        hashlib.sha256(music.getbuffer()).hexdigest() if music and not oversized_music else ''
+    ]))
     if st.session_state.get('prod_consent_fingerprint') != fingerprint or st.session_state.pop('prod_reset_consent', False):
         st.session_state['prod_consent'] = False
         st.session_state['prod_consent_fingerprint'] = fingerprint
@@ -96,7 +152,8 @@ def show_production_studio(db_path, media_dir, get_secret):
             st.info(f'Owner job limit REDPAD_MAX_JOB_USD must be at least US${quote:.2f}.')
         st.caption('Automatic selection resolves ONCE before approval; it is not an automatic paid retry or provider-failure fallback. Quote is a local guard, not a provider invoice cap. Use provider billing controls.')
         agreed = st.checkbox(f'I authorize this {seconds}s job at the displayed US${quote:.2f} estimate.', key='prod_consent')
-    enabled = bool(topic.strip()) and not oversized_music and (not live or (agreed and config.paid_enabled and config.max_job_usd >= quote
+    ready_content = bool(storyboard_plan) if source_type == 'Approved Storyboard' else bool(topic.strip())
+    enabled = ready_content and not oversized_music and (not live or (agreed and config.paid_enabled and config.max_job_usd >= quote
               and all((config.runway_key, config.azure_key, config.azure_region, config.openai_key))))
     if st.button('🎬 Create AI production job' if live else '🧪 Create offline production test', disabled=not enabled, key='prod_create'):
         try:
@@ -107,9 +164,13 @@ def show_production_studio(db_path, media_dir, get_secret):
                 raise ProductionError('FFmpeg is unavailable.')
             if live:
                 gateway = LiveGateway(config, seconds, quote, video_model=video_model)
-                with st.spinner('Planning the film and translating subtitles…'):
-                    plan = gateway.plan(topic, seconds, ratio, voice)
-                    plan['video_model'] = video_model
+                if source_type == 'Approved Storyboard':
+                    from .storyboard_live import approved_to_plan
+                    plan = approved_to_plan(db_path, media_dir, storyboard_id, voice, video_model)
+                else:
+                    with st.spinner('Planning the film and translating subtitles…'):
+                        plan = gateway.plan(topic, seconds, ratio, voice)
+                        plan['video_model'] = video_model
             else:
                 plan = mock_plan(topic, seconds, ratio, voice)
                 plan['video_model'] = video_model
