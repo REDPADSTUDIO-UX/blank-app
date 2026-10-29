@@ -225,8 +225,8 @@ items = db_query(
        ORDER BY c.id DESC"""
 )
 
-tab_dashboard, tab_channels, tab_content, tab_ai, tab_storyboard, tab_video, tab_youtube = st.tabs(
-    ["📊 Dashboard", "📺 Channel Manager", "✅ Approval Dashboard", "🤖 AI Production", "🎬 Storyboard Studio", "🎞️ Video Studio", "🔗 YouTube Connect"]
+tab_dashboard, tab_channels, tab_content, tab_ai, tab_storyboard, tab_video, tab_marketing, tab_youtube = st.tabs(
+    ["📊 Dashboard", "📺 Channel Manager", "✅ Approval Dashboard", "🤖 AI Production", "🎬 Storyboard Studio", "🎞️ Video Studio", "📣 Growth Engine", "🔗 YouTube Connect"]
 )
 
 with tab_dashboard:
@@ -564,6 +564,10 @@ with tab_video:
     st.divider()
     from redpad_pipeline.ui import show_production_studio
     show_production_studio(DB_PATH, MEDIA_DIR, get_secret)
+
+with tab_marketing:
+    from redpad_pipeline.marketing_ui import show_marketing
+    show_marketing(DB_PATH)
 
 with tab_youtube:
     from redpad_pipeline.youtube_ui import show_youtube
