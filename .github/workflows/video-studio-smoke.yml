@@ -72,6 +72,12 @@ jobs:
       - name: Test production UI and bilingual approval integration
         run: python tests/test_production_ui.py
 
+      - name: Test offline Marketing Growth Engine approvals and analytics
+        run: python -m unittest tests.test_marketing -v
+
+      - name: Test marketing dashboards and public preview
+        run: python tests/test_marketing_ui.py
+
       - name: Verify SQLite and media backup with isolated restore (test data only)
         run: python -m unittest tests.test_backup -v
 
