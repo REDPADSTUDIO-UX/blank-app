@@ -54,7 +54,7 @@ def _campaign_builder(db_path, demo_mode=False):
             audience=st.text_input("Target audience",value="Bangla-speaking mystery & story fans, 18+",
                                    max_chars=150)
         with right:
-            kind=st.radio("Strategy type",CAMPAIGN_KIN, horizontal=True)
+            kind=st.radio("Strategy type",CAMPAIGN_KINDS, horizontal=True)
             region=st.text_input("Target geography",value="Bangladesh",max_chars=100)
             start=st.date_input("Campaign start",value=date.today())
             platforms=st.multiselect("Channels (editorial plans only)",PLATFORMS,
