@@ -13,6 +13,12 @@ import streamlit as st
 
 st.set_page_config(page_title="REDPAD AI Studio", page_icon="🎬", layout="wide")
 
+# Explicit owner-triggered, one-shot GPU fixture test. It never reads project
+# records; its artifacts remain behind the existing Studio authentication gate.
+if os.environ.get("REDPAD_RUN_GPU_SELFTEST", "").lower() == "true":
+    from redpad_pipeline.gpu_selftest import start_once
+    start_once(Path(__file__).with_name("redpad_media"))
+
 # Optional single-owner gate for externally hosted demos. Disabled by default
 # in local Codespaces and CI. No credentials are logged or committed to Git.
 if os.environ.get("REDPAD_REQUIRE_PREVIEW_LOGIN", "").lower() == "true":
