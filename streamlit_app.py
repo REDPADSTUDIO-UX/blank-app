@@ -13,6 +13,36 @@ import streamlit as st
 
 st.set_page_config(page_title="REDPAD AI Studio", page_icon="🎬", layout="wide")
 
+# Explicit owner-triggered, one-shot GPU fixture test. It never reads project
+# records; its artifacts remain behind the existing Studio authentication gate.
+if os.environ.get("REDPAD_RUN_GPU_SELFTEST", "").lower() == "true":
+    from redpad_pipeline.gpu_selftest import start_once
+    start_once(Path(__file__).with_name("redpad_media"))
+
+# Optional single-owner gate for externally hosted demos. Disabled by default
+# in local Codespaces and CI. No credentials are logged or committed to Git.
+if os.environ.get("REDPAD_REQUIRE_PREVIEW_LOGIN", "").lower() == "true":
+    import hmac as _redpad_hmac
+
+    _expected = os.environ.get("REDPAD_DASHBOARD_PASSWORD", "")
+    if not _expected:
+        st.error("Private preview is locked until its hosting password is configured.")
+        st.stop()
+    if not st.session_state.get("redpad_preview_authenticated", False):
+        st.title("🔐 REDPAD AI Studio — Private Preview")
+        st.caption("Access is restricted. Paid AI generation is disabled on this preview.")
+        with st.form("redpad_preview_signin"):
+            _entered = st.text_input("Preview password", type="password")
+            _submit = st.form_submit_button("Open dashboard")
+        if _submit:
+            if _redpad_hmac.compare_digest(_entered, _expected):
+                st.session_state["redpad_preview_authenticated"] = True
+                st.rerun()
+            else:
+                st.error("Incorrect preview password.")
+        st.stop()
+
+
 DB_PATH = Path(__file__).with_name("redpad_studio.db")
 MEDIA_DIR = Path(__file__).with_name("redpad_media")
 SCRIPT_MODEL = "gpt-4.1-mini"
@@ -191,7 +221,7 @@ st.title("🎬 REDPAD AI Studio")
 st.caption("Content Automation Control Center • Version 2.1 (AI agents)")
 st.info(
     "AI Script Agent ও Bangla Voice Agent যুক্ত হয়েছে। API credentials যোগ করলে "
-    "স্ক্রিপ্ট ও MP3 ভয়েস তৈরি করা যাবে। ভিডিও জেনারেশন ও অটো-পাবলিশ এখনো নেই।"
+    "স্ক্রিপ্ট ও MP3 ভয়েস তৈরি করা যাবে। Video Studio-তে ডেমো MP4 তৈরি করা যায়। অটো-পাবলিশ এখনো নেই।"
 )
 
 channels = db_query("SELECT * FROM channels ORDER BY id DESC")
@@ -201,11 +231,13 @@ items = db_query(
        ORDER BY c.id DESC"""
 )
 
-tab_dashboard, tab_channels, tab_content, tab_ai = st.tabs(
-    ["📊 Dashboard", "📺 Channel Manager", "✅ Approval Dashboard", "🤖 AI Production"]
+tab_dashboard, tab_channels, tab_content, tab_ai, tab_storyboard, tab_video, tab_marketing, tab_youtube = st.tabs(
+    ["📊 Dashboard", "📺 Channel Manager", "✅ Approval Dashboard", "🤖 AI Production", "🎬 Storyboard Studio", "🎞️ Video Studio", "📣 Growth Engine", "🔗 YouTube Connect"]
 )
 
 with tab_dashboard:
+    st.info("Preview update: Google বাংলা voice এবং local image animation দেখতে Video Studio ট্যাব খুলুন।")
+    st.warning("এই free preview-র local drafts ও media স্থায়ী নয়। সংরক্ষিত কোড GitHub-এ থাকে; server restart/redeploy হলে local কাজ হারাতে পারে।")
     st.subheader("Central Dashboard")
     a, b, c, d = st.columns(4)
     a.metric("Total Channels", len(channels))
@@ -228,7 +260,7 @@ with tab_dashboard:
                 for item in items
             ],
             hide_index=True,
-            use_container_width=True,
+            width="stretch",
         )
     else:
         st.info("No content yet. Add a channel, then create a draft for review.")
@@ -329,6 +361,37 @@ with tab_content:
         if item["correction"]:
             st.warning(f"Last Correction Request: {item['correction']}")
 
+        # Review the actual saved render before making an approval decision.
+        has_video_table = db_query("SELECT name FROM sqlite_master WHERE type='table' AND name='content_video'")
+        if has_video_table:
+            previews = db_query("SELECT * FROM content_video WHERE content_id=?", (item["id"],))
+            if previews:
+                preview_path = Path(previews[0]["video_path"])
+                if preview_path.is_file():
+                    st.video(preview_path.read_bytes())
+                    st.download_button("Download review MP4", preview_path.read_bytes(),
+                                       file_name=preview_path.name, mime="video/mp4", key="review_video_download")
+                else:
+                    st.warning("Saved video is missing. Render it again before video approval.")
+
+        # Production subtitles are tied to the same rendered file and script version.
+        if has_video_table and previews:
+            has_exports = db_query("SELECT name FROM sqlite_master WHERE type='table' AND name='production_exports'")
+            if has_exports:
+                exports = db_query("SELECT * FROM production_exports WHERE content_id=? AND video_path=?",
+                                   (item["id"], previews[0]["video_path"]))
+                if exports:
+                    export = exports[0]
+                    st.caption("Production type: " + export["mode"].upper() + " · scene-timed bilingual captions")
+                    if export["mode"] == "mock":
+                        st.warning("MOCK TEST: synthetic motion and test tone; no real AI footage or spoken Bangla.")
+                    for language in ("bn", "en"):
+                        subtitle = Path(export["video_path"]).with_name(f"subtitles.{language}.srt")
+                        if subtitle.is_file():
+                            st.download_button(f"Review {language.upper()} subtitles", subtitle.read_bytes(),
+                                               file_name=subtitle.name, mime="application/x-subrip",
+                                               key=f"review_srt_{language}_{item['id']}")
+
         with st.form(f"review_{item['id']}"):
             updated_script = st.text_area("Edit Script / Notes", value=item["script"], height=220)
             correction = st.text_area(
@@ -340,6 +403,14 @@ with tab_content:
                 ["Save Draft", "Request Changes", "Submit for Review", "Approve"],
             )
             if st.form_submit_button("💾 Save Review Decision"):
+                # Video review never overrides the source storyboard approval.
+                if decision == "Approve" and has_video_table and previews:
+                    try:
+                        from redpad_pipeline.review_guard import ensure_current_source
+                        ensure_current_source(DB_PATH, MEDIA_DIR, item["id"])
+                    except Exception:
+                        st.error("Storyboard source or render manifest changed. Re-render and review the latest video.")
+                        decision = "Submit for Review"
                 if decision == "Request Changes" and not correction.strip():
                     st.error("Write your correction instructions first.")
                 else:
@@ -349,6 +420,13 @@ with tab_content:
                         "Submit for Review": "Awaiting review",
                         "Approve": "Approved",
                     }
+                    if updated_script != item["script"]:
+                        # An old video cannot represent a newly edited script.
+                        if has_video_table:
+                            db_execute("DELETE FROM content_video WHERE content_id=?", (item["id"],))
+                        if decision == "Approve":
+                            st.error("Script changed. Saved as awaiting review; regenerate the video before approving it.")
+                            statuses[decision] = "Awaiting review"
                     db_execute(
                         """UPDATE content SET script=?, correction=?, status=?, updated_at=?
                            WHERE id=?""",
@@ -404,6 +482,9 @@ with tab_ai:
                            WHERE id=?""",
                         (narration, datetime.now().strftime("%Y-%m-%d %H:%M"), current["id"]),
                     )
+                    # A regenerated script invalidates the previous video preview.
+                    if db_query("SELECT name FROM sqlite_master WHERE type='table' AND name='content_video'"):
+                        db_execute("DELETE FROM content_video WHERE content_id=?", (current["id"],))
                     st.success("Script generated. Review it before approval.")
                     st.rerun()
                 except Exception as exc:
@@ -475,8 +556,27 @@ with tab_ai:
         st.info(
             "AI generation never publishes anything. After listening, use "
             "Approval Dashboard to request corrections or approve the draft. "
-            "Video creation and posting are not enabled."
+            "Demo MP4 creation is available in Video Studio. Posting is not enabled."
         )
 
 st.divider()
 st.caption("© 2026 REDPAD AI Studio | Human approval required before publishing")
+
+with tab_storyboard:
+    from redpad_pipeline.storyboard_ui import show_storyboard
+    show_storyboard(DB_PATH, MEDIA_DIR)
+
+with tab_video:
+    from redpad_video_studio import show_video_studio
+    show_video_studio(DB_PATH, MEDIA_DIR)
+    st.divider()
+    from redpad_pipeline.ui import show_production_studio
+    show_production_studio(DB_PATH, MEDIA_DIR, get_secret)
+
+with tab_marketing:
+    from redpad_pipeline.marketing_ui import show_marketing
+    show_marketing(DB_PATH)
+
+with tab_youtube:
+    from redpad_pipeline.youtube_ui import show_youtube
+    show_youtube(DB_PATH, MEDIA_DIR, get_secret)

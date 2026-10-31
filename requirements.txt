@@ -1,0 +1,13 @@
+streamlit>=1.61.1
+requests>=2.31
+openai>=1.50
+pillow>=10.0
+imageio-ffmpeg>=0.6
+cryptography>=44
+psycopg[binary]>=3.2
+
+gTTS>=2.5,<3
+
+gradio_client==1.14.0
+huggingface_hub>=0.34,<1
+numpy>=1.24,<3
