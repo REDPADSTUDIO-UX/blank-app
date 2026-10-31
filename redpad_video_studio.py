@@ -185,7 +185,10 @@ def _query(db, sql, args=()):
 def show_video_studio(db_path, media_dir):
     st.subheader("🎞️ Video · Background Sound · Editing")
     from redpad_pipeline.local_animation_ui import show_local_animation
-    show_local_animation(media_dir)
+    from redpad_pipeline.remote_gpu_ui import show_remote_gpu
+    show_remote_gpu(media_dir)
+    with st.expander("Optional: locally installed GPU and SVD model"):
+        show_local_animation(media_dir)
     from redpad_pipeline.free_voice import show_free_voice
     show_free_voice(media_dir)
     st.divider()

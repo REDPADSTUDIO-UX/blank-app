@@ -7,3 +7,6 @@ cryptography>=44
 psycopg[binary]>=3.2
 
 gTTS>=2.5,<3
+
+gradio_client==1.14.0
+huggingface_hub>=0.34,<1
