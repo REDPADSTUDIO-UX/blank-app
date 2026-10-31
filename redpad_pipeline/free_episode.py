@@ -94,10 +94,11 @@ def soundtrack(path,seconds,cuts):
 
 def render_shot(still,voice,output,seconds,index):
     actual=duration(voice)
-    if actual>seconds-.25:raise ValueError('Spoken audio exceeds its shot. Edit the plan; speech was not truncated.')
+    pace=max(1.,actual/(seconds-.25))
+    if pace>1.5:raise ValueError(f'Spoken audio is {actual:.2f}s and exceeds the {seconds}s shot at the supported pace. Speech was not truncated.')
     z='1.025+0.00014*on' if index%2==0 else '1.075-0.00014*on'
     vf=f"scale=1280:740:force_original_aspect_ratio=increase,crop=1280:740,zoompan=z='{z}':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d={seconds*24}:s=960x540:fps=24,format=yuv420p"
-    ff(['-i',still,'-i',voice,'-vf',vf,'-af',f'apad,atrim=duration={seconds}',
+    ff(['-i',still,'-i',voice,'-vf',vf,'-af',f'atempo={pace:.6f},apad,atrim=duration={seconds}',
         '-t',seconds,'-c:v','libx264','-threads','1','-preset','ultrafast','-crf','21',
         '-c:a','aac','-ar','24000','-ac','1','-movflags','+faststart',output],timeout=240)
 
@@ -129,15 +130,17 @@ def run(db_path,root):
                 still=folder/'image.jpg';voice=folder/'voice.mp3';clip=folder/'shot.mp4'
                 marker=folder/'pending.json'
                 if marker.exists():raise ValueError('An external submission is uncertain; automatic retry is blocked.')
+                if not voice.exists():
+                    write(marker,{'stage':'voice-submission'})
+                    made=generate_google_bangla(s['text'],folder);shutil.copyfile(made,voice);marker.unlink()
+                actual=duration(voice)
+                if actual/(s['seconds']-.25)>1.5:raise ValueError(f'Shot {i+1} voice duration {actual:.2f}s exceeds its slot. No image request was made for it.')
                 if not still.exists():
                     write(marker,{'stage':'image-submission'})
                     image(s['prompt'],still,117+i*31);marker.unlink()
                 h=perceptual(still)
-                if any((h-x).bit_count()==0 or (h^x).bit_count()<5 for x in hashes):raise ValueError('Duplicate-looking image detected. No replacement was automatically submitted.')
+                if any((h^x).bit_count()<5 for x in hashes):raise ValueError('Duplicate-looking image detected. No replacement was automatically submitted.')
                 hashes.append(h)
-                if not voice.exists():
-                    write(marker,{'stage':'voice-submission'})
-                    made=generate_google_bangla(s['text'],folder);shutil.copyfile(made,voice);marker.unlink()
                 if not clip.exists():
                     temp=folder/'shot.partial.mp4';render_shot(still,voice,temp,s['seconds'],i);temp.replace(clip)
                 clips.append(clip);cuts.append(clock)

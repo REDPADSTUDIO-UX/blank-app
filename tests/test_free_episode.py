@@ -10,7 +10,7 @@ class FreeEpisodeTests(unittest.TestCase):
         s=dict(text='hello',prompt='A rainy house at night',seconds=5)
         with self.assertRaisesRegex(ValueError,'Repeated'):validate(dict(title='test',shots=[s,s]))
     def test_audio_not_truncated(self):
-        with patch('redpad_pipeline.free_episode.duration',return_value=11),patch('redpad_pipeline.free_episode.ff') as runner:
+        with patch('redpad_pipeline.free_episode.duration',return_value=16),patch('redpad_pipeline.free_episode.ff') as runner:
             with self.assertRaisesRegex(ValueError,'exceeds'):render_shot('x','y',Path('z'),10,0)
             runner.assert_not_called()
     def test_perceptual_duplicate(self):
