@@ -33,3 +33,22 @@ class RemoteGPUTests(unittest.TestCase):
             self.assertEqual(state['stage'],'failed-or-unknown')
 
 if __name__=='__main__':unittest.main()
+
+class FreeAccountTests(unittest.TestCase):
+    def tearDown(self):
+        from redpad_pipeline.remote_gpu import _verify_free_account
+        pass
+    def test_free_account_verified_without_gpu_call(self):
+        from redpad_pipeline.remote_gpu import free_account_token
+        from unittest.mock import Mock
+        reply=Mock();reply.json.return_value={'type':'user','isPro':False}
+        with patch.dict('os.environ',{'REDPAD_HF_FREE_TOKEN':'test-secret'}),patch('requests.get',return_value=reply):
+            self.assertEqual(free_account_token(),'test-secret')
+    def test_paid_or_unknown_account_blocked(self):
+        from redpad_pipeline.remote_gpu import free_account_token,_verify_free_account
+        from unittest.mock import Mock
+        for profile in [{'type':'user','isPro':True},{'type':'org','isPro':False},{'type':'user'}]:
+            pass;reply=Mock();reply.json.return_value=profile
+            with patch.dict('os.environ',{'REDPAD_HF_FREE_TOKEN':'test-secret'}),patch('requests.get',return_value=reply),patch('gradio_client.Client') as client:
+                with self.assertRaises(GPUError):free_account_token()
+                client.assert_not_called()

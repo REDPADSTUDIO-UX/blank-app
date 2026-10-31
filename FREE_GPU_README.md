@@ -14,3 +14,9 @@ https://huggingface.co/docs/hub/spaces-api-endpoints
 https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster
 
 Implementation note: a first raw REST integration returned a worker error. It was replaced with the supported SDK path. No output from that failed job is described as successful.
+
+## Free personal account mode
+
+A user-authorized token may be configured only in the hosting secret REDPAD_HF_FREE_TOKEN. Before GPU submission the backend calls whoami-v2 and requires type=user and isPro=false; missing/unknown/paid profiles fail closed. The token is passed to the SDK for the existing ZeroGPU Space, never to an Inference Provider or provisioned paid hardware. It is not saved in job metadata or shown in the UI. This enables the account's free quota; it does not remove quota or queue limits. With no token the original anonymous mode remains available. The connection check reports which mode is active.
+
+A built-in geometric test image permits testing through the deployed Studio without transferring a local user image. This fixture is not AI-generated story artwork and must not be presented as a completed episode.
