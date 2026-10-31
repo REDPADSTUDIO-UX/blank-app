@@ -35,7 +35,8 @@
     {
       "seconds": 10,
       "text": "তালাটার দিকে আলো ধরল। ধুলোর আস্তর অক্ষত। কেউ ছুঁয়েছে বলেও মনে হয় না। তাহলে ভেতরে ঢুকল কী করে?",
-      "prompt": "Forensic close-up of an old brass padlock sealed by an unbroken thick coat of dust and a spider web on a dark wooden door, grazing flashlight. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. "
+      "prompt": "Forensic close-up of an old brass padlock sealed by an unbroken thick coat of dust and a spider web on a dark wooden door, grazing flashlight. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. ",
+      "foley": "metal"
     },
     {
       "seconds": 10,
@@ -45,7 +46,8 @@
     {
       "seconds": 10,
       "text": "ঠিক তখন দরজার ওপাশে একটা নিশ্বাস। খুব কাছে। রাফি নিজের নিশ্বাস আটকে রাখল। অন্য নিশ্বাসটা থামল না।",
-      "prompt": "Side view of the gap between an old locked door and its frame, a faint cloudy breath emerging through the crack, dust suspended in narrow amber light. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. "
+      "prompt": "Side view of the gap between an old locked door and its frame, a faint cloudy breath emerging through the crack, dust suspended in narrow amber light. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. ",
+      "foley": "breath"
     },
     {
       "seconds": 10,
@@ -65,7 +67,8 @@
     {
       "seconds": 10,
       "text": "রাফি বলল, যে-ই থাকেন, দরজা খুলে বের হন। কথাটা শেষ হতেই ওপাশে একজন বলল, আমি তো আজই এলাম।",
-      "prompt": "Perfectly frontal static composition of a sealed dark door in a decaying corridor, tarnished knob, damp footprint just short of the threshold, long shadows. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. "
+      "prompt": "Perfectly frontal static composition of a sealed dark door in a decaying corridor, tarnished knob, damp footprint just short of the threshold, long shadows. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. ",
+      "foley": "knocks"
     },
     {
       "seconds": 10,
@@ -90,7 +93,8 @@
     {
       "seconds": 10,
       "text": "স্ক্রিনে মীনার নাম। রাফি ধরেই বলল, তুই কোথায়? মীনা বিরক্ত, বাসায়। এত রাতে কী হয়েছে?",
-      "prompt": "A phone emitting pale green light between two shaking hands, blurred anxious Bengali man behind it, tight shallow focus, no readable screen. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. "
+      "prompt": "A phone emitting pale green light between two shaking hands, blurred anxious Bengali man behind it, tight shallow focus, no readable screen. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. ",
+      "foley": "phone"
     },
     {
       "seconds": 10,
@@ -115,7 +119,8 @@
     {
       "seconds": 10,
       "text": "দরজার নিচ দিয়ে পানি ঢুকছে। সরু একটা রেখা। বাইরে বৃষ্টি নেই, ছাদও শুকনা। পানি আসছে বন্ধ ঘরের ভেতর থেকে।",
-      "prompt": "Ground-level macro of a thin dark water stream emerging under a locked wooden door onto cracked red cement floor, amber light reflected in the moving edge. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. "
+      "prompt": "Ground-level macro of a thin dark water stream emerging under a locked wooden door onto cracked red cement floor, amber light reflected in the moving edge. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. ",
+      "foley": "drip"
     },
     {
       "seconds": 10,
@@ -130,12 +135,14 @@
     {
       "seconds": 10,
       "text": "মীনা? দরজার ওপাশ থেকে উত্তর এল, আমি এখানেই তো। এবার গলাটা ফোনে নেই। তালার ঠিক পিছনে।",
-      "prompt": "Extreme closeup of the brass door keyhole, an impossible small warm light behind it shaped like a human eye, no gore, claustrophobic horror. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. "
+      "prompt": "Extreme closeup of the brass door keyhole, an impossible small warm light behind it shaped like a human eye, no gore, claustrophobic horror. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. ",
+      "foley": "breath"
     },
     {
       "seconds": 10,
       "text": "পানি রাফির পায়ে ঠেকল। ঠান্ডা না। গরম। ঠিক তখন দেয়ালের ঘড়িটা একবার টিক করল। অনেকক্ষণ পর।",
-      "prompt": "Close-up of a bare male foot touching a shallow puddle on red concrete, faint steam rising from the water, blue shadow and amber reflected light. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. "
+      "prompt": "Close-up of a bare male foot touching a shallow puddle on red concrete, faint steam rising from the water, blue shadow and amber reflected light. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. ",
+      "foley": "drip"
     },
     {
       "seconds": 10,
@@ -150,7 +157,8 @@
     {
       "seconds": 10,
       "text": "টেপের রাফি খুব আস্তে বলল, তুই এত দেরি করলি কেন? বাইরে থেকে তখন তিনবার দরজায় টোকা পড়ল। চলবে।",
-      "prompt": "Final wide shot from inside a dark empty room looking out at a thin amber doorway, three fresh wet finger marks on the inner wood, looming unseen presence, no text. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. "
+      "prompt": "Final wide shot from inside a dark empty room looking out at a thin amber doorway, three fresh wet finger marks on the inner wood, looming unseen presence, no text. Cinematic psychological horror film still, authentic Bangladesh setting, photorealistic, premium restrained composition, 35mm grain, dark but readable, no captions, no watermark, no typography. ",
+      "foley": "knocks"
     }
   ]
 }

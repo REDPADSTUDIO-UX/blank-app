@@ -67,10 +67,12 @@ def image(prompt,dest,seed):
             if im.width*im.height>4_000_000:raise GPUError('Image is too large.')
             im.convert('RGB').save(dest,quality=94)
     except GPUError:raise
-    except Exception:
+    except Exception as exc:
+        if any(word in str(exc).lower() for word in ('quota','exceeded','sign in','authenticate')):
+            raise GPUError('Free image GPU quota or sign-in limit reached. No automatic retry or paid fallback was used.') from None
         raise GPUError('Free image generation did not complete. No automatic retry or paid fallback was used.') from None
 
-def soundtrack(path,seconds,cuts):
+def soundtrack(path,seconds,cuts,shots=None):
     import numpy as np
     rate=24000
     with wave.open(str(path),'wb') as out:
@@ -89,6 +91,25 @@ def soundtrack(path,seconds,cuts):
                 signal+=np.where((dt>=0)&(dt<.7),np.sin(2*np.pi*42*dt)*np.exp(-np.maximum(dt,0)*8)*1700,0)
                 rise=(dt>-.65)&(dt<0)
                 signal+=np.where(rise,np.sin(2*np.pi*(250*t+100*t*t))*(dt+.65)*600,0)
+            # Scene-bound practical sounds. No speech/whisper words are fabricated.
+            for cut,shot in zip(cuts,shots or []):
+                kind=shot.get('foley','none');dt=t-(cut+6)
+                if kind=='knocks':
+                    for offset in (0,.8,1.6):
+                        k=dt-offset;env=np.where((k>=0)&(k<.28),np.exp(-np.maximum(k,0)*22),0)
+                        signal+=(np.sin(2*np.pi*135*k)+.3*np.sin(2*np.pi*320*k))*env*2600
+                elif kind=='phone':
+                    env=np.where((dt>=0)&(dt<1.8),(np.mod(dt,.6)<.35),0)
+                    signal+=(np.sin(2*np.pi*980*t)+np.sin(2*np.pi*1280*t))*env*400
+                elif kind=='breath':
+                    env=np.where((dt>=0)&(dt<1.8),np.sin(np.clip(dt,0,1.8)*np.pi/1.8)**2,0)
+                    signal+=noise*env*650
+                elif kind=='metal':
+                    env=np.where((dt>=0)&(dt<.7),np.exp(-np.maximum(dt,0)*9),0)
+                    signal+=(np.sin(2*np.pi*1450*t)+.4*np.sin(2*np.pi*2170*t))*env*500
+                elif kind=='drip':
+                    env=np.where((dt>=0)&(dt<.2),np.exp(-np.maximum(dt,0)*25),0)
+                    signal+=np.sin(2*np.pi*(1100*dt-1500*dt*dt))*env*1300
             fade=np.minimum(1,np.minimum(t/.25,(seconds-t)/1.8))
             out.writeframes((np.clip(signal*fade,-26000,26000).astype('<i2')).tobytes())
 
@@ -139,16 +160,26 @@ def run(db_path,root):
                     write(marker,{'stage':'image-submission'})
                     image(s['prompt'],still,117+i*31);marker.unlink()
                 h=perceptual(still)
-                if any((h^x).bit_count()<5 for x in hashes):raise ValueError('Duplicate-looking image detected. No replacement was automatically submitted.')
+                if any((h^x).bit_count()<5 for x in hashes):
+                    # The previous request completed; one genuinely new composition
+                    # is permitted. Never retry an uncertain provider submission.
+                    still.replace(folder/'duplicate_rejected.jpg')
+                    write(marker,{'stage':'replacement-image-submission'})
+                    image(s['prompt']+' Use a distinctly different camera position and composition.',still,117+i*31+100003)
+                    marker.unlink();h=perceptual(still)
+                    if any((h^x).bit_count()<5 for x in hashes):raise ValueError('Duplicate-looking replacement rejected; review is blocked.')
                 hashes.append(h)
                 if not clip.exists():
                     temp=folder/'shot.partial.mp4';render_shot(still,voice,temp,s['seconds'],i);temp.replace(clip)
                 clips.append(clip);cuts.append(clock)
+                write(folder/'provenance.json',dict(image_space=IMAGE_SPACE,image_sha256=hashlib.sha256(still.read_bytes()).hexdigest(),
+                    voice_provider='google-translate-consumer-tts',voice_sha256=hashlib.sha256(voice.read_bytes()).hexdigest(),
+                    voice_seconds=actual,editorial_camera_animation=True,neural_video=False,paid_calls=0))
                 subs.append(f'{i+1}\n{timestamp(clock)} --> {timestamp(clock+s["seconds"])}\n{s["text"]}\n')
                 clock+=s['seconds'];state['done']=i+1;write(root/'state.json',state)
                 print(f'REDPAD_FREE_EPISODE shot {i+1}/{len(plan["shots"])} complete',flush=True)
             (root/'subtitles.bn.srt').write_text('\n'.join(subs))
-            soundtrack(root/'score.wav',clock,cuts)
+            soundtrack(root/'score.wav',clock,cuts,plan['shots'])
             (root/'concat.txt').write_text(''.join(f"file '{p.relative_to(root)}'\n" for p in clips))
             final=root/'episode.partial.mp4'
             ff(['-f','concat','-safe','0','-i',root/'concat.txt','-i',root/'score.wav','-i',root/'subtitles.bn.srt',
