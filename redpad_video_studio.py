@@ -184,6 +184,8 @@ def _query(db, sql, args=()):
 
 def show_video_studio(db_path, media_dir):
     st.subheader("🎞️ Video · Background Sound · Editing")
+    from redpad_pipeline.free_episode import show as show_free_episode
+    show_free_episode(db_path, media_dir)
     from redpad_pipeline.local_animation_ui import show_local_animation
     from redpad_pipeline.remote_gpu_ui import show_remote_gpu
     show_remote_gpu(media_dir)
