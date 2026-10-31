@@ -184,8 +184,11 @@ def _query(db, sql, args=()):
 
 def show_video_studio(db_path, media_dir):
     st.subheader("🎞️ Video · Background Sound · Editing")
+    from redpad_pipeline.local_animation_ui import show_local_animation
+    show_local_animation(media_dir)
+    st.divider()
     st.info("Free MVP: demo idea → procedural storyboard → original ambient soundtrack "
-            "→ edited MP4 → approval. Real generative AI video/music are NOT included yet.")
+            "→ edited MP4 → approval. This demo renderer is procedural. Local neural image animation is available in the separate panel above when a GPU and weights are configured.")
     st.caption("Publishing is disabled. No paid APIs are called.")
     st.write("Video renderer:", "✅ Ready" if ffmpeg_binary() else "❌ FFmpeg missing")
     channels=_query(db_path,"SELECT * FROM channels ORDER BY id DESC")

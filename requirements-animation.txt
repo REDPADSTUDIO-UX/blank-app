@@ -1,0 +1,9 @@
+# Optional dedicated GPU environment; NOT installed by the Render web app.
+# Provision PyTorch with a CUDA build appropriate for the host first.
+torch>=2.4,<3
+diffusers>=0.35,<0.36
+transformers>=4.44,<5
+accelerate>=1,<2
+imageio>=2.35,<3
+imageio-ffmpeg>=0.6
+pillow>=10
