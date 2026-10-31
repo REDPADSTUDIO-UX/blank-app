@@ -230,6 +230,8 @@ tab_dashboard, tab_channels, tab_content, tab_ai, tab_storyboard, tab_video, tab
 )
 
 with tab_dashboard:
+    st.info("Preview update: Google বাংলা voice এবং local image animation দেখতে Video Studio ট্যাব খুলুন।")
+    st.warning("এই free preview-র local drafts ও media স্থায়ী নয়। সংরক্ষিত কোড GitHub-এ থাকে; server restart/redeploy হলে local কাজ হারাতে পারে।")
     st.subheader("Central Dashboard")
     a, b, c, d = st.columns(4)
     a.metric("Total Channels", len(channels))

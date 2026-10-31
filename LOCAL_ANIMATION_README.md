@@ -15,3 +15,7 @@ This generates individual silent landscape clips, not a complete narrated two-mi
 Contract tests use a fake pipeline to verify local-only loading, inference arguments, metadata, validation and failed-job cleanup. They do not prove visual quality or real GPU inference. The implementation environment has no CUDA device; a real checkpoint/GPU smoke test is still required before calling this production-ready.
 
 Reference: https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/svd
+
+## Consumer Google voice panel
+
+Video Studio includes a separate Google Bengali voice panel using gTTS consumer Translate TTS. It never uses Google Cloud billing or Gemini, and cannot promise expressive acting or a specific voice gender. Only spoken text is submitted, with timeouts, default certificate verification, no automatic retries and no substitution. Failed or rate-limited requests do not register output. The panel has a voice-only preview/download: completing it is NOT an end-to-end film test. Import reviewed narration into the existing Storyboard Studio for assembly. The earlier work-environment Translate request returned 429; no successful Google voice is claimed.

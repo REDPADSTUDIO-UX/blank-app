@@ -186,6 +186,8 @@ def show_video_studio(db_path, media_dir):
     st.subheader("🎞️ Video · Background Sound · Editing")
     from redpad_pipeline.local_animation_ui import show_local_animation
     show_local_animation(media_dir)
+    from redpad_pipeline.free_voice import show_free_voice
+    show_free_voice(media_dir)
     st.divider()
     st.info("Free MVP: demo idea → procedural storyboard → original ambient soundtrack "
             "→ edited MP4 → approval. This demo renderer is procedural. Local neural image animation is available in the separate panel above when a GPU and weights are configured.")
