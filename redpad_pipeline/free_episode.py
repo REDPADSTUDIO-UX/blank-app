@@ -140,6 +140,11 @@ def qa(path,seconds):
     if abs(duration(path)-seconds)>.15:raise ValueError('Final duration failed validation.')
     p=subprocess.run([ffmpeg_binary(),'-hide_banner','-i',str(path),'-vf','blackdetect=d=0.15:pix_th=0.025',
         '-af','silencedetect=n=-65dB:d=0.15','-f','null','-'],capture_output=True,text=True,timeout=240)
+    diagnostics=dict(black_events=re.findall(r'black_(?:start|end|duration):[0-9.]+',p.stderr),
+        silence_events=re.findall(r'silence_(?:start|end|duration): [0-9.]+',p.stderr),decode_exit=p.returncode)
+    write(path.parent/'qa_diagnostics.json',diagnostics)
+    if diagnostics['silence_events'] or diagnostics['black_events']:
+        print('REDPAD_FREE_EPISODE_QA '+json.dumps(diagnostics),flush=True)
     if p.returncode:raise ValueError('Final MP4 failed full decode.')
     if 'black_start:' in p.stderr:raise ValueError('Black section detected; final review was blocked.')
     if 'silence_start:' in p.stderr:raise ValueError('Unintended silent section detected; final review was blocked.')
@@ -191,12 +196,14 @@ def run(db_path,root):
                 clock+=s['seconds'];state['done']=i+1;write(root/'state.json',state)
                 print(f'REDPAD_FREE_EPISODE shot {i+1}/{len(plan["shots"])} complete',flush=True)
             (root/'subtitles.bn.srt').write_text('\n'.join(subs))
+            state['phase']='mixing';write(root/'state.json',state)
             soundtrack(root/'score.wav',clock,cuts,plan['shots'])
             (root/'concat.txt').write_text(''.join(f"file '{p.relative_to(root)}'\n" for p in clips))
             final=root/'episode.partial.mp4'
             ff(['-f','concat','-safe','0','-i',root/'concat.txt','-i',root/'score.wav','-i',root/'subtitles.bn.srt',
-                '-filter_complex','[0:a]asplit=2[v][side];[1:a][side]sidechaincompress=threshold=0.03:ratio=5:attack=10:release=300[b];[v][b]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.92[a]',
+                '-filter_complex','[0:a]asplit=2[v][side];[1:a]asplit=2[score][ambience];[score][side]sidechaincompress=threshold=0.03:ratio=5:attack=10:release=300[b];[ambience]volume=0.2[continuous];[v][b][continuous]amix=inputs=3:duration=longest:normalize=0,alimiter=limit=0.92[a]',
                 '-map','0:v','-map','[a]','-map','2:0','-t',clock,'-c:v','copy','-c:a','aac','-b:a','160k','-ar','48000','-ac','2','-c:s','mov_text','-metadata:s:s:0','language=ben','-movflags','+faststart',final],timeout=300)
+            state['phase']='validating';write(root/'state.json',state)
             report=qa(final,clock);write(root/'qa.json',report)
             final.replace(root/'episode.mp4')
             script='\n'.join(s['text'] for s in plan['shots'])
@@ -241,6 +248,15 @@ def show(db_path,media_dir):
         root=statefile.parent;state=json.loads(statefile.read_text());plan=json.loads((root/'plan.json').read_text())
         st.write(f"{plan['title']} · {state['phase']} · {state['done']}/{state['total']} shots")
         if state['error']:st.error(state['error'])
+        if state['phase']=='blocked' and (root/'episode.partial.mp4').exists():
+            st.warning('Diagnostic file only — final QA did not pass.')
+            st.video(str(root/'episode.partial.mp4'))
+            with (root/'episode.partial.mp4').open('rb') as data:st.download_button('Download diagnostic MP4',data,file_name='diagnostic_only.mp4',mime='video/mp4',key='diagnostic_'+str(root))
+            if (root/'qa_diagnostics.json').exists():st.json(json.loads((root/'qa_diagnostics.json').read_text()))
+            if (len(list(root.glob('*/shot.mp4')))==len(plan['shots'])
+                    and not list(root.glob('*/pending.json'))):
+                if st.button('Rebuild final mix from cached shots',key='remix_'+str(root)):
+                    start(db_path,root);st.info('Rebuilding from saved media; no new image or voice request.')
         if state['phase']=='complete':
             st.video(str(root/'episode.mp4'))
             with (root/'episode.mp4').open('rb') as data:st.download_button('Download completed episode',data,file_name='episode.mp4',mime='video/mp4',key=str(root))
