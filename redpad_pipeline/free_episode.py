@@ -3,7 +3,7 @@
 No billed providers, no publishing and no automatic retry of uncertain calls.
 An image animatic is labelled as such; it is never described as neural video.
 """
-import hashlib,json,math,sqlite3,threading,wave,shutil
+import hashlib,json,math,sqlite3,threading,wave,shutil,base64,re
 from datetime import datetime,timezone
 from pathlib import Path
 from uuid import uuid4
@@ -25,6 +25,9 @@ def validate(plan):
     shots=plan.get('shots',[])
     if not isinstance(shots,list) or not 1<=len(shots)<=60:raise ValueError('Use 1–60 shots.')
     if len({s.get('prompt') for s in shots})!=len(shots):raise ValueError('Repeated visual prompts are blocked.')
+    refs=[s['reference_id'] for s in shots if s.get('reference_id')]
+    if len(refs)!=len(set(refs)):raise ValueError('Repeated reference images are blocked.')
+    if any(not isinstance(r,str) or not re.fullmatch(r'00[1-9]|01[0-9]|02[0-4]',r) for r in refs):raise ValueError('Unknown stored reference.')
     for s in shots:
         if not isinstance(s.get('seconds'),int) or not 3<=s['seconds']<=15:raise ValueError('Each shot must be 3–15 seconds.')
         if not isinstance(s.get('text'),str) or not 1<=len(s['text'])<=500:raise ValueError('Each shot needs short spoken Bangla.')
@@ -38,6 +41,14 @@ def new_job(db_path,media_dir,channel_id,plan):
     initialize(db_path)
     root=(Path(media_dir)/'free_episodes'/uuid4().hex).resolve();root.mkdir(parents=True)
     write(root/'plan.json',plan)
+    for i,shot in enumerate(plan['shots']):
+        if shot.get('reference_id'):
+            source=Path(__file__).resolve().parents[1]/'assets/demos/ghor_refs'/(shot['reference_id']+'.b64')
+            raw=base64.b64decode(source.read_text(),validate=True)
+            if len(raw)>3_000_000:raise ValueError('Stored image is too large.')
+            folder=root/f'{i+1:03}';folder.mkdir()
+            (folder/'image.jpg').write_bytes(raw)
+            with Image.open(folder/'image.jpg') as im:im.verify()
     script='\n'.join(s['text'] for s in plan['shots'])
     now=datetime.now(timezone.utc).isoformat()
     with sqlite3.connect(db_path) as db:
@@ -161,6 +172,7 @@ def run(db_path,root):
                     image(s['prompt'],still,117+i*31);marker.unlink()
                 h=perceptual(still)
                 if any((h^x).bit_count()<5 for x in hashes):
+                    if s.get('reference_id'):raise ValueError('Duplicate stored reference detected; no GPU fallback was used.')
                     # The previous request completed; one genuinely new composition
                     # is permitted. Never retry an uncertain provider submission.
                     still.replace(folder/'duplicate_rejected.jpg')
@@ -172,7 +184,7 @@ def run(db_path,root):
                 if not clip.exists():
                     temp=folder/'shot.partial.mp4';render_shot(still,voice,temp,s['seconds'],i);temp.replace(clip)
                 clips.append(clip);cuts.append(clock)
-                write(folder/'provenance.json',dict(image_space=IMAGE_SPACE,image_sha256=hashlib.sha256(still.read_bytes()).hexdigest(),
+                write(folder/'provenance.json',dict(image_space='previously-created AI reference asset' if s.get('reference_id') else IMAGE_SPACE,image_sha256=hashlib.sha256(still.read_bytes()).hexdigest(),
                     voice_provider='google-translate-consumer-tts',voice_sha256=hashlib.sha256(voice.read_bytes()).hexdigest(),
                     voice_seconds=actual,editorial_camera_animation=True,neural_video=False,paid_calls=0))
                 subs.append(f'{i+1}\n{timestamp(clock)} --> {timestamp(clock+s["seconds"])}\n{s["text"]}\n')
@@ -216,7 +228,7 @@ def show(db_path,media_dir):
     initial=''
     if builtin:
         initial=(Path(__file__).resolve().parents[1]/'assets/demos/ghor_117_ep01.json').read_text()
-        st.info('Original REDPAD story; not a work by Humayun Ahmed. 30 distinct shots, 300 seconds. This demo uses AI stills with camera animation.')
+        st.info('Original REDPAD story; not a work by Humayun Ahmed. 24 distinct stored AI images, 300 seconds. No image GPU quota is required for this reference-based demo. Images use editorial camera animation.')
     plan_text=st.text_area('Episode shot plan JSON',value=initial,height=180,key='free_episode_plan_builtin' if builtin else 'free_episode_plan')
     channel=st.selectbox('Episode channel',channels,format_func=lambda r:r[1],key='free_episode_channel')
     consent=st.checkbox('I approve sending this shot plan to the named free image and voice services. Final video still requires review.',key='free_episode_consent')
