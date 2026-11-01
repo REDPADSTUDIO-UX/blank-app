@@ -567,11 +567,16 @@ with tab_storyboard:
     show_storyboard(DB_PATH, MEDIA_DIR)
 
 with tab_video:
-    from redpad_video_studio import show_video_studio
-    show_video_studio(DB_PATH, MEDIA_DIR)
-    st.divider()
-    from redpad_pipeline.ui import show_production_studio
-    show_production_studio(DB_PATH, MEDIA_DIR, get_secret)
+    from redpad_pipeline.drama_quality_ui import show as show_quality_drama
+    show_quality_drama(DB_PATH, MEDIA_DIR)
+    with st.expander('Legacy tools — mocks, animatics and earlier experiments', expanded=False):
+        from redpad_video_studio import show_video_studio
+        show_video_studio(DB_PATH, MEDIA_DIR)
+        st.divider()
+        from redpad_pipeline.ui import show_production_studio
+        show_production_studio(DB_PATH, MEDIA_DIR, get_secret)
+        from redpad_pipeline.drama_ui import show as show_drama
+        show_drama(MEDIA_DIR)
 
 with tab_marketing:
     from redpad_pipeline.marketing_ui import show_marketing

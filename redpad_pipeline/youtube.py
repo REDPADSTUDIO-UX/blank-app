@@ -334,6 +334,11 @@ def publish_time(local_date, local_time, now=None):
 
 def snapshot(db_path, media_root, content_id):
     """Bind approval to current script, render bytes, revision and internal channel."""
+    from .drama_quality import assert_content_publishable, QualityError
+    try:
+        assert_content_publishable(db_path, media_root, content_id)
+    except QualityError as exc:
+        raise YouTubeError(str(exc)) from None
     with closing(sqlite3.connect(db_path)) as db:
         db.row_factory = sqlite3.Row
         row = db.execute("SELECT * FROM content WHERE id=?", (int(content_id),)).fetchone()

@@ -56,7 +56,9 @@ def connection_status():
         return False,'Free GPU service is unreachable from this host. No paid request was made.'
 
 
-def generate(image_bytes,prompt,media_dir):
+def generate(image_bytes,prompt,media_dir,*,seconds=3.5,seed=117):
+    if not isinstance(seconds,(int,float)) or isinstance(seconds,bool) or not .5<=seconds<=5 or not isinstance(seed,int) or not 0<=seed<2**32:
+        raise GPUError("Free video controls exceed the reviewed duration/seed bounds.")
     if not image_bytes or len(image_bytes)>10*1024*1024:
         raise GPUError('Use a PNG/JPEG of at most 10 MB.')
     if not isinstance(prompt,str) or not 1<=len(prompt.strip())<=1500:
@@ -76,11 +78,11 @@ def generate(image_bytes,prompt,media_dir):
     def save(): (root/'job.json').write_text(json.dumps(state,ensure_ascii=False,indent=2))
     save()
     try:
-        client=Client(SPACE,hf_token=token,verbose=False,analytics_enabled=False,
+        client=Client(BASE,hf_token=token,verbose=False,analytics_enabled=False,
                       httpx_kwargs={'timeout':60},download_files=str(root/'download'))
         state['stage']='submission-uncertain';save()
         job=client.submit(handle_file(str(source)),prompt.strip(),6,
-            'blur, deformation, text, watermark',3.5,1,1,117,False,api_name='/generate_video')
+            'blur, deformation, text, watermark',seconds,1,1,seed,False,api_name='/generate_video')
         state['stage']='running';save()
         result=job.result(timeout=240)
         if not isinstance(result,(list,tuple)) or not result:raise GPUError('GPU returned an unrecognized result.')

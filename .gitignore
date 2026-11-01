@@ -169,3 +169,8 @@ redpad_youtube_mock.db
 redpad_youtube_mock.db-*
 redpad_media/
 ci_artifacts/
+
+# Isolated realistic-drama instance state; canonical inputs live in versioned SQLite.
+productions/ghor_117_quality/project_pointer.json
+productions/ghor_117_quality/authored_project.json
+productions/ghor_117_quality/actual_status.json

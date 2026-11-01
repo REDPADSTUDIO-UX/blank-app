@@ -1,0 +1,42 @@
+{
+  "checked_for": "REDPAD realism quality upgrade",
+  "sources": [
+    {
+      "url": "https://www.sony.com/electronics/support/audio-video-boomboxes/cfs-9000/articles/00028567",
+      "type": "manufacturer troubleshooting",
+      "finding": "Cassette tape slack can be reduced by turning a reel using a pencil; tape and transport checks are ordinary mechanical diagnostics.",
+      "application": "Rafi checks tape slack before playback. No manufacturer source is claimed to support paranormal effects."
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/spaces-zerogpu",
+      "type": "provider documentation",
+      "finding": "Shared GPU access is quota/queue constrained; endpoint reachability does not prove adequate generation resources.",
+      "application": "Full production preflight requires actual access, rights, remaining quota and a representative sample."
+    },
+    {
+      "url": "https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B",
+      "type": "model author card",
+      "finding": "The base model card identifies Apache-2.0; the actual Space also loads other model/adapter artifacts.",
+      "application": "Do not infer all wrapper/adapter or output permissions from one base-model label."
+    },
+    {
+      "url": "https://huggingface.co/ehzawad/orpheus-bangla-emotional-tts",
+      "type": "model author card, current direct page",
+      "finding": "Current page identifies research-only noncommercial restrictions and requires written production permission. Search snippets suggesting Apache-2.0 were stale.",
+      "application": "Not selected for production; no gated access was bypassed."
+    },
+    {
+      "url": "https://huggingface.co/ai4bharat/indic-parler-tts",
+      "type": "model author card",
+      "finding": "The card identifies an Apache-2.0 model and Bengali speaker candidates. Weight access is gated; no gated download was authorised.",
+      "application": "Public demo availability checked separately. Pronunciation, Bangladeshi register and emotional delivery have not been demonstrated here."
+    },
+    {
+      "url": "https://huggingface.co/spaces/ai4bharat/indic-parler-tts/blob/main/README.md",
+      "type": "official demo metadata",
+      "finding": "Official demo metadata identifies a Gradio Space with Apache-2.0 metadata. Its API discovery returned HTTP 500 during the read-only check.",
+      "application": "Report unavailable access; do not fall back to the earlier robotic consumer TTS."
+    }
+  ],
+  "fictional_context": "Wari, Dhaka house, rainfall, family history and all paranormal events are authored fiction, not verified local incidents."
+}

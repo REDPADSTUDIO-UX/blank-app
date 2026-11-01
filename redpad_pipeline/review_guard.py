@@ -16,6 +16,11 @@ def ensure_current_source(db_path, media_dir, content_id):
     Legacy demo/videos with no storyboard provenance retain the existing
     dashboard review behavior.
     """
+    from .drama_quality import assert_content_publishable, QualityError
+    try:
+        assert_content_publishable(db_path, media_dir, content_id)
+    except QualityError as exc:
+        raise ProductionError(str(exc)) from None
     with sqlite3.connect(db_path) as db:
         row = db.execute("SELECT video_path FROM content_video WHERE content_id=?",
                          (content_id,)).fetchone()
