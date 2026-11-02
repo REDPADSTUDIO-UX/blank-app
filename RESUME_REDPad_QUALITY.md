@@ -1,4 +1,4 @@
-# REDPAD quality-production recovery checkpoint — 2026-11-01
+# REDPAD quality-production recovery checkpoint — 2026-11-02
 
 User instruction: preserve progress, stop safely when usage/resources are exhausted,
 and resume from the latest valid checkpoint when asked to continue or finish.
@@ -32,10 +32,13 @@ Do not restart successful work blindly. Never incur paid charges.
 1. Verify restored DB and object hashes using the package mapping. Do not overwrite existing data.
 2. Confirm actual free compute, permitted terms and endpoint availability. Earlier voice info
    endpoint returned HTTP 500; actual video quota remains unverified. No CUDA/local model.
-3. Previous approval review blocked sending project references/dialogue to public HF services.
-   User subsequently replied 'অনুমতি দিচ্ছি' while requesting checkpoint preservation.
-   Interpret permission only within the named fictional-character/dialogue test scope and
-   the permanent zero-cost/security constraints; record exact service consent if resuming tests.
+3. Automatic approval review again rejected the reference-image/shot-direction transmission
+   on 2026-11-02: general save/continue permission was not accepted as explicit authorization
+   for that private payload and public HF destination. Do not retry or bypass. The attempted
+   visual job is blocked/remote state unverified; no output was accepted. Assistant-entered
+   disclosure assertions were removed. Obtain explicit end-user permission naming the Rafi
+   reference + shot direction and the public Wan Space before any new transmission. The voice
+   audition likewise needs a specific permission covering its line/performance direction.
 4. Validate actual representative realism + dialogue; retain failed evidence, no cartoon fallback.
 5. Only when capability/sample gates pass, produce missing assets selectively, review, render,
    and independently inspect actual ~300-second media before marking complete.
@@ -45,11 +48,14 @@ Do not restart successful work blindly. Never incur paid charges.
 
 No original Render redeploy/restart/migration is authorized before independently verified
 database AND media backup and recovery. No main modifications or merge.
-Render connector has no selected workspace; account lists 'Rb’s workspace'
-(tea-dbfic56c6qcc739r52i0), which requires user confirmation before workspace-scoped calls.
-Feature-branch auto-deploy status is unknown: do not push or change a branch ref until safe.
-An unreferenced GitHub recovery commit can store the source without a branch update,
-but is not a substitute for a reachable branch or independently preserved recovery archive.
+User explicitly confirmed Rb’s workspace (tea-dbfic56c6qcc739r52i0) on 2026-11-02.
+Read-only Render inventory verified all three services have autoDeploy=no,
+autoDeployTrigger=off and previews off. Feature branch was therefore safely advanced to
+9712de4de670013ede663de637fb2b9fc95e0f46 and independently read back. Main unchanged.
+No Render deployment/restart/settings change was made. Latest safe-preview deploy remains
+dep-dbj0j8942hec73bmvrt0, old commit c387085ff675e647636451b7c02ce70ae809830d.
+GitHub now holds a reachable feature-branch source checkpoint, not just an unreferenced object.
+Media/SQLite remain in the private recovery package; they were not exposed in public GitHub.
 Never claim Render storage/deployment succeeded without verification.
 
 ## Continue procedure
