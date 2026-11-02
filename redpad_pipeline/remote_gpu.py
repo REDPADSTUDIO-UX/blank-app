@@ -1,5 +1,5 @@
 """Anonymous ZeroGPU via the supported Gradio client; never uses paid APIs."""
-import hashlib,json,shutil,os
+import hashlib,json,shutil,os,subprocess,math
 from io import BytesIO
 from pathlib import Path
 from uuid import uuid4
@@ -9,6 +9,18 @@ from PIL import Image
 SPACE='zerogpu-aoti/wan2-2-fp8da-aoti-faster'
 BASE='https://zerogpu-aoti-wan2-2-fp8da-aoti-faster.hf.space'
 class GPUError(RuntimeError): pass
+
+
+def _download_duration(path):
+    """Validate downloaded media without importing Streamlit or legacy rendering UI."""
+    try:
+        result=subprocess.run(['ffprobe','-v','error','-show_entries','format=duration',
+            '-of','json',str(path)],capture_output=True,text=True,check=True,timeout=25)
+        seconds=float(json.loads(result.stdout)['format']['duration'])
+        if not math.isfinite(seconds):raise ValueError()
+        return seconds
+    except (OSError,ValueError,KeyError,subprocess.SubprocessError):
+        raise GPUError('Downloaded video is preserved but local FFprobe validation failed. Inspect the saved file before any new submission.') from None
 
 
 def _verify_free_account(token):
@@ -89,15 +101,17 @@ def generate(image_bytes,prompt,media_dir,*,seconds=3.5,seed=117):
         downloaded=Path(result[0]).resolve()
         if not downloaded.is_relative_to(root) or not downloaded.is_file() or downloaded.stat().st_size>80*1024*1024:
             raise GPUError('The generated video file could not be accepted.')
-        from .media import duration
-        seconds=duration(downloaded)
+        # Persist the successful download before any local validation can fail.
+        state.update(stage='downloaded-unverified',downloaded_relative_path=str(downloaded.relative_to(root)),
+            downloaded_sha256=hashlib.sha256(downloaded.read_bytes()).hexdigest());save()
+        seconds=_download_duration(downloaded)
         if not 0.4<=seconds<=6:raise GPUError('Generated video duration is invalid.')
         output=root/'animation.mp4';shutil.copyfile(downloaded,output)
         state.update(stage='complete',seconds=seconds,seed=result[1] if len(result)>1 else 117,
             output_sha256=hashlib.sha256(output.read_bytes()).hexdigest());save()
         return output
     except Exception as exc:
-        state['stage']='failed-or-unknown';save()
+        state.update(failed_at_stage=state['stage'],error_type=type(exc).__name__,stage='failed-or-unknown');save()
         if isinstance(exc,GPUError):raise
         text=str(exc).lower()
         if any(s in text for s in ('quota','exceeded','sign in','logged','authenticate')):

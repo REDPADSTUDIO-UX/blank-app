@@ -18,12 +18,25 @@ class RemoteGPUTests(unittest.TestCase):
             def submit(self,*args,**kw):
                 path=Path(calls['download_files'])/'clip.mp4';path.parent.mkdir();path.write_bytes(b'video'*1000)
                 return types.SimpleNamespace(result=lambda timeout:(str(path),117))
-        with tempfile.TemporaryDirectory() as root,patch('gradio_client.Client',FakeClient),patch('gradio_client.handle_file',lambda x:x),patch('redpad_pipeline.media.duration',return_value=3.56):
+        with tempfile.TemporaryDirectory() as root,patch('gradio_client.Client',FakeClient),patch('gradio_client.handle_file',lambda x:x),patch('redpad_pipeline.remote_gpu._download_duration',return_value=3.56):
             out=generate(self.picture(),'motion',root)
             self.assertEqual(out.read_bytes(),b'video'*1000)
             self.assertIs(calls['hf_token'],False)
             state=json.loads(out.with_name('job.json').read_text())
             self.assertEqual(state['stage'],'complete');self.assertFalse(state['paid_fallback'])
+    def test_local_validation_failure_preserves_download_for_recovery(self):
+        calls={}
+        class FakeClient:
+            def __init__(self,*args,**kw):calls.update(kw)
+            def submit(self,*args,**kw):
+                path=Path(calls['download_files'])/'clip.mp4';path.parent.mkdir();path.write_bytes(b'video'*1000)
+                return types.SimpleNamespace(result=lambda timeout:(str(path),117))
+        with tempfile.TemporaryDirectory() as root,patch('gradio_client.Client',FakeClient),patch('gradio_client.handle_file',lambda x:x),patch('redpad_pipeline.remote_gpu._download_duration',side_effect=GPUError('Local probe unavailable')):
+            with self.assertRaises(GPUError):generate(self.picture(),'motion',root)
+            checkpoint=next(Path(root).rglob('job.json'));state=json.loads(checkpoint.read_text())
+            self.assertEqual(state['failed_at_stage'],'downloaded-unverified')
+            self.assertTrue((checkpoint.parent/state['downloaded_relative_path']).is_file())
+            self.assertEqual(len(state['downloaded_sha256']),64)
     def test_quota_saves_no_clip_and_no_retry(self):
         with tempfile.TemporaryDirectory() as root,patch('gradio_client.Client',side_effect=RuntimeError('quota exceeded')) as client:
             with self.assertRaisesRegex(GPUError,'quota'):generate(self.picture(),'motion',root)

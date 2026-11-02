@@ -64,3 +64,28 @@ Read this note and DRAMA_QUALITY_README.md first. Inspect Git/DB checkpoints and
 source hashes. Reuse current successful assets; correct only failed/stale components.
 Record new checkpoints before usage limits or external blockers stop execution. Background
 work does not continue after the session ends; resume only when the user requests it.
+
+
+## Later authorized small test — recovered successfully
+
+User subsequently explicitly approved the small test in direct response to the named
+payload/destination request. One new Q006 five-second Rafi reaction sample was produced;
+uncertain Q001 was not resubmitted. Actual downloaded MP4 survived a local validation
+failure caused by legacy media code importing unavailable Streamlit. It was recovered
+without a second GPU job. Adapter now validates with independent FFprobe and checkpoints
+download path/hash before validation. Six relevant unit tests passed.
+
+Q006 media: 5.0625 seconds, native 832x480, no audio. Full decode passed; no black intervals
+at 0.2s/0.10 or freezes at 1s/-50dB. Agent frame review sees photographic character/room,
+small head/gaze motion and reframing; requested tight close-up was not achieved. This is
+not an accepted paired visual/dialogue scene and does not clear full production gates.
+Indic Parler voice discovery remains HTTP 500; no voice job submitted. No publication.
+Paid generation/cloud/API expenditure remains USD 0.
+
+Private persistent MP4:
+https://chatgpt.com/library?file_id=libfile_9eea459982e081918504b77dc4c326d0&account_id=personal
+Actual result/provenance and recovered asset ID are in
+productions/ghor_117_quality/small_test_result.json.
+Restore earlier full project/continuation package first; if local DB is missing, import
+this MP4 into the isolated project's Q006 slot with the recorded metadata, mark sample-only
+and unselected, and record its newly assigned asset ID. Never invent editorial approval.
