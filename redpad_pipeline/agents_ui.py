@@ -6,7 +6,7 @@ from .agents import CATALOG, AGENTS, AgentStore, AgentError
 
 def render_agent_control(path):
     st.header('AI AGENTS CONTROL CENTER')
-    st.warning('20 registered roles — zero verified model connections. Manual/simulation records only; no generation or publishing.')
+    st.warning('20 registered roles. Director supports explicit local planning; inference evidence is shown per plan. No automatic production or publishing.')
     store = AgentStore(path)
     st.dataframe([{'ID':a['id'],'Agent':a['name'],'Department':a['department'],**store.status(a['key'])} for a in CATALOG],hide_index=True)
     key=st.selectbox('Individual agent workspace',list(AGENTS),format_func=lambda k:AGENTS[k]['name'],key='agent_workspace')
@@ -20,6 +20,9 @@ def render_agent_control(path):
     if save:
         try: store.configure(key,model); st.success('Configuration saved. Connection remains unverified.')
         except AgentError as e: st.error(str(e))
+    if key == 'director':
+        from .director_ui import show_director
+        show_director(store)
     tasks=store.tasks()
     with st.form('agent_assign'):
         brief=st.text_area('Task brief',key='agent_brief')

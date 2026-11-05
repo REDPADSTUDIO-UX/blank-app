@@ -61,9 +61,14 @@ class AgentStore:
         agent(key)
         with self.tx() as db:
             row=db.execute('SELECT model FROM config WHERE agent=?',(key,)).fetchone()
+        inference_verified = False
+        if key == 'director' and row and row[0]:
+            with self.tx() as db:
+                if db.execute("SELECT 1 FROM sqlite_master WHERE name='director_plans'").fetchone():
+                    inference_verified = bool(db.execute("SELECT 1 FROM director_plans WHERE provenance='local_inference' AND model=? LIMIT 1", (row[0],)).fetchone())
         return {'registration':'Registered','configuration':'Configured' if row and row[0] else 'Not configured',
-                'model':row[0] if row else '', 'connection':'Model Not Connected','readiness':'Blocked',
-                'blocker':'No agent inference adapter verified in this registration phase.',
+                'model':row[0] if row else '', 'connection':('Local inference recorded; current availability not probed' if inference_verified else 'Model Not Connected'),'readiness':'Blocked',
+                'blocker':('Local planning adapter implemented; inspect per-plan inference evidence. Production readiness unverified.' if key=='director' else 'No agent inference adapter verified in this registration phase.'),
                 'tests':'Registry/contract tests only; see AGENT_CONTROL_VERIFICATION.md',
                 'progress':'Foundation registered; individual development pending'}
     def tasks(self):
@@ -80,6 +85,10 @@ class AgentStore:
         if not row: raise AgentError('Unknown task.')
         return dict(row)
     def _current(self,db,t):
+        if db.execute("SELECT 1 FROM sqlite_master WHERE name='director_dispatch'").fetchone():
+            linked=db.execute("SELECT p.state FROM director_dispatch d JOIN director_plans p ON p.id=d.plan WHERE d.task=?",(t["id"],)).fetchone()
+            if linked and linked[0] != "Approved":
+                raise AgentError("Director source plan approval is stale.")
         for ref in json.loads(t['refs']):
             source=self._task(db,ref['id'])
             if source['state']!='Approved' or source['revision']!=ref['revision']:
