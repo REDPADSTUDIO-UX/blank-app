@@ -6,7 +6,7 @@ from .agents import CATALOG, AGENTS, AgentStore, AgentError
 
 def render_agent_control(path):
     st.header('AI AGENTS CONTROL CENTER')
-    st.warning('20 registered roles. Director supports explicit local planning; inference evidence is shown per plan. No automatic production or publishing.')
+    st.warning('20 department software workflows. Model inference and media generation are separate capabilities; no automatic publishing.')
     store = AgentStore(path)
     st.dataframe([{'ID':a['id'],'Agent':a['name'],'Department':a['department'],**store.status(a['key'])} for a in CATALOG],hide_index=True)
     key=st.selectbox('Individual agent workspace',list(AGENTS),format_func=lambda k:AGENTS[k]['name'],key='agent_workspace')
@@ -23,6 +23,8 @@ def render_agent_control(path):
     if key == 'director':
         from .director_ui import show_director
         show_director(store)
+    from .agent_execution_ui import show_execution
+    show_execution(store,key)
     tasks=store.tasks()
     with st.form('agent_assign'):
         brief=st.text_area('Task brief',key='agent_brief')

@@ -66,11 +66,15 @@ class AgentStore:
             with self.tx() as db:
                 if db.execute("SELECT 1 FROM sqlite_master WHERE name='director_plans'").fetchone():
                     inference_verified = bool(db.execute("SELECT 1 FROM director_plans WHERE provenance='local_inference' AND model=? LIMIT 1", (row[0],)).fetchone())
-        return {'registration':'Registered','configuration':'Configured' if row and row[0] else 'Not configured',
+        if row and row[0]:
+            with self.tx() as db:
+                if db.execute("SELECT 1 FROM sqlite_master WHERE name='agent_runs'").fetchone():
+                    inference_verified = inference_verified or bool(db.execute("SELECT 1 FROM agent_runs r JOIN tasks t ON t.id=r.task WHERE t.agent=? AND r.model=? AND r.mode='local' AND r.state='Awaiting QC' LIMIT 1", (key,row[0])).fetchone())
+        return {'registration':'Registered','software':'Software Working','configuration':'Configured' if row and row[0] else 'Not configured',
                 'model':row[0] if row else '', 'connection':('Local inference recorded; current availability not probed' if inference_verified else 'Model Not Connected'),'readiness':'Blocked',
-                'blocker':('Local planning adapter implemented; inspect per-plan inference evidence. Production readiness unverified.' if key=='director' else 'No agent inference adapter verified in this registration phase.'),
-                'tests':'Registry/contract tests only; see AGENT_CONTROL_VERIFICATION.md',
-                'progress':'Foundation registered; individual development pending'}
+                'blocker':'Production quality unverified; model runtime and media prerequisites reported by execution preflight.',
+                'tests':'See WORKING_FOUNDATION_VERIFICATION.md for execution and end-to-end evidence',
+                'progress':'Executable preparation/validation workflow available; inference and creative quality separate'}
     def tasks(self):
         with self.tx() as db:
             return [dict(r) for r in db.execute('SELECT * FROM tasks ORDER BY rowid DESC')]
@@ -139,7 +143,7 @@ class AgentStore:
             self._current(db,t)
             if actor=='qc' and t['agent']=='qc': raise AgentError('QC cannot review its own output; owner must review QC records separately.')
             if decision in ('Recommend','Reject') and t['state']!='Awaiting QC': raise AgentError('Not awaiting QC.')
-            if decision=='Approve' and t['state']!='QC recommended': raise AgentError('Independent QC recommendation required.')
+            if decision=='Approve' and t['state']!='QC recommended' and not (t['agent']=='qc' and t['state']=='Awaiting QC'): raise AgentError('Independent QC recommendation required.')
             state={'Recommend':'QC recommended','Reject':'Revision requested','Approve':'Approved','Request revision':'Revision requested'}[decision]
             db.execute('UPDATE tasks SET state=? WHERE id=?',(state,tid))
             self.event(db,tid,actor,decision,{'revision':revision,'evidence':evidence})

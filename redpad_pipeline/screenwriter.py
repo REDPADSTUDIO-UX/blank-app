@@ -133,7 +133,10 @@ class LocalWriter:
         payload = {'model':self.model,'messages':[{'role':'system','content':system},{'role':'user','content':prompt}],
                    'stream':False,'format':'json','options':{'temperature':0.65,'num_predict':12000,'num_ctx':32768}}
         # Fixed loopback prevents sending unpublished scripts to external endpoints.
-        opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+        class NoRedirect(urllib.request.HTTPRedirectHandler):
+            def redirect_request(self, *args, **kwargs):
+                return None
+        opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
         try:
             show = urllib.request.Request('http://127.0.0.1:11434/api/show', data=json.dumps({'model':self.model}).encode(), headers={'Content-Type':'application/json'})
             with opener.open(show, timeout=10) as response: metadata=json.load(response)
