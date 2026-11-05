@@ -94,6 +94,8 @@ def create_narration(item, channel, duration_seconds=90):
         f"Target spoken duration: approximately {duration_seconds} seconds.\n"
         "Output the final voiceover text only."
     )
+    if get_secret("REDPAD_ENABLE_PAID_GENERATION").lower() != "true":
+        raise RuntimeError("Paid narration generation is disabled. Use the screenplay writing desk.")
     response = openai_client().responses.create(
         model=SCRIPT_MODEL,
         instructions=instructions,
@@ -440,10 +442,13 @@ with tab_content:
 
 
 with tab_ai:
+    from redpad_pipeline.screenwriter_ui import show as show_screenwriter
+    show_screenwriter(MEDIA_DIR)
+    st.divider()
     st.subheader("🤖 AI Script + Bangla Voice Production")
     st.caption("Select a draft → Generate / revise script → Create voice MP3 → Review → Approve")
 
-    script_ready = bool(get_secret("OPENAI_API_KEY"))
+    script_ready = bool(get_secret("OPENAI_API_KEY")) and get_secret("REDPAD_ENABLE_PAID_GENERATION").lower() == "true"
     voice_ready = bool(get_secret("AZURE_SPEECH_KEY")) and bool(
         get_secret("AZURE_SPEECH_REGION")
     )
