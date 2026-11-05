@@ -7,6 +7,9 @@ def show(media_dir):
  st.subheader('🎬 Drama Production — ঘর ১:১৭')
  project=Path(__file__).resolve().parents[1]/'productions'/'ghor_117'
  root=Path(media_dir)/'drama'/'ghor117_ep01'
+ if not (project/'plan.json').is_file():
+  st.info('Archived episode artifacts are not available on this host.')
+  return
  plan=json.loads((project/'plan.json').read_text())
  st.caption('Original Bangladeshi fiction · Episode 1 · 2D animated drama · No paid generation')
  video=root/'Ghor_117_EP01_Animated_Drama.mp4'

@@ -174,3 +174,5 @@ ci_artifacts/
 productions/ghor_117_quality/project_pointer.json
 productions/ghor_117_quality/authored_project.json
 productions/ghor_117_quality/actual_status.json
+
+agent_control.sqlite3*

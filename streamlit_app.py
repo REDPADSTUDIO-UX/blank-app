@@ -233,8 +233,8 @@ items = db_query(
        ORDER BY c.id DESC"""
 )
 
-tab_dashboard, tab_channels, tab_content, tab_ai, tab_storyboard, tab_video, tab_marketing, tab_youtube = st.tabs(
-    ["📊 Dashboard", "📺 Channel Manager", "✅ Approval Dashboard", "🤖 AI Production", "🎬 Storyboard Studio", "🎞️ Video Studio", "📣 Growth Engine", "🔗 YouTube Connect"]
+tab_dashboard, tab_channels, tab_content, tab_ai, tab_storyboard, tab_video, tab_marketing, tab_youtube, tab_agents = st.tabs(
+    ["📊 Dashboard", "📺 Channel Manager", "✅ Approval Dashboard", "🤖 AI Production", "🎬 Storyboard Studio", "🎞️ Video Studio", "📣 Growth Engine", "🔗 YouTube Connect", "🧠 AI Agents"]
 )
 
 with tab_dashboard:
@@ -590,3 +590,8 @@ with tab_marketing:
 with tab_youtube:
     from redpad_pipeline.youtube_ui import show_youtube
     show_youtube(DB_PATH, MEDIA_DIR, get_secret)
+
+
+with tab_agents:
+    from redpad_pipeline.agents_ui import render_agent_control
+    render_agent_control(Path(__file__).with_name("agent_control.sqlite3"))

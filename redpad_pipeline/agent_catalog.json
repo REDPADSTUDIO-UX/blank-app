@@ -1,0 +1,991 @@
+[
+  {
+    "id": "redpad.agent.director",
+    "key": "director",
+    "name": "Director AI",
+    "department": "Creative leadership",
+    "responsibilities": [
+      "Creative vision",
+      "Scene interpretation",
+      "Department coordination",
+      "Task assignments and revisions"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/ui.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "production_manager"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "direction",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 1,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.qc",
+    "key": "qc",
+    "name": "Quality Control AI",
+    "department": "Creative leadership",
+    "responsibilities": [
+      "Independent technical and creative review",
+      "Evidence-based rejection",
+      "Compliance",
+      "Quality recommendations"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/drama_quality.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "quality_review",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 2,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.story",
+    "key": "story",
+    "name": "Story AI",
+    "department": "Pre-production",
+    "responsibilities": [
+      "Research",
+      "Original premises",
+      "Plot",
+      "Character arcs",
+      "Dramatic structure"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/screenwriter.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "director"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "story",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 3,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.script",
+    "key": "script",
+    "name": "Script AI",
+    "department": "Pre-production",
+    "responsibilities": [
+      "Screenplay",
+      "Visual action first",
+      "Natural Bengali dialogue",
+      "Scene construction",
+      "Revisions"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/screenwriter.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "story"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "screenplay",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 4,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.character",
+    "key": "character",
+    "name": "Character AI",
+    "department": "Pre-production",
+    "responsibilities": [
+      "Identity",
+      "Appearance",
+      "Character Bible",
+      "Facial references",
+      "Consistency"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/drama_quality.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "script"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "character_bible",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 5,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.art",
+    "key": "art",
+    "name": "Art Director AI",
+    "department": "Pre-production",
+    "responsibilities": [
+      "Sets",
+      "Props",
+      "Production design",
+      "Color palettes",
+      "Visual style"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/drama_quality.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "director",
+      "script"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "art_plan",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 6,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.location",
+    "key": "location",
+    "name": "Location AI",
+    "department": "Pre-production",
+    "responsibilities": [
+      "Bangladeshi architecture",
+      "Environment",
+      "Room layout",
+      "Location references and continuity"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/drama_quality.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "script",
+      "art"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "location_bible",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 7,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.costume",
+    "key": "costume",
+    "name": "Costume Designer AI",
+    "department": "Pre-production",
+    "responsibilities": [
+      "Wardrobe",
+      "Costume Bible",
+      "Styling",
+      "Character and art collaboration"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/drama_quality.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "character",
+      "art"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "costume_bible",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 8,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.storyboard",
+    "key": "storyboard",
+    "name": "Storyboard AI",
+    "department": "Pre-production",
+    "responsibilities": [
+      "Shot breakdown",
+      "Compositions",
+      "Camera references",
+      "Shot lists",
+      "Director review"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/storyboard.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "script",
+      "character",
+      "location"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "storyboard",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 9,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.performance",
+    "key": "performance",
+    "name": "Performance Director AI",
+    "department": "Production",
+    "responsibilities": [
+      "Restrained expression",
+      "Acting",
+      "Emotional performance",
+      "Body language"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/drama_quality.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "script",
+      "character"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "performance_plan",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 10,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.cinematographer",
+    "key": "cinematographer",
+    "name": "Cinematographer AI",
+    "department": "Production",
+    "responsibilities": [
+      "Lenses",
+      "Framing",
+      "Camera movement",
+      "Lighting",
+      "Composition"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/storyboard.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "storyboard",
+      "art"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "camera_plan",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 11,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.motion",
+    "key": "motion",
+    "name": "Motion & Physics AI",
+    "department": "Production",
+    "responsibilities": [
+      "Walking",
+      "Sitting",
+      "Object interaction",
+      "Physical realism",
+      "Motion errors"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/local_animation.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "performance",
+      "storyboard"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "motion_plan",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 12,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.video",
+    "key": "video",
+    "name": "Video Generation AI",
+    "department": "Production",
+    "responsibilities": [
+      "Cinematic video",
+      "Future Wan and LTX adapters",
+      "GPU interface",
+      "Controlled generation"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/local_animation.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "cinematographer",
+      "motion",
+      "continuity"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "video_manifest",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 13,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.voice",
+    "key": "voice",
+    "name": "Voice & Dialogue AI",
+    "department": "Production",
+    "responsibilities": [
+      "Bengali pronunciation",
+      "Emotional voices",
+      "Synchronization",
+      "Lip-sync planning"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/free_voice.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "script",
+      "performance"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "voice_manifest",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 14,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.continuity",
+    "key": "continuity",
+    "name": "Continuity Supervisor AI",
+    "department": "Production",
+    "responsibilities": [
+      "Character",
+      "Wardrobe",
+      "Props",
+      "Location",
+      "Shot and episode continuity"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/drama_quality.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "character",
+      "costume",
+      "location",
+      "storyboard"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "continuity_review",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 15,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.music",
+    "key": "music",
+    "name": "Music & SFX AI",
+    "department": "Post-production",
+    "responsibilities": [
+      "Score",
+      "Atmosphere",
+      "Foley",
+      "Sound effects",
+      "Mix requirements"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/drama_free.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "script",
+      "storyboard"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "sound_plan",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 16,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.editing",
+    "key": "editing",
+    "name": "Editing & VFX AI",
+    "department": "Post-production",
+    "responsibilities": [
+      "Shot selection",
+      "Pacing",
+      "Transitions",
+      "Color",
+      "VFX",
+      "Subtitles",
+      "MP4 assembly"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/drama_finish.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "video",
+      "voice",
+      "music"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "edit_manifest",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 17,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.production_manager",
+    "key": "production_manager",
+    "name": "Production Manager AI",
+    "department": "Operations & distribution",
+    "responsibilities": [
+      "Schedule",
+      "Queue",
+      "GPU planning",
+      "Costs",
+      "Assets",
+      "Workflow status"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/engine.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "production_plan",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 18,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.growth",
+    "key": "growth",
+    "name": "Growth AI",
+    "department": "Operations & distribution",
+    "responsibilities": [
+      "Audience analysis",
+      "SEO",
+      "Campaign planning",
+      "Promotion",
+      "Growth"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/marketing.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "editing"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "growth_plan",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 19,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  },
+  {
+    "id": "redpad.agent.youtube",
+    "key": "youtube",
+    "name": "YouTube AI",
+    "department": "Operations & distribution",
+    "responsibilities": [
+      "Channel connection",
+      "Metadata",
+      "Approval-based upload preparation",
+      "Analytics planning"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/youtube.py"
+    ],
+    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration"
+    ],
+    "missing": [
+      "Verified model inference",
+      "Agent-specific autonomous execution",
+      "Production quality evaluation"
+    ],
+    "dependencies": [
+      "editing",
+      "growth"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "youtube_package",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 20,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass"
+  }
+]
