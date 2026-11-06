@@ -70,6 +70,9 @@ def prepare(key, data, upstream=None):
     """Pure deterministic execution: validate, normalize, derive useful metadata."""
     if key not in AGENTS: raise AgentError('Unknown department.')
     encode(data)
+    if isinstance(data,dict) and data.get('creative_v1') is True:
+        from .creative import prepare_creative
+        return prepare_creative(key,data,upstream)
     upstream=upstream or []
     output={'agent':key,'artifact_type':AGENTS[key]['output_contract']['kind'],
             'provenance':'software','model_inference':False,'media_generated':False,

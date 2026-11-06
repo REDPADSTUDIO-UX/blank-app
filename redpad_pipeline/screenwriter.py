@@ -125,13 +125,19 @@ def render(script):
 
 class LocalWriter:
     """Only an already-installed local Ollama model; cloud models rejected."""
-    def __init__(self, model=None):
+    def __init__(self, model=None, *, num_ctx=32768, num_predict=12000, temperature=0.65, seed=42):
+        if type(num_ctx) is not int or not 2048 <= num_ctx <= 32768 or type(num_predict) is not int or not 128 <= num_predict <= 12000:
+            raise WritingError('Invalid bounded local inference configuration.')
+        if type(temperature) not in (int,float) or not math.isfinite(temperature) or not 0 <= temperature <= 1 or type(seed) is not int:
+            raise WritingError('Invalid local sampling configuration.')
+        self.options={'temperature':temperature,'num_predict':num_predict,'num_ctx':num_ctx,'seed':seed}
+        self.last_evidence={}
         self.model = model or os.environ.get('REDPAD_LOCAL_WRITER_MODEL','')
         if not self.model or not re.fullmatch(r'[a-zA-Z0-9_.:/-]{1,120}', self.model) or 'cloud' in self.model.lower():
             raise WritingError('No installed local writing model configured; no paid fallback was called.')
     def __call__(self, system, prompt):
         payload = {'model':self.model,'messages':[{'role':'system','content':system},{'role':'user','content':prompt}],
-                   'stream':False,'format':'json','options':{'temperature':0.65,'num_predict':12000,'num_ctx':32768}}
+                   'stream':False,'format':'json','options':self.options}
         # Fixed loopback prevents sending unpublished scripts to external endpoints.
         class NoRedirect(urllib.request.HTTPRedirectHandler):
             def redirect_request(self, *args, **kwargs):
@@ -145,7 +151,11 @@ class LocalWriter:
             request = urllib.request.Request('http://127.0.0.1:11434/api/chat',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json'})
             with opener.open(request, timeout=180) as response: data=json.load(response)
             if data.get('done') is not True or data.get('done_reason') == 'length': raise WritingError('Local response incomplete; draft was not accepted.')
-            return json.loads(data['message']['content'])
+            result=json.loads(data['message']['content'])
+            self.last_evidence={'runtime':'Ollama loopback','model':self.model,'options':self.options,
+                'model_metadata_sha256':hashlib.sha256(json.dumps(metadata.get('model_info',{}),sort_keys=True).encode()).hexdigest(),
+                'runtime_model_name':data.get('model'),'eval_count':data.get('eval_count'),'eval_duration_ns':data.get('eval_duration')}
+            return result
         except WritingError: raise
         except Exception: raise WritingError('Local writer unavailable or returned invalid JSON; no fallback or model download occurred.') from None
 

@@ -31,7 +31,7 @@ jobs:
           python -m pip install -r requirements.txt
 
       - name: Test agent registry, contracts and Control Center (offline)
-        run: python -m unittest tests.test_agents tests.test_agents_ui tests.test_director tests.test_director_ui tests.test_agent_foundation tests.test_agent_execution_ui -v
+        run: python -m unittest tests.test_agents tests.test_agents_ui tests.test_director tests.test_director_ui tests.test_agent_foundation tests.test_agent_execution_ui tests.test_creative tests.test_creative_ui -v
 
       - name: Compile app and video module
         run: python -m compileall -q streamlit_app.py redpad_video_studio.py redpad_pipeline

@@ -20,6 +20,9 @@ def render_agent_control(path):
     if save:
         try: store.configure(key,model); st.success('Configuration saved. Connection remains unverified.')
         except AgentError as e: st.error(str(e))
+    if key in ('story','script','director'):
+        from .creative_ui import show_creative
+        show_creative(store,key)
     if key == 'director':
         from .director_ui import show_director
         show_director(store)

@@ -1,0 +1,525 @@
+{
+  "scope": "Original manually authored Bengali software fixtures, simulated human approvals; not real AI outputs",
+  "scenarios": {
+    "A": {
+      "status": "software_fixture_pass",
+      "findings": [],
+      "artifact_sha256": "fae00cad0992bef85c469a608c9cbbde1ae4ed0e8f091562055a1ec59d4dbe19",
+      "creative_score": null,
+      "provenance": "manually authored original fixture"
+    },
+    "B": {
+      "status": "software_fixture_pass",
+      "findings": [],
+      "artifact_sha256": "62473f623844d5aaaa696c67c888176ec5adf0c6d50d45eb4c4df689aac78fe7",
+      "creative_score": null,
+      "provenance": "manually authored original fixture"
+    },
+    "C": {
+      "status": "software_fixture_pass",
+      "findings": [],
+      "artifact_sha256": "3adee77306a31820fab14780d6a344f20d23a197944ef5157d31fd852033f38d",
+      "creative_score": null,
+      "provenance": "manually authored original fixture"
+    },
+    "E": {
+      "status": "software_fixture_pass",
+      "findings": [
+        {
+          "code": "continuity_change",
+          "episode": 3,
+          "evidence": {
+            "episode": 3,
+            "entity": "মীরা",
+            "attribute": "চাবি",
+            "value": "ঢাকার আলমারিতে",
+            "reason": "none"
+          },
+          "revision": "Explain the change or restore the established value; revise this episode only."
+        }
+      ],
+      "artifact_sha256": "98c2420b908fbfe873facf4d099f1aff294dfc4994f5a2b39368a46f088185a4",
+      "creative_score": null,
+      "provenance": "manually authored original fixture"
+    },
+    "D": {
+      "status": "structural_repair_pass",
+      "before": "Text required: type, payoff, question, next_connection, earned_by",
+      "after_findings": [],
+      "unchanged_scenes": [
+        "s1",
+        "s3"
+      ],
+      "creative_score": null,
+      "provenance": "manual replacement fixture; no model judgment"
+    }
+  },
+  "runs": [
+    {
+      "id": "aed4fca8dde34325aaeaad6651d7b1a5",
+      "task": "58033dfb6f564617aafd62f6fd0ac91b",
+      "dependencies": "[\"3edd9206896e4517ac81fd69327bca11\", \"e595467e5858442bbb594977527bd36c\"]",
+      "mode": "local",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "No local model configured for this agent.",
+      "blocker": "Environment/model",
+      "started": 1793943940.517824,
+      "finished": 1793943940.5194428,
+      "model": "",
+      "task_state": "Assigned",
+      "input_sha256": "86439ea7549d52e593935aa140ba234c8cafdecd2806f0ab05fef3cc4f14c997"
+    },
+    {
+      "id": "a7670f9ff3b44dbdb115909a8e7ea485",
+      "task": "3242b1eb46d24de083000ed1d83f3e91",
+      "dependencies": "[\"3edd9206896e4517ac81fd69327bca11\"]",
+      "mode": "local",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "No local model configured for this agent.",
+      "blocker": "Environment/model",
+      "started": 1793943940.5158656,
+      "finished": 1793943940.5167856,
+      "model": "",
+      "task_state": "Assigned",
+      "input_sha256": "45ed574953028e881d2b51df09bfaecc5fdd86c6e549dd80f8e1000d874d75a5"
+    },
+    {
+      "id": "588cf02353c7484cb0692c753895f542",
+      "task": "7df05a4075954ca4a9e6466372e4d647",
+      "dependencies": "[]",
+      "mode": "local",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "No local model configured for this agent.",
+      "blocker": "Environment/model",
+      "started": 1793943940.5143006,
+      "finished": 1793943940.5148613,
+      "model": "",
+      "task_state": "Assigned",
+      "input_sha256": "6070dc4b7ed9498bff33c84ac94ed8bed99de1eeffc24ded8b575e454e019bdb"
+    },
+    {
+      "id": "f4482230a425496a827f581e9576487c",
+      "task": "cb03fb545fa9495598512e72f1ed5a2f",
+      "dependencies": "[\"650f3026eca84b1d91dec933d8f08790\", \"32bc1f35796d434e83548bef95e52c05\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793943940.5094604,
+      "finished": 1793943940.5110173,
+      "model": "",
+      "task_state": "Approved",
+      "input_sha256": "45141fce88f061fb82028e762bc22a29e05db2f281906e8fc53fabf8033bedcd"
+    },
+    {
+      "id": "eaf92306c1ec410c88c4e2e530c35b59",
+      "task": "32bc1f35796d434e83548bef95e52c05",
+      "dependencies": "[\"650f3026eca84b1d91dec933d8f08790\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793943940.5069053,
+      "finished": 1793943940.5080326,
+      "model": "",
+      "task_state": "Approved",
+      "input_sha256": "fc7c2194eeefeb064f94b0b7c203e482d7022d8d3503e53d36eb7e1fb1dfcaae"
+    },
+    {
+      "id": "8340414b772a4d789ff9cfd8f8460cd2",
+      "task": "650f3026eca84b1d91dec933d8f08790",
+      "dependencies": "[\"3edd9206896e4517ac81fd69327bca11\", \"e595467e5858442bbb594977527bd36c\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793943940.5024133,
+      "finished": 1793943940.5052853,
+      "model": "",
+      "task_state": "Approved",
+      "input_sha256": "86439ea7549d52e593935aa140ba234c8cafdecd2806f0ab05fef3cc4f14c997"
+    },
+    {
+      "id": "16224b1b386f4714a5e52d7d23340c98",
+      "task": "e595467e5858442bbb594977527bd36c",
+      "dependencies": "[\"3edd9206896e4517ac81fd69327bca11\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793943940.4949968,
+      "finished": 1793943940.5006964,
+      "model": "",
+      "task_state": "Approved",
+      "input_sha256": "45ed574953028e881d2b51df09bfaecc5fdd86c6e549dd80f8e1000d874d75a5"
+    },
+    {
+      "id": "effd4c28acf64db2983d951bee8a3262",
+      "task": "3edd9206896e4517ac81fd69327bca11",
+      "dependencies": "[]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793943940.4912896,
+      "finished": 1793943940.4934087,
+      "model": "",
+      "task_state": "Approved",
+      "input_sha256": "6070dc4b7ed9498bff33c84ac94ed8bed99de1eeffc24ded8b575e454e019bdb"
+    }
+  ],
+  "audit": [
+    {
+      "id": 34,
+      "task": "58033dfb6f564617aafd62f6fd0ac91b",
+      "actor": "engine",
+      "action": "Blocked",
+      "detail": "{\"run\": \"aed4fca8dde34325aaeaad6651d7b1a5\", \"blocker\": \"Environment/model\", \"error\": \"No local model configured for this agent.\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 33,
+      "task": "58033dfb6f564617aafd62f6fd0ac91b",
+      "actor": "script",
+      "action": "running",
+      "detail": "{\"run\": \"aed4fca8dde34325aaeaad6651d7b1a5\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 32,
+      "task": "58033dfb6f564617aafd62f6fd0ac91b",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"aed4fca8dde34325aaeaad6651d7b1a5\", \"mode\": \"local\", \"dependencies\": [\"3edd9206896e4517ac81fd69327bca11\", \"e595467e5858442bbb594977527bd36c\"]}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 31,
+      "task": "3242b1eb46d24de083000ed1d83f3e91",
+      "actor": "engine",
+      "action": "Blocked",
+      "detail": "{\"run\": \"a7670f9ff3b44dbdb115909a8e7ea485\", \"blocker\": \"Environment/model\", \"error\": \"No local model configured for this agent.\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 30,
+      "task": "3242b1eb46d24de083000ed1d83f3e91",
+      "actor": "director",
+      "action": "running",
+      "detail": "{\"run\": \"a7670f9ff3b44dbdb115909a8e7ea485\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 29,
+      "task": "3242b1eb46d24de083000ed1d83f3e91",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"a7670f9ff3b44dbdb115909a8e7ea485\", \"mode\": \"local\", \"dependencies\": [\"3edd9206896e4517ac81fd69327bca11\"]}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 28,
+      "task": "7df05a4075954ca4a9e6466372e4d647",
+      "actor": "engine",
+      "action": "Blocked",
+      "detail": "{\"run\": \"588cf02353c7484cb0692c753895f542\", \"blocker\": \"Environment/model\", \"error\": \"No local model configured for this agent.\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 27,
+      "task": "7df05a4075954ca4a9e6466372e4d647",
+      "actor": "story",
+      "action": "running",
+      "detail": "{\"run\": \"588cf02353c7484cb0692c753895f542\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 26,
+      "task": "7df05a4075954ca4a9e6466372e4d647",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"588cf02353c7484cb0692c753895f542\", \"mode\": \"local\", \"dependencies\": []}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 25,
+      "task": "cb03fb545fa9495598512e72f1ed5a2f",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action in isolated test only\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 24,
+      "task": "cb03fb545fa9495598512e72f1ed5a2f",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic independent review for software test\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 23,
+      "task": "cb03fb545fa9495598512e72f1ed5a2f",
+      "actor": "script",
+      "action": "execution_output",
+      "detail": "{\"run\": \"f4482230a425496a827f581e9576487c\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 22,
+      "task": "cb03fb545fa9495598512e72f1ed5a2f",
+      "actor": "script",
+      "action": "running",
+      "detail": "{\"run\": \"f4482230a425496a827f581e9576487c\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 21,
+      "task": "cb03fb545fa9495598512e72f1ed5a2f",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"f4482230a425496a827f581e9576487c\", \"mode\": \"software\", \"dependencies\": [\"650f3026eca84b1d91dec933d8f08790\", \"32bc1f35796d434e83548bef95e52c05\"]}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 20,
+      "task": "32bc1f35796d434e83548bef95e52c05",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action in isolated test only\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 19,
+      "task": "32bc1f35796d434e83548bef95e52c05",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic independent review for software test\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 18,
+      "task": "32bc1f35796d434e83548bef95e52c05",
+      "actor": "director",
+      "action": "execution_output",
+      "detail": "{\"run\": \"eaf92306c1ec410c88c4e2e530c35b59\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 17,
+      "task": "32bc1f35796d434e83548bef95e52c05",
+      "actor": "director",
+      "action": "running",
+      "detail": "{\"run\": \"eaf92306c1ec410c88c4e2e530c35b59\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 16,
+      "task": "32bc1f35796d434e83548bef95e52c05",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"eaf92306c1ec410c88c4e2e530c35b59\", \"mode\": \"software\", \"dependencies\": [\"650f3026eca84b1d91dec933d8f08790\"]}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 15,
+      "task": "650f3026eca84b1d91dec933d8f08790",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action in isolated test only\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 14,
+      "task": "650f3026eca84b1d91dec933d8f08790",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic independent review for software test\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 13,
+      "task": "650f3026eca84b1d91dec933d8f08790",
+      "actor": "script",
+      "action": "execution_output",
+      "detail": "{\"run\": \"8340414b772a4d789ff9cfd8f8460cd2\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 12,
+      "task": "650f3026eca84b1d91dec933d8f08790",
+      "actor": "script",
+      "action": "running",
+      "detail": "{\"run\": \"8340414b772a4d789ff9cfd8f8460cd2\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 11,
+      "task": "650f3026eca84b1d91dec933d8f08790",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"8340414b772a4d789ff9cfd8f8460cd2\", \"mode\": \"software\", \"dependencies\": [\"3edd9206896e4517ac81fd69327bca11\", \"e595467e5858442bbb594977527bd36c\"]}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 10,
+      "task": "e595467e5858442bbb594977527bd36c",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action in isolated test only\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 9,
+      "task": "e595467e5858442bbb594977527bd36c",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic independent review for software test\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 8,
+      "task": "e595467e5858442bbb594977527bd36c",
+      "actor": "director",
+      "action": "execution_output",
+      "detail": "{\"run\": \"16224b1b386f4714a5e52d7d23340c98\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 7,
+      "task": "e595467e5858442bbb594977527bd36c",
+      "actor": "director",
+      "action": "running",
+      "detail": "{\"run\": \"16224b1b386f4714a5e52d7d23340c98\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 6,
+      "task": "e595467e5858442bbb594977527bd36c",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"16224b1b386f4714a5e52d7d23340c98\", \"mode\": \"software\", \"dependencies\": [\"3edd9206896e4517ac81fd69327bca11\"]}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 5,
+      "task": "3edd9206896e4517ac81fd69327bca11",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action in isolated test only\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 4,
+      "task": "3edd9206896e4517ac81fd69327bca11",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic independent review for software test\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 3,
+      "task": "3edd9206896e4517ac81fd69327bca11",
+      "actor": "story",
+      "action": "execution_output",
+      "detail": "{\"run\": \"effd4c28acf64db2983d951bee8a3262\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 2,
+      "task": "3edd9206896e4517ac81fd69327bca11",
+      "actor": "story",
+      "action": "running",
+      "detail": "{\"run\": \"effd4c28acf64db2983d951bee8a3262\"}",
+      "created": "2026-11-06 05:45:40"
+    },
+    {
+      "id": 1,
+      "task": "3edd9206896e4517ac81fd69327bca11",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"effd4c28acf64db2983d951bee8a3262\", \"mode\": \"software\", \"dependencies\": []}",
+      "created": "2026-11-06 05:45:40"
+    }
+  ],
+  "model_attempts_blocked": [
+    {
+      "id": "588cf02353c7484cb0692c753895f542",
+      "task": "7df05a4075954ca4a9e6466372e4d647",
+      "dependencies": "[]",
+      "mode": "local",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "No local model configured for this agent.",
+      "blocker": "Environment/model",
+      "started": 1793943940.5143006,
+      "finished": 1793943940.5148613,
+      "model": "",
+      "task_state": "Assigned",
+      "input_sha256": "6070dc4b7ed9498bff33c84ac94ed8bed99de1eeffc24ded8b575e454e019bdb"
+    },
+    {
+      "id": "a7670f9ff3b44dbdb115909a8e7ea485",
+      "task": "3242b1eb46d24de083000ed1d83f3e91",
+      "dependencies": "[\"3edd9206896e4517ac81fd69327bca11\"]",
+      "mode": "local",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "No local model configured for this agent.",
+      "blocker": "Environment/model",
+      "started": 1793943940.5158656,
+      "finished": 1793943940.5167856,
+      "model": "",
+      "task_state": "Assigned",
+      "input_sha256": "45ed574953028e881d2b51df09bfaecc5fdd86c6e549dd80f8e1000d874d75a5"
+    },
+    {
+      "id": "aed4fca8dde34325aaeaad6651d7b1a5",
+      "task": "58033dfb6f564617aafd62f6fd0ac91b",
+      "dependencies": "[\"3edd9206896e4517ac81fd69327bca11\", \"e595467e5858442bbb594977527bd36c\"]",
+      "mode": "local",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "No local model configured for this agent.",
+      "blocker": "Environment/model",
+      "started": 1793943940.517824,
+      "finished": 1793943940.5194428,
+      "model": "",
+      "task_state": "Assigned",
+      "input_sha256": "86439ea7549d52e593935aa140ba234c8cafdecd2806f0ab05fef3cc4f14c997"
+    }
+  ],
+  "real_inference_count": 0,
+  "human_reviewed_creative_results": 0,
+  "production_quality_verified": false,
+  "weight_training": false,
+  "readiness": {
+    "cuda_device": false,
+    "torch_installed": false,
+    "ollama_executable": false,
+    "local_models": [],
+    "local_probe": "Blocked — local runtime unavailable or invalid response",
+    "inference_verified": false,
+    "large_downloads": false,
+    "paid_fallback": false
+  }
+}
