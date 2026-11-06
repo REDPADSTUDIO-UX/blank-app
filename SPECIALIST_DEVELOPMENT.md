@@ -11,3 +11,8 @@ All new contracts opt in with specialist_v1. Existing contracts and creative age
 Each input contains project, records, sources, base, targets. Sources/base use current approved
 artifact bindings. Findings are metadata rules or supplied reviews, never unseen-media observations.
 Owner approval remains separate. No live deployment, production data access, inference or publishing.
+
+Stage B implemented: existing Storyboard Studio board export, stable shots/targeted changes;
+Performance emotional transitions/intensity; Cinematography axis continuity; Motion posture,
+contact/object constraints (not simulation); Continuity episode state and affected shots.
+60 focused tests passed including preserved creative workflows and UI. Stages C/D pending.

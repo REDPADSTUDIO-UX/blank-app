@@ -50,3 +50,27 @@ class SpecialistTests(unittest.TestCase):
         self.assertIn('character',result['artifact']['derived']['revision_routes']);self.assertFalse(result['artifact']['derived']['owner_approval'])
         data['records'][0]['subject_agent']='qc'
         with self.assertRaises(AgentError):prepare('qc',data)
+    def test_storyboard_shot_revision_preserves_other_shots(self):
+        data=example('storyboard');base=prepare('storyboard',data)['artifact'];data.update(base=base,targets=['shot2']);data['records'][1]['composition']='Close-up of key'
+        result=prepare('storyboard',data);self.assertEqual(result['revision_changes'],['shot2']);self.assertEqual(result['artifact']['records'][0],base['records'][0])
+        self.assertEqual(result['artifact']['derived']['reference_status'],'Not generated')
+        data['records'][0]['order']=9
+        with self.assertRaises(AgentError):prepare('storyboard',data)
+    def test_performance_transition_and_intensity(self):
+        data=example('performance');row=copy.deepcopy(data['records'][0]);row.update(id='p2',emotion_from='joyful');data['records'].append(row)
+        self.assertTrue(prepare('performance',data)['findings'])
+        row['intensity']=11
+        with self.assertRaises(AgentError):prepare('performance',data)
+    def test_cinematography_axis(self):
+        data=example('cinematographer');data['records'][-1]['axis_side']='B'
+        self.assertEqual(len(prepare('cinematographer',data)['findings']),1)
+        data['records'][-1]['axis_reset']=True;self.assertFalse(prepare('cinematographer',data)['findings'])
+    def test_motion_contact_and_pose(self):
+        data=example('motion');self.assertFalse(prepare('motion',data)['findings']);data['records'][-1]['contact']='none'
+        self.assertEqual(prepare('motion',data)['findings'][0]['code'],'missing_support')
+        data['records'][-1]['from_pose']='sitting';data['records'][-1]['to_pose']='walking'
+        self.assertTrue(any(f['code']=='impossible_pose_transition' for f in prepare('motion',data)['findings']))
+    def test_continuity_revision_impact(self):
+        data=example('continuity');data['records'][-1]['value']='white';result=prepare('continuity',data)
+        self.assertEqual(result['artifact']['derived']['affected_shots'],['shot3'])
+        data['records'][-1]['change_reason']='পরদিন';self.assertFalse(prepare('continuity',data)['findings'])

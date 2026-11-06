@@ -7,7 +7,7 @@ from .agents import AgentError, encode, AGENTS
 STAGES = {'A': ('qc','character','art','location','costume'),
           'B': ('storyboard','performance','cinematographer','motion','continuity'),
           'C': ('video','voice','music','editing'), 'D': ('production_manager','growth','youtube')}
-IMPLEMENTED = set(STAGES['A'])
+IMPLEMENTED = set(STAGES['A'] + STAGES['B'])
 
 
 def need(value, message):
