@@ -1,3 +1,5 @@
+> Current Phase 2 checkpoint: all 17 specialist metadata/software workflows and individual workspaces are implemented and tested; all 20 registered agents are retained. See [SPECIALIST_DEVELOPMENT.md](SPECIALIST_DEVELOPMENT.md) and `verification/specialists/` for current capabilities and test evidence. The original audit below is historical; real model/media quality remains unverified. QC outputs now receive direct owner review. Concrete branched scheduling is implemented in `specialist_project.py`.
+
 # Agent registration audit and individual development roadmap
 
 Scope: existing Streamlit/SQLite Studio at baseline cce16c9f533f528168ebe22c511b7a45fae7a132. No live database access. Related modules are reused by preserving their existing pages, not by pretending they are autonomous agents.

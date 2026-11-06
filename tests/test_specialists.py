@@ -105,3 +105,23 @@ class SpecialistTests(unittest.TestCase):
         with self.assertRaises(AgentError):inspect_clip('../escape.mp4',self.s.path)
         path.write_text('not a video')
         with self.assertRaises(AgentError):inspect_clip(path.name,self.s.path)
+    def test_production_graph_resource_and_cycles(self):
+        data=example('production_manager')
+        with patch('redpad_pipeline.readiness.inspect_resources',return_value={'cuda_device':False}):
+            result=prepare('production_manager',data)['artifact']['derived']
+        self.assertIn('job-video',result['resource_blocked']);self.assertIn('job-art',result['ready']);self.assertEqual(result['critical_path_estimate_seconds'],70)
+        data['records'][0]['dependencies']=['job-video']
+        with self.assertRaises(AgentError):prepare('production_manager',data)
+    def test_growth_concept_comparison_and_limits(self):
+        data=example('growth');self.assertEqual(len(prepare('growth',data)['artifact']['derived']['concept_comparison']),2)
+        data['records'][0]['title_bn']='a'*101
+        with self.assertRaises(AgentError):prepare('growth',data)
+    def test_youtube_prepare_only_no_network(self):
+        data=example('youtube')
+        with patch('socket.socket',side_effect=AssertionError('No network')):
+            result=prepare('youtube',data)['artifact']['derived'];self.assertFalse(result['publish']);self.assertFalse(result['upload'])
+            for action in ('publish','upload','schedule'):
+                data['records'][0]['action']=action
+                with self.assertRaises(AgentError):prepare('youtube',data)
+        data['records'][0]['action']='prepare';data['records'][0]['oauth_scope']='youtube.upload'
+        with self.assertRaises(AgentError):prepare('youtube',data)

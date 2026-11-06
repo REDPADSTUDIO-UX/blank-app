@@ -5,7 +5,7 @@ from .specialists import need,text,number,records,finding
 def process(key,rows,data):
     derived={};findings=[]
     if key=='storyboard':
-        from .storyboard import draft_board,validate_board
+        from .storyboard import draft_board,validate_board,script_hash
         records(rows,['id','scene','order','action','purpose','composition','characters','location','camera','performance','seconds'])
         need([r['order'] for r in rows]==list(range(1,len(rows)+1)),'Shot order must be consecutive.')
         for r in rows:
@@ -16,7 +16,8 @@ def process(key,rows,data):
             scenes=script.get('scenes',script.get('screenplay',{}).get('scenes',[]))
             ids={str(s.get('id',s.get('number'))) for s in scenes}
             need(all(str(r['scene']) in ids for r in rows),'Shot references unknown screenplay scene.')
-        board=draft_board(1,data['project'],'\n'.join(r['action'] for r in rows),'16:9')
+        board=draft_board(1,data['project'],'Manual coverage draft.','16:9')
+        board['script_hash']=script_hash('\n'.join(r['action'] for r in rows))
         # Preserve the existing Studio schema while using explicit supplied shot decisions.
         template=board['shots'][0];board['shots']=[]
         for r in rows:
@@ -75,3 +76,33 @@ def process(key,rows,data):
         from .specialist_media import process as media_process
         return media_process(key,rows,data)
     return derived,findings
+
+
+def screenplay_breakdown(screenplay):
+    """Deterministic coverage draft from actual approved scene content, no image claims.
+
+    Long scenes receive bounded coverage slots carrying the original action. Shot
+    composition still needs Director review; generated reference IDs are placeholders
+    to map to the approved Character/Location Bibles before production.
+    """
+    import hashlib,math
+    need(isinstance(screenplay,dict) and isinstance(screenplay.get('scenes'),list),'Structured screenplay scenes required.')
+    rows=[]
+    for scene in screenplay['scenes']:
+        need(isinstance(scene,dict) and text(scene.get('id')) and number(scene.get('seconds'),2,1600),'Scene ID and bounded timing required.')
+        seconds=scene['seconds'];need(type(seconds) is int,'Whole scene seconds required.')
+        count=math.ceil(seconds/20);quotient,remainder=divmod(seconds,count)
+        actions=[b['text'] for b in scene.get('beats',[]) if b.get('type')=='action' and text(b.get('text'))]
+        need(actions,'Visual action required for shot breakdown.')
+        names=[b['speaker'] for b in scene.get('beats',[]) if b.get('type')=='dialogue' and text(b.get('speaker'))]
+        if not names:names=[c['name'] for c in screenplay.get('characters',[]) if text(c.get('name'))]
+        need(names,'Scene character identities required.')
+        ids=list(dict.fromkeys('char_'+hashlib.sha256(name.encode()).hexdigest()[:10] for name in names))
+        location='loc_'+hashlib.sha256(scene['location'].encode()).hexdigest()[:10]
+        for n in range(count):
+            rows.append(dict(id=scene['id']+'-shot'+str(n+1),scene=scene['id'],order=len(rows)+1,
+               action=actions[min(n,len(actions)-1)],purpose=scene.get('objective','Review scene objective'),
+               composition='Director composition review required',characters=ids,location=location,camera='Static',
+               performance=scene.get('performance','Naturalistic performance review required'),seconds=quotient+(n<remainder)))
+    need(1<=len(rows)<=80,'Split screenplay into at most 80 shot slots per board.')
+    return rows

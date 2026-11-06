@@ -69,8 +69,13 @@ class AgentStore:
         if row and row[0]:
             with self.tx() as db:
                 if db.execute("SELECT 1 FROM sqlite_master WHERE name='agent_runs'").fetchone():
-                    inference_verified = inference_verified or bool(db.execute("SELECT 1 FROM agent_runs r JOIN tasks t ON t.id=r.task WHERE t.agent=? AND r.model=? AND r.mode='local' AND r.state='Awaiting QC' LIMIT 1", (key,row[0])).fetchone())
-        return {'registration':'Registered','software':'Software Working','configuration':'Configured' if row and row[0] else 'Not configured',
+                    records=db.execute("SELECT o.payload FROM agent_runs r JOIN tasks t ON t.id=r.task JOIN outputs o ON o.task=t.id AND o.revision=r.expected_revision+1 WHERE t.agent=? AND r.model=? AND r.mode='local' AND r.state='Awaiting QC'",(key,row[0])).fetchall()
+                    inference_verified = inference_verified or any(json.loads(record[0]).get('provenance')=='local_inference' for record in records)
+        from .specialists import IMPLEMENTED
+        return {'specialist_development':'Specialist workflow implemented' if key in IMPLEMENTED else 'Creative workflow retained',
+                'software_tested':'See verification/specialists/matrix.json (recorded test evidence)',
+                'real_inference_verified':inference_verified,'creative_media_quality_verified':False,
+                'registration':'Registered','software':'Software Working','configuration':'Configured' if row and row[0] else 'Not configured',
                 'model':row[0] if row else '', 'connection':('Local inference recorded; current availability not probed' if inference_verified else 'Model Not Connected'),'readiness':'Blocked',
                 'blocker':'Production quality unverified; model runtime and media prerequisites reported by execution preflight.',
                 'tests':'See WORKING_FOUNDATION_VERIFICATION.md for execution and end-to-end evidence',

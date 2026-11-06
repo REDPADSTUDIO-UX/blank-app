@@ -63,9 +63,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/drama_quality.py"
+      "redpad_pipeline/drama_quality.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -73,7 +74,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -97,7 +100,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.story",
@@ -217,9 +220,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/drama_quality.py"
+      "redpad_pipeline/drama_quality.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -227,7 +231,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -253,7 +259,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.art",
@@ -269,9 +275,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/drama_quality.py"
+      "redpad_pipeline/drama_quality.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -279,7 +286,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -306,7 +315,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.location",
@@ -321,9 +330,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/drama_quality.py"
+      "redpad_pipeline/drama_quality.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -331,7 +341,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -358,7 +370,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.costume",
@@ -373,9 +385,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/drama_quality.py"
+      "redpad_pipeline/drama_quality.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -383,7 +396,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -410,7 +425,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.storyboard",
@@ -426,9 +441,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/storyboard.py"
+      "redpad_pipeline/storyboard.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -436,7 +452,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -464,7 +482,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.performance",
@@ -479,9 +497,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/drama_quality.py"
+      "redpad_pipeline/drama_quality.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -489,7 +508,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -516,7 +537,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.cinematographer",
@@ -532,9 +553,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/storyboard.py"
+      "redpad_pipeline/storyboard.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -542,7 +564,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -569,7 +593,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.motion",
@@ -585,9 +609,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/local_animation.py"
+      "redpad_pipeline/local_animation.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -595,7 +620,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -622,7 +649,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.video",
@@ -637,9 +664,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/local_animation.py"
+      "redpad_pipeline/local_animation.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -647,7 +675,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -675,7 +705,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.voice",
@@ -690,9 +720,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/free_voice.py"
+      "redpad_pipeline/free_voice.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -700,7 +731,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -727,7 +760,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.continuity",
@@ -743,9 +776,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/drama_quality.py"
+      "redpad_pipeline/drama_quality.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -753,7 +787,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -782,7 +818,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.music",
@@ -798,9 +834,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/drama_free.py"
+      "redpad_pipeline/drama_free.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -808,7 +845,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -835,7 +874,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.editing",
@@ -853,9 +892,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/drama_finish.py"
+      "redpad_pipeline/drama_finish.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -863,7 +903,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -891,7 +933,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.production_manager",
@@ -908,9 +950,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/engine.py"
+      "redpad_pipeline/engine.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -918,7 +961,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -942,7 +987,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.growth",
@@ -958,9 +1003,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/marketing.py"
+      "redpad_pipeline/marketing.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -968,7 +1014,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -994,7 +1042,7 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   },
   {
     "id": "redpad.agent.youtube",
@@ -1009,9 +1057,10 @@
     ],
     "registration": "Registered",
     "existing_modules": [
-      "redpad_pipeline/youtube.py"
+      "redpad_pipeline/youtube.py",
+      "redpad_pipeline/specialists.py"
     ],
-    "existing_status": "Partially implemented — related module exists; autonomous agent not verified",
+    "existing_status": "Specialist software implemented and micro-tested; real inference and production quality unverified",
     "capabilities": [
       "Registry inspection",
       "Validated task routing",
@@ -1019,7 +1068,9 @@
       "Independent local configuration",
       "Executable department preparation/validation",
       "Persistent dependency scheduling",
-      "Explicit retry and recovery"
+      "Explicit retry and recovery",
+      "Specialist v1 production records and deterministic findings",
+      "Approved typed-source handoffs and targeted revisions"
     ],
     "missing": [
       "Real model-powered inference verification on this host",
@@ -1046,6 +1097,6 @@
     "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
-    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
+    "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
   }
 ]

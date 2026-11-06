@@ -7,7 +7,7 @@ from .agents import AgentError, encode, AGENTS
 STAGES = {'A': ('qc','character','art','location','costume'),
           'B': ('storyboard','performance','cinematographer','motion','continuity'),
           'C': ('video','voice','music','editing'), 'D': ('production_manager','growth','youtube')}
-IMPLEMENTED = set(STAGES['A'] + STAGES['B'] + STAGES['C'])
+IMPLEMENTED = {key for stage in STAGES.values() for key in stage}
 
 
 def need(value, message):
@@ -40,16 +40,20 @@ def finding(record, code, expected, actual, target, severity='error', kind='rule
 
 
 def changed(base, rows):
-    old={r['id']:r for r in base};new={r['id']:r for r in rows}
+    def supplied(row):return {k:v for k,v in row.items() if k not in ('identity_hash','analytics_summary')}
+    old={r['id']:supplied(r) for r in base};new={r['id']:supplied(r) for r in rows}
     return sorted(k for k in old.keys()|new.keys() if old.get(k)!=new.get(k))
 
 
-def check_handoff(key, data, sources):
+def check_handoff(key, data, sources, prior=None):
     """All declared sources and revision bases must be exact approved artifacts."""
-    for value in data.get('sources',{}).values():
-        need(any(value == body.get('artifact') for body in sources.values()),'Source must match a current approved dependency artifact.')
+    need(isinstance(data.get('sources'),dict),'Specialist sources must be a map.')
+    for alias,value in data['sources'].items():
+        need(alias in AGENTS or alias=='screenplay','Unknown source department alias.')
+        expected='script' if alias=='screenplay' else alias
+        need(any(value == body.get('artifact') and body.get('agent')==expected for body in sources.values()),'Source must match the named current approved dependency department.')
     if data.get('base') is not None:
-        need(any(data['base']==body.get('artifact') for body in sources.values()),'Revision base must match a current approved dependency artifact.')
+        need(data['base']==prior or any(data['base']==body.get('artifact') for body in sources.values()),'Revision base must match a current approved dependency or this task’s immutable previous revision.')
 
 
 def prepare(key, data, upstream=None):
@@ -121,6 +125,10 @@ def prepare(key, data, upstream=None):
     else:
         from .specialist_workflows import process
         derived,findings=process(key,rows,data)
+    validate_links(key,rows,data['sources'],findings)
+    if key=='qc':
+        derived['recommendation']='block' if any(f['severity']=='blocker' for f in findings) else 'revise' if findings else 'owner_review'
+        derived['revision_routes']={k:[f for f in findings if f['target_agent']==k] for k in {f['target_agent'] for f in findings}}
     artifact=dict(department=key,project=data['project'],records=rows,derived=derived)
     return dict(agent=key,artifact_type='specialist_'+key,artifact=artifact,findings=findings,
                 revision_changes=delta,upstream=upstream or [],provenance='software',
@@ -130,3 +138,33 @@ def prepare(key, data, upstream=None):
 def example(key):
     from .specialist_examples import EXAMPLES
     return dict(specialist_v1=True,project='ফেরার চাবি — fictional manual test',records=copy.deepcopy(EXAMPLES[key]),sources={},base=None,targets=[])
+
+
+def validate_links(key,rows,sources,findings):
+    identities={r['id']:r for r in sources.get('character',{}).get('records',[])}
+    locations={r['id']:r for r in sources.get('location',{}).get('records',[])}
+    shots={r['id']:r for r in sources.get('storyboard',{}).get('records',[])}
+    for row in rows:
+        characters=row.get('characters',[])
+        if 'character' in row:characters=[row['character']]
+        if identities:need(all(c in identities for c in characters),'Unknown approved character reference.')
+        if locations and 'location' in row:need(row['location'] in locations,'Unknown approved location reference.')
+        if shots and 'shot' in row:need(row['shot'] in shots,'Unknown approved shot reference.')
+        if key=='performance' and row['character'] in identities:
+            for state in identities[row['character']]['scene_states']:
+                if state.get('scene')==row['scene'] and state.get('emotion')!=row['emotion_from']:
+                    findings.append(finding(row['id'],'character_emotion_state',state.get('emotion'),row['emotion_from'],key,'warning'))
+    if key=='qc':
+        for char in identities.values():
+            for state in char['scene_states']:
+                for field in ('age','face','hair','appearance'):
+                    if field in state and state[field]!=char[field] and not state.get('change_reason'):
+                        findings.append(finding(char['id'],'character_'+field,char[field],state[field],'character'))
+        for row in rows:
+            if row['criterion']=='media_spec':
+                spec=row['actual']
+                need(isinstance(spec,dict),'Technical media specification must be an object.')
+                for field,low,high in [('fps',1,60),('width',64,4096),('height',64,4096),('seconds',.01,3600)]:
+                    if not number(spec.get(field),low,high):findings.append(finding(row['id'],'invalid_'+field,[low,high],spec.get(field),row['subject_agent'],'blocker','objective_metadata'))
+        # Include derived metadata defects in routing and recommendation.
+        # The supplied review fields are never treated as unseen-media inspection.
