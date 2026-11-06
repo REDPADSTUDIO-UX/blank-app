@@ -16,3 +16,11 @@ Stage B implemented: existing Storyboard Studio board export, stable shots/targe
 Performance emotional transitions/intensity; Cinematography axis continuity; Motion posture,
 contact/object constraints (not simulation); Continuity episode state and affected shots.
 60 focused tests passed including preserved creative workflows and UI. Stages C/D pending.
+
+Stage C implemented: provider capability contracts (SVD adapter retained; Wan/LTX unimplemented
+runtime interfaces explicitly blocked); Bengali speaker/pronunciation/pause and lip-sync plans;
+licensed sound cues and ducking constraints; contiguous edit decisions/source/subtitle bounds;
+local isolated MP4/WAV ffprobe inspection with honest non-generation provenance.
+55 focused tests passed after restoring missing Python dependencies in the resumed environment.
+Synthetic 0.5-second black video was inspected only; no cinematic AI inference occurred.
+Stage D pending. Existing local rendering/music interfaces retained and regression-tested.

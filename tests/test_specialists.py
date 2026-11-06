@@ -74,3 +74,34 @@ class SpecialistTests(unittest.TestCase):
         data=example('continuity');data['records'][-1]['value']='white';result=prepare('continuity',data)
         self.assertEqual(result['artifact']['derived']['affected_shots'],['shot3'])
         data['records'][-1]['change_reason']='পরদিন';self.assertFalse(prepare('continuity',data)['findings'])
+    def test_video_capabilities(self):
+        data=example('video');data['records'][0]['mode']='text_to_video'
+        with self.assertRaises(AgentError):prepare('video',data)
+        data['records'][0]['provider']='wan-local';result=prepare('video',data)
+        self.assertFalse(result['artifact']['derived']['provider_capabilities']['wan-local']['installed_adapter'])
+    def test_voice_lexicon_and_speaker_identity(self):
+        data=example('voice');data['records'][0]['lexicon']={'খালা':'খা-লা'}
+        self.assertIn('খা-লা',prepare('voice',data)['artifact']['derived']['lip_sync_cues'][0]['synthesis_text'])
+        data['records'][1]['speaker']='voice-rafi'
+        with self.assertRaises(AgentError):prepare('voice',data)
+    def test_music_reference_and_license(self):
+        data=example('music');data['records'][0]['asset']='https://external/audio.wav'
+        with self.assertRaises(AgentError):prepare('music',data)
+        data['records'][0]['asset']='pending';data['records'][0]['license']='unknown'
+        self.assertEqual(prepare('music',data)['findings'][0]['severity'],'blocker')
+    def test_edit_subtitle_source_and_missing_assets(self):
+        data=example('editing');result=prepare('editing',data)
+        self.assertEqual(result['artifact']['derived']['duration_seconds'],6);self.assertIsNone(result['artifact']['derived']['export_path'])
+        self.assertTrue(result['findings']);data['records'][0]['subtitle_end']=3
+        with self.assertRaises(AgentError):prepare('editing',data)
+    def test_synthetic_media_inspection_not_generation(self):
+        import subprocess
+        from redpad_pipeline.specialist_inspection import inspect_clip
+        root=Path(self.tmp.name)/'agent_media';root.mkdir();path=root/'synthetic-test.mp4'
+        subprocess.run(['ffmpeg','-v','error','-f','lavfi','-i','color=c=black:s=64x64:r=8','-t','0.5','-c:v','libx264','-pix_fmt','yuv420p',str(path)],check=True)
+        report=inspect_clip(path.name,self.s.path);self.assertEqual(report['streams'][0]['width'],64)
+        rid=self.e.enqueue('video',{'operation':'inspect_clip','asset':path.name},mode='media');self.assertEqual(self.e.execute(rid),'Awaiting QC')
+        body=json.loads(json.loads(self.s.outputs()[0]['payload'])['summary']);self.assertFalse(body['model_inference']);self.assertFalse(body['media_generated'])
+        with self.assertRaises(AgentError):inspect_clip('../escape.mp4',self.s.path)
+        path.write_text('not a video')
+        with self.assertRaises(AgentError):inspect_clip(path.name,self.s.path)

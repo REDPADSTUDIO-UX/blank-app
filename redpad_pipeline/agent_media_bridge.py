@@ -15,6 +15,9 @@ def execute_media(key,data,sidecar):
     if root.is_symlink():raise AgentError('Media workspace must not be a symlink.')
     root=root.resolve()
     operation=data.get('operation')
+    if operation=='inspect_clip' and key in ('video','voice','music','editing'):
+        from .specialist_inspection import inspect_clip
+        return inspect_clip(data.get('asset'),sidecar)
     if key=='video' and operation=='local_video':
         from .local_animation import readiness,generate
         ready,reason=readiness()
