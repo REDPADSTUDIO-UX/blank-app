@@ -127,13 +127,17 @@ def render(script):
 
 class LocalWriter:
     """Only an already-installed local Ollama model; cloud models rejected."""
-    def __init__(self, model=None, *, num_ctx=32768, num_predict=12000, temperature=0.65, seed=42, timeout_seconds=180, stream=False, on_chunk=None):
+    def __init__(self, model=None, *, num_ctx=32768, num_predict=12000, temperature=0.65, seed=42, timeout_seconds=180, stream=False, on_chunk=None, format_schema=None):
         if type(num_ctx) is not int or not 2048 <= num_ctx <= 32768 or type(num_predict) is not int or not 128 <= num_predict <= 12000:
             raise WritingError('Invalid bounded local inference configuration.')
         if type(temperature) not in (int,float) or not math.isfinite(temperature) or not 0 <= temperature <= 1 or type(seed) is not int:
             raise WritingError('Invalid local sampling configuration.')
         if type(timeout_seconds) is not int or not 30<=timeout_seconds<=600:raise WritingError('Local timeout must be 30–600 seconds.')
         if type(stream) is not bool or (on_chunk is not None and not callable(on_chunk)):raise WritingError('Invalid local streaming controls.')
+        if format_schema is not None:
+            from jsonschema import Draft202012Validator
+            Draft202012Validator.check_schema(format_schema)
+        self.format_schema=json.loads(json.dumps(format_schema)) if format_schema is not None else None
         self.stream=stream;self.on_chunk=on_chunk
         self.timeout_seconds=timeout_seconds
         self.options={'temperature':temperature,'num_predict':num_predict,'num_ctx':num_ctx,'seed':seed}
@@ -148,7 +152,7 @@ class LocalWriter:
         original_prompt=prompt
         system=unicodedata.normalize('NFC',system);prompt=unicodedata.normalize('NFC',prompt)
         payload = {'model':self.model,'messages':[{'role':'system','content':system},{'role':'user','content':prompt}],
-                   'stream':self.stream,'format':'json','options':self.options}
+                   'stream':self.stream,'format':self.format_schema if self.format_schema is not None else 'json','options':self.options}
         # Fixed loopback prevents sending unpublished scripts to external endpoints.
         class NoRedirect(urllib.request.HTTPRedirectHandler):
             def redirect_request(self, *args, **kwargs):
@@ -193,8 +197,14 @@ class LocalWriter:
             if data.get('model') and data['model']!=self.model:raise WritingError('Runtime model identity differs from the requested model.')
             if data.get('done') is not True or data.get('done_reason') == 'length': raise WritingError('Local response incomplete; draft was not accepted.')
             self.last_evidence['inference_completed']=True
+            if self.format_schema is not None:
+                self.last_evidence['format_schema_sha256']=hashlib.sha256(json.dumps(self.format_schema,sort_keys=True).encode()).hexdigest()
             result=json.loads(self.last_raw_output)
             if not isinstance(result,(dict,list)):raise WritingError('Local response must be a structured JSON object or array.')
+            if self.format_schema is not None:
+                from jsonschema import Draft202012Validator
+                if not Draft202012Validator(self.format_schema).is_valid(result):
+                    raise WritingError('Local reply failed the requested JSON schema; raw output preserved.')
             return result
         except WritingError: raise
         except Exception as exc:

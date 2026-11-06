@@ -1,3 +1,5 @@
+> Latest continuation: [staged Bengali correction checkpoint](PHASE3_STAGED_CHECKPOINT.md). Earlier results below are retained as historical evidence.
+
 # REDPAD — authorized Qwen CPU inference and Bengali quality results
 
 **Runtime/model installation and genuine Story/Script/Director inference are verified. Bengali creative

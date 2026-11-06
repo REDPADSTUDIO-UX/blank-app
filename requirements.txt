@@ -11,3 +11,5 @@ gTTS>=2.5,<3
 gradio_client==1.14.0
 huggingface_hub>=0.34,<1
 numpy>=1.24,<3
+
+jsonschema>=4.23,<5

@@ -1,3 +1,5 @@
+> Latest continuation: [staged Bengali correction checkpoint](PHASE3_STAGED_CHECKPOINT.md). Earlier results below are retained as historical evidence.
+
 > Newer authorized CPU installation and real inference evidence: [QWEN_CPU_PROGRESS.md](QWEN_CPU_PROGRESS.md). The original no-runtime audit below is historical.
 
 # REDPAD AI Studio — Phase 3 checkpoint: actual inference blocked

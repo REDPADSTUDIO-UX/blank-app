@@ -9,6 +9,8 @@ def show_phase3():
     st.caption('Bounded local experiments. Models/GPU are not installed or enabled here; no remote inference or automatic approval.')
     from .local_ollama_session import ROOT,local_cpu_session
     managed=st.checkbox('Use installed development CPU runtime for experiments',key='phase3_owned_runtime') if (ROOT/'phase3_models/ollama-runtime/bin/ollama').is_file() else False
+    from .staged_writing_ui import show_staged
+    show_staged(managed)
     if st.button('Audit available model runtime',key='phase3_audit'):
         if managed:
             with local_cpu_session():st.json(audit(True))

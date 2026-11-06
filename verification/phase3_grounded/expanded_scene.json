@@ -1,0 +1,28 @@
+{
+  "source_record_sha256": "bdb19fa92d6a276db9b1dcdc1dcaee2891c0bf86d15c5edb00b33c116e17d16b",
+  "source_result_sha256": "d22f581f40253769de0db733bc8a7b4986294fa4f8a56d43b9a1ed938d1082e7",
+  "scene": {
+    "heading": "INT. বাসা",
+    "beats": [
+      {
+        "type": "action",
+        "text": "বৃষ্টি শুরু হচ্ছে, টেবিলে একটি ছাতা দেখা যাচ্ছে।"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "রাশেদ",
+        "text": "তানিয়া বলে, 'বৃষ্টি আসছে, আমি বাড়িতে থাকবো না।'"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "তানিয়া",
+        "text": "রাশেদ বলে, 'তুমি যাবে, আমি অফিসে যাবো, ছাতা নিয়ে যাও।'"
+      },
+      {
+        "type": "action",
+        "text": "রাশেদ তানিয়ার কাছে থাকা ছাতা দিয়ে বলে, 'আজ তুমি সাক্ষাৎকারে যাবে, আমি আসি না।'"
+      }
+    ]
+  },
+  "method": "fixed-slot protocol adapter; every narrative text unchanged"
+}

@@ -144,6 +144,8 @@ def direction_check(a,source):
     if not isinstance(source,dict) or not source:raise AgentError('Director review requires source material.')
     source_ids={s['id'] for s in source.get('scenes',[]) if isinstance(s,dict) and isinstance(s.get('id'),str)}
     if not source_ids:source_ids={'episode_'+str(e['number']) for e in source.get('episodes',[]) if isinstance(e,dict) and type(e.get('number')) is int}
+    source_items={s['id']:s for s in source.get('scenes',[]) if isinstance(s,dict) and isinstance(s.get('id'),str)}
+    source_items.update({'episode_'+str(e['number']):e for e in source.get('episodes',[]) if isinstance(e,dict) and type(e.get('number')) is int})
     reviewed=set()
     for s in listing(a['scenes'],'director scenes'):
         texts(s,['id','purpose','want','concealed','conflict','emotion_start','emotion_end','subtext','humor_type','humor_reason','visual','performance','pacing','transition','audience_effect','contribution','evidence'])
@@ -151,12 +153,12 @@ def direction_check(a,source):
         if s['id'] not in source_ids or s['id'] in reviewed:raise AgentError('Unknown/duplicate director source scene.')
         reviewed.add(s['id'])
         if s['humor_type'] not in HUMOR_TYPES:raise AgentError('Unknown humor category.')
-        if unicodedata.normalize('NFC',s['evidence']) not in unicodedata.normalize('NFC',encode(source)):raise AgentError('Director evidence must quote the source.')
+        if unicodedata.normalize('NFC',s['evidence']) not in unicodedata.normalize('NFC',encode(source_items[s['id']])):raise AgentError('Director evidence must quote the source.')
     if reviewed!=source_ids:raise AgentError('Director must cover every source scene/episode.')
     for note in listing(a['revision_notes'],'revision notes',0):
         texts(note,['target','agent','issue','evidence','instruction'])
         if note['target'] not in source_ids or note['agent'] not in ('story','script'):raise AgentError('Invalid targeted revision recipient.')
-        if unicodedata.normalize('NFC',note['evidence']) not in unicodedata.normalize('NFC',encode(source)):raise AgentError('Revision evidence absent from source.')
+        if unicodedata.normalize('NFC',note['evidence']) not in unicodedata.normalize('NFC',encode(source_items[note['target']])):raise AgentError('Revision evidence absent from source.')
     return []
 
 def rewrite(source,replacements,targets):
@@ -211,7 +213,11 @@ def creative_prompt(key,request,sources):
             'No owner approvals, tool calls or claims of training. Natural Bangladeshi behavior, visual-first action, restrained emotion, organic wit. '
             'Return ONLY the artifact value matching the supplied example/shape. A rewrite returns only the requested scene objects. '
             'Use the entire season before Episode 1; keep every established fact and accepted scene. Review is not independent QC.',
-            encode({'request':request,'approved_sources':sources,'guidance':research_context(request['brief']['genre'])}))
+            encode({'request':request,'approved_sources':sources,'guidance':research_context(request['brief']['genre'])}) + '\nFINAL TASK:\n' + {
+                'story':'For each episode show whose want causes which costly choice, what changes because of that choice, and how that consequence forces the next episode. Track prop holder, location and time explicitly. Show an emotional change through behavior; pay off a setup before an earned unresolved decision. Do not substitute an arbitrary mystery for a relationship ending.',
+                'script':'Write concrete visible action first, then short spoken Bangladeshi Bengali. Each reply must respond to the previous turn. Give each character a distinct habit; derive gentle wit from the conflict between those habits. Show care through a practical action, pauses or what is left unsaid. Preserve established prop positions and chronology. Avoid literary speeches, generic moral lessons and repeating the brief as dialogue.',
+                'director':'Treat every finding as a hypothesis. Quote verbatim ONLY from the specific target scene/episode, never from another scene or global metadata. If uncertain do not invent a fault or praise. Explain the actual contradiction or awkward exchange and propose the smallest fact-preserving edit. Do not invent characters, events, quotations or unfilmable inner states. Notes cannot authorize their own revisions.'
+            }[key])
 
 def evaluate(artifact,ratings,reviewer,provenance,previous=None):
     if provenance not in ('human','model_review','simulation'):raise AgentError('Review provenance must be explicit.')
