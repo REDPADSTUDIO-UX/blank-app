@@ -8,6 +8,7 @@ import math
 import os
 from pathlib import Path
 import re
+import time
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1] / 'assets' / 'writing'
@@ -132,10 +133,13 @@ class LocalWriter:
             raise WritingError('Invalid local sampling configuration.')
         self.options={'temperature':temperature,'num_predict':num_predict,'num_ctx':num_ctx,'seed':seed}
         self.last_evidence={}
+        self.last_raw_output=''
         self.model = model or os.environ.get('REDPAD_LOCAL_WRITER_MODEL','')
         if not self.model or not re.fullmatch(r'[a-zA-Z0-9_.:/-]{1,120}', self.model) or 'cloud' in self.model.lower():
             raise WritingError('No installed local writing model configured; no paid fallback was called.')
     def __call__(self, system, prompt):
+        self.last_evidence={};self.last_raw_output=''
+        started=time.monotonic()
         payload = {'model':self.model,'messages':[{'role':'system','content':system},{'role':'user','content':prompt}],
                    'stream':False,'format':'json','options':self.options}
         # Fixed loopback prevents sending unpublished scripts to external endpoints.
@@ -143,18 +147,30 @@ class LocalWriter:
             def redirect_request(self, *args, **kwargs):
                 return None
         opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
+        def read_json(response):
+            raw=response.read(2*1024*1024+1)
+            if len(raw)>2*1024*1024:raise WritingError('Local runtime response exceeds the 2 MiB bound.')
+            return json.loads(raw)
         try:
             show = urllib.request.Request('http://127.0.0.1:11434/api/show', data=json.dumps({'model':self.model}).encode(), headers={'Content-Type':'application/json'})
-            with opener.open(show, timeout=10) as response: metadata=json.load(response)
+            with opener.open(show, timeout=10) as response: metadata=read_json(response)
             if metadata.get('remote_host') or metadata.get('remote_model'):
                 raise WritingError('Cloud-backed models are disabled.')
-            request = urllib.request.Request('http://127.0.0.1:11434/api/chat',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json'})
-            with opener.open(request, timeout=180) as response: data=json.load(response)
-            if data.get('done') is not True or data.get('done_reason') == 'length': raise WritingError('Local response incomplete; draft was not accepted.')
-            result=json.loads(data['message']['content'])
-            self.last_evidence={'runtime':'Ollama loopback','model':self.model,'options':self.options,
+            self.last_evidence={'runtime':'Ollama loopback','model':self.model,'options':self.options,'inference_completed':False,
                 'model_metadata_sha256':hashlib.sha256(json.dumps(metadata.get('model_info',{}),sort_keys=True).encode()).hexdigest(),
-                'runtime_model_name':data.get('model'),'eval_count':data.get('eval_count'),'eval_duration_ns':data.get('eval_duration')}
+                'parameter_size':metadata.get('details',{}).get('parameter_size'),'quantization':metadata.get('details',{}).get('quantization_level')}
+            request = urllib.request.Request('http://127.0.0.1:11434/api/chat',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json'})
+            with opener.open(request, timeout=180) as response: data=read_json(response)
+            self.last_raw_output=data.get('message',{}).get('content','')
+            if not isinstance(self.last_raw_output,str):raise WritingError('Local runtime content must be text.')
+            self.last_evidence.update(runtime_model_name=data.get('model'),eval_count=data.get('eval_count'),eval_duration_ns=data.get('eval_duration'),
+                finish_reason=data.get('done_reason'),wall_seconds=round(time.monotonic()-started,3),
+                raw_sha256=hashlib.sha256(self.last_raw_output.encode()).hexdigest())
+            if data.get('model') and data['model']!=self.model:raise WritingError('Runtime model identity differs from the requested model.')
+            if data.get('done') is not True or data.get('done_reason') == 'length': raise WritingError('Local response incomplete; draft was not accepted.')
+            self.last_evidence['inference_completed']=True
+            result=json.loads(self.last_raw_output)
+            if not isinstance(result,dict):raise WritingError('Local response must be a JSON object.')
             return result
         except WritingError: raise
         except Exception: raise WritingError('Local writer unavailable or returned invalid JSON; no fallback or model download occurred.') from None

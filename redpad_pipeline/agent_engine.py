@@ -20,6 +20,8 @@ class Engine:
              UNIQUE(task,expected_revision));
             CREATE TABLE IF NOT EXISTS creative_model_attempts
             (run TEXT,attempt INTEGER,agent TEXT,model TEXT,provenance TEXT,prompt_sha TEXT,raw_output TEXT,created REAL);
+            CREATE TABLE IF NOT EXISTS local_inference_evidence
+            (run TEXT,attempt INTEGER,agent TEXT,model TEXT,raw_text TEXT,evidence TEXT,created REAL,PRIMARY KEY(run,attempt));
             CREATE TABLE IF NOT EXISTS agent_run_keys(token TEXT PRIMARY KEY,fingerprint TEXT,run TEXT);
             CREATE TABLE IF NOT EXISTS specialist_model_attempts
             (run TEXT,attempt INTEGER,agent TEXT,model TEXT,provenance TEXT,prompt_sha TEXT,raw_output TEXT,created REAL);''')
@@ -143,7 +145,7 @@ class Engine:
                 media=execute_media(t['agent'],inputs,self.store.path)
             if run['mode']=='local':
                 if complete is None:
-                    model=self.store.status(t['agent'])['model']
+                    model=run['model'] or self.store.status(t['agent'])['model']
                     if not model: raise MissingPrerequisite('No local model configured for this agent.')
                     complete=LocalWriter(model,num_ctx=8192,num_predict=8192) if creative else LocalWriter(model)
                     provenance='local_inference'
@@ -211,6 +213,14 @@ class Engine:
         except Exception as exc:
             message=str(exc) if isinstance(exc,AgentError) else 'Execution failed; invalid response or internal failure. No partial output saved.'
             self._fail(rid,t['id'],'Failed','Software/input',message);return 'Failed'
+        finally:
+            if provenance=='local_inference' and isinstance(complete,LocalWriter):
+                # Preserve original text even if JSON parsing or structural validation fails.
+                # An injected test provider remains simulation and never enters this ledger.
+                with self.store.tx() as db:
+                    db.execute('INSERT OR REPLACE INTO local_inference_evidence VALUES (?,?,?,?,?,?,?)',
+                        (rid,run['attempt']+1,t['agent'],model,getattr(complete,'last_raw_output',''),
+                         encode(getattr(complete,'last_evidence',{})),time.time()))
     def _fail(self,rid,tid,state,blocker,message):
         with self.store.tx() as db:
             # A stale worker must not overwrite a recovered run's newer attempt.

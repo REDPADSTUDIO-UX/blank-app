@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "granted": false,
+  "action": "Install local Ollama runtime and download qwen3:4b-instruct-2507-q4_K_M in this development environment only",
+  "model_download_bytes_approx": 2500000000,
+  "paid": false,
+  "cloud_gpu": false,
+  "personal_computer_install": false,
+  "source": "https://ollama.com/library/qwen3/tags",
+  "next": "After explicit approval: verify runtime release, pull one exact model tag, record full digest, run bounded CPU text tests, measure RAM/latency, preserve raw replies and request independent Bengali review."
+}

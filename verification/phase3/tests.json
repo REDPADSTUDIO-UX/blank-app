@@ -1,0 +1,21 @@
+{
+  "phase": 3,
+  "software_tests": {
+    "command": "python -m unittest discover -s tests -p 'test_*.py' -q",
+    "passed": 246,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 32.462,
+    "log_sha256": "6a51450251cc6d4703216705bef4b3c7450879a585da3f39162e7062786c82a4"
+  },
+  "additional_phase3_tests": 16,
+  "standalone_passed": 8,
+  "actual_completed_model_inference": 0,
+  "actual_blocked_preflights": 2,
+  "independent_creative_reviews": 0,
+  "genuine_cinematic_mp4": null,
+  "notes": [
+    "Mocked loopback transport cases test raw-evidence classification; not actual model inference",
+    "Synthetic codec fixtures verify existing infrastructure; not a cinematic benchmark"
+  ]
+}
