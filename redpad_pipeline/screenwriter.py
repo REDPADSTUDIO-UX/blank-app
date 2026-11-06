@@ -131,7 +131,10 @@ def render(script):
 
 class LocalWriter:
     """Only an already-installed local Ollama model; cloud models rejected."""
-    def __init__(self, model=None, *, num_ctx=32768, num_predict=12000, temperature=0.65, seed=42, timeout_seconds=180, stream=False, on_chunk=None, format_schema=None):
+    def __init__(self, model=None, *, num_ctx=32768, num_predict=12000, temperature=0.65, seed=42, timeout_seconds=180, stream=False, on_chunk=None, format_schema=None, think=None):
+        if think is not None and type(think) is not bool:raise WritingError('Thinking control must be a boolean or unspecified.')
+        self.think=think
+        self.last_thinking_output=''
         if type(num_ctx) is not int or not 2048 <= num_ctx <= 32768 or type(num_predict) is not int or not 128 <= num_predict <= 12000:
             raise WritingError('Invalid bounded local inference configuration.')
         if type(temperature) not in (int,float) or not math.isfinite(temperature) or not 0 <= temperature <= 1 or type(seed) is not int:
@@ -151,12 +154,13 @@ class LocalWriter:
         if not self.model or not re.fullmatch(r'[a-zA-Z0-9_.:/-]{1,120}', self.model) or 'cloud' in self.model.lower():
             raise WritingError('No installed local writing model configured; no paid fallback was called.')
     def __call__(self, system, prompt):
-        self.last_evidence={};self.last_raw_output=''
+        self.last_evidence={};self.last_raw_output='';self.last_thinking_output=''
         started=time.monotonic()
         original_prompt=prompt
         system=unicodedata.normalize('NFC',system);prompt=unicodedata.normalize('NFC',prompt)
         payload = {'model':self.model,'messages':[{'role':'system','content':system},{'role':'user','content':prompt}],
                    'stream':self.stream,'format':self.format_schema if self.format_schema is not None else 'json','options':self.options}
+        if self.think is not None:payload['think']=self.think
         # Fixed loopback prevents sending unpublished scripts to external endpoints.
         class NoRedirect(urllib.request.HTTPRedirectHandler):
             def redirect_request(self, *args, **kwargs):
@@ -171,10 +175,15 @@ class LocalWriter:
             with opener.open(show, timeout=10) as response: metadata=read_json(response)
             if metadata.get('remote_host') or metadata.get('remote_model'):
                 raise WritingError('Cloud-backed models are disabled.')
+            if self.think is not None:
+                thinking=metadata.get('thinking',{})
+                if self.think not in thinking.get('values',[]):
+                    raise WritingError('Requested thinking control is not supported by the installed runtime model.')
             self.last_evidence={'runtime':'Ollama loopback','model':self.model,'options':self.options,'inference_completed':False,
                 'model_metadata_sha256':hashlib.sha256(json.dumps(metadata.get('model_info',{}),sort_keys=True).encode()).hexdigest(),
                 'input_normalization':'NFC','prompt_normalization_changed':original_prompt!=prompt,'wire_prompt_sha256':hashlib.sha256(prompt.encode()).hexdigest(),
                 'parameter_size':metadata.get('details',{}).get('parameter_size'),'quantization':metadata.get('details',{}).get('quantization_level')}
+            self.last_evidence['thinking_control']={'requested':self.think,'runtime':metadata.get('thinking')}
             request = urllib.request.Request('http://127.0.0.1:11434/api/chat',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json'})
             with opener.open(request, timeout=self.timeout_seconds) as response:
                 if not self.stream:data=read_json(response)
@@ -185,19 +194,25 @@ class LocalWriter:
                         if received>2*1024*1024:raise WritingError('Local runtime response exceeds the 2 MiB bound.')
                         packet=json.loads(line)
                         chunk=packet.get('message',{}).get('content','')
+                        thinking_chunk=packet.get('message',{}).get('thinking','')
+                        if not isinstance(thinking_chunk,str):raise WritingError('Local thinking output must be text.')
+                        self.last_thinking_output+=thinking_chunk
                         if not isinstance(chunk,str):raise WritingError('Local streaming content must be text.')
                         self.last_raw_output+=chunk
                         if self.on_chunk:self.on_chunk(self.last_raw_output)
                         data=packet
                         if time.monotonic()-started>self.timeout_seconds:raise WritingError('Local inference exceeded the bounded wall-time budget; partial text preserved.')
                         if packet.get('done'):break
-                    data=dict(data,message={'content':self.last_raw_output})
+                    data=dict(data,message={'content':self.last_raw_output,'thinking':self.last_thinking_output})
             self.last_raw_output=data.get('message',{}).get('content','')
+            self.last_thinking_output=data.get('message',{}).get('thinking','')
+            if not isinstance(self.last_thinking_output,str):raise WritingError('Local thinking output must be text.')
             if not isinstance(self.last_raw_output,str):raise WritingError('Local runtime content must be text.')
             self.last_evidence.update(runtime_model_name=data.get('model'),eval_count=data.get('eval_count'),eval_duration_ns=data.get('eval_duration'),
                 prompt_eval_count=data.get('prompt_eval_count'),prompt_eval_duration_ns=data.get('prompt_eval_duration'),load_duration_ns=data.get('load_duration'),total_duration_ns=data.get('total_duration'),
                 finish_reason=data.get('done_reason'),wall_seconds=round(time.monotonic()-started,3),
                 raw_sha256=hashlib.sha256(self.last_raw_output.encode()).hexdigest())
+            self.last_evidence['thinking_sha256']=hashlib.sha256(self.last_thinking_output.encode()).hexdigest()
             if data.get('model') and data['model']!=self.model:raise WritingError('Runtime model identity differs from the requested model.')
             if data.get('done') is not True or data.get('done_reason') == 'length': raise WritingError('Local response incomplete; draft was not accepted.')
             self.last_evidence['inference_completed']=True

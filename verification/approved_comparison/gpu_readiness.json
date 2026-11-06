@@ -1,0 +1,20 @@
+{
+  "checked_client_date": "2026-11-07",
+  "surface": "Connected browser, read-only existing Kaggle settings navigation",
+  "observed_url": "https://www.kaggle.com/account/login?returnUrl=%2Fsettings",
+  "status": "authentication_required",
+  "account_existence": "unverified",
+  "quota": null,
+  "GPU_type": null,
+  "VRAM": null,
+  "GPU_session_started": false,
+  "account_created": false,
+  "terms_accepted": false,
+  "new_cloud_resource": false,
+  "private_browser_inventory_saved": false,
+  "latest_status": "browser_auto_review_blocked",
+  "blocked_action": "Observe handed-off readiness tab after possible authentication navigation",
+  "auto_review_reason": "Origin approval did not permit observing Google; Kaggle read-only readiness authorization does not cover a private Google session.",
+  "observation_after_rejection": false,
+  "quota_verified": false
+}

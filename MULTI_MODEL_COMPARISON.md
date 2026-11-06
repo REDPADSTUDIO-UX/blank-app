@@ -1,4 +1,5 @@
 > Latest unified continuation: [Master Studio checkpoint](MASTER_STUDIO_CHECKPOINT.md). Earlier results below remain historical evidence.
+> Approved model downloads and real comparison have now been completed: [current results](APPROVED_MODEL_TEST_REPORT.md). Installation-pending statements below describe the earlier checkpoint.
 
 # Phase 3 — multi-model comparison and role routing
 

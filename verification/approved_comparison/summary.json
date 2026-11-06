@@ -1,0 +1,466 @@
+{
+  "arms": [
+    {
+      "evidence_folder": "verification/master_studio/qwen_control",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "digest": "sha256:0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "think": null,
+      "options": {
+        "num_ctx": 4096,
+        "num_predict": 1024,
+        "temperature": 0.35,
+        "seed": 42,
+        "timeout_seconds": 180,
+        "stream": true
+      },
+      "cases": [
+        {
+          "case": "story",
+          "status": "validated_stage",
+          "wall_seconds": 52.605,
+          "tokens": 301,
+          "finish_reason": "stop",
+          "raw_sha256": "426d4420255f9623b87dcfeb567aaa2d05aa2550b976ba1d51f3054a38b0c840",
+          "resource": null
+        },
+        {
+          "case": "romance",
+          "status": "validated_stage",
+          "wall_seconds": 37.44,
+          "tokens": 237,
+          "finish_reason": "stop",
+          "raw_sha256": "6bc7f4d273c928c08ee6cf8d279b90af5646f384232a41205c2f4c9439a29e69",
+          "resource": null
+        },
+        {
+          "case": "humor",
+          "status": "validated_stage",
+          "wall_seconds": 31.543,
+          "tokens": 241,
+          "finish_reason": "stop",
+          "raw_sha256": "896ab510d60bbc3ce22f322f4c6ad23a349a1a3a9b99608e1f50ea57721999d4",
+          "resource": null
+        },
+        {
+          "case": "revision",
+          "status": "validated_stage",
+          "wall_seconds": 27.704,
+          "tokens": 192,
+          "finish_reason": "stop",
+          "raw_sha256": "8b1ade7e6b8fc048c8fb1bdea277c1e4657094492044b916f77113640b81c696",
+          "resource": null
+        },
+        {
+          "case": "criticism",
+          "status": "validated_stage",
+          "wall_seconds": 36.324,
+          "tokens": 219,
+          "finish_reason": "stop",
+          "raw_sha256": "13e78806dcb67e800b81a8489aa760e7f6a864d0f7f82f4c040b8b91a6b44ca8",
+          "resource": null
+        },
+        {
+          "case": "qc",
+          "status": "validated_stage",
+          "wall_seconds": 28.734,
+          "tokens": 203,
+          "finish_reason": "stop",
+          "raw_sha256": "f832bda7c523d6747bf7289455921084cacb050279662642af546463727337d7",
+          "resource": null
+        }
+      ],
+      "completed": 6,
+      "calls": 6,
+      "wall_seconds": 214.35,
+      "criticism_accuracy": {
+        "criticism": {
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "scope": "one deterministic seeded prop-continuity defect, not general editorial intelligence"
+        },
+        "qc": {
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "scope": "one deterministic seeded prop-continuity defect, not general editorial intelligence"
+        }
+      },
+      "selected_roles": [],
+      "human_review_completed": false
+    },
+    {
+      "evidence_folder": "verification/approved_comparison/gemma3",
+      "model": "gemma3:4b-it-q4_K_M",
+      "digest": "sha256:68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7",
+      "think": null,
+      "options": {
+        "num_ctx": 4096,
+        "num_predict": 1024,
+        "temperature": 0.35,
+        "seed": 42,
+        "timeout_seconds": 180,
+        "stream": true
+      },
+      "cases": [
+        {
+          "case": "story",
+          "status": "validated_stage",
+          "wall_seconds": 22.354,
+          "tokens": 121,
+          "finish_reason": "stop",
+          "raw_sha256": "4fec7aa52d60272b47bf241db89f8ca516b2f42c8a195741fcba5341ea9d3891",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 3936067584,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 22.401
+          }
+        },
+        {
+          "case": "romance",
+          "status": "validated_stage",
+          "wall_seconds": 17.546,
+          "tokens": 119,
+          "finish_reason": "stop",
+          "raw_sha256": "b672f517f936b5530ead6fc2f0e3bf331ab2ca7dfa38254416b7f7884a306d6d",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4070178816,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 17.564
+          }
+        },
+        {
+          "case": "humor",
+          "status": "validated_stage",
+          "wall_seconds": 15.74,
+          "tokens": 95,
+          "finish_reason": "stop",
+          "raw_sha256": "f93e150eebdcbae70fcc2318b12e31d3d2fa5bf3b67d912912690c4373b14a9e",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4198981632,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 15.755
+          }
+        },
+        {
+          "case": "revision",
+          "status": "validated_stage",
+          "wall_seconds": 10.153,
+          "tokens": 51,
+          "finish_reason": "stop",
+          "raw_sha256": "200562a462f369f1bb0d876437b9e6e64823205cbfeff79651efa469760d6826",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4316717056,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 10.169
+          }
+        },
+        {
+          "case": "criticism",
+          "status": "validated_stage",
+          "wall_seconds": 14.127,
+          "tokens": 79,
+          "finish_reason": "stop",
+          "raw_sha256": "faba6a2553721d514fa763f37d1ebb25ab0517ea57f538f3c4a14b1e8ff63641",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4431622144,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 14.166
+          }
+        },
+        {
+          "case": "qc",
+          "status": "validated_stage",
+          "wall_seconds": 27.346,
+          "tokens": 224,
+          "finish_reason": "stop",
+          "raw_sha256": "8b026a649cdd64618a276031344f333596e2d64af7857bf3914e51df53682ea6",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4563394560,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 27.377
+          }
+        }
+      ],
+      "completed": 6,
+      "calls": 6,
+      "wall_seconds": 107.266,
+      "criticism_accuracy": {
+        "criticism": {
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "scope": "one deterministic seeded prop-continuity defect, not general editorial intelligence"
+        },
+        "qc": {
+          "true_positive": 0,
+          "false_positive": 3,
+          "false_negative": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "scope": "one deterministic seeded prop-continuity defect, not general editorial intelligence"
+        }
+      },
+      "selected_roles": [],
+      "human_review_completed": false
+    },
+    {
+      "evidence_folder": "verification/approved_comparison/qwen3.5",
+      "model": "qwen3.5:4b-q4_K_M",
+      "digest": "sha256:d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "think": null,
+      "options": {
+        "num_ctx": 4096,
+        "num_predict": 1024,
+        "temperature": 0.35,
+        "seed": 42,
+        "timeout_seconds": 180,
+        "stream": true
+      },
+      "cases": [
+        {
+          "case": "story",
+          "status": "failed",
+          "wall_seconds": 120.998,
+          "tokens": 1024,
+          "finish_reason": "length",
+          "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 3899564032,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 121.014
+          }
+        },
+        {
+          "case": "romance",
+          "status": "failed",
+          "wall_seconds": 109.878,
+          "tokens": 1024,
+          "finish_reason": "length",
+          "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4109201408,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 109.897
+          }
+        },
+        {
+          "case": "humor",
+          "status": "failed",
+          "wall_seconds": 109.574,
+          "tokens": 1024,
+          "finish_reason": "length",
+          "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4317732864,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 109.594
+          }
+        },
+        {
+          "case": "revision",
+          "status": "failed",
+          "wall_seconds": 109.433,
+          "tokens": 1024,
+          "finish_reason": "length",
+          "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4525678592,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 109.448
+          }
+        },
+        {
+          "case": "criticism",
+          "status": "failed",
+          "wall_seconds": 117.206,
+          "tokens": 1024,
+          "finish_reason": "length",
+          "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4782006272,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 117.244
+          }
+        },
+        {
+          "case": "qc",
+          "status": "failed",
+          "wall_seconds": 111.821,
+          "tokens": 1024,
+          "finish_reason": "length",
+          "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 5046165504,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+            "wall_seconds_including_postchecks": 111.843
+          }
+        }
+      ],
+      "completed": 0,
+      "calls": 6,
+      "wall_seconds": 678.91,
+      "criticism_accuracy": {},
+      "selected_roles": [],
+      "human_review_completed": false
+    },
+    {
+      "evidence_folder": "verification/approved_comparison/qwen3.5-nonthinking",
+      "model": "qwen3.5:4b-q4_K_M",
+      "digest": "sha256:d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "think": false,
+      "options": {
+        "num_ctx": 4096,
+        "num_predict": 1024,
+        "temperature": 0.35,
+        "seed": 42,
+        "timeout_seconds": 180,
+        "stream": true
+      },
+      "cases": [
+        {
+          "case": "story",
+          "status": "validated_stage",
+          "wall_seconds": 41.368,
+          "tokens": 176,
+          "finish_reason": "stop",
+          "raw_sha256": "4c0e625869fe66022f92231e1feaf5a7dcf293f67eea594a7eea048321d9392c",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 3896274944,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS, including shared pages; not PSS",
+            "wall_seconds_including_postchecks": 41.403
+          }
+        },
+        {
+          "case": "romance",
+          "status": "validated_stage",
+          "wall_seconds": 27.155,
+          "tokens": 193,
+          "finish_reason": "stop",
+          "raw_sha256": "5685ea4a8b2d0bcd939ecb39ac3d599ca37bc07832a387783c0abea9ff036fbc",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4113317888,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS, including shared pages; not PSS",
+            "wall_seconds_including_postchecks": 27.175
+          }
+        },
+        {
+          "case": "humor",
+          "status": "validated_stage",
+          "wall_seconds": 26.024,
+          "tokens": 167,
+          "finish_reason": "stop",
+          "raw_sha256": "14232ad5e88cfddc03a1cdacbed7b6131fbced9e007f7597c126d5b9bd7b145f",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4295520256,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS, including shared pages; not PSS",
+            "wall_seconds_including_postchecks": 26.038
+          }
+        },
+        {
+          "case": "revision",
+          "status": "validated_stage",
+          "wall_seconds": 17.184,
+          "tokens": 90,
+          "finish_reason": "stop",
+          "raw_sha256": "522eece0d36f209e037501b34447cdcc462c6bd0ab8129d305599af7754fbd3a",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4475650048,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS, including shared pages; not PSS",
+            "wall_seconds_including_postchecks": 17.205
+          }
+        },
+        {
+          "case": "criticism",
+          "status": "validated_stage",
+          "wall_seconds": 46.212,
+          "tokens": 344,
+          "finish_reason": "stop",
+          "raw_sha256": "926ee5cc73f9a9f93467158da38754ad0b4c25447bb0dd35e23b29f2327b1c17",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4702060544,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS, including shared pages; not PSS",
+            "wall_seconds_including_postchecks": 46.246
+          }
+        },
+        {
+          "case": "qc",
+          "status": "validated_stage",
+          "wall_seconds": 37.542,
+          "tokens": 293,
+          "finish_reason": "stop",
+          "raw_sha256": "322278fc813f6bb84ba0af64753227e450e90c19085ba704f3684affc9010ca3",
+          "resource": {
+            "peak_sampled_aggregate_rss_bytes": 4942372864,
+            "sample_interval_seconds": 0.5,
+            "measurement": "Sum RSS, including shared pages; not PSS",
+            "wall_seconds_including_postchecks": 37.559
+          }
+        }
+      ],
+      "completed": 6,
+      "calls": 6,
+      "wall_seconds": 195.485,
+      "criticism_accuracy": {
+        "criticism": {
+          "true_positive": 1,
+          "false_positive": 2,
+          "false_negative": 0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "scope": "one deterministic seeded prop-continuity defect, not general editorial intelligence"
+        },
+        "qc": {
+          "true_positive": 0,
+          "false_positive": 3,
+          "false_negative": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "scope": "one deterministic seeded prop-continuity defect, not general editorial intelligence"
+        }
+      },
+      "selected_roles": [],
+      "human_review_completed": false
+    }
+  ],
+  "selected_models": {
+    "story": null,
+    "script": null,
+    "director": null,
+    "qc": null
+  },
+  "human_review_completed": false,
+  "GPU_inference_calls": 0,
+  "limitations": [
+    "One case per creative category; not statistical or full-episode validation.",
+    "Default and explicit non-thinking are separate arms, with different thinking controls.",
+    "Same seed does not imply equivalent stochastic draws across tokenizers/models.",
+    "Host CPU load was not isolated; regression checks overlapped some default-arm calls.",
+    "Original default Qwen3.5 adapter discarded message.thinking; final content and counters retained, missing traces cannot be reconstructed.",
+    "Critic TP/FP/FN uses strict line/category matching. Qwen3.5 QC mentions the bag/umbrella contradiction under L2/motivation; semantic partial credit is not assessed by this scorer.",
+    "Sum RSS is sampled aggregate RSS with shared-page duplication, not minimum RAM or PSS."
+  ]
+}

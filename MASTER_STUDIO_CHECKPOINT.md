@@ -1,5 +1,9 @@
 # REDPAD AI Studio — Unified Master Checkpoint
 
+> পরবর্তী অনুমোদিত benchmark: [দুটি নতুন local model-এর প্রকৃত পরীক্ষা](APPROVED_MODEL_TEST_REPORT.md)।
+> ১৮টি নতুন CPU call; Qwen3.5 thinking-control সংশোধন; পুরোনো baseline পুনরায় চালানো হয়নি।
+> নিচের milestone-এর historical evidence অক্ষত। কোনো production winner বা human approval হয়নি।
+
 মূল checkpoint: `28e6ece21d07ee6a5913c1a92a1bde7b16d63743`।
 একটি প্রকল্প হিসেবে নতুন master নির্দেশনা অনুসারে কাজ চালানো হয়েছে।
 মূল নির্দেশনা: `assets/phase3/master_scope.md`; তার SHA256 ও A–J workstream ledger:

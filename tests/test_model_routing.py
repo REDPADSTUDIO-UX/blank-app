@@ -32,6 +32,7 @@ class RoutingTests(unittest.TestCase):
  def test_runtime_failure_only_fallback_logged_actual_model_and_partial(self):
   self.routes.configure('story',[A,B])
   class Fake:
+   last_thinking_output='synthetic model trace'
    def __init__(self,model,**kw):self.model=model;self.last_raw_output='partial '+model;self.last_evidence={'model':model}
    def __call__(self,*args):
     if self.model==A:raise LocalUnavailable('runtime timeout')
@@ -39,6 +40,7 @@ class RoutingTests(unittest.TestCase):
   w=RoutedWriter(self.routes,'run','story')
   with patch('redpad_pipeline.model_routing.LocalWriter',Fake):self.assertTrue(w('system','prompt')['ok'])
   self.assertEqual(w.model,B)
+  self.assertEqual(w.last_evidence['untrusted_runtime_thinking'],'synthetic model trace')
   with self.store.tx() as db:rows=db.execute('SELECT model,raw,error FROM routed_model_attempts ORDER BY id').fetchall()
   self.assertEqual([r['model'] for r in rows],[A,B]);self.assertIn('partial',rows[0]['raw']);self.assertTrue(rows[0]['error'])
  def test_bad_schema_or_identity_never_falls_back(self):
@@ -81,6 +83,22 @@ class RoutingTests(unittest.TestCase):
  def test_legacy_single_model_stays_without_route(self):
   self.store.configure('music','old:local');self.assertIsNone(self.routes.policy('music'))
   self.assertEqual(self.store.status('music')['model'],'old:local')
+ def test_dashboard_reads_archived_failures_without_retrying_or_inference(self):
+  from streamlit.testing.v1 import AppTest
+  root=Path(self.tmp.name);folder=root/'verification/approved_comparison/fixture';folder.mkdir(parents=True)
+  manifest={'model':A,'digest':DA,'suite_sha256':suite_hash(),'options':OPTIONS,'candidate':'fixture'}
+  (folder/'manifest.json').write_text(json.dumps(manifest))
+  for case in cases():(folder/(case['id']+'.json')).write_text(json.dumps({'raw':'','result':None,'status':'failed'}))
+  code='from redpad_pipeline.model_routing_ui import show_model_routes\nfrom redpad_pipeline.agents import AgentStore\nshow_model_routes(AgentStore('+repr(str(root/'agent_control.sqlite3'))+'))'
+  with patch('redpad_pipeline.model_routing_ui.ROOT',root),patch('redpad_pipeline.model_routing_ui.run_case') as infer:
+   at=AppTest.from_string(code).run();self.assertFalse(at.exception);infer.assert_not_called()
+   self.assertTrue(any('Archived failures' in c.value for c in at.caption))
+   self.assertFalse(any('Reset failed' in b.label for b in at.button))
+  self.assertEqual(json.loads((folder/'story.json').read_text())['status'],'failed')
+  self.routes.revoke(A);self.routes.revoke(B)
+  with patch('redpad_pipeline.model_routing_ui.ROOT',root),patch('redpad_pipeline.model_routing_ui.run_case') as infer:
+   at=AppTest.from_string(code).run();self.assertFalse(at.exception);infer.assert_not_called()
+   self.assertTrue(any('Archived failures' in c.value for c in at.caption))
 
 class BenchmarkTests(unittest.TestCase):
  def fixture(self):
@@ -123,6 +141,35 @@ class BenchmarkTests(unittest.TestCase):
 
 class AcceptedRouteTests(unittest.TestCase):
  setUp=RoutingTests.setUp
+ def test_production_pins_accepted_thinking_mode_and_rejects_override(self):
+  b,h=BenchmarkTests().fixture();b['think']=False
+  r=b['records']['story'];r['request']['think']=False;r['request_sha256']=digest(r['request'])
+  r['evidence']['thinking_control']={'requested':False}
+  self.routes.accept('story',A,b,h,True)
+  policy=self.routes.configure('story',[A],'production')
+  self.assertIs(policy['models'][0]['think'],False)
+  with self.assertRaises(AgentError):self.routes.configure('story',[A],'production',thinking_controls={A:True})
+  writer=RoutedWriter(self.routes,'override','story',{'think':True})
+  with patch('redpad_pipeline.model_routing.LocalWriter') as transport:
+   with self.assertRaises(WritingError):writer('system','prompt')
+   transport.assert_not_called()
+  changed=copy.deepcopy(b);changed['records']['story']['evidence']['thinking_control']['requested']=True
+  with self.assertRaises(AgentError):check_selection('story',A,DA,changed,h,True)
+ def test_research_fallback_uses_its_own_pinned_thinking_mode(self):
+  policy=self.routes.configure('script',[A,B],thinking_controls={A:False,B:True})
+  self.assertIs(policy['models'][0]['think'],False)
+  seen=[]
+  class Fake:
+   last_raw_output='fixture';last_evidence={}
+   def __init__(self,model,**settings):self.model=model;seen.append((model,settings['think']))
+   def __call__(self,*args):
+    if self.model==A:raise LocalUnavailable('fixture transport failure')
+    return {'ok':True}
+  with patch('redpad_pipeline.model_routing.LocalWriter',Fake):
+   self.assertTrue(RoutedWriter(self.routes,'thinking','script')('system','prompt')['ok'])
+  self.assertEqual(seen,[(A,False),(B,True)])
+  for bad in ({A:0},{'unknown:local':False},[]):
+   with self.assertRaises(AgentError):self.routes.configure('story',[A],thinking_controls=bad)
  # Reuse the approval fixture; test one positive path without running a model.
  def test_accepted_primary_still_requires_separate_accepted_fallback(self):
   b,h=BenchmarkTests().fixture();self.routes.accept('story',A,b,h,True)

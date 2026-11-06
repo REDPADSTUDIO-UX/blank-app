@@ -42,20 +42,24 @@ def cases():
 def suite_hash():return digest({'cases':cases(),'options':OPTIONS,'version':1})
 
 
-def run_case(store,folder,name,case_id):
+def run_case(store,folder,name,case_id,*,think=None):
     """One explicit call, no fallback: a candidate must answer as itself."""
     model=next((m for m in ModelRoutes(store).models() if m['name']==name and m['approved']),None)
     if not model or inventory().get(name)!=model['digest']:raise AgentError('Candidate is not explicitly approved and installed with this digest.')
     case=next((c for c in cases() if c['id']==case_id),None)
     if case is None:raise AgentError('Unknown benchmark case.')
-    candidate=digest([name,model['digest'],suite_hash()])[:20]
+    if think is not None and type(think) is not bool:raise AgentError('Invalid thinking benchmark control.')
+    identity=[name,model['digest'],suite_hash()]
+    if think is not None:identity.append({'think':think})
+    candidate=digest(identity)[:20]
     directory=Path(folder)/candidate
     lab=StagedDraft(directory)
     manifest={'model':name,'digest':model['digest'],'suite_sha256':suite_hash(),'options':OPTIONS,'candidate':candidate}
+    if think is not None:manifest['think']=think
     p=directory/'manifest.json'
     if p.exists() and json.loads(p.read_text())!=manifest:raise AgentError('Benchmark manifest mismatch.')
     p.write_text(json.dumps(manifest,indent=2))
-    result=lab.run(case_id,case['role'],case['data'],case['task'],case['schema'],model=name,tokens=1024)
+    result=lab.run(case_id,case['role'],case['data'],case['task'],case['schema'],model=name,tokens=1024,think=think)
     try:unchanged=inventory().get(name)==model['digest']
     except (OSError,ValueError):unchanged=False
     if not unchanged:
@@ -106,6 +110,7 @@ def check_selection(role,name,model_digest,benchmark,human,confirmed):
         if r.get('provenance')!='local_inference' or r.get('status')!='validated_stage' or not e.get('inference_completed') or e.get('model')!=name or e.get('model_digest')!=model_digest or e.get('raw_sha256')!=hashlib.sha256(raw.encode()).hexdigest():raise AgentError('Missing complete, integrity-checked actual inference for this role.')
         if r.get('request_sha256')!=digest(r.get('request')):raise AgentError('Benchmark request evidence modified.')
         req=r['request'];case=specs[key]
+        if req.get('think')!=benchmark.get('think') or e.get('thinking_control',{}).get('requested')!=benchmark.get('think'):raise AgentError('Thinking mode evidence differs from benchmark manifest.')
         if req.get('data')!=case['data'] or req.get('task')!=case['task'] or req.get('schema')!=case['schema'] or req.get('model')!=name or req.get('tokens')!=1024:raise AgentError('Equivalent benchmark task not established.')
         from .staged_writing import SYSTEM
         if req.get('system')!=SYSTEM or e.get('options')!={k:OPTIONS[k] for k in ('num_ctx','num_predict','temperature','seed')}:raise AgentError('Benchmark system or sampling settings differ.')

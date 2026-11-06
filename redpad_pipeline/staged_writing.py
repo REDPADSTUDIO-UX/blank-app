@@ -113,7 +113,8 @@ class StagedDraft:
         self.folder=Path(folder);self.folder.mkdir(parents=True,exist_ok=True)
 
     def run(self, key, role, data, task, schema, *, dependencies=(), model=None,
-            tokens=768, complete=None, check=None):
+            tokens=768, complete=None, check=None, think=None):
+        if think is not None and type(think) is not bool:raise WritingError('Thinking control must be a boolean or unspecified.')
         if not re.fullmatch(r'[a-z0-9_-]{1,60}',key):raise WritingError('Invalid stage key.')
         if role not in ('story','script','director','qc'):raise WritingError('Invalid writing role.')
         if not 128<=tokens<=1536:raise WritingError('Stage token budget outside 128–1536.')
@@ -126,6 +127,7 @@ class StagedDraft:
             parents[dep]=digest(p)
         request={'role':role,'data':data,'task':task,'schema':schema,'dependencies':parents,
                  'model':model,'tokens':tokens,'system':SYSTEM}
+        if think is not None:request['think']=think
         fingerprint=digest(request);path=self.folder/(key+'.json')
         if path.exists():
             record=json.loads(path.read_text())
@@ -140,7 +142,7 @@ class StagedDraft:
         previous=sorted(self.folder.glob(key+'.attempt-*.json'))
         if len(previous)>1:raise WritingError('Two-attempt stage budget exhausted.')
         writer=complete or LocalWriter(model,num_ctx=4096,num_predict=tokens,temperature=.35,
-                    timeout_seconds=180,stream=True,format_schema=schema)
+                    timeout_seconds=180,stream=True,format_schema=schema,think=think)
         real=isinstance(writer,LocalWriter)
         record={'request':request,'request_sha256':fingerprint,'status':'running',
                 'provenance':'local_inference' if real else 'simulation','production_approved':False,
@@ -152,7 +154,7 @@ class StagedDraft:
         if real:
             prior=writer.on_chunk
             def snapshot(raw):
-                record['raw']=raw;save()
+                record['raw']=raw;record['runtime_thinking']=writer.last_thinking_output;save()
                 if prior:prior(raw)
             writer.on_chunk=snapshot
         try:
@@ -169,6 +171,7 @@ class StagedDraft:
         finally:
             if real:
                 record['raw']=writer.last_raw_output;record['evidence']=writer.last_evidence
+                record['runtime_thinking']=writer.last_thinking_output
                 record['raw_sha256']=hashlib.sha256(record['raw'].encode()).hexdigest()
                 manifest=Path(__file__).resolve().parents[1]/'phase3_models/ollama-weights/manifests/registry.ollama.ai/library/qwen3/4b-instruct-2507-q4_K_M'
                 if manifest.is_file():record['installed_qwen_manifest_sha256']=hashlib.sha256(manifest.read_bytes()).hexdigest()

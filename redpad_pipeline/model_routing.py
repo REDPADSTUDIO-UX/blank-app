@@ -85,18 +85,26 @@ class ModelRoutes:
                        (role,name,row['digest'],encode(benchmark),encode(human)))
             self.store.event(db,'','owner','accept_role_model',{'role':role,'name':name,'digest':row['digest'],'reviewer':human['reviewer']})
 
-    def configure(self,role,names,mode='research'):
+    def configure(self,role,names,mode='research',*,thinking_controls=None):
         if role not in AGENTS or mode not in ('research','production'):raise AgentError('Invalid role or routing mode.')
         if not isinstance(names,list) or not 1<=len(names)<=3 or len(set(names))!=len(names):raise AgentError('Choose 1–3 distinct approved models in order.')
+        controls=thinking_controls if thinking_controls is not None else {}
+        if not isinstance(controls,dict) or set(controls)-set(names) or any(type(v) is not bool for v in controls.values()):raise AgentError('Thinking controls must map route model names to booleans.')
         installed=inventory();available={m['name']:m for m in self.models() if m['approved']}
         pinned=[]
         with self.store.tx() as db:
             for name in names:
                 local_id(name);m=available.get(name)
                 if not m or installed.get(name)!=m['digest']:raise AgentError('Route requires exact installed, approved local model digests.')
-                if mode=='production' and not db.execute('SELECT 1 FROM model_acceptances WHERE role=? AND name=? AND digest=?',(role,name,m['digest'])).fetchone():
-                    raise AgentError('Production route requires role-specific technical evidence and independent human acceptance for EVERY fallback.')
-                pinned.append({'name':name,'digest':m['digest']})
+                item={'name':name,'digest':m['digest']}
+                if mode=='production':
+                    accepted=db.execute('SELECT benchmark FROM model_acceptances WHERE role=? AND name=? AND digest=?',(role,name,m['digest'])).fetchone()
+                    if not accepted:raise AgentError('Production route requires role-specific technical evidence and independent human acceptance for EVERY fallback.')
+                    accepted_think=json.loads(accepted[0]).get('think')
+                    if name in controls and controls[name]!=accepted_think:raise AgentError('Production thinking mode must match accepted evidence.')
+                    if accepted_think is not None:item['think']=accepted_think
+                elif name in controls:item['think']=controls[name]
+                pinned.append(item)
             policy={'role':role,'mode':mode,'models':pinned,'fallback':'runtime_unavailable_only','production_approval':False}
             db.execute('INSERT OR REPLACE INTO specialist_model_routes VALUES (?,?)',(role,encode(policy)))
             self.store.event(db,'','owner','configure_model_route',policy)
@@ -116,22 +124,26 @@ class RoutedWriter:
         self.routes=routes;self.run=run;self.role=role;self.settings=dict(settings or {})
         self.policy=routes.snapshot(run,role)
         if not self.policy:raise AgentError('No specialist model route configured.')
-        self.model=self.policy['models'][0]['name'];self.last_raw_output='';self.last_evidence={}
+        self.model=self.policy['models'][0]['name'];self.last_raw_output='';self.last_evidence={};self.last_thinking_output=''
 
     def __call__(self,system,prompt):
         for candidate in self.policy['models']:
-            self.model=candidate['name'];self.last_raw_output='';self.last_evidence={};writer=None;error=''
+            self.model=candidate['name'];self.last_raw_output='';self.last_evidence={};self.last_thinking_output='';writer=None;error=''
             try:
                 current=next((m for m in self.routes.models() if m['name']==self.model),None)
                 if not current or not current['approved'] or current['digest']!=candidate['digest']:raise WritingError('Pinned model approval was revoked or changed.')
                 if self.policy['mode']=='production':
                     with self.routes.store.tx() as db:
-                        if not db.execute('SELECT 1 FROM model_acceptances WHERE role=? AND name=? AND digest=?',(self.role,self.model,candidate['digest'])).fetchone():raise WritingError('Role acceptance no longer valid.')
+                        accepted=db.execute('SELECT benchmark FROM model_acceptances WHERE role=? AND name=? AND digest=?',(self.role,self.model,candidate['digest'])).fetchone()
+                        if not accepted or json.loads(accepted[0]).get('think')!=candidate.get('think'):raise WritingError('Role acceptance or accepted thinking mode no longer valid.')
                 try:installed=inventory()
                 except (OSError,TimeoutError):raise LocalUnavailable('Local runtime unavailable.') from None
                 if self.model not in installed:raise LocalUnavailable('Approved model unavailable in local runtime.')
                 if installed[self.model]!=candidate['digest']:raise WritingError('Installed model digest changed; no fallback allowed.')
-                writer=LocalWriter(self.model,**self.settings)
+                settings=dict(self.settings)
+                if 'think' in settings and settings['think']!=candidate.get('think'):raise WritingError('Runtime thinking override differs from pinned route.')
+                if 'think' in candidate:settings['think']=candidate['think']
+                writer=LocalWriter(self.model,**settings)
                 result=writer(system,prompt)
                 return result
             except LocalUnavailable as exc:
@@ -142,6 +154,9 @@ class RoutedWriter:
                 raise
             finally:
                 if writer:self.last_raw_output=writer.last_raw_output;self.last_evidence=dict(writer.last_evidence)
+                if writer:
+                    self.last_thinking_output=getattr(writer,'last_thinking_output','')
+                    if self.last_thinking_output:self.last_evidence['untrusted_runtime_thinking']=self.last_thinking_output
                 self.last_evidence.update(route_mode=self.policy['mode'],route_policy_sha256=hashlib.sha256(encode(self.policy).encode()).hexdigest(),model_digest=candidate['digest'])
                 with self.routes.store.tx() as db:
                     db.execute('INSERT INTO routed_model_attempts(run,role,model,digest,raw,evidence,error,created) VALUES (?,?,?,?,?,?,?,?)',
