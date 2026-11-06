@@ -126,11 +126,13 @@ def render(script):
 
 class LocalWriter:
     """Only an already-installed local Ollama model; cloud models rejected."""
-    def __init__(self, model=None, *, num_ctx=32768, num_predict=12000, temperature=0.65, seed=42):
+    def __init__(self, model=None, *, num_ctx=32768, num_predict=12000, temperature=0.65, seed=42, timeout_seconds=180):
         if type(num_ctx) is not int or not 2048 <= num_ctx <= 32768 or type(num_predict) is not int or not 128 <= num_predict <= 12000:
             raise WritingError('Invalid bounded local inference configuration.')
         if type(temperature) not in (int,float) or not math.isfinite(temperature) or not 0 <= temperature <= 1 or type(seed) is not int:
             raise WritingError('Invalid local sampling configuration.')
+        if type(timeout_seconds) is not int or not 30<=timeout_seconds<=600:raise WritingError('Local timeout must be 30–600 seconds.')
+        self.timeout_seconds=timeout_seconds
         self.options={'temperature':temperature,'num_predict':num_predict,'num_ctx':num_ctx,'seed':seed}
         self.last_evidence={}
         self.last_raw_output=''
@@ -160,17 +162,18 @@ class LocalWriter:
                 'model_metadata_sha256':hashlib.sha256(json.dumps(metadata.get('model_info',{}),sort_keys=True).encode()).hexdigest(),
                 'parameter_size':metadata.get('details',{}).get('parameter_size'),'quantization':metadata.get('details',{}).get('quantization_level')}
             request = urllib.request.Request('http://127.0.0.1:11434/api/chat',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json'})
-            with opener.open(request, timeout=180) as response: data=read_json(response)
+            with opener.open(request, timeout=self.timeout_seconds) as response: data=read_json(response)
             self.last_raw_output=data.get('message',{}).get('content','')
             if not isinstance(self.last_raw_output,str):raise WritingError('Local runtime content must be text.')
             self.last_evidence.update(runtime_model_name=data.get('model'),eval_count=data.get('eval_count'),eval_duration_ns=data.get('eval_duration'),
+                prompt_eval_count=data.get('prompt_eval_count'),prompt_eval_duration_ns=data.get('prompt_eval_duration'),load_duration_ns=data.get('load_duration'),total_duration_ns=data.get('total_duration'),
                 finish_reason=data.get('done_reason'),wall_seconds=round(time.monotonic()-started,3),
                 raw_sha256=hashlib.sha256(self.last_raw_output.encode()).hexdigest())
             if data.get('model') and data['model']!=self.model:raise WritingError('Runtime model identity differs from the requested model.')
             if data.get('done') is not True or data.get('done_reason') == 'length': raise WritingError('Local response incomplete; draft was not accepted.')
             self.last_evidence['inference_completed']=True
             result=json.loads(self.last_raw_output)
-            if not isinstance(result,dict):raise WritingError('Local response must be a JSON object.')
+            if not isinstance(result,(dict,list)):raise WritingError('Local response must be a structured JSON object or array.')
             return result
         except WritingError: raise
         except Exception: raise WritingError('Local writer unavailable or returned invalid JSON; no fallback or model download occurred.') from None

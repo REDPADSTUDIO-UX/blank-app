@@ -1,3 +1,5 @@
+> Newer authorized CPU installation and real inference evidence: [QWEN_CPU_PROGRESS.md](QWEN_CPU_PROGRESS.md). The original no-runtime audit below is historical.
+
 # REDPAD AI Studio — Phase 3 checkpoint: actual inference blocked
 
 Phase 3 শুরু হয়েছে। Hardware/model audit, primary-source research, bounded benchmark integration,

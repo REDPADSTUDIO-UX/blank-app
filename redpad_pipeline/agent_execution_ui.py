@@ -70,9 +70,13 @@ def show_execution(store,key):
             rid=engine.enqueue(key,inputs,deps,mode,revision or None)
             st.success('Queued execution '+rid)
         except (AgentError,ValueError) as exc:st.error(str(exc))
+    from .local_ollama_session import ROOT,local_cpu_session
+    managed=st.checkbox('Use installed development CPU runtime',key='department_owned_runtime_'+key) if (ROOT/'phase3_models/ollama-runtime/bin/ollama').is_file() else False
     if st.button('Run ready tasks once',key='department_tick_'+key):
         with st.spinner('Executing queued tasks; no automatic media generation'):
-            st.json(engine.tick())
+            if managed:
+                with local_cpu_session():st.json(engine.tick())
+            else:st.json(engine.tick())
     if st.button('Run independent software tasks',key='specialist_parallel_'+key):
         st.json(engine.tick_parallel())
     own={t['id'] for t in store.tasks() if t['agent']==key}

@@ -10,9 +10,10 @@
       "license": "apache-2.0",
       "decision": "First comparison candidate; not a quality winner. Ollama qwen3:4b-instruct-2507-q4_K_M lists 2.5 GB; start bounded CPU context, measure RAM/latency.",
       "source": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
-      "status": "conditional_first_trial",
-      "installed": false,
-      "inference_verified": false
+      "status": "CPU smoke inference verified; creative quality not verified",
+      "installed": true,
+      "inference_verified": true,
+      "installed_runtime_tag": "qwen3:4b-instruct-2507-q4_K_M"
     },
     {
       "model": "Qwen/Qwen3-0.6B",
@@ -180,5 +181,6 @@
     "https://www.kaggle.com/docs/notebooks",
     "https://www.kaggle.com/docs/efficient-gpu-usage",
     "https://huggingface.co/Lightricks/LTX-Video/blob/main/LTX-Video-Open-Weights-License-0.X.txt"
-  ]
+  ],
+  "installed_model_count": 1
 }

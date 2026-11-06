@@ -7,6 +7,8 @@ from .phase3 import Lab,audit,cases
 
 def show_phase3():
     st.caption('Bounded local experiments. Models/GPU are not installed or enabled here; no remote inference or automatic approval.')
+    from .local_ollama_session import ROOT,local_cpu_session
+    managed=st.checkbox('Use installed development CPU runtime for experiments',key='phase3_owned_runtime') if (ROOT/'phase3_models/ollama-runtime/bin/ollama').is_file() else False
     if st.button('Audit available model runtime',key='phase3_audit'):
         st.json(audit(True))
     lab_id=st.text_input('Isolated experiment ID','bengali-phase3',key='phase3_lab_id')
@@ -35,7 +37,10 @@ def show_phase3():
         run=next(r for r in runs if r['id']==rid)
         if st.button('Run selected local experiment',key='phase3_execute',disabled=run['state']!='Ready for Input'):
             try:
-                with st.spinner('Local inference preflight / bounded generation'):state=lab.run(rid)
+                with st.spinner('Local inference preflight / bounded generation'):
+                    if managed:
+                        with local_cpu_session():state=lab.run(rid)
+                    else:state=lab.run(rid)
                 st.info(state);st.rerun()
             except AgentError as exc:st.error(str(exc))
         if run['state'] in ('Blocked','Failed') and st.button('Retry after resolving blocker',key='phase3_retry'):
@@ -73,3 +78,12 @@ def show_phase3():
                     lab.store.review(task['id'],version,action,evidence,'qc' if action in ('Recommend','Reject') else 'owner');st.rerun()
                 except AgentError as exc:st.error(str(exc))
     st.download_button('Export experiment evidence',json.dumps(lab.summary(),ensure_ascii=False,indent=2),'phase3-evidence.json',key='phase3_export')
+
+    archive=ROOT/'verification/phase3_cpu'
+    files=sorted(archive.glob('trial_*.json')) if archive.is_dir() else []
+    if files:
+        st.subheader('Actual CPU creative research archive')
+        st.caption('Unapproved experimental candidates and model criticism; no independent human quality approval.')
+        chosen=st.selectbox('Saved CPU experiment',[p.name for p in files],key='phase3_cpu_archive')
+        content=(archive/chosen).read_text();st.json(json.loads(content))
+        st.download_button('Download actual CPU experiment',content,chosen,key='phase3_cpu_download')
