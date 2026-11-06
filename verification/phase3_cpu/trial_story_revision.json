@@ -1,0 +1,90 @@
+{
+  "name": "trial_story_revision",
+  "agent": "story",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "device": "CPU",
+  "request": {
+    "agent": "story",
+    "instructions": "এই source-এ verified text defects আছে: “তানিiflowerা” চরিত্রের ভুল নাম; সঠিক নাম তানিয়া। “বাসভাড়া থেকে বাইরে যায়” অর্থহীন—বাসভাড়া হলো টাকা, জায়গা নয়। সাক্ষাৎকারে গিয়ে হঠাৎ স্ক্রিনে ছাতা দেখা কোনো প্রতিষ্ঠিত ঘটনার ফল নয়। তিনটি beat পুরো সংশোধন করুন। সব ঘটনা এখন বাসার ঘর ও সামনের দরজায় সীমিত রাখুন; কোনো স্ক্রিন, রহস্যময় ব্যক্তি বা teleportation নয়। প্রতিটি cause আগের action-এর সরাসরি ফল। দুই চরিত্র ঠিক রাশেদ ও তানিয়া। পরস্পরের ছোট অভ্যাসে মমতা থাকবে, বক্তৃতা নয়। শেষ beat-এ একটি বাস্তব যৌথ সিদ্ধান্ত থাকবে; নতুন অবাস্তব mystery নয়। Return the SAME story JSON keys, characters list and exactly THREE beats. Keep all Bengali fields short, spell names EXACTLY as supplied. No Latin letters inside character names.",
+    "brief": {
+      "title": "একটা ছাতা",
+      "premise": "ঢাকার বৃষ্টির সকাল। রাশেদ (৩২) ও তানিয়া (২৯) বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নয়।",
+      "genre": "family drama",
+      "tone": "natural Bangladeshi Bengali, restrained emotion, gentle character wit"
+    },
+    "experimental_source": {
+      "title": "একটা ছাতা",
+      "premise": "ঢাকার বৃষ্টির সকাল। রাশে ও তানিiflowerা বিবাহিত। তানিiflowerার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নঔ।",
+      "characters": [
+        {
+          "name": "রাশেদ",
+          "want": "অফিসে জরুরি উপস্থিতি করতে পারে।"
+        },
+        {
+          "name": "তানিiflowerা",
+          "want": "চাকরির সাক্ষাৎকার পাওয়া।"
+        }
+      ],
+      "beats": [
+        {
+          "id": "b1",
+          "action": "রাশেদ ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।",
+          "cause": "তার অফিসে জরুরি উপস্থিতি।",
+          "consequence": "তানিiflowerা বাসভাড়া থেকে বাইরে যায় না, তার ছাতা দেখে বিস্ময় করে।"
+        },
+        {
+          "id": "b2",
+          "action": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়, কিন্তু স্ক্রিনে স্ক্রিন দেখে বন্ধ করে দেয়।",
+          "cause": "স্ক্রিনে রাশেদের ছাতা দেখা যায়।",
+          "consequence": "তানিiflowerা বুঝে যায় রাশেদ তার ছাতা দেখেছে।"
+        },
+        {
+          "id": "b3",
+          "action": "রাশেদ ফেরত আসে, ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।",
+          "cause": "তানিiflowerা বলে যায় সাক্ষাৎকার সময় সময় না হয়ে যায়।",
+          "consequence": "রাশেদ বুঝে যায় তানিiflowerা ছাতা দেখেছে।"
+        }
+      ],
+      "hook": "তানিiflowerা ছাতা দেখে বিস্ময় করে, কিন্তু রাশেদ তাকে দেখে না।",
+      "cliffhanger": "ছাতা হাতে রাশেদের মুখে না দেখা যায়, কিন্তু তার সামনে কোনো ছাতা নেই।"
+    },
+    "targets": null
+  },
+  "prompt_sha256": "ab8ae12feec9cfd7f81e5cb8f8f75269f4a9142ba081d838664b5364bf1c7396",
+  "raw": "{\n  \"title\": \"একটা ছাতা\",\n  \"premise\": \"ঢাকার বৃষ্টির সকাল। রাশেদ (৩২) ও তানি<tool_call>া (২৯) বিবাহিত। তানি<tool_call>ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নঔ।\",\n  \"genre\": \"family drama\",\n  \"tone\": \"natural Bangladeshi Bengali, restrained emotion, gentle character wit\",\n  \"characters\": [\n    {\"name\": \"রাশেদ\", \"want\": \"অফিসে জরুরি উপস্থিতি করতে পারে।\"},\n    {\"name\": \"তানি<tool_call>া\", \"want\": \"চাকরির সাক্ষাৎকার পাওয়া।\"}\n  ],\n  \"beats\": [\n    {\n      \"id\": \"b1\",\n      \"action\": \"রাশেদ ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।\",\n      \"cause\": \"তার অফিসে জরুরি উপস্থিতি।\",\n      \"consequence\": \"তানি<tool_call>া দরজা খুলে দেয়, ছাতা দেখে হাত তুলে বলে, 'আজ আমার চাকরির সাক্ষাৎকার আছে, তুমি কি আমার ছাতা দেখেছিলে?'\"\n    },\n    {\n      \"id\": \"b2\",\n      \"action\": \"তানি<tool_call>া চাকরির সাক্ষাৎকারে পৌঁছায়, কিন্তু বাইরের দরজা দিয়ে আসে না, বাসভাড়া থেকে বাইরে যায়।\",\n      \"cause\": \"তানি<tool_call>া দেখে যায় রাশেদ ছাতা নিয়ে বাইরে যাচ্ছে।\",\n      \"consequence\": \"তানি<tool_call>া বুঝে যায় রাশেদ তার ছাতা দেখেছে, কিন্তু কিছু বলে না।\"\n    },\n    {\n      \"id\": \"b3\",\n      \"action\": \"রাশেদ ফেরত আসে, ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।\",\n      \"cause\": \"তানি<tool_call>া বলে যায়, 'আজ সকালে আমার সাক্ষাৎকার হয়ে গেছে, কিন্তু আমি কিছু বলে না।'\",\n      \"consequence\": \"রাশেদ বুঝে যায় তানি<tool_call>া ছাতা দেখেছে, কিন্তু কোনো বিকল্প না দেখে, দুজনের মাঝে একটি সামান্য হাসি হয়।\"\n    }\n  ],\n  \"hook\": \"তানি<tool_call>া ছাতা দেখে হাত তুলে বলে, 'আজ আমার চাকরির সাক্ষা",
+  "result": null,
+  "error": "Local response incomplete; draft was not accepted.",
+  "state": "Failed",
+  "validation": {},
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.2,
+      "num_predict": 1200,
+      "num_ctx": 4096,
+      "seed": 42
+    },
+    "inference_completed": false,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 1200,
+    "eval_duration_ns": 165127958000,
+    "prompt_eval_count": 1986,
+    "prompt_eval_duration_ns": 36562879000,
+    "load_duration_ns": 987404,
+    "total_duration_ns": 201809620118,
+    "finish_reason": "length",
+    "wall_seconds": 201.813,
+    "raw_sha256": "d4a5a03a056bb19419b2f053fbe4eb808cdea20ec9282a8ee869dbba8a5eb07f"
+  },
+  "wall_seconds": 201.814,
+  "aggregate_process_peak_rss_bytes": 3691761664,
+  "memory_note": "Sampled aggregate RSS of caller and descendant server/runner, not unique model allocation",
+  "provenance": "incomplete_or_failed_local_attempt",
+  "source_approval": "Unapproved research candidate only",
+  "production_approved": false,
+  "independent_human_review": false
+}

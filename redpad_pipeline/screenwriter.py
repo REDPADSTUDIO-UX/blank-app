@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 import re
 import time
+import unicodedata
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1] / 'assets' / 'writing'
@@ -126,12 +127,14 @@ def render(script):
 
 class LocalWriter:
     """Only an already-installed local Ollama model; cloud models rejected."""
-    def __init__(self, model=None, *, num_ctx=32768, num_predict=12000, temperature=0.65, seed=42, timeout_seconds=180):
+    def __init__(self, model=None, *, num_ctx=32768, num_predict=12000, temperature=0.65, seed=42, timeout_seconds=180, stream=False, on_chunk=None):
         if type(num_ctx) is not int or not 2048 <= num_ctx <= 32768 or type(num_predict) is not int or not 128 <= num_predict <= 12000:
             raise WritingError('Invalid bounded local inference configuration.')
         if type(temperature) not in (int,float) or not math.isfinite(temperature) or not 0 <= temperature <= 1 or type(seed) is not int:
             raise WritingError('Invalid local sampling configuration.')
         if type(timeout_seconds) is not int or not 30<=timeout_seconds<=600:raise WritingError('Local timeout must be 30–600 seconds.')
+        if type(stream) is not bool or (on_chunk is not None and not callable(on_chunk)):raise WritingError('Invalid local streaming controls.')
+        self.stream=stream;self.on_chunk=on_chunk
         self.timeout_seconds=timeout_seconds
         self.options={'temperature':temperature,'num_predict':num_predict,'num_ctx':num_ctx,'seed':seed}
         self.last_evidence={}
@@ -142,8 +145,10 @@ class LocalWriter:
     def __call__(self, system, prompt):
         self.last_evidence={};self.last_raw_output=''
         started=time.monotonic()
+        original_prompt=prompt
+        system=unicodedata.normalize('NFC',system);prompt=unicodedata.normalize('NFC',prompt)
         payload = {'model':self.model,'messages':[{'role':'system','content':system},{'role':'user','content':prompt}],
-                   'stream':False,'format':'json','options':self.options}
+                   'stream':self.stream,'format':'json','options':self.options}
         # Fixed loopback prevents sending unpublished scripts to external endpoints.
         class NoRedirect(urllib.request.HTTPRedirectHandler):
             def redirect_request(self, *args, **kwargs):
@@ -160,9 +165,25 @@ class LocalWriter:
                 raise WritingError('Cloud-backed models are disabled.')
             self.last_evidence={'runtime':'Ollama loopback','model':self.model,'options':self.options,'inference_completed':False,
                 'model_metadata_sha256':hashlib.sha256(json.dumps(metadata.get('model_info',{}),sort_keys=True).encode()).hexdigest(),
+                'input_normalization':'NFC','prompt_normalization_changed':original_prompt!=prompt,'wire_prompt_sha256':hashlib.sha256(prompt.encode()).hexdigest(),
                 'parameter_size':metadata.get('details',{}).get('parameter_size'),'quantization':metadata.get('details',{}).get('quantization_level')}
             request = urllib.request.Request('http://127.0.0.1:11434/api/chat',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json'})
-            with opener.open(request, timeout=self.timeout_seconds) as response: data=read_json(response)
+            with opener.open(request, timeout=self.timeout_seconds) as response:
+                if not self.stream:data=read_json(response)
+                else:
+                    data={};received=0
+                    for line in response:
+                        received+=len(line)
+                        if received>2*1024*1024:raise WritingError('Local runtime response exceeds the 2 MiB bound.')
+                        packet=json.loads(line)
+                        chunk=packet.get('message',{}).get('content','')
+                        if not isinstance(chunk,str):raise WritingError('Local streaming content must be text.')
+                        self.last_raw_output+=chunk
+                        if self.on_chunk:self.on_chunk(self.last_raw_output)
+                        data=packet
+                        if time.monotonic()-started>self.timeout_seconds:raise WritingError('Local inference exceeded the bounded wall-time budget; partial text preserved.')
+                        if packet.get('done'):break
+                    data=dict(data,message={'content':self.last_raw_output})
             self.last_raw_output=data.get('message',{}).get('content','')
             if not isinstance(self.last_raw_output,str):raise WritingError('Local runtime content must be text.')
             self.last_evidence.update(runtime_model_name=data.get('model'),eval_count=data.get('eval_count'),eval_duration_ns=data.get('eval_duration'),
@@ -176,7 +197,9 @@ class LocalWriter:
             if not isinstance(result,(dict,list)):raise WritingError('Local response must be a structured JSON object or array.')
             return result
         except WritingError: raise
-        except Exception: raise WritingError('Local writer unavailable or returned invalid JSON; no fallback or model download occurred.') from None
+        except Exception as exc:
+            self.last_evidence.update(error_type=type(exc).__name__,wall_seconds=round(time.monotonic()-started,3))
+            raise WritingError('Local writer unavailable or returned invalid JSON; no fallback or model download occurred.') from None
 
 def generate(brief, genre, seconds, continuity='', *, complete=None):
     prompt = build_prompt(brief, genre, seconds, continuity)

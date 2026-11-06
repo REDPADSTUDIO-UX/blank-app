@@ -31,6 +31,22 @@ def audit(probe=True):
             for pattern in ('*.gguf','*.safetensors'):
                 weights += [p.name for p in folder.rglob(pattern) if p.is_file() and not p.is_symlink()][:100]
     result['weight_filenames']=weights[:100];result['model_weights_present']=bool(weights) or bool(result['local_models'])
+    binary=ROOT/'phase3_models/ollama-runtime/bin/ollama'
+    result['development_ollama_installed']=binary.is_file() and not binary.is_symlink()
+    result['local_model_manifests']=[]
+    model_root=ROOT/'phase3_models/ollama-weights'
+    manifests=model_root/'manifests'
+    if manifests.is_dir() and not manifests.is_symlink():
+        for path in manifests.rglob('*'):
+            if not path.is_file() or path.is_symlink():continue
+            try:
+                manifest=json.loads(path.read_text())
+                layers=[manifest['config'],*manifest['layers']]
+                present=all((model_root/'blobs'/layer['digest'].replace(':','-')).is_file() and (model_root/'blobs'/layer['digest'].replace(':','-')).stat().st_size==layer['size'] for layer in layers)
+                result['local_model_manifests'].append(dict(name=str(path.relative_to(manifests)),manifest_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),all_blobs_present=present))
+                result['model_weights_present']=result['model_weights_present'] or present
+            except (ValueError,KeyError,TypeError,OSError):continue
+
     result['python_version']=platform.python_version()
     result['package_versions']={}
     for name in ('torch','transformers','diffusers','streamlit','huggingface_hub'):

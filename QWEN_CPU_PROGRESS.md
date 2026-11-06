@@ -28,3 +28,27 @@ Added a bounded CPU timeout option (30–600 seconds; default remains 180). CPU 
 Focused verification: 22 tests passed. Full regression will be rerun after the creative experiments.
 
 No Render deployment, main change, paid API, GPU rental, new cloud resource or YouTube write.
+
+## Measured Unicode defect and controlled correction
+
+The original exact-name copy control returned `তানি<tool_call>া`, while arithmetic and object transfer
+controls passed. With only canonical NFC input preprocessing changed, the same model/seed/settings
+returned the correct canonical-equivalent `তানিয়া`. See control_probe.json and nfc_control_probe.json.
+This supports a specific input-normalization fix, not a claim that the whole model is now reliable.
+The adapter now normalizes system/prompt text to NFC, records that fact and the exact wire prompt hash,
+and matches evidence quotes canonically while still rejecting invented words. Raw model text is never
+normalized or overwritten after generation.
+
+The larger architecture request failed at 420.146 seconds without a complete response. Subsequent
+streaming now preserves partial text and raw failed responses. Initial short Story/Script passed
+micro-contracts but had serious semantic defects; the initial Director fabricated a quote and was
+rejected. Some corrective responses hit their explicit token limit. A single-scene object wrapper
+can be normalized without changing the target scene or untouched s1; this is a format repair, not
+proof of artistic improvement. Prompt-order-only dialogue testing did not demonstrate quality.
+
+33 focused normalization/creative/adapter tests passed; the earlier full suite passed 254 tests.
+The finite CPU research budget was expanded explicitly from the initial eight calls to nine with a
+prompt-order diagnostic, then to thirteen for four controlled post-normalization retests of the same
+model. No new model, paid service or external inference was added. Further broad regeneration is not
+automatic. The corrected Story now preserves the canonical character name, but causal logic and
+natural phrasing are still weak. Script/Director/dialogue post-fix retests are in progress.

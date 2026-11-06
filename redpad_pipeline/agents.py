@@ -2,12 +2,25 @@
 from contextlib import contextmanager
 from pathlib import Path
 import json
+import hashlib
 import re
 import sqlite3
 from uuid import uuid4
 
 CATALOG = json.loads(Path(__file__).with_name('agent_catalog.json').read_text())
 AGENTS = {a['key']: a for a in CATALOG}
+CPU_ARCHIVE=Path(__file__).resolve().parents[1]/'verification/phase3_cpu'
+
+def archived_cpu_inference(key,model):
+    if not model or not CPU_ARCHIVE.is_dir():return False
+    for path in CPU_ARCHIVE.glob('trial_*.json'):
+        try:
+            row=json.loads(path.read_text());evidence=row.get('evidence',{})
+            raw=row.get('raw','')
+            if (row.get('agent')==key and row.get('model')==model and row.get('provenance')=='local_inference' and evidence.get('inference_completed') is True
+                and isinstance(raw,str) and raw and evidence.get('raw_sha256')==hashlib.sha256(raw.encode()).hexdigest()):return True
+        except (ValueError,OSError,TypeError,AttributeError):continue
+    return False
 
 class AgentError(ValueError):
     pass
@@ -71,10 +84,12 @@ class AgentStore:
                 if db.execute("SELECT 1 FROM sqlite_master WHERE name='agent_runs'").fetchone():
                     records=db.execute("SELECT o.payload FROM agent_runs r JOIN tasks t ON t.id=r.task JOIN outputs o ON o.task=t.id AND o.revision=r.expected_revision+1 WHERE t.agent=? AND r.model=? AND r.mode='local' AND r.state='Awaiting QC'",(key,row[0])).fetchall()
                     inference_verified = inference_verified or any(json.loads(record[0]).get('provenance')=='local_inference' for record in records)
+        archive_verified=archived_cpu_inference(key,row[0] if row else '')
+        inference_verified=inference_verified or archive_verified
         from .specialists import IMPLEMENTED
         return {'specialist_development':'Specialist workflow implemented' if key in IMPLEMENTED else 'Creative workflow retained',
                 'software_tested':'See verification/specialists/matrix.json (recorded test evidence)',
-                'real_inference_verified':inference_verified,'creative_media_quality_verified':False,
+                'real_inference_verified':inference_verified,'inference_evidence_scope':'Saved CPU research archive; not production approval' if archive_verified else 'This agent task store','creative_media_quality_verified':False,
                 'registration':'Registered','software':'Software Working','configuration':'Configured' if row and row[0] else 'Not configured',
                 'model':row[0] if row else '', 'connection':('Local inference recorded; current availability not probed' if inference_verified else 'Model Not Connected'),'readiness':'Blocked',
                 'blocker':'Production quality unverified; model runtime and media prerequisites reported by execution preflight.',

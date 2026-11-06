@@ -147,7 +147,7 @@ class Engine:
                 if complete is None:
                     model=run['model'] or self.store.status(t['agent'])['model']
                     if not model: raise MissingPrerequisite('No local model configured for this agent.')
-                    complete=LocalWriter(model,num_ctx=8192,num_predict=8192) if creative else LocalWriter(model)
+                    complete=LocalWriter(model,num_ctx=8192,num_predict=8192,stream=True) if creative else LocalWriter(model,stream=True)
                     provenance='local_inference'
                 else: provenance='simulation';model='injected-test-provider'
                 prompt=encode({'role':AGENTS[t['agent']]['responsibilities'],'input':inputs,'approved_upstream':sources,

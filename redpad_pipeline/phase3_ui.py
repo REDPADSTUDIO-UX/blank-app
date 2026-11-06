@@ -10,7 +10,9 @@ def show_phase3():
     from .local_ollama_session import ROOT,local_cpu_session
     managed=st.checkbox('Use installed development CPU runtime for experiments',key='phase3_owned_runtime') if (ROOT/'phase3_models/ollama-runtime/bin/ollama').is_file() else False
     if st.button('Audit available model runtime',key='phase3_audit'):
-        st.json(audit(True))
+        if managed:
+            with local_cpu_session():st.json(audit(True))
+        else:st.json(audit(True))
     lab_id=st.text_input('Isolated experiment ID','bengali-phase3',key='phase3_lab_id')
     if st.button('Open isolated experiment',key='phase3_open'):
         try:Lab(lab_id);st.session_state['phase3_open_id']=lab_id

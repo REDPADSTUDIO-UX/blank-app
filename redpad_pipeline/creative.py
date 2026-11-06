@@ -9,6 +9,7 @@ import hashlib
 import json
 import math
 import re
+import unicodedata
 from pathlib import Path
 from .agents import AgentError, encode, nonempty
 from .screenwriter import validate as validate_legacy, teaching_context
@@ -150,12 +151,12 @@ def direction_check(a,source):
         if s['id'] not in source_ids or s['id'] in reviewed:raise AgentError('Unknown/duplicate director source scene.')
         reviewed.add(s['id'])
         if s['humor_type'] not in HUMOR_TYPES:raise AgentError('Unknown humor category.')
-        if s['evidence'] not in encode(source):raise AgentError('Director evidence must quote the source.')
+        if unicodedata.normalize('NFC',s['evidence']) not in unicodedata.normalize('NFC',encode(source)):raise AgentError('Director evidence must quote the source.')
     if reviewed!=source_ids:raise AgentError('Director must cover every source scene/episode.')
     for note in listing(a['revision_notes'],'revision notes',0):
         texts(note,['target','agent','issue','evidence','instruction'])
         if note['target'] not in source_ids or note['agent'] not in ('story','script'):raise AgentError('Invalid targeted revision recipient.')
-        if note['evidence'] not in encode(source):raise AgentError('Revision evidence absent from source.')
+        if unicodedata.normalize('NFC',note['evidence']) not in unicodedata.normalize('NFC',encode(source)):raise AgentError('Revision evidence absent from source.')
     return []
 
 def rewrite(source,replacements,targets):
@@ -219,7 +220,7 @@ def evaluate(artifact,ratings,reviewer,provenance,previous=None):
     for dim,weight in WEIGHTS.items():
         item=ratings[dim];texts(item,['strength','weakness','evidence','revision']);obj(item,['score'])
         if type(item['score']) not in (int,float) or not math.isfinite(item['score']) or not 0<=item['score']<=10:raise AgentError('Score must be 0–10.')
-        if item['evidence'] not in text:raise AgentError('Evaluation quote not found in this artifact.')
+        if unicodedata.normalize('NFC',item['evidence']) not in unicodedata.normalize('NFC',text):raise AgentError('Evaluation quote not found in this artifact.')
         items[dim]=dict(item,weight=weight);score+=item['score']*weight/10
     report={'score':round(score,2),'dimensions':items,'reviewer':reviewer,'provenance':provenance,
             'artifact_sha256':digest(artifact),'production_quality_verified':False,'owner_approval':False}
