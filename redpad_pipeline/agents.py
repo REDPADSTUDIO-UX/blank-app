@@ -74,6 +74,10 @@ class AgentStore:
         agent(key)
         with self.tx() as db:
             row=db.execute('SELECT model FROM config WHERE agent=?',(key,)).fetchone()
+            route=None
+            if db.execute("SELECT 1 FROM sqlite_master WHERE name='specialist_model_routes'").fetchone():
+                r=db.execute('SELECT policy FROM specialist_model_routes WHERE role=?',(key,)).fetchone()
+                if r:route=json.loads(r[0]);row=(route['models'][0]['name'],)
         inference_verified = False
         if key == 'director' and row and row[0]:
             with self.tx() as db:
@@ -87,7 +91,8 @@ class AgentStore:
         archive_verified=archived_cpu_inference(key,row[0] if row else '')
         inference_verified=inference_verified or archive_verified
         from .specialists import IMPLEMENTED
-        return {'specialist_development':'Specialist workflow implemented' if key in IMPLEMENTED else 'Creative workflow retained',
+        return {'model_route':route,'model_route_scope':route['mode'] if route else 'legacy single-model configuration',
+                'specialist_development':'Specialist workflow implemented' if key in IMPLEMENTED else 'Creative workflow retained',
                 'software_tested':'See verification/specialists/matrix.json (recorded test evidence)',
                 'real_inference_verified':inference_verified,'inference_evidence_scope':'Saved CPU research archive; not production approval' if archive_verified else 'This agent task store','creative_media_quality_verified':False,
                 'registration':'Registered','software':'Software Working','configuration':'Configured' if row and row[0] else 'Not configured',

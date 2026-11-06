@@ -17,6 +17,10 @@ ROOT = Path(__file__).resolve().parents[1] / 'assets' / 'writing'
 class WritingError(ValueError):
     pass
 
+class LocalUnavailable(WritingError):
+    """Local transport/model availability failure; safe local fallback may be tried."""
+    pass
+
 def curriculum():
     return json.loads((ROOT / 'curriculum.json').read_text(encoding='utf-8'))
 
@@ -207,6 +211,9 @@ class LocalWriter:
                     raise WritingError('Local reply failed the requested JSON schema; raw output preserved.')
             return result
         except WritingError: raise
+        except (OSError,TimeoutError) as exc:
+            self.last_evidence.update(error_type=type(exc).__name__,wall_seconds=round(time.monotonic()-started,3))
+            raise LocalUnavailable('Local writer transport unavailable; no remote provider was called.') from None
         except Exception as exc:
             self.last_evidence.update(error_type=type(exc).__name__,wall_seconds=round(time.monotonic()-started,3))
             raise WritingError('Local writer unavailable or returned invalid JSON; no fallback or model download occurred.') from None

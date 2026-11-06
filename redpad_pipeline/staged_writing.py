@@ -115,7 +115,7 @@ class StagedDraft:
     def run(self, key, role, data, task, schema, *, dependencies=(), model=None,
             tokens=768, complete=None, check=None):
         if not re.fullmatch(r'[a-z0-9_-]{1,60}',key):raise WritingError('Invalid stage key.')
-        if role not in ('story','script','director'):raise WritingError('Invalid writing role.')
+        if role not in ('story','script','director','qc'):raise WritingError('Invalid writing role.')
         if not 128<=tokens<=1536:raise WritingError('Stage token budget outside 128–1536.')
         Draft202012Validator.check_schema(schema)
         parents={}

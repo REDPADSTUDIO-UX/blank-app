@@ -11,6 +11,8 @@ def render_agent_control(path):
         from .phase3_ui import show_phase3
         show_phase3()
     store = AgentStore(path)
+    from .model_routing_ui import show_model_routes
+    show_model_routes(store)
     st.dataframe([{'ID':a['id'],'Agent':a['name'],'Department':a['department'],**store.status(a['key'])} for a in CATALOG],hide_index=True)
     key=st.selectbox('Individual agent workspace',list(AGENTS),format_func=lambda k:AGENTS[k]['name'],key='agent_workspace')
     a=AGENTS[key]

@@ -1,3 +1,5 @@
+> Next continuation: [multi-model research and role routing](MULTI_MODEL_COMPARISON.md). Historical inference evidence below remains unchanged.
+
 # Phase 3 — staged Bengali writing correction checkpoint
 
 Continued from `7a6b1ed1b82e3fd82500da05b739f098c147cb95`, 2026-11-06.
