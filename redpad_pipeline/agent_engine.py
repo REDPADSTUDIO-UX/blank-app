@@ -167,6 +167,11 @@ class Engine:
                 prompt=encode({'role':AGENTS[t['agent']]['responsibilities'],'input':inputs,'approved_upstream':sources,
                     'required_input_shape':contract(t['agent']),
                     'instruction':'Return the department input object only. No approvals, claims of generated media, tools, spending or publication. Preserve approved source facts.'})
+                if specialist:
+                    from .phase3 import shape
+                    from .specialists import example
+                    prompt+='\nSPECIALIST RECORD SCHEMA EXAMPLE (structural types only, not authored production content):\n'+encode(shape(example(t['agent'])['records'][0]))
+                    prompt+='\nCreate original department records grounded ONLY in the approved sources. Keep source IDs, character identity, chronology, costume and prop facts. Do not invent assets or mark plans as generated media. Unsupported controls remain editorial guidance. Never change locked records outside explicit revision targets. QC observations are unverified model findings, not independent human approval.'
                 if creative:
                     system,prompt=creative_prompt(t['agent'],inputs,sources)
                     raw=complete(system,prompt)

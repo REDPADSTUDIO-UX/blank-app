@@ -6,9 +6,9 @@ from .specialists import need,text,number,records,finding
 
 PROVIDERS={
  'local-svd':dict(modes=['image_to_video'],installed_adapter=True,requires=['local checkpoint','torch/diffusers','CUDA GPU'],reference_control='single_image'),
- 'wan-local':dict(modes=['text_to_video','image_to_video'],installed_adapter=False,requires=['reviewed local Wan adapter','checkpoint','compatible GPU'],reference_control='unverified'),
- 'ltx-local':dict(modes=['text_to_video','image_to_video'],installed_adapter=False,requires=['reviewed local LTX adapter','checkpoint','compatible GPU'],reference_control='unverified'),
- 'bengali-tts-local':dict(modes=['speech'],installed_adapter=False,requires=['approved local Bengali TTS backend','voice rights/reference'],reference_control='unverified')}
+ 'wan-local':dict(modes=['text_to_video','image_to_video'],installed_adapter=True,requires=['approved Wan2.2 TI2V 5B local adapter','checkpoint','compatible GPU'],reference_control='unverified'),
+ 'ltx-local':dict(modes=['text_to_video','image_to_video'],installed_adapter=True,requires=['approved LTX 0.9.5 local adapter','checkpoint','compatible GPU'],reference_control='unverified'),
+ 'bengali-tts-local':dict(modes=['speech'],installed_adapter=True,requires=['approved local Indic Parler-TTS backend','voice rights/reference'],reference_control='unverified')}
 
 
 def asset(value, pending=True):
@@ -31,7 +31,7 @@ def process(key,rows,data):
             asset(r['reference'])
             if r['mode']=='image_to_video' and r['reference']=='pending':findings.append(finding(r['id'],'missing_reference','approved reference image','pending',key,'blocker'))
         derived.update(provider_capabilities={r['provider']:PROVIDERS[r['provider']] for r in rows},job_state='Prepared — not generated',
-                       execution_interface='local-svd uses existing media mode local_video; Wan/LTX are interface contracts only',qc_required=True)
+                       execution_interface='SVD retains its legacy native adapter; Wan/LTX use digest-pinned owned local inference jobs. Availability/actual inference are separate.',qc_required=True)
     elif key=='voice':
         records(rows,['id','scene','speaker','character','text','lexicon','emotion','pace_wpm','start','seconds','pauses','reference'])
         speakers={};cues=[]

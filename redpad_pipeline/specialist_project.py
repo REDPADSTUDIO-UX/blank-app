@@ -50,3 +50,32 @@ def queue_project(engine,inputs,creative_tasks):
         rid=engine.enqueue(key,data,dependencies,mode='software',idempotency_key=token+':'+key)
         runs[key]=rid;tasks[key]=next(r['task'] for r in engine.runs() if r['id']==rid)
     return dict(tasks=tasks,runs=runs,approval_required=True,auto_publish=False)
+
+
+def queue_generated_project(engine,project,creative_tasks):
+    """Queue all 17 local drafting departments from current approved creative work.
+
+    Empty records are an inference input, never submitted as software output.
+    Actual model records must pass the existing department validators. Every
+    existing dependency, independent QC and owner gate remains enforceable.
+    """
+    if not isinstance(project,str) or not project.strip():raise AgentError('Project name required.')
+    with engine.store.tx() as db:
+        roles=set();versions=[];creative_sources={}
+        for tid in creative_tasks:
+            task=engine.store._task(db,tid)
+            if task['state']!='Approved' or task['agent'] not in ('story','script','director'):raise AgentError('Current approved creative tasks required.')
+            engine.store._current(db,task)
+            if task['agent'] in roles:raise AgentError('Use one current task per creative role.')
+            roles.add(task['agent']);versions.append([tid,task['revision']])
+            creative_sources['screenplay' if task['agent']=='script' else task['agent']]={'$from':tid,'path':['artifact']}
+        if not {'script','director'}<=roles:raise AgentError('Approved screenplay and Director review required.')
+    token=hashlib.sha256(encode(['generated-specialist-project-v1',project,versions]).encode()).hexdigest()
+    tasks={};runs={}
+    for role,deps in DEPENDENCIES.items():
+        sources=copy.deepcopy(creative_sources)
+        for dep in deps:sources[dep]={'$from':tasks[dep],'path':['artifact']}
+        data={'specialist_v1':True,'project':project,'records':[],'sources':sources,'base':None,'targets':[]}
+        rid=engine.enqueue(role,data,list(creative_tasks)+[tasks[d] for d in deps],mode='local',idempotency_key=token+':'+role)
+        runs[role]=rid;tasks[role]=next(r['task'] for r in engine.runs() if r['id']==rid)
+    return {'tasks':tasks,'runs':runs,'approval_required':True,'auto_publish':False,'mode':'local_generation_not_fixture_records'}

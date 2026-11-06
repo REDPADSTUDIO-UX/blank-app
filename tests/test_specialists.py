@@ -78,7 +78,8 @@ class SpecialistTests(unittest.TestCase):
         data=example('video');data['records'][0]['mode']='text_to_video'
         with self.assertRaises(AgentError):prepare('video',data)
         data['records'][0]['provider']='wan-local';result=prepare('video',data)
-        self.assertFalse(result['artifact']['derived']['provider_capabilities']['wan-local']['installed_adapter'])
+        self.assertTrue(result['artifact']['derived']['provider_capabilities']['wan-local']['installed_adapter'])
+        self.assertFalse(result['media_generated'])
     def test_voice_lexicon_and_speaker_identity(self):
         data=example('voice');data['records'][0]['lexicon']={'খালা':'খা-লা'}
         self.assertIn('খা-লা',prepare('voice',data)['artifact']['derived']['lip_sync_cues'][0]['synthesis_text'])

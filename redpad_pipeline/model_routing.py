@@ -25,7 +25,13 @@ def inventory():
         raw=response.read(2*1024*1024+1)
     if len(raw)>2*1024*1024:raise WritingError('Local inventory exceeds bound.')
     models=json.loads(raw)['models']
-    return {m['name']:m['digest'] for m in models}
+    result={}
+    for model in models:
+        digest=model.get('digest','')
+        if re.fullmatch(r'[a-f0-9]{64}',digest):digest='sha256:'+digest
+        if not re.fullmatch(r'sha256:[a-f0-9]{64}',digest):raise WritingError('Local runtime returned an invalid model digest.')
+        result[model['name']]=digest
+    return result
 
 
 class ModelRoutes:

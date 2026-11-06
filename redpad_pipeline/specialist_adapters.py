@@ -18,13 +18,21 @@ class LocalVideoAdapter:
         data=example('video');data['records']=[request]
         return prepare('video',data)
     def preflight(self):
-        if self.provider!='local-svd':return {'ready':False,'blocker':'Future local backend adapter/checkpoint unavailable; no inference attempted.'}
+        if self.provider!='local-svd':
+            from .offline_media import preflight
+            status=preflight(self.provider)
+            return dict(status,blocker='; '.join(status['blockers']))
         from .local_animation import readiness
         ready,reason=readiness();return {'ready':ready,'blocker':reason,'capability':'Existing single-image SVD adapter; request-level controls require separate verification.'}
     def generate(self,request,sidecar):
         self.validate(request)
         ready=self.preflight()
         if not ready['ready']:raise MediaBlocked(ready['blocker'])
+        if self.provider!='local-svd':
+            from .offline_media import generate,CATALOG
+            fps=CATALOG[self.provider]['fps'];frames=round(request['seconds']*fps)
+            if request['fps']!=fps or abs(frames/fps-request['seconds'])>.001:raise AgentError('Requested duration/fps must match the native frame grid; no stretching fallback.')
+            return generate(self.provider,{k:request[k] for k in ('mode','prompt','width','height','seed','reference')}|{'frames':frames,'fps':fps,'steps':CATALOG[self.provider]['steps']},sidecar)
         if (request['width'],request['height'],request['fps'])!=(1024,576,7) or abs(request['seconds']-25/7)>.001:
             raise AgentError('Existing SVD adapter supports only 1024×576, 25 frames at 7 fps; no stretching or interpolation fallback.')
         if len(request['characters'])>1:raise AgentError('SVD supports a single reference image; multi-character control is unverified.')
@@ -44,7 +52,8 @@ class LocalSpeechAdapter:
     def capabilities(self):return dict(PROVIDERS['bengali-tts-local'])
     def synthesize(self,request,sidecar):
         data=example('voice');data['records']=[request];prepare('voice',data)
-        raise MediaBlocked('Approved local Bengali TTS backend unavailable. No remote fallback.')
+        from .offline_speech import synthesize
+        return synthesize(request,sidecar)
 
 class ReadOnlyAnalyticsAdapter:
     def __init__(self,fetch=None):self.fetch=fetch

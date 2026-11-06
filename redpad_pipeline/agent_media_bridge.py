@@ -15,6 +15,12 @@ def execute_media(key,data,sidecar):
     if root.is_symlink():raise AgentError('Media workspace must not be a symlink.')
     root=root.resolve()
     operation=data.get('operation')
+    if key=='video' and operation=='offline_video':
+        from .offline_media import generate
+        return generate(data.get('engine'),data.get('request'),sidecar)
+    if key=='voice' and operation=='offline_speech':
+        from .offline_speech import synthesize
+        return synthesize(data.get('request'),sidecar)
     if operation=='specialist_video' and key=='video':
         from .specialist_adapters import LocalVideoAdapter
         request=data.get('request',{})

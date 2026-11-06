@@ -1,3 +1,5 @@
+> Latest unified continuation: [Master Studio checkpoint](MASTER_STUDIO_CHECKPOINT.md). Earlier results below remain historical evidence.
+
 # Phase 3 — multi-model comparison and role routing
 
 Continuation parent: `c5fe3262d6e39e0bc3fe49ad107b72dd1deb7803`.
