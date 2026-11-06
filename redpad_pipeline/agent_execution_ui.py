@@ -75,7 +75,7 @@ def show_execution(store,key):
     if st.button('Run ready tasks once',key='department_tick_'+key):
         with st.spinner('Executing queued tasks; no automatic media generation'):
             if managed:
-                with local_cpu_session():st.json(engine.tick())
+                with local_cpu_session():st.json(engine.tick(local_options={'num_ctx':4096,'num_predict':2048,'timeout_seconds':420}))
             else:st.json(engine.tick())
     if st.button('Run independent software tasks',key='specialist_parallel_'+key):
         st.json(engine.tick_parallel())

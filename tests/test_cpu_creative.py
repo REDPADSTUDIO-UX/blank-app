@@ -85,3 +85,23 @@ class CPUCreativeTests(unittest.TestCase):
   validate_micro('direction',valid,source)
   valid['findings'][0]['quote']='invented '+quote
   with self.assertRaises(Exception):validate_micro('direction',valid,source)
+ def test_engine_runtime_controls_cannot_override_model_or_endpoint(self):
+  from redpad_pipeline.agents import AgentStore,AgentError
+  from redpad_pipeline.agent_engine import Engine
+  from tests.test_agent_foundation import fixture
+  with tempfile.TemporaryDirectory() as d:
+   engine=Engine(AgentStore(Path(d)/'agent_control.sqlite3'));rid=engine.enqueue('story',fixture('story'),mode='local')
+   for options in [{'model':'cloud'}, {'endpoint':'https://external'}, []]:
+    with self.assertRaises(AgentError):engine.execute(rid,local_options=options)
+   self.assertEqual(engine.runs()[0]['state'],'Ready for Input')
+ def test_instruction_echo_is_flagged_without_granting_quality_approval(self):
+  from redpad_pipeline.agents import AgentStore
+  from redpad_pipeline.agent_engine import Engine,echoes_input
+  from tests.test_agent_foundation import fixture
+  with tempfile.TemporaryDirectory() as d:
+   store=AgentStore(Path(d)/'agent_control.sqlite3');engine=Engine(store);data=fixture('story')
+   rid=engine.enqueue('story',data,mode='local')
+   self.assertEqual(engine.execute(rid,complete=lambda *_:data),'Awaiting QC')
+   body=json.loads(json.loads(store.outputs()[0]['payload'])['summary'])
+   self.assertTrue(any(f['code']=='input_echo' for f in body['findings']));self.assertTrue(body['human_review_required'])
+   self.assertTrue(echoes_input({'name':'তানিয়া'},{'name':'তানিয়া'}))

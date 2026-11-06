@@ -1,0 +1,10 @@
+{
+  "automated_passed": 258,
+  "failed": 0,
+  "skipped": 0,
+  "seconds": 32.724,
+  "command": "python -m unittest discover -s tests -p 'test_*.py' -q",
+  "log_sha256": "92f91d1bbf9dce6ce6571cad75b6e20f630fc2b5e392a766f799817c55c20773",
+  "standalone_passed": 8,
+  "unit_transport_fixtures_are_not_real_inference": true
+}

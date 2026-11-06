@@ -1,0 +1,139 @@
+{
+  "name": "trial_director_nfc",
+  "agent": "director",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "model_manifest_sha256": "6214d088d3846e16c9fe00adcbabdbfddc61ce4a70daacc46cb2310c38603054",
+  "device": "CPU",
+  "request": {
+    "agent": "director",
+    "instructions": "Review the ACTUAL source screenplay critically. Return {\"strengths\":[str],\"findings\":[{\"criterion\":str,\"quote\":str,\"issue\":str,\"instruction\":str}]}. Up to THREE issues. Criteria: logic, natural Bengali dialogue, emotion, humor, hook/cliffhanger, pacing. Quote COPY EXACTLY from source. Prefer concrete problems to praise. If wording is unnatural, explain a specific colloquial alternative. This is model criticism, not human approval.",
+    "brief": {
+      "title": "একটা ছাতা",
+      "premise": "ঢাকার বৃষ্টির সকাল। রাশেদ (৩২) ও তানিয়া (২৯) বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নয়।",
+      "genre": "family drama",
+      "tone": "natural Bangladeshi Bengali, restrained emotion, gentle character wit"
+    },
+    "experimental_source": {
+      "title": "একটা ছাতা",
+      "hook": {
+        "image": "রাশেদ ছাতা দেখে হাসছে, তানিয়া বাড়িতে আছে কিন্তু ছাতা দেখছে না",
+        "question": "তানিয়া কিনেছে ছাতা কিনা?",
+        "payoff": "রাশেদ ছাতা দেখে হাসে, তানিয়া বলে যে তার ছাতা নেই"
+      },
+      "characters": [
+        {
+          "name": "রাশেদ",
+          "want": "অফিসে পৌঁছার জন্য নিজেকে আগে থাকা",
+          "voice": "সুস্পষ্ট, সামান্য হাসি দেখায়"
+        },
+        {
+          "name": "তানিয়া",
+          "want": "চাকরির সাক্ষাৎকারে সাফল্য পাওয়া",
+          "voice": "সামান্য চাপ দেখায়, কিছু কম কথা বলে"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "s1",
+          "heading": "INT. বাড়ির খাদি ঘর - সকাল",
+          "seconds": 30,
+          "objective": "তানিয়া বাইরে যাবে",
+          "obstacle": "বৃষ্টি তীব্র হয়ে যাচ্ছে",
+          "turn": "তানিয়া ছাতা দিয়ে বাইরে যায়",
+          "consequence": "রাশেদ ছাতা দেখে হাসে",
+          "beats": [
+            {
+              "type": "action",
+              "text": "বৃষ্টি আসছে। প্লাটফর্মে ছাতা দেখা যাচ্ছে।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "তানিয়া",
+              "text": "আজ কাজে পারবো না, বাইরে যাচ্ছি।"
+            },
+            {
+              "type": "action",
+              "text": "তানিয়া ছাতা দিয়ে বাইরে যায়।"
+            }
+          ],
+          "sound": {
+            "music": "সাদা পানির শব্দ",
+            "sfx": "বৃষ্টির শব্দ, ছাতা কাটা"
+          }
+        },
+        {
+          "id": "s2",
+          "heading": "EXT. বাড়ির সামনের দরজা - সকাল",
+          "seconds": 30,
+          "objective": "রাশেদ বাড়ি ফিরে আসে",
+          "obstacle": "তানিয়া ছাতা না দেখে",
+          "turn": "রাশেদ ছাতা দেখে বলে",
+          "consequence": "তানিয়া বলে যে তার ছাতা নেই",
+          "beats": [
+            {
+              "type": "action",
+              "text": "রাশেদ বাড়ি ফিরে আসে, ছাতা দেখে।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "রাশেদ",
+              "text": "এটা কি তোমার ছাতা?"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "তানিয়া",
+              "text": "আমার ছাতা নেই, বাড়িতে নেই।"
+            }
+          ],
+          "sound": {
+            "music": "সাদা পানির শব্দ",
+            "sfx": "দরজা খুলে যায়, বৃষ্টির শব্দ"
+          }
+        }
+      ]
+    },
+    "targets": null
+  },
+  "prompt_sha256": "137a4452377445f60a055f6dfa9ae49d836e06b0aaca73b9d5cd35f36252428f",
+  "raw": "{\n  \"strengths\": [\n    \"বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নয়।\",\n    \"রাশেদ ও তানিয়ার অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে।\"\n  ],\n  \"findings\": [\n    {\n      \"criterion\": \"natural Bengali dialogue\",\n      \"quote\": \"আজ কাজে পারবো না, বাইরে যাচছি।\",\n      \"issue\": \"বাইরে যাচছি বলে কথা বলার পর স্বাভাবিক প্রতিক্রিয়া হিসেবে কোনো সামান্য প্রতিক্রিয়া নেই। বৃষ্টির তীব্রতা বোঝার জন্য স্বাভাবিক কথা বলা উচিত হত।\",\n      \"instruction\": \"তানিয়ার কথা স্বাভাবিক বাংলা স্থানে প্রকাশ করা উচিত। উদাহরণ: 'আজ বৃষ্টি তীব্র হয়ে গেছে, কাজে পারবো না, বাইরে যাচ্ছি।' বা 'বৃষ্টি তীব্র হয়ে গেছে, আমি বাইরে যাব না, কাজে পারবো না।'\"\n    },\n    {\n      \"criterion\": \"emotion\",\n      \"quote\": \"আমার ছাতা নেই, বাড়িতে নেই।\",\n      \"issue\": \"তানিয়ার কথা সহজ ও বাস্তব, কিন্তু অনুভূতির প্রকাশ অপ্রতিরূপ। ছাতা না থাকা বলার পর কোনো অনুভূতি বা অবস্থা নেই যা বাড়ির পরিবেশের সাথে সম্পর্কিত।\",\n      \"instruction\": \"তানিয়ার কথার পিছনে একটি স্বাভাবিক অনুভূতি যোগ করা উচিত। উদাহরণ: 'আমার ছাতা নেই, বাড়িতে নেই। আমি কখনো কাজে যাচ্ছি না বলে ভাবছি যে কাজে যাওয়া হয় না।'\"\n    },\n    {\n      \"criterion\": \"hook/cliffhanger\",\n      \"quote\": \"তানিয়া কিনেছে ছাতা কিনা?\",\n      \"issue\": \"প্রশ্নটি আকর্ষক হলেও স্কেনের মাঝে না হয়ে স্কেন শেষে প্রকাশ করা হয়েছে, যা ক্লিফহ্যাঙ্গার হিসেবে কাজ করে না। তানিয়ার ছাতা না থাকার ঘটনা পূর্বে আসে না, তাই প্রশ্নের প্রভাব কম।\",\n      \"instruction\": \"প্রশ্নটি প্রথম স্কেনের পর আসা উচিত, যেমন রাশেদ ছ",
+  "result": null,
+  "error": "Local response incomplete; draft was not accepted.",
+  "state": "Failed",
+  "validation": {},
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.4,
+      "num_predict": 1200,
+      "num_ctx": 4096,
+      "seed": 42
+    },
+    "inference_completed": false,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "input_normalization": "NFC",
+    "prompt_normalization_changed": true,
+    "wire_prompt_sha256": "2434212bbd9d0a6786094fed525753c22d7c2315d86d5d78a706452b012c2734",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 1200,
+    "eval_duration_ns": 160567203000,
+    "prompt_eval_count": 1655,
+    "prompt_eval_duration_ns": 30229413000,
+    "load_duration_ns": 824058,
+    "total_duration_ns": 190942729938,
+    "finish_reason": "length",
+    "wall_seconds": 190.946,
+    "raw_sha256": "1adf322e9600ac64100bce9d1c0603c50603c9c7184b7bd2a0e86f4d225bd1b9"
+  },
+  "wall_seconds": 190.947,
+  "aggregate_process_peak_rss_bytes": 3936030720,
+  "memory_note": "Sampled aggregate RSS of caller and descendant server/runner, not unique model allocation",
+  "provenance": "incomplete_or_failed_local_attempt",
+  "prompt_layout": "structured_request",
+  "wire_prompt": "{\"agent\": \"director\", \"instructions\": \"Review the ACTUAL source screenplay critically. Return {\\\"strengths\\\":[str],\\\"findings\\\":[{\\\"criterion\\\":str,\\\"quote\\\":str,\\\"issue\\\":str,\\\"instruction\\\":str}]}. Up to THREE issues. Criteria: logic, natural Bengali dialogue, emotion, humor, hook/cliffhanger, pacing. Quote COPY EXACTLY from source. Prefer concrete problems to praise. If wording is unnatural, explain a specific colloquial alternative. This is model criticism, not human approval.\", \"brief\": {\"title\": \"একটা ছাতা\", \"premise\": \"ঢাকার বৃষ্টির সকাল। রাশেদ (৩২) ও তানিয়া (২৯) বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নয়।\", \"genre\": \"family drama\", \"tone\": \"natural Bangladeshi Bengali, restrained emotion, gentle character wit\"}, \"experimental_source\": {\"title\": \"একটা ছাতা\", \"hook\": {\"image\": \"রাশেদ ছাতা দেখে হাসছে, তানিয়া বাড়িতে আছে কিন্তু ছাতা দেখছে না\", \"question\": \"তানিয়া কিনেছে ছাতা কিনা?\", \"payoff\": \"রাশেদ ছাতা দেখে হাসে, তানিয়া বলে যে তার ছাতা নেই\"}, \"characters\": [{\"name\": \"রাশেদ\", \"want\": \"অফিসে পৌঁছার জন্য নিজেকে আগে থাকা\", \"voice\": \"সুস্পষ্ট, সামান্য হাসি দেখায়\"}, {\"name\": \"তানিয়া\", \"want\": \"চাকরির সাক্ষাৎকারে সাফল্য পাওয়া\", \"voice\": \"সামান্য চাপ দেখায়, কিছু কম কথা বলে\"}], \"scenes\": [{\"id\": \"s1\", \"heading\": \"INT. বাড়ির খাদি ঘর - সকাল\", \"seconds\": 30, \"objective\": \"তানিয়া বাইরে যাবে\", \"obstacle\": \"বৃষ্টি তীব্র হয়ে যাচ্ছে\", \"turn\": \"তানিয়া ছাতা দিয়ে বাইরে যায়\", \"consequence\": \"রাশেদ ছাতা দেখে হাসে\", \"beats\": [{\"type\": \"action\", \"text\": \"বৃষ্টি আসছে। প্লাটফর্মে ছাতা দেখা যাচ্ছে।\"}, {\"type\": \"dialogue\", \"speaker\": \"তানিয়া\", \"text\": \"আজ কাজে পারবো না, বাইরে যাচ্ছি।\"}, {\"type\": \"action\", \"text\": \"তানিয়া ছাতা দিয়ে বাইরে যায়।\"}], \"sound\": {\"music\": \"সাদা পানির শব্দ\", \"sfx\": \"বৃষ্টির শব্দ, ছাতা কাটা\"}}, {\"id\": \"s2\", \"heading\": \"EXT. বাড়ির সামনের দরজা - সকাল\", \"seconds\": 30, \"objective\": \"রাশেদ বাড়ি ফিরে আসে\", \"obstacle\": \"তানিয়া ছাতা না দেখে\", \"turn\": \"রাশেদ ছাতা দেখে বলে\", \"consequence\": \"তানিয়া বলে যে তার ছাতা নেই\", \"beats\": [{\"type\": \"action\", \"text\": \"রাশেদ বাড়ি ফিরে আসে, ছাতা দেখে।\"}, {\"type\": \"dialogue\", \"speaker\": \"রাশেদ\", \"text\": \"এটা কি তোমার ছাতা?\"}, {\"type\": \"dialogue\", \"speaker\": \"তানিয়া\", \"text\": \"আমার ছাতা নেই, বাড়িতে নেই।\"}], \"sound\": {\"music\": \"সাদা পানির শব্দ\", \"sfx\": \"দরজা খুলে যায়, বৃষ্টির শব্দ\"}}]}, \"targets\": null}",
+  "source_approval": "Unapproved research candidate only",
+  "production_approved": false,
+  "independent_human_review": false
+}

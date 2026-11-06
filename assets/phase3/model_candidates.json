@@ -10,10 +10,11 @@
       "license": "apache-2.0",
       "decision": "First comparison candidate; not a quality winner. Ollama qwen3:4b-instruct-2507-q4_K_M lists 2.5 GB; start bounded CPU context, measure RAM/latency.",
       "source": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
-      "status": "CPU smoke inference verified; creative quality not verified",
+      "status": "Installed and genuine CPU inference verified; Unicode input correction verified; Bengali creative quality not accepted",
       "installed": true,
       "inference_verified": true,
-      "installed_runtime_tag": "qwen3:4b-instruct-2507-q4_K_M"
+      "installed_runtime_tag": "qwen3:4b-instruct-2507-q4_K_M",
+      "creative_quality_verified": false
     },
     {
       "model": "Qwen/Qwen3-0.6B",
