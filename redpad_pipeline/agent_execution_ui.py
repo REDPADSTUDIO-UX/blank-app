@@ -14,9 +14,14 @@ def show_execution(store,key):
     st.caption('The prefilled Bengali example is supplied test data, not model output. Edit it or queue it to test this department.')
     with st.expander('Input contract / editable starting example'):
         st.json(contract(key))
+    from .specialists import IMPLEMENTED,example
+    specialist=key in IMPLEMENTED and st.checkbox('Specialist workflow v1',key='specialist_mode_'+key)
+    initial=example(key) if specialist else contract(key)
+    if specialist:
+        st.caption('Versioned specialist metadata, findings and targeted revisions. Use approved artifact bindings for sources/base. No creative or media quality verification.')
     tasks=store.tasks()
     with st.form('department_run_'+key):
-        raw=st.text_area('Department input JSON',json.dumps(contract(key),ensure_ascii=False,indent=2),height=240,key='department_input_'+key)
+        raw=st.text_area('Department input JSON',json.dumps(initial,ensure_ascii=False,indent=2),height=240,key='department_input_'+key+('_specialist' if specialist else ''))
         deps=st.multiselect('Upstream task dependencies',[t['id'] for t in tasks],key='department_dependencies_'+key)
         mode=st.selectbox('Execution mode',['software','local']+(['media'] if key in ('video','voice','music','editing') else []),key='department_mode_'+key)
         revision=st.selectbox('Revise existing task',['']+[t['id'] for t in tasks if t['agent']==key and t['state']=='Revision requested'],key='department_revision_'+key)

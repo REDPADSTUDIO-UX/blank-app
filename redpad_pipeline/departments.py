@@ -70,6 +70,9 @@ def prepare(key, data, upstream=None):
     """Pure deterministic execution: validate, normalize, derive useful metadata."""
     if key not in AGENTS: raise AgentError('Unknown department.')
     encode(data)
+    if isinstance(data,dict) and data.get('specialist_v1') is True:
+        from .specialists import prepare as prepare_specialist
+        return prepare_specialist(key,data,upstream)
     if isinstance(data,dict) and data.get('creative_v1') is True:
         from .creative import prepare_creative
         return prepare_creative(key,data,upstream)

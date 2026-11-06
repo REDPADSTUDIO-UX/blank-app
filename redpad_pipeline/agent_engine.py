@@ -114,6 +114,10 @@ class Engine:
             self.store.event(db,t['id'],t['agent'],'running',{'run':rid})
         model=''; provenance='software'
         try:
+            specialist=isinstance(inputs,dict) and inputs.get('specialist_v1') is True
+            if specialist:
+                from .specialists import check_handoff
+                check_handoff(t['agent'],inputs,sources)
             creative=isinstance(inputs,dict) and inputs.get('creative_v1') is True
             if creative:
                 from .creative import check_handoff,creative_prompt
@@ -145,6 +149,8 @@ class Engine:
                 model=media['model']
                 provenance='local_inference' if t['agent']=='video' else 'software'
             else:
+                if specialist:
+                    check_handoff(t['agent'],inputs,sources)
                 result=prepare(t['agent'],inputs,[{'task':r['id'],'revision':r['revision']} for r in refs])
             result['provenance']=provenance
             result['model_inference']=provenance=='local_inference'
