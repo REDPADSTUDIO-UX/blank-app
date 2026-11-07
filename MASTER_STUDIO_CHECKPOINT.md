@@ -1,5 +1,9 @@
 # REDPAD AI Studio — Unified Master Checkpoint
 
+> সর্বশেষ software/knowledge milestone: [২০-agent professional filmmaking report](PROFESSIONAL_FILMMAKING_UPGRADE_BN.md)।
+> ২০-role contextual knowledge integration; bounded episode ledger; ১৬টি নতুন বাস্তব CPU call।
+> পুরোনো evidence অপরিবর্তিত; professional artistic acceptance এবং বাস্তব cinematic media এখনো বাকি।
+
 > পরবর্তী অনুমোদিত benchmark: [দুটি নতুন local model-এর প্রকৃত পরীক্ষা](APPROVED_MODEL_TEST_REPORT.md)।
 > ১৮টি নতুন CPU call; Qwen3.5 thinking-control সংশোধন; পুরোনো baseline পুনরায় চালানো হয়নি।
 > নিচের milestone-এর historical evidence অক্ষত। কোনো production winner বা human approval হয়নি।

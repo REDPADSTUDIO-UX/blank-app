@@ -1,0 +1,910 @@
+[
+  {
+    "agent": "director",
+    "name": "Director AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "director.1",
+      "director.2",
+      "director.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "source fidelity",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "pacing",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "targeted revision",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "মিতা চায় বাবা খামটি খুলুন; বাবা টেবিলের ভাঙা চশমা মেরামত করেন।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "e0f01a4e4fc262142f44519d63d8112de674c351740b0cf87429119b8abd3b39",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "director.1",
+        "director.2",
+        "director.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": true,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Bengali creative accuracy and independent review"
+  },
+  {
+    "agent": "qc",
+    "name": "Quality Control AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "qc.1",
+      "qc.2",
+      "qc.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "false positives",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "defect recall",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "correct abstention",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "ছাতা মিতার ব্যাগে, পরের beat-এ ফেরত ছাড়াই বাবার হাতে।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "af148517fab4420f20c020408e615beca3cea1fe2166f74bfe03764a20bda9b1",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "qc.1",
+        "qc.2",
+        "qc.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": true,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Bengali creative accuracy and independent review"
+  },
+  {
+    "agent": "story",
+    "name": "Story AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "story.1",
+      "story.2",
+      "story.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "motivation",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "causality",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "setup payoff",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "emotional behavior",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "মিতা জানে না বাবা তার ভর্তি-ফি দিয়ে দাদির ওষুধ কিনেছেন; আজ ভর্তি শেষ।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "7653107570d8a3f6f3882c3d7cc79025f301ba41e88df093a4cabd37d04cd2ba",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "story.3",
+        "story.1",
+        "story.2"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": true,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Bengali creative accuracy and independent review"
+  },
+  {
+    "agent": "script",
+    "name": "Script AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "script.1",
+      "script.2",
+      "script.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "dialogue attribution",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "naturalness",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "responsive humor",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "restraint",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "মা ছেলের ছোট ব্যাগে তৃতীয় খাবারের বাটি ঢোকান।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "4e98e10dcebb0cf4fc544728a79d19e5835d0e75c025e66c5f0faa2b1081dedf",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "script.1",
+        "script.2",
+        "script.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": true,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Bengali creative accuracy and independent review"
+  },
+  {
+    "agent": "character",
+    "name": "Character AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "character.1",
+      "character.2",
+      "character.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "identity fidelity",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "agency",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "relationship continuity",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "বাবা প্রকাশ্যে কঠোর; মিতার ভাঙা জুতায় নিঃশব্দে আঠা লাগান।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "9946d14b65fa8c934999cc42a76b625cbb2bdf80725c3f66dcc92b83b1762fbd",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "character.1",
+        "character.2",
+        "character.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "art",
+    "name": "Art Director AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "art.1",
+      "art.2",
+      "art.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "cultural plausibility",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "prop identity",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "practical construction",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "দর্জির টেবিলে কাপড়ের কুচি, মাপের ফিতা ও বিলের খাম।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "9883397f139f49bb8d6fc12f7afacd78a029f8e698a358ac4def8e60cfe12726",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "art.2",
+        "art.1",
+        "art.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "location",
+    "name": "Location AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "location.1",
+      "location.2",
+      "location.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "door consistency",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "sightlines",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "access",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "খাবার ঘরের পূর্ব দরজা দিয়ে সরু বারান্দা, শেষে রান্নাঘর।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "56969eb6b40bf6729e4f7ca448547131d9335b0fef1533171eb102f994c6cbe1",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "location.2",
+        "location.3",
+        "location.1"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "costume",
+    "name": "Costume Designer AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "costume.1",
+      "costume.2",
+      "costume.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "outfit state",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "motivated changes",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "reference fidelity",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "বৃষ্টিভেজা শার্ট পরে বাবা বাড়ি ঢোকেন।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "ca30b559a74a717ed692bb5ce0f69b59fbb7c6cd6e920ea06f38bfc945259222",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "costume.1",
+        "costume.2",
+        "costume.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "storyboard",
+    "name": "Storyboard AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "storyboard.1",
+      "storyboard.2",
+      "storyboard.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "coverage purpose",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "reveal order",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "timed references",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "খামের ভেতর ফি নেই; বাবা খামের দিকে তাকান না।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "de6e5449e2b59cf609082e4dc573f43f49c1ad5ed3918aab3850d331db78ad53",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "storyboard.1",
+        "storyboard.2",
+        "storyboard.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "performance",
+    "name": "Performance Director AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "performance.1",
+      "performance.2",
+      "performance.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "playable tactic",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "reactive timing",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "restrained emotion",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "বাবা ওষুধের রসিদ দেখতে পেয়েছেন বুঝে মিতা কলমের ঢাকনা ঘোরায়।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "95aca57ecf7e795827664720672d26c18db898cbd8450e09cb11c7ae742aed12",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "performance.1",
+        "performance.2",
+        "performance.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "cinematographer",
+    "name": "Cinematographer AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "cinematographer.1",
+      "cinematographer.2",
+      "cinematographer.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "axis continuity",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "light motivation",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "shot purpose",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "মেয়ে ও বাবা টেবিলের দুই পাশে; জানলা মেয়ের বাঁয়ে।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "ba762a95ed0d53528120a672efa2fbc25e4f8aeab28a60c138b28192116659d6",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "cinematographer.1",
+        "cinematographer.3",
+        "cinematographer.2"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "motion",
+    "name": "Motion & Physics AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "motion.1",
+      "motion.2",
+      "motion.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "contact",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "balance",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "transfer chronology",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "বাবা বসতে বসতে আঠার টিউব টেবিলে রাখেন।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "f1cbe45f1b9625b1b83ca0dba76096ba5d7f6521035844045e7e3ccf2d82afd8",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "motion.2",
+        "motion.3",
+        "motion.1"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "video",
+    "name": "Video Generation AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "video.1",
+      "video.2",
+      "video.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "checkpoint identity",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "source binding",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "actual output",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "sh03-এ বাবার হাত খামের ওপর থামে।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "257fbc18285772a70e8a8719a0612f5dcf90ce49f2e078729ea9fa166e92bd3a",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "video.1",
+        "video.2",
+        "video.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "voice",
+    "name": "Voice & Dialogue AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "voice.1",
+      "voice.2",
+      "voice.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "speaker identity",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "pronunciation",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "measured timing",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "মিতা ধীরে বলেন: বাবা, খামটা খুলবেন?",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "7c542f62f15de2e1f317ea95061ebbaa974ceedf941f261927758fb06134b550",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "voice.2",
+        "voice.3",
+        "voice.1"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "continuity",
+    "name": "Continuity Supervisor AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "continuity.1",
+      "continuity.2",
+      "continuity.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "state transitions",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "known facts",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "source version",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "মিতা রসিদ পড়ার আগে টাকার খবর জানেন না।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "d8946cfa58aa3e659115669d14edbc17bee93c51d15d069bf33a4444859a94a6",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "continuity.1",
+        "continuity.2",
+        "continuity.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "music",
+    "name": "Music & SFX AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "music.1",
+      "music.2",
+      "music.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "cue motivation",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "rights",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "dialogue intelligibility",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "খাম খোলার সময় শুধু সেলাই মেশিনের থেমে যাওয়া শোনা যায়।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "4eb206205cdf3cde55bebf0cc8bf5c04ad2592e1986c9150035c05d3422e9282",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "music.1",
+        "music.2",
+        "music.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "editing",
+    "name": "Editing & VFX AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "editing.1",
+      "editing.2",
+      "editing.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "source bounds",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "sync",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "reaction pacing",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "মিতার প্রশ্নের পর বাবা জুতোটা টেবিলে নামান।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "a097c47bb41868ad34dc12f2b290caab8588c9f6005ec026506c0413ab0c5c5a",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "editing.3",
+        "editing.1",
+        "editing.2"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "production_manager",
+    "name": "Production Manager AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "production_manager.1",
+      "production_manager.2",
+      "production_manager.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "DAG integrity",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "resource constraints",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "recoverability",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "Story approved, Script review বাকি; Video-তে GPU নেই।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "4ef5975bd4f32af76d7801f7523c3798c79e8955cbeadf897d6f47d838654803",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "production_manager.1",
+        "production_manager.2",
+        "production_manager.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "growth",
+    "name": "Growth AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "growth.1",
+      "growth.2",
+      "growth.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "audience fit",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "factual fidelity",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "spoiler discipline",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "পর্বে বাবা ভর্তি-ফি খরচের কথা লুকান।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "21851dffbd4df4aa6e4f15250790d6358b14de5c2809d22188ba453adcf80f50",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "growth.1",
+        "growth.2",
+        "growth.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  },
+  {
+    "agent": "youtube",
+    "name": "YouTube AI",
+    "new_knowledge_version": "filmmaking-2026-11-07.2",
+    "lesson_ids": [
+      "youtube.1",
+      "youtube.2",
+      "youtube.3"
+    ],
+    "rubric": [
+      {
+        "criterion": "read-only boundary",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "rights",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      },
+      {
+        "criterion": "metadata provenance",
+        "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+      }
+    ],
+    "authored_practical_scenario": "অনুমোদিত পর্বের title/description draft চাই।",
+    "executed_new_knowledge_contract_probe": "simulation; injected response; no actual inference",
+    "probe_state": "Awaiting QC",
+    "knowledge_evidence": {
+      "context_sha256": "60548ae64108716ea7518133c5c505e16c25b9d5c9a40aa021623d774c297440",
+      "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+      "version": "filmmaking-2026-11-07.2",
+      "lesson_ids": [
+        "youtube.1",
+        "youtube.2",
+        "youtube.3"
+      ],
+      "conditioning_applied": true,
+      "weight_training_completed": false,
+      "creative_acceptance": false
+    },
+    "real_inference_this_milestone": false,
+    "new_real_media": false,
+    "human_review_completed": false,
+    "production_ready": false,
+    "remaining_blocker": "Actual specialist model/media capability not demonstrated; human review pending"
+  }
+]

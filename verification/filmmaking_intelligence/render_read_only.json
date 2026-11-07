@@ -1,0 +1,24 @@
+{
+  "read_only": true,
+  "services": [
+    {
+      "id": "srv-dbhfgfijnfac739sjpm0",
+      "branch": "feature/video-music-editing-studio",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off"
+    },
+    {
+      "id": "srv-dbhf5vp42hec73ca7bag",
+      "branch": "feature/video-music-editing-studio",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off"
+    },
+    {
+      "id": "srv-dbfiesvb9u1s73d2qblg",
+      "branch": "feature/video-music-editing-studio",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off"
+    }
+  ],
+  "deploy_or_resource_mutations": 0
+}

@@ -180,3 +180,6 @@ agent_control.sqlite3*
 # Isolated Phase 3 experiments and model weights; never commit private raw media/weights.
 phase3_runs/
 phase3_models/
+
+# Owned episode worker lock; it is execution state, not creative evidence.
+.execution.lock

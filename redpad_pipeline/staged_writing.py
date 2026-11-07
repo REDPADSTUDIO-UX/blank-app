@@ -113,7 +113,7 @@ class StagedDraft:
         self.folder=Path(folder);self.folder.mkdir(parents=True,exist_ok=True)
 
     def run(self, key, role, data, task, schema, *, dependencies=(), model=None,
-            tokens=768, complete=None, check=None, think=None):
+            tokens=768, complete=None, check=None, think=None, guidance=None):
         if think is not None and type(think) is not bool:raise WritingError('Thinking control must be a boolean or unspecified.')
         if not re.fullmatch(r'[a-z0-9_-]{1,60}',key):raise WritingError('Invalid stage key.')
         if role not in ('story','script','director','qc'):raise WritingError('Invalid writing role.')
@@ -125,8 +125,14 @@ class StagedDraft:
             p=json.loads((self.folder/(dep+'.json')).read_text())
             if p['status']!='validated_stage':raise WritingError('Parent stage has not passed validation.')
             parents[dep]=digest(p)
+        system=SYSTEM
+        if guidance is not None:
+            from .filmmaking_knowledge import condition
+            if guidance.get('role')!=role:raise WritingError('Knowledge role differs from stage role.')
+            system=condition(system,guidance)
         request={'role':role,'data':data,'task':task,'schema':schema,'dependencies':parents,
-                 'model':model,'tokens':tokens,'system':SYSTEM}
+                 'model':model,'tokens':tokens,'system':system}
+        if guidance is not None:request['knowledge_context_sha256']=guidance['context_sha256']
         if think is not None:request['think']=think
         fingerprint=digest(request);path=self.folder/(key+'.json')
         if path.exists():
@@ -159,7 +165,7 @@ class StagedDraft:
             writer.on_chunk=snapshot
         try:
             prompt='SOURCE DATA:\n'+json.dumps(data,ensure_ascii=False)+'\nTASK (apply after reading source):\n'+task+'\nSCHEMA:\n'+json.dumps(schema,ensure_ascii=False)
-            result=writer(SYSTEM,prompt)
+            result=writer(system,prompt)
             record['result']=result
             errors=sorted(Draft202012Validator(schema).iter_errors(result),key=lambda e:str(e.path))
             if errors:raise WritingError('Schema validation: '+errors[0].message[:240])

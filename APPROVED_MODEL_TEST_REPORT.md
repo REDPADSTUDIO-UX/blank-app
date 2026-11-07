@@ -1,5 +1,7 @@
 # REDPAD Phase 3 — approved local model comparison
 
+> পরবর্তী ২০-agent knowledge/workflow upgrade: [বর্তমান বাংলা রিপোর্ট](PROFESSIONAL_FILMMAKING_UPGRADE_BN.md)। নিচের model-comparison evidence historical ও অপরিবর্তিত।
+
 Continuation parent: `c3eab18e75fb82d500f2236c2cae4c13b9c08373`.
 Branch: `feature/video-music-editing-studio`. Owner authorization:
 `verification/approved_comparison/owner_authorization.json`.

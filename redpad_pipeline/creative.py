@@ -205,6 +205,11 @@ def prepare_creative(key,data,upstream=None):
     if kind=='rewrite':
         output['comparison']={'source_sha256':digest(source),'targeted_scenes':data['targets'],
           'diff':'\n'.join(difflib.unified_diff(encode(source).splitlines(),encode(a).splitlines(),fromfile='previous',tofile='revised'))}
+        old={s['id']:s for s in source['scenes']};new={s['id']:s for s in a['scenes']}
+        unchanged=[sid for sid in data['targets'] if sid!='__ending__' and old[sid]==new[sid]]
+        if '__ending__' in data['targets'] and source.get('ending')==a.get('ending'):unchanged.append('__ending__')
+        output['comparison']['unchanged_targets']=unchanged
+        for target in unchanged:output['findings'].append({'code':'unchanged_revision_target','evidence':target,'revision':'This requested target is identical to the source; no revision improvement is demonstrated. Confirm preservation or request a meaningful targeted change.'})
     return output
 
 def creative_prompt(key,request,sources):

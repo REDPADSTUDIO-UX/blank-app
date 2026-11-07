@@ -11,6 +11,8 @@ from .local_ollama_session import local_cpu_session
 def show_studio_program():
     st.header('REDPAD • Film Studio')
     st.caption('Director • Story • Script সামনে; ১৭টি specialist একই project-এর versioned workflow-এ। Planning, AI inference ও artistic approval আলাদা।')
+    from .filmmaking_ui import show_knowledge,show_series
+    show_knowledge()
     project_id=st.text_input('Studio project ID','redpad-film',key='master_project_id')
     left,right=st.columns(2)
     with left:
@@ -38,6 +40,7 @@ def show_studio_program():
     area=st.radio('Filmmaking workspace',['Creative Studio','Production Studio','Post-Production Studio','Project Management','Admin / Advanced'],horizontal=True,key='master_nav')
     if area=='Creative Studio':
         role=st.radio('Creative partner',['director','story','script'],horizontal=True,key='master_creative_role')
+        if role=='story':show_series(program)
         for note in summary['owner_notes']:
             if note['role']==role:st.markdown('**Owner note:** '+note['text'])
         with st.form('master_note'):
@@ -61,7 +64,7 @@ def show_studio_program():
                 else:result=program.tick()
                 st.json(result)
             except (AgentError,WritingError) as exc:st.error(str(exc))
-        st.caption('Long series: hierarchy is planned here; a single giant season-generation call is blocked. Small staged writing remains available in the existing Phase 3 controls; full long-series model acceptance is pending.')
+        st.caption('Long series: use the per-episode draft architecture under Story. One giant season call remains blocked. Validated draft state is separate from an approved complete season and production handoff; full creative acceptance is pending.')
         st.dataframe(summary['runs'],hide_index=True)
         for output in program.store.outputs():
             st.json(json.loads(json.loads(output['payload'])['summary']))

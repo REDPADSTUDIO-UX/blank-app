@@ -68,6 +68,8 @@ def validate(script, seconds):
     issues = []
     if not isinstance(script, dict):
         return ['Screenplay must be a JSON object.']
+    from .craft_validation import dialogue_findings
+    issues.extend(f['code']+': '+f['path'] for f in dialogue_findings(script))
     for key in ('title',):
         if not isinstance(script.get(key), str) or not script[key].strip(): issues.append('Missing ' + key)
     hook = script.get('hook')

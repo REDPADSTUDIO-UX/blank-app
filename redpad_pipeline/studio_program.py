@@ -13,7 +13,7 @@ from .agent_engine import Engine
 ROOT=Path(__file__).resolve().parents[1]
 PROGRAM_ROOT=ROOT/'phase3_runs/studio_program'
 WORKSTREAMS={
- 'A':('Writing model comparison',[],'Additional Gemma/Qwen3.5 weights and custom terms await owner consent.'),
+ 'A':('Writing model comparison',[],'Approved Gemma/Qwen3.5 CPU comparison exists at f71e282; no candidate passed independent creative acceptance. Runtime availability must be rechecked on this host.'),
  'B':('Creative intelligence',['A'],'Independent Bengali creative acceptance remains missing.'),
  'C':('Character and production design',['B'],'Real approved identity/location references required.'),
  'D':('Storyboard performance camera motion',['C'],'Plans exist; actual acting/physics quality unverified.'),
