@@ -103,13 +103,15 @@ class OfflineMediaTests(unittest.TestCase):
    def from_pretrained(cls,path,**kw):calls.append(('tokenizer',path,kw));return cls()
    def __call__(self,*a,**kw):return types.SimpleNamespace(input_ids=[1],attention_mask=[1])
   job=self.root/'speech-job.json';output=self.root/'speech-fixture.wav';job.write_text(json.dumps({'checkpoint':str(self.root/'model'),'text':'বাংলা পরীক্ষার বাক্য','description':'Arjun speaks calmly','output':str(output)}))
-  modules={'torch':types.SimpleNamespace(inference_mode=nullcontext),'parler_tts':types.SimpleNamespace(ParlerTTSForConditionalGeneration=Model),'transformers':types.SimpleNamespace(AutoTokenizer=Tokenizer)}
+  seeds=[]
+  modules={'torch':types.SimpleNamespace(inference_mode=nullcontext,manual_seed=seeds.append),'parler_tts':types.SimpleNamespace(ParlerTTSForConditionalGeneration=Model),'transformers':types.SimpleNamespace(AutoTokenizer=Tokenizer)}
   with patch.dict('sys.modules',modules):
    run(job)
    with wave.open(str(output),'rb') as f:self.assertEqual((f.getframerate(),f.getnchannels()),(16000,1))
    signal=np.zeros(3200)
    with self.assertRaises(ValueError):run(job)
   self.assertTrue(all(c[2]['local_files_only'] for c in calls))
+  self.assertEqual(seeds,[42,42])
   self.assertTrue(any(c[1].endswith('description_tokenizer') for c in calls))
  def test_completed_inference_separate_from_failed_codec_validation(self):
   self.checkpoint('wan-local')

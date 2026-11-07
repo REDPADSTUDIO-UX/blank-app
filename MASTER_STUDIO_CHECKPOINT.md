@@ -1,5 +1,10 @@
 # REDPAD AI Studio — Unified Master Checkpoint
 
+> সর্বশেষ capability audit: [PROFESSIONAL READINESS REPORT](PROFESSIONAL_READINESS_REPORT.md)।
+> ০/২০ professional capability verified; new model inference০, human review০।
+> Real-output trial binding, immutable evidence, specialist review gates ও prospective offline image worker added; 349 regression tests +8 standalone checks passed (software evidence only)।
+> নিচের milestones historical; কোনো deployment বা artistic readiness declaration নয়।
+
 > সর্বশেষ software/knowledge milestone: [২০-agent professional filmmaking report](PROFESSIONAL_FILMMAKING_UPGRADE_BN.md)।
 > ২০-role contextual knowledge integration; bounded episode ledger; ১৬টি নতুন বাস্তব CPU call।
 > পুরোনো evidence অপরিবর্তিত; professional artistic acceptance এবং বাস্তব cinematic media এখনো বাকি।

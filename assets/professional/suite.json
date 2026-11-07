@@ -1,0 +1,669 @@
+{
+  "version": "professional-suite-2026-11-07.1",
+  "shared_original_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+  "source_status": "Original authored benchmark specification; not generated media, not a human-approved production screenplay.",
+  "agents": {
+    "story": {
+      "case_id": "professional_story_v1",
+      "capability_required": "Causal Bengali narrative and long-form memory",
+      "candidate_models": [
+        "writer9",
+        "writer12",
+        "gemma4e4"
+      ],
+      "required_output_kinds": [
+        "text"
+      ],
+      "review_modes": [
+        "text"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Bengali screenwriter/showrunner",
+      "real_world_task": "Write three unseen family/romance/mystery season treatments and a three-episode causal segment; a lost fee cannot reappear, secrets change knowledge only after a disclosure.",
+      "criteria": [
+        "causal_logic",
+        "character_agency",
+        "earned_hooks",
+        "episode_continuity"
+      ],
+      "specialist_development_needed": "End-to-end long-series draft-to-approved-season bridge and capable writer remain unverified.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 3
+      }
+    },
+    "script": {
+      "case_id": "professional_script_v1",
+      "capability_required": "Bangladeshi spoken dialogue, subtext, humor, restrained emotion",
+      "candidate_models": [
+        "writer9",
+        "writer12",
+        "gemma4e4"
+      ],
+      "required_output_kinds": [
+        "text"
+      ],
+      "review_modes": [
+        "text"
+      ],
+      "minimum_samples": 8,
+      "expertise_required": "Bengali screenwriter/dialogue editor",
+      "real_world_task": "Produce eight complete filmable scenes spanning breakfast, father–daughter conflict, romance, wit, quiet grief, horror, earned ending and locked rewrite. No manual polishing of model samples.",
+      "criteria": [
+        "spoken_bangla",
+        "responsive_humor",
+        "emotional_behavior",
+        "visual_first",
+        "locked_rewrite"
+      ],
+      "specialist_development_needed": "A stronger writer must pass unseen scenes and exact revision instructions; current 4B samples failed creative quality.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 8
+      }
+    },
+    "director": {
+      "case_id": "professional_director_v1",
+      "capability_required": "Grounded dramatic criticism plus visual/performance judgment",
+      "candidate_models": [
+        "writer9",
+        "vision7",
+        "gemma4e4"
+      ],
+      "required_output_kinds": [
+        "text",
+        "video"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 10,
+      "expertise_required": "Film director/editor",
+      "real_world_task": "Critique five clean and five seeded-defect scenes; identify precise evidence, abstain on clean material, then direct and inspect three real generated short shots.",
+      "criteria": [
+        "criticism_precision",
+        "criticism_recall",
+        "source_fidelity",
+        "performance_direction",
+        "visual_intent"
+      ],
+      "specialist_development_needed": "Separate critic calibration from approval; multimodal video understanding and actual directed-shot evaluation missing.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 10,
+        "video": 3
+      }
+    },
+    "qc": {
+      "case_id": "professional_qc_v1",
+      "capability_required": "Calibrated multimodal defect detection with uncertainty",
+      "candidate_models": [
+        "vision7",
+        "writer9",
+        "gemma4e4"
+      ],
+      "required_output_kinds": [
+        "text",
+        "video",
+        "audio"
+      ],
+      "review_modes": [
+        "text",
+        "visual",
+        "listening"
+      ],
+      "minimum_samples": 10,
+      "expertise_required": "Independent script and audiovisual QC specialists",
+      "real_world_task": "Blindly inspect balanced clean/defect script, image, motion, subtitle and audio samples. Measure false positives and misses against an authored hidden answer key and expert adjudication.",
+      "criteria": [
+        "defect_precision",
+        "defect_recall",
+        "grounded_evidence",
+        "uncertainty",
+        "cross_media_consistency"
+      ],
+      "specialist_development_needed": "A line-ID match alone is insufficient; requires actual media and specialist adjudication.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 10,
+        "video": 3,
+        "audio": 3
+      }
+    },
+    "character": {
+      "case_id": "professional_character_v1",
+      "capability_required": "Psychology bible and stable visual identity",
+      "candidate_models": [
+        "writer9",
+        "sdxl",
+        "flux"
+      ],
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 4,
+      "expertise_required": "Casting/character designer",
+      "real_world_task": "Generate character bible plus front/three-quarter/profile and changed-light references of the same two fictional adults; blind match identities and reject facial/age drift.",
+      "criteria": [
+        "identity_consistency",
+        "psychological_specificity",
+        "cultural_authenticity"
+      ],
+      "specialist_development_needed": "Image/reference conditioning adapter and approved identity references are needed; text-to-image alone does not solve identity lock.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 4
+      }
+    },
+    "art": {
+      "case_id": "professional_art_v1",
+      "capability_required": "Bangladeshi production design and prop continuity",
+      "candidate_models": [
+        "writer9",
+        "sdxl",
+        "flux"
+      ],
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Production designer",
+      "real_world_task": "Deliver three views of one modest Dhaka tailoring-home set, with the same red tin box, worn table and motivated morning light; verify practical layout and budget.",
+      "criteria": [
+        "set_consistency",
+        "prop_fidelity",
+        "cultural_authenticity",
+        "feasibility"
+      ],
+      "specialist_development_needed": "Actual set-image consistency and production-designer review missing.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 3
+      }
+    },
+    "location": {
+      "case_id": "professional_location_v1",
+      "capability_required": "Spatial geography and physically buildable camera access",
+      "candidate_models": [
+        "writer9",
+        "sdxl",
+        "vision7"
+      ],
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Location manager/cinematographer",
+      "real_world_task": "Produce a measurable floor plan and three generated views; east window, west entry and north kitchen must agree. Validate performer and camera paths.",
+      "criteria": [
+        "spatial_consistency",
+        "sightlines",
+        "camera_access",
+        "architecture"
+      ],
+      "specialist_development_needed": "Needs plan-to-view constraint conditioning, not only free text-to-image.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 3
+      }
+    },
+    "costume": {
+      "case_id": "professional_costume_v1",
+      "capability_required": "Character-appropriate wardrobe and scene state",
+      "candidate_models": [
+        "writer9",
+        "sdxl"
+      ],
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 4,
+      "expertise_required": "Costume designer/continuity supervisor",
+      "real_world_task": "Render one outfit in four chronological shots including wet sleeve and documented change; preserve actor identity, jewelry and social context.",
+      "criteria": [
+        "wardrobe_continuity",
+        "identity_fidelity",
+        "motivated_change",
+        "cultural_authenticity"
+      ],
+      "specialist_development_needed": "Reference-conditioned wardrobe edits and visual continuity evaluation missing.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 4
+      }
+    },
+    "storyboard": {
+      "case_id": "professional_storyboard_v1",
+      "capability_required": "Dramatic coverage and visual continuity",
+      "candidate_models": [
+        "writer9",
+        "sdxl",
+        "vision7"
+      ],
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Storyboard artist/director",
+      "real_world_task": "Create three complete six-panel sequences from locked screenplay beats; no premature reveal, incorrect gaze direction, or unexplained geography.",
+      "criteria": [
+        "coverage",
+        "reveal_order",
+        "screen_direction",
+        "reference_fidelity"
+      ],
+      "specialist_development_needed": "Panel-generation conditioning and comparison to actual shot outputs still required.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 3
+      }
+    },
+    "performance": {
+      "case_id": "professional_performance_v1",
+      "capability_required": "Playable acting direction and observable performance",
+      "candidate_models": [
+        "writer9",
+        "wan",
+        "ltx",
+        "vision7",
+        "animate14"
+      ],
+      "required_output_kinds": [
+        "text",
+        "video"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Performance director/actor",
+      "real_world_task": "Generate quiet worry, concealed affection and restrained anger clips using the same actor/reference; judge gaze, pauses, partner reactions and emotional transitions.",
+      "criteria": [
+        "playable_action",
+        "restrained_emotion",
+        "reaction_timing",
+        "identity_stability"
+      ],
+      "specialist_development_needed": "No current video engine guarantees acting control; paired real clips and expert review required.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "video": 3
+      }
+    },
+    "cinematographer": {
+      "case_id": "professional_cinematographer_v1",
+      "capability_required": "Motivated composition, light and camera behavior",
+      "candidate_models": [
+        "writer9",
+        "sdxl",
+        "wan",
+        "ltx",
+        "vision7"
+      ],
+      "required_output_kinds": [
+        "text",
+        "image",
+        "video"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Cinematographer",
+      "real_world_task": "Render matched wide/reverse/insert coverage and one motivated camera move. Verify window lighting, eyelines, axis and whether the actual shot communicates the intended beat.",
+      "criteria": [
+        "composition",
+        "lighting_continuity",
+        "axis",
+        "motivated_movement"
+      ],
+      "specialist_development_needed": "Reference/geometry control and measured generated-camera fidelity missing.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 3,
+        "video": 3
+      }
+    },
+    "motion": {
+      "case_id": "professional_motion_v1",
+      "capability_required": "Temporal physics, contact and object permanence",
+      "candidate_models": [
+        "writer9",
+        "wan",
+        "ltx",
+        "svd",
+        "vision7"
+      ],
+      "required_output_kinds": [
+        "text",
+        "video"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 4,
+      "expertise_required": "Animation/movement supervisor",
+      "real_world_task": "Generate hand-to-table key transfer, sitting on chair, doorway walk and prop pickup; inspect frame-level support, contact, duplicate objects and chronology.",
+      "criteria": [
+        "contact",
+        "support",
+        "object_permanence",
+        "transition_timing"
+      ],
+      "specialist_development_needed": "Generated frames and frame-level annotations are required; planned constraints are not motion evidence.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "video": 4
+      }
+    },
+    "video": {
+      "case_id": "professional_video_v1",
+      "capability_required": "Realistic and reproducible image-conditioned video",
+      "candidate_models": [
+        "wan",
+        "ltx",
+        "svd"
+      ],
+      "required_output_kinds": [
+        "video"
+      ],
+      "review_modes": [
+        "visual"
+      ],
+      "minimum_samples": 9,
+      "expertise_required": "Director/cinematographer/VFX reviewer",
+      "real_world_task": "Run three identical reference-conditioned motion briefs per engine, same framing and duration as engine permits. Save native frames, outputs, settings, failures, identities and measured memory.",
+      "criteria": [
+        "realism",
+        "identity",
+        "motion_fidelity",
+        "prompt_adherence",
+        "temporal_consistency"
+      ],
+      "specialist_development_needed": "Approved checkpoints/GPU absent. SVD-XT has no text control; compare only equivalent supported conditions.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "video": 9
+      },
+      "per_model_video_minimum": 3
+    },
+    "voice": {
+      "case_id": "professional_voice_v1",
+      "capability_required": "Bangladeshi pronunciation, prosody and speaker consistency",
+      "candidate_models": [
+        "writer9",
+        "parler",
+        "indicf5"
+      ],
+      "required_output_kinds": [
+        "text",
+        "audio"
+      ],
+      "review_modes": [
+        "text",
+        "listening"
+      ],
+      "minimum_samples": 6,
+      "expertise_required": "Native Bangladeshi dialogue/voice director",
+      "real_world_task": "Generate two speakers across neutral, warm and restrained-angry delivery; include names, numbers, address forms and pauses. Blind listeners transcribe and judge accent/emotion.",
+      "criteria": [
+        "pronunciation",
+        "naturalness",
+        "speaker_consistency",
+        "emotion",
+        "timing"
+      ],
+      "specialist_development_needed": "Preset TTS versus reference-audio TTS are separate arms; IndicF5 needs authorized voice reference and reviewed code.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "audio": 6
+      }
+    },
+    "continuity": {
+      "case_id": "professional_continuity_v1",
+      "capability_required": "Longitudinal state tracking across real media",
+      "candidate_models": [
+        "writer9",
+        "vision7"
+      ],
+      "required_output_kinds": [
+        "text",
+        "image",
+        "video"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 6,
+      "expertise_required": "Script/continuity supervisor",
+      "real_world_task": "Inspect a multi-scene packet with planted wet-sleeve, key-holder, door, knowledge, time and axis changes; pair each with a clean control, identify exact frame/beat.",
+      "criteria": [
+        "state_accuracy",
+        "false_positives",
+        "cross_episode_memory",
+        "source_binding"
+      ],
+      "specialist_development_needed": "Requires real matched frames and expert-labeled positive and negative examples.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 6,
+        "image": 3,
+        "video": 3
+      }
+    },
+    "music": {
+      "case_id": "professional_music_v1",
+      "capability_required": "Musical structure, dramatic fit and motivated Foley",
+      "candidate_models": [
+        "writer9",
+        "music35",
+        "sfxsmall"
+      ],
+      "required_output_kinds": [
+        "text",
+        "audio"
+      ],
+      "review_modes": [
+        "text",
+        "listening"
+      ],
+      "minimum_samples": 4,
+      "expertise_required": "Composer/sound designer",
+      "real_world_task": "Generate separate restrained family score, tender romantic cue, suspense cue and source-motivated Foley; audition under the same real dialogue and evaluate ducking, transitions and rights.",
+      "criteria": [
+        "musicality",
+        "dramatic_fit",
+        "foley_timing",
+        "dialogue_intelligibility",
+        "rights"
+      ],
+      "specialist_development_needed": "Music/SFX inference adapters and listening evaluation missing; procedural tones are not a cinematic score.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "audio": 4
+      }
+    },
+    "editing": {
+      "case_id": "professional_editing_v1",
+      "capability_required": "Narrative editing, sync and technical delivery",
+      "candidate_models": [
+        "writer9",
+        "vision7",
+        "ffmpeg"
+      ],
+      "required_output_kinds": [
+        "text",
+        "video",
+        "audio"
+      ],
+      "review_modes": [
+        "text",
+        "visual",
+        "listening"
+      ],
+      "minimum_samples": 2,
+      "expertise_required": "Film editor/sound editor",
+      "real_world_task": "Assemble two complete 60–90 second edits from approved real clips/audio; preserve the emotional reaction beat, continuity, sync, subtitle readability and delivery specs.",
+      "criteria": [
+        "narrative_pacing",
+        "reaction_beats",
+        "sync",
+        "technical_delivery"
+      ],
+      "specialist_development_needed": "Existing renderer needs approved genuine assets and expert review, not replacement by a model.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 2,
+        "video": 2,
+        "audio": 2
+      }
+    },
+    "production_manager": {
+      "case_id": "professional_production_manager_v1",
+      "capability_required": "Resource-aware real execution and recovery",
+      "candidate_models": [
+        "writer9",
+        "deterministic"
+      ],
+      "required_output_kinds": [
+        "text",
+        "trace"
+      ],
+      "review_modes": [
+        "text"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Line producer/production coordinator",
+      "real_world_task": "Run three real isolated project traces: successful dependency chain, blocked GPU with independent CPU work progressing, and stopped-worker recovery with no duplicate calls or stale approvals.",
+      "criteria": [
+        "dependency_correctness",
+        "resource_feasibility",
+        "recovery",
+        "approval_discipline"
+      ],
+      "specialist_development_needed": "Planning contracts are implemented; real multi-model workload execution and resource measurements remain unverified.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 3,
+        "trace": 3
+      }
+    },
+    "growth": {
+      "case_id": "professional_growth_v1",
+      "capability_required": "Truthful Bengali audience positioning and visual packaging",
+      "candidate_models": [
+        "writer9",
+        "sdxl"
+      ],
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Bengali audience/editorial marketing specialist",
+      "real_world_task": "Produce three title/description/thumbnail/trailer packages for the same actually generated approved episode. Reject fake story events, spoilers and misleading imagery; record audience tests separately.",
+      "criteria": [
+        "truthfulness",
+        "audience_fit",
+        "thumbnail_story_match",
+        "spoiler_control"
+      ],
+      "specialist_development_needed": "Requires approved actual episode assets and human packaging/audience review.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 3,
+        "image": 3
+      }
+    },
+    "youtube": {
+      "case_id": "professional_youtube_v1",
+      "capability_required": "Read-only channel validation and safe release preparation",
+      "candidate_models": [
+        "writer9",
+        "deterministic"
+      ],
+      "required_output_kinds": [
+        "text",
+        "trace"
+      ],
+      "review_modes": [
+        "text"
+      ],
+      "minimum_samples": 2,
+      "expertise_required": "Channel operations/rights reviewer",
+      "real_world_task": "Prepare two release packets from approved actual media and a consented read-only metadata snapshot. Verify rights, channel binding, token scope and drafts; no upload/publish/schedule.",
+      "criteria": [
+        "metadata_accuracy",
+        "rights",
+        "read_only_scope",
+        "channel_binding"
+      ],
+      "specialist_development_needed": "Real read-only connection evidence and approved media still needed; publishing remains outside scope.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 2,
+        "trace": 2
+      }
+    }
+  },
+  "professional_ready_requires": [
+    "real_model_output",
+    "source_fidelity",
+    "technical_validation",
+    "independent_role_qualified_human_evaluation",
+    "all_required_modalities",
+    "minimum_representative_samples"
+  ],
+  "not_proof": [
+    "regression_test_pass",
+    "knowledge_integration",
+    "prompt_change",
+    "schema_valid_JSON",
+    "self_review",
+    "simulated_output"
+  ]
+}

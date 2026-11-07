@@ -15,6 +15,9 @@ def execute_media(key,data,sidecar):
     if root.is_symlink():raise AgentError('Media workspace must not be a symlink.')
     root=root.resolve()
     operation=data.get('operation')
+    if operation=='offline_image' and key in ('character','art','location','costume','storyboard'):
+        from .offline_image import generate
+        return generate(data.get('request'),sidecar)
     if key=='video' and operation=='offline_video':
         from .offline_media import generate
         return generate(data.get('engine'),data.get('request'),sidecar)

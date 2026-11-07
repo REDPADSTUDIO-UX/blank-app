@@ -45,6 +45,8 @@ def synthesize(request,sidecar,timeout=240):
     if not status['ready']:raise MediaBlocked('; '.join(status['blockers']))
     if not isinstance(request,dict) or request.get('preset') not in PRESETS or request.get('style','neutral') not in STYLES:raise AgentError('Select a documented synthetic Bengali preset and bounded style; no reference voice upload.')
     text=request.get('text')
+    seed=request.get('seed',42)
+    if type(seed) is not int or not 0<=seed<=2147483647:raise AgentError('Bounded speech seed required.')
     if not isinstance(text,str) or not 1<=len(text)<=300 or not re.search('[\u0980-\u09ff]',text):raise AgentError('Short Bengali transcript required (1–300 characters).')
     if type(timeout) is not int or not 30<=timeout<=600:raise AgentError('Invalid speech timeout.')
     approval=speech_approval(True);root=Path(sidecar).parent/'agent_media/offline_speech'
@@ -52,8 +54,8 @@ def synthesize(request,sidecar,timeout=240):
     job=root/uuid4().hex;job.mkdir(parents=True)
     transcript=unicodedata.normalize('NFC',text)
     caption=request['preset']+' speaks in Bengali. '+STYLES[request.get('style','neutral')]+' Clear close recording without background noise.'
-    payload={'checkpoint':str((MODEL_ROOT/'bengali-tts').resolve()),'text':transcript,'description':caption,'output':str((job/'speech.wav').resolve())}
-    state={'state':'running','model':MODEL,'preset':request['preset'],'manifest_sha256':approval['manifest']['sha256'],
+    payload={'checkpoint':str((MODEL_ROOT/'bengali-tts').resolve()),'text':transcript,'description':caption,'seed':seed,'output':str((job/'speech.wav').resolve())}
+    state={'state':'running','model':MODEL,'preset':request['preset'],'style':request.get('style','neutral'),'seed':seed,'max_new_tokens':1024,'manifest_sha256':approval['manifest']['sha256'],
            'text_sha256':digest(transcript),'actual_generation':False,'listening_review_completed':False,'bangladeshi_pronunciation_verified':False,'lip_sync_verified':False}
     def save():(job/'evidence.json').write_text(json.dumps(state,ensure_ascii=False,indent=2))
     (job/'request.json').write_text(json.dumps(payload,ensure_ascii=False));save();started=time.monotonic()

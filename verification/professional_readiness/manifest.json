@@ -1,0 +1,19 @@
+{
+  "algorithm": "SHA256",
+  "scope": "Report, registry and evidence at precommit; excludes this manifest itself",
+  "files": {
+    "PROFESSIONAL_READINESS_REPORT.md": "ac68f4c7ee3b476bb3efa87b479021923c969b054297829a932166eb740dcc78",
+    "assets/professional/models.json": "6af1ec2326088448ae333023eb657299c0f214bfa9d1ffa39f3556ca38f05610",
+    "assets/professional/suite.json": "0ab9da9d067757f4f44da7f7ed2f5d424b653edeec4e60fbe3121a4883e6bf6b",
+    "verification/professional_readiness/model_inventory.json": "2376b4319c99fb5bf88c25c81dad53e6d1995cb4393089d2dd54e51352ba259e",
+    "verification/professional_readiness/trial_ui.json": "d72302787718f0da326217481dd1c35e1dcf1adacbc4e26d4a9daa776e70001b",
+    "verification/professional_readiness/render_safety.json": "0e4ab873243df28eb5328c4fed40fa61e5d239baa00131f90cadc6d53c67ca2b",
+    "verification/professional_readiness/regression.json": "9e0ec701c451deb5aa080be4066ff84151357af1fa0af5db81574dfe884f0641",
+    "verification/professional_readiness/image_preflight.json": "bf33ec30d1295e76a997f5e2c8772f1453c12a02aa0a30337c953b32e59191f8",
+    "verification/professional_readiness/standalone.json": "de155f9f1cd90531eeca29033cc0301f04e2f8cc460eb675acf7c40e1e7891e2",
+    "verification/professional_readiness/environment.json": "aa0afb88115d95c97e1c395e15802031cff1781acbe88b97d077aff77acb3942",
+    "verification/professional_readiness/development_checks.json": "4197fe197c65c98c2cef8f998a8ee775353bd68ffbd7ccd90b3bb9c9d4de2cb6",
+    "verification/professional_readiness/license_research.json": "e18c76467561ce0e57dc8a1822db1220259557f7f3a68951f039f5df2ee6a44b",
+    "verification/professional_readiness/audit.json": "85167b19f644685d3c4b89201239cc08e4fdd5fce44d66a5bec482279381857e"
+  }
+}

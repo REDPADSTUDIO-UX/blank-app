@@ -5,6 +5,8 @@ from pathlib import Path
 def run(job):
     import torch
     import diffusers
+    from .worker_telemetry import start,finish
+    start(torch)
     from diffusers.utils import export_to_video
     from PIL import Image,ImageOps
     from .offline_media import CATALOG,validate_request
@@ -27,7 +29,7 @@ def run(job):
     marker=Path(job).with_name('worker_state.json')
     marker.write_text(json.dumps({'inference_started':True,'inference_completed':False}))
     frames=pipeline(**args).frames[0]
-    marker.write_text(json.dumps({'inference_started':True,'inference_completed':True,'frames_returned':len(frames)}))
+    marker.write_text(json.dumps({'inference_started':True,'inference_completed':True,'frames_returned':len(frames),'telemetry':finish(torch),'diffusers_version':getattr(diffusers,'__version__','not reported')}))
     if len(frames)!=r['frames']:raise ValueError('Incomplete generated frame count')
     export_to_video(frames,data['output'],fps=r['fps'])
 

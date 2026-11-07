@@ -12,6 +12,8 @@ def show_studio_program():
     st.header('REDPAD • Film Studio')
     st.caption('Director • Story • Script সামনে; ১৭টি specialist একই project-এর versioned workflow-এ। Planning, AI inference ও artistic approval আলাদা।')
     from .filmmaking_ui import show_knowledge,show_series
+    from .professional_ui import show_summary,show_trials
+    show_summary()
     show_knowledge()
     project_id=st.text_input('Studio project ID','redpad-film',key='master_project_id')
     left,right=st.columns(2)
@@ -96,6 +98,7 @@ def show_studio_program():
                     else:st.video(str(clip))
                     st.caption('Technical output only; artistic/owner approval not inferred.')
     elif area=='Project Management':
+        show_trials(program)
         st.dataframe(summary['runs'],hide_index=True);st.dataframe(summary['workstreams'],hide_index=True)
         tasks=program.store.tasks()
         if tasks:
