@@ -1,0 +1,1489 @@
+{
+  "baseline": "e43bf25eefe95565c91a535fb84d4c18b41a5707",
+  "scope": "Highest demonstrated bounded pre-GPU workflow scope; not a blanket software/perfect cinematic completion claim.",
+  "agents": [
+    {
+      "agent": "story",
+      "name": "Story AI",
+      "professional_responsibility": [
+        "Research",
+        "Original premises",
+        "Plot",
+        "Character arcs",
+        "Dramatic structure"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Draft ledger থেকে approved season/episode source bridge অসম্পূর্ণ।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "story_bridge; StudioProgram.queue_creative",
+      "specialist_workflow_improvement": "Bible/arcs/30 bounded outlines/state/knowledge/setup-payoff → compiled season → sequence budgets; locked targeted revision; archive import without regenerating.",
+      "missing_intelligence_capability": "Causal Bengali narrative and long-form memory — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "writer12": "existing",
+        "gemma4e4": "research_only_not_integrated"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Bible/arcs/30 bounded outlines/state/knowledge/setup-payoff → compiled season → sequence budgets; locked targeted revision; archive import without regenerating.",
+      "production_operations": {
+        "implemented": "story_bridge; StudioProgram.queue_creative",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Write three unseen family/romance/mystery season treatments and a three-episode causal segment; a lost fee cannot reappear, secrets change knowledge only after a disclosure.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 3
+        },
+        "artistic": [
+          "causal_logic",
+          "character_agency",
+          "earned_hooks",
+          "episode_continuity"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "1b085d0786e14e08841aee5f75bfb013",
+          "sha256": "a133ec102468015ca9e0a36c6f1e9340969a023eb10f0bc48cd3434b8c5691f3"
+        },
+        {
+          "task": "abf5a3dd319b4409b0ba32169ab17d5c",
+          "sha256": "3a6a8e886c1e46a37c08491c4b994ab6d7cd77f00fb88d88754ebc6b109a1f02"
+        },
+        {
+          "task": "c110358a939d43e0a20e120a7ab154ed",
+          "sha256": "922eef9738615ff9b33288bc817fbb01493a3a53dada764eed4784f1d22c3d01"
+        },
+        {
+          "task": "b95aed12858d426096b239d7648ea755",
+          "sha256": "e2200bac8eefdd2da60bcedd2e898c409cb1db216db8ebd683804af12a9b398a"
+        },
+        {
+          "task": "ab976627002c4399b40bd2ab1bf9a6ba",
+          "sha256": "7aab8729a611c896ad166172f909a77028bd0a4fe588f445dea27d9bc8a70f58"
+        },
+        {
+          "task": "4d447e5ea62345e0bd86b2334bc5d8a7",
+          "sha256": "c8cda937524d4ad8849b9a9b0c2fb4adf9c2422d35a8e5d4c80e6197a134d318"
+        },
+        {
+          "task": "be958f1d4a7242498a010cb2bc6be620",
+          "sha256": "8c5cb3edc2a8f792920919d12584c1cd89de5e9f281862d6e37cc8a6f74e5ace"
+        },
+        {
+          "task": "5dbd885a704b4b8d8f9f5fe5ea713b76",
+          "sha256": "cfda03b344dbc4b908c93e07c42aabb048167b433f3717b21c65077da15b12c5"
+        },
+        {
+          "task": "4cdf4a4cbefc4640817cf1e62892c912",
+          "sha256": "ad708f01666769f55a91f7f86fe194095e1f47a97b11f3cc80ce9ad6f555bef3"
+        },
+        {
+          "task": "da89efadbdea47e1a57ea2096468b308",
+          "sha256": "8f167ecb88eaebef519b05c2103ac85308856eee300c6ae112213fd0d6ead1d9"
+        },
+        {
+          "task": "f77f34d1bb234380bed136c80a2aa5e2",
+          "sha256": "ac8a7df486acf4ae29ed049958eee012f6f8dda2764ee486e77ddc3f6db46103"
+        },
+        {
+          "task": "aff0615503dd4bb98a3269d141002aac",
+          "sha256": "de9935c12ad3ae7b73153c381f62eff70356944a5ab97686a74fefb02f6f29a2"
+        },
+        {
+          "task": "95e630234df24c6f90c7b65045182488",
+          "sha256": "a37ff387ff1305f1b320145aa4ef869d5b854bbd73537680aeab73c9341fc2dd"
+        },
+        {
+          "task": "a57337390b6048a1bf08032875fb2187",
+          "sha256": "178377f1c329dfd9c964239f8ecc465550984cf3a61d53c6410b4cc2edecb8a2"
+        },
+        {
+          "task": "421fddaa6388454d8cf706be01e59059",
+          "sha256": "3408b1b100a2c3622e2ac134ec8069b8d60313ddeb8ff07fe88afceb9132a2d7"
+        },
+        {
+          "task": "5831dd674b8e4684a918bff0671f9ad4",
+          "sha256": "3070b78765b53ffc82d995dd0a0abfa6b083bc4e7e40aa41a24679e28aa0ad9e"
+        },
+        {
+          "task": "e59b6d13cf52416bbaa0db375fff85a9",
+          "sha256": "d8267d1cbbff5f5aa7c899fd842609b96a0cf53b2ab4eea47541472285eb02ac"
+        },
+        {
+          "task": "a661479480b9496695c82f7f4ed13be7",
+          "sha256": "02e4dd2c3608c382cfcba9349f94d08d0abd0368e4b262867e02ad941065e58a"
+        },
+        {
+          "task": "3e293f33c75f40d5a23f5082c707b90c",
+          "sha256": "255e2b03f65e5543a70303014a8a185b8d54b10e5ed2b1dade399197625b1f43"
+        },
+        {
+          "task": "cd90ef394d3248f88e9a66a60b839736",
+          "sha256": "81651713a42535d9b784a46cc8b3269c698de8f5fad919288edb998ebad91ece"
+        },
+        {
+          "task": "296ae91494894bb480b7490d33025cd1",
+          "sha256": "c8e3a23fd823f756e89d0bd9e1386050c07b5ea85004bceb161834a502cf5de5"
+        },
+        {
+          "task": "2baef0e9edea4572a948f08ab8fc3210",
+          "sha256": "f9b566579b98aacad5d01acfa0b5e68ff8e3be5e5661a41255b97e6a7af4b1ad"
+        },
+        {
+          "task": "6e3b99adb26941c68390d4a9ee334c0d",
+          "sha256": "3e9319e13ee36cc9ada72bc388e8d0227cec8b16a7cca5d525e91421d260f8ff"
+        },
+        {
+          "task": "8c5975bfc1444f398825ef1d345a6dc5",
+          "sha256": "7648927cc4eddd360cab5a696af3e40c0963986ff2db3407d161230589bfffd3"
+        },
+        {
+          "task": "5530ce3cc50648a094eb71fcd51b3612",
+          "sha256": "f69c3bf00185452f3bceebac591b0297e95abf58f8c501f66accdabcc07ce8ab"
+        },
+        {
+          "task": "ba8d1c9d87f84b7293eba93ea76b85cf",
+          "sha256": "459f60a4fc16ad50ca275d3fc8e12e56328ffefdd8b21cd15f90942ecf1cb35f"
+        },
+        {
+          "task": "e496e78e93d742789111402b4a06d538",
+          "sha256": "65ccae01bb61d6c8bc9e9eb7377014cdf991de762aaf794958c4cc09f31310de"
+        },
+        {
+          "task": "ec9a178e389e4a53ab065e5093cdbcf8",
+          "sha256": "4a48a02de63b0ca1052894954533ed4aab2d5fd693ce2b74f0e9c8245e7914c7"
+        },
+        {
+          "task": "6f00c604c99841688764a42e09719d93",
+          "sha256": "4d8e32101992e3678ce6f4da18eda19f7c72cc0fdc1f5e4875f2b41c1e7328f4"
+        },
+        {
+          "task": "2950513f851c4eb9b6e4acfba0bdbc98",
+          "sha256": "d7ef02f1ef4003e38ec6b278e6cc50060ab95c9eabeb8f85b5e137bc46488f3f"
+        },
+        {
+          "task": "efeb056381d7419c89add6349d60ac80",
+          "sha256": "99e87f1ad13115c57474e67c22fbd7d27117acb11e3018ee806153b9a6e38c49"
+        },
+        {
+          "task": "dff29a77a21740e4a1b8f96adb5fce2b",
+          "sha256": "844c376a1094527577c734c2bb862908a1b904f0f33e06999e14bf1a62d90c5d"
+        },
+        {
+          "task": "397b0542f205460da0bef0329f07e23b",
+          "sha256": "72d5dae120ba0497c1bf225c4971bd56e9b160dd55e66d95b19a653d76006bf3"
+        },
+        {
+          "task": "98b74a673c2c4708a7e30534aded167a",
+          "sha256": "43298a2ae95b54ad021c310db2ed508ef82fc703d0870eb4b46d390a5aa2528d"
+        }
+      ],
+      "dependencies_fixed_now": "Bible/arcs/30 bounded outlines/state/knowledge/setup-payoff → compiled season → sequence budgets; locked targeted revision; archive import without regenerating.",
+      "gpu_dependent_validation": [],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Bengali screenwriter/showrunner",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "End-to-end long-series draft-to-approved-season bridge and capable writer remain unverified. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "script",
+      "name": "Script AI",
+      "professional_responsibility": [
+        "Screenplay",
+        "Visual action first",
+        "Natural Bengali dialogue",
+        "Scene construction",
+        "Revisions"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "এক call-এ screenplay, full-season context ও mechanical dialogue success-এর ওপর নির্ভরতা।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "episode_scenes; creative sequence binding; pre_gpu_ui.scene_drafting",
+      "specialist_workflow_improvement": "Per-scene bounded raw generation, unchanged assembly, source/sequence/timing validation, weak 4B/default-thinking repeats blocked, failure/version recovery.",
+      "missing_intelligence_capability": "Bangladeshi spoken dialogue, subtext, humor, restrained emotion — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "writer12": "existing",
+        "gemma4e4": "research_only_not_integrated"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Per-scene bounded raw generation, unchanged assembly, source/sequence/timing validation, weak 4B/default-thinking repeats blocked, failure/version recovery.",
+      "production_operations": {
+        "implemented": "episode_scenes; creative sequence binding; pre_gpu_ui.scene_drafting",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Produce eight complete filmable scenes spanning breakfast, father–daughter conflict, romance, wit, quiet grief, horror, earned ending and locked rewrite. No manual polishing of model samples.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 8
+        },
+        "artistic": [
+          "spoken_bangla",
+          "responsive_humor",
+          "emotional_behavior",
+          "visual_first",
+          "locked_rewrite"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "00043f16ef1f49b9a64d5814d049397a",
+          "sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+        }
+      ],
+      "dependencies_fixed_now": "Per-scene bounded raw generation, unchanged assembly, source/sequence/timing validation, weak 4B/default-thinking repeats blocked, failure/version recovery.",
+      "gpu_dependent_validation": [],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Bengali screenwriter/dialogue editor",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "A stronger writer must pass unseen scenes and exact revision instructions; current 4B samples failed creative quality. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "director",
+      "name": "Director AI",
+      "professional_responsibility": [
+        "Creative vision",
+        "Scene interpretation",
+        "Department coordination",
+        "Task assignments and revisions"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "পূর্ণ season duplicate context ও speculative criticism; ৩০-পর্বে এক বড় call অকার্যকর।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "story_bridge.next_director_review; grounded_review; offline_vision; StudioProgram.production_overview",
+      "specialist_workflow_improvement": "Per-episode grounded critique, observation/interpretation/confidence/abstention, approved report compilation; no automatic rewrite.",
+      "missing_intelligence_capability": "Grounded dramatic criticism plus visual/performance judgment — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified",
+        "gemma4e4": "research_only_not_integrated"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Per-episode grounded critique, observation/interpretation/confidence/abstention, approved report compilation; no automatic rewrite.",
+      "production_operations": {
+        "implemented": "story_bridge.next_director_review; grounded_review; offline_vision; StudioProgram.production_overview",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Critique five clean and five seeded-defect scenes; identify precise evidence, abstain on clean material, then direct and inspect three real generated short shots.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 10,
+          "video": 3
+        },
+        "artistic": [
+          "criticism_precision",
+          "criticism_recall",
+          "source_fidelity",
+          "performance_direction",
+          "visual_intent"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "9d3e8d0669694564a7925067ba9083dc",
+          "sha256": "1c9356efb68a3caac6b8b8a88ec022288572701c6f577818c9ef86bd13f450bc"
+        },
+        {
+          "task": "d239267c922c48708bb72a2dee62c412",
+          "sha256": "ebab63eec4ccae21e304833737f4b44389294c9a949af268412e44ee57e7e45d"
+        }
+      ],
+      "dependencies_fixed_now": "Per-episode grounded critique, observation/interpretation/confidence/abstention, approved report compilation; no automatic rewrite.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "vision7",
+        "gemma4e4"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Film director/editor",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Separate critic calibration from approval; multimodal video understanding and actual directed-shot evaluation missing. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "qc",
+      "name": "Quality Control AI",
+      "professional_responsibility": [
+        "Independent technical and creative review",
+        "Evidence-based rejection",
+        "Compliance",
+        "Quality recommendations"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "সমালোচনায় false-positive/false-negative ও media evidence আলাদা ছিল না।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "grounded_review.calibrate; offline_vision; professional_readiness",
+      "specialist_workflow_improvement": "Balanced source-hash controls, unsupported quotation retained, actual image/raw-response inspection interface, independent QC/owner boundary.",
+      "missing_intelligence_capability": "Calibrated multimodal defect detection with uncertainty — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified",
+        "writer9": "existing",
+        "gemma4e4": "research_only_not_integrated"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Balanced source-hash controls, unsupported quotation retained, actual image/raw-response inspection interface, independent QC/owner boundary.",
+      "production_operations": {
+        "implemented": "grounded_review.calibrate; offline_vision; professional_readiness",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Blindly inspect balanced clean/defect script, image, motion, subtitle and audio samples. Measure false positives and misses against an authored hidden answer key and expert adjudication.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 10,
+          "video": 3,
+          "audio": 3
+        },
+        "artistic": [
+          "defect_precision",
+          "defect_recall",
+          "grounded_evidence",
+          "uncertainty",
+          "cross_media_consistency"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "04e497042cfd4830aacaa85689179403",
+          "sha256": "7c896d54744b8776ef018c393d097519a53e808f17623d57535c3cf3961fe4d3"
+        }
+      ],
+      "dependencies_fixed_now": "Balanced source-hash controls, unsupported quotation retained, actual image/raw-response inspection interface, independent QC/owner boundary.",
+      "gpu_dependent_validation": [
+        "vision7",
+        "writer9",
+        "gemma4e4"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Independent script and audiovisual QC specialists",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "A line-ID match alone is insufficient; requires actual media and specialist adjudication. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "character",
+      "name": "Character AI",
+      "professional_responsibility": [
+        "Identity",
+        "Appearance",
+        "Character Bible",
+        "Facial references",
+        "Consistency"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "অন্যান্য বিভাগে identity/reference transfer বিচ্ছিন্ন।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.shot/voice; offline_image; offline_vision",
+      "specialist_workflow_improvement": "Approved identity hashes/psychology/relationships and reference lists shared; no fabricated identity lock.",
+      "missing_intelligence_capability": "Psychology bible and stable visual identity — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "sdxl": "offline worker implemented, real inference blocked; no reference identity control",
+        "flux": "not_yet_integrated"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Approved identity hashes/psychology/relationships and reference lists shared; no fabricated identity lock.",
+      "production_operations": {
+        "implemented": "production_execution.shot/voice; offline_image; offline_vision",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Generate character bible plus front/three-quarter/profile and changed-light references of the same two fictional adults; blind match identities and reject facial/age drift.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 1,
+          "image": 4
+        },
+        "artistic": [
+          "identity_consistency",
+          "psychological_specificity",
+          "cultural_authenticity"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "d6d1658814d44abe869d2bb2cc8314a3",
+          "sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+        }
+      ],
+      "dependencies_fixed_now": "Approved identity hashes/psychology/relationships and reference lists shared; no fabricated identity lock.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "sdxl",
+        "flux"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Casting/character designer",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Image/reference conditioning adapter and approved identity references are needed; text-to-image alone does not solve identity lock. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "art",
+      "name": "Art Director AI",
+      "professional_responsibility": [
+        "Sets",
+        "Props",
+        "Production design",
+        "Color palettes",
+        "Visual style"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Design decisions shared shot execution-এ নিশ্চিতভাবে বহন হতো না।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.shot; offline_image; offline_vision",
+      "specialist_workflow_improvement": "Approved set/props/palette/culture/light joins screenplay and location in one immutable shot packet.",
+      "missing_intelligence_capability": "Bangladeshi production design and prop continuity — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "sdxl": "offline worker implemented, real inference blocked; no reference identity control",
+        "flux": "not_yet_integrated"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Approved set/props/palette/culture/light joins screenplay and location in one immutable shot packet.",
+      "production_operations": {
+        "implemented": "production_execution.shot; offline_image; offline_vision",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Deliver three views of one modest Dhaka tailoring-home set, with the same red tin box, worn table and motivated morning light; verify practical layout and budget.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 1,
+          "image": 3
+        },
+        "artistic": [
+          "set_consistency",
+          "prop_fidelity",
+          "cultural_authenticity",
+          "feasibility"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "ece49174dcc94e24925b485c28c3fdcd",
+          "sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+        }
+      ],
+      "dependencies_fixed_now": "Approved set/props/palette/culture/light joins screenplay and location in one immutable shot packet.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "sdxl",
+        "flux"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Production designer",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Actual set-image consistency and production-designer review missing. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "location",
+      "name": "Location AI",
+      "professional_responsibility": [
+        "Bangladeshi architecture",
+        "Environment",
+        "Room layout",
+        "Location references and continuity"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Room graph ও camera-access তথ্য generation request-এর সঙ্গে বিচ্ছিন্ন।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.shot; offline_vision",
+      "specialist_workflow_improvement": "Approved room geometry/openings/access/reference shared with camera/performance; contradictory/ambiguous joins blocked.",
+      "missing_intelligence_capability": "Spatial geography and physically buildable camera access — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "sdxl": "offline worker implemented, real inference blocked; no reference identity control",
+        "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Approved room geometry/openings/access/reference shared with camera/performance; contradictory/ambiguous joins blocked.",
+      "production_operations": {
+        "implemented": "production_execution.shot; offline_vision",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Produce a measurable floor plan and three generated views; east window, west entry and north kitchen must agree. Validate performer and camera paths.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 1,
+          "image": 3
+        },
+        "artistic": [
+          "spatial_consistency",
+          "sightlines",
+          "camera_access",
+          "architecture"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "33a000e4f1184291b7b9f7a38475920e",
+          "sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+        }
+      ],
+      "dependencies_fixed_now": "Approved room geometry/openings/access/reference shared with camera/performance; contradictory/ambiguous joins blocked.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "sdxl",
+        "vision7"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Location manager/cinematographer",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Needs plan-to-view constraint conditioning, not only free text-to-image. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "costume",
+      "name": "Costume Designer AI",
+      "professional_responsibility": [
+        "Wardrobe",
+        "Costume Bible",
+        "Styling",
+        "Character and art collaboration"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Approved wardrobe এবং per-shot character reference একসঙ্গে বাধ্যতামূলক ছিল না।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.shot; existing costume continuity checks",
+      "specialist_workflow_improvement": "One wardrobe state per actual scene/character; source-version lock, no silent wardrobe substitution.",
+      "missing_intelligence_capability": "Character-appropriate wardrobe and scene state — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "sdxl": "offline worker implemented, real inference blocked; no reference identity control"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "One wardrobe state per actual scene/character; source-version lock, no silent wardrobe substitution.",
+      "production_operations": {
+        "implemented": "production_execution.shot; existing costume continuity checks",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Render one outfit in four chronological shots including wet sleeve and documented change; preserve actor identity, jewelry and social context.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 1,
+          "image": 4
+        },
+        "artistic": [
+          "wardrobe_continuity",
+          "identity_fidelity",
+          "motivated_change",
+          "cultural_authenticity"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+          "sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+        }
+      ],
+      "dependencies_fixed_now": "One wardrobe state per actual scene/character; source-version lock, no silent wardrobe substitution.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "sdxl"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Costume designer/continuity supervisor",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Reference-conditioned wardrobe edits and visual continuity evaluation missing. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "storyboard",
+      "name": "Storyboard AI",
+      "professional_responsibility": [
+        "Shot breakdown",
+        "Compositions",
+        "Camera references",
+        "Shot lists",
+        "Director review"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Shot metadata ছিল; অভিনয়/camera/motion-এর coherent execution packet ছিল না।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.shot",
+      "specialist_workflow_improvement": "Stable shot/scene IDs, reveal action, timing, screen geography and shared identity/reference snapshot.",
+      "missing_intelligence_capability": "Dramatic coverage and visual continuity — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "sdxl": "offline worker implemented, real inference blocked; no reference identity control",
+        "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Stable shot/scene IDs, reveal action, timing, screen geography and shared identity/reference snapshot.",
+      "production_operations": {
+        "implemented": "production_execution.shot",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Create three complete six-panel sequences from locked screenplay beats; no premature reveal, incorrect gaze direction, or unexplained geography.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 1,
+          "image": 3
+        },
+        "artistic": [
+          "coverage",
+          "reveal_order",
+          "screen_direction",
+          "reference_fidelity"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "45cf1de3f7ed444c89661f3fa659905a",
+          "sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+        }
+      ],
+      "dependencies_fixed_now": "Stable shot/scene IDs, reveal action, timing, screen geography and shared identity/reference snapshot.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "sdxl",
+        "vision7"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Storyboard artist/director",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Panel-generation conditioning and comparison to actual shot outputs still required. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "performance",
+      "name": "Performance Director AI",
+      "professional_responsibility": [
+        "Restrained expression",
+        "Acting",
+        "Emotional performance",
+        "Body language"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Emotion label থেকে playable objective/tactic/reaction ও timing handoff অসম্পূর্ণ।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.shot; offline_vision",
+      "specialist_workflow_improvement": "Objective/tactic/partner reaction/gaze/body/pause linked to exact shot; oversized pause and unsupported acting control blocked.",
+      "missing_intelligence_capability": "Playable acting direction and observable performance — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "wan": "existing",
+        "ltx": "existing",
+        "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified",
+        "animate14": "research_only_not_integrated"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Objective/tactic/partner reaction/gaze/body/pause linked to exact shot; oversized pause and unsupported acting control blocked.",
+      "production_operations": {
+        "implemented": "production_execution.shot; offline_vision",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Generate quiet worry, concealed affection and restrained anger clips using the same actor/reference; judge gaze, pauses, partner reactions and emotional transitions.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 1,
+          "video": 3
+        },
+        "artistic": [
+          "playable_action",
+          "restrained_emotion",
+          "reaction_timing",
+          "identity_stability"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+          "sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+        }
+      ],
+      "dependencies_fixed_now": "Objective/tactic/partner reaction/gaze/body/pause linked to exact shot; oversized pause and unsupported acting control blocked.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "wan",
+        "ltx",
+        "vision7",
+        "animate14"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Performance director/actor",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "No current video engine guarantees acting control; paired real clips and expert review required. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "cinematographer",
+      "name": "Cinematographer AI",
+      "professional_responsibility": [
+        "Lenses",
+        "Framing",
+        "Camera movement",
+        "Lighting",
+        "Composition"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Per-scene camera ambiguity ও unsupported instruction-as-conditioning risk।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.shot/queue_video",
+      "specialist_workflow_improvement": "Exactly one shot camera record, lens/height/axis/lighting/reference pin; textual intent separated from verified model controls.",
+      "missing_intelligence_capability": "Motivated composition, light and camera behavior — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "sdxl": "offline worker implemented, real inference blocked; no reference identity control",
+        "wan": "existing",
+        "ltx": "existing",
+        "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Exactly one shot camera record, lens/height/axis/lighting/reference pin; textual intent separated from verified model controls.",
+      "production_operations": {
+        "implemented": "production_execution.shot/queue_video",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Render matched wide/reverse/insert coverage and one motivated camera move. Verify window lighting, eyelines, axis and whether the actual shot communicates the intended beat.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 1,
+          "image": 3,
+          "video": 3
+        },
+        "artistic": [
+          "composition",
+          "lighting_continuity",
+          "axis",
+          "motivated_movement"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "baeb461e7d564044b43df9fb81d42424",
+          "sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+        }
+      ],
+      "dependencies_fixed_now": "Exactly one shot camera record, lens/height/axis/lighting/reference pin; textual intent separated from verified model controls.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "sdxl",
+        "wan",
+        "ltx",
+        "vision7"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Cinematographer",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Reference/geometry control and measured generated-camera fidelity missing. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "motion",
+      "name": "Motion & Physics AI",
+      "professional_responsibility": [
+        "Walking",
+        "Sitting",
+        "Object interaction",
+        "Physical realism",
+        "Motion errors"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Global action chronology ও shot-local timing মিশে যেতে পারত।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.shot; existing motion continuity validator",
+      "specialist_workflow_improvement": "Absolute chronology → explicit shot-local offset; duration/identity/support/contact/object continuity checks; no simulated physics claim.",
+      "missing_intelligence_capability": "Temporal physics, contact and object permanence — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "wan": "existing",
+        "ltx": "existing",
+        "svd": "existing",
+        "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Absolute chronology → explicit shot-local offset; duration/identity/support/contact/object continuity checks; no simulated physics claim.",
+      "production_operations": {
+        "implemented": "production_execution.shot; existing motion continuity validator",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Generate hand-to-table key transfer, sitting on chair, doorway walk and prop pickup; inspect frame-level support, contact, duplicate objects and chronology.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 1,
+          "video": 4
+        },
+        "artistic": [
+          "contact",
+          "support",
+          "object_permanence",
+          "transition_timing"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "0b183324ce9e4d1da61389bea0440b9f",
+          "sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+        }
+      ],
+      "dependencies_fixed_now": "Absolute chronology → explicit shot-local offset; duration/identity/support/contact/object continuity checks; no simulated physics claim.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "wan",
+        "ltx",
+        "svd",
+        "vision7"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Animation/movement supervisor",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Generated frames and frame-level annotations are required; planned constraints are not motion evidence. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "video",
+      "name": "Video Generation AI",
+      "professional_responsibility": [
+        "Cinematic video",
+        "Future Wan and LTX adapters",
+        "GPU interface",
+        "Controlled generation"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Approved shot থেকে native bounded model request এবং full-shot completion আলাদা ছিল না।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.queue_video; resource_guard; offline_media",
+      "specialist_workflow_improvement": "Wan/LTX/SVD preserved; unsupported controls rejected, exact native frame grid, explicit short evaluation window; no long-take/stretch claim.",
+      "missing_intelligence_capability": "Realistic and reproducible image-conditioned video — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "wan": "existing",
+        "ltx": "existing",
+        "svd": "existing"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Wan/LTX/SVD preserved; unsupported controls rejected, exact native frame grid, explicit short evaluation window; no long-take/stretch claim.",
+      "production_operations": {
+        "implemented": "production_execution.queue_video; resource_guard; offline_media",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Run three identical reference-conditioned motion briefs per engine, same framing and duration as engine permits. Save native frames, outputs, settings, failures, identities and measured memory.",
+      "acceptance_criteria": {
+        "technical": {
+          "video": 9
+        },
+        "artistic": [
+          "realism",
+          "identity",
+          "motion_fidelity",
+          "prompt_adherence",
+          "temporal_consistency"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "88403ff0b71c4bb6abd8904929a3dfd0",
+          "sha256": "5079078530c85cc774986c367f74dc25ac807ff66c83c7a1ff60ee5e413e4a33"
+        }
+      ],
+      "dependencies_fixed_now": "Wan/LTX/SVD preserved; unsupported controls rejected, exact native frame grid, explicit short evaluation window; no long-take/stretch claim.",
+      "gpu_dependent_validation": [
+        "wan",
+        "ltx",
+        "svd"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Director/cinematographer/VFX reviewer",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Approved checkpoints/GPU absent. SVD-XT has no text control; compare only equivalent supported conditions. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "voice",
+      "name": "Voice & Dialogue AI",
+      "professional_responsibility": [
+        "Bengali pronunciation",
+        "Emotional voices",
+        "Synchronization",
+        "Lip-sync planning"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Department line record সরাসরি TTS-এ invalid request; speaker/text/timing provenance বিচ্ছিন্ন।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "specialist_adapters.LocalSpeechAdapter; production_execution.voice/queue_speech/bind_voice_audio",
+      "specialist_workflow_improvement": "Exact screenplay segmentation, explicit synthetic preset/style, versioned lexicon, original/normalized text, measured audio binding and lip-sync planning; unsupported pace/pause controls not claimed.",
+      "missing_intelligence_capability": "Bangladeshi pronunciation, prosody and speaker consistency — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "parler": "existing",
+        "indicf5": "not_yet_integrated"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Exact screenplay segmentation, explicit synthetic preset/style, versioned lexicon, original/normalized text, measured audio binding and lip-sync planning; unsupported pace/pause controls not claimed.",
+      "production_operations": {
+        "implemented": "specialist_adapters.LocalSpeechAdapter; production_execution.voice/queue_speech/bind_voice_audio",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Generate two speakers across neutral, warm and restrained-angry delivery; include names, numbers, address forms and pauses. Blind listeners transcribe and judge accent/emotion.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 1,
+          "audio": 6
+        },
+        "artistic": [
+          "pronunciation",
+          "naturalness",
+          "speaker_consistency",
+          "emotion",
+          "timing"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "b86045c501c846fb8aba65da98fc6a5c",
+          "sha256": "68837feb7904b41eac428089ccfe0e6010bc4368867ad8817cf1cb1bf440fd77"
+        }
+      ],
+      "dependencies_fixed_now": "Exact screenplay segmentation, explicit synthetic preset/style, versioned lexicon, original/normalized text, measured audio binding and lip-sync planning; unsupported pace/pause controls not claimed.",
+      "gpu_dependent_validation": [],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Native Bangladeshi dialogue/voice director",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Preset TTS versus reference-audio TTS are separate arms; IndicF5 needs authorized voice reference and reviewed code. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "continuity",
+      "name": "Continuity Supervisor AI",
+      "professional_responsibility": [
+        "Character",
+        "Wardrobe",
+        "Props",
+        "Location",
+        "Shot and episode continuity"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Broad shared DAG বারবার ancestor পরীক্ষা করে আটকে যাচ্ছিল; cross-shot state visibility দুর্বল।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "agents.AgentStore._current; production_execution.shot; offline_vision",
+      "specialist_workflow_improvement": "Transaction-local DAG memoization + cycle/stale rejection, state/props/wardrobe/axis records and actual frame-inspection interface.",
+      "missing_intelligence_capability": "Longitudinal state tracking across real media — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Transaction-local DAG memoization + cycle/stale rejection, state/props/wardrobe/axis records and actual frame-inspection interface.",
+      "production_operations": {
+        "implemented": "agents.AgentStore._current; production_execution.shot; offline_vision",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Inspect a multi-scene packet with planted wet-sleeve, key-holder, door, knowledge, time and axis changes; pair each with a clean control, identify exact frame/beat.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 6,
+          "image": 3,
+          "video": 3
+        },
+        "artistic": [
+          "state_accuracy",
+          "false_positives",
+          "cross_episode_memory",
+          "source_binding"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "09f473838cdf4669951bffe2ff6eaf15",
+          "sha256": "36e7f42b051c77f0667eef7df147c0b712da7b3b3a1ccc2a49874b8ceec512b3"
+        }
+      ],
+      "dependencies_fixed_now": "Transaction-local DAG memoization + cycle/stale rejection, state/props/wardrobe/axis records and actual frame-inspection interface.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "vision7"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Script/continuity supervisor",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Requires real matched frames and expert-labeled positive and negative examples. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "music",
+      "name": "Music & SFX AI",
+      "professional_responsibility": [
+        "Score",
+        "Atmosphere",
+        "Foley",
+        "Sound effects",
+        "Mix requirements"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Procedural sketch বনাম neural score ও genuine cue-to-dialogue mix আলাদা executable handoff ছিল না।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "offline_audio; audio_worker; audio_post.mix",
+      "specialist_workflow_improvement": "Prospective ACE/SFX fixed local adapters, explicit weights/license/dependency gates; real receipt-bound PCM mix, measured dialogue-window ducking/limiter and rights checks.",
+      "missing_intelligence_capability": "Musical structure, dramatic fit and motivated Foley — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "music35": "prospective fixed ACE local worker implemented; package/checkpoint/API/GPU compatibility unverified",
+        "sfxsmall": "prospective fixed Stable Audio safetensors worker implemented; local auxiliary configuration/API/GPU compatibility unverified"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Prospective ACE/SFX fixed local adapters, explicit weights/license/dependency gates; real receipt-bound PCM mix, measured dialogue-window ducking/limiter and rights checks.",
+      "production_operations": {
+        "implemented": "offline_audio; audio_worker; audio_post.mix",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Generate separate restrained family score, tender romantic cue, suspense cue and source-motivated Foley; audition under the same real dialogue and evaluate ducking, transitions and rights.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 1,
+          "audio": 4
+        },
+        "artistic": [
+          "musicality",
+          "dramatic_fit",
+          "foley_timing",
+          "dialogue_intelligibility",
+          "rights"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "23a71f29b2334c77acc71ef98544b835",
+          "sha256": "054806116fde6d5ac5b23dcb94719acb890494fa044f36cbaef3a7c4bf96b98f"
+        }
+      ],
+      "dependencies_fixed_now": "Prospective ACE/SFX fixed local adapters, explicit weights/license/dependency gates; real receipt-bound PCM mix, measured dialogue-window ducking/limiter and rights checks.",
+      "gpu_dependent_validation": [
+        "writer9",
+        "music35",
+        "sfxsmall"
+      ],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Composer/sound designer",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked",
+        "GPU-Dependent Validation Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Music/SFX inference adapters and listening evaluation missing; procedural tones are not a cinematic score. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "editing",
+      "name": "Editing & VFX AI",
+      "professional_responsibility": [
+        "Shot selection",
+        "Pacing",
+        "Transitions",
+        "Color",
+        "VFX",
+        "Subtitles",
+        "MP4 assembly"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Genuine asset import/delivery receipt অনুপস্থিত; silent shot-এর empty subtitle rejected।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "delivery; specialist_media; resource_guard",
+      "specialist_workflow_improvement": "Actual isolated asset receipts, approved EDL binding, sequential bounded decoder assembly, source hash/duration recheck, SRT export; fixtures cannot become production delivery.",
+      "missing_intelligence_capability": "Narrative editing, sync and technical delivery — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified",
+        "ffmpeg": "deterministic_tool"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Actual isolated asset receipts, approved EDL binding, sequential bounded decoder assembly, source hash/duration recheck, SRT export; fixtures cannot become production delivery.",
+      "production_operations": {
+        "implemented": "delivery; specialist_media; resource_guard",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Assemble two complete 60–90 second edits from approved real clips/audio; preserve the emotional reaction beat, continuity, sync, subtitle readability and delivery specs.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 2,
+          "video": 2,
+          "audio": 2
+        },
+        "artistic": [
+          "narrative_pacing",
+          "reaction_beats",
+          "sync",
+          "technical_delivery"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "a310954e87064cdba30b644eb3263174",
+          "sha256": "8eebc576907ea6d5465f4d2f0754a2080d364bcae4769c9ec155b5b3b8f4ee86"
+        }
+      ],
+      "dependencies_fixed_now": "Actual isolated asset receipts, approved EDL binding, sequential bounded decoder assembly, source hash/duration recheck, SRT export; fixtures cannot become production delivery.",
+      "gpu_dependent_validation": [],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Film editor/sound editor",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Existing renderer needs approved genuine assets and expert review, not replacement by a model. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "production_manager",
+      "name": "Production Manager AI",
+      "professional_responsibility": [
+        "Schedule",
+        "Queue",
+        "GPU planning",
+        "Costs",
+        "Assets",
+        "Workflow status"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Model/media jobs একাধিক project-এ একসঙ্গে চলতে পারত; overview/recovery fragmented।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "resource_guard; AgentStore.tx/_current; StudioProgram.production_overview",
+      "specialist_workflow_improvement": "One OS-held local compute lease, isolated resource block, explicit stopped-worker recovery, connection close, DAG reuse, one episode/agent/blocker overview.",
+      "missing_intelligence_capability": "Resource-aware real execution and recovery — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "deterministic": "existing_python_orchestration"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "One OS-held local compute lease, isolated resource block, explicit stopped-worker recovery, connection close, DAG reuse, one episode/agent/blocker overview.",
+      "production_operations": {
+        "implemented": "resource_guard; AgentStore.tx/_current; StudioProgram.production_overview",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Run three real isolated project traces: successful dependency chain, blocked GPU with independent CPU work progressing, and stopped-worker recovery with no duplicate calls or stale approvals.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 3,
+          "trace": 3
+        },
+        "artistic": [
+          "dependency_correctness",
+          "resource_feasibility",
+          "recovery",
+          "approval_discipline"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "58e67c642a3948aaba1850867e02335e",
+          "sha256": "4d840af954327ed22a3fd87547357ae71a3771a17eaf44a8066f7d4a37908904"
+        }
+      ],
+      "dependencies_fixed_now": "One OS-held local compute lease, isolated resource block, explicit stopped-worker recovery, connection close, DAG reuse, one episode/agent/blocker overview.",
+      "gpu_dependent_validation": [],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Line producer/production coordinator",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Planning contracts are implemented; real multi-model workload execution and resource measurements remain unverified. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "growth",
+      "name": "Growth AI",
+      "professional_responsibility": [
+        "Audience analysis",
+        "SEO",
+        "Campaign planning",
+        "Promotion",
+        "Growth"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Promotional package actual approved delivery-তে বাধ্যতামূলকভাবে বাঁধা ছিল না।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.queue_promotion",
+      "specialist_workflow_improvement": "Source-title/action based package, exact delivery hash and version-specific QC prerequisite; fixture promotion rejected; translation/thumbnail/trailer remain explicitly pending.",
+      "missing_intelligence_capability": "Truthful Bengali audience positioning and visual packaging — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "sdxl": "offline worker implemented, real inference blocked; no reference identity control"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Source-title/action based package, exact delivery hash and version-specific QC prerequisite; fixture promotion rejected; translation/thumbnail/trailer remain explicitly pending.",
+      "production_operations": {
+        "implemented": "production_execution.queue_promotion",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Produce three title/description/thumbnail/trailer packages for the same actually generated approved episode. Reject fake story events, spoilers and misleading imagery; record audience tests separately.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 3,
+          "image": 3
+        },
+        "artistic": [
+          "truthfulness",
+          "audience_fit",
+          "thumbnail_story_match",
+          "spoiler_control"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "d7405c214fe3485991b66fe0558688f4",
+          "sha256": "a75214efb542e7df56ad14f9fe3d99b1d853df2c8e50566489b07e1c237c3ade"
+        }
+      ],
+      "dependencies_fixed_now": "Source-title/action based package, exact delivery hash and version-specific QC prerequisite; fixture promotion rejected; translation/thumbnail/trailer remain explicitly pending.",
+      "gpu_dependent_validation": [],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Bengali audience/editorial marketing specialist",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Requires approved actual episode assets and human packaging/audience review. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    },
+    {
+      "agent": "youtube",
+      "name": "YouTube AI",
+      "professional_responsibility": [
+        "Channel connection",
+        "Metadata",
+        "Approval-based upload preparation",
+        "Analytics planning"
+      ],
+      "existing_implementation": "Existing Engine, contracts, source/QC/owner gates and specialist validators preserved; see e43bf25 baseline.",
+      "original_gap": "Prepared metadata থেকে actual delivery/source lineage স্পষ্ট ছিল না।",
+      "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
+      "actual_code_correction": "production_execution.queue_readonly_release; existing secure YouTube boundaries",
+      "specialist_workflow_improvement": "Approved source-derived Growth package hash → read-only release preparation; rights/media/owner checks remain false until actually supplied; no API upload/scope escalation.",
+      "missing_intelligence_capability": "Read-only channel validation and safe release preparation — professional model capability remains unverified.",
+      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "model_integration": {
+        "writer9": "existing",
+        "deterministic": "existing_python_orchestration"
+      },
+      "weak_validation_or_reasoning": "Mechanical source/timing/hash controls exercised; subjective creative judgment requires real model samples and independent expert adjudication.",
+      "handoff_capability": "Approved source-derived Growth package hash → read-only release preparation; rights/media/owner checks remain false until actually supplied; no API upload/scope escalation.",
+      "production_operations": {
+        "implemented": "production_execution.queue_readonly_release; existing secure YouTube boundaries",
+        "unimplemented_or_unverified": "Actual checkpoint/API/hardware compatibility, long-shot identity/acting/lip-sync where applicable, and professional artistic acceptance not demonstrated."
+      },
+      "minimum_realistic_work_sample": "Prepare two release packets from approved actual media and a consented read-only metadata snapshot. Verify rights, channel binding, token scope and drafts; no upload/publish/schedule.",
+      "acceptance_criteria": {
+        "technical": {
+          "text": 2,
+          "trace": 2
+        },
+        "artistic": [
+          "metadata_accuracy",
+          "rights",
+          "read_only_scope",
+          "channel_binding"
+        ],
+        "scope": "Current acceptance artifacts are authored software fixtures, not candidate-model acceptance."
+      },
+      "tested_scenario": "ফিরতি টিকিট: 30-episode staged family mystery, Episode1 3 scenes/180 planned seconds, 9 shot packets; actual codec canary is separately labeled 18-second gray/silence fixture.",
+      "evidence": [
+        {
+          "task": "5c177a1c64ee4ca5a1709e504ef655e3",
+          "sha256": "35759b2a0815373227367a5f02536aea909ec5f97bc6f4b68025be0d489f388a"
+        }
+      ],
+      "dependencies_fixed_now": "Approved source-derived Growth package hash → read-only release preparation; rights/media/owner checks remain false until actually supplied; no API upload/scope escalation.",
+      "gpu_dependent_validation": [],
+      "cpu_or_weight_dependencies": "Approved installed stronger writing model or exact local speech weights still required; no model restore/download in this continuation.",
+      "human_review_dependency": "Channel operations/rights reviewer",
+      "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
+      "statuses": [
+        "Specialist Workflow Verified",
+        "Human Creative Review Pending"
+      ],
+      "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
+      "pre_gpu_engineering_complete_claimed": false,
+      "production_quality_verified": false,
+      "remaining_blocker": "Real read-only connection evidence and approved media still needed; publishing remains outside scope. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+    }
+  ],
+  "new_model_calls": 0,
+  "human_reviews": 0,
+  "production_quality_verified_count": 0
+}

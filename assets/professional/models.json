@@ -112,7 +112,7 @@
       "source": "https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct",
       "download_approved": false,
       "weights_downloaded_this_task": false,
-      "adapter_status": "not_yet_integrated",
+      "adapter_status": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified",
       "selected_weight_files": [
         {
           "path": "model-00001-of-00005.safetensors",
@@ -469,7 +469,7 @@
       "source": "https://huggingface.co/ACE-Step/ACE-Step-v1-3.5B",
       "download_approved": false,
       "weights_downloaded_this_task": false,
-      "adapter_status": "not_yet_integrated",
+      "adapter_status": "prospective fixed ACE local worker implemented; package/checkpoint/API/GPU compatibility unverified",
       "selected_weight_files": [
         {
           "path": "ace_step_transformer/diffusion_pytorch_model.safetensors",
@@ -511,7 +511,7 @@
       "source": "https://huggingface.co/stabilityai/stable-audio-open-small",
       "download_approved": false,
       "weights_downloaded_this_task": false,
-      "adapter_status": "not_yet_integrated",
+      "adapter_status": "prospective fixed Stable Audio safetensors worker implemented; local auxiliary configuration/API/GPU compatibility unverified",
       "selected_weight_files": [
         {
           "path": "model.safetensors",

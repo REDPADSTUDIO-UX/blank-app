@@ -1,0 +1,434 @@
+{
+  "authorization": "No new weights, licenses or GPU resources authorized or acquired. Request explicit owner approval for exact bundles/resources before next-phase installation.",
+  "common_compute_planning": {
+    "gpu_vram_gib": 24,
+    "host_ram_gib": 64,
+    "ssd_free_gib": 200,
+    "parallel_loaded_models": 1,
+    "status": "planning envelope; not provisioned or measured; larger native acting/audio-to-video models excluded"
+  },
+  "model_candidates": {
+    "writer9": {
+      "repo": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "runtime_tag": "qwen3.5:9b-q4_K_M",
+      "manifest_digest": "sha256:56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+      "fresh_layer_bytes": 6550825550,
+      "selected_weight_bytes": 19306310880,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "Apache-2.0",
+      "commercial_use": "Commercial use subject to license conditions",
+      "host_ram_gib_planning": 16,
+      "gpu_vram_gib_planning_range": [
+        8,
+        12
+      ],
+      "precision_and_limits": "4-bit text, context 4096, one loaded model; unmeasured planning range",
+      "adapter_status": "existing"
+    },
+    "writer12": {
+      "repo": "google/gemma-3-12b-it",
+      "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "runtime_tag": "gemma3:12b-it-q4_K_M",
+      "manifest_digest": "sha256:b92b218582c521ba287f38f1d6057dcd3c6cbff036f13cac97b5d861f5e58ec3",
+      "fresh_layer_bytes": 8164039732,
+      "selected_weight_bytes": 24374793024,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "Gemma terms",
+      "commercial_use": "Custom use/distribution conditions; new variant approval and access terms required",
+      "host_ram_gib_planning": 24,
+      "gpu_vram_gib_planning_range": [
+        12,
+        16
+      ],
+      "precision_and_limits": "4-bit text; full precision requires substantially more memory",
+      "adapter_status": "existing"
+    },
+    "vision7": {
+      "repo": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 16584414560,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "Apache-2.0",
+      "commercial_use": "Subject to Apache conditions",
+      "host_ram_gib_planning": 32,
+      "gpu_vram_gib_planning_range": [
+        16,
+        24
+      ],
+      "precision_and_limits": "BF16 short-image/short-clip analysis; bounded resolution, not full-film ingestion",
+      "adapter_status": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified"
+    },
+    "sdxl": {
+      "repo": "stabilityai/stable-diffusion-xl-base-1.0",
+      "revision": "462165984030d82259a11f4367a4eed129e94a7b",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 6938011430,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "CreativeML Open RAIL++-M",
+      "commercial_use": "Commercial use subject to use/distribution restrictions",
+      "host_ram_gib_planning": 32,
+      "gpu_vram_gib_planning_range": [
+        8,
+        12
+      ],
+      "precision_and_limits": "FP16, 512–1024 image, batch 1 with offload; not an established minimum",
+      "adapter_status": "offline worker implemented, real inference blocked; no reference identity control"
+    },
+    "flux": {
+      "repo": "black-forest-labs/FLUX.1-schnell",
+      "revision": "741f7c3ce8b383c54771c7003378a50191e9efe9",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 33720953870,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "Apache-2.0",
+      "commercial_use": "Subject to license plus gated access/data-sharing approval",
+      "host_ram_gib_planning": 64,
+      "gpu_vram_gib_planning_range": [
+        16,
+        24
+      ],
+      "precision_and_limits": "Full transformer plus text encoders need offload/quantization; 24GB not full-resident fit guarantee",
+      "adapter_status": "not_yet_integrated"
+    },
+    "wan": {
+      "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "revision": "b8fff7315c768468a5333511427288870b2e9635",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 34179863648,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "Apache-2.0",
+      "commercial_use": "Subject to Apache conditions",
+      "host_ram_gib_planning": 64,
+      "gpu_vram_gib_planning_range": [
+        24,
+        24
+      ],
+      "precision_and_limits": "Official native code has 24GB offload example; current Diffusers adapter fit is unmeasured",
+      "adapter_status": "existing"
+    },
+    "ltx": {
+      "repo": "Lightricks/LTX-Video-0.9.5",
+      "revision": "e58e28c39631af4d1468ee57a853764e11c1d37e",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 25389977964,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "LTX Video 2B 0.9.5 Open RAIL-M, 2025-03-05",
+      "commercial_use": "Commercial use permitted subject to variant use/distribution restrictions",
+      "host_ram_gib_planning": 64,
+      "gpu_vram_gib_planning_range": [
+        12,
+        16
+      ],
+      "precision_and_limits": "BF16 short clips with text encoder offload; planning budget, not publisher measured minimum",
+      "adapter_status": "existing"
+    },
+    "svd": {
+      "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+      "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 9018071500,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "Stability AI Community License, 2024-07-05",
+      "commercial_use": "Conditional limited commercial license: registration required; revenue/affiliate threshold and attribution/use restrictions apply. Owner eligibility and acceptance unverified; no account or agreement action authorized.",
+      "host_ram_gib_planning": 32,
+      "gpu_vram_gib_planning_range": [
+        8,
+        12
+      ],
+      "precision_and_limits": "25 frames 1024x576 FP16; Diffusers documents under 8GB with offload/chunking; not measured here",
+      "adapter_status": "existing"
+    },
+    "parler": {
+      "repo": "ai4bharat/indic-parler-tts",
+      "revision": "660bc53c64ae83150613264111708a0465211237",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 3751321772,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "Apache-2.0",
+      "commercial_use": "Subject to license and gated information-sharing approval",
+      "host_ram_gib_planning": 16,
+      "gpu_vram_gib_planning_range": [
+        4,
+        8
+      ],
+      "precision_and_limits": "CPU micro inference possible but slow; GPU estimate only, current worker CPU-only",
+      "adapter_status": "existing"
+    },
+    "indicf5": {
+      "repo": "ai4bharat/IndicF5",
+      "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 1402789408,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "MIT",
+      "commercial_use": "Subject to license, gated access, reference-voice rights and reviewed custom code",
+      "host_ram_gib_planning": 16,
+      "gpu_vram_gib_planning_range": [
+        4,
+        8
+      ],
+      "precision_and_limits": "Requires reference audio and transcript; not a drop-in preset worker",
+      "adapter_status": "not_yet_integrated"
+    },
+    "music35": {
+      "repo": "ACE-Step/ACE-Step-v1-3.5B",
+      "revision": "82cd0d7b6322bd28cd4e830fe675ddb6180ce36c",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 8258880480,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "Apache-2.0",
+      "commercial_use": "Subject to Apache conditions; generated originality still needs checking",
+      "host_ram_gib_planning": 32,
+      "gpu_vram_gib_planning_range": [
+        12,
+        24
+      ],
+      "precision_and_limits": "Short instrumental cues; exact installed backend memory must be measured",
+      "adapter_status": "prospective fixed ACE local worker implemented; package/checkpoint/API/GPU compatibility unverified"
+    },
+    "sfxsmall": {
+      "repo": "stabilityai/stable-audio-open-small",
+      "revision": "ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 1676829212,
+      "weight_size_scope": "Selected weight components only; tokenizer/config/auxiliary dependencies and transfer overhead are additional. Quantized runtime tag size, where present, is a separate recipe.",
+      "license": "Stability AI Community License, 2024-07-05",
+      "commercial_use": "Conditional limited commercial license: registration required; revenue/affiliate threshold and attribution/use restrictions apply. Owner eligibility and acceptance unverified; no account or agreement action authorized.",
+      "host_ram_gib_planning": 16,
+      "gpu_vram_gib_planning_range": [
+        4,
+        8
+      ],
+      "precision_and_limits": "Short English-prompted Foley/ambience; planned GPU range, unmeasured",
+      "adapter_status": "prospective fixed Stable Audio safetensors worker implemented; local auxiliary configuration/API/GPU compatibility unverified"
+    },
+    "legacy4": {
+      "repo": "Qwen/Qwen3-4B-Instruct-2507",
+      "revision": null,
+      "runtime_tag": "qwen3:4b-instruct-2507-q4_K_M",
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": null,
+      "weight_size_scope": null,
+      "license": null,
+      "commercial_use": null,
+      "host_ram_gib_planning": null,
+      "gpu_vram_gib_planning_range": null,
+      "precision_and_limits": null,
+      "adapter_status": null
+    },
+    "animate14": {
+      "repo": "Wan-AI/Wan2.2-Animate-14B",
+      "revision": "cb93a225fbaf1ca100f54e79da8f994995b689b3",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 39667823898,
+      "weight_size_scope": "Safetensors metadata inventory, not final installation recipe or memory use",
+      "license": "apache-2.0",
+      "commercial_use": "Publisher license metadata only; exact access/component terms must be reviewed and owner-approved before use",
+      "host_ram_gib_planning": 128,
+      "gpu_vram_gib_planning_range": [
+        80,
+        80
+      ],
+      "precision_and_limits": null,
+      "adapter_status": "research_only_not_integrated"
+    },
+    "gemma4e4": {
+      "repo": "google/gemma-4-E4B-it",
+      "revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+      "runtime_tag": null,
+      "manifest_digest": null,
+      "fresh_layer_bytes": null,
+      "selected_weight_bytes": 15992595884,
+      "weight_size_scope": "Safetensors metadata inventory, not final installation recipe or memory use",
+      "license": "apache-2.0",
+      "commercial_use": "Apache-2.0 subject to its conditions; no stronger Bengali quality established",
+      "host_ram_gib_planning": 32,
+      "gpu_vram_gib_planning_range": [
+        16,
+        24
+      ],
+      "precision_and_limits": "BF16 original weights ~16GB plus runtime/cache; conservative 16–24 GiB GPU planning, not minimum. Exact runtime/quantized recipe not integrated.",
+      "adapter_status": "research_only_not_integrated"
+    }
+  },
+  "selected_model_per_agent": {
+    "story": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "script": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "director": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "qc": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "character": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "art": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "location": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "costume": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "storyboard": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "performance": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "cinematographer": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "motion": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "video": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "voice": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "continuity": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "music": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "editing": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "production_manager": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "growth": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance",
+    "youtube": "UNSELECTED — no new equivalent real benchmark or independent artistic acceptance"
+  },
+  "required_artifacts_per_agent": {
+    "story": {
+      "text": 3
+    },
+    "script": {
+      "text": 8
+    },
+    "director": {
+      "text": 10,
+      "video": 3
+    },
+    "qc": {
+      "text": 10,
+      "video": 3,
+      "audio": 3
+    },
+    "character": {
+      "text": 1,
+      "image": 4
+    },
+    "art": {
+      "text": 1,
+      "image": 3
+    },
+    "location": {
+      "text": 1,
+      "image": 3
+    },
+    "costume": {
+      "text": 1,
+      "image": 4
+    },
+    "storyboard": {
+      "text": 1,
+      "image": 3
+    },
+    "performance": {
+      "text": 1,
+      "video": 3
+    },
+    "cinematographer": {
+      "text": 1,
+      "image": 3,
+      "video": 3
+    },
+    "motion": {
+      "text": 1,
+      "video": 4
+    },
+    "video": {
+      "video": 9
+    },
+    "voice": {
+      "text": 1,
+      "audio": 6
+    },
+    "continuity": {
+      "text": 6,
+      "image": 3,
+      "video": 3
+    },
+    "music": {
+      "text": 1,
+      "audio": 4
+    },
+    "editing": {
+      "text": 2,
+      "video": 2,
+      "audio": 2
+    },
+    "production_manager": {
+      "text": 3,
+      "trace": 3
+    },
+    "growth": {
+      "text": 3,
+      "image": 3
+    },
+    "youtube": {
+      "text": 2,
+      "trace": 2
+    }
+  },
+  "review_roles": {
+    "story": "Bengali screenwriter/showrunner",
+    "script": "Bengali screenwriter/dialogue editor",
+    "director": "Film director/editor",
+    "qc": "Independent script and audiovisual QC specialists",
+    "character": "Casting/character designer",
+    "art": "Production designer",
+    "location": "Location manager/cinematographer",
+    "costume": "Costume designer/continuity supervisor",
+    "storyboard": "Storyboard artist/director",
+    "performance": "Performance director/actor",
+    "cinematographer": "Cinematographer",
+    "motion": "Animation/movement supervisor",
+    "video": "Director/cinematographer/VFX reviewer",
+    "voice": "Native Bangladeshi dialogue/voice director",
+    "continuity": "Script/continuity supervisor",
+    "music": "Composer/sound designer",
+    "editing": "Film editor/sound editor",
+    "production_manager": "Line producer/production coordinator",
+    "growth": "Bengali audience/editorial marketing specialist",
+    "youtube": "Channel operations/rights reviewer"
+  },
+  "safe_sequence": [
+    "Owner approves exact writing candidate download/runtime; never paid/hosted fallback.",
+    "One model at a time: canary, then identical original Bengali cases; no default-thinking repetition without reviewed configuration.",
+    "Blind unchanged outputs + failures to qualified Bengali editor; owner records actual attributed feedback.",
+    "Approve exact image/video/TTS/audio checkpoint, component licenses, package revisions and existing/new physical compute separately.",
+    "Run bounded actual SDXL/vision/Wan/LTX/SVD/TTS/ACE/SFX canaries; measure process RSS/CUDA peaks/runtime and retain failed results.",
+    "Evaluate actual images/clips/audio with qualified visual/listening reviewers; adjust implementation only on evidence.",
+    "Bind genuinely accepted assets to EDL/continuity/QC; independent Director review and explicit owner approval before Growth/YouTube preparation."
+  ],
+  "forbidden": [
+    "paid APIs",
+    "GPU rental",
+    "new unauthorized cloud resources",
+    "license acceptance without approval",
+    "Render changes",
+    "production data changes",
+    "YouTube upload/publish/schedule",
+    "fine-tuning or claiming training"
+  ],
+  "remaining_runtime_limits": [
+    "New ACE/Stable Audio/VLM workers are prospective: actual installed dependency/checkpoint compatibility not verified.",
+    "Stable Audio requires all auxiliary encoders/tokenizers in an approved fully local bundle/config; ambient caches/network are excluded.",
+    "Current Parler worker is CPU-only; pace/pause/phoneme alignment/lip-sync are planning targets, not supported synthesis controls.",
+    "Video adapter micro-budget is 9–81 native frames. 20-second planning shots require an explicit short benchmark window or a separately approved shot split/rebudget.",
+    "SVD is image-conditioned; prompt/acting/identity lock is not guaranteed.",
+    "Reference conditioning, native performance transfer, neural lip sync, advanced grading/compositing and broad VFX remain unsupported or separately researched; do not silently substitute text instructions.",
+    "General professional readiness is not established by any engineering test or checkbox."
+  ]
+}

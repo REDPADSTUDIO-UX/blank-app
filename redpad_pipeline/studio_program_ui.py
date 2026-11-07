@@ -39,10 +39,20 @@ def show_studio_program():
     program=StudioProgram(st.session_state['master_open_id']);summary=program.summary()
     if summary['project'] is None:st.error('Saved project missing.');return
     st.subheader(summary['project']['title'])
+    with st.expander('One project overview — ownership, episode progress and blockers'):
+        overview=program.production_overview()
+        st.dataframe([{k:v for k,v in a.items() if k!='findings'} for a in overview['agents']],hide_index=True)
+        st.dataframe(overview['episodes'],hide_index=True)
     area=st.radio('Filmmaking workspace',['Creative Studio','Production Studio','Post-Production Studio','Project Management','Admin / Advanced'],horizontal=True,key='master_nav')
     if area=='Creative Studio':
         role=st.radio('Creative partner',['director','story','script'],horizontal=True,key='master_creative_role')
-        if role=='story':show_series(program)
+        if role=='story':
+            show_series(program)
+            from .pre_gpu_ui import story_bridge
+            story_bridge(program)
+        if role=='script':
+            from .pre_gpu_ui import scene_drafting
+            scene_drafting(program)
         for note in summary['owner_notes']:
             if note['role']==role:st.markdown('**Owner note:** '+note['text'])
         with st.form('master_note'):
@@ -71,6 +81,8 @@ def show_studio_program():
         for output in program.store.outputs():
             st.json(json.loads(json.loads(output['payload'])['summary']))
     elif area=='Production Studio':
+        from .pre_gpu_ui import preparation
+        preparation(program)
         st.caption('Internal tasks bind the approved screenplay and Director review automatically; no copy-paste between departments.')
         episode=st.number_input('Production episode',1,summary['project']['episodes'],1,key='master_production_episode')
         if st.button('Coordinate all 17 internal specialists',key='master_queue_internal'):
@@ -79,6 +91,8 @@ def show_studio_program():
         st.dataframe(summary['hierarchy'],hide_index=True)
         _media_panel(program)
     elif area=='Post-Production Studio':
+        from .pre_gpu_ui import deliveries
+        deliveries(program)
         from .offline_speech import preflight,PRESETS,STYLES,synthesize
         if st.button('Inspect offline speech readiness',key='master_speech_status'):st.json(preflight())
         preset=st.selectbox('Synthetic Bengali voice preset',PRESETS,key='master_preset')
@@ -98,6 +112,8 @@ def show_studio_program():
                     else:st.video(str(clip))
                     st.caption('Technical output only; artistic/owner approval not inferred.')
     elif area=='Project Management':
+        from .pre_gpu_ui import feedback
+        feedback(program)
         show_trials(program)
         st.dataframe(summary['runs'],hide_index=True);st.dataframe(summary['workstreams'],hide_index=True)
         tasks=program.store.tasks()

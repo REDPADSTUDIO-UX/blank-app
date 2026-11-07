@@ -1,0 +1,576 @@
+{
+  "agents": [
+    {
+      "agent": "director",
+      "owner_facing": true,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "d239267c922c48708bb72a2dee62c412",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "qc",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "04e497042cfd4830aacaa85689179403",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "story",
+      "owner_facing": true,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "98b74a673c2c4708a7e30534aded167a",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "script",
+      "owner_facing": true,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "00043f16ef1f49b9a64d5814d049397a",
+      "provenance": "software",
+      "findings": [
+        {
+          "code": "opening_window",
+          "evidence": "s1",
+          "revision": "Mark an effective visual question in the first 20–30 seconds; a long opening scene alone does not prove a weak hook."
+        }
+      ]
+    },
+    {
+      "agent": "character",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "d6d1658814d44abe869d2bb2cc8314a3",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "art",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "ece49174dcc94e24925b485c28c3fdcd",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "location",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "33a000e4f1184291b7b9f7a38475920e",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "costume",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "storyboard",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "45cf1de3f7ed444c89661f3fa659905a",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "performance",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "cinematographer",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "baeb461e7d564044b43df9fb81d42424",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "motion",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "0b183324ce9e4d1da61389bea0440b9f",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "video",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "88403ff0b71c4bb6abd8904929a3dfd0",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "voice",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "b86045c501c846fb8aba65da98fc6a5c",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "continuity",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "09f473838cdf4669951bffe2ff6eaf15",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "music",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "23a71f29b2334c77acc71ef98544b835",
+      "provenance": "software",
+      "findings": [
+        {
+          "record": "ambience",
+          "code": "license_unverified",
+          "expected": "verified usage rights",
+          "actual": "unknown",
+          "target_agent": "music",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve license_unverified on ambience"
+        },
+        {
+          "record": "needle",
+          "code": "license_unverified",
+          "expected": "verified usage rights",
+          "actual": "unknown",
+          "target_agent": "music",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve license_unverified on needle"
+        }
+      ]
+    },
+    {
+      "agent": "editing",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "a310954e87064cdba30b644eb3263174",
+      "provenance": "software",
+      "findings": [
+        {
+          "record": "cut1",
+          "code": "missing_media",
+          "expected": "validated local media",
+          "actual": "pending",
+          "target_agent": "editing",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve missing_media on cut1"
+        },
+        {
+          "record": "cut2",
+          "code": "missing_media",
+          "expected": "validated local media",
+          "actual": "pending",
+          "target_agent": "editing",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve missing_media on cut2"
+        },
+        {
+          "record": "cut3",
+          "code": "missing_media",
+          "expected": "validated local media",
+          "actual": "pending",
+          "target_agent": "editing",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve missing_media on cut3"
+        },
+        {
+          "record": "cut4",
+          "code": "missing_media",
+          "expected": "validated local media",
+          "actual": "pending",
+          "target_agent": "editing",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve missing_media on cut4"
+        },
+        {
+          "record": "cut5",
+          "code": "missing_media",
+          "expected": "validated local media",
+          "actual": "pending",
+          "target_agent": "editing",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve missing_media on cut5"
+        },
+        {
+          "record": "cut6",
+          "code": "missing_media",
+          "expected": "validated local media",
+          "actual": "pending",
+          "target_agent": "editing",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve missing_media on cut6"
+        },
+        {
+          "record": "cut7",
+          "code": "missing_media",
+          "expected": "validated local media",
+          "actual": "pending",
+          "target_agent": "editing",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve missing_media on cut7"
+        },
+        {
+          "record": "cut8",
+          "code": "missing_media",
+          "expected": "validated local media",
+          "actual": "pending",
+          "target_agent": "editing",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve missing_media on cut8"
+        },
+        {
+          "record": "cut9",
+          "code": "missing_media",
+          "expected": "validated local media",
+          "actual": "pending",
+          "target_agent": "editing",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve missing_media on cut9"
+        }
+      ]
+    },
+    {
+      "agent": "production_manager",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "58e67c642a3948aaba1850867e02335e",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "growth",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "d7405c214fe3485991b66fe0558688f4",
+      "provenance": "software",
+      "findings": []
+    },
+    {
+      "agent": "youtube",
+      "owner_facing": false,
+      "state": "Approved",
+      "model": "",
+      "blocker": "",
+      "artistic_quality": "Not verified",
+      "task": "5c177a1c64ee4ca5a1709e504ef655e3",
+      "provenance": "software",
+      "findings": [
+        {
+          "record": "release1",
+          "code": "incomplete_release_checks",
+          "expected": "all checks reviewed",
+          "actual": {
+            "media_qc": false,
+            "rights": false,
+            "owner_review": false
+          },
+          "target_agent": "youtube",
+          "severity": "blocker",
+          "evidence_kind": "rule_based",
+          "revision": "Resolve incomplete_release_checks on release1"
+        }
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "episode": 1,
+      "outline": "Approved",
+      "sequences": "Approved",
+      "script": "Approved",
+      "director": "Approved"
+    },
+    {
+      "episode": 2,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 3,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 4,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 5,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 6,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 7,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 8,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 9,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 10,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 11,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 12,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 13,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 14,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 15,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 16,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 17,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 18,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 19,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 20,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 21,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 22,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 23,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 24,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 25,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 26,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 27,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 28,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 29,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    },
+    {
+      "episode": 30,
+      "outline": "Approved",
+      "sequences": "Not queued",
+      "script": "Not queued",
+      "director": "Not queued"
+    }
+  ],
+  "primary_owner_agents": [
+    "director",
+    "story",
+    "script"
+  ],
+  "professional_quality_verified": false,
+  "auto_publish": false
+}

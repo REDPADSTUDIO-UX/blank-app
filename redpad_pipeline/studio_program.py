@@ -94,6 +94,9 @@ class StudioProgram:
         if label in links:return links[label]
         if type(episode) is not int or not 1<=episode<=p['episodes']:raise AgentError('Invalid episode.')
         if stage=='story' and p['episodes']>5:raise AgentError('Long series requires per-episode staged architecture and review; a single giant season call is blocked. Use hierarchy/short staged research until a qualified model is available.')
+        if stage=='director_story' and 'story' in links and json.loads(runs[links['story']]['inputs']).get('bridge_compilation') is True:
+            from .story_bridge import StoryBridge
+            return StoryBridge(self).next_director_review()
         seed=json.loads((ROOT/'assets/writing/creative/scenarios.json').read_text());deps=[]
         brief={'title':p['title'],'premise':p['brief'],'genre':'Bangladeshi drama','tone':'natural Bangladeshi Bengali, restrained emotion, character wit','episodes':p['episodes'],'episode':episode,'seconds':p['seconds']}
         if stage=='story':role='story';kind='season';template=seed['season'];template['episodes']=template['episodes'][:p['episodes']]
@@ -109,6 +112,12 @@ class StudioProgram:
             else:role='director';kind='direction';template=seed['direction_script' if stage=='director_script' else 'direction_story']
         data={'creative_v1':True,'kind':kind,'brief':brief,'artifact':shape(template)}
         if stage!='story':data['source']={'$from':deps[0],'path':['artifact']}
+        if stage=='script':
+            source_run=runs[links['story']]
+            if json.loads(source_run['inputs']).get('bridge_compilation') is True:
+                from .story_bridge import StoryBridge
+                sequences=StoryBridge(self)._linked('bridge:sequences:'+str(episode));deps.append(sequences)
+                data['sequence_source']={'$from':sequences,'path':['artifact']}
         rid=self.engine.enqueue(role,data,deps,mode='local',idempotency_key='studio:'+self.project_id+':'+stage+':'+str(episode))
         with self.store.tx() as db:db.execute('INSERT INTO studio_links VALUES (?,?)',(label,rid))
         return rid
@@ -151,6 +160,33 @@ class StudioProgram:
         return {'project':dict(project) if project else None,'hierarchy':nodes,'workstreams':streams,'owner_notes':notes,
                 'runs':self.engine.runs(),'tasks':self.store.tasks(),'registered_agents':len(AGENTS),'production_ready':False,
                 'auto_publish':False,'quality':'Software/planning state only; no artistic approval inferred.'}
+
+    def production_overview(self):
+        """One current overview; task approval never implies artistic acceptance."""
+        summary=self.summary();tasks={t['id']:t for t in summary['tasks']};runs={r['id']:r for r in summary['runs']};outputs=self.store.outputs()
+        with self.store.tx() as db:links={r['label']:r['run'] for r in db.execute('SELECT * FROM studio_links')}
+        def state(rid):
+            run=runs.get(rid)
+            if not run:return 'Not queued'
+            task=tasks[run['task']]
+            try:
+                with self.store.tx() as db:self.store._current(db,task)
+            except AgentError:return 'Stale source — targeted recovery required'
+            return task['state'] if task['revision'] else run['state']
+        agents=[]
+        for role in AGENTS:
+            latest=next((r for r in summary['runs'] if tasks[r['task']]['agent']==role),None)
+            item={'agent':role,'owner_facing':role in ('director','story','script'),'state':state(latest['id']) if latest else 'Not queued',
+                  'model':latest['model'] if latest else '', 'blocker':latest['error'] if latest else 'No current department output',
+                  'artistic_quality':'Not verified','task':latest['task'] if latest else None}
+            if latest:
+                output=next((o for o in outputs if o['task']==latest['task'] and o['revision']==tasks[latest['task']]['revision']),None)
+                body=json.loads(json.loads(output['payload'])['summary']) if output else {}
+                item.update(provenance=body.get('provenance','not executed'),findings=body.get('findings',[]))
+            agents.append(item)
+        episodes=[{'episode':n,'outline':state(links.get('bridge:outline:'+str(n))),'sequences':state(links.get('bridge:sequences:'+str(n))),
+                   'script':state(links.get('script:episode'+str(n))),'director':state(links.get('director_script:episode'+str(n)))} for n in range(1,(summary['project'] or {}).get('episodes',0)+1)]
+        return {'agents':agents,'episodes':episodes,'primary_owner_agents':['director','story','script'],'professional_quality_verified':False,'auto_publish':False}
 
     def checkpoint(self,source_commit,evidence):
         if not re.fullmatch(r'[a-f0-9]{40}',source_commit) or not isinstance(evidence,dict):raise AgentError('Exact source commit and attributed evidence required.')

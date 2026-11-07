@@ -99,6 +99,12 @@ class ProfessionalLab:
             elif operation=='offline_image':
                 from .offline_image import approval as image_approval,MODEL
                 approval=image_approval(True);name=MODEL
+            elif operation=='offline_audio':
+                from .offline_audio import approval as audio_approval,ENGINES
+                engine=inputs.get('engine');approval=audio_approval(engine,True);name=ENGINES[engine]['model']
+            elif operation=='offline_vision':
+                from .offline_vision import approval as vision_approval,MODEL
+                approval=vision_approval(True);name=MODEL
             else:raise AgentError('Only approved owned generative workers may produce benchmark media; procedural sketches are excluded.')
             if name not in [p.get('repo') for p in t['model_profiles'].values()]:raise AgentError('Owned media model differs from trial profiles.')
             model_digest=approval['manifest']['sha256']
@@ -131,6 +137,10 @@ class ProfessionalLab:
         if completed and evidence.get('raw_sha256')!=hashlib.sha256(raw.encode()).hexdigest():raise AgentError('Raw response integrity check failed.')
         technical=r['state']=='Awaiting QC' and completed and bool(current) and identity_match
         body=json.loads(json.loads(current[0])['summary']) if current else None
+        if r['mode']=='media':
+            from .offline_media import media_path
+            for image in evidence.get('input_images',[]):
+                if file_sha(media_path(self.store.path,image['relative']))!=image['sha256']:raise AgentError('Visual critic source image changed after inference.')
         if technical and body.get('provenance')!='local_inference':raise AgentError('Injected provider output cannot count as real model evidence.')
         item={'id':run+':'+str(r['attempt']),'kind':'text','run':run,'role':t['role'],'model':e['model'],'model_digest':evidence.get('model_digest'),
               'attempt':r['attempt'],
@@ -154,6 +164,7 @@ class ProfessionalLab:
             task=self.store._task(db,r['task']);self.store._current(db,task)
             out=db.execute('SELECT payload FROM outputs WHERE task=? AND revision=?',(r['task'],task['revision'])).fetchone()
         body=json.loads(json.loads(out[0])['summary']);artifact=body['artifact'];meta=artifact.get('metadata',{})
+        if 'raw_text' in artifact:raise AgentError('A visual critic response is text evidence. Capture original text; it is not generated media.')
         if not artifact.get('actual_generation') or not meta.get('actual_inference_verified') or not meta.get('model_identity_verified') or meta.get('worker_inference',{}).get('inference_completed') is not True:raise AgentError('A plan, fixture or procedural sketch is not verified generative-media inference.')
         if artifact['model'] not in [p.get('repo') for p in t['model_profiles'].values()]:raise AgentError('Media model was not declared in this trial.')
         if artifact['model']!=context['expected_model'] or meta.get('model_manifest_sha256',meta.get('manifest_sha256'))!=context['expected_digest']:raise AgentError('Generated media checkpoint differs from the pre-bound model.')
@@ -226,6 +237,8 @@ class ProfessionalLab:
                 if item['kind']=='text':
                     original=db.execute('SELECT raw_text FROM local_inference_evidence WHERE run=? AND attempt=?',(item['run'],item['attempt'])).fetchone()
                     if not original or original[0]!=item['raw']:raise AgentError('Captured text differs from the original inference ledger.')
+                    for image in item.get('runtime_evidence',{}).get('input_images',[]):
+                        if file_sha(media_path(self.store.path,image['relative']))!=image['sha256']:raise AgentError('Visual critic source image changed; review is stale.')
                 if json.loads(task['refs'])!=item['source_refs']:raise AgentError('Evidence sources changed.')
         return samples
 

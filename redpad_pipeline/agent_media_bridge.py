@@ -15,6 +15,19 @@ def execute_media(key,data,sidecar):
     if root.is_symlink():raise AgentError('Media workspace must not be a symlink.')
     root=root.resolve()
     operation=data.get('operation')
+    if operation=='offline_vision' and key in ('director','qc','continuity','character','art','location','costume','storyboard','performance','cinematographer','motion'):
+        from .offline_vision import inspect
+        return inspect(data.get('request'),sidecar)
+    if operation=='mix_dialogue_cues' and key=='music':
+        from .delivery import from_sidecar
+        from .audio_post import mix
+        return mix(from_sidecar(sidecar).p,data.get('music_task'),data.get('voice_task'),data.get('receipts'),data.get('seconds'))
+    if operation=='assemble_delivery' and key=='editing':
+        from .delivery import from_sidecar
+        return from_sidecar(sidecar).render(data.get('editing_task'),data.get('receipts'),evaluation_only=data.get('evaluation_only') is True)
+    if operation=='offline_audio' and key=='music':
+        from .offline_audio import generate
+        return generate(data.get('engine'),data.get('request'),sidecar)
     if operation=='offline_image' and key in ('character','art','location','costume','storyboard'):
         from .offline_image import generate
         return generate(data.get('request'),sidecar)

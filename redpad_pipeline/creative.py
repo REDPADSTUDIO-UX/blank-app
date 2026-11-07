@@ -197,6 +197,12 @@ def prepare_creative(key,data,upstream=None):
     elif kind=='season':findings=season_check(a,brief)
     elif kind=='direction':findings=direction_check(a,source)
     else:findings=scenes_check(a,brief,kind)
+    if key=='script' and kind in ('screenplay','treatment') and data.get('sequence_source'):
+        sequence=data['sequence_source'];rows=sequence.get('records',[])
+        ids=[sid for r in rows for sid in r['scene_ids']]
+        if sequence.get('stage')!='sequences' or sequence.get('episode')!=brief['episode'] or len(ids)!=len(set(ids)) or set(ids)!={s['id'] for s in a['scenes']}:raise AgentError('Screenplay scene coverage differs from the approved episode sequences.')
+        durations={s['id']:s['seconds'] for s in a['scenes']}
+        if any(sum(durations[sid] for sid in r['scene_ids'])!=r['seconds'] for r in rows):raise AgentError('Screenplay timing differs from approved sequence budgets; request a targeted rebudget first.')
     output={'agent':key,'artifact_type':'creative_'+kind,'artifact':a,'findings':findings,
             'provenance':'software','model_inference':False,'media_generated':False,
             'human_review_required':True,'creative_quality_verified':False,'weight_training':False,
@@ -250,8 +256,11 @@ def check_handoff(key,request,sources):
         raise AgentError('Creative source must match a current approved upstream artifact.')
     kinds={v.get('artifact_type') for v in artifacts}
     if key=='script' and request['kind'] in ('screenplay','treatment'):
-        if not {'creative_season','creative_direction'}<=kinds:raise AgentError('Approved season and Director review are required before screenplay/treatment.')
+        if 'creative_season' not in kinds or not kinds.intersection({'creative_direction','grounded_season_review'}):raise AgentError('Approved season and Director review are required before screenplay/treatment.')
+        for v in artifacts:
+            if v.get('artifact_type')=='grounded_season_review' and v['artifact'].get('season_sha256')!=digest(source):raise AgentError('Compiled Director review belongs to another season version.')
         if 'episodes' not in source:raise AgentError('Script source must be the season architecture.')
         season_check(source,request['brief'])
+        if request.get('sequence_source') is not None and not any(v.get('artifact')==request['sequence_source'] and v.get('artifact_type')=='story_stage' for v in artifacts):raise AgentError('Sequence handoff must match the exact current approved Story stage.')
     if request['kind']=='rewrite' and not kinds.intersection({'creative_screenplay','creative_rewrite'}):
         raise AgentError('Rewrite requires an approved source screenplay.')

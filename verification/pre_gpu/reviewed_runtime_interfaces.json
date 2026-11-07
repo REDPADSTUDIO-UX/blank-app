@@ -1,0 +1,26 @@
+{
+  "ace": {
+    "source": "https://raw.githubusercontent.com/ace-step/ACE-Step/main/acestep/pipeline_ace_step.py",
+    "sha256": "2f6982dcf331bbe92bdb51d2bb9e657dc76cfca4437335d4388a992ec0652ba2",
+    "scope": "Small public source-interface inspection only. No package, weights, license acceptance or inference.",
+    "repository_revision": "1bee4c9f5b43e30995f8d4d33b3919197ce1bd68",
+    "pinned_source": "https://raw.githubusercontent.com/ace-step/ACE-Step/1bee4c9f5b43e30995f8d4d33b3919197ce1bd68/acestep/pipeline_ace_step.py",
+    "pinned_source_matches_inspected": true
+  },
+  "stable": {
+    "source": "https://raw.githubusercontent.com/Stability-AI/stable-audio-tools/main/stable_audio_tools/inference/generation.py",
+    "sha256": "5e3617fc38e6d487537a191a12f01f4639a0bbc7f561ceb54929f40017d4280e",
+    "scope": "Small public source-interface inspection only. No package, weights, license acceptance or inference.",
+    "repository_revision": "3241adba4fc2a85cf5b29d9eb68d42f40a28e820",
+    "pinned_source": "https://raw.githubusercontent.com/Stability-AI/stable-audio-tools/3241adba4fc2a85cf5b29d9eb68d42f40a28e820/stable_audio_tools/inference/generation.py",
+    "pinned_source_matches_inspected": true
+  },
+  "stable_factory": {
+    "source": "https://raw.githubusercontent.com/Stability-AI/stable-audio-tools/main/stable_audio_tools/models/factory.py",
+    "sha256": "24cd3b7c3d43af24914e02380f7b9f8cb2b14dbb7c7102dc013754aca2b6261b",
+    "scope": "Small public source-interface inspection only. No package, weights, license acceptance or inference.",
+    "repository_revision": "3241adba4fc2a85cf5b29d9eb68d42f40a28e820",
+    "pinned_source": "https://raw.githubusercontent.com/Stability-AI/stable-audio-tools/3241adba4fc2a85cf5b29d9eb68d42f40a28e820/stable_audio_tools/models/factory.py",
+    "pinned_source_matches_inspected": true
+  }
+}

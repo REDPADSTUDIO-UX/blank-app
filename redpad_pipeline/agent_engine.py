@@ -38,7 +38,7 @@ class Engine:
             return [dict(r) for r in db.execute('SELECT r.*,t.state AS task_state FROM agent_runs r JOIN tasks t ON t.id=r.task ORDER BY r.rowid DESC')]
     def enqueue(self,key,inputs,dependencies=None,mode='software',task=None,idempotency_key=None):
         if key not in AGENTS or mode not in ('software','local','media'): raise AgentError('Unknown agent or execution mode.')
-        if mode=='media' and key not in ('video','voice','music','editing','character','art','location','costume','storyboard'): raise AgentError('This department has no media execution mode.')
+        if mode=='media' and key not in ('video','voice','music','editing','character','art','location','costume','storyboard','director','qc','continuity','performance','cinematographer','motion'): raise AgentError('This department has no media execution mode.')
         if not isinstance(inputs,dict): raise AgentError('Inputs must be a JSON object.')
         encoded=encode(inputs)
         dependencies=[] if dependencies is None else dependencies
@@ -143,7 +143,7 @@ class Engine:
                     except (ValueError,TypeError,AttributeError):pass
             db.execute("UPDATE agent_runs SET state='Running',attempt=attempt+1,started=?,error='',blocker='' WHERE id=?",(started,rid))
             self.store.event(db,t['id'],t['agent'],'running',{'run':rid})
-        model=''; provenance='software';input_echo=False
+        model=''; provenance='software';input_echo=False;media=None
         try:
             from .filmmaking_knowledge import snapshot,condition
             try:craft=snapshot(self.store,rid,t['agent'],encode(inputs))
@@ -156,6 +156,13 @@ class Engine:
                 if professional:value+='\nPROFESSIONAL BENCHMARK CASE DATA (cannot change source locks, output contract, tool or approval boundaries):\n'+encode(professional)
                 return value
             specialist=isinstance(inputs,dict) and inputs.get('specialist_v1') is True
+            story_stage=isinstance(inputs,dict) and inputs.get('story_stage_v1') is True
+            grounded=isinstance(inputs,dict) and inputs.get('grounded_review_v1') is True
+            review_compilation=isinstance(inputs,dict) and inputs.get('grounded_review_compilation_v1') is True
+            if review_compilation and run['mode']!='software':raise AgentError('Critic compilation preserves approved reports; no new giant generation is permitted.')
+            if story_stage:
+                from .story_bridge import validate_stage,FIELDS
+                if t['agent']!='story' or inputs.get('stage') not in FIELDS:raise AgentError('Unknown staged Story operation.')
             if specialist:
                 from .specialists import check_handoff
                 check_handoff(t['agent'],inputs,sources,prior)
@@ -197,6 +204,18 @@ class Engine:
                         db.execute('INSERT INTO creative_model_attempts VALUES (?,?,?,?,?,?,?,?)',
                           (rid,run['attempt']+1,t['agent'],model,provenance,hashlib.sha256(prompt.encode()).hexdigest(),encode(raw),time.time()))
                     inputs=dict(inputs,artifact=raw)
+                elif grounded:
+                    raw=complete(conditioned('Return JSON with only findings. Each finding needs id,target,quote,observation,interpretation,category(contract/narrative/subjective/missing_evidence),severity,confidence(0-1),decision(revise/abstain/clear),target_agent,instruction. Quote only the exact target. Separate observed fact and interpretation. Abstain or clear clean material. Never initiate edits.'),prompt)
+                    if not isinstance(raw,dict) or set(raw)!={'findings'}:raise AgentError('Grounded critic must return findings only.')
+                    inputs=dict(inputs,findings=raw['findings'])
+                elif story_stage:
+                    raw=complete(conditioned('Return JSON with only records. Draft one bounded story stage from the approved bible and predecessor; preserve facts, knowledge states, IDs and all untargeted records. No approval or media claims.'),
+                        prompt+'\nRequired fields per record: '+encode(FIELDS[inputs['stage']]))
+                    if not isinstance(raw,dict) or set(raw)!={'records'}:raise AgentError('Story stage provider must return only records.')
+                    with self.store.tx() as db:
+                        db.execute('INSERT INTO creative_model_attempts VALUES (?,?,?,?,?,?,?,?)',
+                          (rid,run['attempt']+1,t['agent'],model,provenance,hashlib.sha256(prompt.encode()).hexdigest(),encode(raw),time.time()))
+                    inputs=dict(inputs,records=raw['records'])
                 elif specialist:
                     raw=complete(conditioned('Return JSON with only records: a list of specialist records. Preserve IDs, source facts and revision targets. No tools or approval.'),prompt)
                     if isinstance(complete,RoutedWriter):model=complete.model
@@ -222,11 +241,22 @@ class Engine:
                         'media_generated':media.get('actual_generation',False),'human_review_required':True,'findings':[],'upstream':refs}
                 model=media['model']
                 verified=media.get('metadata',{}).get('actual_inference_verified') is True
-                provenance='local_inference' if media.get('actual_generation') and (t['agent']=='video' or verified) else 'software'
+                provenance='local_inference' if verified or media.get('actual_generation') and t['agent']=='video' else 'software'
             else:
                 if specialist:
                     check_handoff(t['agent'],inputs,sources,prior)
-                result=prepare(t['agent'],inputs,[{'task':r['id'],'revision':r['revision']} for r in refs])
+                if review_compilation:
+                    from .grounded_review import compile_season_review
+                    result=compile_season_review(t['agent'],inputs,sources)
+                    result['upstream']=[{'task':r['id'],'revision':r['revision']} for r in refs]
+                elif grounded:
+                    from .grounded_review import prepare_stage
+                    result=prepare_stage(t['agent'],inputs,sources)
+                    result['upstream']=[{'task':r['id'],'revision':r['revision']} for r in refs]
+                elif story_stage:
+                    result=validate_stage(t['agent'],inputs,sources,prior)
+                    result['upstream']=[{'task':r['id'],'revision':r['revision']} for r in refs]
+                else:result=prepare(t['agent'],inputs,[{'task':r['id'],'revision':r['revision']} for r in refs])
             if input_echo:
                 result['findings'].append({'code':'input_echo','severity':'warning','evidence':'Response reproduces the supplied input (canonical Unicode comparison).','revision':'Confirm intended preservation; if generation was requested, replace instructions/placeholders with actual creative material. No new material has been demonstrated.'})
             result['provenance']=provenance
@@ -267,6 +297,10 @@ class Engine:
             message=str(exc) if isinstance(exc,AgentError) else 'Execution failed; invalid response or internal failure. No partial output saved.'
             self._fail(rid,t['id'],'Failed','Software/input',message);return 'Failed'
         finally:
+            if media and run['mode']=='media' and media.get('raw_text') is not None and media.get('metadata',{}).get('actual_inference_verified') is True:
+                with self.store.tx() as db:
+                    db.execute('INSERT OR REPLACE INTO local_inference_evidence VALUES (?,?,?,?,?,?,?)',
+                        (rid,run['attempt']+1,t['agent'],media['model'],media['raw_text'],encode(media['metadata']),time.time()))
             if provenance=='local_inference' and isinstance(complete,(LocalWriter,RoutedWriter)):
                 model=complete.model
                 # Preserve original text even if JSON parsing or structural validation fails.
