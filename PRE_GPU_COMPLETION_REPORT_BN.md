@@ -1,6 +1,6 @@
 # REDPAD AI Studio — Pre-GPU Engineering Completion & Capability Handoff
 
-**Continuation: `e43bf25eefe95565c91a535fb84d4c18b41a5707`; branch: `feature/video-music-editing-studio`.**
+**Continuation: `e43bf25eefe95565c91a535fb84d4c18b41a5707`; recovered full implementation checkpoint: `b459290568a880da15a8c7dd4ad67eaf071782e8`; branch: `feature/video-music-editing-studio`.**
 
 এই ধাপে documentation-এর পাশাপাশি executable software correction হয়েছে। একই মৌলিক “ফিরতি টিকিট” project-এর ৩০-পর্বের architecture, প্রথম পর্বের screenplay এবং ১৭ specialist department নিয়ে **২০-agent / ৫৪-stage authored engineering exercise** সফল। তার সঙ্গে bounded Director review, per-scene screenplay assembly, genuine media import, audio mix ও recovery paths পরীক্ষা হয়েছে।
 
@@ -89,14 +89,16 @@ Actual owner/expert feedback collected: **০**। Software independently review
 
 ## F. Tests, failures ও evidence
 
-- Full regression: **368 tests OK**, captured wall time 68.342s; [original log](verification/pre_gpu/regression.json)। Additional **8 standalone workflow checks passed**; [original logs](verification/pre_gpu/standalone.json)। Test count readiness score নয়।
+Workspace interruption-এর পরে সব source, logs, ৫৪টি authored output ও binary codec artifacts অক্ষত উদ্ধার হয়েছে। আগের completed acceptance project/real model generation পুনরায় চালানো হয়নি। Read-only reopen-এ original54 output hashes মেলানো হয়েছে। শেষ অসম্পূর্ণ correction: explicit boolean evaluation flag এবং derived mix/render fixture provenance এখন parent থেকে বহন হয়; একটি evaluation fixture import/mix করে production asset বানানো যাবে না। [Targeted retest](verification/pre_gpu/fixture_provenance_retest.json); final recovery regression: **368 tests OK**, 68.621s captured wall time; [log](verification/pre_gpu/recovery_regression.json)। আগের8 standalone checks-এর evidence অক্ষত রাখা হয়েছে; অপ্রয়োজনীয়ভাবে সেগুলো বা completed creative/model outputs আবার তৈরি করা হয়নি।
+
+- Full regression: **368 tests OK (original pre-interruption run)**, captured wall time 68.342s; [original log](verification/pre_gpu/regression.json)। Additional **8 standalone workflow checks passed**; [original logs](verification/pre_gpu/standalone.json)। Test count readiness score নয়।
 - New functional checks: full20-role shared project; locked arc correction; wrong native duration/control rejection; per-scene raw preservation/assembly/tamper;30 bounded Director critiques then compilation; DAG fan-out/cycle; actual codec import/EDL/render; actual PCM mix; silent subtitle handling; cross-thread compute lease/release; original voice/speaker mapping; blocked audio/VLM workers; no-call UI rendering।
 - Failed development checks retained: original Director record overflow; old DAG fixture stall interrupted (no neural worker); missing fixture voice/sound fields; test clone project-ID mismatch; voice configuration error-type compatibility; over-strict micro-scene action cap। [Failure/correction notes](verification/pre_gpu/development_checks.json), [initial failed regression](verification/pre_gpu/regression_initial_failed.json)। Model output secretly polished নয়।
 - [Read-only resume check](verification/pre_gpu/resume_check.json): saved54 stage hashes reopened, regenerated stage0 / model calls0। [SHA manifest](verification/pre_gpu/manifest.json) binds source/evidence/report files. Earlier verification manifests describe their historical commit snapshots; original model outputs remain untouched।
 
 ## G. GitHub checkpoint ও recovery
 
-Verified work is saved only to the feature branch; the exact final SHA is in the delivery message/Git history. The source baseline is e43bf25; no reset/overwrite of newer feature work occurred. Existing dirty older `studio` checkout was preserved; implementation used the fresh feature checkout.
+Recovered full source/evidence was saved at `b459290568a880da15a8c7dd4ad67eaf071782e8`; the final sealing commit adds the provenance guard, verification and this update. Verified work is saved only to the feature branch; the exact final SHA is in the delivery message/Git history. The source baseline is e43bf25; no reset/overwrite of newer feature work occurred. Existing dirty older `studio` checkout was preserved; implementation used the fresh feature checkout.
 
 Next authorized agent: read this report + [owner scope](assets/pre_gpu/owner_scope.md) + completion_matrix.json + gpu_human_handoff.json; inspect actual feature HEAD before changes. Owner need not use code/terminal. Engineering recovery entry point:
 

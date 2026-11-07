@@ -18,7 +18,7 @@
       "actual_code_correction": "story_bridge; StudioProgram.queue_creative",
       "specialist_workflow_improvement": "Bible/arcs/30 bounded outlines/state/knowledge/setup-payoff → compiled season → sequence budgets; locked targeted revision; archive import without regenerating.",
       "missing_intelligence_capability": "Causal Bengali narrative and long-form memory — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "The staged season/episode bridge is implemented; stronger-model causal originality, motivation, emotional arcs, long-season memory and earned hooks still require real output evaluation.",
       "model_integration": {
         "writer9": "existing",
         "writer12": "existing",
@@ -194,7 +194,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "End-to-end long-series draft-to-approved-season bridge and capable writer remain unverified. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "The staged season/episode bridge is implemented; stronger-model causal originality, motivation, emotional arcs, long-season memory and earned hooks still require real output evaluation.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "script",
@@ -212,7 +213,7 @@
       "actual_code_correction": "episode_scenes; creative sequence binding; pre_gpu_ui.scene_drafting",
       "specialist_workflow_improvement": "Per-scene bounded raw generation, unchanged assembly, source/sequence/timing validation, weak 4B/default-thinking repeats blocked, failure/version recovery.",
       "missing_intelligence_capability": "Bangladeshi spoken dialogue, subtext, humor, restrained emotion — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Bounded scene assembly and target locks work; natural Bangladeshi speech, chemistry, wit, restraint and reliable model rewrites remain unverified.",
       "model_integration": {
         "writer9": "existing",
         "writer12": "existing",
@@ -257,7 +258,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "A stronger writer must pass unseen scenes and exact revision instructions; current 4B samples failed creative quality. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Bounded scene assembly and target locks work; natural Bangladeshi speech, chemistry, wit, restraint and reliable model rewrites remain unverified.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "director",
@@ -274,7 +276,7 @@
       "actual_code_correction": "story_bridge.next_director_review; grounded_review; offline_vision; StudioProgram.production_overview",
       "specialist_workflow_improvement": "Per-episode grounded critique, observation/interpretation/confidence/abstention, approved report compilation; no automatic rewrite.",
       "missing_intelligence_capability": "Grounded dramatic criticism plus visual/performance judgment — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Real-model criticism precision/recall, uncertainty calibration and actual visual/performance judgment await installed approved candidates and independent review.",
       "model_integration": {
         "writer9": "existing",
         "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified",
@@ -330,7 +332,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Separate critic calibration from approval; multimodal video understanding and actual directed-shot evaluation missing. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Real-model criticism precision/recall, uncertainty calibration and actual visual/performance judgment await installed approved candidates and independent review.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "qc",
@@ -347,7 +350,7 @@
       "actual_code_correction": "grounded_review.calibrate; offline_vision; professional_readiness",
       "specialist_workflow_improvement": "Balanced source-hash controls, unsupported quotation retained, actual image/raw-response inspection interface, independent QC/owner boundary.",
       "missing_intelligence_capability": "Calibrated multimodal defect detection with uncertainty — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Real multimodal defect/clean-control accuracy and qualified adjudication remain unverified; no self-approval permitted.",
       "model_integration": {
         "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified",
         "writer9": "existing",
@@ -400,7 +403,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "A line-ID match alone is insufficient; requires actual media and specialist adjudication. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Real multimodal defect/clean-control accuracy and qualified adjudication remain unverified; no self-approval permitted.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "character",
@@ -418,7 +422,7 @@
       "actual_code_correction": "production_execution.shot/voice; offline_image; offline_vision",
       "specialist_workflow_improvement": "Approved identity hashes/psychology/relationships and reference lists shared; no fabricated identity lock.",
       "missing_intelligence_capability": "Psychology bible and stable visual identity — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Text-to-image interface and approved identity handoff exist; actual matched references and reference-conditioned identity control are not validated.",
       "model_integration": {
         "writer9": "existing",
         "sdxl": "offline worker implemented, real inference blocked; no reference identity control",
@@ -468,7 +472,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Image/reference conditioning adapter and approved identity references are needed; text-to-image alone does not solve identity lock. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Text-to-image interface and approved identity handoff exist; actual matched references and reference-conditioned identity control are not validated.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "art",
@@ -486,7 +491,7 @@
       "actual_code_correction": "production_execution.shot; offline_image; offline_vision",
       "specialist_workflow_improvement": "Approved set/props/palette/culture/light joins screenplay and location in one immutable shot packet.",
       "missing_intelligence_capability": "Bangladeshi production design and prop continuity — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Approved production-design handoff works; consistent photorealistic sets, prop placement and cultural/lighting fidelity need real images and production-designer review.",
       "model_integration": {
         "writer9": "existing",
         "sdxl": "offline worker implemented, real inference blocked; no reference identity control",
@@ -537,7 +542,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Actual set-image consistency and production-designer review missing. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Approved production-design handoff works; consistent photorealistic sets, prop placement and cultural/lighting fidelity need real images and production-designer review.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "location",
@@ -554,7 +560,7 @@
       "actual_code_correction": "production_execution.shot; offline_vision",
       "specialist_workflow_improvement": "Approved room geometry/openings/access/reference shared with camera/performance; contradictory/ambiguous joins blocked.",
       "missing_intelligence_capability": "Spatial geography and physically buildable camera access — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Room graph/camera-access handoff works; generated plan-to-view spatial consistency and practical camera paths need actual visual review.",
       "model_integration": {
         "writer9": "existing",
         "sdxl": "offline worker implemented, real inference blocked; no reference identity control",
@@ -605,7 +611,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Needs plan-to-view constraint conditioning, not only free text-to-image. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Room graph/camera-access handoff works; generated plan-to-view spatial consistency and practical camera paths need actual visual review.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "costume",
@@ -622,7 +629,7 @@
       "actual_code_correction": "production_execution.shot; existing costume continuity checks",
       "specialist_workflow_improvement": "One wardrobe state per actual scene/character; source-version lock, no silent wardrobe substitution.",
       "missing_intelligence_capability": "Character-appropriate wardrobe and scene state — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Wardrobe/reference state handoff works; generated identity/outfit/material consistency and justified visual changes need real images and costume review.",
       "model_integration": {
         "writer9": "existing",
         "sdxl": "offline worker implemented, real inference blocked; no reference identity control"
@@ -671,7 +678,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Reference-conditioned wardrobe edits and visual continuity evaluation missing. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Wardrobe/reference state handoff works; generated identity/outfit/material consistency and justified visual changes need real images and costume review.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "storyboard",
@@ -689,7 +697,7 @@
       "actual_code_correction": "production_execution.shot",
       "specialist_workflow_improvement": "Stable shot/scene IDs, reveal action, timing, screen geography and shared identity/reference snapshot.",
       "missing_intelligence_capability": "Dramatic coverage and visual continuity — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Shared shot planning is executable; real panel generation, reveal order and generated-coverage clarity remain unverified.",
       "model_integration": {
         "writer9": "existing",
         "sdxl": "offline worker implemented, real inference blocked; no reference identity control",
@@ -740,7 +748,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Panel-generation conditioning and comparison to actual shot outputs still required. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Shared shot planning is executable; real panel generation, reveal order and generated-coverage clarity remain unverified.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "performance",
@@ -757,7 +766,7 @@
       "actual_code_correction": "production_execution.shot; offline_vision",
       "specialist_workflow_improvement": "Objective/tactic/partner reaction/gaze/body/pause linked to exact shot; oversized pause and unsupported acting control blocked.",
       "missing_intelligence_capability": "Playable acting direction and observable performance — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Playable acting specification exists; observable emotional acting, gaze/partner reactions and performance-conditioned model transfer remain unverified; Animate alternative needs separate reference/license/compute approval.",
       "model_integration": {
         "writer9": "existing",
         "wan": "existing",
@@ -812,7 +821,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "No current video engine guarantees acting control; paired real clips and expert review required. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Playable acting specification exists; observable emotional acting, gaze/partner reactions and performance-conditioned model transfer remain unverified; Animate alternative needs separate reference/license/compute approval.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "cinematographer",
@@ -830,7 +840,7 @@
       "actual_code_correction": "production_execution.shot/queue_video",
       "specialist_workflow_improvement": "Exactly one shot camera record, lens/height/axis/lighting/reference pin; textual intent separated from verified model controls.",
       "missing_intelligence_capability": "Motivated composition, light and camera behavior — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Shot-specific lens/light/axis intent is pinned; actual generated camera/composition/light fidelity is unverified and unsupported controls remain editorial only.",
       "model_integration": {
         "writer9": "existing",
         "sdxl": "offline worker implemented, real inference blocked; no reference identity control",
@@ -886,7 +896,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Reference/geometry control and measured generated-camera fidelity missing. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Shot-specific lens/light/axis intent is pinned; actual generated camera/composition/light fidelity is unverified and unsupported controls remain editorial only.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "motion",
@@ -904,7 +915,7 @@
       "actual_code_correction": "production_execution.shot; existing motion continuity validator",
       "specialist_workflow_improvement": "Absolute chronology → explicit shot-local offset; duration/identity/support/contact/object continuity checks; no simulated physics claim.",
       "missing_intelligence_capability": "Temporal physics, contact and object permanence — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Chronology/contact/object constraints are checked; actual frame-level physics, continuity and permanence require generated clips and movement review; no physics simulation claimed.",
       "model_integration": {
         "writer9": "existing",
         "wan": "existing",
@@ -959,7 +970,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Generated frames and frame-level annotations are required; planned constraints are not motion evidence. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Chronology/contact/object constraints are checked; actual frame-level physics, continuity and permanence require generated clips and movement review; no physics simulation claimed.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "video",
@@ -976,7 +988,7 @@
       "actual_code_correction": "production_execution.queue_video; resource_guard; offline_media",
       "specialist_workflow_improvement": "Wan/LTX/SVD preserved; unsupported controls rejected, exact native frame grid, explicit short evaluation window; no long-take/stretch claim.",
       "missing_intelligence_capability": "Realistic and reproducible image-conditioned video — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Wan/LTX/SVD owned adapters exist; exact checkpoint/component license, package/GPU compatibility, actual native inference and cinematic quality remain unverified. Long shots require explicit window/split/rebudget.",
       "model_integration": {
         "wan": "existing",
         "ltx": "existing",
@@ -1027,7 +1039,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Approved checkpoints/GPU absent. SVD-XT has no text control; compare only equivalent supported conditions. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Wan/LTX/SVD owned adapters exist; exact checkpoint/component license, package/GPU compatibility, actual native inference and cinematic quality remain unverified. Long shots require explicit window/split/rebudget.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "voice",
@@ -1044,7 +1057,7 @@
       "actual_code_correction": "specialist_adapters.LocalSpeechAdapter; production_execution.voice/queue_speech/bind_voice_audio",
       "specialist_workflow_improvement": "Exact screenplay segmentation, explicit synthetic preset/style, versioned lexicon, original/normalized text, measured audio binding and lip-sync planning; unsupported pace/pause controls not claimed.",
       "missing_intelligence_capability": "Bangladeshi pronunciation, prosody and speaker consistency — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Exact transcript/preset/style/lexicon and measured-audio binding exist; approved speech weights, natural Bangladeshi accent/emotion, phoneme alignment and actual lip-sync/listening evaluation remain pending.",
       "model_integration": {
         "writer9": "existing",
         "parler": "existing",
@@ -1085,12 +1098,14 @@
       "model_capability_status": "No new model calls; no production winner; prior weak CPU writing evidence retained.",
       "statuses": [
         "Specialist Workflow Verified",
-        "Human Creative Review Pending"
+        "Human Creative Review Pending",
+        "Real Media Inference Blocked"
       ],
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Preset TTS versus reference-audio TTS are separate arms; IndicF5 needs authorized voice reference and reviewed code. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Exact transcript/preset/style/lexicon and measured-audio binding exist; approved speech weights, natural Bangladeshi accent/emotion, phoneme alignment and actual lip-sync/listening evaluation remain pending.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "continuity",
@@ -1108,7 +1123,7 @@
       "actual_code_correction": "agents.AgentStore._current; production_execution.shot; offline_vision",
       "specialist_workflow_improvement": "Transaction-local DAG memoization + cycle/stale rejection, state/props/wardrobe/axis records and actual frame-inspection interface.",
       "missing_intelligence_capability": "Longitudinal state tracking across real media — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Source DAG/state/shot safeguards work; actual visual and semantic continuity accuracy against independently labeled footage is unverified.",
       "model_integration": {
         "writer9": "existing",
         "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified"
@@ -1158,7 +1173,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Requires real matched frames and expert-labeled positive and negative examples. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Source DAG/state/shot safeguards work; actual visual and semantic continuity accuracy against independently labeled footage is unverified.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "music",
@@ -1174,9 +1190,9 @@
       "original_gap": "Procedural sketch বনাম neural score ও genuine cue-to-dialogue mix আলাদা executable handoff ছিল না।",
       "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
       "actual_code_correction": "offline_audio; audio_worker; audio_post.mix",
-      "specialist_workflow_improvement": "Prospective ACE/SFX fixed local adapters, explicit weights/license/dependency gates; real receipt-bound PCM mix, measured dialogue-window ducking/limiter and rights checks.",
+      "specialist_workflow_improvement": "Prospective ACE/SFX fixed local adapters, explicit weights/license/dependency gates; real receipt-bound PCM mix, measured dialogue-window ducking/limiter and rights checks. Explicit fixture evaluation flag and derived-fixture provenance are preserved through mix/render/import; no fixture promotion.",
       "missing_intelligence_capability": "Musical structure, dramatic fit and motivated Foley — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Receipt-bound PCM mixing is exercised; prospective ACE/SFX package/checkpoint/local auxiliary compatibility, actual neural cues, musical structure and dialogue-mixed listening quality remain pending.",
       "model_integration": {
         "writer9": "existing",
         "music35": "prospective fixed ACE local worker implemented; package/checkpoint/API/GPU compatibility unverified",
@@ -1228,7 +1244,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Music/SFX inference adapters and listening evaluation missing; procedural tones are not a cinematic score. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Receipt-bound PCM mixing is exercised; prospective ACE/SFX package/checkpoint/local auxiliary compatibility, actual neural cues, musical structure and dialogue-mixed listening quality remain pending.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "editing",
@@ -1246,9 +1263,9 @@
       "original_gap": "Genuine asset import/delivery receipt অনুপস্থিত; silent shot-এর empty subtitle rejected।",
       "root_cause": "Missing executable handoff/bounded source handling or specialist operation; fundamental model quality remains a separate unproven dependency.",
       "actual_code_correction": "delivery; specialist_media; resource_guard",
-      "specialist_workflow_improvement": "Actual isolated asset receipts, approved EDL binding, sequential bounded decoder assembly, source hash/duration recheck, SRT export; fixtures cannot become production delivery.",
+      "specialist_workflow_improvement": "Actual isolated asset receipts, approved EDL binding, sequential bounded decoder assembly, source hash/duration recheck, SRT export; fixtures cannot become production delivery. Explicit fixture evaluation flag and derived-fixture provenance are preserved through mix/render/import; no fixture promotion.",
       "missing_intelligence_capability": "Narrative editing, sync and technical delivery — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Genuine asset import, bounded hard-cut assembly and delivery receipts are implemented; accepted real upstream footage, emotional editing/sync review and advanced VFX/grading/compositing remain outside verified scope.",
       "model_integration": {
         "writer9": "existing",
         "vision7": "prospective fixed offline image/frame critic implemented; actual inference and judgment accuracy unverified",
@@ -1294,7 +1311,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Existing renderer needs approved genuine assets and expert review, not replacement by a model. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Genuine asset import, bounded hard-cut assembly and delivery receipts are implemented; accepted real upstream footage, emotional editing/sync review and advanced VFX/grading/compositing remain outside verified scope.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "production_manager",
@@ -1313,7 +1331,7 @@
       "actual_code_correction": "resource_guard; AgentStore.tx/_current; StudioProgram.production_overview",
       "specialist_workflow_improvement": "One OS-held local compute lease, isolated resource block, explicit stopped-worker recovery, connection close, DAG reuse, one episode/agent/blocker overview.",
       "missing_intelligence_capability": "Resource-aware real execution and recovery — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Resource leases, dependency/cycle checks and explicit recovery work; real multi-model load/memory/throughput budgets and specialist scheduling judgment need approved workloads.",
       "model_integration": {
         "writer9": "existing",
         "deterministic": "existing_python_orchestration"
@@ -1357,7 +1375,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Planning contracts are implemented; real multi-model workload execution and resource measurements remain unverified. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Resource leases, dependency/cycle checks and explicit recovery work; real multi-model load/memory/throughput budgets and specialist scheduling judgment need approved workloads.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "growth",
@@ -1375,7 +1394,7 @@
       "actual_code_correction": "production_execution.queue_promotion",
       "specialist_workflow_improvement": "Source-title/action based package, exact delivery hash and version-specific QC prerequisite; fixture promotion rejected; translation/thumbnail/trailer remain explicitly pending.",
       "missing_intelligence_capability": "Truthful Bengali audience positioning and visual packaging — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Source-bound preparation works; actual approved film/thumbnail/trailer assets, truthful audience packaging, translations and audience/editorial results remain pending.",
       "model_integration": {
         "writer9": "existing",
         "sdxl": "offline worker implemented, real inference blocked; no reference identity control"
@@ -1419,7 +1438,8 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Requires approved actual episode assets and human packaging/audience review. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Source-bound preparation works; actual approved film/thumbnail/trailer assets, truthful audience packaging, translations and audience/editorial results remain pending.",
+      "bounded_pre_gpu_workflow_verified": true
     },
     {
       "agent": "youtube",
@@ -1436,7 +1456,7 @@
       "actual_code_correction": "production_execution.queue_readonly_release; existing secure YouTube boundaries",
       "specialist_workflow_improvement": "Approved source-derived Growth package hash → read-only release preparation; rights/media/owner checks remain false until actually supplied; no API upload/scope escalation.",
       "missing_intelligence_capability": "Read-only channel validation and safe release preparation — professional model capability remains unverified.",
-      "missing_specialist_tools": "Real conditioning/alignment/complex VFX where not implemented remains explicitly unsupported; no unseen output accepted.",
+      "missing_specialist_tools": "Read-only source-bound release preparation works; consented channel metadata/rights/media and owner checks remain pending. Upload/publish/schedule remain prohibited.",
       "model_integration": {
         "writer9": "existing",
         "deterministic": "existing_python_orchestration"
@@ -1480,10 +1500,13 @@
       "pre_gpu_readiness_status": "Bounded specialist preparation/handoff workflow exercised with authored fixtures; vendor runtime and artistic capability remain unverified.",
       "pre_gpu_engineering_complete_claimed": false,
       "production_quality_verified": false,
-      "remaining_blocker": "Real read-only connection evidence and approved media still needed; publishing remains outside scope. The named functional bridge is now implemented where described; real model/media quality and advanced unsupported operations remain separate."
+      "remaining_blocker": "Read-only source-bound release preparation works; consented channel metadata/rights/media and owner checks remain pending. Upload/publish/schedule remain prohibited.",
+      "bounded_pre_gpu_workflow_verified": true
     }
   ],
   "new_model_calls": 0,
   "human_reviews": 0,
-  "production_quality_verified_count": 0
+  "production_quality_verified_count": 0,
+  "recovered_implementation_checkpoint": "b459290568a880da15a8c7dd4ad67eaf071782e8",
+  "recovery_status": "Full source and existing artifacts recovered unchanged; final fixture provenance audit corrected."
 }

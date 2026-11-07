@@ -1,5 +1,7 @@
 # REDPAD AI Studio — Unified Master Checkpoint
 
+> Final recovered-tree regression: 368 tests OK; original8 standalone evidence preserved.
+> Final fixture-provenance guard implemented; original54 acceptance outputs recovered unchanged.
 > পূর্বের environment interruption-এর workspace উদ্ধার হয়েছে; [historical recovery note](PRE_GPU_INTERRUPTED_RECOVERY.md) অক্ষত।
 > সর্বশেষ functional preparation: [Pre-GPU Completion & Capability Handoff](PRE_GPU_COMPLETION_REPORT_BN.md)।
 > ২০-agent shared authored workflow /54 software stages, bounded season/scene bridge, shared shots, actual asset delivery/mix, offline audio/VLM interfaces, feedback and recovery।

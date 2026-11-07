@@ -29,6 +29,7 @@ class Delivery:
             source={'task':run['task'],'revision':task['revision'],'body_sha256':digest(body)}
             metadata=artifact.get('metadata',{})
             origin='verified_local_inference' if metadata.get('actual_inference_verified') is True and metadata.get('model_identity_verified') is True and metadata.get('worker_inference',{}).get('inference_completed') is True else 'source_output_unverified_neural_origin'
+            if metadata.get('evaluation_only') is True or metadata.get('contains_fixture_inputs') is True:origin='manually_authored_fixture'
         info=inspect_clip(path,self.p.store.path);p=media_path(self.p.store.path,path)
         value={'path':path,'sha256':sha(p),'inspection':info,'owner':owner,'rights':rights,'origin':origin,'source':source,
                'model_metadata':metadata,'professional_quality_verified':False,'human_artistic_review_completed':False}
@@ -66,6 +67,7 @@ class Delivery:
         return self.p.engine.enqueue('editing',data,list(dict.fromkeys(deps)),mode='software',idempotency_key='receipt-edl:'+digest([plan_task,data]))
     @serialized
     def render(self,editing_task,receipts,*,evaluation_only=False,timeout=300):
+        if type(evaluation_only) is not bool:raise AgentError('Evaluation-only flag must be an explicit boolean.')
         if type(timeout) is not int or not 30<=timeout<=900:raise AgentError('Bounded assembly timeout required.')
         body=self.p.current_output(editing_task,'editing');rows=body['artifact']['records']
         if not isinstance(receipts,dict) or not 1<=len(rows)<=80:raise AgentError('Bounded approved EDL and receipt map required.')

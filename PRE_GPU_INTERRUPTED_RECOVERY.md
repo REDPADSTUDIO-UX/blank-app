@@ -1,6 +1,8 @@
 # Pre-GPU implementation — interrupted workspace recovery
 
-**Status: PARTIAL RECOVERY, not a completed 20-agent delivery.**
+**Historical interruption record — superseded by full workspace recovery.**
+
+The complete implementation, original logs, authored outputs and labeled codec artifacts were recovered unchanged and saved at `b459290568a880da15a8c7dd4ad67eaf071782e8`. The formerly unfinished fixture-provenance guard is now implemented; see `verification/pre_gpu/fixture_provenance_retest.json` and `verification/pre_gpu/recovery_regression.json`. The record below describes the earlier outage and is retained as history. Current report: [PRE_GPU_COMPLETION_REPORT_BN.md](PRE_GPU_COMPLETION_REPORT_BN.md).
 
 Base: e43bf25eefe95565c91a535fb84d4c18b41a5707.
 Authorized branch: feature/video-music-editing-studio.

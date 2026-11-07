@@ -30,5 +30,18 @@
   "new_model_calls": 0,
   "new_large_model_downloads": 0,
   "actual_human_reviews": 0,
-  "weight_training": false
+  "weight_training": false,
+  "recovery": {
+    "full_workspace_recovered": true,
+    "saved_implementation_checkpoint": "b459290568a880da15a8c7dd4ad67eaf071782e8",
+    "original_54_outputs_reopened_without_generation": true,
+    "new_model_calls_after_recovery": 0,
+    "new_human_reviews_after_recovery": 0,
+    "unfinished_fixture_taint_guard": "implemented; explicit bool, inherited fixture provenance, derived mix flag; targeted tests passed",
+    "final_required_regression": {
+      "tests": 368,
+      "exit_code": 0,
+      "evidence": "recovery_regression.json"
+    }
+  }
 }

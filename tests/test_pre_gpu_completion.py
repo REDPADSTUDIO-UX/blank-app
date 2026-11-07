@@ -135,6 +135,7 @@ class PreGpuCompletion(unittest.TestCase):
   rid=delivery.queue_edl(self.e['tasks']['editing'],bindings,{r['shot']:2 for r in rows});tid=self.approve(rid)
   receipts={'imports/codec-fixture.mp4':v,'imports/signal-fixture.wav':a}
   with self.assertRaises(AgentError):delivery.render(tid,receipts)
+  with self.assertRaises(AgentError):delivery.render(tid,receipts,evaluation_only='true')
   result=delivery.render(tid,receipts,evaluation_only=True);self.assertEqual(result['metadata']['state'],'technical_output_validated')
   self.assertAlmostEqual(result['metadata']['inspection']['duration'],18,delta=.2);self.assertFalse(result['metadata']['professional_quality_verified'])
   audio.write_bytes(b'changed');self.assertRaises(AgentError,delivery.asset,a)
@@ -155,7 +156,11 @@ class PreGpuCompletion(unittest.TestCase):
   line=copy.deepcopy(departments(screenplay())['voice']['records'][0]);line.update(start=0,seconds=1,audio_receipt=id)
   voice=source_task('voice',[line]);cue=copy.deepcopy(departments(screenplay())['music']['records'][0]);cue.update(asset='imports/synthetic.wav',license='original',kind='music',start=0,seconds=1)
   music=source_task('music',[cue]);r=mix(self.p,music,voice,{'imports/synthetic.wav':id},1)
-  self.assertEqual(r['metadata']['state'],'technical_output_validated');self.assertFalse(r['metadata']['listening_review_completed']);self.assertFalse(r['metadata']['actual_neural_inference'])
+  self.assertEqual(r['metadata']['state'],'technical_output_validated');self.assertFalse(r['metadata']['listening_review_completed']);self.assertFalse(r['metadata']['actual_neural_inference']);self.assertTrue(r['metadata']['evaluation_only'])
+  rid=self.p.engine.enqueue('music',{'operation':'mix_dialogue_cues'},[music,voice],mode='media')
+  with patch('redpad_pipeline.agent_engine.execute_media',return_value=r):tid=self.approve(rid)
+  derived=d.register(r['path'],'SIMULATED owner','Derived tone fixture remains a fixture',True,run_id=rid)
+  self.assertEqual(d.asset(derived)['origin'],'manually_authored_fixture')
  def test_audio_backends_block_without_weights_and_reject_unimplemented_controls(self):
   for engine in offline_audio.ENGINES:
    self.assertFalse(offline_audio.preflight(engine)['ready'])

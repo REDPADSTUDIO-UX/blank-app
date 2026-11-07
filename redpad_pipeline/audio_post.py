@@ -40,7 +40,8 @@ def mix(program,music_task,voice_task,receipts,seconds,timeout=180):
     if not sources:raise AgentError('No genuine source audio to mix.')
     root=program.root/'agent_media/mixes'
     if any(p.is_symlink() for p in (root,*root.parents)):raise AgentError('Unsafe audio mix folder.')
-    job=root/uuid4().hex;job.mkdir(parents=True);output=job/'mix.wav';state={'state':'running','music_task':music_task,'voice_task':voice_task,'music_sha256':digest(music),'voice_sha256':digest(voice),'receipts':list(assets),'actual_neural_inference':False,'listening_review_completed':False}
+    fixture=any(a['origin']=='manually_authored_fixture' for a in assets.values())
+    job=root/uuid4().hex;job.mkdir(parents=True);output=job/'mix.wav';state={'state':'running','music_task':music_task,'voice_task':voice_task,'music_sha256':digest(music),'voice_sha256':digest(voice),'receipts':list(assets),'actual_neural_inference':False,'listening_review_completed':False,'contains_fixture_inputs':fixture,'evaluation_only':fixture}
     def save():(job/'receipt.json').write_text(json.dumps(state,indent=2))
     save();start=time.monotonic()
     try:
