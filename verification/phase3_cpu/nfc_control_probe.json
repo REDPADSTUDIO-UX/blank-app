@@ -1,0 +1,45 @@
+{
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "device": "CPU",
+  "prompt": "Return JSON only: keys sum, holder, copied_name. Compute 2+2 for sum. A gives an umbrella to B; holder is the letter of whoever now holds it. For copied_name, copy EXACTLY the Bengali text তানিয়া. No explanation.",
+  "input_form": "NFC",
+  "same_semantic_prompt": true,
+  "result": {
+    "sum": 4,
+    "holder": "B",
+    "copied_name": "তানিয়া"
+  },
+  "raw": "{\"sum\": 4, \"holder\": \"B\", \"copied_name\": \"তানিয়া\"}",
+  "error": "",
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.4,
+      "num_predict": 256,
+      "num_ctx": 2048,
+      "seed": 42
+    },
+    "inference_completed": true,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 28,
+    "eval_duration_ns": 2177547000,
+    "prompt_eval_count": 89,
+    "prompt_eval_duration_ns": 1832592000,
+    "load_duration_ns": 2553879762,
+    "total_duration_ns": 6572758249,
+    "finish_reason": "stop",
+    "wall_seconds": 6.608,
+    "raw_sha256": "ba7e62265f012d91d7794c79efa0d22f23666b685f7c2d31e4ce66a7e66becfe"
+  },
+  "seconds": 6.608,
+  "checks": {
+    "arithmetic": true,
+    "object_transfer": true,
+    "bangla_name_canonical_copy": true
+  },
+  "creative_quality_verified": false
+}

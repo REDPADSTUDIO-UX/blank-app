@@ -1,0 +1,11 @@
+{
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "agents": [
+    "story",
+    "script",
+    "director"
+  ],
+  "runtime_scope": "Installed development CPU runtime; owned loopback session, no system service",
+  "production_approval": false,
+  "notes": "Configuration is restored through existing AgentStore.configure; raw inference evidence is in the saved research archive. Current API availability is not implied outside the owned session."
+}

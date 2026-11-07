@@ -1,0 +1,542 @@
+[
+  {
+    "repo": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "weight_files": [
+      {
+        "path": "model.safetensors-00001-of-00004.safetensors",
+        "bytes": 5276436216,
+        "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+      },
+      {
+        "path": "model.safetensors-00002-of-00004.safetensors",
+        "bytes": 5335161512,
+        "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+      },
+      {
+        "path": "model.safetensors-00003-of-00004.safetensors",
+        "bytes": 5368717440,
+        "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+      },
+      {
+        "path": "model.safetensors-00004-of-00004.safetensors",
+        "bytes": 3325995712,
+        "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "google/gemma-3-12b-it",
+    "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+    "license_metadata": "gemma",
+    "gated": "manual",
+    "weight_files": [
+      {
+        "path": "model-00001-of-00005.safetensors",
+        "bytes": 4979902192,
+        "sha256": "4847447e92599833e8dbaa3067cd201c3bb5c052efa91f11ba891e43234f7832"
+      },
+      {
+        "path": "model-00002-of-00005.safetensors",
+        "bytes": 4931296592,
+        "sha256": "891bd54eed03cba9ee1e705533a02a8217fcc29f356e4a1f53e5fd0d178883ad"
+      },
+      {
+        "path": "model-00003-of-00005.safetensors",
+        "bytes": 4931296656,
+        "sha256": "7cee411d9d57324e50ce064a192cc5a858276d508611b12fc599e0c9767112e0"
+      },
+      {
+        "path": "model-00004-of-00005.safetensors",
+        "bytes": 4931296656,
+        "sha256": "8bc75a29a730c9e743cad013feda3b0991a913fafe787c58a1c6e20afad97723"
+      },
+      {
+        "path": "model-00005-of-00005.safetensors",
+        "bytes": 4601000928,
+        "sha256": "ed14bd4908c98fed9f61e8cd410167e0846de9abd78e0452ab092072e5d9252d"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "weight_files": [
+      {
+        "path": "model-00001-of-00005.safetensors",
+        "bytes": 3900233256,
+        "sha256": "e97b877e47fde53a6c6e77aafb36e58e91ee9d95c4a3eeac6f1b5c0e6a1c986e"
+      },
+      {
+        "path": "model-00002-of-00005.safetensors",
+        "bytes": 3864726320,
+        "sha256": "a9a300a43b4724eee2abe7c18ceb26768d0ab011eb0cad19d9bfd2476a24d024"
+      },
+      {
+        "path": "model-00003-of-00005.safetensors",
+        "bytes": 3864726424,
+        "sha256": "111223d173e00bbee81cba1216fad28668df3476706b7fd26f4d5b50f8b3a507"
+      },
+      {
+        "path": "model-00004-of-00005.safetensors",
+        "bytes": 3864733680,
+        "sha256": "ef47f634fa57d46ee134edcc09f34085a47da1e16c12a2abe0d67118be6d72ed"
+      },
+      {
+        "path": "model-00005-of-00005.safetensors",
+        "bytes": 1089994880,
+        "sha256": "0c859795ad3a627a9b95bcb762e059d5b768a4a36fdd4affeff269d93fdecc67"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "stabilityai/stable-diffusion-xl-base-1.0",
+    "revision": "462165984030d82259a11f4367a4eed129e94a7b",
+    "license_metadata": "openrail++",
+    "gated": false,
+    "weight_files": [
+      {
+        "path": "sd_xl_base_1.0.safetensors",
+        "bytes": 6938078334,
+        "sha256": "31e35c80fc4829d14f90153f4c74cd59c90b779f6afe05a74cd6120b893f7e5b"
+      },
+      {
+        "path": "sd_xl_base_1.0_0.9vae.safetensors",
+        "bytes": 6938078334,
+        "sha256": "e6bb9ea85bbf7bf6478a7c6d18b71246f22e95d41bcdd80ed40aa212c33cfeff"
+      },
+      {
+        "path": "sd_xl_offset_example-lora_1.0.safetensors",
+        "bytes": 49553604,
+        "sha256": "4852686128f953d0277d0793e2f0335352f96a919c9c16a09787d77f55cbdf6f"
+      },
+      {
+        "path": "text_encoder/model.fp16.safetensors",
+        "bytes": 246144152,
+        "sha256": "660c6f5b1abae9dc498ac2d21e1347d2abdb0cf6c0c0c8576cd796491d9a6cdd"
+      },
+      {
+        "path": "text_encoder/model.safetensors",
+        "bytes": 492265168,
+        "sha256": "5c3d6454dd2d23414b56aa1b5858a72487a656937847b6fea8d0606d7a42cdbc"
+      },
+      {
+        "path": "text_encoder/openvino_model.bin",
+        "bytes": 492242672,
+        "sha256": "bbc78395c8cee553a17380e9b1a9a47da926c98731ba31306032d7d45fadb29b"
+      },
+      {
+        "path": "text_encoder_2/model.fp16.safetensors",
+        "bytes": 1389382176,
+        "sha256": "ec310df2af79c318e24d20511b601a591ca8cd4f1fce1d8dff822a356bcdb1f4"
+      },
+      {
+        "path": "text_encoder_2/model.safetensors",
+        "bytes": 2778702264,
+        "sha256": "3a6032f63d37ae02bbc74ccd6a27440578cd71701f96532229d0154f55a8d3ff"
+      },
+      {
+        "path": "text_encoder_2/openvino_model.bin",
+        "bytes": 2778640120,
+        "sha256": "549d05154b0c09d46226f85abd48552f0ef999af4f24a95b3fb62d5e7d059570"
+      },
+      {
+        "path": "unet/diffusion_pytorch_model.fp16.safetensors",
+        "bytes": 5135149760,
+        "sha256": "83e012a805b84c7ca28e5646747c90a243c65c8ba4f070e2d7ddc9d74661e139"
+      },
+      {
+        "path": "unet/diffusion_pytorch_model.safetensors",
+        "bytes": 10270077736,
+        "sha256": "357650fbfb3c7b4d94c1f5fd7664da819ad1ff5a839430484b4ec422d03f710a"
+      },
+      {
+        "path": "unet/openvino_model.bin",
+        "bytes": 10269856428,
+        "sha256": "2d586bcb83c004ab07f5899adcac3d46189afe058d6a581570f0a613a010d9ec"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.fp16.safetensors",
+        "bytes": 167335342,
+        "sha256": "bcb60880a46b63dea58e9bc591abe15f8350bde47b405f9c38f4be70c6161e68"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 334643268,
+        "sha256": "1598f3d24932bcfe6634e8b618ea1e30ab1d57f5aad13a6d2de446d2199f2341"
+      },
+      {
+        "path": "vae_1_0/diffusion_pytorch_model.fp16.safetensors",
+        "bytes": 167335342,
+        "sha256": "eb6516ab7e1104d5d1a174a4d65c57835ae38061531d0a2192103aecfb790cc1"
+      },
+      {
+        "path": "vae_1_0/diffusion_pytorch_model.safetensors",
+        "bytes": 334643268,
+        "sha256": "27ed3b02e09638568e99d4398c67bc654dde04e6c0db61fb2d21dba630e7058a"
+      },
+      {
+        "path": "vae_decoder/openvino_model.bin",
+        "bytes": 197961232,
+        "sha256": "34ea744ad1d75fb6b8825e31f5adbe7d62cbe2e7d061535b0a12e69c2f72d0f4"
+      },
+      {
+        "path": "vae_encoder/openvino_model.bin",
+        "bytes": 136655184,
+        "sha256": "97f04b0cf74808c7bd9b6e09f080e8cd24821943c3c06b153145989889215ce5"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "black-forest-labs/FLUX.1-schnell",
+    "revision": "741f7c3ce8b383c54771c7003378a50191e9efe9",
+    "license_metadata": "apache-2.0",
+    "gated": "auto",
+    "weight_files": [
+      {
+        "path": "ae.safetensors",
+        "bytes": 335304388,
+        "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38"
+      },
+      {
+        "path": "flux1-schnell.safetensors",
+        "bytes": 23782506688,
+        "sha256": "9403429e0052277ac2a87ad800adece5481eecefd9ed334e1f348723621d2a0a"
+      },
+      {
+        "path": "text_encoder/model.safetensors",
+        "bytes": 246144352,
+        "sha256": "893d67a23f4693ed42cdab4cbad7fe3e727cf59609c40da28a46b5470f9ed082"
+      },
+      {
+        "path": "text_encoder_2/model-00001-of-00002.safetensors",
+        "bytes": 4994582224,
+        "sha256": "ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e"
+      },
+      {
+        "path": "text_encoder_2/model-00002-of-00002.safetensors",
+        "bytes": 4530066360,
+        "sha256": "a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+        "bytes": 9962580296,
+        "sha256": "9b633dbe87316385c5b1c262bd4b5a01e3d955170661d63dcec8a01e89c0d820"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+        "bytes": 9949328904,
+        "sha256": "58b4434078f0c2567ddc54e3b5cbf39626ab55fbd9d5c22956e183668f535dec"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+        "bytes": 3870584832,
+        "sha256": "e2cbc25471ed5186e69a9b51098300cb2f612556453e38a372c851a220ed238d"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 167666902,
+        "sha256": "f5b59a26851551b67ae1fe58d32e76486e1e812def4696a4bea97f16604d40a3"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "revision": "b8fff7315c768468a5333511427288870b2e9635",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "weight_files": [
+      {
+        "path": "text_encoder/model-00001-of-00003.safetensors",
+        "bytes": 4935812536,
+        "sha256": "a8e861969c7433e707cc5a74065d795d36cca07ec96eb6763eb4083df7248f58"
+      },
+      {
+        "path": "text_encoder/model-00002-of-00003.safetensors",
+        "bytes": 4983103192,
+        "sha256": "d57d948ece4837d850b7a859a4415121d57cacf8b9ee1d4db200c67f592902d7"
+      },
+      {
+        "path": "text_encoder/model-00003-of-00003.safetensors",
+        "bytes": 1442935480,
+        "sha256": "0da9ee284e21d1406df708788db1d502d95d75f69faa25cd26151bf8829b7c5f"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00001-of-00005.safetensors",
+        "bytes": 4978254344,
+        "sha256": "511bec832a201caa410d09c5ce7dbbf8ad2708c345d82038f684fc74cce982be"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00002-of-00005.safetensors",
+        "bytes": 4846784976,
+        "sha256": "7c42724912b1911429125dc50c0e9a49ccbada5a601b657d4ed2e15e7597c193"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00003-of-00005.safetensors",
+        "bytes": 4972658392,
+        "sha256": "e9c3d0c76de786566382f8258101fea973ae37681c6e9fe0e5fe1fb93b806424"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00004-of-00005.safetensors",
+        "bytes": 4846785080,
+        "sha256": "a331121771790939678db6f585553fd5184609f7d02593c699a4d241b0d834c5"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00005-of-00005.safetensors",
+        "bytes": 354751840,
+        "sha256": "78b655685c47efdb2349f36826bb101264e9f212a16325d584aeb5f53c88e719"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 2818777808,
+        "sha256": "62cd18f19438e35b32ac63020e2852f566e9b02f46b6cdbd87972a356e3c6f4b"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "Lightricks/LTX-Video-0.9.5",
+    "revision": "e58e28c39631af4d1468ee57a853764e11c1d37e",
+    "license_metadata": "other",
+    "gated": false,
+    "weight_files": [
+      {
+        "path": "text_encoder/model-00001-of-00004.safetensors",
+        "bytes": 4989319680,
+        "sha256": "7a68b2c8c080696a10109612a649bc69330991ecfea65930ccfdfbdb011f2686"
+      },
+      {
+        "path": "text_encoder/model-00002-of-00004.safetensors",
+        "bytes": 4999830656,
+        "sha256": "b8ed6556d7507e38af5b428c605fb2a6f2bdb7e80bd481308b865f7a40c551ca"
+      },
+      {
+        "path": "text_encoder/model-00003-of-00004.safetensors",
+        "bytes": 4865612720,
+        "sha256": "c831635f83041f83faf0024b39c6ecb21b45d70dd38a63ea5bac6c7c6e5e558c"
+      },
+      {
+        "path": "text_encoder/model-00004-of-00004.safetensors",
+        "bytes": 4194506688,
+        "sha256": "02a5f2d69205be92ad48fe5d712d38c2ff55627969116aeffc58bd75a28da468"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model.safetensors",
+        "bytes": 3846852608,
+        "sha256": "b4ccc1b4c4e85ba6881072ed3f26c8d94fe046fe99b2df7c462ce421abfe331f"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 2493855612,
+        "sha256": "7eb65b16cf8ddfd70ccb1c541384ae49ffd6639d754c6b713a11cb72d097233f"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+    "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+    "license_metadata": "other",
+    "gated": false,
+    "weight_files": [
+      {
+        "path": "image_encoder/model.fp16.safetensors",
+        "bytes": 1264217240,
+        "sha256": "ae616c24393dd1854372b0639e5541666f7521cbe219669255e865cb7f89466a"
+      },
+      {
+        "path": "image_encoder/model.safetensors",
+        "bytes": 2528371296,
+        "sha256": "ed1e5af7b4042ca30ec29999a4a5cfcac90b7fb610fd05ace834f2dcbb763eab"
+      },
+      {
+        "path": "svd_xt.safetensors",
+        "bytes": 9559625980,
+        "sha256": "b2652c23d64a1da5f14d55011b9b6dce55f2e72e395719f1cd1f8a079b00a451"
+      },
+      {
+        "path": "svd_xt_image_decoder.safetensors",
+        "bytes": 9503252964,
+        "sha256": "99aa889bf6d1ca28e026755b83ba37e3072ad79b45dd4c94fae14bee7482263b"
+      },
+      {
+        "path": "unet/diffusion_pytorch_model.fp16.safetensors",
+        "bytes": 3049435868,
+        "sha256": "9fbc02e90f37d422f5e3a4aeaee95f6629dc8c45ca211b951626e930daf2bddf"
+      },
+      {
+        "path": "unet/diffusion_pytorch_model.safetensors",
+        "bytes": 6098682464,
+        "sha256": "7783d82729af04f26ded4641a5952617fe331fc46add332fb9e47674fecc6ad7"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.fp16.safetensors",
+        "bytes": 195531910,
+        "sha256": "af602cd0eb4ad6086ec94fbf1438dfb1be5ec9ac03fd0215640854e90d6463a3"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 391017740,
+        "sha256": "5d92aa595a53d9da9faf594f09910ee869d5d567c8bb0362d5095673c69997d6"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "ai4bharat/indic-parler-tts",
+    "revision": "660bc53c64ae83150613264111708a0465211237",
+    "license_metadata": "apache-2.0",
+    "gated": "auto",
+    "weight_files": [
+      {
+        "path": "model.safetensors",
+        "bytes": 3751321772,
+        "sha256": "c68daecb60f80c8f1faf0a6d2e6ddd6de8e224fb19750f3e9a33bca43c552c90"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "ai4bharat/IndicF5",
+    "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+    "license_metadata": "mit",
+    "gated": "auto",
+    "weight_files": [
+      {
+        "path": "model.safetensors",
+        "bytes": 1402789408,
+        "sha256": "ba7f3671180fb7784e24bd1dafc96e729a38ce02e7f6d3877cdef32525a1865c"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "ACE-Step/ACE-Step-v1-3.5B",
+    "revision": "82cd0d7b6322bd28cd4e830fe675ddb6180ce36c",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "weight_files": [
+      {
+        "path": "ace_step_transformer/diffusion_pytorch_model.safetensors",
+        "bytes": 6611422728,
+        "sha256": "e810f16728d8a2e0d1b9c3a907aac8c9a427ce38edbd890cb3dce5ff92da5aad"
+      },
+      {
+        "path": "music_dcae_f8c8/diffusion_pytorch_model.safetensors",
+        "bytes": 313646516,
+        "sha256": "2b0cb469307ac50659d1880db2a99bae47d0df335cbb36853964662d4b80e8ee"
+      },
+      {
+        "path": "music_vocoder/diffusion_pytorch_model.safetensors",
+        "bytes": 206350988,
+        "sha256": "c92c9b46e28ab7b37b777780cf4308ad7ddac869636bb77aa61599358c4bc1c0"
+      },
+      {
+        "path": "umt5-base/model.safetensors",
+        "bytes": 1127460248,
+        "sha256": "779cec0d210b2123e21d0a9cd8128f02b4d412627355028965a8be0b241cc3b6"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "stabilityai/stable-audio-open-small",
+    "revision": "ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3",
+    "license_metadata": "other",
+    "gated": "auto",
+    "weight_files": [
+      {
+        "path": "base_model.ckpt",
+        "bytes": 1677045748,
+        "sha256": "f60355a8c8198f94b646bdecf3b04b5dc1fa736f7038a80d9dd6ae8f39ac45b3"
+      },
+      {
+        "path": "model.ckpt",
+        "bytes": 1677045748,
+        "sha256": "54ccf4ac08a3c0c535a1a7cb6e53a4f0fbda91dc76cdc130c45ea3d24ef690e4"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 1676829212,
+        "sha256": "0ee8b9edbe3104cb079dd163b62589d67d9c321ea8942cbbd81e6f7d3f390be2"
+      }
+    ],
+    "size_scope": "Repository weight inventory includes alternative/duplicate layouts; NOT a recommended download recipe or a RAM measurement.",
+    "metadata_only": true
+  },
+  {
+    "repo": "Wan-AI/Wan2.2-Animate-14B",
+    "revision": "cb93a225fbaf1ca100f54e79da8f994995b689b3",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "weight_files": [
+      {
+        "path": "diffusion_pytorch_model-00001-of-00004.safetensors",
+        "bytes": 9875257880,
+        "sha256": "575c2dba750c3b40240fb742a4224453aa97dfbd3c5f5a0086be431cdefdd69c"
+      },
+      {
+        "path": "diffusion_pytorch_model-00002-of-00004.safetensors",
+        "bytes": 9975378288,
+        "sha256": "b90b820627d43eeeb1ae0489182f9a8c870374fd72cc99dccb9eddfc2ace8325"
+      },
+      {
+        "path": "diffusion_pytorch_model-00003-of-00004.safetensors",
+        "bytes": 9954400528,
+        "sha256": "e2aa343b0ba04f563566e9959a439611a18189cd9accdc04d59681be9ce5be50"
+      },
+      {
+        "path": "diffusion_pytorch_model-00004-of-00004.safetensors",
+        "bytes": 4744748472,
+        "sha256": "e5fea7f38aa4cb70ed59a9ecf406d0c05f3dfc85ee70bc83de35679c42642d1b"
+      },
+      {
+        "path": "relighting_lora/adapter_model.safetensors",
+        "bytes": 2873221376,
+        "sha256": "e821a68a66964c4c00dc8b5d06bfc8cc7e24ab77316c547eb41174097394899c"
+      },
+      {
+        "path": "xlm-roberta-large/model.safetensors",
+        "bytes": 2244817354,
+        "sha256": "2dfa19f172412917cab174da04b46e2134811b723666965fd0aabd97caa6e23b"
+      }
+    ],
+    "metadata_only": true,
+    "size_scope": "Repository safetensors inventory; auxiliaries and alternative layouts require a separate selected recipe."
+  },
+  {
+    "repo": "google/gemma-4-E4B-it",
+    "revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "weight_files": [
+      {
+        "path": "model.safetensors",
+        "bytes": 15992595884,
+        "sha256": "cfbd3d2f1cd71bd471c37fe2bf8546d5028d41e5736f64e1ca6c6b8893125503"
+      }
+    ],
+    "metadata_only": true,
+    "size_scope": "Repository safetensors inventory; auxiliaries and alternative layouts require a separate selected recipe."
+  }
+]

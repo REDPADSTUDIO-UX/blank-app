@@ -1,0 +1,665 @@
+# বাংলা blind editorial review — pending
+
+স্বাধীন reviewer এখনো অংশ নেননি। স্কোর, winner বা human approval নেই।
+
+প্রতিটি case আলাদাভাবে বিচার করুন। অসম্পূর্ণ উত্তরকে লেখা হিসেবে অনুমোদন দেবেন না।
+
+একই case-এর প্রার্থীদের তুলনা করুন; administrator key reviewer-কে দেবেন না।
+
+এটি model metadata লুকানো package; ছোট নমুনা ও লেখার ধরন পরিচয় ফাঁস করতে পারে।
+
+
+## Original tasks
+
+[
+  {
+    "id": "story",
+    "data": "কুষ্টিয়ার এক দর্জি মায়ের চিকিৎসার টাকার জন্য মেয়ের কলেজের শেষ কিস্তি খরচ করে ফেলে। মেয়ে জানে না; আজ ভর্তি নিশ্চিত করার শেষ দিন। মা নিজে সিদ্ধান্ত নিতে সক্ষম। কোনো আকস্মিক ধনী উদ্ধারকারী নয়।",
+    "task": "মৌলিক সংক্ষিপ্ত পর্বের কাঠামো দিন: কার চাওয়া, তার দামি সিদ্ধান্ত, তার ফল, আচরণে আবেগের পরিবর্তন, প্রথম দৃশ্যের হুক ও সিদ্ধান্ত থেকে জন্মানো cliffhanger। প্রতি field-এ একটি ছোট বাংলা বাক্য।"
+  },
+  {
+    "id": "romance",
+    "data": "ঢাকার বাসায় নীলা ও সাব্বির, বিবাহের কথা চলছে। নীলা নিজের বদলির চাকরিটা নিতে চায়, সাব্বির শহর ছাড়তে ভয় পায়। কাউকে খলনায়ক বানাবেন না। বিদ্যুৎ নেই, দুজন মিলে পাখা ঠিক করছে।",
+    "task": "একটি visual-first ক্ষুদ্র দৃশ্য। opening_action, সাব্বিরের first_reply, নীলার second_reply, closing_action ও INT. heading দিন। কথাগুলো সরাসরি speech, নাম বা বলে যোগ করবেন না। প্রতি কথায় ৬–১০টি শব্দ। রোমান্টিক টান, না-বলা ভয় ও একটি ছোট যত্নের কাজ।"
+  },
+  {
+    "id": "humor",
+    "data": "চট্টগ্রামের বাসায় মা রেহানা ছেলের অফিসের ব্যাগে অতিরিক্ত খাবার দেন; ছেলে ইমরান ওজন কমানোর চেষ্টা করছে। দুজনের স্নেহ আছে, কাউকে অপমান নয়।",
+    "task": "একটি ছোট visual-first দৃশ্য। opening_action, ইমরানের first_reply, রেহানার responsive second_reply, closing_action, INT. heading। শুধু সরাসরি speech; নাম বা বলে নয়। অভ্যাসের সংঘাত থেকে মৃদু witty exchange, বক্তৃতা নয়। প্রতি কথায় ৬–১০টি শব্দ।"
+  },
+  {
+    "id": "revision",
+    "data": {
+      "source": {
+        "s1": "রুমি খামের ভেতর কলেজের বিল রাখে।",
+        "s2": "বাবা: আমি তোমার জন্য সব করেছি। রুমি: আমি সব বুঝি।"
+      },
+      "locked": [
+        "s1"
+      ],
+      "target": "s2"
+    },
+    "task": "শুধু s2 বদলান। আগে ছোট দৃশ্যমান কাজ, তারপর বাবা ও রুমির দুইটি সংক্ষিপ্ত সরাসরি কথা। বিল/চরিত্র/সম্পর্ক বদলাবেন না। অভিযোগের বদলে না-বলা সংকোচ দেখান। s1 ফেরত দেবেন না।"
+  },
+  {
+    "id": "criticism",
+    "data": {
+      "heading": "INT. বাসা — সকাল",
+      "lines": {
+        "L1": "তানিয়া নিজের চাকরির সাক্ষাৎকারে যাবে; রাশেদ নিজের অফিসে যাবে।",
+        "L2": "টেবিলে তাদের একমাত্র ছাতা। তানিয়া সেটি ব্যাগে রাখে।",
+        "L3": "রাশেদ একই ছাতাটি টেবিল থেকে তুলে খুলে ফেলে; কেউ ফেরত দেয়নি।",
+        "L4": "দুজনই বেরোনোর আগে বাসভাড়া গুনে রাখে।"
+      }
+    },
+    "task": "এই নির্দিষ্ট উৎসে বাস্তব ভুল থাকলে line_id ও category দিয়ে সংক্ষিপ্ত সমালোচনা করুন। উদ্ধৃতি বানাবেন না। নেই এমন আবেগ/ঘটনা/ভুল কল্পনা করবেন না। নিশ্চিত না হলে findings খালি রাখুন।"
+  },
+  {
+    "id": "qc",
+    "data": {
+      "heading": "INT. বাসা — সকাল",
+      "lines": {
+        "L1": "তানিয়া নিজের চাকরির সাক্ষাৎকারে যাবে; রাশেদ নিজের অফিসে যাবে।",
+        "L2": "টেবিলে তাদের একমাত্র ছাতা। তানিয়া সেটি ব্যাগে রাখে।",
+        "L3": "রাশেদ একই ছাতাটি টেবিল থেকে তুলে খুলে ফেলে; কেউ ফেরত দেয়নি।",
+        "L4": "দুজনই বেরোনোর আগে বাসভাড়া গুনে রাখে।"
+      }
+    },
+    "task": "একটি independent QC observation লিখুন। শুধু প্রমাণিত ভুল, বিদ্যমান line_id ও category। আংশিক বা সুন্দর লেখাকে অনুমোদন দেবেন না; নির্ভুল দৃশ্যপটকে খারাপ বলবেন না। উদ্ধৃতি লিখবেন না।"
+  }
+]
+
+
+## Anonymous unchanged outputs
+
+
+### 06578c611dec
+
+```json
+
+{
+  "id": "06578c611dec",
+  "text": {
+    "case": "revision",
+    "output": null,
+    "status": "failed"
+  },
+  "sha256": "55a30447e8b87f8d8831eef4c7dc615d04810a09ea0dfa4304c6479cc25a42a8"
+}
+
+```
+
+
+### 3ca98a956048
+
+```json
+
+{
+  "id": "3ca98a956048",
+  "text": {
+    "case": "criticism",
+    "output": {
+      "findings": [
+        {
+          "line_id": "L1",
+          "category": "logic",
+          "problem": "সকাল সময়ের উল্লেখ থাকলেও দুজনের গন্তব্য পরিষ্কার নয়, যা পরবর্তী সিদ্ধান্তে বাধা সৃষ্টি করে।",
+          "suggestion": "প্রতিটির নির্দিষ্ট অফিসের নাম উল্লেখ করুন যাতে তাদের দ্রুত প্রস্তুতি নিতে পারে।"
+        },
+        {
+          "line_id": "L3",
+          "category": "continuity",
+          "problem": "একমাত্র ছাতা থাকলেও দুজন ভিন্ন জায়গায় যাওয়ার পরে এটি কেউ ফেরত দেননি, যা অস্বাভাবিক।",
+          "suggestion": "ছাতাটির গন্তব্য পরিষ্কার করুন বা তাদের সম্পর্কের প্রেক্ষাপট যোগ করুন।"
+        },
+        {
+          "line_id": "L4",
+          "category": "motivation",
+          "problem": "বাসভাড়া গুনে রাখার কারণ উল্লেখ নেই, যা তাদের অফিসে যাওয়ার ইচ্ছায় যুক্তিহীন।",
+          "suggestion": "কেন বাসভাড়া গুনে রাখা হয়েছে তা পরিষ্কার করুন যাতে পরবর্তী কাজের জন্য প্রয়োজন হয়।"
+        }
+      ]
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "ca3f33d692b4c2609d0e2b30142697f68d608791cec3ec9e4c1bd21ece1aefab"
+}
+
+```
+
+
+### 40a8fbb710a5
+
+```json
+
+{
+  "id": "40a8fbb710a5",
+  "text": {
+    "case": "revision",
+    "output": {
+      "scene_id": "s2",
+      "action": "বাবা রুমিকে দিকে তাকিয়ে stood, hands clasped behind his back.",
+      "father": "আমি তোমার জন্য সব করেছি।",
+      "rumi": "আমি সব বুঝি।"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "a6578791b453d1be0d4f102d950292a0e426ad91c509de804d0aeb332ee5609c"
+}
+
+```
+
+
+### f02af59469dd
+
+```json
+
+{
+  "id": "f02af59469dd",
+  "text": {
+    "case": "romance",
+    "output": {
+      "closing_action": "পাখা ঠিক হয়ে গেল, দুজন হাত ধরে দেখল সোনার পাত্র দিয়ে বাড়ির মাথায় আলো লাগল।",
+      "first_reply": "শহর ছাড়া না যাব, কাজ হবে না।",
+      "heading": "INT. ঢাকা বাড়ি - রাত",
+      "opening_action": "নীলা পাখা নিয়ে আসল, বাড়ির কাছে দাঁড়াল।",
+      "second_reply": "তুমি যদি চায়, আমি চাই না।"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "bdfa5d5355512277939c3dbd5f1c7a3c5b24339fb1bfd5fa844b86123d5f4e98"
+}
+
+```
+
+
+### 9c38e5d2c51f
+
+```json
+
+{
+  "id": "9c38e5d2c51f",
+  "text": {
+    "case": "story",
+    "output": {
+      "want": "মেয়ে কলেজের শেষ কিস্তি দিতে চায়।",
+      "costly_choice": "মা নিজের মায়ের চিকিৎসার টাকাকে ছেড়ে দেয়।",
+      "consequence": "মেয়ের ভর্তি নিশ্চিত হয় কিন্তু মা হাসপাতালে পড়ে যায়।",
+      "emotional_change": "মেয়ে এখন শুধুই মাটির গাছের মতো দাঁড়ায়।",
+      "opening_image": "সন্ধ্যার আলোয় মেয়ে কলেজের ভর্তি ফর্ম হাতে ধরে আছে।",
+      "earned_cliffhanger": "মা হাসপাতালে ঘরের জানলা দিয়ে বাইরে তাকিয়ে আছেন।"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "fab709579b9dacb2f1081b6f0a69967d404927bdfe77ef4d6f581cd09a9ba421"
+}
+
+```
+
+
+### fc1d1bd735d6
+
+```json
+
+{
+  "id": "fc1d1bd735d6",
+  "text": {
+    "case": "qc",
+    "output": {
+      "findings": [
+        {
+          "category": "logic",
+          "line_id": "L3",
+          "problem": "রাশেদ ছাতা খুলে ফেলে কেউ ফেরত দেয়নি বলে বিবাদ তৈরি করছে; তানিয়া ছাতা ব্যাগে রাখে বলে তার আগে একটির",
+          "suggestion": "রাশেদের কাছে ছাতা ফেরত দেয়নি বলে তার প্রতিক্রিয়া স্পষ্ট করা উচিত"
+        }
+      ]
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "b44960638e76b94d1c3c0c0782a2281891c1d9e24a2b2c95ea233a94cab21b52"
+}
+
+```
+
+
+### 8e400f6e3e9d
+
+```json
+
+{
+  "id": "8e400f6e3e9d",
+  "text": {
+    "case": "humor",
+    "output": {
+      "closing_action": "মা ব্যাগের কোনো খাবার না দেয়, বাড়ির দরজা বন্ধ করে দেয়।",
+      "first_reply": "মা, আজ বাড়ি খাবার নেই, আমার ওজন কমাচ্ছি।",
+      "heading": "INT. CHATTGRAAM HOUSE - KITCHEN",
+      "opening_action": "মা ব্যাগে চাল, চালার কাগজ দেয় ছেলের পাশে।",
+      "second_reply": "অসামান্য খাবার দেয় না, আমি কখনো কালো চাল না খাই।"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "13aa2689ec628fa0078729fe97f3d52c78361936b83c518431c58e0d9a9ce6ed"
+}
+
+```
+
+
+### 2e3be169b394
+
+```json
+
+{
+  "id": "2e3be169b394",
+  "text": {
+    "case": "romance",
+    "output": {
+      "heading": "INT. বাসা - রাত",
+      "opening_action": "সাব্বির ব্রেকডাউন মেশিনের পাখা ঘোরিয়ে বিদ্যুৎ নেই বলে চিৎকার করে দিল।",
+      "first_reply": "নীলা হেসে বলল, 'বাসায় তো সবাইকে খাওয়াতে হয় সাব্বির, ভয় পাবেন কেন?'",
+      "second_reply": "সাব্বির মাথা নাড়ল, 'আমার বাবা-মা ঢাকায় থাকবে না, আমি শহর ছাড়তে পারব না।'",
+      "closing_action": "নীলা তার হাত সাব্বিরের কুঁচকে ধরে দিল, 'তাহলে আমরা একসাথে পাখা ঠিক করি এখনই।'"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "f8768eeb8c8a6955d43c4a1ed076c22d4487f5fb3eed0f65cf735e70cd9700da"
+}
+
+```
+
+
+### 31571d904b8d
+
+```json
+
+{
+  "id": "31571d904b8d",
+  "text": {
+    "case": "criticism",
+    "output": null,
+    "status": "failed"
+  },
+  "sha256": "48323d32115257e2d417d3c17564a1b3e6e237eaf474c12d953acf1562e239c9"
+}
+
+```
+
+
+### 42404525be3d
+
+```json
+
+{
+  "id": "42404525be3d",
+  "text": {
+    "case": "story",
+    "output": null,
+    "status": "failed"
+  },
+  "sha256": "6df0995c60218cb9ea8dda62ca4bb73e2119f6a4d1e6664b19a7115383b3c565"
+}
+
+```
+
+
+### 0c5e184e4702
+
+```json
+
+{
+  "id": "0c5e184e4702",
+  "text": {
+    "case": "story",
+    "output": {
+      "consequence": "মেয়ে কলেজের ভর্তি পড়ে যায় না।",
+      "costly_choice": "মা মেয়ের কলেজের শেষ কিস্তি খরচ করে দেয়।",
+      "earned_cliffhanger": "মেয়ে বলে, 'মা, আমি ভর্তি হয়েছি, কিন্তু আমি কাজ করছি না।'",
+      "emotional_change": "মা আসলে ভাবে, আমি আমার মেয়েকে আর দেখব না।",
+      "opening_image": "মা দর্জির কাজ করছে, মেয়ে কলেজের প্রতি নজর দেয়।",
+      "want": "মা মেয়ের চিকিৎসার টাকা পাবে।"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "f711bc4b41aaaa679dd75692581db7ad69dee4c04a8fde4d232c970ae1bb7551"
+}
+
+```
+
+
+### a8380640c988
+
+```json
+
+{
+  "id": "a8380640c988",
+  "text": {
+    "case": "qc",
+    "output": {
+      "findings": [
+        {
+          "line_id": "L3",
+          "category": "visual",
+          "problem": "একমাত্র ছাতাটি দুজনকেও ব্যবহারের জন্য উপযোগী নয়, তাই এটি বারবার খোলার অর্থহীন।",
+          "suggestion": "দুজনের পৃথক ব্যাগ বা আলাদা জিনিসপত্র যোগ করুন যাতে ছাতাটি একমাত্র জিনিস না মনে হয়।"
+        },
+        {
+          "line_id": "L4",
+          "category": "logic",
+          "problem": "ছাতাটি খোলার পর বাসভাড়া গুণের আগেই তাদের প্রস্তুতি শেষ হয়ে গেছে, যা সময়ের অপ্রাসঙ্গিকতা তৈরি করে।",
+          "suggestion": "বাড়ি থেকে বের হওয়ার আগে বাসভাড়া গুণ করুন এবং ছাতাটি খোলার পরে চলাচলের পরামর্শ দিন।"
+        },
+        {
+          "line_id": "L2",
+          "category": "motivation",
+          "problem": "তানিয়া ছাতাটি ব্যাগে রাখলে রাশেদ আবার তুলে ফেলেন, যা তার প্রস্তুতির ধাপের সাথে সামঞ্জস্যপূর্ণ নয়।",
+          "suggestion": "রাশেদ ছাতাটি খোলার পর তানিয়াকে দেখিয়ে বলুন যে এটি দুজনের জন্যই ব্যবহার করতে হবে।"
+        }
+      ]
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "6c37be4254e394db098c69c7dd0c475d3727ec7de0628949c4f8551d362d0e1b"
+}
+
+```
+
+
+### 1e2da4f53678
+
+```json
+
+{
+  "id": "1e2da4f53678",
+  "text": {
+    "case": "story",
+    "output": {
+      "want": "মেয়েটির কলেজের শেষ কিস্তি পরিশোধ করার তীব্র আকাঙ্ক্ষা ছিল।",
+      "costly_choice": "মেয়েটি মায়ের চিকিৎসার জন্য নিজের কলেজের কিস্তি পরিশোধ করে দিল।",
+      "consequence": "মেয়েটি আজ কলেজে ভর্তির শেষ দিনে নিশ্চিত হয়নি।",
+      "emotional_change": "মেয়েটির মধ্যে বিভ্রান্তি ও অনুশোচনা তৈরি হলো।",
+      "opening_image": "দর্জি মা মেঝেতে বসে আছেন, মেয়ের দেওয়া টাকা নিয়ে হতাশ।",
+      "earned_cliffhanger": "মা নিজে গিয়ে মেয়েটির ভর্তি বাতিল করার সিদ্ধান্ত নেন।"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "20e8a9f30cf295228b538fe08390494b80de4bbafd134afe8c8b5afe21f9f3fd"
+}
+
+```
+
+
+### 377dcbfe5b7d
+
+```json
+
+{
+  "id": "377dcbfe5b7d",
+  "text": {
+    "case": "humor",
+    "output": {
+      "heading": "INT. বাসা-রানি",
+      "opening_action": "মা রেহানা ছেলের ব্যাগে আবারও দুটি বড় ডিম ঢোকিয়ে দেন।",
+      "first_reply": "আমার ওজন কমানোর জন্য এটা খাব না মা, তোমার চিন্তা করো।",
+      "second_reply": "ভালো কথা, তুমি যখন ভাত খেয়েছ তখন আমার মতো মানুষের জন্যও খাওয়াতে হয়।",
+      "closing_action": "ইমরান ডিমগুলো ফিরিয়ে দিয়ে বলে, 'আচ্ছা, আমি একটু বেশি চর্বি করবো তোমার জন্য।'"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "6e7d16de3962c138378dc4dc87750e5eb460e9aa5b51c34770716d9554523c64"
+}
+
+```
+
+
+### 00e01382dcaa
+
+```json
+
+{
+  "id": "00e01382dcaa",
+  "text": {
+    "case": "revision",
+    "output": {
+      "scene_id": "s2",
+      "action": "বাবা রুমির কলেজের বিল দেখে রাগ করে কথা বলে, রুমি মাথা নিচু করে থাকে।",
+      "father": "আমি তোমার জন্য সব করেছি।",
+      "rumi": "তাহলে কেন ভুল করছিস বাবা?"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "386fdb3e374811f973ae39f43f3cb14538e7c15acc13ca6e72459aa1e0a22de1"
+}
+
+```
+
+
+### 76c6115491fe
+
+```json
+
+{
+  "id": "76c6115491fe",
+  "text": {
+    "case": "romance",
+    "output": null,
+    "status": "failed"
+  },
+  "sha256": "9dd3e4d33cfd5107fb214b30c5b56cc7e2cfd1c8c4300024d9ee7cb2f386f364"
+}
+
+```
+
+
+### 096b0a76b667
+
+```json
+
+{
+  "id": "096b0a76b667",
+  "text": {
+    "case": "criticism",
+    "output": {
+      "findings": [
+        {
+          "line_id": "L3",
+          "category": "logic",
+          "problem": "The umbrella has been used by both without anyone returning it, creating an illogical situation.",
+          "suggestion": "Consider adding a reason for the umbrella's continued use."
+        }
+      ]
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "55b26e3bc7fe62771ba2552f297568e40302cb0789962c495d4639fd21ee43e7"
+}
+
+```
+
+
+### 28c23955d0e8
+
+```json
+
+{
+  "id": "28c23955d0e8",
+  "text": {
+    "case": "humor",
+    "output": {
+      "heading": "INT.",
+      "opening_action": "ইমরান ব্যাগটা খুলে একটা প্যাকেট বের করে টেবিলে রাখল।",
+      "first_reply": "আমি ভাবছি, ওজন কমানোর জন্য এটা যথেষ্ট নয়।",
+      "second_reply": "তোমার মায়ের হাতের খাবার সবসময়ই সেরা, বুঝলে?",
+      "closing_action": "ইমরান প্যাকেটটা মুড়ে রাখল, রেহানা মুচকি হাসলেন।"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "de3a75d23bb43162e5cc9a1088bc9ff4d34d1558a87ccc40b043b5067a6a52e0"
+}
+
+```
+
+
+### 623ad6b66c7d
+
+```json
+
+{
+  "id": "623ad6b66c7d",
+  "text": {
+    "case": "qc",
+    "output": {
+      "findings": [
+        {
+          "line_id": "L1",
+          "category": "dialogue",
+          "problem": "The scene introduces two separate journeys without establishing a clear connection or reason for the",
+          "suggestion": "Expand on the relationship between Tanisa and Rasheed to justify their individual destinations."
+        },
+        {
+          "line_id": "L3",
+          "category": "visual",
+          "problem": "The action of Rashid taking and opening the umbrella feels arbitrary and lacks a specific purpose.",
+          "suggestion": "Provide a visual cue or dialogue to explain Rashid's interaction with the umbrella."
+        },
+        {
+          "line_id": "L4",
+          "category": "motivation",
+          "problem": "The act of calculating bus fare before leaving is unexplained and adds no immediate tension or drive",
+          "suggestion": "Connect this action to a specific need or consequence that motivates the characters' departure."
+        }
+      ]
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "a30be0610b03e88d0de1f5225ca27e4f07441b48b6607acd8a7c6f4e3514b625"
+}
+
+```
+
+
+### 056042f13d9a
+
+```json
+
+{
+  "id": "056042f13d9a",
+  "text": {
+    "case": "qc",
+    "output": null,
+    "status": "failed"
+  },
+  "sha256": "56eaafb71ab2c7d1d7cfeba8fb5a206259012042f63a914fe8e036ca200d6f56"
+}
+
+```
+
+
+### 9139a31eccd1
+
+```json
+
+{
+  "id": "9139a31eccd1",
+  "text": {
+    "case": "criticism",
+    "output": {
+      "findings": [
+        {
+          "category": "logic",
+          "line_id": "L3",
+          "problem": "রাশেদ ছাতা খুলে ফেলে কেউ ফেরত দেয়নি বলে লেখা হলে তার কাছে ছাতা থাকা উচিত হত, কিন্তু তানিয়া পূর্বেই",
+          "suggestion": "রাশেদের ছাতা খুলে ফেলার আগে তানিয়া ব্যাগে রাখে বলে উল্লেখ করা উচিত"
+        }
+      ]
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "78c2682b74b6ffd4dc212e521b23222d00e7b8f4d634aa56bfe684e25c8f77ce"
+}
+
+```
+
+
+### 53f19e73cd15
+
+```json
+
+{
+  "id": "53f19e73cd15",
+  "text": {
+    "case": "humor",
+    "output": null,
+    "status": "failed"
+  },
+  "sha256": "3c66848f235a3eeaa866d095105cac65dd5c9ab1e601b304512871e2b00875cd"
+}
+
+```
+
+
+### 4a4d1eb06020
+
+```json
+
+{
+  "id": "4a4d1eb06020",
+  "text": {
+    "case": "revision",
+    "output": {
+      "action": "রুমি বিল দেখে হাসি মারে, বাবা বলে, তুমি কখনো না না কাজ করে দেখি না।",
+      "father": "তুমি কখনো না না কাজ করে দেখি না।",
+      "rumi": "হ্যাঁ, আমি কখনো না না করি না, কিন্তু আজ বিল দেখে হাসি মারলাম।",
+      "scene_id": "s2"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "0e734aa590b8e61103881d2f83d449624bb76e2e42f303100324c9024efc06ad"
+}
+
+```
+
+
+### ebcfb036ee3d
+
+```json
+
+{
+  "id": "ebcfb036ee3d",
+  "text": {
+    "case": "romance",
+    "output": {
+      "heading": "INT. সদরদশের ঘর",
+      "opening_action": "সাব্বির একটা পুরোনো পাখা হাতে নিয়ে মেঝেতে বসে আছে, তার চোখে রাজ্যের হতাশা।",
+      "first_reply": "নীলা পাখাটা পরীক্ষা করতে এসে তার পাশে বসে, বিদ্যুতের তারগুলো মিহি করে লাগাতে试图।",
+      "second_reply": "সাব্বির উঠে গিয়ে নীলার হাত ধরে, শহরের জীবনযাত্রার কথা বলতে শুরু করে।",
+      "closing_action": "নীলা শান্তভাবে ঘর থেকে বেরিয়ে যায়, পাখাটা আগের জায়গায় রেখে দেয়।"
+    },
+    "status": "validated_stage"
+  },
+  "sha256": "cffbffc08fe4d2cc4144e00b9088d4083311a4c30f4f121628ee7899243302d6"
+}
+
+```
+
+
+## Reviewer worksheet
+
+Reviewer: __________  Independent: __________  Date: __________
+
+প্রতি candidate/case: score 0–10 অথবা insufficient evidence; exact excerpt; finding; accept/reject/defer।
+
+
+- originality_logic: __________
+- bangladeshi_dialogue: __________
+- emotion_psychology: __________
+- humor_wit: __________
+- romance_tension: __________
+- visual_first: __________
+- hooks_cliffhangers: __________
+- continuity: __________
+- revision_following: __________
+- criticism_accuracy: __________
+
+
+এই package তৈরি হওয়া review সম্পন্ন হওয়ার প্রমাণ নয়।

@@ -1,0 +1,18 @@
+{
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "ram_gib": 9.73,
+  "cuda_executable": null,
+  "new_inference_calls": 0,
+  "new_model_downloads": 0,
+  "human_reviews": 0,
+  "currently_present_manifests": [
+    "phase3_models/ollama-weights/manifests/registry.ollama.ai/library/qwen3/4b-instruct-2507-q4_K_M"
+  ],
+  "historically_approved_tested_models": [
+    "Qwen3-4B-Instruct-2507 Q4_K_M",
+    "gemma3:4b-it-q4_K_M",
+    "qwen3.5:4b-q4_K_M"
+  ],
+  "historical_evidence": "APPROVED_MODEL_TEST_REPORT.md; PROFESSIONAL_FILMMAKING_UPGRADE_BN.md",
+  "note": "Only original Qwen3 manifest is currently restored. Historical approved alternative tests are retained, not rerun; absence in this workspace is not absence of prior evidence."
+}

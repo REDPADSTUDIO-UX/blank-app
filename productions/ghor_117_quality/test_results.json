@@ -1,0 +1,16 @@
+{
+  "tests_run": 67,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "patterns": [
+    "test_drama_quality.py",
+    "test_drama_quality_ui.py",
+    "test_drama_finish.py",
+    "test_youtube.py",
+    "test_storyboard_live.py",
+    "test_remote_gpu.py",
+    "test_storyboard_render.py"
+  ],
+  "scope": "Workflow guards, immutable media, no-code UI, codec finishing/stems/subtitles and legacy regressions. Not live inference or performance-quality proof."
+}

@@ -1,0 +1,1047 @@
+{
+  "strategy": "Model capability + real output + independent expert evaluation",
+  "agents": [
+    {
+      "agent": "story",
+      "name": "Story AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "Observed but professionally inadequate",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Causal Bengali narrative and long-form memory",
+      "model_candidates": [
+        "writer9",
+        "writer12",
+        "gemma4e4"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "writer12": {
+          "host_ram_gib_planning": 24,
+          "gpu_vram_gib_planning_range": [
+            12,
+            16
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "gemma4e4": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "Unmeasured conservative research envelope, NOT publisher minimum or demonstrated fit"
+        }
+      },
+      "real_world_test": "Write three unseen family/romance/mystery season treatments and a three-episode causal segment; a lost fee cannot reappear, secrets change knowledge only after a disclosure.",
+      "required_outputs": {
+        "text": 3
+      },
+      "expertise_required": "Bengali screenwriter/showrunner",
+      "review_modes": [
+        "text"
+      ],
+      "specialist_development_needed": "End-to-end long-series draft-to-approved-season bridge and capable writer remain unverified."
+    },
+    {
+      "agent": "script",
+      "name": "Script AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "Observed but professionally inadequate",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Bangladeshi spoken dialogue, subtext, humor, restrained emotion",
+      "model_candidates": [
+        "writer9",
+        "writer12",
+        "gemma4e4"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "writer12": {
+          "host_ram_gib_planning": 24,
+          "gpu_vram_gib_planning_range": [
+            12,
+            16
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "gemma4e4": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "Unmeasured conservative research envelope, NOT publisher minimum or demonstrated fit"
+        }
+      },
+      "real_world_test": "Produce eight complete filmable scenes spanning breakfast, father–daughter conflict, romance, wit, quiet grief, horror, earned ending and locked rewrite. No manual polishing of model samples.",
+      "required_outputs": {
+        "text": 8
+      },
+      "expertise_required": "Bengali screenwriter/dialogue editor",
+      "review_modes": [
+        "text"
+      ],
+      "specialist_development_needed": "A stronger writer must pass unseen scenes and exact revision instructions; current 4B samples failed creative quality."
+    },
+    {
+      "agent": "director",
+      "name": "Director AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "Observed but professionally inadequate",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Grounded dramatic criticism plus visual/performance judgment",
+      "model_candidates": [
+        "writer9",
+        "vision7",
+        "gemma4e4"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "vision7": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "gemma4e4": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "Unmeasured conservative research envelope, NOT publisher minimum or demonstrated fit"
+        }
+      },
+      "real_world_test": "Critique five clean and five seeded-defect scenes; identify precise evidence, abstain on clean material, then direct and inspect three real generated short shots.",
+      "required_outputs": {
+        "text": 10,
+        "video": 3
+      },
+      "expertise_required": "Film director/editor",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "Separate critic calibration from approval; multimodal video understanding and actual directed-shot evaluation missing."
+    },
+    {
+      "agent": "qc",
+      "name": "Quality Control AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "Observed but professionally inadequate",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Calibrated multimodal defect detection with uncertainty",
+      "model_candidates": [
+        "vision7",
+        "writer9",
+        "gemma4e4"
+      ],
+      "compute": {
+        "vision7": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "gemma4e4": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "Unmeasured conservative research envelope, NOT publisher minimum or demonstrated fit"
+        }
+      },
+      "real_world_test": "Blindly inspect balanced clean/defect script, image, motion, subtitle and audio samples. Measure false positives and misses against an authored hidden answer key and expert adjudication.",
+      "required_outputs": {
+        "text": 10,
+        "video": 3,
+        "audio": 3
+      },
+      "expertise_required": "Independent script and audiovisual QC specialists",
+      "review_modes": [
+        "text",
+        "visual",
+        "listening"
+      ],
+      "specialist_development_needed": "A line-ID match alone is insufficient; requires actual media and specialist adjudication."
+    },
+    {
+      "agent": "character",
+      "name": "Character AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Psychology bible and stable visual identity",
+      "model_candidates": [
+        "writer9",
+        "sdxl",
+        "flux"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "sdxl": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "flux": {
+          "host_ram_gib_planning": 64,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Generate character bible plus front/three-quarter/profile and changed-light references of the same two fictional adults; blind match identities and reject facial/age drift.",
+      "required_outputs": {
+        "text": 1,
+        "image": 4
+      },
+      "expertise_required": "Casting/character designer",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "Image/reference conditioning adapter and approved identity references are needed; text-to-image alone does not solve identity lock."
+    },
+    {
+      "agent": "art",
+      "name": "Art Director AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Bangladeshi production design and prop continuity",
+      "model_candidates": [
+        "writer9",
+        "sdxl",
+        "flux"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "sdxl": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "flux": {
+          "host_ram_gib_planning": 64,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Deliver three views of one modest Dhaka tailoring-home set, with the same red tin box, worn table and motivated morning light; verify practical layout and budget.",
+      "required_outputs": {
+        "text": 1,
+        "image": 3
+      },
+      "expertise_required": "Production designer",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "Actual set-image consistency and production-designer review missing."
+    },
+    {
+      "agent": "location",
+      "name": "Location AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Spatial geography and physically buildable camera access",
+      "model_candidates": [
+        "writer9",
+        "sdxl",
+        "vision7"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "sdxl": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "vision7": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Produce a measurable floor plan and three generated views; east window, west entry and north kitchen must agree. Validate performer and camera paths.",
+      "required_outputs": {
+        "text": 1,
+        "image": 3
+      },
+      "expertise_required": "Location manager/cinematographer",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "Needs plan-to-view constraint conditioning, not only free text-to-image."
+    },
+    {
+      "agent": "costume",
+      "name": "Costume Designer AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Character-appropriate wardrobe and scene state",
+      "model_candidates": [
+        "writer9",
+        "sdxl"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "sdxl": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Render one outfit in four chronological shots including wet sleeve and documented change; preserve actor identity, jewelry and social context.",
+      "required_outputs": {
+        "text": 1,
+        "image": 4
+      },
+      "expertise_required": "Costume designer/continuity supervisor",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "Reference-conditioned wardrobe edits and visual continuity evaluation missing."
+    },
+    {
+      "agent": "storyboard",
+      "name": "Storyboard AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Dramatic coverage and visual continuity",
+      "model_candidates": [
+        "writer9",
+        "sdxl",
+        "vision7"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "sdxl": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "vision7": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Create three complete six-panel sequences from locked screenplay beats; no premature reveal, incorrect gaze direction, or unexplained geography.",
+      "required_outputs": {
+        "text": 1,
+        "image": 3
+      },
+      "expertise_required": "Storyboard artist/director",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "Panel-generation conditioning and comparison to actual shot outputs still required."
+    },
+    {
+      "agent": "performance",
+      "name": "Performance Director AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Playable acting direction and observable performance",
+      "model_candidates": [
+        "writer9",
+        "wan",
+        "ltx",
+        "vision7",
+        "animate14"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "wan": {
+          "host_ram_gib_planning": 64,
+          "gpu_vram_gib_planning_range": [
+            24,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "ltx": {
+          "host_ram_gib_planning": 64,
+          "gpu_vram_gib_planning_range": [
+            12,
+            16
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "vision7": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "animate14": {
+          "host_ram_gib_planning": 128,
+          "gpu_vram_gib_planning_range": [
+            80,
+            80
+          ],
+          "memory_evidence": "Unmeasured conservative research envelope, NOT publisher minimum or demonstrated fit"
+        }
+      },
+      "real_world_test": "Generate quiet worry, concealed affection and restrained anger clips using the same actor/reference; judge gaze, pauses, partner reactions and emotional transitions.",
+      "required_outputs": {
+        "text": 1,
+        "video": 3
+      },
+      "expertise_required": "Performance director/actor",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "No current video engine guarantees acting control; paired real clips and expert review required."
+    },
+    {
+      "agent": "cinematographer",
+      "name": "Cinematographer AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Motivated composition, light and camera behavior",
+      "model_candidates": [
+        "writer9",
+        "sdxl",
+        "wan",
+        "ltx",
+        "vision7"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "sdxl": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "wan": {
+          "host_ram_gib_planning": 64,
+          "gpu_vram_gib_planning_range": [
+            24,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "ltx": {
+          "host_ram_gib_planning": 64,
+          "gpu_vram_gib_planning_range": [
+            12,
+            16
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "vision7": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Render matched wide/reverse/insert coverage and one motivated camera move. Verify window lighting, eyelines, axis and whether the actual shot communicates the intended beat.",
+      "required_outputs": {
+        "text": 1,
+        "image": 3,
+        "video": 3
+      },
+      "expertise_required": "Cinematographer",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "Reference/geometry control and measured generated-camera fidelity missing."
+    },
+    {
+      "agent": "motion",
+      "name": "Motion & Physics AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Temporal physics, contact and object permanence",
+      "model_candidates": [
+        "writer9",
+        "wan",
+        "ltx",
+        "svd",
+        "vision7"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "wan": {
+          "host_ram_gib_planning": 64,
+          "gpu_vram_gib_planning_range": [
+            24,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "ltx": {
+          "host_ram_gib_planning": 64,
+          "gpu_vram_gib_planning_range": [
+            12,
+            16
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "svd": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "vision7": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Generate hand-to-table key transfer, sitting on chair, doorway walk and prop pickup; inspect frame-level support, contact, duplicate objects and chronology.",
+      "required_outputs": {
+        "text": 1,
+        "video": 4
+      },
+      "expertise_required": "Animation/movement supervisor",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "Generated frames and frame-level annotations are required; planned constraints are not motion evidence."
+    },
+    {
+      "agent": "video",
+      "name": "Video Generation AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Realistic and reproducible image-conditioned video",
+      "model_candidates": [
+        "wan",
+        "ltx",
+        "svd"
+      ],
+      "compute": {
+        "wan": {
+          "host_ram_gib_planning": 64,
+          "gpu_vram_gib_planning_range": [
+            24,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "ltx": {
+          "host_ram_gib_planning": 64,
+          "gpu_vram_gib_planning_range": [
+            12,
+            16
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "svd": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Run three identical reference-conditioned motion briefs per engine, same framing and duration as engine permits. Save native frames, outputs, settings, failures, identities and measured memory.",
+      "required_outputs": {
+        "video": 9
+      },
+      "expertise_required": "Director/cinematographer/VFX reviewer",
+      "review_modes": [
+        "visual"
+      ],
+      "specialist_development_needed": "Approved checkpoints/GPU absent. SVD-XT has no text control; compare only equivalent supported conditions."
+    },
+    {
+      "agent": "voice",
+      "name": "Voice & Dialogue AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Bangladeshi pronunciation, prosody and speaker consistency",
+      "model_candidates": [
+        "writer9",
+        "parler",
+        "indicf5"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "parler": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            4,
+            8
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "indicf5": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            4,
+            8
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Generate two speakers across neutral, warm and restrained-angry delivery; include names, numbers, address forms and pauses. Blind listeners transcribe and judge accent/emotion.",
+      "required_outputs": {
+        "text": 1,
+        "audio": 6
+      },
+      "expertise_required": "Native Bangladeshi dialogue/voice director",
+      "review_modes": [
+        "text",
+        "listening"
+      ],
+      "specialist_development_needed": "Preset TTS versus reference-audio TTS are separate arms; IndicF5 needs authorized voice reference and reviewed code."
+    },
+    {
+      "agent": "continuity",
+      "name": "Continuity Supervisor AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Longitudinal state tracking across real media",
+      "model_candidates": [
+        "writer9",
+        "vision7"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "vision7": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Inspect a multi-scene packet with planted wet-sleeve, key-holder, door, knowledge, time and axis changes; pair each with a clean control, identify exact frame/beat.",
+      "required_outputs": {
+        "text": 6,
+        "image": 3,
+        "video": 3
+      },
+      "expertise_required": "Script/continuity supervisor",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "Requires real matched frames and expert-labeled positive and negative examples."
+    },
+    {
+      "agent": "music",
+      "name": "Music & SFX AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Musical structure, dramatic fit and motivated Foley",
+      "model_candidates": [
+        "writer9",
+        "music35",
+        "sfxsmall"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "music35": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            12,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "sfxsmall": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            4,
+            8
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Generate separate restrained family score, tender romantic cue, suspense cue and source-motivated Foley; audition under the same real dialogue and evaluate ducking, transitions and rights.",
+      "required_outputs": {
+        "text": 1,
+        "audio": 4
+      },
+      "expertise_required": "Composer/sound designer",
+      "review_modes": [
+        "text",
+        "listening"
+      ],
+      "specialist_development_needed": "Music/SFX inference adapters and listening evaluation missing; procedural tones are not a cinematic score."
+    },
+    {
+      "agent": "editing",
+      "name": "Editing & VFX AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Narrative editing, sync and technical delivery",
+      "model_candidates": [
+        "writer9",
+        "vision7",
+        "ffmpeg"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "vision7": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            16,
+            24
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "ffmpeg": {
+          "host_ram_gib_planning": null,
+          "gpu_vram_gib_planning_range": null,
+          "memory_evidence": null
+        }
+      },
+      "real_world_test": "Assemble two complete 60–90 second edits from approved real clips/audio; preserve the emotional reaction beat, continuity, sync, subtitle readability and delivery specs.",
+      "required_outputs": {
+        "text": 2,
+        "video": 2,
+        "audio": 2
+      },
+      "expertise_required": "Film editor/sound editor",
+      "review_modes": [
+        "text",
+        "visual",
+        "listening"
+      ],
+      "specialist_development_needed": "Existing renderer needs approved genuine assets and expert review, not replacement by a model."
+    },
+    {
+      "agent": "production_manager",
+      "name": "Production Manager AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Resource-aware real execution and recovery",
+      "model_candidates": [
+        "writer9",
+        "deterministic"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "deterministic": {
+          "host_ram_gib_planning": null,
+          "gpu_vram_gib_planning_range": null,
+          "memory_evidence": null
+        }
+      },
+      "real_world_test": "Run three real isolated project traces: successful dependency chain, blocked GPU with independent CPU work progressing, and stopped-worker recovery with no duplicate calls or stale approvals.",
+      "required_outputs": {
+        "text": 3,
+        "trace": 3
+      },
+      "expertise_required": "Line producer/production coordinator",
+      "review_modes": [
+        "text"
+      ],
+      "specialist_development_needed": "Planning contracts are implemented; real multi-model workload execution and resource measurements remain unverified."
+    },
+    {
+      "agent": "growth",
+      "name": "Growth AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Truthful Bengali audience positioning and visual packaging",
+      "model_candidates": [
+        "writer9",
+        "sdxl"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "sdxl": {
+          "host_ram_gib_planning": 32,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        }
+      },
+      "real_world_test": "Produce three title/description/thumbnail/trailer packages for the same actually generated approved episode. Reject fake story events, spoilers and misleading imagery; record audience tests separately.",
+      "required_outputs": {
+        "text": 3,
+        "image": 3
+      },
+      "expertise_required": "Bengali audience/editorial marketing specialist",
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "specialist_development_needed": "Requires approved actual episode assets and human packaging/audience review."
+    },
+    {
+      "agent": "youtube",
+      "name": "YouTube AI",
+      "software_scope": "Existing contracts, source/approval coordination and knowledge conditioning; model/media adapters vary.",
+      "end_to_end_software_complete": false,
+      "historical_real_model_attempts": "No validated specialist model/media capability demonstrated",
+      "professional_intelligence_verified": false,
+      "production_capable": false,
+      "capability_required": "Read-only channel validation and safe release preparation",
+      "model_candidates": [
+        "writer9",
+        "deterministic"
+      ],
+      "compute": {
+        "writer9": {
+          "host_ram_gib_planning": 16,
+          "gpu_vram_gib_planning_range": [
+            8,
+            12
+          ],
+          "memory_evidence": "engineering_estimate_not_measured_here"
+        },
+        "deterministic": {
+          "host_ram_gib_planning": null,
+          "gpu_vram_gib_planning_range": null,
+          "memory_evidence": null
+        }
+      },
+      "real_world_test": "Prepare two release packets from approved actual media and a consented read-only metadata snapshot. Verify rights, channel binding, token scope and drafts; no upload/publish/schedule.",
+      "required_outputs": {
+        "text": 2,
+        "trace": 2
+      },
+      "expertise_required": "Channel operations/rights reviewer",
+      "review_modes": [
+        "text"
+      ],
+      "specialist_development_needed": "Real read-only connection evidence and approved media still needed; publishing remains outside scope."
+    }
+  ],
+  "professional_ready_count": 0,
+  "human_reviews_this_audit": 0,
+  "new_inference_calls": 0,
+  "status_scope": "Repository evidence at b0d37be audited; no new model capability or human review fabricated."
+}

@@ -1,0 +1,562 @@
+[
+  {
+    "id": "redpad.agent.story",
+    "name": "Story AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "93b4275d261642999711dae6f77104b0",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.script",
+    "name": "Script AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "aa0723b0759d40e5a7acc6d7225fbcf6",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.director",
+    "name": "Director AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "ce1d1d82e5974ed2a369d31f2aa5729b",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.character",
+    "name": "Character AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "5b4bca0a23af48f79ad567026fd92376",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.art",
+    "name": "Art Director AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "d78fb3bbbd184cad95164ca7b2fa5105",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.location",
+    "name": "Location AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "19e2b8027ea3484b84152f5363b6e995",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.costume",
+    "name": "Costume Designer AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "4232a0a167724014a270902af90dc282",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.storyboard",
+    "name": "Storyboard AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "596518dfcc74422dad6bc8b78e48b9f0",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.performance",
+    "name": "Performance Director AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "419fd0c8c72a485281e2a072cc0f03dc",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.cinematographer",
+    "name": "Cinematographer AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "e06f99250cfd4859975f480c934a4289",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.motion",
+    "name": "Motion & Physics AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "499ad57f839843ab8d71c54971cf8738",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.video",
+    "name": "Video Generation AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "befbb80e3d9c49fb91a38d8bc5fe82ee",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.continuity",
+    "name": "Continuity Supervisor AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "e588beb2a65042b18313deb246485143",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.voice",
+    "name": "Voice & Dialogue AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "cf4f70d5657340b7bfed8ba82cb2f298",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.music",
+    "name": "Music & SFX AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "33e17b05e3c845bfad386f34b15dd80b",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.editing",
+    "name": "Editing & VFX AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "677444d882324cbc9f3ac1471ebe967e",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.qc",
+    "name": "Quality Control AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "a8207cb4d49e4ae5b27545df53c0b845",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.production_manager",
+    "name": "Production Manager AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "230f882d09434037a68b07b9140fe2df",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.growth",
+    "name": "Growth AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "ae658bc56fa34c9cbcb67187178aa575",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  },
+  {
+    "id": "redpad.agent.youtube",
+    "name": "YouTube AI",
+    "software": "Software Working",
+    "workspace": true,
+    "execution_test": "passed",
+    "task": "3d1be05a6cad45b8b40e54596ee777ee",
+    "input_contract": true,
+    "output_contract": true,
+    "review_revision_handoff": "tested",
+    "model_connected": false,
+    "real_inference_verified": false,
+    "production_quality_verified": false,
+    "blockers": [
+      {
+        "category": "B",
+        "detail": "No available local model server on this host"
+      },
+      {
+        "category": "C",
+        "detail": "No compatible local model configured"
+      },
+      {
+        "category": "E",
+        "detail": "Creative/media quality not independently verified"
+      }
+    ]
+  }
+]

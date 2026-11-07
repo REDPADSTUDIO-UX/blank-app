@@ -1,0 +1,87 @@
+{
+  "state": "Awaiting QC",
+  "runs": [
+    {
+      "id": "1ef101799e1a4e379c75d9c6d6fd306c",
+      "task": "4b5b0e211f8447c58cd4e3fa3b080516",
+      "inputs": "{\"project\": \"CPU integration smoke — not production approval\", \"beats\": [{\"id\": \"B1\", \"premise\": \"একটি ভাঙা ছাতা নিয়ে দুই প্রাপ্তবয়স্কের ছোট বাংলা গল্পের মূল ঘটনা লিখুন\", \"cause\": \"দৃশ্যমান কারণ লিখুন\", \"consequence\": \"সেই কারণের সরাসরি ফল লিখুন\", \"character_arc\": \"একটি ছোট মানসিক পরিবর্তন লিখুন\", \"episode\": \"1\"}]}",
+      "dependencies": "[]",
+      "mode": "local",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793973018.1052723,
+      "finished": 1793973048.61311,
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "task_state": "Awaiting QC"
+    }
+  ],
+  "outputs": [
+    {
+      "task": "4b5b0e211f8447c58cd4e3fa3b080516",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"story\", \"summary\": \"{\\\"agent\\\": \\\"story\\\", \\\"artifact_type\\\": \\\"story\\\", \\\"provenance\\\": \\\"local_inference\\\", \\\"model_inference\\\": true, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [], \\\"artifact\\\": {\\\"project\\\": \\\"CPU integration smoke — not production approval\\\", \\\"beats\\\": [{\\\"id\\\": \\\"B1\\\", \\\"premise\\\": \\\"একটি ভাঙা ছাতা নিয়ে দুই প্রাপ্তবয়স্কের ছোট বাংলা গল্পের মূল ঘটনা লিখুন\\\", \\\"cause\\\": \\\"দৃশ্যমান কারণ লিখুন\\\", \\\"consequence\\\": \\\"সেই কারণের সরাসরি ফল লিখুন\\\", \\\"character_arc\\\": \\\"একটি ছোট মানসিক পরিবর্তন লিখুন\\\", \\\"episode\\\": \\\"1\\\"}]}, \\\"model\\\": \\\"qwen3:4b-instruct-2507-q4_K_M\\\", \\\"duration_ms\\\": 30507, \\\"input_sha256\\\": \\\"9d84e9f91e44623af0a08d7cdec1c7c635f939515280f7cb8296a53b24a2f741\\\"}\", \"artifacts\": [], \"provenance\": \"local_inference\"}"
+    }
+  ],
+  "runtime_records": [
+    {
+      "run": "1ef101799e1a4e379c75d9c6d6fd306c",
+      "attempt": 1,
+      "agent": "story",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "raw_text": "{\n  \"project\": \"CPU integration smoke — not production approval\",\n  \"beats\": [\n    {\n      \"id\": \"B1\",\n      \"premise\": \"একটি ভাঙা ছাতা নিয়ে দুই প্রাপ্তবয়স্কের ছোট বাংলা গল্পের মূল ঘটনা লিখুন\",\n      \"cause\": \"দৃশ্যমান কারণ লিখুন\",\n      \"consequence\": \"সেই কারণের সরাসরি ফল লিখুন\",\n      \"character_arc\": \"একটি ছোট মানসিক পরিবর্তন লিখুন\",\n      \"episode\": \"1\"\n    }\n  ]\n}",
+      "evidence": "{\"runtime\": \"Ollama loopback\", \"model\": \"qwen3:4b-instruct-2507-q4_K_M\", \"options\": {\"temperature\": 0.4, \"num_predict\": 768, \"num_ctx\": 4096, \"seed\": 42}, \"inference_completed\": true, \"model_metadata_sha256\": \"03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f\", \"input_normalization\": \"NFC\", \"prompt_normalization_changed\": true, \"wire_prompt_sha256\": \"c32bae058ebad6d16711ef2b1c616e4ce7158c3d15147165f5dc0d1ada2220c0\", \"parameter_size\": \"4.0B\", \"quantization\": \"Q4_K_M\", \"runtime_model_name\": \"qwen3:4b-instruct-2507-q4_K_M\", \"eval_count\": 228, \"eval_duration_ns\": 19167327000, \"prompt_eval_count\": 412, \"prompt_eval_duration_ns\": 7986462000, \"load_duration_ns\": 3302343618, \"total_duration_ns\": 30466132733, \"finish_reason\": \"stop\", \"wall_seconds\": 30.503, \"raw_sha256\": \"d0c1f280a03f3284f2a89c4fd1105c6b55d638fc4915cb849400d85829f908fa\"}",
+      "created": 1793973048.6154468
+    }
+  ],
+  "metadata": {
+    "runtime": {
+      "version": "0.40.15"
+    },
+    "model_details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M"
+    },
+    "model_identity": {
+      "general.architecture": "qwen3",
+      "general.basename": "Qwen3",
+      "general.finetune": "Instruct",
+      "general.parameter_count": 4022468096,
+      "tokenizer.ggml.pre": "qwen2"
+    },
+    "processes": {
+      "models": [
+        {
+          "name": "qwen3:4b-instruct-2507-q4_K_M",
+          "model": "qwen3:4b-instruct-2507-q4_K_M",
+          "size": 3186108660,
+          "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "4.0B",
+            "quantization_level": "Q4_K_M"
+          },
+          "expires_at": "2026-11-06T19:55:48.612171698+06:00",
+          "size_vram": 0,
+          "context_length": 4096,
+          "runner": "llamacpp"
+        }
+      ]
+    }
+  },
+  "production_approved": false,
+  "note": "Actual existing task engine and department validator; no QC recommendation or owner approval recorded. This roundtrip is a technical integration test, not a creative-quality pass."
+}

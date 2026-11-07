@@ -1,0 +1,300 @@
+{
+  "director": {
+    "plan": {
+      "vision": "ঢাকার পুরোনো বাড়ির বাস্তবধর্মী রহস্য",
+      "tone": "সংযত ভয়",
+      "scenes": [
+        {
+          "id": "s1",
+          "seconds": 30,
+          "visual": "রাফি দরজার নিচে আলো দেখে।",
+          "performance": "স্থির শরীর, চোখে দ্বিধা",
+          "camera": "স্থির মিডিয়াম শট",
+          "sound": "বৃষ্টির শব্দ",
+          "continuity": "নেভি শার্ট; দরজা বন্ধ"
+        }
+      ],
+      "assignments": [
+        {
+          "agent": "script",
+          "brief": "প্রথমে দৃশ্যমান action, তারপর স্বাভাবিক বাংলা সংলাপ",
+          "scene_ids": [
+            "s1"
+          ]
+        }
+      ],
+      "risks": [
+        "অভিনয় ও মুখের consistency বাস্তব footage দিয়ে পরীক্ষা প্রয়োজন"
+      ]
+    },
+    "seconds": 30
+  },
+  "qc": {
+    "subject_agent": "script",
+    "checks": [
+      {
+        "criterion": "Visual action first",
+        "result": "unverified",
+        "evidence": "Needs screenplay review",
+        "revision": "Inspect opening beat"
+      }
+    ]
+  },
+  "story": {
+    "project": "দরজার ওপাশে — fictional test",
+    "beats": [
+      {
+        "id": "r1",
+        "premise": "রাফি — supplied test premise",
+        "cause": "রাফি — supplied test cause",
+        "consequence": "রাফি — supplied test consequence",
+        "character_arc": "রাফি — supplied test character_arc",
+        "episode": "রাফি — supplied test episode"
+      }
+    ]
+  },
+  "script": {
+    "screenplay": {
+      "title": "চাবি",
+      "hook": {
+        "image": "খালি চেয়ার",
+        "question": "কে বসে?",
+        "payoff": "চেয়ার সরবে"
+      },
+      "characters": [
+        {
+          "name": "রাফি",
+          "want": "ঘর খোলা",
+          "voice": "সংযত"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "s1",
+          "heading": "INT. ঘর — রাত",
+          "seconds": 30,
+          "objective": "চাবি খোঁজা",
+          "obstacle": "তালা বন্ধ",
+          "turn": "চাবি পাওয়া",
+          "consequence": "দরজা খুলবে",
+          "beats": [
+            {
+              "type": "action",
+              "text": "রাফি টেবিলের নিচে হাত বাড়ায়।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "রাফি",
+              "text": "এটা কার?"
+            }
+          ],
+          "sound": {
+            "music": "নেই",
+            "sfx": "চাবির ঝনঝন"
+          }
+        }
+      ]
+    },
+    "seconds": 30
+  },
+  "character": {
+    "project": "দরজার ওপাশে — fictional test",
+    "characters": [
+      {
+        "id": "r1",
+        "name": "রাফি — supplied test name",
+        "appearance": "রাফি — supplied test appearance",
+        "identity": "রাফি — supplied test identity",
+        "reference": "রাফি — supplied test reference",
+        "continuity": "রাফি — supplied test continuity"
+      }
+    ]
+  },
+  "art": {
+    "project": "দরজার ওপাশে — fictional test",
+    "designs": [
+      {
+        "id": "r1",
+        "palette": "রাফি — supplied test palette",
+        "set": "রাফি — supplied test set",
+        "props": "রাফি — supplied test props",
+        "style": "রাফি — supplied test style"
+      }
+    ]
+  },
+  "location": {
+    "project": "দরজার ওপাশে — fictional test",
+    "locations": [
+      {
+        "id": "r1",
+        "architecture": "রাফি — supplied test architecture",
+        "geography": "রাফি — supplied test geography",
+        "layout": "রাফি — supplied test layout",
+        "reference": "রাফি — supplied test reference"
+      }
+    ]
+  },
+  "costume": {
+    "project": "দরজার ওপাশে — fictional test",
+    "wardrobe": [
+      {
+        "id": "r1",
+        "scene": "রাফি — supplied test scene",
+        "character": "রাফি — supplied test character",
+        "outfit": "রাফি — supplied test outfit",
+        "reference": "রাফি — supplied test reference",
+        "change_reason": "রাফি — supplied test change_reason"
+      }
+    ]
+  },
+  "storyboard": {
+    "content_id": 1,
+    "title": "দরজা",
+    "script": "রাফি দরজার সামনে দাঁড়ায়।",
+    "ratio": "16:9"
+  },
+  "performance": {
+    "project": "দরজার ওপাশে — fictional test",
+    "beats": [
+      {
+        "id": "r1",
+        "scene": "রাফি — supplied test scene",
+        "character": "রাফি — supplied test character",
+        "emotion": "রাফি — supplied test emotion",
+        "intensity": 3,
+        "blocking": "রাফি — supplied test blocking",
+        "micro_expression": "রাফি — supplied test micro_expression"
+      }
+    ]
+  },
+  "cinematographer": {
+    "project": "দরজার ওপাশে — fictional test",
+    "shots": [
+      {
+        "id": "r1",
+        "scene": "রাফি — supplied test scene",
+        "lens_mm": 1,
+        "framing": "রাফি — supplied test framing",
+        "movement": "রাফি — supplied test movement",
+        "lighting": "রাফি — supplied test lighting",
+        "axis": "রাফি — supplied test axis"
+      }
+    ]
+  },
+  "motion": {
+    "project": "দরজার ওপাশে — fictional test",
+    "actions": [
+      {
+        "id": "r1",
+        "shot": "রাফি — supplied test shot",
+        "body_motion": "রাফি — supplied test body_motion",
+        "object_interaction": "রাফি — supplied test object_interaction",
+        "constraints": "রাফি — supplied test constraints",
+        "qa_criterion": "রাফি — supplied test qa_criterion"
+      }
+    ]
+  },
+  "video": {
+    "project": "দরজার ওপাশে — fictional test",
+    "requests": [
+      {
+        "id": "r1",
+        "shot": "রাফি — supplied test shot",
+        "prompt": "রাফি — supplied test prompt",
+        "reference": "রাফি — supplied test reference",
+        "seconds": 3,
+        "fps": 8,
+        "width": 256,
+        "height": 256
+      }
+    ]
+  },
+  "voice": {
+    "project": "দরজার ওপাশে — fictional test",
+    "lines": [
+      {
+        "id": "r1",
+        "scene": "রাফি — supplied test scene",
+        "speaker": "রাফি — supplied test speaker",
+        "text": "রাফি — supplied test text",
+        "pronunciation": "রাফি — supplied test pronunciation",
+        "emotion": "রাফি — supplied test emotion",
+        "start": 1,
+        "seconds": 1
+      }
+    ]
+  },
+  "continuity": {
+    "project": "দরজার ওপাশে — fictional test",
+    "observations": [
+      {
+        "id": "r1",
+        "scene": "রাফি — supplied test scene",
+        "entity": "রাফি — supplied test entity",
+        "attribute": "রাফি — supplied test attribute",
+        "value": "রাফি — supplied test value",
+        "change_reason": "রাফি — supplied test change_reason"
+      }
+    ]
+  },
+  "music": {
+    "project": "দরজার ওপাশে — fictional test",
+    "cues": [
+      {
+        "id": "r1",
+        "scene": "রাফি — supplied test scene",
+        "kind": "ambience",
+        "start": 1,
+        "seconds": 1,
+        "purpose": "রাফি — supplied test purpose",
+        "asset": "রাফি — supplied test asset",
+        "review_criterion": "রাফি — supplied test review_criterion"
+      }
+    ]
+  },
+  "editing": {
+    "project": "দরজার ওপাশে — fictional test",
+    "clips": [
+      {
+        "id": "r1",
+        "shot": "রাফি — supplied test shot",
+        "start": 1,
+        "seconds": 1,
+        "video": "রাফি — supplied test video",
+        "audio": "রাফি — supplied test audio",
+        "subtitle": "রাফি — supplied test subtitle",
+        "transition": "রাফি — supplied test transition"
+      }
+    ]
+  },
+  "production_manager": {
+    "project": "দরজা",
+    "jobs": []
+  },
+  "growth": {
+    "project": "দরজার ওপাশে — fictional test",
+    "packages": [
+      {
+        "id": "r1",
+        "title": "রাফি — supplied test title",
+        "description": "রাফি — supplied test description",
+        "keywords": "রাফি — supplied test keywords",
+        "thumbnail_brief": "রাফি — supplied test thumbnail_brief",
+        "campaign": "রাফি — supplied test campaign"
+      }
+    ]
+  },
+  "youtube": {
+    "project": "দরজার ওপাশে — fictional test",
+    "releases": [
+      {
+        "id": "r1",
+        "channel_id": "UCaaaaaaaaaaaaaaaaaaaaaa",
+        "title": "রাফি — supplied test title",
+        "description": "রাফি — supplied test description",
+        "video_reference": "রাফি — supplied test video_reference",
+        "approval_note": "রাফি — supplied test approval_note"
+      }
+    ]
+  }
+}

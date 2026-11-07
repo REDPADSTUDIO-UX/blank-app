@@ -1,0 +1,16 @@
+{
+  "model": "ai4bharat/indic-parler-tts",
+  "adapter_implemented": true,
+  "ready": false,
+  "blockers": [
+    "Approved local Bengali TTS backend unavailable; weights/license/component approval required.",
+    "Missing dependency: torch",
+    "Missing dependency: parler_tts",
+    "Missing dependency: transformers"
+  ],
+  "actual_inference_verified": false,
+  "listening_review_completed": false,
+  "bangladeshi_pronunciation_verified": false,
+  "voice_cloning": false,
+  "device": "CPU micro-test only; CUDA use requires a separately reviewed configuration"
+}

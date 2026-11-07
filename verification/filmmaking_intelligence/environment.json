@@ -1,0 +1,97 @@
+{
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "logical_cpus": 9,
+  "ram_bytes": 10451427328,
+  "versions": {
+    "streamlit": "1.67.0",
+    "jsonschema": "4.26.0",
+    "psutil": "7.2.2",
+    "numpy": "2.3.5",
+    "zstandard": "0.25.0",
+    "torch": null,
+    "transformers": null,
+    "diffusers": null
+  },
+  "GPU_job_started": false,
+  "media": {
+    "wan-local": {
+      "engine": "wan-local",
+      "model": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "adapter_implemented": true,
+      "installation_configuration_ready": true,
+      "installed": false,
+      "runtime_available": false,
+      "actual_inference_verified": false,
+      "technical_output_validated": false,
+      "cinematic_quality_reviewed": false,
+      "owner_approved_output": false,
+      "ready": false,
+      "blockers": [
+        "Approved local checkpoint/license record unavailable; no download attempted.",
+        "Missing local dependency: torch",
+        "Missing local dependency: diffusers",
+        "Missing local dependency: transformers",
+        "Missing local dependency: accelerate",
+        "CUDA runtime cannot be verified."
+      ]
+    },
+    "ltx-local": {
+      "engine": "ltx-local",
+      "model": "Lightricks/LTX-Video-0.9.5",
+      "adapter_implemented": true,
+      "installation_configuration_ready": true,
+      "installed": false,
+      "runtime_available": false,
+      "actual_inference_verified": false,
+      "technical_output_validated": false,
+      "cinematic_quality_reviewed": false,
+      "owner_approved_output": false,
+      "ready": false,
+      "blockers": [
+        "Approved local checkpoint/license record unavailable; no download attempted.",
+        "Missing local dependency: torch",
+        "Missing local dependency: diffusers",
+        "Missing local dependency: transformers",
+        "Missing local dependency: accelerate",
+        "CUDA runtime cannot be verified."
+      ]
+    },
+    "local-svd": {
+      "engine": "local-svd",
+      "model": "stabilityai/stable-video-diffusion-img2vid-xt",
+      "adapter_implemented": true,
+      "installation_configuration_ready": true,
+      "installed": false,
+      "runtime_available": false,
+      "actual_inference_verified": false,
+      "technical_output_validated": false,
+      "cinematic_quality_reviewed": false,
+      "owner_approved_output": false,
+      "ready": false,
+      "blockers": [
+        "Approved local checkpoint/license record unavailable; no download attempted.",
+        "Missing local dependency: torch",
+        "Missing local dependency: diffusers",
+        "Missing local dependency: transformers",
+        "Missing local dependency: accelerate",
+        "CUDA runtime cannot be verified."
+      ]
+    }
+  },
+  "speech": {
+    "model": "ai4bharat/indic-parler-tts",
+    "adapter_implemented": true,
+    "ready": false,
+    "blockers": [
+      "Approved local Bengali TTS backend unavailable; weights/license/component approval required.",
+      "Missing dependency: torch",
+      "Missing dependency: parler_tts",
+      "Missing dependency: transformers"
+    ],
+    "actual_inference_verified": false,
+    "listening_review_completed": false,
+    "bangladeshi_pronunciation_verified": false,
+    "voice_cloning": false,
+    "device": "CPU micro-test only; CUDA use requires a separately reviewed configuration"
+  }
+}

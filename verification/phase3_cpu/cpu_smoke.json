@@ -1,0 +1,93 @@
+{
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "manifest": {
+    "name": "qwen3:4b-instruct-2507-q4_K_M",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "modified_at": "2026-11-06T18:59:09.813542241+06:00",
+    "size": 2497293803,
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "ggml"
+    },
+    "capabilities": [
+      "tools",
+      "thinking",
+      "completion"
+    ]
+  },
+  "device": "CPU",
+  "raw": "{\"dialogue\":[{\"speaker\":\"মা\",\"text\":\"আজ কে বাড়িতে আসবে তুমি বলো, বাবা আজ বাড়ি ফেরে না।\"},{\"speaker\":\"ছেলে\",\"text\":\"হ্যাঁ, আমি আসব না, কারণ আমি বাবার চোখে দেখি না।\"}]}",
+  "result": {
+    "dialogue": [
+      {
+        "speaker": "মা",
+        "text": "আজ কে বাড়িতে আসবে তুমি বলো, বাবা আজ বাড়ি ফেরে না।"
+      },
+      {
+        "speaker": "ছেলে",
+        "text": "হ্যাঁ, আমি আসব না, কারণ আমি বাবার চোখে দেখি না।"
+      }
+    ]
+  },
+  "error": "",
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.65,
+      "num_predict": 256,
+      "num_ctx": 2048,
+      "seed": 42
+    },
+    "inference_completed": true,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 127,
+    "eval_duration_ns": 9298260000,
+    "finish_reason": "stop",
+    "wall_seconds": 23.697,
+    "raw_sha256": "2139bcc92b633ed8106570d93914f15a8a795f59750f32c766117a5c258453af"
+  },
+  "wall_seconds": 23.697,
+  "runtime": {
+    "version": "0.40.15"
+  },
+  "processes": {
+    "models": [
+      {
+        "name": "qwen3:4b-instruct-2507-q4_K_M",
+        "model": "qwen3:4b-instruct-2507-q4_K_M",
+        "size": 2882021620,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-11-06T19:04:54.385046297+06:00",
+        "size_vram": 0,
+        "context_length": 2048,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "human_review": false,
+  "owner_approved": false
+}
