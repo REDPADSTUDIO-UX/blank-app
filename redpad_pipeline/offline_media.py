@@ -3,6 +3,8 @@
 A successful software/mocked test is not model inference. Actual execution uses
 an owned subprocess, bounded lifetime and immutable source/model manifests.
 """
+from .resource_guard import serialized
+
 import hashlib,importlib.util,json,os,re,subprocess,sys,time
 from pathlib import Path
 from uuid import uuid4
@@ -117,6 +119,7 @@ def inspect_output(path,request,sidecar):
     return info
 
 
+@serialized
 def generate(engine,request,sidecar,timeout=900):
     validate_request(engine,request)
     if type(timeout) is not int or not 30<=timeout<=1800:raise AgentError('Invalid bounded media timeout.')

@@ -1,4 +1,6 @@
 """Optional local Indic Parler-TTS. No cloning, network service or model download."""
+from .resource_guard import serialized
+
 import importlib.util,json,os,re,subprocess,sys,time,unicodedata
 from pathlib import Path
 from uuid import uuid4
@@ -40,6 +42,7 @@ def preflight():
             'voice_cloning':False,'device':'CPU micro-test only; CUDA use requires a separately reviewed configuration'}
 
 
+@serialized
 def synthesize(request,sidecar,timeout=240):
     status=preflight()
     if not status['ready']:raise MediaBlocked('; '.join(status['blockers']))

@@ -50,10 +50,14 @@ class LocalVideoAdapter:
 
 class LocalSpeechAdapter:
     def capabilities(self):return dict(PROVIDERS['bengali-tts-local'])
-    def synthesize(self,request,sidecar):
+    def synthesize(self,request,sidecar,*,preset=None,style=None):
         data=example('voice');data['records']=[request];prepare('voice',data)
-        from .offline_speech import synthesize
-        return synthesize(request,sidecar)
+        from .offline_speech import synthesize,PRESETS,STYLES
+        if preset not in PRESETS or style not in STYLES:raise MediaBlocked('Explicit documented preset/style mapping required; department emotion/pace/reference fields are not supported synthesis controls.')
+        spoken=prepare('voice',data)['artifact']['derived']['lip_sync_cues'][0]['synthesis_text']
+        result=synthesize({'preset':preset,'style':style,'text':spoken},sidecar)
+        result['dialogue_source']={'line':request['id'],'speaker':request['speaker'],'original':request['text'],'synthesis_text':spoken,'timing_verified':False,'lip_sync_verified':False}
+        return result
 
 class ReadOnlyAnalyticsAdapter:
     def __init__(self,fetch=None):self.fetch=fetch

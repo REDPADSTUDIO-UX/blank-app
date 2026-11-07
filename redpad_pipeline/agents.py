@@ -58,9 +58,11 @@ class AgentStore:
             ''')
     @contextmanager
     def tx(self):
-        with sqlite3.connect(self.path, timeout=15) as db:
+        db=sqlite3.connect(self.path, timeout=15)
+        try:
             db.row_factory = sqlite3.Row
-            yield db
+            with db:yield db
+        finally:db.close()
     def event(self, db, task, actor, action, detail):
         db.execute('INSERT INTO events(task,actor,action,detail) VALUES (?,?,?,?)',(task,actor,action,encode(detail)))
     def configure(self, key, model):
@@ -113,7 +115,14 @@ class AgentStore:
         row=db.execute('SELECT * FROM tasks WHERE id=?',(tid,)).fetchone()
         if not row: raise AgentError('Unknown task.')
         return dict(row)
-    def _current(self,db,t):
+    def _current(self,db,t,checked=None,active=None):
+        # A shared 20-department DAG revisits the same approved ancestors many
+        # times. Cache only inside this transaction/read, never across revisions.
+        checked=set() if checked is None else checked;active=set() if active is None else active
+        token=(t['id'],t['revision'],t['refs'])
+        if token in checked:return
+        if t['id'] in active:raise AgentError('Dependency graph contains a cycle.')
+        active.add(t['id'])
         if db.execute("SELECT 1 FROM sqlite_master WHERE name='director_dispatch'").fetchone():
             linked=db.execute("SELECT p.state FROM director_dispatch d JOIN director_plans p ON p.id=d.plan WHERE d.task=?",(t["id"],)).fetchone()
             if linked and linked[0] != "Approved":
@@ -122,7 +131,8 @@ class AgentStore:
             source=self._task(db,ref['id'])
             if source['state']!='Approved' or source['revision']!=ref['revision']:
                 raise AgentError('Dependency approval is stale.')
-            self._current(db,source)
+            self._current(db,source,checked,active)
+        active.remove(t['id']);checked.add(token)
     def assign(self,key,brief,references=None,actor='owner'):
         agent(key)
         if actor not in ('owner','director') or (key=='qc' and actor!='owner'):

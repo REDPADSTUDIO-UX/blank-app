@@ -1,6 +1,8 @@
 """Prospective SDXL reference-image worker. No downloads or identity-lock claim.
 Checkpoint/license and compute approval remain explicit prerequisites.
 """
+from .resource_guard import serialized
+
 import importlib.util,json,os,subprocess,sys,time
 from pathlib import Path
 from uuid import uuid4
@@ -54,6 +56,7 @@ def validate_request(r):
     if r['steps']!=30 or type(r['steps']) is not int or type(r['seed']) is not int or not 0<=r['seed']<=2147483647:raise AgentError('Use fixed 30-step, bounded-seed micro benchmark.')
     return r
 
+@serialized
 def generate(request,sidecar,timeout=300):
     validate_request(request)
     if type(timeout) is not int or not 30<=timeout<=900:raise AgentError('Bounded image timeout required.')

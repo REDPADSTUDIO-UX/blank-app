@@ -4,6 +4,7 @@ import json
 import time
 import unicodedata
 from uuid import uuid4
+from .resource_guard import ResourceBusy
 from .agents import AGENTS, AgentError, encode, nonempty
 from .departments import prepare, contract
 from .screenwriter import LocalWriter, WritingError
@@ -121,6 +122,9 @@ class Engine:
             if not row: raise AgentError('Unknown execution.')
             run=dict(row)
             if run['state']!='Ready for Input': raise AgentError('Run is not queued; explicit retry required.')
+            if run['mode'] in ('local','media') and db.execute("SELECT 1 FROM agent_runs WHERE state='Running' AND mode IN ('local','media') AND id<>?",(rid,)).fetchone():
+                db.execute("UPDATE agent_runs SET state='Blocked',blocker='Resource/worker',error='Another owned inference/media worker is running; stop/recover it before explicit retry.' WHERE id=?",(rid,))
+                return 'Blocked'
             t=self.store._task(db,run['task'])
             if t['revision']!=run['expected_revision'] or t['state'] not in ('Assigned','Revision requested'):
                 raise AgentError('Task changed since enqueue.')
@@ -255,6 +259,8 @@ class Engine:
                 db.execute("UPDATE agent_runs SET state='Awaiting QC',finished=?,model=? WHERE id=?",(time.time(),model,rid))
                 self.store.event(db,t['id'],t['agent'],'execution_output',{'run':rid,'revision':revision,'provenance':provenance})
             return 'Awaiting QC'
+        except ResourceBusy as exc:
+            self._fail(rid,t['id'],'Blocked','Resource/worker',str(exc));return 'Blocked'
         except (MissingPrerequisite,WritingError,MediaBlocked) as exc:
             self._fail(rid,t['id'],'Blocked','Environment/model',str(exc));return 'Blocked'
         except Exception as exc:

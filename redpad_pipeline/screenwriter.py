@@ -2,6 +2,7 @@
 This is contextual learning, not weight training. No paid provider or model download.
 """
 from __future__ import annotations
+from .resource_guard import serialized
 import hashlib
 import json
 import math
@@ -155,6 +156,7 @@ class LocalWriter:
         self.model = model or os.environ.get('REDPAD_LOCAL_WRITER_MODEL','')
         if not self.model or not re.fullmatch(r'[a-zA-Z0-9_.:/-]{1,120}', self.model) or 'cloud' in self.model.lower():
             raise WritingError('No installed local writing model configured; no paid fallback was called.')
+    @serialized
     def __call__(self, system, prompt):
         self.last_evidence={};self.last_raw_output='';self.last_thinking_output=''
         started=time.monotonic()

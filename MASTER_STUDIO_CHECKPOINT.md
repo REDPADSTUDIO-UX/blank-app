@@ -1,5 +1,10 @@
 # REDPAD AI Studio — Unified Master Checkpoint
 
+> সর্বশেষ checkpoint: [Interrupted pre-GPU recovery](PRE_GPU_INTERRUPTED_RECOVERY.md)।
+> Development environment unavailable before full workspace upload. Only independent source guards were recovered.
+> The 20-agent implementation/raw evidence is NOT fully saved here; no completion or professional-readiness claim.
+> Local expanded suite was observed passing368 tests +8 standalone checks; reduced recovery tree has not been rerun.
+
 > সর্বশেষ capability audit: [PROFESSIONAL READINESS REPORT](PROFESSIONAL_READINESS_REPORT.md)।
 > ০/২০ professional capability verified; new model inference০, human review০।
 > Real-output trial binding, immutable evidence, specialist review gates ও prospective offline image worker added; 349 regression tests +8 standalone checks passed (software evidence only)।

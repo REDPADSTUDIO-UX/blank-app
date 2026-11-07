@@ -59,10 +59,11 @@ def process(key,rows,data):
             if r['dialogue_present'] and r['kind']=='music' and r['duck_db']==0:findings.append(finding(r['id'],'dialogue_masking','review ducking','no ducking',key,'warning'))
         derived.update(cue_sheet=sorted(rows,key=lambda r:r['start']),duration=max(r['start']+r['seconds'] for r in rows),composition_status='Cue metadata only')
     elif key=='editing':
-        records(rows,['id','shot','order','start','seconds','source_in','source_seconds','video','audio','subtitle','subtitle_start','subtitle_end','transition','color','vfx','export_profile'])
+        records(rows,['id','shot','order','start','seconds','source_in','source_seconds','video','audio','subtitle_start','subtitle_end','transition','color','vfx','export_profile'])
         need([r['order'] for r in rows]==list(range(1,len(rows)+1)),'Edit order must be consecutive.')
         end=0
         for r in rows:
+            need(isinstance(r.get('subtitle'),str),'Subtitle must be text; an empty string explicitly means no subtitle.')
             need(all(number(r[k]) for k in ('start','source_in','source_seconds','subtitle_start','subtitle_end')) and number(r['seconds'],0.01,3600),'Invalid timeline number.')
             need(abs(r['start']-end)<.001,'Timeline must be contiguous without overlapping cuts.')
             need(r['source_in']+r['seconds']<=r['source_seconds']+.001,'Clip exceeds source duration.')

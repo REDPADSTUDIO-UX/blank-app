@@ -1,5 +1,6 @@
 """Offline image-to-video inference. No API clients or automatic downloads."""
 from __future__ import annotations
+from .resource_guard import serialized
 import hashlib
 import importlib.util
 import json
@@ -27,6 +28,7 @@ def readiness():
     return True, 'Local model and CUDA available. This is a preflight, not a successful generation test.'
 
 
+@serialized
 def generate(image_bytes, media_dir, *, seed=42, motion=127):
     if not isinstance(seed, int) or not 0 <= seed < 2**32:
         raise AnimationError('Seed must be an integer from 0 to 4294967295.')
