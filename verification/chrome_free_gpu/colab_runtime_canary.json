@@ -1,0 +1,47 @@
+{
+  "observed_via": "Connected owner Chrome extension, permitted Colab notebook UI",
+  "url": "https://colab.research.google.com/drive/150YpQztfxOZY9q8hX4ixCOEJqX8RDeev#scrollTo=qbMFqnenG00W",
+  "output": "REDPAD_PREFLIGHT_JSON={\"cuda\": \"13.0\", \"cuda_available\": true, \"disk\": {\"free\": 120839057408, \"total\": 120942624768, \"used\": 86790144}, \"kind\": \"runtime_tensor_canary_NOT_model_inference\", \"meminfo\": [\"MemTotal:       13286932 kB\", \"MemAvailable:   11623284 kB\"], \"model_downloads\": 0, \"model_inferences\": 0, \"nvidia_smi\": \"Tesla T4, 15360, 14910, 580.82.07\", \"peak_allocated_bytes\": 12451840, \"python\": \"3.13.16\", \"tensor_finite\": true, \"tensor_seconds\": 0.36845701799998665, \"tensor_shape\": [512, 512], \"torch\": \"2.14.1+cu130\"}\n\n577",
+  "resources": {
+    "subscription": "not_subscribed",
+    "compute_units": 0,
+    "free_resources_not_guaranteed": true,
+    "displayed_maximum_remaining": "up to 5 hours 10 minutes",
+    "runtime_is_ephemeral": true
+  },
+  "model_downloads": 0,
+  "model_inferences": 0,
+  "artistic_review_completed": false,
+  "parsed_runtime": {
+    "cuda": "13.0",
+    "cuda_available": true,
+    "disk": {
+      "free": 120839057408,
+      "total": 120942624768,
+      "used": 86790144
+    },
+    "kind": "runtime_tensor_canary_NOT_model_inference",
+    "meminfo": [
+      "MemTotal:       13286932 kB",
+      "MemAvailable:   11623284 kB"
+    ],
+    "model_downloads": 0,
+    "model_inferences": 0,
+    "nvidia_smi": "Tesla T4, 15360, 14910, 580.82.07",
+    "peak_allocated_bytes": 12451840,
+    "python": "3.13.16",
+    "tensor_finite": true,
+    "tensor_seconds": 0.36845701799998665,
+    "tensor_shape": [
+      512,
+      512
+    ],
+    "torch": "2.14.1+cu130"
+  },
+  "runtime_release": {
+    "code_running": false,
+    "runtime_still_connected_at_last_observation": true,
+    "delete_dialog_cancelled": true,
+    "reason": "Did not confirm runtime-local file deletion; saved notebook and raw output retained. No keepalive or unattended code."
+  }
+}

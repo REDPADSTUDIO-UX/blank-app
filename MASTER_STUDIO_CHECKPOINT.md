@@ -1,3 +1,11 @@
+# Latest continuation — connected owner Chrome / free T4 (2026-11-12)
+
+Continued from `3ef4dac7aa259ceeec9d364570aca146a6b54f38`. Chrome extension connected; HF and Colab authenticated. Lightning shows region unavailable. Actual free Colab Tesla T4 tensor canary passed:15GiBVRAM,12.67GiBhostRAM,112.64GiBdisk;512x512 finite matmul0.368457s; NOT model inference. Owner notebook retains code/output. Zero new weights/generations/paid services. Existing success tests not repeated.
+See `PHASE3_CHROME_FREE_GPU_REPORT_BN.md` and `verification/chrome_free_gpu/`. Source-to-NF4 profiles exceed actual host RAM gate. Exact5.68GB Unsloth Qwen3.5-9B-Q4_K_M GGUF variant metadata/hash captured for owner approval; not downloaded, adapter/GPU compatibility not verified. Do not weaken gates or relabel NF4 results. Previous HF unknown request/egress approval remains pending; not polled/retried. New login is not that disclosure consent.
+GPU canary execution finished; runtime remained connected at final observation, no keepalive; reset/delete dialog cancelled. Notebook preserved. Next: exact download approval, recheck freeT4 availability, pinned GGUF runtime/load canary then existing Bengali suite as distinct bounded variant. No winner/human acceptance/21-agent readiness. Dashboard/main/Render/production untouched.
+
+---
+
 # Latest continuation — multi-cloud Phase 3 (2026-11-12)
 
 Continued from `712e6d80944d612b25c35e61f0b9306493aaac92`, feature branch only.
