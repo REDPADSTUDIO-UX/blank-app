@@ -1,0 +1,61 @@
+{
+  "experiments": [
+    {
+      "id": "555577913d631a4fd259b48a62dd76766ad2126cb0b9a4d0554ec6d923316d24",
+      "spec": "{\"case\": {\"id\": \"synthetic_ruba_portrait_hosted_canary_v1\", \"prompt\": \"Photorealistic cinematic casting portrait of Ruba, an entirely fictional 29-year-old Bangladeshi woman, dark hair tied in a simple loose bun, modest faded blue cotton salwar kameez, no makeup glamour, quietly determined expression with restrained warmth, naturally lit small Kallyanpur Dhaka kitchen at morning, stainless cooking pots in soft background, eye-level 50mm framing, realistic skin texture, no text, no logos, no real person likeness.\"}, \"model\": {\"repo\": [\"black-forest-labs/FLUX.2-klein-4B\", \"black-forest-labs/FLUX.2-small-decoder\"], \"space\": \"prithivMLmods/Flux.2-Klein-Edit-Ultra-Fast\", \"space_revision\": \"2225fd5fab9790c7e393c14f08d23fa182a7b71c\", \"checkpoint_revision\": null}, \"settings\": {\"seed\": 117, \"randomize_seed\": false, \"width\": 512, \"height\": 512, \"steps\": 4, \"guidance_scale\": 1.0}, \"source_sha256\": \"5fa25f5686c8d9a6f34283f7213442469e0a9508a02ab8d7b8414df1fd3cf0fa\"}",
+      "state": "Human Review Pending",
+      "output": "{\"provider\": \"hugging_face\", \"asset\": \"/workspace/scratch/19aa449d4f91/studio-intelligence/verification/multicloud_phase3/hf_hosted_ruba_canary.png\", \"sha256\": \"943b00e32a922cc51321d3b29f73932f2dd8e4c4136cf3790a1dcda15ab2e592\", \"observations\": {\"provider\": \"hugging_face_public_space\", \"space\": \"prithivMLmods/Flux.2-Klein-Edit-Ultra-Fast\", \"space_revision\": \"2225fd5fab9790c7e393c14f08d23fa182a7b71c\", \"reported_models\": [\"black-forest-labs/FLUX.2-klein-4B\", \"black-forest-labs/FLUX.2-small-decoder\"], \"checkpoint_revisions\": null, \"classification\": \"hosted_demo_canary_NOT_reproducible_local_benchmark\", \"request\": {\"images_b64_json\": \"[]\", \"prompt\": \"Photorealistic cinematic casting portrait of Ruba, an entirely fictional 29-year-old Bangladeshi woman, dark hair tied in a simple loose bun, modest faded blue cotton salwar kameez, no makeup glamour, quietly determined expression with restrained warmth, naturally lit small Kallyanpur Dhaka kitchen at morning, stainless cooking pots in soft background, eye-level 50mm framing, realistic skin texture, no text, no logos, no real person likeness.\", \"seed\": 117, \"randomize_seed\": false, \"width\": 512, \"height\": 512, \"steps\": 4, \"guidance_scale\": 1.0}, \"authentication\": \"anonymous_no_token\", \"paid_fallback\": false, \"state\": \"hosted_output_received_unverified_checkpoint\", \"actual_output_received\": true, \"actual_gpu_model\": null, \"peak_gpu_memory_bytes\": null, \"human_review_completed\": false, \"professional_accepted\": false, \"event_id\": \"800b90421aea438bbaef3814dc2b66af\", \"submission_http_status\": 200, \"output_sha256\": \"943b00e32a922cc51321d3b29f73932f2dd8e4c4136cf3790a1dcda15ab2e592\", \"output_bytes\": 393884, \"output_path\": \"verification/multicloud_phase3/hf_hosted_ruba_canary.png\", \"returned_seed\": 117, \"elapsed_wall_seconds\": 13.887781429999905}, \"evidence_class\": \"hosted_sample_checkpoint_or_settings_unverified\", \"reproducible_benchmark_verified\": false, \"selection_eligible\": false, \"human_review_completed\": false}"
+    },
+    {
+      "id": "c7f58829f550c4a27d2bbaefa93112cd58fbf0df98c4bf787cc816acab2250b2",
+      "spec": "{\"case\": {\"id\": \"natural_dialogue\", \"roles\": [\"script\"], \"prompt\": \"রুবা ও আদনানের ১২টি সংক্ষিপ্ত line/action লিখুন; সম্পর্কের উষ্ণতা ও চাপ বোঝান। চরিত্রভিত্তিক ২টি witty exchange থাকুক, জোক শোনানো নয়। JSON: {\\\"scene\\\":\\\"...\\\"}\", \"source\": \"ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।\", \"dimensions\": [\"bengali_naturalness\", \"humor\", \"subtext\"], \"expected_objective_defects\": null, \"system\": \"আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।\", \"required_keys\": [\"scene\"]}, \"model\": {\"space\": \"huggingface-projects/gemma-3-12b-it\", \"repo\": \"google/gemma-3-12b-it\", \"checkpoint_revision\": null}, \"settings\": {\"max_new_tokens\": 1024, \"other_server_settings\": \"unexposed\"}, \"source_sha256\": \"8156ba87a856b21c2ca28e01396afd1b0952a17ac569c1cdf8926db6a6005997\"}",
+      "state": "Authorization Blocked",
+      "output": null
+    }
+  ],
+  "attempts": [
+    {
+      "id": "81c14bdffa184b0a81ad6a7c275e1597",
+      "experiment": "555577913d631a4fd259b48a62dd76766ad2126cb0b9a4d0554ec6d923316d24",
+      "provider": "hugging_face",
+      "status": "Human Review Pending",
+      "evidence": "{\"provider\": \"hugging_face\", \"asset\": \"/workspace/scratch/19aa449d4f91/studio-intelligence/verification/multicloud_phase3/hf_hosted_ruba_canary.png\", \"sha256\": \"943b00e32a922cc51321d3b29f73932f2dd8e4c4136cf3790a1dcda15ab2e592\", \"observations\": {\"provider\": \"hugging_face_public_space\", \"space\": \"prithivMLmods/Flux.2-Klein-Edit-Ultra-Fast\", \"space_revision\": \"2225fd5fab9790c7e393c14f08d23fa182a7b71c\", \"reported_models\": [\"black-forest-labs/FLUX.2-klein-4B\", \"black-forest-labs/FLUX.2-small-decoder\"], \"checkpoint_revisions\": null, \"classification\": \"hosted_demo_canary_NOT_reproducible_local_benchmark\", \"request\": {\"images_b64_json\": \"[]\", \"prompt\": \"Photorealistic cinematic casting portrait of Ruba, an entirely fictional 29-year-old Bangladeshi woman, dark hair tied in a simple loose bun, modest faded blue cotton salwar kameez, no makeup glamour, quietly determined expression with restrained warmth, naturally lit small Kallyanpur Dhaka kitchen at morning, stainless cooking pots in soft background, eye-level 50mm framing, realistic skin texture, no text, no logos, no real person likeness.\", \"seed\": 117, \"randomize_seed\": false, \"width\": 512, \"height\": 512, \"steps\": 4, \"guidance_scale\": 1.0}, \"authentication\": \"anonymous_no_token\", \"paid_fallback\": false, \"state\": \"hosted_output_received_unverified_checkpoint\", \"actual_output_received\": true, \"actual_gpu_model\": null, \"peak_gpu_memory_bytes\": null, \"human_review_completed\": false, \"professional_accepted\": false, \"event_id\": \"800b90421aea438bbaef3814dc2b66af\", \"submission_http_status\": 200, \"output_sha256\": \"943b00e32a922cc51321d3b29f73932f2dd8e4c4136cf3790a1dcda15ab2e592\", \"output_bytes\": 393884, \"output_path\": \"verification/multicloud_phase3/hf_hosted_ruba_canary.png\", \"returned_seed\": 117, \"elapsed_wall_seconds\": 13.887781429999905}, \"evidence_class\": \"hosted_sample_checkpoint_or_settings_unverified\", \"reproducible_benchmark_verified\": false, \"selection_eligible\": false, \"human_review_completed\": false}",
+      "created": 1794474829.6669512
+    },
+    {
+      "id": "903afccd03324aeda50a97bf6d3e99e6",
+      "experiment": "c7f58829f550c4a27d2bbaefa93112cd58fbf0df98c4bf787cc816acab2250b2",
+      "provider": "lightning",
+      "status": "Authorization Blocked",
+      "evidence": "{\"reason\": \"Cloud browser redirects to sign-in; no authorized account session/API credentials; actual free credits and GPU unknown.\", \"observations\": {}}",
+      "created": 1794474829.671853
+    },
+    {
+      "id": "8d38fa8851114cea9a38c4dc7bb39b64",
+      "experiment": "c7f58829f550c4a27d2bbaefa93112cd58fbf0df98c4bf787cc816acab2250b2",
+      "provider": "colab",
+      "status": "Authorization Blocked",
+      "evidence": "{\"reason\": \"Cloud browser shows Sign in; no Google OAuth/ADC or enabled Colab MCP; no runtime/GPU activated.\", \"observations\": {}}",
+      "created": 1794474829.6733258
+    },
+    {
+      "id": "f406445f00054199b74f9a825d145395",
+      "experiment": "c7f58829f550c4a27d2bbaefa93112cd58fbf0df98c4bf787cc816acab2250b2",
+      "provider": "runpod",
+      "status": "Authorization Blocked",
+      "evidence": "{\"reason\": \"No exact owner-approved paid budget; cost proposal only, no GPU launched.\", \"observations\": {}}",
+      "created": 1794474829.675619
+    },
+    {
+      "id": "1dc6a5d8e1274a3892da47a753b39051",
+      "experiment": "c7f58829f550c4a27d2bbaefa93112cd58fbf0df98c4bf787cc816acab2250b2",
+      "provider": "hugging_face",
+      "status": "Authorization Blocked",
+      "evidence": "{\"reason\": \"Automatic approval review rejected benchmark-source egress while polling writing request. Initial submission launched; completion unknown; no result verified. Do not resubmit or inspect blocked result through alternate route before permission.\", \"observations\": {\"actual_output_verified\": false, \"completion_unknown\": true, \"automatic_review_rejected\": true}}",
+      "created": 1794474829.680133
+    }
+  ],
+  "provisions_compute": false,
+  "automatic_billing": false,
+  "automatic_retries": false
+}

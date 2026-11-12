@@ -1,0 +1,15 @@
+{
+  "destination": "https://huggingface-projects-gemma-3-12b-it.hf.space/gradio_api/call/v2/run",
+  "space": "huggingface-projects/gemma-3-12b-it",
+  "purpose": "Single fictional Bengali dialogue canary; hosted settings partly unverified; not an equivalent controlled benchmark or model selection",
+  "outbound_fields": {
+    "message": {
+      "text": "রুবা ও আদনানের ১২টি সংক্ষিপ্ত line/action লিখুন; সম্পর্কের উষ্ণতা ও চাপ বোঝান। চরিত্রভিত্তিক ২টি witty exchange থাকুক, জোক শোনানো নয়। JSON: {\"scene\":\"...\"}\n\nSOURCE MATERIAL:\nঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।",
+      "files": []
+    },
+    "system_prompt": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+    "max_new_tokens": 1024
+  },
+  "excluded": "No credentials, owner messages, private film script, real person media, Studio DB or other repository files",
+  "request_requires_explicit_consent": true
+}

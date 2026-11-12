@@ -1,3 +1,14 @@
+# Latest continuation — multi-cloud Phase 3 (2026-11-12)
+
+Continued from `712e6d80944d612b25c35e61f0b9306493aaac92`, feature branch only.
+See `PHASE3_MULTICLOUD_REPORT_BN.md` and `verification/multicloud_phase3/`.
+One genuine anonymous HF Space PNG received (FLUX.2-klein-4B + small decoder reported; loaded checkpoint/GPU/VRAM unverified):512x512,13.8878s end-to-end. Original bytes/raw SSE persisted, hash/retrieval receipt tracked. Hosted sample is NOT a reproducible benchmark, professional acceptance or model winner.
+Gemma fictional dialogue request was launched, then automatic approval review rejected polling for benchmark-source egress. Completion unknown, no writing output verified. Do not access/retry through alternate routes; exact outbound payload prepared for owner consent. Lightning/Colab cloud browser logged out; no resources launched. Runpod cost proposal only, paid approval absent.
+New provider-neutral metadata ledger reuses canonical queue identity, skips completed work, blocks unknown/failed retries, requires scoped approvals and keeps hosted samples selection-ineligible. Eight focused guards passed; historical418+4 tests not repeated. Existing21-agent model registry, adapters, Dashboard/Casting unchanged. No professional selection or Phase4.
+Resume: obtain only necessary payload consent or secure provider account access, reconcile unknown call before any retry, observe actual free compute, then exact model/download/license approval. Main/Render/data/paid GPU/YouTube untouched.
+
+---
+
 # Latest continuation — Kaggle model selection preparation (2026-11-12)
 
 Continued from `13f45f3a98bf8015e4a027909c97060a6b0da081`, feature branch only.
