@@ -1,0 +1,38 @@
+{
+  "transformers": {
+    "version": "5.22.2",
+    "requires_python": ">=3.11.0",
+    "source": "https://pypi.org/pypi/transformers/json",
+    "status": "metadata_pin_only_not_gpu_installed_or_tested"
+  },
+  "accelerate": {
+    "version": "1.15.0",
+    "requires_python": ">=3.10.0",
+    "source": "https://pypi.org/pypi/accelerate/json",
+    "status": "metadata_pin_only_not_gpu_installed_or_tested"
+  },
+  "bitsandbytes": {
+    "version": "0.50.2",
+    "requires_python": ">=3.10",
+    "source": "https://pypi.org/pypi/bitsandbytes/json",
+    "status": "metadata_pin_only_not_gpu_installed_or_tested"
+  },
+  "diffusers": {
+    "version": "0.43.0",
+    "requires_python": ">=3.11.0",
+    "source": "https://pypi.org/pypi/diffusers/json",
+    "status": "metadata_pin_only_not_gpu_installed_or_tested"
+  },
+  "safetensors": {
+    "version": "0.8.0",
+    "requires_python": ">=3.10",
+    "source": "https://pypi.org/pypi/safetensors/json",
+    "status": "metadata_pin_only_not_gpu_installed_or_tested"
+  },
+  "pillow": {
+    "version": "13.0.0",
+    "requires_python": ">=3.11",
+    "source": "https://pypi.org/pypi/pillow/json",
+    "status": "metadata_pin_only_not_gpu_installed_or_tested"
+  }
+}

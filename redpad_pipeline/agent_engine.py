@@ -186,7 +186,11 @@ class Engine:
                     settings={'num_ctx':8192,'num_predict':8192} if creative else {}
                     settings.update(stream=True);settings.update(local_options or {})
                     routes=ModelRoutes(self.store)
-                    if routes.policy(t['agent']) or routes.snapshot(rid,t['agent']):
+                    from .shared_model_services import SharedServices,SharedWriter
+                    shared=SharedServices(self.store)
+                    if shared.choose_backend(rid,t['agent'])=='shared':
+                        complete=SharedWriter(shared,rid,t['agent'],settings);model=complete.model
+                    elif routes.policy(t['agent']) or routes.snapshot(rid,t['agent']):
                         complete=RoutedWriter(routes,rid,t['agent'],settings);model=complete.model
                     else:
                         model=run['model'] or self.store.status(t['agent'])['model']
@@ -325,7 +329,7 @@ class Engine:
                 with self.store.tx() as db:
                     db.execute('INSERT OR REPLACE INTO local_inference_evidence VALUES (?,?,?,?,?,?,?)',
                         (rid,run['attempt']+1,t['agent'],media['model'],media['raw_text'],encode(media['metadata']),time.time()))
-            if provenance=='local_inference' and isinstance(complete,(LocalWriter,RoutedWriter)):
+            if provenance=='local_inference' and (isinstance(complete,(LocalWriter,RoutedWriter)) or complete.__class__.__name__=='SharedWriter'):
                 model=complete.model
                 # Preserve original text even if JSON parsing or structural validation fails.
                 # An injected test provider remains simulation and never enters this ledger.

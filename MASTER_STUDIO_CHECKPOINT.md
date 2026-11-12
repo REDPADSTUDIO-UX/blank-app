@@ -1,3 +1,13 @@
+# Latest continuation — Kaggle model selection preparation (2026-11-12)
+
+Continued from `13f45f3a98bf8015e4a027909c97060a6b0da081`, feature branch only.
+Read `PHASE3_KAGGLE_MODEL_SELECTION_REPORT_BN.md` and `verification/kaggle_model_selection/`.
+Actual Kaggle access is BLOCKED: owner browser context not connected; no API credentials/secure OAuth handoff. No GPU session, new model weights/inference or human artistic review. No best model selected. All 21 agents have explicit unselected research candidates/status.
+Implemented prospective shared text/image services, exact weight/tokenizer pinning, Studio Engine hooks, private GPU-off runtime notebook, resumable identical Bengali benchmark and comparative human/provisional-selection gates. These are software paths, not verified model integrations.
+418 regression tests passed before interruption; not repeated during resume. Four new focused backend/retry guards passed after the final fix. See separate resume logs. Dashboard/Casting work was not redone. New model/license/download approval remains required AFTER actual Kaggle resources are observed. Do not rerun old weak 4B experiments, start model optimization, change production routes, deploy Render, or publish anything. First resume action: establish legitimate supported owner Kaggle access, then measure resources and prepare the concrete approval request.
+
+---
+
 # Latest continuation — Casting / Producer Phase 1 (2026-11-12)
 
 Feature branch only. Continued from `b08f1b55e15097eddacce3e5f9caae893becde7e`.

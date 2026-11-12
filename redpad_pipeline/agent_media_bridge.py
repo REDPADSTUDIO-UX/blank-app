@@ -15,6 +15,15 @@ def execute_media(key,data,sidecar):
     if root.is_symlink():raise AgentError('Media workspace must not be a symlink.')
     root=root.resolve()
     operation=data.get('operation')
+    if operation=='shared_image' and key in ('character','art','location','costume','storyboard'):
+        from .agents import AgentStore
+        from .shared_model_services import SharedServices,profile
+        services=SharedServices(AgentStore(sidecar));id=data.get('profile');p=profile(id)
+        if p['adapter'] not in ('flux2_klein','z_image'):raise MediaBlocked('Selected shared candidate has no image generation adapter.')
+        route=services.policy(key)
+        if not route or route['profile']!=id or route['capability'] not in ('text_to_image','reference_edit'):raise MediaBlocked('Explicit approved development image route required.')
+        folder,evidence=services.execute(id,data.get('request',{}))
+        return {'path':str((folder/'image.png').relative_to(root)),'model':p['repo']+'@'+p['revision'],'actual_generation':True,'metadata':evidence}
     if operation=='offline_vision' and key in ('director','qc','continuity','character','art','location','costume','storyboard','performance','cinematographer','motion'):
         from .offline_vision import inspect
         return inspect(data.get('request'),sidecar)

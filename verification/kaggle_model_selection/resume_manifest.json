@@ -1,0 +1,54 @@
+{
+  "baseline_commit": "13f45f3a98bf8015e4a027909c97060a6b0da081",
+  "branch": "feature/video-music-editing-studio",
+  "full_regression": {
+    "tests": 418,
+    "passed": true,
+    "seconds": 38.558,
+    "scope": "Earlier pre-resume implementation; not rerun after backend guard additions",
+    "log": "regression.log"
+  },
+  "resume_validation": {
+    "distinct_targeted_guards_passed": 4,
+    "initial_run_passed": 3,
+    "initial_harness_errors": 1,
+    "retest_only_failed_case_passed": 1,
+    "logs": [
+      "resume_guard_initial.txt",
+      "resume_guard_retest.txt"
+    ]
+  },
+  "new_real_inference": 0,
+  "new_gpu_sessions": 0,
+  "human_artistic_reviews": 0,
+  "large_model_downloads": 0,
+  "dashboard_changed": false,
+  "production_routes_changed": false,
+  "files_sha256": {
+    "PHASE3_KAGGLE_MODEL_SELECTION_REPORT_BN.md": "bace2aab93c2f3402754bd094748c54a5d458cb9060d2460c4d4666d8d0773ac",
+    "assets/professional/kaggle_bengali_cases.json": "88fb1ecce105649e6d5aa24d3831699c0f272c0ea4020db55d14e28bc6ef5d03",
+    "assets/professional/phase3_candidates.json": "30b9c9c1c40c78c3a01dccc776254b0dd37a906ddcf15768bf8deac4aef4776f",
+    "experiments/kaggle_phase3/README.md": "4d03d75872d7133c9cce6f0b7c31592d97f42a8d3629d613e14c05aa53d19b2c",
+    "experiments/kaggle_phase3/kernel-metadata.template.json": "f5d578c325a0efa33539bc7029c8241039b3d8c608be56a226ba651b1140557f",
+    "experiments/kaggle_phase3/requirements.proposed.txt": "c18752d56b6ead72bcbc68d9086887a2b484d522a671f5df2eff9b8a8e373a77",
+    "experiments/kaggle_phase3/runtime_check.ipynb": "e5e6fa4d0044d07f4b46655ddd001a032ea80d5ba2e859a770a88d43892d2ffb",
+    "redpad_pipeline/kaggle_benchmark.py": "4d925f2db845f30b16669a3b65cca75203082d7eeee0fb41d087ca430e114635",
+    "redpad_pipeline/kaggle_runtime.py": "9dd9988cc92235e07009e973ee4c33f15947aff368727162bfee0302c98cc61b",
+    "redpad_pipeline/shared_model_services.py": "178e91eda21bf4370f09706215540292d2b52a942e73f4dce31576a7698c5b7a",
+    "redpad_pipeline/shared_model_worker.py": "5b953bfbba3fc02b11d60ca18dd2922f112a4a11d3a5157ea3bd0bfaf2c92d2e",
+    "tests/test_kaggle_model_services.py": "8089d6eed0068ce7f3e91752b83ba7687edc23e13bf466cbf837c21c7e2a72bc",
+    "verification/kaggle_model_selection/access_status.json": "aa0b69fba62a37d36c46410ebf932a833e8d821d3a84b75f03585f6b2a910320",
+    "verification/kaggle_model_selection/current_host_runtime.json": "2aeefe8f67abf8bdbcb3cd1f49093e26c0ad4a6499dcf1d11ac7ba485ebdcf09",
+    "verification/kaggle_model_selection/dependency_candidates.json": "0677a91c34fe066fba023050332c1e3424d204720e0201d5aa9dda81b4cce3ce",
+    "verification/kaggle_model_selection/development_checks.json": "46c0f8c2fa8c732c6cb59c5063d03a9b0d26a65556729bcf5fbd919701459093",
+    "verification/kaggle_model_selection/license_document_hashes.json": "19695ddc4da7485c4ed0bf6bf2179d452a1eb9eca231f8f7d4c8cbb6886895f4",
+    "verification/kaggle_model_selection/official_metadata.json": "0f91b93d90ccfa66cc8e54ebe2f589b95f4a3fc7e6413d6f8f89629af573941d",
+    "verification/kaggle_model_selection/prepared_worker_runtime.json": "6db135ecdef399ca2821885f157788f35ed7bb00fc0a38f1c6ca4c7c54596690",
+    "verification/kaggle_model_selection/resume_guard_initial.txt": "2e0f3c1a6cba83959ea1133a2e87cecdab13e09acdc7afeb9718d8d1268c92f0",
+    "verification/kaggle_model_selection/resume_guard_retest.txt": "351ac00e5d90c11f271a9b4be2bfff81612b620c819cc2445e7b7488218ee320",
+    "MASTER_STUDIO_CHECKPOINT.md": "94919df52b469282caedadb94ac719b6102176ac421ccf567cda46fea4dc2d52",
+    "redpad_pipeline/agent_engine.py": "75ea653625536681fe98f9dafe7427c2a0644f9bfde31285760ce4c339f44265",
+    "redpad_pipeline/agent_media_bridge.py": "97ba2c05bf337067c5e70fb3d82fd6c4759d1f8e0a8c275a347b02844f7d32e9",
+    "verification/kaggle_model_selection/regression.log": "64abdb701055f1eb207f7e315e165e822de5a5b98507651d787bde7a873c5256"
+  }
+}

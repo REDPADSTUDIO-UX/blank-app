@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-12",
+  "browser_connection": {
+    "attempted": true,
+    "result": "blocked_originating_browser_context_missing",
+    "message": "Browser access requires the originating browser context. Open ChatGPT in the browser with the connected extension and try again.",
+    "firefox_session_verified": false,
+    "cloud_browser_substituted": false
+  },
+  "plugin_discovery": {
+    "query": "Kaggle",
+    "results": 0
+  },
+  "official_api": {
+    "cli_version": "2.2.5",
+    "sdk_version": "0.1.38",
+    "standard_access_token_present": false,
+    "legacy_credentials_present": false,
+    "api_token_environment_present": false,
+    "oauth_flow_started": false,
+    "finding": "Official CLI headless OAuth requires a browser verification code and requests resources.admin:*; no secure handoff is connected, so no code/password was requested in chat and no OAuth scope was granted."
+  },
+  "actual_kaggle_environment": {
+    "account_connected": false,
+    "accelerator": null,
+    "gpu_vram_bytes": null,
+    "host_ram_bytes": null,
+    "storage_bytes": null,
+    "remaining_quota_hours": null,
+    "maximum_session_hours": null,
+    "internet_available": null,
+    "installed_libraries": null
+  },
+  "gpu_sessions_started": 0,
+  "large_model_downloads": 0,
+  "new_real_model_inferences": 0,
+  "human_artistic_reviews": 0,
+  "next_required_action": "Owner connects the authenticated Kaggle browser context through the supported Work browser connection; no passwords, tokens or verification codes in chat.",
+  "resume_recheck": {
+    "browser_error": "Browser access requires the originating browser context. Open ChatGPT in the browser with the connected extension and try again.",
+    "browser_connected": false,
+    "standard_token_file_present": false,
+    "legacy_credentials_present": false,
+    "api_token_env_present": false,
+    "legacy_env_pair_present": false,
+    "oauth_initiated": false,
+    "gpu_or_model_tests_repeated": false
+  }
+}
