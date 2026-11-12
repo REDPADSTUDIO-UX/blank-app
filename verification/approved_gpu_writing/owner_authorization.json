@@ -1,0 +1,10 @@
+{
+  "owner_message": "তোমাকে অনুমতি দিচ্ছি আরেকটা জিনিস অ্যাপ্রুভালের রিভিউ আটকে দিয়েছিল যেটা পাস কাটানো হয়নি ওটাকে কী করবে সেটাও এটার মধ্যে করে ফেলো অনুমতি দিচ্ছি ।",
+  "scope": [
+    "Exact unsloth/Qwen3.5-9B-GGUF revision3885219b6810b007914f3a7950a8d1b469d598a5 fileQwen3.5-9B-Q4_K_M.gguf5680522464bytes SHA25603b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8 on existing free Colab",
+    "Exact fictional Bengali dialogue payload in verification/multicloud_phase3/WRITING_EGRESS_APPROVAL.json to named HF Gemma Space, including disclosure; reconcile earlier unknown call where possible"
+  ],
+  "paid_allowed": false,
+  "other_model_downloads_allowed": false,
+  "human_review_completed": false
+}

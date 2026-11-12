@@ -19,6 +19,9 @@ def technical_validation(case,raw,worker):
     try:data=json.loads(raw);result['json_valid']=isinstance(data,dict)
     except ValueError:return result
     result['contract_fields_valid']=isinstance(data,dict) and set(data)==set(case['required_keys'])
+    if not isinstance(data,dict):return result
+    # Real GPU output used an array where the task explicitly requests a scene string.
+    result['contract_field_types_valid']=('scene' not in case['required_keys'] or isinstance(data.get('scene'),str) and bool(data['scene'].strip()))
     expected=case.get('expected_objective_defects')
     if expected is not None:
         findings=data.get('findings')
@@ -32,7 +35,7 @@ def technical_validation(case,raw,worker):
                 if grounded and f.get('code') in expected:tp.add(f['code'])
                 else:fp+=1
         result.update(critic_control_pass=(unsupported==0 and fp==0 and len(tp)==len(set(expected))),true_positive_defects=len(tp),false_positive_findings=fp,missed_expected_defects=len(set(expected)-tp),unsupported_quotes=unsupported,quote_findings=findings)
-    result['technical_pass']=result['json_valid'] and result['generation_complete'] and result['contract_fields_valid'] and result.get('unsupported_quotes',0)==0
+    result['technical_pass']=result['json_valid'] and result['generation_complete'] and result['contract_fields_valid'] and result['contract_field_types_valid'] and result.get('unsupported_quotes',0)==0 and result.get('critic_control_pass',True)
     return result
 
 class KaggleLab:

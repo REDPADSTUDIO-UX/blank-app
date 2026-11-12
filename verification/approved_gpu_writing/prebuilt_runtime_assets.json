@@ -1,0 +1,19 @@
+{
+  "tag": "b12318",
+  "source_release": "https://github.com/ggml-org/llama.cpp/releases/tag/b12318",
+  "assets": [
+    {
+      "name": "cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "bytes": 594371580,
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "digest": "sha256:caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea"
+    },
+    {
+      "name": "llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "bytes": 197999267,
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "digest": "sha256:e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797"
+    }
+  ],
+  "reason": "Free T4 session allowance almost exhausted; official precompiled runtime avoids repeated long CPU compilation. Same approved model weights, no second model."
+}

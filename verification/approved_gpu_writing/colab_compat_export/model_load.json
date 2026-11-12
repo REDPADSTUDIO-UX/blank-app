@@ -1,0 +1,28 @@
+{
+  "load_seconds": 22.06920487699972,
+  "actual_gpu_offload_lines": [
+    "0.00.305.823 I cmn  common_param:   - CUDA0   : Tesla T4 (14912 MiB, 14659 MiB free)",
+    "0.00.721.584 I common_memory_breakdown_print: |   - CUDA0 (T4)         | 14912 = 14659 + (5005 =  4861 +     114 +      30) +       -4752 |",
+    "0.00.865.005 I llama_prepare_model_devices: using device CUDA0 (Tesla T4) (0000:00:04.0) - 14659 MiB free",
+    "0.01.393.286 I load_tensors: offloading output layer to GPU",
+    "0.01.393.318 I load_tensors: offloading 31 repeating layers to GPU",
+    "0.01.393.319 I load_tensors: offloaded 33/33 layers to GPU",
+    "0.01.393.329 I load_tensors:        CUDA0 model buffer size =  4861.28 MiB",
+    "0.03.022.591 I llama_kv_cache:      CUDA0 KV buffer size =    64.00 MiB",
+    "0.03.023.067 I llama_memory_recurrent:      CUDA0 RS buffer size =    50.25 MiB",
+    "0.03.046.802 I sched_reserve:      CUDA0 compute buffer size =    30.00 MiB"
+  ],
+  "health": {
+    "status": "ok"
+  },
+  "localhost_only": true,
+  "server_pid": 81394,
+  "actual_owned_gpu_process": [
+    {
+      "pid": 81394,
+      "used_mib": 5124
+    }
+  ],
+  "nvidia_compute_apps": "701, 148\n81394, 5124",
+  "proof": "Actual owned server process GPU memory; independent of changing log wording"
+}

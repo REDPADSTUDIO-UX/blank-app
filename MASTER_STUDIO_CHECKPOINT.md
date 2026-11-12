@@ -1,3 +1,13 @@
+# Latest continuation — approved actual Qwen/Gemma tests (2026-11-12)
+
+Continued from `edb0adcd041fce7787dfd42e0b1088456aeb834a`, feature only. Owner explicitly approved exact5.68GB Qwen GGUF download/freeColab + prior fictional payload to namedGemmaSpace. Consent barrier handled without bypass; previousunknown event remains unknown, newHF dialogue raw captured.
+Verified Qwenmodel SHA; officialprebuiltCUDA runtime/binary digests. Sourcebuild interrupted;9 residualownedcompilerprocesses later stopped. Initial loadtimeout + logguard rejection + firstdecode180s timeout preserved. Distinct T4compatibility configuration (cleanup,FAoff,batch128,threads2) produced6/6 complete responses,0truncated:1 canary+5specialist tasks. Earlierfailedgeneration is not hidden. Exactcause not isolated. Servers stopped.
+Actual outputs still creatively weak: causality/repetition, inventedjob/deliverylink, unnatural dialogue; Directorcorrectpositive butcleanfalseaccusation. No winner/professional approval. Fixed provenvalidatorfalsepasses(scenearray +criticcontrol failure);34 relevant regressions pass(29rerun because sharedcodechanged +5new). Oldcreative runs not repeated.
+See `PHASE3_APPROVED_GPU_WRITING_REPORT_BN.md`, `verification/approved_gpu_writing/`; actualrawHTTP/settings/timings/hashes +blindpacket retained. Humanreview NOT completed. All21agents/routes/Dashboard/Casting preserved; no liveintegration claim.
+Colab dailyfreeallowance RANOUT, runtime mayterminateanytime. Resume only unrun5suitecases +comparative/independentreview once actualfreecompute returns. Sameexactapprovedmodel/payload do not need reapproval; otherlargemodel/paidresources/privatepayload still need exactapproval. No Render/main/productiondata/YouTube changes. Phase3 incomplete;Phase4 not started.
+
+---
+
 # Latest continuation — connected owner Chrome / free T4 (2026-11-12)
 
 Continued from `3ef4dac7aa259ceeec9d364570aca146a6b54f38`. Chrome extension connected; HF and Colab authenticated. Lightning shows region unavailable. Actual free Colab Tesla T4 tensor canary passed:15GiBVRAM,12.67GiBhostRAM,112.64GiBdisk;512x512 finite matmul0.368457s; NOT model inference. Owner notebook retains code/output. Zero new weights/generations/paid services. Existing success tests not repeated.
