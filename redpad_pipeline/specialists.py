@@ -7,7 +7,9 @@ from .agents import AgentError, encode, AGENTS
 STAGES = {'A': ('qc','character','art','location','costume'),
           'B': ('storyboard','performance','cinematographer','motion','continuity'),
           'C': ('video','voice','music','editing'), 'D': ('production_manager','growth','youtube')}
+# Legacy seventeen-department fixture coverage remains immutable.
 IMPLEMENTED = {key for stage in STAGES.values() for key in stage}
+ALL_SPECIALISTS = IMPLEMENTED | {'casting'}
 
 
 def need(value, message):
@@ -57,7 +59,7 @@ def check_handoff(key, data, sources, prior=None):
 
 
 def prepare(key, data, upstream=None):
-    need(key in IMPLEMENTED,'Specialist workflow unavailable.')
+    need(key in ALL_SPECIALISTS,'Specialist workflow unavailable.')
     need(isinstance(data,dict) and data.get('specialist_v1') is True,'Specialist v1 contract required.')
     need(set(data)=={'specialist_v1','project','records','sources','base','targets'},'Invalid specialist envelope.')
     need(text(data['project']) and isinstance(data['sources'],dict),'Project and source map required.')
@@ -70,7 +72,10 @@ def prepare(key, data, upstream=None):
         need(bool(data['targets']) and set(delta)<=set(data['targets']),'Changes outside targeted revision.')
     else: delta=[];need(not data['targets'],'Revision targets require an approved base.')
     findings=[];derived={}
-    if key=='character':
+    if key=='casting':
+        from .casting import validate
+        derived=validate(rows,data['sources'])
+    elif key=='character':
         records(rows,['id','name','age','face','hair','appearance','personality','relationships','evolution','references','scene_states'])
         ids={r['id'] for r in rows}
         for r in rows:
@@ -103,6 +108,21 @@ def prepare(key, data, upstream=None):
         derived['room_graph']={r['id']:r['connections'] for r in rows}
     elif key=='costume':
         records(rows,['id','scene','character','outfit','color','material','weather','culture','accessories','reference','change_reason'])
+        casting=data['sources'].get('casting')
+        if casting:
+            records(rows,['actor_id','hair','makeup','apparent_age','scene_state','chronology'])
+            actors={(x['character'],x['actor_id']) for x in casting['records']}
+            for r in rows:
+                need((r['character'],r['actor_id']) in actors,'Costume actor differs from approved casting.')
+                need(number(r['apparent_age'],0,120),'Invalid look age.')
+                need(number(r['chronology']) and text(r['hair']) and text(r['makeup']),'Chronology, hair and makeup descriptions required.')
+                need(isinstance(r['scene_state'],dict) and {'injury','sweat','rain','dirt'}<=set(r['scene_state']),'Explicit injury/sweat/rain/dirt states required.')
+                need(all(text(r['scene_state'][k]) for k in ('injury','sweat','rain','dirt')),'Scene appearance states must be explicit text.')
+            previous={}
+            for r in sorted(rows,key=lambda x:x['chronology']):
+                look={k:r[k] for k in ('outfit','hair','makeup','apparent_age','scene_state')}
+                need(r['character'] not in previous or previous[r['character']]==look or r['change_reason']!='none','Unexplained hair/makeup/appearance continuity change.')
+                previous[r['character']]=look
         last={}
         identities=data['sources'].get('character',{}).get('records',[])
         for r in rows:
@@ -137,6 +157,9 @@ def prepare(key, data, upstream=None):
 
 def example(key):
     from .specialist_examples import EXAMPLES
+    if key=='casting':
+        from .casting import EXAMPLE
+        return dict(specialist_v1=True,project='Casting proposal',records=[copy.deepcopy(EXAMPLE)],sources={},base=None,targets=[])
     return dict(specialist_v1=True,project='ফেরার চাবি — fictional manual test',records=copy.deepcopy(EXAMPLES[key]),sources={},base=None,targets=[])
 
 

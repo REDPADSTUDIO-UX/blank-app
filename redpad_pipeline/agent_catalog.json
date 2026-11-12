@@ -381,7 +381,10 @@
       "Wardrobe",
       "Costume Bible",
       "Styling",
-      "Character and art collaboration"
+      "Character and art collaboration",
+      "Hair styling and makeup",
+      "Age, culture, injury, sweat, rain and dirt continuity",
+      "Receive Producer-locked actor identity and versioned appearance references"
     ],
     "registration": "Registered",
     "existing_modules": [
@@ -1098,5 +1101,60 @@
     "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
     "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
     "execution_contract": "Legacy departments.contract(key), or specialist_v1 specialists.example(key); versioned sources/base/targets"
+  },
+  {
+    "id": "redpad.agent.casting",
+    "key": "casting",
+    "name": "Casting Director AI",
+    "department": "Casting and actor identity",
+    "responsibilities": [
+      "Read approved Script and Character Bible and Director vision",
+      "Prepare psychology, apparent age, performance, voice and chemistry casting briefs",
+      "Compare fictional AI or authorized human candidate identities",
+      "Director inspection, independent QC and explicit Producer identity lock",
+      "Versioned actor mapping, reference assets and recasting invalidation",
+      "Coordinate Costume/Hair/Makeup, Performance, Camera, Video, Voice and Continuity"
+    ],
+    "registration": "Registered",
+    "existing_modules": [
+      "redpad_pipeline/casting.py"
+    ],
+    "existing_status": "Casting proposal, evidence and identity-lock software; creative/media capability unverified",
+    "capabilities": [
+      "Registry inspection",
+      "Validated task routing",
+      "Versioned manual/simulation outputs",
+      "Independent local configuration",
+      "Executable department preparation/validation",
+      "Persistent dependency scheduling",
+      "Explicit retry and recovery"
+    ],
+    "missing": [
+      "Real model-powered inference verification on this host",
+      "Production media/creative-quality verification"
+    ],
+    "dependencies": [
+      "script",
+      "character",
+      "director"
+    ],
+    "input_contract": {
+      "schema_version": 1,
+      "brief": "non-empty string",
+      "references": "list of approved task IDs"
+    },
+    "output_contract": {
+      "schema_version": 1,
+      "kind": "casting",
+      "summary": "non-empty string",
+      "artifacts": "list of strings; references only",
+      "provenance": "manual or simulation; not verified inference"
+    },
+    "approval": "Independent QC recommendation followed by owner approval; never publishes",
+    "priority": 4,
+    "model_options": "Evaluate already-installed local Ollama writing models for planning; specialized media adapters require separate owner-approved evaluation",
+    "hardware": "Registry: CPU only. Inference RAM/VRAM must be measured for selected model before installation.",
+    "completion": "Real representative Bengali fixtures, recorded inference evidence, human quality review, regression and safety tests pass",
+    "execution_contract": "Department-specific JSON: redpad_pipeline.departments.contract(agent_key)"
   }
 ]

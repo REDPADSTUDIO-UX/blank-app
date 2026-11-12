@@ -14,7 +14,7 @@ def digest(value):
 def load():
     data=json.loads(CATALOG.read_text())
     roles={x['key'] for x in json.loads((ROOT/'redpad_pipeline/agent_catalog.json').read_text())}
-    if set(data['modules'])!=roles:raise ValueError('Knowledge must cover exactly the existing twenty agents.')
+    if set(data['modules'])!=roles:raise ValueError('Knowledge must cover exactly the registered agents.')
     ids=set()
     for role,module in data['modules'].items():
         if not module['source_ids'] or any(data['sources'].get(s,{}).get('status')!='allowed' for s in module['source_ids']):raise ValueError('Unapproved knowledge source.')

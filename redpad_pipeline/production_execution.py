@@ -29,11 +29,15 @@ class ProductionOps:
         data=json.loads(r['payload'])
         if digest([r['kind'],data])!=r['sha']:raise AgentError('Packet integrity failed.')
         _,pins=self.sources({s['role']:s['task'] for s in data['sources']})
+        if data.get('casting_locks'):
+            from .casting import Casting
+            current={r['character']:r['lock_id'] for r in Casting(self.p).current()}
+            if any(current.get(c)!=lock for c,lock in data['casting_locks'].items()):raise AgentError('Recasting invalidated this shot packet.')
         if pins!=data['sources']:raise AgentError('Packet sources changed; regenerate only the affected packet.')
         return {'id':id,'kind':r['kind'],**data}
     def shot(self,tasks,shot_id):
         required={'script','character','art','location','costume','storyboard','performance','cinematographer','motion'}
-        if set(tasks)!=required:raise AgentError('Approved screenplay and all eight shot departments required.')
+        if set(tasks) not in (required,required|{'casting'}):raise AgentError('Approved screenplay and all eight shot departments required.')
         bodies,pins=self.sources(tasks)
         def rows(role):return bodies[role]['artifact']['records']
         def one(items,label):
@@ -56,7 +60,20 @@ class ProductionOps:
             if any(not isinstance(act.get(k),str) or not act[k].strip() for k in ('objective','tactic','partner_reaction')):raise AgentError('Playable acting objective, tactic and reaction required for shot execution.')
         conflicts=[f for role in required for f in bodies[role].get('findings',[]) if isinstance(f,dict) and f.get('severity') in ('error','blocker')]
         if conflicts:raise AgentError('Resolve approved metadata conflicts before shot execution: '+encode(conflicts))
-        return self._save('shot_execution',{'sources':pins,'shot':board,'scene':scene,'identities':[chars[c] for c in board['characters']],
+        actor_refs=[];locks={}
+        if 'casting' in tasks:
+            from .casting import Casting
+            casting=Casting(self.p)
+            current={r['character']:r for r in casting.current()}
+            for c in board['characters']:
+                lock=current.get(c)
+                if not lock or lock['task']!=tasks['casting']:raise AgentError('Current Producer casting lock per shot character required.')
+                actors=json.loads(lock['payload'])['actors'];actor=one([r for r in actors if r['character']==c],'locked actor')
+                actor_refs.append(actor);locks[c]=lock['lock_id']
+            for role in ('costume','storyboard','performance','cinematographer','motion'):
+                bound={p['character']:p['lock_id'] for p in bodies[role]['artifact'].get('derived',{}).get('casting_identity_locks',[])}
+                if any(bound.get(c)!=lock for c,lock in locks.items()):raise AgentError('Shot department '+role+' must consume the exact locked casting identity; legacy metadata does not prove this.')
+        return self._save('shot_execution',{'casting_locks':locks,'actors':actor_refs,'sources':pins,'shot':board,'scene':scene,'identities':[chars[c] for c in board['characters']],
            'location':location,'art':art,'costumes':wardrobe,'performance':performance,'camera':camera,'motion':motions,
            'reference_assets':sorted({v for c in board['characters'] for v in chars[c]['references']}|set(location['references'])),
            'technical_requirements':{'identity_lock':False,'lip_sync':False,'physics_simulation':False,'unsupported_controls':'Performance/camera/motion prose is editorial intent until actual model conditioning is verified.'},

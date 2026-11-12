@@ -36,7 +36,7 @@ class ProfessionalTests(unittest.TestCase):
           'modes':['text'],'examined_samples':[s['id'] for s in samples],
           'criteria':{k:{'passed':True,'finding':'Synthetic gate test, not an artistic judgment','evidence':[{'sample':samples[0]['id'],'quote':'synthetic'}]} for k in trial['case']['criteria']}}
  def test_audit_never_promotes_software_or_knowledge_to_intelligence(self):
-  data=audit();self.assertEqual(len(data['agents']),20);self.assertEqual(data['professional_ready_count'],0)
+  data=audit();self.assertEqual(len(data['agents']),21);self.assertEqual(data['professional_ready_count'],0)
   self.assertFalse(any(r['production_capable'] or r['professional_intelligence_verified'] for r in data['agents']))
   for role,spec in suite()['agents'].items():
    self.assertTrue(spec['expertise_required']);self.assertTrue(spec['minimum_counts'])

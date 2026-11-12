@@ -11,7 +11,7 @@ class AgentTests(unittest.TestCase):
     def output(self,key='story'):
         return dict(schema_version=1,kind=AGENTS[key]['output_contract']['kind'],summary='Fixture only',artifacts=[],provenance='simulation')
     def test_registry_and_dependency_dag(self):
-        self.assertEqual(len(CATALOG),20); self.assertEqual(len({a['id'] for a in CATALOG}),20)
+        self.assertEqual(len(CATALOG),21); self.assertEqual(len({a['id'] for a in CATALOG}),21)
         def visit(k,trail=()):
             self.assertNotIn(k,trail)
             for dep in AGENTS[k]['dependencies']: visit(dep,trail+(k,))
@@ -30,7 +30,7 @@ class AgentTests(unittest.TestCase):
             for key in AGENTS:
                 tid=self.s.assign(key,'Test')
                 self.s.submit(tid,self.output(key),0)
-        self.assertEqual(len(self.s.tasks()),20)
+        self.assertEqual(len(self.s.tasks()),21)
     def test_approval_and_stale_handoff(self):
         tid=self.s.assign('story','Test'); self.s.submit(tid,self.output(),0)
         for actor in ('director','qc','story'):

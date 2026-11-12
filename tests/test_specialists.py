@@ -24,7 +24,7 @@ class SpecialistTests(unittest.TestCase):
                 self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
                 run=next(r for r in self.e.runs() if r['id']==rid);self.approve(run['task'])
                 mid=self.e.enqueue(key,data,mode='local');self.assertEqual(self.e.execute(mid),'Blocked')
-        self.assertEqual(len(AGENTS),20)
+        self.assertEqual(len(AGENTS),21)
     def test_character_and_versioned_approved_handoff(self):
         data=example('character');rid=self.e.enqueue('character',data);self.e.execute(rid)
         tid=next(r for r in self.e.runs() if r['id']==rid)['task']

@@ -648,6 +648,41 @@
         "text": 2,
         "trace": 2
       }
+    },
+    "casting": {
+      "case_id": "professional_casting_v1",
+      "capability_required": "Source-grounded casting, visual comparison and evidence-limited acting/voice/chemistry assessment",
+      "candidate_models": [],
+      "required_output_kinds": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "review_modes": [
+        "text",
+        "visual",
+        "listening"
+      ],
+      "minimum_samples": 1,
+      "expertise_required": "Independent casting director plus Bengali performance/voice reviewers",
+      "real_world_task": "Compare authorized fictional actor candidates against approved character psychology and screenplay; evaluate portraits separately from recorded partner performance and Bengali voice samples; blind review and recast continuity.",
+      "criteria": [
+        "source_fidelity",
+        "identity_consistency",
+        "performance_evidence",
+        "voice_evidence",
+        "chemistry_evidence",
+        "uncertainty_accuracy"
+      ],
+      "specialist_development_needed": "Software proposal/inspection/Producer lock and invalidation added in Phase 1. Model selection intentionally deferred. No actual candidate generation or artistic capability validated.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 4,
+        "video": 2,
+        "audio": 2
+      }
     }
   },
   "professional_ready_requires": [

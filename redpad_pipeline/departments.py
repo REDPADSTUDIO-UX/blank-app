@@ -151,6 +151,9 @@ def prepare(key, data, upstream=None):
 
 def contract(key):
     examples=Path(__file__).with_name('department_examples.json')
+    if key=='casting':
+        from .specialists import example
+        return example(key)
     if examples.is_file():
         return json.loads(examples.read_text())[key]
     if key in FIELDS:

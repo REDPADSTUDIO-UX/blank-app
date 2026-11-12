@@ -564,6 +564,15 @@
             "reference fidelity"
           ],
           "instruction": "Describe fit and work constraints without stereotyping class, religion or region."
+        },
+        {
+          "id": "costume.4",
+          "tags": [
+            "hair",
+            "makeup",
+            "identity"
+          ],
+          "instruction": "Consume the locked actor identity. Track hair styling, makeup, apparent age, injury, sweat, dirt, rain and wardrobe in scene chronology. Any changed state requires an approved scene reason."
         }
       ],
       "scenario": "বৃষ্টিভেজা শার্ট পরে বাবা বাড়ি ঢোকেন।",
@@ -589,7 +598,8 @@
       "cross_department_contracts": [
         "character",
         "continuity",
-        "location"
+        "location",
+        "casting"
       ],
       "common_failure": "পরের মিনিটেই শুকনো অন্য শার্ট।",
       "targeted_correction": "c2/shirt01 wet থেকে damp হবে; বদলালে bathroom transition ও শুকনো outfit02-এর entry দিন."
@@ -1387,6 +1397,84 @@
       ],
       "common_failure": "ইউটিউবে এখনই schedule করে দিলাম।",
       "targeted_correction": "metadata draft সংরক্ষণ; media hash/rights missing হলে blocker; upload বা নতুন OAuth permission নয়."
+    },
+    "casting": {
+      "title": "Evidence-limited casting and identity continuity",
+      "version": 1,
+      "source_ids": [
+        "original"
+      ],
+      "lessons": [
+        {
+          "id": "casting.1",
+          "tags": [
+            "casting",
+            "identity",
+            "performance"
+          ],
+          "instruction": "Ground briefs in approved screenplay, character psychology and Director vision. Compare apparent age, emotional range, voice requirements and partner chemistry separately."
+        },
+        {
+          "id": "casting.2",
+          "tags": [
+            "casting",
+            "identity",
+            "performance"
+          ],
+          "instruction": "Only fictional AI identities or authorized human likeness and voice may be used. Preserve exact actor IDs and versioned reference IDs. Never authorize celebrity imitation or voice cloning."
+        },
+        {
+          "id": "casting.3",
+          "tags": [
+            "casting",
+            "identity",
+            "performance"
+          ],
+          "instruction": "A portrait does not prove acting. Without actual clip/listening evidence, report performance, chemistry and voice as untested. Model opinions are proposals, never independent approval."
+        },
+        {
+          "id": "casting.4",
+          "tags": [
+            "casting",
+            "identity",
+            "performance"
+          ],
+          "instruction": "Director inspection and independent QC precede explicit Producer locking. Recasting invalidates dependent shots while preserving old approvals and source versions."
+        }
+      ],
+      "scenario": "বৃষ্টিভেজা শার্ট পরে বাবা বাড়ি ঢোকেন।",
+      "original_example": {
+        "weak": "পরের মিনিটেই শুকনো অন্য শার্ট।",
+        "corrective_example": "c2/shirt01 wet থেকে damp হবে; বদলালে bathroom transition ও শুকনো outfit02-এর entry দিন.",
+        "provenance": "authored_teaching_fixture_not_model_output"
+      },
+      "rubric": [
+        {
+          "criterion": "outfit state",
+          "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+        },
+        {
+          "criterion": "motivated changes",
+          "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+        },
+        {
+          "criterion": "reference fidelity",
+          "assessment": "Cite observable source/output evidence; defer artistic judgment to independent review."
+        }
+      ],
+      "cross_department_contracts": [
+        "character",
+        "script",
+        "director",
+        "costume",
+        "performance",
+        "video",
+        "voice",
+        "continuity",
+        "qc"
+      ],
+      "common_failure": "পরের মিনিটেই শুকনো অন্য শার্ট।",
+      "targeted_correction": "c2/shirt01 wet থেকে damp হবে; বদলালে bathroom transition ও শুকনো outfit02-এর entry দিন."
     }
   }
 }

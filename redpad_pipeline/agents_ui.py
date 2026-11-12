@@ -6,7 +6,7 @@ from .agents import CATALOG, AGENTS, AgentStore, AgentError
 
 def render_agent_control(path):
     st.header('AI AGENTS CONTROL CENTER')
-    st.warning('20 department software workflows. Model inference and media generation are separate capabilities; no automatic publishing.')
+    st.warning('21 registered departments; existing software workflows retained. Model inference and media generation are separate capabilities; no automatic publishing.')
     with st.expander('Phase 3 — real-model experiments'):
         from .phase3_ui import show_phase3
         show_phase3()

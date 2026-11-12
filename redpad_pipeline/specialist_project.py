@@ -19,6 +19,15 @@ DEPENDENCIES={
  'production_manager':[], 'growth':['editing','qc'], 'youtube':['growth','qc']}
 
 
+# New production orchestration adds casting without rewriting the legacy 20-agent fixture graph.
+CASTING_DEPENDENCIES={}
+for _role,_deps in DEPENDENCIES.items():
+    CASTING_DEPENDENCIES[_role]=list(_deps)
+    if _role=='character':CASTING_DEPENDENCIES['casting']=['character']
+for _role in ('costume','storyboard','performance','cinematographer','motion','video','voice','continuity','qc'):
+    CASTING_DEPENDENCIES[_role].append('casting')
+
+
 def queue_project(engine,inputs,creative_tasks):
     if not isinstance(inputs,dict) or set(inputs)!=IMPLEMENTED:raise AgentError('Supply one validated specialist input per existing department.')
     if not isinstance(creative_tasks,list) or not creative_tasks:raise AgentError('Approved creative task references required.')
@@ -53,7 +62,7 @@ def queue_project(engine,inputs,creative_tasks):
 
 
 def queue_generated_project(engine,project,creative_tasks):
-    """Queue all 17 local drafting departments from current approved creative work.
+    """Queue all 18 local drafting departments from current approved creative work.
 
     Empty records are an inference input, never submitted as software output.
     Actual model records must pass the existing department validators. Every
@@ -70,9 +79,9 @@ def queue_generated_project(engine,project,creative_tasks):
             roles.add(task['agent']);versions.append([tid,task['revision']])
             creative_sources['screenplay' if task['agent']=='script' else task['agent']]={'$from':tid,'path':['artifact']}
         if not {'script','director'}<=roles:raise AgentError('Approved screenplay and Director review required.')
-    token=hashlib.sha256(encode(['generated-specialist-project-v1',project,versions]).encode()).hexdigest()
+    token=hashlib.sha256(encode(['generated-specialist-project-casting-v2',project,versions]).encode()).hexdigest()
     tasks={};runs={}
-    for role,deps in DEPENDENCIES.items():
+    for role,deps in CASTING_DEPENDENCIES.items():
         sources=copy.deepcopy(creative_sources)
         for dep in deps:sources[dep]={'$from':tasks[dep],'path':['artifact']}
         data={'specialist_v1':True,'project':project,'records':[],'sources':sources,'base':None,'targets':[]}

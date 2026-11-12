@@ -12,6 +12,9 @@ from tests.test_director import fixture as direction
 
 
 def fixture(key):
+    if key=='casting':
+        from redpad_pipeline.specialists import example
+        return example('casting')
     if key=='director':return {'plan':direction(),'seconds':30}
     if key=='script':return {'screenplay':sample(),'seconds':30}
     data=contract(key)

@@ -1,3 +1,12 @@
+# Latest continuation — Casting / Producer Phase 1 (2026-11-12)
+
+Feature branch only. Continued from `b08f1b55e15097eddacce3e5f9caae893becde7e`.
+See `PHASE1_CASTING_PRODUCER_REPORT_BN.md` and `verification/phase1_casting_producer/`.
+Casting is agent 21; Hair/Makeup remains Costume. Default Producer navigation uses Director Studio, Approval Desk, Channel Manager and Growth & Analytics with Home. Existing twenty-agent fixtures are historical compatibility evidence, not 21-agent artistic acceptance.
+Final regression: 393 tests passed. No new model benchmark/inference or artistic review in this assignment. No deployment or production data change. Do not rerun old creative experiments or download models as an implicit next step. Future model/creative work needs its own requested scope/resource approvals.
+
+---
+
 # REDPAD AI Studio — Unified Master Checkpoint
 
 > Final recovered-tree regression: 368 tests OK; original8 standalone evidence preserved.

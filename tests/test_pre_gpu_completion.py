@@ -89,6 +89,39 @@ class PreGpuCompletion(unittest.TestCase):
    raise ValueError('synthetic worker failure')
   with self.assertRaises(ValueError):held()
   self.assertEqual(nested(),'nested allowed in same owned pipeline')
+ def test_casting_shot_pins_require_bound_departments_and_recast_stales_packet(self):
+  import io
+  from PIL import Image
+  from redpad_pipeline.producer_control import Producer
+  from redpad_pipeline.specialists import example
+  c=Producer(self.p);refs=[]
+  for character in ('nira','hasan','mita'):
+   image=io.BytesIO();Image.new('RGB',(24,24),'gray').save(image,format='PNG')
+   ref=c.refs.put(character+'.png',image.getvalue(),'casting','Technical square, not actor art','Original fictional fixture','fictional_ai');refs.append((character,ref))
+  inputs=example('casting');inputs['records']=[]
+  for character,ref in refs:
+   row=copy.deepcopy(example('casting')['records'][0]);row.update(id='candidate-'+character,character=character,actor_id='actor-'+character,image_refs=[{'id':ref['id'],'version':1}]);inputs['records'].append(row)
+  inputs['sources']={role:{'$from':tid,'path':['artifact']} for role,tid in [('character',self.e['tasks']['character']),('screenplay',self.e['script_task'])]}
+  def cast_and_lock(confirm):
+   rid=self.p.engine.enqueue('casting',inputs,[self.e['tasks']['character'],self.e['script_task']]);self.assertEqual(self.p.engine.execute(rid),'Awaiting QC')
+   task=next(r['task'] for r in self.p.engine.runs() if r['id']==rid);self.p.store.review(task,1,'Recommend','Independent technical fixture QC','qc')
+   review=c.casting.queue_review(task);self.assertEqual(self.p.engine.execute(review,complete=lambda *_:dict(reply='Media evaluation remains untested.',delegations=[],risks=['No real acting sample'])),'Awaiting QC')
+   director=next(r['task'] for r in self.p.engine.runs() if r['id']==review);self.p.store.review(director,1,'Recommend','Independent technical Director review','qc')
+   return task,c.casting.lock(task,director,[r['id'] for r in inputs['records']],'Fixture identity approval only',confirm)
+  task,lock=cast_and_lock(False)
+  tasks={'script':self.e['script_task'],**{r:self.e['tasks'][r] for r in ('character','art','location','costume','storyboard','performance','cinematographer','motion')},'casting':task}
+  with self.assertRaises(AgentError):self.ops.shot(tasks,'s1-shot1')
+  for role in ('costume','storyboard','performance','cinematographer','motion'):
+   original=next(r for r in self.p.engine.runs() if r['task']==tasks[role]);data=json.loads(original['inputs']);data['sources']['casting']={'$from':task,'path':['artifact']}
+   if role=='costume':
+    for i,row in enumerate(data['records']):row.update(actor_id='actor-'+row['character'],hair='approved natural hair',makeup='natural',apparent_age=28 if row['character']=='nira' else 58,chronology=i,scene_state=dict(injury='none',sweat='none',rain='none',dirt='none'))
+   rid=self.p.engine.enqueue(role,data,json.loads(original['dependencies'])+[task]);tasks[role]=self.approve(rid)
+  packet=self.ops.shot(tasks,'s1-shot1');self.assertEqual(packet['casting_locks'],{'nira':lock,'hasan':lock})
+  self.assertEqual({a['actor_id'] for a in packet['actors']},{'actor-nira','actor-hasan'})
+  self.assertFalse(packet['technical_requirements']['identity_lock'])
+  cast_and_lock(True)
+  with self.assertRaises(AgentError):self.ops.packet(packet['id'])
+
  def test_shot_rejects_unsupported_conditioning_and_wrong_native_timing(self):
   r={'mode':'text_to_video','prompt':'Original fictional action','width':832,'height':480,'frames':17,'fps':24,'steps':50,'seed':42}
   with self.assertRaises(AgentError):self.ops.queue_video(self.e['shot_packet']['id'],'wan-local',r,['identity_lock'])

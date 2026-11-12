@@ -296,5 +296,28 @@
         "approval_note": "রাফি — supplied test approval_note"
       }
     ]
+  },
+  "casting": {
+    "specialist_v1": true,
+    "project": "Casting proposal schema",
+    "records": [
+      {
+        "id": "candidate-rafi-1",
+        "character": "rafi",
+        "actor_id": "fictional-rafi-01",
+        "appearance": "Original fictional Bangladeshi man; identity pending Producer lock",
+        "apparent_age": 33,
+        "psychology": "Guarded, wanting reassurance",
+        "performance_requirements": "Restrained reaction, listening, playable objective",
+        "voice_requirements": "Natural Bangladeshi Bengali; listening review pending",
+        "chemistry_requirements": "Partner scene must be reviewed",
+        "image_refs": [],
+        "voice_refs": [],
+        "recommendation": "Proposal only; media and independent review pending"
+      }
+    ],
+    "sources": {},
+    "base": null,
+    "targets": []
   }
 }

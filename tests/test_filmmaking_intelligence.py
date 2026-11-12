@@ -55,7 +55,7 @@ class KnowledgeTests(unittest.TestCase):
     data=fixture(role)
     if role=='storyboard':data['script']=render(sample())
     seen=[]
-    def provider(system,prompt):seen.append(system);return copy.deepcopy(data)
+    def provider(system,prompt):seen.append(system);return {'records':copy.deepcopy(data['records'])} if role=='casting' else copy.deepcopy(data)
     rid=engine.enqueue(role,data,mode='local')
     self.assertEqual(engine.execute(rid,complete=provider),'Awaiting QC',role)
     self.assertIn('CURATED CRAFT GUIDANCE',seen[0]);self.assertIn('"role": "'+role+'"',seen[0])

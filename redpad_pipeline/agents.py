@@ -92,7 +92,7 @@ class AgentStore:
                     inference_verified = inference_verified or any(json.loads(record[0]).get('provenance')=='local_inference' for record in records)
         archive_verified=archived_cpu_inference(key,row[0] if row else '')
         inference_verified=inference_verified or archive_verified
-        from .specialists import IMPLEMENTED
+        from .specialists import ALL_SPECIALISTS as IMPLEMENTED
         return {'model_route':route,'model_route_scope':route['mode'] if route else 'legacy single-model configuration',
                 'specialist_development':'Specialist workflow implemented' if key in IMPLEMENTED else 'Creative workflow retained',
                 'software_tested':'See verification/specialists/matrix.json (recorded test evidence)',
@@ -123,6 +123,12 @@ class AgentStore:
         if token in checked:return
         if t['id'] in active:raise AgentError('Dependency graph contains a cycle.')
         active.add(t['id'])
+        from .producer_references import check_pins
+        from .casting import check_casting
+        check_pins(db,t['id'],self.path.parent);check_casting(db,self,t)
+        if db.execute("SELECT 1 FROM sqlite_master WHERE name='producer_plan_pins'").fetchone():
+            pin=db.execute('SELECT source,revision FROM producer_plan_pins WHERE task=?',(t['id'],)).fetchone()
+            if pin and self._task(db,pin[0])['revision']!=pin[1]:raise AgentError('Director feedback refers to a changed source version.')
         if db.execute("SELECT 1 FROM sqlite_master WHERE name='director_dispatch'").fetchone():
             linked=db.execute("SELECT p.state FROM director_dispatch d JOIN director_plans p ON p.id=d.plan WHERE d.task=?",(t["id"],)).fetchone()
             if linked and linked[0] != "Approved":
@@ -176,6 +182,10 @@ class AgentStore:
             t=self._task(db,tid)
             if not t['revision'] or type(revision)!=int or revision!=t['revision']: raise AgentError('Stale or missing output.')
             self._current(db,t)
+            if decision=='Approve' and db.execute("SELECT 1 FROM sqlite_master WHERE name='producer_decisions'").fetchone():
+                feedback=db.execute('SELECT action FROM producer_decisions WHERE task=? AND revision=? ORDER BY id DESC LIMIT 1',(tid,revision)).fetchone()
+                if feedback and feedback[0] in ('Reject','Request Changes'):raise AgentError('Producer requested changes to this version; approval requires a revised output.')
+            if decision=='Approve' and t['agent']=='casting':raise AgentError('Use the Producer casting lock with Director inspection; no generic approval bypass.')
             if actor=='qc' and t['agent']=='qc': raise AgentError('QC cannot review its own output; owner must review QC records separately.')
             if decision in ('Recommend','Reject') and t['state']!='Awaiting QC': raise AgentError('Not awaiting QC.')
             if decision=='Approve' and t['state']!='QC recommended' and not (t['agent']=='qc' and t['state']=='Awaiting QC'): raise AgentError('Independent QC recommendation required.')

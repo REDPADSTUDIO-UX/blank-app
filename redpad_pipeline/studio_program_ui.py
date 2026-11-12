@@ -10,7 +10,7 @@ from .local_ollama_session import local_cpu_session
 
 def show_studio_program():
     st.header('REDPAD • Film Studio')
-    st.caption('Director • Story • Script সামনে; ১৭টি specialist একই project-এর versioned workflow-এ। Planning, AI inference ও artistic approval আলাদা।')
+    st.caption('Director • Story • Script সামনে; ১৮টি specialist একই project-এর versioned workflow-এ। Planning, AI inference ও artistic approval আলাদা।')
     from .filmmaking_ui import show_knowledge,show_series
     from .professional_ui import show_summary,show_trials
     show_summary()

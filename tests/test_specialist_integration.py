@@ -103,7 +103,7 @@ class Integration(unittest.TestCase):
         first=self.e.tick_parallel();self.assertEqual(first[project['runs']['character']],'Awaiting QC');self.assertEqual(first[project['runs']['costume']],'Blocked')
         for key in ('character','art'):self.approve(project['tasks'][key])
         second=self.e.tick_parallel();self.assertEqual(second[project['runs']['costume']],'Awaiting QC')
-        self.assertEqual(len(AGENTS),20)
+        self.assertEqual(len(AGENTS),21)
     def test_recovery_preserves_idempotent_run_identity(self):
         rid=self.e.enqueue('art',example('art'),idempotency_key='project:art')
         self.assertEqual(self.e.enqueue('art',example('art'),idempotency_key='project:art'),rid)

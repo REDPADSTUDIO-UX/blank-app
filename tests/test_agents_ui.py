@@ -14,7 +14,9 @@ class AgentUITests(unittest.TestCase):
    for name in ('redpad_pipeline','assets'): shutil.copytree(source/name,root/name)
    at=AppTest.from_file(str(root/'streamlit_app.py'),default_timeout=90).run()
    self.assertFalse(at.exception)
-   self.assertEqual(len(at.selectbox(key='agent_workspace').options),20)
+   at.checkbox(key='producer_advanced').check().run()
+   at.selectbox(key='producer_advanced_tool').set_value('agents').run()
+   self.assertEqual(len(at.selectbox(key='agent_workspace').options),21)
    for key in AGENTS:
     at.selectbox(key='agent_workspace').set_value(key).run()
     self.assertFalse(at.exception)

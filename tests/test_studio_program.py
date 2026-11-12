@@ -11,7 +11,7 @@ class ProgramTests(unittest.TestCase):
   self.program=StudioProgram('project');self.program.create('ফেরার কথা','Original test fixture, not a generated screenplay',30,300)
  def test_hierarchy_project_reopen_and_owner_notes_no_inference_claim(self):
   p=self.program;summary=p.summary();self.assertEqual(sum(n['kind']=='episode' for n in summary['hierarchy']),30)
-  self.assertEqual(len(summary['workstreams']),10);self.assertEqual(summary['registered_agents'],20)
+  self.assertEqual(len(summary['workstreams']),10);self.assertEqual(summary['registered_agents'],21)
   p.note('script','বিলের সংলাপ সংযত রাখুন।');self.assertEqual(p.summary()['owner_notes'][0]['provenance'],'owner_note_not_AI_output')
   p.create('ফেরার কথা','Original test fixture, not a generated screenplay',30,300)
   with self.assertRaises(AgentError):p.create('changed','new',30,300)
@@ -44,7 +44,7 @@ class ProgramTests(unittest.TestCase):
  def test_seventeen_internal_tasks_generated_from_exact_sources_idempotently(self):
   from redpad_pipeline.specialists import example
   sc,di=self.seed_approved_creative();p=self.program;plan=p.queue_specialists();before=len(p.store.tasks());self.assertEqual(p.queue_specialists(),plan);self.assertEqual(len(p.store.tasks()),before)
-  self.assertEqual(len(plan['tasks']),17);self.assertFalse(plan['auto_publish'])
+  self.assertEqual(len(plan['tasks']),18);self.assertFalse(plan['auto_publish'])
   runs={r['id']:r for r in p.engine.runs()}
   for role,rid in plan['runs'].items():
    self.assertEqual(runs[rid]['mode'],'local');data=json.loads(runs[rid]['inputs']);self.assertEqual(data['records'],[])

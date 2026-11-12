@@ -105,14 +105,18 @@ class StoryboardDashboard(unittest.TestCase):
             with patch("requests.Session.request", side_effect=AssertionError("Paid/external call attempted")):
                 at = AppTest.from_file(str(target / "streamlit_app.py"), default_timeout=180).run()
                 self.assertFalse(at.exception, [str(e) for e in at.exception])
+                at.radio(key='producer_nav').set_value('Channel Manager').run()
                 next(w for w in at.text_input if w.label == "Channel Name").set_value("Horror")
                 next(w for w in at.text_input if w.label == "Content Category / Niche").set_value("Horror")
                 next(b for b in at.button if b.label == "➕ Save Channel").click().run()
+                at.radio(key='producer_nav').set_value('Approval Desk').run()
                 next(w for w in at.text_input if w.label == "Video Title").set_value("End-to-end test")
                 next(w for w in at.text_input if w.label == "Topic / Idea").set_value("Bangla horror")
                 next(w for w in at.text_area if w.label == "Script or Content Notes").set_value(
                     "দরজা খুলল। অন্ধকার ঘরে ছায়া নড়ল। কেউ ফিরে তাকাল না।")
                 next(b for b in at.button if b.label == "📥 Submit Draft for Approval").click().run()
+                at.checkbox(key='producer_advanced').check().run()
+                at.selectbox(key='producer_advanced_tool').set_value('storyboard').run()
                 at.button(key="sb_create").click().run()
                 at.button(key="sb_approve").click().run()
                 button = next(b for b in at.button if b.label == "Render Approved Storyboard → MP4")

@@ -23,7 +23,7 @@ class RoutingTests(unittest.TestCase):
  def test_different_roles_and_production_fallback_each_need_acceptance(self):
   self.routes.configure('story',[A]);self.routes.configure('script',[B,A])
   self.assertEqual(self.store.status('story')['model'],A);self.assertEqual(self.store.status('script')['model'],B)
-  self.assertEqual(len(AGENTS),20)
+  self.assertEqual(len(AGENTS),21)
   for role in ['story','script','director','qc']:
    with self.assertRaises(AgentError):self.routes.configure(role,[A,B],'production')
  def test_route_snapshot_preserves_pending_run_policy(self):
