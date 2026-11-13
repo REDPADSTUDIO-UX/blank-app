@@ -29,7 +29,8 @@ def main(payload):
         # Network is blocked; missing dependencies fail instead of auto-pulling.
         model=create_model_from_config(config);model.load_state_dict(load_file(str(folder/'model.safetensors')),strict=True);model=model.to('cuda').eval()
         rate=config['sample_rate'];size=config['sample_size']
-        with torch.inference_mode():audio=generate_diffusion_cond(model,steps=r['steps'],cfg_scale=6,batch_size=1,sample_size=size,sample_rate=rate,seed=r['seed'],device='cuda',conditioning=[{'prompt':r['prompt'],'seconds_start':0,'seconds_total':r['seconds']}])
+        from .offline_audio import STABLE_AUDIO_SMALL_RECIPE
+        with torch.inference_mode():audio=generate_diffusion_cond(model,steps=r['steps'],cfg_scale=STABLE_AUDIO_SMALL_RECIPE['cfg_scale'],sampler_type=STABLE_AUDIO_SMALL_RECIPE['sampler_type'],batch_size=1,sample_size=size,sample_rate=rate,seed=r['seed'],device='cuda',conditioning=[{'prompt':r['prompt'],'seconds_start':0,'seconds_total':r['seconds']}])
         data=audio[0,:,:round(r['seconds']*rate)].detach().float().cpu().numpy().T
         sf.write(str(output),data,rate,subtype='PCM_16')
     output.with_name('worker_state.json').write_text(json.dumps({'inference_completed':True,'resources':finish(torch)}))

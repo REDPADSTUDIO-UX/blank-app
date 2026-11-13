@@ -26,6 +26,11 @@ OPERATIONS={
  'youtube':['text','read_only_analytics','release_manifest'],
  'casting':['text','reference_edit','reference_video','text_to_audio','video_inspection']}
 TOOLS={'assembly_receipt','schedule_check','read_only_analytics','release_manifest'}
+OFFLINE_TOOLS={'state_ledger':('continuity','qc'),'edit_manifest':('editing',),'cue_manifest':('music',),
+               'temporal_assessment':('performance','motion','casting'),'voice_metadata':('voice',),'casting_evidence':('casting',)}
+TOOLS.update(OFFLINE_TOOLS)
+for _operation,_roles in OFFLINE_TOOLS.items():
+    for _role in _roles:OPERATIONS[_role].append(_operation)
 CONTRACT_ONLY={'wan_animate2','wan_animate2_distilled','ltx25','indic_speak','indicf5','ace15'}
 LEGACY={'wan22_5':('offline_media','wan-local'),'svd_xt':('offline_media','local-svd'),
         'indic_parler':('offline_speech','bengali-tts'),'stable_audio_small':('offline_audio','stable-audio-small')}
@@ -46,7 +51,7 @@ def candidate_ids(role,row):
 def resolve_profile(id,registry):
     if id!='vision7':return registry['profiles'][id]
     p=json.loads((ROOT/'assets/professional/models.json').read_text())['models']['vision7']
-    if not re.fullmatch('[a-f0-9]{40}',p.get('revision','')):raise AgentError('Supplemental critic is not pinned.')
+    if p.get('repo')!='Qwen/Qwen2.5-VL-7B-Instruct' or not re.fullmatch('[a-f0-9]{40}',p.get('revision','')):raise AgentError('Supplemental critic is not the exact supported pinned model family.')
     return {**p,'id':'vision7','adapter':'existing_vision_adapter','execution_modalities':['image_inspection'],
             'precision':p['precision_and_limits'],'license_conditions':p['commercial_use'],
             'planning_gpu_gib':max(p['gpu_vram_gib_planning_range']),
@@ -144,9 +149,10 @@ def validate_request(p,operation,r):
         text(r['text'],300);integer(r['seed'],0,2**31-1)
         if not re.search('[\u0980-\u09ff]',r['text']):raise AgentError('Bengali transcript required.')
     elif p['id']=='stable_audio_small':
-        from .offline_audio import validate as existing,ENGINES
+        from .offline_audio import ENGINES,STABLE_AUDIO_SMALL_RECIPE
         if ENGINES['stable-audio-small']['model']!=p['repo']:raise AgentError('Audio profile identity differs.')
-        existing('stable-audio-small',r)
+        fields(r,('prompt','seconds','seed','steps'));text(r['prompt'],1000);integer(r['seed'],0,2**31-1)
+        if type(r['seconds']) not in (int,float) or not .5<=r['seconds']<=11 or type(r['steps']) is not int or r['steps']!=STABLE_AUDIO_SMALL_RECIPE['steps']:raise AgentError('Pinned Small profile uses native 8-step recipe, bounded to 11 seconds; not the older audio default.')
     elif operation in ('text_to_video','image_to_video','audio_video','reference_video'):
         fields(r,('prompt','seconds','seed','image_reference','video_reference'))
         text(r['prompt']);integer(r['seconds'],1,5);integer(r['seed'],0,2**31-1)
@@ -198,6 +204,9 @@ def prepare(role,profile_id,operation,request):
 
 def tool_request(role,operation,request):
     if role not in OPERATIONS or operation not in set(OPERATIONS[role])&TOOLS:raise AgentError('Deterministic operation is not authorized for this role.')
+    if operation in OFFLINE_TOOLS:
+        from .offline_department_contracts import check
+        return check(role,operation,request)
     if operation=='read_only_analytics':
         fields(request,('operation','channel_id'))
         from .youtube import channel_id
@@ -237,10 +246,14 @@ def readiness():
                       'gpu_status':'GPU TEST BLOCKED','human_status':'OWNER REVIEW PENDING',
                       'production_ready':False,'runtime_verified':False,
                       'vision_dependency_note':'Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.' if 'vision7' in ids else None}
-    return result
+    from .offline_preparation import readiness_updates
+    return readiness_updates(result)
 
 
 def reference_inputs(p,operation,request):
+    if operation in OFFLINE_TOOLS:
+        from .offline_department_contracts import reference_inputs_for_check
+        return reference_inputs_for_check(operation,request)
     image={'.png','.jpg','.jpeg','.webp'};video={'.mp4','.mov','.webm'};audio={'.wav','.mp3','.m4a'}
     if operation=='reference_edit':return [(r,image,True) for r in request['references']]
     if operation=='image_inspection':return [(r,{'.png','.jpg','.jpeg'},False) for r in request['images']]
@@ -313,7 +326,7 @@ class StagingLedger:
             payload=json.loads(row['payload']);plan=payload['plan']
             if fingerprint(payload)!=id or self._context(db,row['run'])!=payload['context']:raise AgentError('Task/source revision changed; staged draft is stale.')
             current=prepare(payload['context']['role'],plan['profile'],plan['operation'],plan['request']) if 'profile' in plan else tool_request(payload['context']['role'],plan['operation'],plan['request'])
-            pins=self._pins(resolve_profile(plan['profile'],registry),plan['operation'],plan['request']) if 'profile' in plan else []
+            pins=self._pins(resolve_profile(plan['profile'],registry),plan['operation'],plan['request']) if 'profile' in plan else self._pins({'id':'deterministic'},plan['operation'],plan['request'])
             if current!=plan or pins!=payload['references']:
                 raise AgentError('Profile/reference changed; staged draft is stale.')
             return {'id':id,**payload}
@@ -327,7 +340,8 @@ class StagingLedger:
                 for source in request['sources']:
                     if revisions.get(source['id'])!=source['revision'] or context['source_payload_hashes'].get(source['id'])!=source['sha256']:
                         raise AgentError('Assembly/release source must match an actual approved task output; no invented receipt.')
-            payload={'schema':'no-gpu-task-bound-draft-v1','context':context,'plan':plan,'references':[]}
+            pins=self._pins({'id':'deterministic'},operation,request)
+            payload={'schema':'no-gpu-task-bound-draft-v1','context':context,'plan':plan,'references':pins}
             token=fingerprint(payload);encoded=encode(payload)
             db.execute('INSERT OR IGNORE INTO shared_staging_requests VALUES (?,?,?,?)',(token,run,encoded,hashlib.sha256(encoded.encode()).hexdigest()))
             return {'id':token,**payload}

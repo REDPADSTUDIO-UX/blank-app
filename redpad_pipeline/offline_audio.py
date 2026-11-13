@@ -11,6 +11,9 @@ from .agents import AgentError
 from .agent_media_bridge import MediaBlocked
 from .offline_media import MODEL_ROOT,ROOT,checkpoint_manifest,sha,digest
 
+# Official Stable Audio Open Small recipe; package/runtime compatibility remains unverified.
+STABLE_AUDIO_SMALL_RECIPE={'steps':8,'cfg_scale':1.0,'sampler_type':'pingpong'}
+
 ENGINES={'ace-step-v1':{'model':'ACE-Step/ACE-Step-v1-3.5B','index':'ace_step_transformer/config.json','module':'acestep','vram':12,'max_seconds':30},
          'stable-audio-small':{'model':'stabilityai/stable-audio-open-small','index':'model_config.json','module':'stable_audio_tools','vram':4,'max_seconds':11}}
 
@@ -48,7 +51,8 @@ def validate(engine,request):
     if engine not in ENGINES or not isinstance(request,dict) or set(request)!={'prompt','seconds','seed','steps'}:raise AgentError('Fixed instrumental/SFX controls only; no lyrics, cloning, remote endpoint or LoRA.')
     if not isinstance(request['prompt'],str) or not 1<=len(request['prompt'])<=1000:raise AgentError('Bounded audio prompt required.')
     if type(request['seconds']) not in (float,int) or not .5<=request['seconds']<=ENGINES[engine]['max_seconds']:raise AgentError('Audio duration exceeds the model micro-test scope.')
-    if type(request['seed']) is not int or not 0<=request['seed']<=2147483647 or type(request['steps']) is not int or not 10<=request['steps']<=100:raise AgentError('Bounded audio seed/steps required.')
+    minimum_steps=8 if engine=='stable-audio-small' else 10
+    if type(request['seed']) is not int or not 0<=request['seed']<=2147483647 or type(request['steps']) is not int or not minimum_steps<=request['steps']<=100:raise AgentError('Bounded audio seed/steps required.')
 
 @serialized
 def generate(engine,request,sidecar,timeout=600):

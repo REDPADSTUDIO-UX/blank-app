@@ -107,6 +107,13 @@ class SharedServices:
     def stage_tool_request(self,run,operation,request):
         from .no_gpu_staging import StagingLedger
         return StagingLedger(self.store).stage_tool(run,operation,request)
+    def prepare_offline_request(self,id,*,spec=None,verify_bundle=False):
+        """Map a current staged request to an existing local-worker payload, never run it."""
+        from .offline_preparation import PreparedRequests
+        return PreparedRequests(self.store).prepare(id,spec=spec,verify_bundle=verify_bundle)
+    def prepared_offline_request(self,id):
+        from .offline_preparation import PreparedRequests
+        return PreparedRequests(self.store).get(id)
     def choose_backend(self,run,role):
         """Pin one backend before execution; retries cannot switch provider families."""
         if role not in AGENTS:raise AgentError('Unknown route role.')

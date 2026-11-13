@@ -1655,9 +1655,10 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     },
     "story": {
@@ -1765,9 +1766,10 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     },
     "costume": {
@@ -1836,7 +1838,8 @@
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     },
     "cinematographer": {
@@ -1857,9 +1860,10 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     },
     "motion": {
@@ -1882,7 +1886,8 @@
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     },
     "video": {
@@ -1906,7 +1911,8 @@
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     },
     "voice": {
@@ -1930,7 +1936,8 @@
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     },
     "continuity": {
@@ -1951,9 +1958,10 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     },
     "music": {
@@ -1976,7 +1984,8 @@
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     },
     "editing": {
@@ -1998,9 +2007,10 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     },
     "production_manager": {
@@ -2092,7 +2102,8 @@
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
-        "production_ready": false
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
       }
     }
   },

@@ -31,7 +31,7 @@ def request(operation,profile):
         if operation=='reference_voice':r.update(reference=pin,reference_transcript='শুধু পরীক্ষা',consent_reference={'id':'consent-fixture','version':1})
         return r
     if operation=='music':return dict(prompt='SOFTWARE FIXTURE',seconds=2,seed=117)
-    if operation=='sound_effect':return dict(prompt='SOFTWARE FIXTURE',seconds=2,seed=117,steps=10)
+    if operation=='sound_effect':return dict(prompt='SOFTWARE FIXTURE',seconds=2,seed=117,steps=8)
     raise AssertionError(operation)
 
 
@@ -173,7 +173,7 @@ class NoGPUStagingTests(unittest.TestCase):
         self.assertEqual(rows['voice']['engineering_status'],'PARTIAL')
         for r in rows.values():
             self.assertFalse(r['production_ready']);self.assertFalse(r['runtime_verified'])
-            self.assertEqual(r['gpu_status'],'GPU TEST BLOCKED');self.assertEqual(r['human_status'],'OWNER REVIEW PENDING')
+            self.assertEqual(r['gpu_status'],'GPU TEST BLOCKED');self.assertIn(r['human_status'],('OWNER REVIEW PENDING','HUMAN REVIEW PENDING'))
 
     def test_task_bound_tools_keep_same_approval_and_no_publishing_boundary(self):
         run=self.engine.enqueue('youtube',{'fixture':True})

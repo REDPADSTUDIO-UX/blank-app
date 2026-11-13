@@ -57,10 +57,11 @@
       "required_operations": [
         "text",
         "image_inspection",
-        "audio_inspection"
+        "audio_inspection",
+        "state_ledger"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "text": [
@@ -75,20 +76,27 @@
         "unsupported_required_operations": [
           "audio_inspection"
         ],
-        "execution_binding_pending": [
-          "vision7"
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "state_ledger"
         ],
-        "deterministic_operations": [],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_validation_pending": [
+          "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+        ],
+        "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
       },
       "supplemental_research_candidates": [
         "vision7"
       ],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     },
     {
       "agent": "story",
@@ -347,7 +355,7 @@
         "image_inspection"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "reference_edit": [
@@ -358,20 +366,25 @@
           ]
         },
         "unsupported_required_operations": [],
-        "execution_binding_pending": [
-          "vision7"
-        ],
+        "execution_binding_pending": [],
         "deterministic_operations": [],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_validation_pending": [
+          "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+        ],
+        "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
       },
       "supplemental_research_candidates": [
         "vision7"
       ],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     },
     {
       "agent": "costume",
@@ -547,7 +560,8 @@
       "required_operations": [
         "text",
         "reference_video",
-        "video_inspection"
+        "video_inspection",
+        "temporal_assessment"
       ],
       "no_gpu_readiness": {
         "engineering_status": "PARTIAL",
@@ -567,15 +581,23 @@
         "execution_binding_pending": [
           "wan_animate2"
         ],
-        "deterministic_operations": [],
+        "deterministic_operations": [
+          "temporal_assessment"
+        ],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": null
+        "vision_dependency_note": null,
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "missing_official_interface": [
+          "Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution."
+        ]
       },
       "supplemental_research_candidates": [],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     },
     {
       "agent": "cinematographer",
@@ -621,7 +643,7 @@
         "image_inspection"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "text": [
@@ -632,20 +654,25 @@
           ]
         },
         "unsupported_required_operations": [],
-        "execution_binding_pending": [
-          "vision7"
-        ],
+        "execution_binding_pending": [],
         "deterministic_operations": [],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_validation_pending": [
+          "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+        ],
+        "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
       },
       "supplemental_research_candidates": [
         "vision7"
       ],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     },
     {
       "agent": "motion",
@@ -688,7 +715,8 @@
       ],
       "required_operations": [
         "reference_video",
-        "image_inspection"
+        "image_inspection",
+        "temporal_assessment"
       ],
       "no_gpu_readiness": {
         "engineering_status": "PARTIAL",
@@ -706,17 +734,25 @@
           "wan_animate2",
           "vision7"
         ],
-        "deterministic_operations": [],
+        "deterministic_operations": [
+          "temporal_assessment"
+        ],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "missing_official_interface": [
+          "Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution."
+        ]
       },
       "supplemental_research_candidates": [
         "vision7"
       ],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     },
     {
       "agent": "video",
@@ -792,13 +828,19 @@
         ],
         "deterministic_operations": [],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": null
+        "vision_dependency_note": null,
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "missing_official_interface": [
+          "Selected pinned BF16 component recipe lacks required spatial upsampler; reviewed LTX-2 code revision/CLI compatibility missing. Do not use older LTX-Video or a Diffusers repack."
+        ]
       },
       "supplemental_research_candidates": [],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     },
     {
       "agent": "voice",
@@ -850,7 +892,8 @@
       ],
       "required_operations": [
         "text_to_audio",
-        "reference_voice"
+        "reference_voice",
+        "voice_metadata"
       ],
       "no_gpu_readiness": {
         "engineering_status": "PARTIAL",
@@ -870,15 +913,24 @@
           "indicf5",
           "indic_parler"
         ],
-        "deterministic_operations": [],
+        "deterministic_operations": [
+          "voice_metadata"
+        ],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": null
+        "vision_dependency_note": null,
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "missing_official_interface": [
+          "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified.",
+          "Requires reviewed custom code and local auxiliary dependencies; trust_remote_code=True is not authorized. Gated access and specific voice consent pending."
+        ]
       },
       "supplemental_research_candidates": [],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     },
     {
       "agent": "continuity",
@@ -921,10 +973,11 @@
       ],
       "required_operations": [
         "text",
-        "image_inspection"
+        "image_inspection",
+        "state_ledger"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "text": [
@@ -935,20 +988,27 @@
           ]
         },
         "unsupported_required_operations": [],
-        "execution_binding_pending": [
-          "vision7"
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "state_ledger"
         ],
-        "deterministic_operations": [],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_validation_pending": [
+          "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+        ],
+        "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
       },
       "supplemental_research_candidates": [
         "vision7"
       ],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     },
     {
       "agent": "music",
@@ -991,7 +1051,8 @@
       ],
       "required_operations": [
         "music",
-        "sound_effect"
+        "sound_effect",
+        "cue_manifest"
       ],
       "no_gpu_readiness": {
         "engineering_status": "PARTIAL",
@@ -1009,15 +1070,23 @@
           "ace15",
           "stable_audio_small"
         ],
-        "deterministic_operations": [],
+        "deterministic_operations": [
+          "cue_manifest"
+        ],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": null
+        "vision_dependency_note": null,
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "missing_official_interface": [
+          "Exact code revision and component-loading API not pinned; silence_latent.pt needs a reviewed safe loading policy. Existing ACE 3.5B worker is a different model."
+        ]
       },
       "supplemental_research_candidates": [],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     },
     {
       "agent": "editing",
@@ -1063,10 +1132,11 @@
         "text",
         "image_inspection",
         "audio_inspection",
-        "assembly_receipt"
+        "assembly_receipt",
+        "edit_manifest"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "text": [
@@ -1081,22 +1151,28 @@
         "unsupported_required_operations": [
           "audio_inspection"
         ],
-        "execution_binding_pending": [
-          "vision7"
-        ],
+        "execution_binding_pending": [],
         "deterministic_operations": [
-          "assembly_receipt"
+          "assembly_receipt",
+          "edit_manifest"
         ],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_validation_pending": [
+          "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+        ],
+        "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
       },
       "supplemental_research_candidates": [
         "vision7"
       ],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     },
     {
       "agent": "production_manager",
@@ -1352,7 +1428,9 @@
         "reference_edit",
         "reference_video",
         "text_to_audio",
-        "video_inspection"
+        "video_inspection",
+        "temporal_assessment",
+        "casting_evidence"
       ],
       "no_gpu_readiness": {
         "engineering_status": "PARTIAL",
@@ -1379,15 +1457,25 @@
           "wan_animate2",
           "indic_speak"
         ],
-        "deterministic_operations": [],
+        "deterministic_operations": [
+          "casting_evidence",
+          "temporal_assessment"
+        ],
         "gpu_status": "GPU TEST BLOCKED",
-        "human_status": "OWNER REVIEW PENDING",
+        "human_status": "HUMAN REVIEW PENDING",
         "production_ready": false,
         "runtime_verified": false,
-        "vision_dependency_note": null
+        "vision_dependency_note": null,
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "missing_official_interface": [
+          "Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution.",
+          "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified."
+        ]
       },
       "supplemental_research_candidates": [],
-      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
     }
   ],
   "no_gpu_engineering_ledger_version": "cpu-contract-validation-v1",
@@ -1413,5 +1501,6 @@
     "motion",
     "editing",
     "casting"
-  ]
+  ],
+  "offline_11_engineering_revision": "offline-first-preparation-v1"
 }
