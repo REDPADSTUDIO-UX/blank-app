@@ -1,0 +1,823 @@
+{
+  "schema": "redpad-phase3-no-gpu-candidate-binding-v1",
+  "source_registry": "assets/professional/phase3_candidates.json",
+  "source_registry_version": "21-agent-director-recovery-2026-11-13.2",
+  "owner_instruction": "19 agents excluding Director and Script; no GPU, no downloads, no weights, no paid resources",
+  "intent": "staged configuration for later validation; NOT production routing, NOT best model winner",
+  "excluded_agents": [
+    "director",
+    "script"
+  ],
+  "total_agents": 19,
+  "models_inferred": false,
+  "weights_downloaded": false,
+  "production_routes_changed": false,
+  "validated_winners": 0,
+  "roles": [
+    {
+      "agent": "qc",
+      "group": "quality",
+      "required_capability": "Evidence-grounded criticism, calibrated abstention and deterministic checks",
+      "required_modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "qwen35_9"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_9",
+          "repo": "Qwen/Qwen3.5-9B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Planted defect vs clean-scene abstention",
+        "Independent review and visual/audio QA"
+      ]
+    },
+    {
+      "agent": "story",
+      "group": "text",
+      "required_capability": "Causal episodic story, character arcs, Bengali emotional narrative",
+      "required_modalities": [
+        "text"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "gemma3_27",
+        "gemma3_12"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "gemma3_27",
+          "repo": "google/gemma-3-27b-it",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "gemma3_12",
+          "repo": "google/gemma-3-12b-it",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Complete episode causality and emotional arc",
+        "Owner review of grounded Bengali storytelling"
+      ]
+    },
+    {
+      "agent": "character",
+      "group": "image_identity",
+      "required_capability": "Psychology bible and consistent fictional identities",
+      "required_modalities": [
+        "text",
+        "reference_edit"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "flux2_klein4"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Fixed fictional identity consistency across 3 scenes",
+        "Character psychology consistency"
+      ]
+    },
+    {
+      "agent": "art",
+      "group": "image",
+      "required_capability": "Culturally grounded sets, props, palette and visual design",
+      "required_modalities": [
+        "text",
+        "reference_edit"
+      ],
+      "primary_research_candidate": "flux2_klein4",
+      "alternative_research_candidates": [
+        "qwen35_27",
+        "z_image_turbo"
+      ],
+      "model_links": [
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "z_image_turbo",
+          "repo": "Tongyi-MAI/Z-Image-Turbo",
+          "adapter": "z_image",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Culturally credible Dhaka set and palette",
+        "Prop/reference identity consistency"
+      ]
+    },
+    {
+      "agent": "location",
+      "group": "image_spatial",
+      "required_capability": "Reference locations and spatial/camera-access validation",
+      "required_modalities": [
+        "reference_edit",
+        "image"
+      ],
+      "primary_research_candidate": "flux2_klein4",
+      "alternative_research_candidates": [
+        "qwen35_27"
+      ],
+      "model_links": [
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Location geography and spatial logic",
+        "Camera-access validation against references"
+      ]
+    },
+    {
+      "agent": "costume",
+      "group": "image_identity",
+      "required_capability": "Locked actor, costume/hair/makeup and chronological scene states",
+      "required_modalities": [
+        "reference_edit",
+        "text"
+      ],
+      "primary_research_candidate": "flux2_klein4",
+      "alternative_research_candidates": [
+        "qwen35_27"
+      ],
+      "model_links": [
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Same-person costume/hair/makeup timeline",
+        "Visual state-lock review"
+      ]
+    },
+    {
+      "agent": "storyboard",
+      "group": "image_layout",
+      "required_capability": "Coverage, geography and visual continuity",
+      "required_modalities": [
+        "reference_edit",
+        "text"
+      ],
+      "primary_research_candidate": "flux2_klein4",
+      "alternative_research_candidates": [
+        "qwen35_27"
+      ],
+      "model_links": [
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Coverage and screen-direction across scene panels",
+        "Image-to-script grounding"
+      ]
+    },
+    {
+      "agent": "performance",
+      "group": "acting_video",
+      "required_capability": "Playable acting intentions and actual performance assessment",
+      "required_modalities": [
+        "text",
+        "reference_video"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "wan_animate2"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "wan_animate2",
+          "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Acting intention vs generated actual performance",
+        "Identity/rights continuity"
+      ]
+    },
+    {
+      "agent": "cinematographer",
+      "group": "vision",
+      "required_capability": "Lens, light, blocking, screen direction and visual inspection",
+      "required_modalities": [
+        "text",
+        "image"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "flux2_klein4"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Lens/light/blocking plausibility",
+        "Grounded critique of real frames"
+      ]
+    },
+    {
+      "agent": "motion",
+      "group": "motion",
+      "required_capability": "Physical motion, interactions and temporal assessment",
+      "required_modalities": [
+        "reference_video",
+        "image"
+      ],
+      "primary_research_candidate": "wan_animate2",
+      "alternative_research_candidates": [
+        "qwen35_27"
+      ],
+      "model_links": [
+        {
+          "profile": "wan_animate2",
+          "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Motion physics temporal coherence",
+        "Cross-frame actor/object continuity"
+      ]
+    },
+    {
+      "agent": "video",
+      "group": "video",
+      "required_capability": "Native short cinematic clips; compare equivalent supported controls only",
+      "required_modalities": [
+        "image_to_video",
+        "text_to_video"
+      ],
+      "primary_research_candidate": "wan22_5",
+      "alternative_research_candidates": [
+        "ltx25",
+        "svd_xt"
+      ],
+      "model_links": [
+        {
+          "profile": "wan22_5",
+          "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+          "adapter": "existing_wan_adapter",
+          "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "ltx25",
+          "repo": "Lightricks/LTX-2.5",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "svd_xt",
+          "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+          "adapter": "existing_svd_adapter",
+          "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Short video motion and prompt fidelity",
+        "Human cinema visual review"
+      ]
+    },
+    {
+      "agent": "voice",
+      "group": "voice",
+      "required_capability": "Bengali intelligibility, accent, prosody, emotion and speaker continuity",
+      "required_modalities": [
+        "text_to_audio",
+        "reference_voice"
+      ],
+      "primary_research_candidate": "indic_speak",
+      "alternative_research_candidates": [
+        "indicf5",
+        "indic_parler"
+      ],
+      "model_links": [
+        {
+          "profile": "indic_speak",
+          "repo": "bodhan-ai/indic-speak",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "indicf5",
+          "repo": "ai4bharat/IndicF5",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "indic_parler",
+          "repo": "ai4bharat/indic-parler-tts",
+          "adapter": "existing_parler_adapter",
+          "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Bangla pronunciation/emotion/prosody",
+        "Consent-backed speaker continuity"
+      ]
+    },
+    {
+      "agent": "continuity",
+      "group": "vision",
+      "required_capability": "Cross-scene source/media state inspection; generator is not a critic",
+      "required_modalities": [
+        "text",
+        "image"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "flux2_klein4"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Correct positive/negative prop-state controls",
+        "Video-frame evidence and abstention"
+      ]
+    },
+    {
+      "agent": "music",
+      "group": "audio",
+      "required_capability": "Dramatic music fit, motivated SFX and listening evidence",
+      "required_modalities": [
+        "music",
+        "sound_effect"
+      ],
+      "primary_research_candidate": "ace15",
+      "alternative_research_candidates": [
+        "stable_audio_small"
+      ],
+      "model_links": [
+        {
+          "profile": "ace15",
+          "repo": "ACE-Step/Ace-Step1.5",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "stable_audio_small",
+          "repo": "stabilityai/stable-audio-open-small",
+          "adapter": "existing_sfx_adapter",
+          "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Emotion-matched music and SFX timing",
+        "Listening quality and copyright review"
+      ]
+    },
+    {
+      "agent": "editing",
+      "group": "editing",
+      "required_capability": "Narrative edit guidance, actual receipt-bound FFmpeg assembly and A/V QC",
+      "required_modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "qwen35_9"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_9",
+          "repo": "Qwen/Qwen3.5-9B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Actual FFmpeg receipt verification",
+        "A/V continuity and story pacing"
+      ]
+    },
+    {
+      "agent": "production_manager",
+      "group": "operations",
+      "required_capability": "Resource-aware scheduling, provenance, recovery and deterministic operations",
+      "required_modalities": [
+        "text"
+      ],
+      "primary_research_candidate": "qwen36_27",
+      "alternative_research_candidates": [
+        "qwen35_9"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen36_27",
+          "repo": "Qwen/Qwen3.6-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_9",
+          "repo": "Qwen/Qwen3.5-9B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Recovery and cost/schedule constraint cases",
+        "Deterministic plan compliance"
+      ]
+    },
+    {
+      "agent": "growth",
+      "group": "marketing",
+      "required_capability": "Truthful packaging and authorized measured analytics",
+      "required_modalities": [
+        "text",
+        "reference_edit"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "flux2_klein4"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Truthful packaging against approved materials",
+        "Measurable analytics without fabricated data"
+      ]
+    },
+    {
+      "agent": "youtube",
+      "group": "channel",
+      "required_capability": "Read-only channel validation and local release preparation; never publish",
+      "required_modalities": [
+        "text"
+      ],
+      "primary_research_candidate": "qwen35_9",
+      "alternative_research_candidates": [],
+      "model_links": [
+        {
+          "profile": "qwen35_9",
+          "repo": "Qwen/Qwen3.5-9B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Read-only channel metadata validation",
+        "No upload or publish actions"
+      ]
+    },
+    {
+      "agent": "casting",
+      "group": "casting",
+      "required_capability": "Character fit, rights-authorized actor identity and actual acting/voice/chemistry evidence",
+      "required_modalities": [
+        "text",
+        "reference_edit",
+        "reference_video",
+        "text_to_audio"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "flux2_klein4",
+        "wan_animate2",
+        "indic_speak"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "wan_animate2",
+          "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "indic_speak",
+          "repo": "bodhan-ai/indic-speak",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "candidate_binding_prepared_no_runtime",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Fictional actor identity/consent locks",
+        "Acting/voice/chemistry references"
+      ]
+    }
+  ]
+}
