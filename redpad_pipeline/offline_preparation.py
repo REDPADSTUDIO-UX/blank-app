@@ -17,10 +17,10 @@ NATIVE={
 INTERFACES={
  'wan_animate2':{'documented_local_entry':'infer/wan_animate_2_demo.py',
    'inputs':['prompt','refer-img-file','refer-video-file','config'],
-   'blocker':'Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution.'},
+   'blocker':'Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution.'},
  'ltx25':{'documented_local_entry':'ltx_pipelines.distilled',
    'inputs':['transformer-path','text-encoder-path','video-vae-path','audio-vae-path','spatial-upsampler-path'],
-   'blocker':'Selected pinned BF16 component recipe lacks required spatial upsampler; reviewed LTX-2 code revision/CLI compatibility missing. Do not use older LTX-Video or a Diffusers repack.'},
+   'blocker':'Split ModelPaths/DistilledPipeline source reviewed at f0f2f8607189c78a72420b2b63cb1975b5eca179; selected pinned BF16 recipe still lacks approved exact spatial upsampler/tokenizer dependencies and verified local execution bridge. No older LTX or repack.'},
  'indic_speak':{'documented_local_entry':'inference.TTS (current model card)',
    'inputs':['local directory','text','speaker'],
    'blocker':'Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified.'},
@@ -29,7 +29,7 @@ INTERFACES={
    'blocker':'Requires reviewed custom code and local auxiliary dependencies; trust_remote_code=True is not authorized. Gated access and specific voice consent pending.'},
  'ace15':{'documented_local_entry':'ACE-Step 1.5 project local package',
    'inputs':['caption','instrumental generation','duration','seed'],
-   'blocker':'Exact code revision and component-loading API not pinned; silence_latent.pt needs a reviewed safe loading policy. Existing ACE 3.5B worker is a different model.'}}
+   'blocker':'Source pinned at ca1e85fe9430179831e6bc6be790c332190a3866; initialize_service auto-download/code-sync must be disabled by reviewed local bridge. weights_only=True observed but bounded auxiliary tensor checks/full model-code review remain. Never use ACE 3.5B.'}}
 COMPLETED_ROLES={'qc','location','cinematographer','continuity','editing'}
 
 
@@ -64,6 +64,12 @@ def prepare_native(staged,store,*,spec=None,verify_bundle=False):
     if role not in PARTIAL_ROLES:raise AgentError('Only the eleven previously partial roles may use this extension.')
     if pid not in NATIVE:
         if pid not in INTERFACES:raise AgentError('Use the existing shared text/image worker; no duplicate engine.')
+        if verify_bundle:raise LocalUnavailable('Native execution bridge/component recipe incomplete; bundle authentication cannot be claimed.')
+        if spec is not None:
+            from .offline_specialist_preparation import prepare_specialist
+            job=prepare_specialist(staged,store,spec)
+            job['preparer_source_sha256']=hashlib.sha256((Path(__file__).parent/'offline_specialist_preparation.py').read_bytes()).hexdigest()
+            return job
         return {'stage_id':staged['id'],'profile':pid,'interface':INTERFACES[pid],
                 'status':'RUNTIME BLOCKED','contract_only':True,'worker_module':None,
                 'launch_authorized':False,'inference_completed':False,'human_reviewed':False}
@@ -143,4 +149,9 @@ def readiness_updates(rows):
         else:
             r['engineering_status']='PARTIAL'
             r['missing_official_interface']=[INTERFACES[k]['blocker'] for k in r['execution_binding_pending'] if k in INTERFACES]
+            if role in {'performance','motion','video','voice','music','casting'}:
+                from .offline_specialist_preparation import PINS
+                r['specialist_preparation']='source-reviewed native call and evidence preparation; no executable runtime bridge'
+                r['native_source_revisions']={k:PINS[k] for k in r['execution_binding_pending'] if k in PINS}
+                r['offline_preparation_evidence']='verification/offline_6/'
     return rows

@@ -1,0 +1,8 @@
+test_voice_wav_metadata_checked_without_transcript_or_speaker_claim (tests.test_offline_six_preparation.OfflineSixTests.test_voice_wav_metadata_checked_without_transcript_or_speaker_claim) ... ok
+test_real_portrait_cannot_be_declared_fictional_for_wan_or_casting (tests.test_offline_six_preparation.OfflineSixTests.test_real_portrait_cannot_be_declared_fictional_for_wan_or_casting) ... ok
+test_ltx_upsampler_is_same_pinned_repository_but_not_approved_or_downloaded (tests.test_offline_six_preparation.OfflineSixTests.test_ltx_upsampler_is_same_pinned_repository_but_not_approved_or_downloaded) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.045s
+
+OK

@@ -592,12 +592,17 @@
         "offline_native_preparation": "implemented; no runtime launch",
         "runtime_status": "RUNTIME BLOCKED",
         "missing_official_interface": [
-          "Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution."
-        ]
+          "Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution."
+        ],
+        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "native_source_revisions": {
+          "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
+        },
+        "offline_preparation_evidence": "verification/offline_6/"
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_11/"
+      "offline_preparation_evidence": "verification/offline_6/"
     },
     {
       "agent": "cinematographer",
@@ -745,14 +750,19 @@
         "offline_native_preparation": "implemented; no runtime launch",
         "runtime_status": "RUNTIME BLOCKED",
         "missing_official_interface": [
-          "Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution."
-        ]
+          "Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution."
+        ],
+        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "native_source_revisions": {
+          "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
+        },
+        "offline_preparation_evidence": "verification/offline_6/"
       },
       "supplemental_research_candidates": [
         "vision7"
       ],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_11/"
+      "offline_preparation_evidence": "verification/offline_6/"
     },
     {
       "agent": "video",
@@ -835,12 +845,17 @@
         "offline_native_preparation": "implemented; no runtime launch",
         "runtime_status": "RUNTIME BLOCKED",
         "missing_official_interface": [
-          "Selected pinned BF16 component recipe lacks required spatial upsampler; reviewed LTX-2 code revision/CLI compatibility missing. Do not use older LTX-Video or a Diffusers repack."
-        ]
+          "Split ModelPaths/DistilledPipeline source reviewed at f0f2f8607189c78a72420b2b63cb1975b5eca179; selected pinned BF16 recipe still lacks approved exact spatial upsampler/tokenizer dependencies and verified local execution bridge. No older LTX or repack."
+        ],
+        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "native_source_revisions": {
+          "ltx25": "f0f2f8607189c78a72420b2b63cb1975b5eca179"
+        },
+        "offline_preparation_evidence": "verification/offline_6/"
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_11/"
+      "offline_preparation_evidence": "verification/offline_6/"
     },
     {
       "agent": "voice",
@@ -926,11 +941,14 @@
         "missing_official_interface": [
           "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified.",
           "Requires reviewed custom code and local auxiliary dependencies; trust_remote_code=True is not authorized. Gated access and specific voice consent pending."
-        ]
+        ],
+        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "native_source_revisions": {},
+        "offline_preparation_evidence": "verification/offline_6/"
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_11/"
+      "offline_preparation_evidence": "verification/offline_6/"
     },
     {
       "agent": "continuity",
@@ -1081,12 +1099,17 @@
         "offline_native_preparation": "implemented; no runtime launch",
         "runtime_status": "RUNTIME BLOCKED",
         "missing_official_interface": [
-          "Exact code revision and component-loading API not pinned; silence_latent.pt needs a reviewed safe loading policy. Existing ACE 3.5B worker is a different model."
-        ]
+          "Source pinned at ca1e85fe9430179831e6bc6be790c332190a3866; initialize_service auto-download/code-sync must be disabled by reviewed local bridge. weights_only=True observed but bounded auxiliary tensor checks/full model-code review remain. Never use ACE 3.5B."
+        ],
+        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "native_source_revisions": {
+          "ace15": "ca1e85fe9430179831e6bc6be790c332190a3866"
+        },
+        "offline_preparation_evidence": "verification/offline_6/"
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_11/"
+      "offline_preparation_evidence": "verification/offline_6/"
     },
     {
       "agent": "editing",
@@ -1430,7 +1453,8 @@
         "text_to_audio",
         "video_inspection",
         "temporal_assessment",
-        "casting_evidence"
+        "casting_evidence",
+        "casting_assessment"
       ],
       "no_gpu_readiness": {
         "engineering_status": "PARTIAL",
@@ -1458,6 +1482,7 @@
           "indic_speak"
         ],
         "deterministic_operations": [
+          "casting_assessment",
           "casting_evidence",
           "temporal_assessment"
         ],
@@ -1469,13 +1494,18 @@
         "offline_native_preparation": "implemented; no runtime launch",
         "runtime_status": "RUNTIME BLOCKED",
         "missing_official_interface": [
-          "Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution.",
+          "Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution.",
           "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified."
-        ]
+        ],
+        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "native_source_revisions": {
+          "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
+        },
+        "offline_preparation_evidence": "verification/offline_6/"
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_11/"
+      "offline_preparation_evidence": "verification/offline_6/"
     }
   ],
   "no_gpu_engineering_ledger_version": "cpu-contract-validation-v1",
@@ -1502,5 +1532,6 @@
     "editing",
     "casting"
   ],
-  "offline_11_engineering_revision": "offline-first-preparation-v1"
+  "offline_11_engineering_revision": "offline-first-preparation-v1",
+  "offline_6_engineering_revision": "native-source-preparation-v1"
 }

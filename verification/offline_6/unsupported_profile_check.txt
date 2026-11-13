@@ -1,0 +1,6 @@
+test_inventory_unsupported_candidate_uses_deterministic_error_not_fallback (tests.test_offline_six_preparation.OfflineSixTests.test_inventory_unsupported_candidate_uses_deterministic_error_not_fallback) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+OK

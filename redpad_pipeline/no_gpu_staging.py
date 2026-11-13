@@ -27,7 +27,7 @@ OPERATIONS={
  'casting':['text','reference_edit','reference_video','text_to_audio','video_inspection']}
 TOOLS={'assembly_receipt','schedule_check','read_only_analytics','release_manifest'}
 OFFLINE_TOOLS={'state_ledger':('continuity','qc'),'edit_manifest':('editing',),'cue_manifest':('music',),
-               'temporal_assessment':('performance','motion','casting'),'voice_metadata':('voice',),'casting_evidence':('casting',)}
+               'temporal_assessment':('performance','motion','casting'),'voice_metadata':('voice',),'casting_evidence':('casting',),'casting_assessment':('casting',)}
 TOOLS.update(OFFLINE_TOOLS)
 for _operation,_roles in OFFLINE_TOOLS.items():
     for _role in _roles:OPERATIONS[_role].append(_operation)
@@ -341,6 +341,8 @@ class StagingLedger:
                     if revisions.get(source['id'])!=source['revision'] or context['source_payload_hashes'].get(source['id'])!=source['sha256']:
                         raise AgentError('Assembly/release source must match an actual approved task output; no invented receipt.')
             pins=self._pins({'id':'deterministic'},operation,request)
+            if operation=='casting_assessment' and any(p['rights']=='authorized_person' and p['extension'] not in ('.txt','.pdf','.docx') for p in pins) and request['identity_kind']!='authorized_person':
+                raise AgentError('Real-person casting reference cannot be relabeled fictional.')
             payload={'schema':'no-gpu-task-bound-draft-v1','context':context,'plan':plan,'references':pins}
             token=fingerprint(payload);encoded=encode(payload)
             db.execute('INSERT OR IGNORE INTO shared_staging_requests VALUES (?,?,?,?)',(token,run,encoded,hashlib.sha256(encoded.encode()).hexdigest()))

@@ -8,7 +8,7 @@ PARTIAL_ROLES={'qc','location','performance','cinematographer','motion','video',
 VISUAL_ROLES={'qc','location','cinematographer','continuity','editing','motion'}
 CATEGORIES={'framing','lighting','blocking','screen_direction','spatial','prop','character','costume','uncertain'}
 CHECKS={'state_ledger':{'continuity','qc'},'edit_manifest':{'editing'},'cue_manifest':{'music'},
-        'temporal_assessment':{'performance','motion','casting'},'voice_metadata':{'voice'},'casting_evidence':{'casting'}}
+        'temporal_assessment':{'performance','motion','casting'},'voice_metadata':{'voice'},'casting_evidence':{'casting'},'casting_assessment':{'casting'}}
 
 
 def inspection_spec(role,spec,images):
@@ -152,8 +152,9 @@ def casting_evidence(r):
 
 def check(role,operation,request):
     if role not in CHECKS.get(operation,set()):raise AgentError('Offline check outside the eleven-agent responsibility scope.')
+    from .offline_specialist_preparation import casting_assessment
     functions={'state_ledger':state_findings,'edit_manifest':edit_manifest,'cue_manifest':cue_manifest,
-               'temporal_assessment':temporal_spec,'voice_metadata':voice_metadata,'casting_evidence':casting_evidence}
+               'temporal_assessment':temporal_spec,'voice_metadata':voice_metadata,'casting_evidence':casting_evidence,'casting_assessment':casting_assessment}
     result=functions[operation](request)
     return {'role':role,'operation':operation,'request':request,'check_result':result,
             'scope':'CPU contract/supplied evidence only; no generation, runtime, artistic approval or publishing',
@@ -162,6 +163,10 @@ def check(role,operation,request):
 
 def reference_inputs_for_check(operation,r):
     image={'.png','.jpg','.jpeg','.webp'};audio={'.wav','.mp3','.m4a'};video={'.mp4','.mov','.webm'};doc={'.txt','.pdf','.docx'}
+    if operation=='casting_assessment':
+        from .offline_specialist_preparation import casting_assessment
+        kinds={'image':image,'video':video,'audio':audio,'document':doc}
+        return [(pin,kinds[kind],kind!='document') for pin,kind in casting_assessment(r)['reference_requirements']]
     if operation=='edit_manifest':return [(s['reference'],video|audio,True) for s in r['sources']]
     if operation=='cue_manifest':return [(c['source_reference'],audio,True) for c in r['cues'] if c['source_reference'] is not None]
     if operation=='temporal_assessment':return [(r['source_video'],video,False)]

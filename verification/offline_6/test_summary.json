@@ -1,0 +1,22 @@
+{
+  "resumed_commit": "0de2bf336ca2c3c1f7abff1b155962aeaec83cc9",
+  "new_unique_tests": 28,
+  "existing_affected_checks": 7,
+  "total_distinct_successfully_verified": 35,
+  "first_executed_run": {
+    "passed": 30,
+    "error": 1,
+    "cause": "Casting tuple/list canonical serialization; fixed, failed case alone retested"
+  },
+  "initial_pre_test_import_error": "requests absent; no package download; import-only no-transport shim for validators",
+  "http_transport_tested": false,
+  "engineering_complete": 13,
+  "partial": 6,
+  "production_ready": 0,
+  "gpu_usage": 0,
+  "model_inferences": 0,
+  "real_weight_read_load_download": 0,
+  "hosted_paid_calls": 0,
+  "license_acceptances": 0,
+  "all_evidence_software_only": true
+}

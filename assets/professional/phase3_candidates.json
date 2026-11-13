@@ -1839,7 +1839,7 @@
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_11/"
+        "offline_preparation_evidence": "verification/offline_6/"
       }
     },
     "cinematographer": {
@@ -1887,7 +1887,7 @@
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_11/"
+        "offline_preparation_evidence": "verification/offline_6/"
       }
     },
     "video": {
@@ -1912,7 +1912,7 @@
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_11/"
+        "offline_preparation_evidence": "verification/offline_6/"
       }
     },
     "voice": {
@@ -1937,7 +1937,7 @@
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_11/"
+        "offline_preparation_evidence": "verification/offline_6/"
       }
     },
     "continuity": {
@@ -1985,7 +1985,7 @@
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_11/"
+        "offline_preparation_evidence": "verification/offline_6/"
       }
     },
     "editing": {
@@ -2103,7 +2103,7 @@
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_11/"
+        "offline_preparation_evidence": "verification/offline_6/"
       }
     }
   },
