@@ -22,6 +22,17 @@ class LocalUnavailable(WritingError):
     """Local transport/model availability failure; safe local fallback may be tried."""
     pass
 
+def model_json(raw):
+    """Reject ambiguous model objects without repairing or discarding raw text."""
+    def unique(pairs):
+        result={}
+        for key,value in pairs:
+            if key in result:
+                raise WritingError('Duplicate JSON object key in model response; raw output preserved.')
+            result[key]=value
+        return result
+    return json.loads(raw,object_pairs_hook=unique)
+
 def curriculum():
     return json.loads((ROOT / 'curriculum.json').read_text(encoding='utf-8'))
 
@@ -222,7 +233,7 @@ class LocalWriter:
             self.last_evidence['inference_completed']=True
             if self.format_schema is not None:
                 self.last_evidence['format_schema_sha256']=hashlib.sha256(json.dumps(self.format_schema,sort_keys=True).encode()).hexdigest()
-            result=json.loads(self.last_raw_output)
+            result=model_json(self.last_raw_output)
             if not isinstance(result,(dict,list)):raise WritingError('Local response must be a structured JSON object or array.')
             if self.format_schema is not None:
                 from jsonschema import Draft202012Validator

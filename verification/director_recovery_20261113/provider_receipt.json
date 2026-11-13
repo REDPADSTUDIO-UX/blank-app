@@ -1,0 +1,42 @@
+{
+  "resumed_commit": "8326ea046b5690c4ee2c6608322145f2dab48bf2",
+  "date": "2026-11-13",
+  "provider": "existing owner-authenticated Hugging Face Space, free UI; no paid API",
+  "reported_model": "google/gemma-3-12b-it",
+  "model_revision": null,
+  "serving_revision": null,
+  "settings": {
+    "visible_max_tokens_input": 1024,
+    "visible_slider": 1020,
+    "effective_cap": null,
+    "seed": null,
+    "temperature": null,
+    "context": null,
+    "gpu": null,
+    "memory": null
+  },
+  "observations": {
+    "director_plan": {
+      "submit_started": "2026-11-13T07:02:29.340Z",
+      "final_observed": "2026-11-13T07:04:19.682Z"
+    },
+    "source_understanding": {
+      "submit_started": "2026-11-13T07:04:20.410Z",
+      "status": "preserved; leading diagnostic excluded"
+    },
+    "locked_camera_revision": {
+      "submit_started": "2026-11-13T07:05:30.731Z",
+      "status": "preserved"
+    },
+    "source_questions": {
+      "submit_started": "2026-11-13T07:06:37.481Z",
+      "status": "preserved"
+    },
+    "delegation": {
+      "submit_started": "2026-11-13T07:07:38.821Z",
+      "status": "UI Error, no response; Stop requested; reload restored ready interface; server completion unknown"
+    }
+  },
+  "timing_scope": "Operator observation windows include input entry and intervening work; not pure inference latency. No ranking by these timestamps.",
+  "repeat_policy": "No prior successful generation rerun. Recovered plan had no prior response; exact prompt verified after bounded clipboard reconstruction. Do not blindly repeat failed delegation whose server completion is unknown."
+}

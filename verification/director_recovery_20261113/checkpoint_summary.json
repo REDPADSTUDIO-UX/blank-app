@@ -1,0 +1,19 @@
+{
+  "resume_checkpoint": "8326ea046b5690c4ee2c6608322145f2dab48bf2",
+  "director_plan_request": "verification/director_first_20261113/director_plan_text_input_request.json",
+  "new_responses": 4,
+  "submitted_no_response": 1,
+  "diagnostic_excluded": 1,
+  "raw_files_immutable": true,
+  "successful_prior_generations_repeated": 0,
+  "controlled_local_inference": 0,
+  "hosted_finish_metadata_unknown": true,
+  "independent_human_review": "PENDING",
+  "new_model_downloads": 0,
+  "production_integration": false,
+  "affected_software_tests_passed": 172,
+  "registry_followup_passed": 1,
+  "test_repetition_reason": "Shared local JSON parser and benchmark validator changed after actual duplicated Director output; only affected suites and registry followup rerun.",
+  "current_gpu": "nvidia-smi absent in current Colab kernel",
+  "owner_approval_needed": "Independent artistic review and final acceptance; exact additional large/gated model or paid compute authorization only if subsequently proposed."
+}

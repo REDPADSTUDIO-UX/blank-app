@@ -1,5 +1,5 @@
 {
-  "version": "21-agent-director-evidence-2026-11-13.1",
+  "version": "21-agent-director-recovery-2026-11-13.2",
   "profiles": {
     "qwen35_27": {
       "id": "qwen35_27",
@@ -1632,9 +1632,9 @@
       "validated_selection": null,
       "human_review": "Owner A-over-B preference recorded; neither accepted; independent specialist review pending",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
-      "blocker": "Current Colab GPU usage limit; hosted exploratory controls do not satisfy exact model identity, protocol, professional sample count or actual-shot review gates.",
+      "blocker": "Current Colab read-only probe: nvidia-smi absent, exact approved GGUF/cache and runtime absent; daily free allowance exhausted. Hosted full plan malformed, locked camera output semantically weak, delegation Error/no response; independent professional sample/shot review incomplete.",
       "research_status": "Research Shortlisted",
-      "latest_evidence": "verification/director_first_20261113/results.json"
+      "latest_evidence": "verification/director_recovery_20261113/results.json"
     },
     "qc": {
       "primary_candidate": "qwen35_27",
@@ -2004,7 +2004,35 @@
       "evidence": "verification/director_first_20261113/results.json",
       "owner_feedback": "verification/director_first_20261113/owner_feedback.json",
       "production_approved": false,
-      "scope": "Hosted demo evidence only; not pinned local model verification, license acceptance, approved download or model ranking."
+      "scope": "Hosted demo evidence only; not pinned local model verification, license acceptance, approved download or model ranking.",
+      "evidence_runs": [
+        {
+          "evidence": "verification/approved_gpu_writing/gemma_browser_receipt.json",
+          "case_ids": [
+            "natural_dialogue"
+          ],
+          "classification": "prior hosted exploratory output; do not repeat"
+        },
+        {
+          "evidence": "verification/director_first_20261113/results.json",
+          "case_ids": [
+            "clean_abstention",
+            "director_criticism"
+          ],
+          "classification": "prior hosted exploratory controls; do not repeat"
+        },
+        {
+          "evidence": "verification/director_recovery_20261113/results.json",
+          "case_ids": [
+            "director_plan",
+            "source_understanding",
+            "locked_camera_revision",
+            "source_questions",
+            "delegation"
+          ],
+          "classification": "four new responses, one Error/unknown response; one leading diagnostic excluded; no production promotion"
+        }
+      ]
     }
   }
 }

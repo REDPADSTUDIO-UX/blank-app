@@ -6,6 +6,7 @@ from .agents import AgentError,encode
 from .offline_media import digest,sha
 from .shared_model_services import SharedServices,profile,catalog,resource_preflight,ROOT
 from .kaggle_runtime import probe
+from .screenwriter import model_json
 
 CASE_FILE=ROOT/'assets/professional/kaggle_bengali_cases.json'
 def hashlib_sha(raw):
@@ -16,7 +17,7 @@ def cases():return json.loads(CASE_FILE.read_text())
 
 def technical_validation(case,raw,worker):
     result={'json_valid':False,'technical_pass':False,'generation_complete':not worker.get('truncated',True),'quote_findings':[], 'artistic_scores':None,'human_review':'pending','professional_accepted':False}
-    try:data=json.loads(raw);result['json_valid']=isinstance(data,dict)
+    try:data=model_json(raw);result['json_valid']=isinstance(data,dict)
     except ValueError:return result
     result['contract_fields_valid']=isinstance(data,dict) and set(data)==set(case['required_keys'])
     if not isinstance(data,dict):return result

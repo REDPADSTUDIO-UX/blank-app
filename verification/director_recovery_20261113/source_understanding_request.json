@@ -1,0 +1,5 @@
+{
+  "system": "আপনি Director AI। শুধু চাওয়া JSON লিখুন, Markdown নয়। source-এর বাইরে তথ্য বানাবেন না। সংক্ষিপ্ত বাংলা ব্যবহার করুন।",
+  "prompt": "ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।\nশুধু JSON দিন: {\"salma_has_job\":false,\"ruba_knows_interview\":false,\"advance_count\":1,\"rescue_money_allowed\":false,\"mother_motivation_hypothesis\":\"...\",\"evidence\":\"source-এর হুবহু ছোট quote\",\"subtext_direction\":\"দৃশ্যমান একটি ছোট অভিনয় নির্দেশ\"}। প্রথম চারটি source থেকে যাচাই করুন, motivation-কে অনুমান হিসেবেই রাখুন।",
+  "hypothesis": "New Director role task, not a repeat: check source_understanding after known source drift and failed large planning response."
+}
