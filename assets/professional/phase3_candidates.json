@@ -1652,7 +1652,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "story": {
       "primary_candidate": "qwen35_27",
@@ -1669,7 +1675,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "script": {
       "primary_candidate": "qwen35_27",
@@ -1703,7 +1715,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "art": {
       "primary_candidate": "flux2_klein4",
@@ -1721,7 +1739,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "location": {
       "primary_candidate": "flux2_klein4",
@@ -1738,7 +1762,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "costume": {
       "primary_candidate": "flux2_klein4",
@@ -1755,7 +1785,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "storyboard": {
       "primary_candidate": "flux2_klein4",
@@ -1772,7 +1808,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "performance": {
       "primary_candidate": "qwen35_27",
@@ -1789,7 +1831,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "cinematographer": {
       "primary_candidate": "qwen35_27",
@@ -1806,7 +1854,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "motion": {
       "primary_candidate": "wan_animate2",
@@ -1823,7 +1877,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "video": {
       "primary_candidate": "wan22_5",
@@ -1841,7 +1901,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "voice": {
       "primary_candidate": "indic_speak",
@@ -1859,7 +1925,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "continuity": {
       "primary_candidate": "qwen35_27",
@@ -1876,7 +1948,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "music": {
       "primary_candidate": "ace15",
@@ -1893,7 +1971,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "editing": {
       "primary_candidate": "qwen35_27",
@@ -1911,7 +1995,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "production_manager": {
       "primary_candidate": "qwen36_27",
@@ -1927,7 +2017,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "growth": {
       "primary_candidate": "qwen35_27",
@@ -1944,7 +2040,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "youtube": {
       "primary_candidate": "qwen35_9",
@@ -1958,7 +2060,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     },
     "casting": {
       "primary_candidate": "qwen35_27",
@@ -1979,7 +2087,13 @@
       "human_review": "Not conducted",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
       "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "PARTIAL",
+        "runtime_verified": false,
+        "production_ready": false
+      }
     }
   },
   "production_routes_changed": false,

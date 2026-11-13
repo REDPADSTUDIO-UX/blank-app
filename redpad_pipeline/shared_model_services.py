@@ -97,6 +97,16 @@ class SharedServices:
     def policy(self,role):
         with self.store.tx() as db:r=db.execute('SELECT payload FROM shared_dev_routes WHERE role=?',(role,)).fetchone()
         return json.loads(r[0]) if r else None
+    def stage_request(self,run,profile_id,operation,request):
+        """CPU-only draft preparation; does not configure or execute a model route."""
+        from .no_gpu_staging import StagingLedger
+        return StagingLedger(self.store).stage(run,profile_id,operation,request)
+    def staged_request(self,id):
+        from .no_gpu_staging import StagingLedger
+        return StagingLedger(self.store).get(id)
+    def stage_tool_request(self,run,operation,request):
+        from .no_gpu_staging import StagingLedger
+        return StagingLedger(self.store).stage_tool(run,operation,request)
     def choose_backend(self,run,role):
         """Pin one backend before execution; retries cannot switch provider families."""
         if role not in AGENTS:raise AgentError('Unknown route role.')

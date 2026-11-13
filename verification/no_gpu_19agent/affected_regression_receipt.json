@@ -1,0 +1,39 @@
+{
+  "scope": "CPU software checks only; no inference/artistic acceptance",
+  "tests": 21,
+  "failures": 0,
+  "errors": 0,
+  "forbidden_resource_attempts": {
+    "socket.socket": 1,
+    "subprocess.run": 0,
+    "subprocess.Popen": 0,
+    "urllib.request.OpenerDirector.open": 0,
+    "redpad_pipeline.kaggle_runtime.probe": 0
+  },
+  "new_model_generations": 0,
+  "gpu_used": false,
+  "model_weights_downloaded": false,
+  "selected_tests": [
+    "tests.test_kaggle_model_services.KaggleServices.test_exact_21_agents_18_pinned_candidates_no_winners",
+    "tests.test_kaggle_model_services.KaggleServices.test_distinct_candidate_versions_are_never_silently_aliased",
+    "tests.test_kaggle_model_services.KaggleServices.test_download_recipes_exclude_mutually_exclusive_weight_variants",
+    "tests.test_kaggle_model_services.KaggleServices.test_resources_do_not_pool_two_t4_cards_or_claim_verified_fit",
+    "tests.test_kaggle_model_services.KaggleServices.test_cgroup_ram_and_disk_headroom_block_before_download",
+    "tests.test_kaggle_model_services.KaggleServices.test_install_approval_is_explicit_exact_and_change_invalidates",
+    "tests.test_kaggle_model_services.KaggleServices.test_tokenizer_config_hash_tamper_is_rejected_before_approval",
+    "tests.test_kaggle_model_services.KaggleServices.test_origin_and_official_weight_hash_mismatch_rejected",
+    "tests.test_kaggle_model_services.KaggleServices.test_production_route_cannot_be_replaced_by_research_preference",
+    "tests.test_kaggle_model_services.KaggleServices.test_service_snapshot_is_pinned_not_changed_by_later_preference",
+    "tests.test_kaggle_model_services.KaggleServices.test_engine_shared_route_blocks_without_weights_and_never_falls_back",
+    "tests.test_kaggle_model_services.KaggleServices.test_writing_limits_and_unsupported_media_controls_rejected",
+    "tests.test_kaggle_model_services.KaggleServices.test_retry_cannot_switch_from_legacy_to_new_shared_preference",
+    "tests.test_kaggle_model_services.KaggleServices.test_shared_retry_stays_bound_when_production_policy_changes",
+    "tests.test_kaggle_model_services.KaggleServices.test_old_ollama_run_snapshot_wins_over_later_shared_configuration",
+    "tests.test_kaggle_model_services.KaggleServices.test_engine_retry_uses_same_shared_backend_after_policy_change",
+    "tests.test_agent_foundation.FoundationTests.test_dependency_scheduler_and_revision_scope",
+    "tests.test_agent_foundation.FoundationTests.test_quality_checks_and_owner_qc_review",
+    "tests.test_agent_foundation.FoundationTests.test_continuity_and_edit_checks",
+    "tests.test_agent_foundation.FoundationTests.test_restart_preserves_runs",
+    "tests.test_specialist_integration.Integration.test_each_specialist_revisions_approval_sources_and_recovery"
+  ]
+}
