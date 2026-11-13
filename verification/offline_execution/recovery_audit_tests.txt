@@ -1,0 +1,11 @@
+test_recovery_does_not_interrupt_active_controller_during_preflight_or_postprocess (tests.test_native_local_execution.NativeLocalTests.test_recovery_does_not_interrupt_active_controller_during_preflight_or_postprocess) ... ok
+test_cancel_after_controller_loss_is_terminal_without_automatic_restart (tests.test_native_local_execution.NativeLocalTests.test_cancel_after_controller_loss_is_terminal_without_automatic_restart) ... ok
+test_actual_running_dummy_is_cancelled_from_restarted_service (tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service) ... ok
+test_actual_timeout_terminates_fixture_worker (tests.test_native_local_execution.NativeLocalTests.test_actual_timeout_terminates_fixture_worker) ... ok
+test_process_group_timeout_cleans_spawned_dummy_descendant (tests.test_native_local_execution.NativeLocalTests.test_process_group_timeout_cleans_spawned_dummy_descendant) ... ok
+test_concurrent_native_request_dedup_is_atomic_and_restart_safe (tests.test_native_local_execution.NativeLocalTests.test_concurrent_native_request_dedup_is_atomic_and_restart_safe) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.812s
+
+OK

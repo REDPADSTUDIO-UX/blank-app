@@ -43,7 +43,7 @@ class OfflineSixTests(unittest.TestCase):
             stage,spec=self.anim(role);job=self.services.prepare_offline_request(stage['id'],spec=spec)
             self.assertEqual(job['native_call_preparation']['arguments']['clip_len'],73)
             self.assertEqual(job['native_call_preparation']['call'],'WanAnimate2MPIPipeline.__call__')
-            self.assertFalse(job['launch_authorized']);self.assertIsNone(job['worker_module'])
+            self.assertFalse(job['launch_authorized']);self.assertEqual(job['worker_module'],'redpad_pipeline.native_local_worker')
             self.assertFalse(job['consent_verified']);self.assertFalse(job['production_ready'])
 
     def test_wan_rejects_mismatched_fps_duration_and_short_motion_source(self):
@@ -87,7 +87,7 @@ class OfflineSixTests(unittest.TestCase):
         call=job['native_call_preparation'];self.assertIn('ModelPaths.from_split',call['call'])
         self.assertIsNone(call['spatial_upsampler']);self.assertFalse(job['launch_authorized'])
         self.assertEqual(job['source_revision'],'f0f2f8607189c78a72420b2b63cb1975b5eca179')
-        self.assertNotIn('argv',job);self.assertTrue(job['contract_only'])
+        self.assertNotIn('argv',job);self.assertFalse(job['contract_only']);self.assertTrue(job['native_worker_implemented'])
 
     def test_ltx_rejects_motion_transfer_quantization_and_hidden_endpoint_controls(self):
         stage,spec=self.ltx();r=stage['plan']['request']
@@ -161,7 +161,7 @@ class OfflineSixTests(unittest.TestCase):
         self.assertTrue(call['arguments']['params']['instrumental']);self.assertFalse(call['arguments']['params']['thinking'])
         self.assertFalse(call['initialization_policy']['automatic_download']);self.assertFalse(call['initialization_policy']['model_code_sync'])
         self.assertIn('weights_only=True',call['unsafe_auxiliary_policy']['expected_loader'])
-        self.assertTrue(job['contract_only']);self.assertIsNone(job['worker_module'])
+        self.assertFalse(job['contract_only']);self.assertEqual(job['worker_module'],'redpad_pipeline.native_local_worker')
 
     def test_ace_rejects_cover_vocals_sfx_substitution_and_cue_duration_mismatch(self):
         stage,spec=self.music();r=stage['plan']['request']

@@ -114,6 +114,10 @@ class SharedServices:
     def prepared_offline_request(self,id):
         from .offline_preparation import PreparedRequests
         return PreparedRequests(self.store).get(id)
+    def native_research_workers(self):
+        """Offline development lifecycle only; no route promotion or automatic launch."""
+        from .native_execution import NativeExecution
+        return NativeExecution(self.store)
     def choose_backend(self,run,role):
         """Pin one backend before execution; retries cannot switch provider families."""
         if role not in AGENTS:raise AgentError('Unknown route role.')

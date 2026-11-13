@@ -17,10 +17,10 @@ NATIVE={
 INTERFACES={
  'wan_animate2':{'documented_local_entry':'infer/wan_animate_2_demo.py',
    'inputs':['prompt','refer-img-file','refer-video-file','config'],
-   'blocker':'Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution.'},
+   'blocker':'Native fixed-class offline worker implemented at pinned source; exact auxiliary origin/hash approval, safe weights-only loading compatibility, installed dependencies and real MPI/GPU validation pending. No old Animate substitution.'},
  'ltx25':{'documented_local_entry':'ltx_pipelines.distilled',
    'inputs':['transformer-path','text-encoder-path','video-vae-path','audio-vae-path','spatial-upsampler-path'],
-   'blocker':'Split ModelPaths/DistilledPipeline source reviewed at f0f2f8607189c78a72420b2b63cb1975b5eca179; selected pinned BF16 recipe still lacks approved exact spatial upsampler/tokenizer dependencies and verified local execution bridge. No older LTX or repack.'},
+   'blocker':'Pinned split BF16 offline worker implemented; packed TE includes tokenizer/config assets. Official spatial upsampler SHA/size and owner component/license approval still blocked; actual local loading/GPU output unverified. No older LTX or repack.'},
  'indic_speak':{'documented_local_entry':'inference.TTS (current model card)',
    'inputs':['local directory','text','speaker'],
    'blocker':'Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified.'},
@@ -29,7 +29,7 @@ INTERFACES={
    'blocker':'Requires reviewed custom code and local auxiliary dependencies; trust_remote_code=True is not authorized. Gated access and specific voice consent pending.'},
  'ace15':{'documented_local_entry':'ACE-Step 1.5 project local package',
    'inputs':['caption','instrumental generation','duration','seed'],
-   'blocker':'Source pinned at ca1e85fe9430179831e6bc6be790c332190a3866; initialize_service auto-download/code-sync must be disabled by reviewed local bridge. weights_only=True observed but bounded auxiliary tensor checks/full model-code review remain. Never use ACE 3.5B.'}}
+   'blocker':'Pinned ACE 1.5 fixed-class offline initialization bridge implemented with deny-download/sync hooks, local-only loaders and bounded tensor checks. Exact approved full bundle/dependency/code review and actual GPU/audio validation pending. Never use ACE 3.5B.'}}
 COMPLETED_ROLES={'qc','location','cinematographer','continuity','editing'}
 
 
@@ -69,6 +69,7 @@ def prepare_native(staged,store,*,spec=None,verify_bundle=False):
             from .offline_specialist_preparation import prepare_specialist
             job=prepare_specialist(staged,store,spec)
             job['preparer_source_sha256']=hashlib.sha256((Path(__file__).parent/'offline_specialist_preparation.py').read_bytes()).hexdigest()
+            if job.get('native_worker_implemented'):job['worker_source_sha256']=hashlib.sha256((Path(__file__).parent/'native_local_worker.py').read_bytes()).hexdigest()
             return job
         return {'stage_id':staged['id'],'profile':pid,'interface':INTERFACES[pid],
                 'status':'RUNTIME BLOCKED','contract_only':True,'worker_module':None,
@@ -151,7 +152,16 @@ def readiness_updates(rows):
             r['missing_official_interface']=[INTERFACES[k]['blocker'] for k in r['execution_binding_pending'] if k in INTERFACES]
             if role in {'performance','motion','video','voice','music','casting'}:
                 from .offline_specialist_preparation import PINS
-                r['specialist_preparation']='source-reviewed native call and evidence preparation; no executable runtime bridge'
+                r['specialist_preparation']='source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance'
                 r['native_source_revisions']={k:PINS[k] for k in r['execution_binding_pending'] if k in PINS}
                 r['offline_preparation_evidence']='verification/offline_6/'
+                r['native_execution_evidence']='verification/offline_execution/'
+                r['runtime_status']='MODEL/GPU VALIDATION BLOCKED'
+                if role in {'performance','motion','video','music'}:
+                    r['engineering_status']='NO-GPU ENGINEERING COMPLETE'
+                    r['execution_binding_pending']=[]
+                    r['runtime_validation_pending']=['Exact authenticated owner-approved complete weights/code/dependency bundle','Kernel network isolation and local device availability','Real local loading, GPU/MPI compatibility and technical output gates','Independent specialist artistic evaluation and owner acceptance']
+                    r['missing_official_interface']=[]
+                else:
+                    r['missing_official_interface']=['Exact gated selected Indic-Speak implementation/speaker/component mapping and IndicF5 source unavailable without owner-authorized access/terms; surrounding runtime/rights engineering implemented.']
     return rows

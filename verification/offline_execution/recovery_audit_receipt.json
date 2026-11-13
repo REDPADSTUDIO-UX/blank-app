@@ -1,0 +1,23 @@
+{
+  "selected": [
+    "tests.test_native_local_execution.NativeLocalTests.test_recovery_does_not_interrupt_active_controller_during_preflight_or_postprocess",
+    "tests.test_native_local_execution.NativeLocalTests.test_cancel_after_controller_loss_is_terminal_without_automatic_restart",
+    "tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service",
+    "tests.test_native_local_execution.NativeLocalTests.test_actual_timeout_terminates_fixture_worker",
+    "tests.test_native_local_execution.NativeLocalTests.test_process_group_timeout_cleans_spawned_dummy_descendant",
+    "tests.test_native_local_execution.NativeLocalTests.test_concurrent_native_request_dedup_is_atomic_and_restart_safe"
+  ],
+  "tests": 6,
+  "errors": 0,
+  "failures": 0,
+  "gpu_used": false,
+  "model_inference": false,
+  "real_weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "authorized_processes": "fixed CPU fixture only; source-pinned native process launch blocked by test filter",
+  "requests_import_only_shim": true,
+  "http_transport_verified": false,
+  "model_class_calls": "injected fake classes only, no model libraries imported",
+  "scope": "software engineering only; no model intelligence/artistic acceptance"
+}

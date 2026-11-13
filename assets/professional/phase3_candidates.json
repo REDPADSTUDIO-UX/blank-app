@@ -1836,10 +1836,11 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
       }
     },
     "cinematographer": {
@@ -1884,10 +1885,11 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
       }
     },
     "video": {
@@ -1909,10 +1911,11 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
       }
     },
     "voice": {
@@ -1937,7 +1940,8 @@
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
       }
     },
     "continuity": {
@@ -1982,10 +1986,11 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
       }
     },
     "editing": {
@@ -2103,7 +2108,8 @@
         "engineering_status": "PARTIAL",
         "runtime_verified": false,
         "production_ready": false,
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
       }
     }
   },

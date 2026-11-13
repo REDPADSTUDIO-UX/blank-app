@@ -215,7 +215,7 @@ def prepare_specialist(staged,store,spec):
                 'configuration':'infer/wan_animate_2.yaml; template only, never evaluated or passed through unchecked',
                 'required_components':['selected BF16 transformer','T5 .pth + tokenizer','VAE .pth','CLIP .pth + tokenizer']}
         blockers=['Exact auxiliary revisions/hashes and .pth loading safety incomplete.',
-                  'Native MPI setup launches processes; single-device/package/offline transitive code review and runtime validation pending.']
+                  'Native worker/process supervision implemented; actual MPI/device/dependency and owner full-code review remain runtime gates.']
     elif pid=='ltx25':
         native={'entry':'ltx_pipelines.distilled','call':'DistilledPipeline(model_paths=ModelPaths.from_split(...), spatial_upsampler_path=...)',
                 'component_slots':LTX_SLOTS,'spatial_upsampler':None,
@@ -224,7 +224,7 @@ def prepare_specialist(staged,store,spec):
                 'image_conditioning':r['image_reference'],'precision_policy':'selected BF16 split only; no quantized substitute; version-specific quantization options require separate validation'}
         if any(v not in {f['path'] for f in p['selected_weight_files']} for v in LTX_SLOTS.values()):raise AgentError('Pinned LTX split component recipe changed.')
         blockers=['Spatial upsampler belongs to pinned LTX-2.5 repository layout per card, but exact file SHA/size, recipe inclusion and owner download/license approval unresolved.',
-                  'Local tokenizer/config dependencies and BF16 runtime/package loading remain unverified; no executable argv is issued.']
+                  'Packed text encoder includes tokenizer/config assets; actual embedded metadata and BF16 runtime/package loading remain weight/runtime gates.']
     elif pid=='indicf5':
         native={'entry':'reviewed local IndicF5 callable required; remote AutoModel custom-code execution disabled',
                 'arguments':{'text':unicodedata.normalize('NFC',r['text']),'ref_audio_path':r['reference'],'ref_text':r['reference_transcript']},'sample_rate':24000}
@@ -239,14 +239,16 @@ def prepare_specialist(staged,store,spec):
                              'config':{'batch_size':1,'audio_format':'wav'}},
                 'sample_rate':48000,'unsafe_auxiliary_policy':{'file':'acestep-v15-turbo/silence_latent.pt','expected_loader':'torch.load(weights_only=True) on authenticated local file; tensor type/shape/size/finite validation required before use'},
                 'initialization_policy':{'automatic_download':False,'model_code_sync':False,'custom_code':False}}
-        blockers=['Upstream initialize_service auto-downloads absent components and auto-syncs model code. A reviewed deny-download/deny-sync local runtime bridge remains required.',
-                  'Pinned loader uses weights_only=True for silence_latent.pt, but bounded tensor validation and full local model-code review remain required before execution.']
+        blockers=['Upstream auto-download/code-sync hooks are replaced by implemented deny-download/sync local bridge; authenticated full bundle and actual runtime remain mandatory.',
+                  'Implemented bounded weights-only silence tensor checks; actual tensor compatibility and owner complete dependency/code approval remain required.']
+    implemented=pid in PINS
     return {'stage_id':staged['id'],'profile':pid,'repo':p['repo'],'revision':p['revision'],
             'profile_sha256':fingerprint(p),'source_revision':PINS.get(pid),
             'native_call_preparation':native,'spec_sha256':fingerprint(spec),'extra_reference_pins':bound,
             'reference_audio_header':audio_header,'video_metadata_independently_verified':False,
             'original_request':r,'owner_annotations':spec,'status':'RUNTIME VALIDATION BLOCKED',
-            'contract_only':True,'worker_module':None,'launch_authorized':False,'inference_completed':False,
+            'contract_only':not implemented,'worker_module':'redpad_pipeline.native_local_worker' if implemented else None,
+            'native_worker_implemented':implemented,'launch_authorized':False,'inference_completed':False,
             'consent_verified':False,'human_reviewed':False,'production_ready':False,
             'required_output_evidence':['raw artifact and SHA256','exact approved complete model/code/dependency manifests','source/revision/reference pins','actual runtime/settings/finish status','independent QC','independent visual/listening review','owner acceptance'],
             'blockers':blockers}

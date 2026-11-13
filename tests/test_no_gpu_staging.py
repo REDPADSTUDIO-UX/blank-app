@@ -95,7 +95,7 @@ class NoGPUStagingTests(unittest.TestCase):
         with self.assertRaises(AgentError):prepare('motion','wan_animate2','reference_video',r)
         r=request('text_to_video','wan22_5');r['frames']=10
         with self.assertRaises(AgentError):prepare('video','wan22_5','text_to_video',r)
-        self.assertTrue(any('not implemented' in b for b in prepare('video','ltx25','text_to_video',request('text_to_video','ltx25'))['blockers']))
+        self.assertTrue(any('explicit owner-authorized NativeExecution' in b for b in prepare('video','ltx25','text_to_video',request('text_to_video','ltx25'))['blockers']))
 
     def test_voice_presets_do_not_clone_and_reference_voice_needs_consent_fields(self):
         with self.assertRaises(AgentError):prepare('voice','indic_parler','reference_voice',request('reference_voice','indicf5'))

@@ -564,7 +564,7 @@
         "temporal_assessment"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "text": [
@@ -578,9 +578,7 @@
         "unsupported_required_operations": [
           "video_inspection"
         ],
-        "execution_binding_pending": [
-          "wan_animate2"
-        ],
+        "execution_binding_pending": [],
         "deterministic_operations": [
           "temporal_assessment"
         ],
@@ -590,19 +588,25 @@
         "runtime_verified": false,
         "vision_dependency_note": null,
         "offline_native_preparation": "implemented; no runtime launch",
-        "runtime_status": "RUNTIME BLOCKED",
-        "missing_official_interface": [
-          "Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution."
-        ],
-        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
+        "missing_official_interface": [],
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
         "native_source_revisions": {
           "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
         },
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "runtime_validation_pending": [
+          "Exact authenticated owner-approved complete weights/code/dependency bundle",
+          "Kernel network isolation and local device availability",
+          "Real local loading, GPU/MPI compatibility and technical output gates",
+          "Independent specialist artistic evaluation and owner acceptance"
+        ]
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_6/"
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/"
     },
     {
       "agent": "cinematographer",
@@ -724,7 +728,7 @@
         "temporal_assessment"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "reference_video": [
@@ -735,10 +739,7 @@
           ]
         },
         "unsupported_required_operations": [],
-        "execution_binding_pending": [
-          "wan_animate2",
-          "vision7"
-        ],
+        "execution_binding_pending": [],
         "deterministic_operations": [
           "temporal_assessment"
         ],
@@ -748,21 +749,27 @@
         "runtime_verified": false,
         "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
         "offline_native_preparation": "implemented; no runtime launch",
-        "runtime_status": "RUNTIME BLOCKED",
-        "missing_official_interface": [
-          "Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution."
-        ],
-        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
+        "missing_official_interface": [],
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
         "native_source_revisions": {
           "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
         },
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "runtime_validation_pending": [
+          "Exact authenticated owner-approved complete weights/code/dependency bundle",
+          "Kernel network isolation and local device availability",
+          "Real local loading, GPU/MPI compatibility and technical output gates",
+          "Independent specialist artistic evaluation and owner acceptance"
+        ]
       },
       "supplemental_research_candidates": [
         "vision7"
       ],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_6/"
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/"
     },
     {
       "agent": "video",
@@ -817,7 +824,7 @@
         "text_to_video"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "image_to_video": [
@@ -831,11 +838,7 @@
           ]
         },
         "unsupported_required_operations": [],
-        "execution_binding_pending": [
-          "wan22_5",
-          "ltx25",
-          "svd_xt"
-        ],
+        "execution_binding_pending": [],
         "deterministic_operations": [],
         "gpu_status": "GPU TEST BLOCKED",
         "human_status": "HUMAN REVIEW PENDING",
@@ -843,19 +846,25 @@
         "runtime_verified": false,
         "vision_dependency_note": null,
         "offline_native_preparation": "implemented; no runtime launch",
-        "runtime_status": "RUNTIME BLOCKED",
-        "missing_official_interface": [
-          "Split ModelPaths/DistilledPipeline source reviewed at f0f2f8607189c78a72420b2b63cb1975b5eca179; selected pinned BF16 recipe still lacks approved exact spatial upsampler/tokenizer dependencies and verified local execution bridge. No older LTX or repack."
-        ],
-        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
+        "missing_official_interface": [],
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
         "native_source_revisions": {
           "ltx25": "f0f2f8607189c78a72420b2b63cb1975b5eca179"
         },
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "runtime_validation_pending": [
+          "Exact authenticated owner-approved complete weights/code/dependency bundle",
+          "Kernel network isolation and local device availability",
+          "Real local loading, GPU/MPI compatibility and technical output gates",
+          "Independent specialist artistic evaluation and owner acceptance"
+        ]
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_6/"
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/"
     },
     {
       "agent": "voice",
@@ -937,18 +946,19 @@
         "runtime_verified": false,
         "vision_dependency_note": null,
         "offline_native_preparation": "implemented; no runtime launch",
-        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
         "missing_official_interface": [
-          "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified.",
-          "Requires reviewed custom code and local auxiliary dependencies; trust_remote_code=True is not authorized. Gated access and specific voice consent pending."
+          "Exact gated selected Indic-Speak implementation/speaker/component mapping and IndicF5 source unavailable without owner-authorized access/terms; surrounding runtime/rights engineering implemented."
         ],
-        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
         "native_source_revisions": {},
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_6/"
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/"
     },
     {
       "agent": "continuity",
@@ -1073,7 +1083,7 @@
         "cue_manifest"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "music": [
@@ -1084,10 +1094,7 @@
           ]
         },
         "unsupported_required_operations": [],
-        "execution_binding_pending": [
-          "ace15",
-          "stable_audio_small"
-        ],
+        "execution_binding_pending": [],
         "deterministic_operations": [
           "cue_manifest"
         ],
@@ -1097,19 +1104,25 @@
         "runtime_verified": false,
         "vision_dependency_note": null,
         "offline_native_preparation": "implemented; no runtime launch",
-        "runtime_status": "RUNTIME BLOCKED",
-        "missing_official_interface": [
-          "Source pinned at ca1e85fe9430179831e6bc6be790c332190a3866; initialize_service auto-download/code-sync must be disabled by reviewed local bridge. weights_only=True observed but bounded auxiliary tensor checks/full model-code review remain. Never use ACE 3.5B."
-        ],
-        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
+        "missing_official_interface": [],
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
         "native_source_revisions": {
           "ace15": "ca1e85fe9430179831e6bc6be790c332190a3866"
         },
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "runtime_validation_pending": [
+          "Exact authenticated owner-approved complete weights/code/dependency bundle",
+          "Kernel network isolation and local device availability",
+          "Real local loading, GPU/MPI compatibility and technical output gates",
+          "Independent specialist artistic evaluation and owner acceptance"
+        ]
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_6/"
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/"
     },
     {
       "agent": "editing",
@@ -1492,20 +1505,21 @@
         "runtime_verified": false,
         "vision_dependency_note": null,
         "offline_native_preparation": "implemented; no runtime launch",
-        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
         "missing_official_interface": [
-          "Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution.",
-          "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified."
+          "Exact gated selected Indic-Speak implementation/speaker/component mapping and IndicF5 source unavailable without owner-authorized access/terms; surrounding runtime/rights engineering implemented."
         ],
-        "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
         "native_source_revisions": {
           "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
         },
-        "offline_preparation_evidence": "verification/offline_6/"
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
-      "offline_preparation_evidence": "verification/offline_6/"
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/"
     }
   ],
   "no_gpu_engineering_ledger_version": "cpu-contract-validation-v1",
@@ -1533,5 +1547,6 @@
     "casting"
   ],
   "offline_11_engineering_revision": "offline-first-preparation-v1",
-  "offline_6_engineering_revision": "native-source-preparation-v1"
+  "offline_6_engineering_revision": "native-source-preparation-v1",
+  "native_local_execution_revision": "source-pinned-offline-workers-v1"
 }

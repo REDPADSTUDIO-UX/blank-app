@@ -1,0 +1,12 @@
+test_scope_and_readiness_separate_engineering_from_inference (tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference) ... ok
+test_motion_frame_binding_does_not_become_a_temporal_physics_critic (tests.test_offline_11_preparation.OfflineElevenTests.test_motion_frame_binding_does_not_become_a_temporal_physics_critic) ... ok
+test_shared_native_wan_preparation_for_all_three_roles_is_not_acting_critic (tests.test_offline_six_preparation.OfflineSixTests.test_shared_native_wan_preparation_for_all_three_roles_is_not_acting_critic) ... ok
+test_ltx_exact_split_preparation_has_no_guessed_upsampler_or_executable_argv (tests.test_offline_six_preparation.OfflineSixTests.test_ltx_exact_split_preparation_has_no_guessed_upsampler_or_executable_argv) ... ok
+test_ace15_exact_native_params_and_deny_auto_download_sync_policy (tests.test_offline_six_preparation.OfflineSixTests.test_ace15_exact_native_params_and_deny_auto_download_sync_policy) ... ok
+test_video_families_have_different_native_controls (tests.test_no_gpu_staging.NoGPUStagingTests.test_video_families_have_different_native_controls) ... ok
+test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art (tests.test_no_gpu_staging.NoGPUStagingTests.test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.271s
+
+OK

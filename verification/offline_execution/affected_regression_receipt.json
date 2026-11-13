@@ -1,0 +1,24 @@
+{
+  "selected": [
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_motion_frame_binding_does_not_become_a_temporal_physics_critic",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_shared_native_wan_preparation_for_all_three_roles_is_not_acting_critic",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_ltx_exact_split_preparation_has_no_guessed_upsampler_or_executable_argv",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_ace15_exact_native_params_and_deny_auto_download_sync_policy",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_video_families_have_different_native_controls",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art"
+  ],
+  "tests": 7,
+  "errors": 0,
+  "failures": 0,
+  "gpu_used": false,
+  "model_inference": false,
+  "real_weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "authorized_processes": "fixed CPU fixture only; source-pinned native process launch blocked by test filter",
+  "requests_import_only_shim": true,
+  "http_transport_verified": false,
+  "model_class_calls": "injected fake classes only, no model libraries imported",
+  "scope": "software engineering only; no model intelligence/artistic acceptance"
+}
