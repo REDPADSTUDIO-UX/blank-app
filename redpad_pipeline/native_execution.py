@@ -21,6 +21,11 @@ TERMINAL={'CPU MOCK COMPLETE','RETURNED FOR TECHNICAL REVIEW','FAILED','CANCELLE
 def controller_fingerprint():
     return fingerprint({name:hashlib.sha256((Path(__file__).parent/name).read_bytes()).hexdigest() for name in ('native_execution.py','native_local_bundle.py')})
 
+def worker_log_targets(role,profile,stdout,stderr):
+    # Raw audio references/dialogue must stay in private input/evidence records,
+    # never upstream stdout or exception tracebacks. Safe typed errors remain.
+    return (subprocess.DEVNULL,subprocess.DEVNULL) if role=='casting' or profile in ('indic_parler','indic_speak','indicf5') else (stdout,stderr)
+
 
 def process_identity(pid):
     try:
@@ -215,7 +220,8 @@ class NativeExecution:
             if not fixture and devices:env['CUDA_VISIBLE_DEVICES']='0'
             if self._row(id)['cancel']:return self._finish(id,'CANCELLED',{'software_fixture':fixture,'error':'cancelled_before_launch'})
             with (folder/'stdout.txt').open('wb') as stdout,(folder/'stderr.txt').open('wb') as stderr:
-                process=subprocess.Popen(command,cwd=folder,env=env,stdout=stdout,stderr=stderr,start_new_session=True)
+                targets=(stdout,stderr) if fixture else worker_log_targets(stage['plan']['role'],prepared['profile'],stdout,stderr)
+                process=subprocess.Popen(command,cwd=folder,env=env,stdout=targets[0],stderr=targets[1],start_new_session=True)
                 ticks=process_identity(process.pid)
                 with self.store.tx() as db:db.execute('UPDATE native_research_runs SET pid=?,start_ticks=? WHERE id=?',(process.pid,ticks,id))
                 state=None

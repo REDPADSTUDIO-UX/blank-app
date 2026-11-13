@@ -1,0 +1,17 @@
+{
+  "selected": [
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference",
+    "tests.test_native_local_execution.NativeLocalTests.test_readiness_separates_engineering_from_gated_voice_source"
+  ],
+  "tests": 2,
+  "errors": 0,
+  "failures": 0,
+  "requests_import_only_shim": true,
+  "gpu": false,
+  "model_inference": false,
+  "weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "actual_human_voice_or_artistic_review": false,
+  "scope": "manual software fixtures and injected classes only; any process recheck is the existing fixed CPU dummy, not native model inference"
+}

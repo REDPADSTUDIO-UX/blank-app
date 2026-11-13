@@ -129,6 +129,8 @@ class Engine:
             if t['revision']!=run['expected_revision'] or t['state'] not in ('Assigned','Revision requested'):
                 raise AgentError('Task changed since enqueue.')
             try:
+                if t['agent']=='voice' and db.execute("SELECT 1 FROM sqlite_master WHERE name='casting_voice_drafts'").fetchone() and db.execute('SELECT 1 FROM casting_voice_drafts WHERE voice_task=?',(t['id'],)).fetchone():
+                    raise AgentError('Casting voice audition must use its exact prepared native worker; generic text/model execution is prohibited.')
                 sources,refs=self._sources(db,run)
                 self.store._current(db,dict(t,refs=encode(refs)))
                 inputs=self._bind(json.loads(run['inputs']),sources)

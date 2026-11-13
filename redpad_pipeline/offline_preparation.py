@@ -164,4 +164,13 @@ def readiness_updates(rows):
                     r['missing_official_interface']=[]
                 else:
                     r['missing_official_interface']=['Exact gated selected Indic-Speak implementation/speaker/component mapping and IndicF5 source unavailable without owner-authorized access/terms; surrounding runtime/rights engineering implemented.']
+                    from .voice_source_policy import binding_status
+                    r['voice_binding_status']={pid:binding_status(pid) for pid in ('indic_speak','indicf5','indic_parler')}
+                    r['voice_casting_evidence']='verification/voice_casting/'
+                    if role=='casting':
+                        r['engineering_status']='NO-GPU ENGINEERING COMPLETE'
+                        r['execution_binding_pending']=[]
+                        r['missing_official_interface']=[]
+                        r['blocked_dependency_policy']='Selected voice source unavailable: explicit abstention, no fallback; casting handoff/QC/Director/Producer workflow fully implemented.'
+                        r['runtime_validation_pending']=['Approved local voice/performance model files and exact source binding','Actual audition, voice compatibility and pair-performance evidence','Independent human, Director/QC review and explicit Producer identity lock']
     return rows

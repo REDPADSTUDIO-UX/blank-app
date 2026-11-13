@@ -163,7 +163,7 @@ def music_spec(spec,r):
 def bind_pins(store,pins):
     from .producer_references import References
     refs=References(store);bound=[]
-    extensions={'document':{'.txt','.pdf','.docx'},'image':{'.png','.jpg','.jpeg','.webp'},'audio':{'.wav','.mp3','.m4a'}}
+    extensions={'document':{'.txt','.pdf','.docx'},'image':{'.png','.jpg','.jpeg','.webp'},'audio':{'.wav','.mp3','.m4a'},'video':{'.mp4','.mov','.webm'}}
     for pin,kind in pins:
         ref(pin);row=refs.get(pin['id'])
         if row['version']!=pin['version'] or row['archived'] or row['extension'] not in extensions[kind] or not row['source'].strip():raise AgentError('Current sourced specialist evidence of correct type required.')

@@ -1,0 +1,9 @@
+test_casting_handoff_cannot_drop_approved_character_source (tests.test_voice_casting_integration.VoiceCastingTests.test_casting_handoff_cannot_drop_approved_character_source) ... ok
+test_persistent_idempotent_casting_handoff_uses_existing_store (tests.test_voice_casting_integration.VoiceCastingTests.test_persistent_idempotent_casting_handoff_uses_existing_store) ... ok
+test_explicit_parler_department_choice_stages_existing_worker_without_generation (tests.test_voice_casting_integration.VoiceCastingTests.test_explicit_parler_department_choice_stages_existing_worker_without_generation) ... ok
+test_readiness_casting_complete_with_explicit_voice_blocker_not_false_readiness (tests.test_voice_casting_integration.VoiceCastingTests.test_readiness_casting_complete_with_explicit_voice_blocker_not_false_readiness) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.473s
+
+OK

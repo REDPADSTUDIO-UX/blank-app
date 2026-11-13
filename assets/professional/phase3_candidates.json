@@ -1941,7 +1941,8 @@
         "runtime_verified": false,
         "production_ready": false,
         "offline_preparation_evidence": "verification/offline_6/",
-        "native_execution_evidence": "verification/offline_execution/"
+        "native_execution_evidence": "verification/offline_execution/",
+        "voice_casting_evidence": "verification/voice_casting/"
       }
     },
     "continuity": {
@@ -2105,11 +2106,12 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
         "production_ready": false,
         "offline_preparation_evidence": "verification/offline_6/",
-        "native_execution_evidence": "verification/offline_execution/"
+        "native_execution_evidence": "verification/offline_execution/",
+        "voice_casting_evidence": "verification/voice_casting/"
       }
     }
   },

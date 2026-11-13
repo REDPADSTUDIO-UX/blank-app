@@ -953,12 +953,57 @@
         "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
         "native_source_revisions": {},
         "offline_preparation_evidence": "verification/offline_6/",
-        "native_execution_evidence": "verification/offline_execution/"
+        "native_execution_evidence": "verification/offline_execution/",
+        "voice_binding_status": {
+          "indic_speak": {
+            "profile": "indic_speak",
+            "adapter_implemented": true,
+            "source_blocked": true,
+            "adapter_scope": "public engine only, not a verified selected checkpoint binding",
+            "selected_binding_implemented": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Public engine names the same repository; exact selected token/speaker/decoder contract remains gated. No inference.py or preview-v2 equivalence assumed.",
+            "missing_source": [
+              "inference.py",
+              "token_contract.md",
+              "voices.md",
+              "config.json",
+              "tokenizer_config.json",
+              "vocos matching decoder/config source"
+            ]
+          },
+          "indicf5": {
+            "profile": "indicf5",
+            "adapter_implemented": false,
+            "source_blocked": true,
+            "adapter_scope": "exact gated loader disabled",
+            "selected_binding_implemented": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Public README delegates initialization to gated custom model.py; generic public Gradio defaults to a different SWivid checkpoint, which must not be substituted.",
+            "missing_source": [
+              "model.py",
+              "config.json",
+              "checkpoints/vocab.txt",
+              "matching f5_tts package source"
+            ]
+          },
+          "indic_parler": {
+            "profile": "indic_parler",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "runtime_verified": false,
+            "fallback": null
+          }
+        },
+        "voice_casting_evidence": "verification/voice_casting/"
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
       "offline_preparation_evidence": "verification/offline_6/",
-      "native_execution_evidence": "verification/offline_execution/"
+      "native_execution_evidence": "verification/offline_execution/",
+      "voice_casting_evidence": "verification/voice_casting/"
     },
     {
       "agent": "continuity",
@@ -1470,7 +1515,7 @@
         "casting_assessment"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "text": [
@@ -1490,10 +1535,7 @@
         "unsupported_required_operations": [
           "video_inspection"
         ],
-        "execution_binding_pending": [
-          "wan_animate2",
-          "indic_speak"
-        ],
+        "execution_binding_pending": [],
         "deterministic_operations": [
           "casting_assessment",
           "casting_evidence",
@@ -1506,20 +1548,69 @@
         "vision_dependency_note": null,
         "offline_native_preparation": "implemented; no runtime launch",
         "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
-        "missing_official_interface": [
-          "Exact gated selected Indic-Speak implementation/speaker/component mapping and IndicF5 source unavailable without owner-authorized access/terms; surrounding runtime/rights engineering implemented."
-        ],
+        "missing_official_interface": [],
         "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
         "native_source_revisions": {
           "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
         },
         "offline_preparation_evidence": "verification/offline_6/",
-        "native_execution_evidence": "verification/offline_execution/"
+        "native_execution_evidence": "verification/offline_execution/",
+        "voice_binding_status": {
+          "indic_speak": {
+            "profile": "indic_speak",
+            "adapter_implemented": true,
+            "source_blocked": true,
+            "adapter_scope": "public engine only, not a verified selected checkpoint binding",
+            "selected_binding_implemented": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Public engine names the same repository; exact selected token/speaker/decoder contract remains gated. No inference.py or preview-v2 equivalence assumed.",
+            "missing_source": [
+              "inference.py",
+              "token_contract.md",
+              "voices.md",
+              "config.json",
+              "tokenizer_config.json",
+              "vocos matching decoder/config source"
+            ]
+          },
+          "indicf5": {
+            "profile": "indicf5",
+            "adapter_implemented": false,
+            "source_blocked": true,
+            "adapter_scope": "exact gated loader disabled",
+            "selected_binding_implemented": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Public README delegates initialization to gated custom model.py; generic public Gradio defaults to a different SWivid checkpoint, which must not be substituted.",
+            "missing_source": [
+              "model.py",
+              "config.json",
+              "checkpoints/vocab.txt",
+              "matching f5_tts package source"
+            ]
+          },
+          "indic_parler": {
+            "profile": "indic_parler",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "runtime_verified": false,
+            "fallback": null
+          }
+        },
+        "voice_casting_evidence": "verification/voice_casting/",
+        "blocked_dependency_policy": "Selected voice source unavailable: explicit abstention, no fallback; casting handoff/QC/Director/Producer workflow fully implemented.",
+        "runtime_validation_pending": [
+          "Approved local voice/performance model files and exact source binding",
+          "Actual audition, voice compatibility and pair-performance evidence",
+          "Independent human, Director/QC review and explicit Producer identity lock"
+        ]
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
       "offline_preparation_evidence": "verification/offline_6/",
-      "native_execution_evidence": "verification/offline_execution/"
+      "native_execution_evidence": "verification/offline_execution/",
+      "voice_casting_evidence": "verification/voice_casting/"
     }
   ],
   "no_gpu_engineering_ledger_version": "cpu-contract-validation-v1",
@@ -1548,5 +1639,6 @@
   ],
   "offline_11_engineering_revision": "offline-first-preparation-v1",
   "offline_6_engineering_revision": "native-source-preparation-v1",
-  "native_local_execution_revision": "source-pinned-offline-workers-v1"
+  "native_local_execution_revision": "source-pinned-offline-workers-v1",
+  "voice_casting_engineering_revision": "scoped-voice-handoff-v1"
 }

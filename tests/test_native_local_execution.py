@@ -278,12 +278,12 @@ class NativeLocalTests(unittest.TestCase):
         self.assertEqual(a,b);self.assertEqual(runtime.status(a)['state'],'QUEUED')
         with self.assertRaises(AgentError):runtime.run(a)
 
-    def test_readiness_separates_seventeen_engineered_agents_from_two_gated_sources(self):
+    def test_readiness_separates_engineering_from_gated_voice_source(self):
         from redpad_pipeline.no_gpu_staging import readiness
-        rows=readiness();self.assertEqual(sum(r['engineering_status']=='NO-GPU ENGINEERING COMPLETE' for r in rows.values()),17)
+        rows=readiness();self.assertEqual(sum(r['engineering_status']=='NO-GPU ENGINEERING COMPLETE' for r in rows.values()),18)
         for role in ('performance','motion','video','music'):
             self.assertFalse(rows[role]['runtime_verified']);self.assertFalse(rows[role]['production_ready'])
-        for role in ('voice','casting'):self.assertEqual(rows[role]['engineering_status'],'PARTIAL')
+        self.assertEqual(rows['voice']['engineering_status'],'PARTIAL');self.assertEqual(rows['casting']['engineering_status'],'NO-GPU ENGINEERING COMPLETE')
 
     def test_cancellation_will_not_signal_an_unrelated_or_reused_pid(self):
         from redpad_pipeline.native_execution import cancel_owned_process

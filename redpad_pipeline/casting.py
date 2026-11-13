@@ -32,6 +32,12 @@ class Casting:
           CREATE TABLE IF NOT EXISTS casting_consumers(task TEXT,character TEXT,lock_id TEXT,PRIMARY KEY(task,character));
           CREATE TABLE IF NOT EXISTS casting_evaluations(id TEXT PRIMARY KEY,task TEXT,revision INTEGER,payload TEXT,created TEXT DEFAULT CURRENT_TIMESTAMP);
         ''')
+        with self.store.tx() as db:
+            if 'voice_sha' not in {r[1] for r in db.execute('PRAGMA table_info(casting_inspections)')}:
+                db.execute('ALTER TABLE casting_inspections ADD COLUMN voice_sha TEXT')
+    def voice_workflow(self):
+        from .casting_voice import CastingVoice
+        return CastingVoice(self)
     def proposal(self,task,db=None):
         if db is None:
             with self.store.tx() as tx:return self.proposal(task,tx)
@@ -39,17 +45,21 @@ class Casting:
         if t['agent']!='casting' or not t['revision'] or t['state'] not in ('Awaiting QC','QC recommended','Approved'):raise AgentError('Current casting proposal required.')
         self.store._current(db,t)
         row=db.execute('SELECT payload FROM outputs WHERE task=? AND revision=?',(task,t['revision'])).fetchone()
+        if not row:raise AgentError('Casting proposal output missing for the current revision.')
         body=json.loads(json.loads(row[0])['summary'])
         if body.get('artifact',{}).get('department')!='casting':raise AgentError('Casting specialist proposal required.')
         return t,body
     def queue_review(self,task):
         t,body=self.proposal(task)
+        voice_packets=self.voice_workflow().packets(task)
+        from .casting_voice import packet_fingerprint
+        with self.store.tx() as db:voice_sha=packet_fingerprint(db,task)
         # Inspection is read-only, pinned independently; never promotes pending material to approved dependencies.
         rid=self.p.engine.enqueue('director',{'producer_director_v1':True,'message':'Review casting fit against the approved brief. Cite candidate IDs; visual appearance does not prove acting, voice or chemistry. No approvals.',
-           'context':{'casting_proposal':body},'reply':None},[],mode='local',idempotency_key='casting-review:'+task+':'+str(t['revision']))
+           'context':{'casting_proposal':body,'voice_auditions':voice_packets},'reply':None},[],mode='local',idempotency_key='casting-review:'+task+':'+str(t['revision'])+(':'+voice_sha if voice_packets else ''))
         review=next(r['task'] for r in self.p.engine.runs() if r['id']==rid)
         with self.store.tx() as db:
-            db.execute('INSERT OR IGNORE INTO casting_inspections VALUES (?,?,?)',(review,task,t['revision']))
+            db.execute('INSERT OR IGNORE INTO casting_inspections(task,source,revision,voice_sha) VALUES (?,?,?,?)',(review,task,t['revision'],voice_sha))
         return rid
     def evaluate(self,task,criterion,refs,observation,reviewer):
         t,_=self.proposal(task)
@@ -117,11 +127,17 @@ class Casting:
 
 def check_casting(db,store,t):
     if not db.execute("SELECT 1 FROM sqlite_master WHERE name='casting_inspections'").fetchone():return
+    from .casting_voice import check_voice_handoff,packet_fingerprint
+    from .no_gpu_staging import fingerprint
+    check_voice_handoff(db,store,t)
     pin=db.execute('SELECT * FROM casting_inspections WHERE task=?',(t['id'],)).fetchone()
     if pin:
         source=store._task(db,pin['source'])
         if source['revision']!=pin['revision'] or source['state'] not in ('Awaiting QC','QC recommended','Approved'):raise AgentError('Casting inspection source changed.')
         store._current(db,source)
+        current_voice=packet_fingerprint(db,pin['source'],store)
+        if (pin['voice_sha'] is not None and current_voice!=pin['voice_sha']) or (pin['voice_sha'] is None and current_voice!=fingerprint([])):
+            raise AgentError('Casting voice handoff changed after Director inspection; review the current packet.')
     for c in db.execute('SELECT p.lock_id,c.lock_id FROM casting_consumers p LEFT JOIN casting_current c ON c.character=p.character WHERE p.task=?',(t['id'],)):
         if c[0]!=c[1]:raise AgentError('Recasting invalidated dependent work.')
     for ref in json.loads(t['refs']):

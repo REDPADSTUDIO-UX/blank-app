@@ -1,0 +1,38 @@
+{
+  "chrome_extension_connected": true,
+  "model_access_granted": false,
+  "source_or_weights_access_agreements_accepted": false,
+  "weights_requested": false,
+  "files_list_preview_only": true,
+  "observation": "Chrome displayed repository-specific Agree and access repository gates for both exact selected revisions; no form entry, agreement or access-control bypass.",
+  "profiles": {
+    "indic_speak": {
+      "repo": "bodhan-ai/indic-speak",
+      "revision": "76e0814f189321efe550011850cd288dae366aad",
+      "visible_gated_files": [
+        "inference.py",
+        "token_contract.md",
+        "voices.md",
+        "config.json",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocos/"
+      ],
+      "minimum_owner_action": "Owner reviews the license, provides Organization/Country/Intended Use, and personally agrees/requests repository access. HF shares email and username with publisher. Code/config review only first; no weight download authorized."
+    },
+    "indicf5": {
+      "repo": "ai4bharat/IndicF5",
+      "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+      "visible_gated_files": [
+        "model.py",
+        "config.json",
+        "checkpoints/",
+        "f5_tts/"
+      ],
+      "minimum_owner_action": "Owner personally reviews and agrees to repository access/contact-information sharing; then exact model.py/config and matching f5_tts/vocabulary source can be reviewed. No weight download authorized."
+    }
+  },
+  "no_private_account_identifiers_saved": true,
+  "public_source_distinction": "Bodhan public native engine is available, but cannot establish exact selected voices/token contract equivalence. Public IndicF5 README still delegates to gated model.py; generic Gradio defaults are a different checkpoint and are not used."
+}
