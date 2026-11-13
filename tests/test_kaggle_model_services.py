@@ -25,9 +25,13 @@ class KaggleServices(unittest.TestCase):
  def test_exact_21_agents_18_pinned_candidates_no_winners(self):
   c=catalog();self.assertEqual(set(c['agents']),set(AGENTS));self.assertEqual(len(c['profiles']),18)
   for role,r in c['agents'].items():
-   self.assertIsNone(r['validated_selection']);self.assertEqual(r['status'],'Blocked — With Exact Reason');self.assertEqual(r['research_status'],'Research Shortlisted')
+   self.assertIsNone(r['validated_selection']);self.assertEqual(r['status'],'IN PROGRESS' if role=='director' else 'Blocked — With Exact Reason');self.assertEqual(r['research_status'],'Research Shortlisted')
    self.assertIn(r['primary_candidate'],c['profiles'])
   for p in c['profiles'].values():self.assertEqual(len(p['revision']),40);self.assertFalse(p['download_approved']);self.assertFalse(p['inference_verified'])
+  variants=c['evaluation_variants']
+  self.assertEqual(variants['qwen35_9_approved_gguf']['base_profile'],'qwen35_9')
+  self.assertIsNone(variants['gemma3_12_hosted_exploratory']['exact_weight_revision'])
+  self.assertTrue(all(not v['production_approved'] for v in variants.values()))
  def test_distinct_candidate_versions_are_never_silently_aliased(self):
   self.assertEqual(profile('ltx25')['repo'],'Lightricks/LTX-2.5');self.assertEqual(profile('ltx25')['adapter'],'contract_only')
   self.assertEqual(profile('wan_animate2')['repo'],'Wan-AI/Wan2.2-Animate-2-14B')

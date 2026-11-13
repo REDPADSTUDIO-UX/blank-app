@@ -60,4 +60,41 @@ class DirectorTests(unittest.TestCase):
         with self.assertRaises(AgentError):self.d.create('brief',30,complete=lambda *_:{})
         self.assertEqual(self.d.plans(),[])
 
+    def test_targeted_revision_preserves_owner_locked_content_after_restart(self):
+        pid=self.d.create('brief',30,manual=fixture())
+        self.d.review(pid,'Request revision','camera only','owner',allowed_changes=['/scenes/0/camera'])
+        self.d=Director(AgentStore(self.s.path))
+        changed=fixture();changed['scenes'][0]['camera']='হাতে ধরা ক্লোজ শট'
+        bad=copy.deepcopy(changed);bad['scenes'][0]['continuity']='লাল শার্ট; দরজা খোলা'
+        with self.assertRaises(AgentError):self.d.create('brief',30,manual=bad,revision_of=pid)
+        self.assertEqual(len(self.d.plans()),1)
+        newer=self.d.create('brief',30,manual=changed,revision_of=pid)
+        self.assertEqual(self.d.plans()[0]['state'],'Awaiting QC')
+        with self.assertRaises(AgentError):self.d.dispatch(newer)
+
+    def test_revision_scope_cannot_change_scene_identity_or_expand_itself(self):
+        pid=self.d.create('brief',30,manual=fixture())
+        for paths in ([],['/scenes'],['/scenes/0/id'],['/scenes/9/camera'],['/vision','/vision']):
+            with self.assertRaises(AgentError):
+                self.d.review(pid,'Request revision','scope','owner',allowed_changes=paths)
+        self.d.review(pid,'Request revision','camera only','owner',allowed_changes=['/scenes/0/camera'])
+        changed=fixture();changed['scenes'][0]['id']='replacement'
+        changed['assignments'][0]['scene_ids']=['replacement']
+        with self.assertRaises(AgentError):self.d.create('brief',30,manual=changed,revision_of=pid)
+
+    def test_only_owner_can_set_explicit_revision_scope(self):
+        pid=self.d.create('brief',30,manual=fixture())
+        with self.assertRaises(AgentError):
+            self.d.review(pid,'Reject','scope','qc',allowed_changes=['/vision'])
+
+    def test_revision_rechecks_latest_owner_scope_before_saving(self):
+        pid=self.d.create('brief',30,manual=fixture())
+        self.d.review(pid,'Request revision','camera','owner',allowed_changes=['/scenes/0/camera'])
+        def changed_during_inference(*_):
+            self.d.review(pid,'Request revision','sound instead','owner',allowed_changes=['/scenes/0/sound'])
+            plan=fixture();plan['scenes'][0]['camera']='নতুন ক্লোজ শট';return plan
+        with self.assertRaises(AgentError):
+            self.d.create('brief',30,complete=changed_during_inference,revision_of=pid)
+        self.assertEqual(len(self.d.plans()),1)
+
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-13",
+  "chrome_extension": "connected and controlled successfully before later MCP request timeouts",
+  "colab": {
+    "url": "https://colab.research.google.com/drive/150YpQztfxOZY9q8hX4ixCOEJqX8RDeev",
+    "action": "one reconnect after observed disconnection",
+    "observed_alert": "Cannot connect to GPU backend",
+    "observed_reason": "You cannot currently connect to a GPU due to usage limits in Colab.",
+    "subscription": "not subscribed",
+    "compute_units": 0,
+    "current_gpu": null,
+    "current_model_cache": "not inspectable without a connected runtime",
+    "paid_option_clicked": false
+  },
+  "hugging_face": {
+    "new_preserved_model_responses": 2,
+    "director_plan": {
+      "json_form_attempt": "rejected Invalid file type: text/plain; not a model generation",
+      "sequential_input": "selector deadline exceeded; observed partial text and attached file",
+      "plain_text_recovery": "input operation MCP timed out; subsequent DOM observation MCP timed out; no submit step issued in this recovery",
+      "actual_model_response": null,
+      "resume": "inspect current page/input once connectivity is restored before retry; do not count unknown UI action as inference"
+    },
+    "connection_end": "two MCP request timeouts; no further retries"
+  },
+  "other_providers": {
+    "lightning": "known regional restriction not retried",
+    "kaggle": "prior verification blocker not retried; current access not reassessed"
+  },
+  "new_model_downloads": 0,
+  "paid_services_used": false
+}

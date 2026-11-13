@@ -1,5 +1,5 @@
 {
-  "version": "21-agent-kaggle-research-2026-11-12.1",
+  "version": "21-agent-director-evidence-2026-11-13.1",
   "profiles": {
     "qwen35_27": {
       "id": "qwen35_27",
@@ -1628,12 +1628,13 @@
         "image"
       ],
       "required_capability": "Creative direction, grounded diagnosis, specialist delegation and independent visual review",
-      "status": "Blocked — With Exact Reason",
+      "status": "IN PROGRESS",
       "validated_selection": null,
-      "human_review": "Not conducted",
+      "human_review": "Owner A-over-B preference recorded; neither accepted; independent specialist review pending",
       "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
-      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
-      "research_status": "Research Shortlisted"
+      "blocker": "Current Colab GPU usage limit; hosted exploratory controls do not satisfy exact model identity, protocol, professional sample count or actual-shot review gates.",
+      "research_status": "Research Shortlisted",
+      "latest_evidence": "verification/director_first_20261113/results.json"
     },
     "qc": {
       "primary_candidate": "qwen35_27",
@@ -1982,5 +1983,28 @@
     }
   },
   "production_routes_changed": false,
-  "winner_selected": false
+  "winner_selected": false,
+  "evaluation_variants": {
+    "qwen35_9_approved_gguf": {
+      "base_profile": "qwen35_9",
+      "repo": "unsloth/Qwen3.5-9B-GGUF",
+      "revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+      "file": "Qwen3.5-9B-Q4_K_M.gguf",
+      "bytes": 5680522464,
+      "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+      "evidence": "verification/approved_gpu_writing/qwen_test_summary.json",
+      "production_approved": false,
+      "scope": "Approved GGUF actually tested on prior free Colab T4; not the BF16/NF4 base profile installation."
+    },
+    "gemma3_12_hosted_exploratory": {
+      "base_profile": "gemma3_12",
+      "source": "https://huggingface.co/spaces/huggingface-projects/gemma-3-12b-it",
+      "reported_model": "google/gemma-3-12b-it",
+      "exact_weight_revision": null,
+      "evidence": "verification/director_first_20261113/results.json",
+      "owner_feedback": "verification/director_first_20261113/owner_feedback.json",
+      "production_approved": false,
+      "scope": "Hosted demo evidence only; not pinned local model verification, license acceptance, approved download or model ranking."
+    }
+  }
 }

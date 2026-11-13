@@ -61,6 +61,24 @@ def validate(plan, seconds):
     return plan
 
 
+def revision_fields(plan):
+    """Stable JSON-pointer leaves; scene identity/order are never revision targets."""
+    fields={f'/{k}':plan[k] for k in ('vision','tone','assignments','risks')}
+    for i,scene in enumerate(plan['scenes']):
+        fields.update({f'/scenes/{i}/{k}':v for k,v in scene.items() if k!='id'})
+    return fields
+
+
+def check_revision(previous, plan, review):
+    if [s['id'] for s in previous['scenes']] != [s['id'] for s in plan['scenes']]:
+        raise AgentError('Revision must preserve scene IDs and order.')
+    allowed=review.get('allowed_changes')
+    if allowed is not None:
+        old=revision_fields(previous);new=revision_fields(plan)
+        if set(old)!=set(new) or any(old[p]!=new[p] for p in old if p not in allowed):
+            raise AgentError('Revision changed owner-locked content outside the allowed fields.')
+
+
 class Director:
     def __init__(self, store):
         self.store=store
@@ -106,25 +124,34 @@ class Director:
         with self.store.tx() as db:
             db.execute('BEGIN IMMEDIATE')
             if revision_of:
-                previous=db.execute('SELECT state FROM director_plans WHERE id=?',(revision_of,)).fetchone()
-                if not previous or previous[0]!='Revision requested': raise AgentError('Request a targeted revision first.')
+                previous=db.execute('SELECT state,plan FROM director_plans WHERE id=?',(revision_of,)).fetchone()
+                if not previous or previous['state']!='Revision requested': raise AgentError('Request a targeted revision first.')
+                # Re-read authoritative constraints in the write transaction, not model output.
+                notes=db.execute("SELECT detail FROM events WHERE task=? AND action IN ('director_Reject','director_Request revision') ORDER BY id DESC LIMIT 1",(revision_of,)).fetchone()
+                check_revision(json.loads(previous['plan']),plan,json.loads(notes[0]) if notes else {})
             db.execute('INSERT INTO director_plans VALUES (?,?,?,?,?,?,?,?,?)',
                 (pid,brief,seconds,encode(plan),provenance,model,hashlib.sha256(prompt.encode()).hexdigest(),'Awaiting QC',revision_of))
             self.store.event(db,pid,'director','director_plan',{'provenance':provenance,'revision_of':revision_of})
         return pid
-    def review(self,pid,decision,evidence,actor):
+    def review(self,pid,decision,evidence,actor,*,allowed_changes=None):
         if not nonempty(evidence): raise AgentError('Review evidence required.')
         role={'Recommend':'qc','Reject':'qc','Approve':'owner','Request revision':'owner'}
         if decision not in role or actor!=role[decision]: raise AgentError('Director cannot review or approve its own plan.')
         with self.store.tx() as db:
             db.execute('BEGIN IMMEDIATE')
-            row=db.execute('SELECT state FROM director_plans WHERE id=?',(pid,)).fetchone()
+            row=db.execute('SELECT state,plan FROM director_plans WHERE id=?',(pid,)).fetchone()
             if not row: raise AgentError('Unknown plan.')
+            if allowed_changes is not None:
+                fields=revision_fields(json.loads(row['plan']))
+                if decision!='Request revision' or actor!='owner' or not isinstance(allowed_changes,list) or not allowed_changes or any(not isinstance(p,str) or p not in fields for p in allowed_changes) or len(set(allowed_changes))!=len(allowed_changes):
+                    raise AgentError('Only owner revision requests can specify unique existing editable fields.')
             if decision in ('Recommend','Reject') and row[0]!='Awaiting QC': raise AgentError('Plan is not awaiting QC.')
             if decision=='Approve' and row[0]!='QC recommended': raise AgentError('Independent QC recommendation required.')
             state={'Recommend':'QC recommended','Reject':'Revision requested','Approve':'Approved','Request revision':'Revision requested'}[decision]
             db.execute('UPDATE director_plans SET state=? WHERE id=?',(state,pid))
-            self.store.event(db,pid,actor,'director_'+decision,{'evidence':evidence})
+            detail={'evidence':evidence}
+            if allowed_changes is not None:detail['allowed_changes']=allowed_changes
+            self.store.event(db,pid,actor,'director_'+decision,detail)
     def dispatch(self,pid):
         # Atomic idempotency: a retry never duplicates tasks or starts inference.
         with self.store.tx() as db:

@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-13",
+  "resumed_checkpoint": "7f665cbbb819a5cb62750d62740160fffed25eea",
+  "reported_model": "google/gemma-3-12b-it",
+  "source": "https://huggingface.co/spaces/huggingface-projects/gemma-3-12b-it",
+  "exact_weights_revision": null,
+  "serving_code_revision_today": null,
+  "classification": "exploratory_hosted_UI_outputs_not_verified_local_inference",
+  "hypothesis": "Owner preferred A to B; test whether hosted Gemma abstains on the clean control that Qwen falsely criticized, without assuming overall superiority.",
+  "calls_with_preserved_new_responses": 2,
+  "settings": {
+    "system_and_user": "per-case request JSON",
+    "displayed_token_input": 1024,
+    "displayed_slider": 1020,
+    "effective_token_cap": null,
+    "temperature": null,
+    "seed": null,
+    "context": null
+  },
+  "hardware": {
+    "gpu": null,
+    "ram": null,
+    "peak_memory": null
+  },
+  "latency_seconds": null,
+  "runtime_limitations": "No server metrics exposed; do not invent inference latency from operator wall time.",
+  "controls": [
+    {
+      "case": "clean_abstention",
+      "raw_sha256": "c417f8f878bb4cf9bbdff39504da433a3b9e1bff7123d67751eaa47549a355f8",
+      "strict_protocol_validation": {
+        "json_valid": false,
+        "technical_pass": false,
+        "generation_complete": false,
+        "quote_findings": [],
+        "artistic_scores": null,
+        "human_review": "pending",
+        "professional_accepted": false
+      },
+      "derived_content_validation": {
+        "json_valid": true,
+        "technical_pass": false,
+        "generation_complete": false,
+        "quote_findings": [],
+        "artistic_scores": null,
+        "human_review": "pending",
+        "professional_accepted": false,
+        "contract_fields_valid": true,
+        "contract_field_types_valid": true,
+        "critic_control_pass": true,
+        "true_positive_defects": 0,
+        "false_positive_findings": 0,
+        "missed_expected_defects": 0,
+        "unsupported_quotes": 0
+      },
+      "raw_copy_method": "final assistant Copy message button in existing Chrome Space",
+      "ui_response_completed": true,
+      "finish_reason": null,
+      "truncation": "unknown",
+      "artistic_acceptance": false,
+      "independent_human_review": "pending"
+    },
+    {
+      "case": "director_criticism",
+      "raw_sha256": "b7074065d7f33bf03caca6a86085d338cbe53a33a908e6db861a787227da6645",
+      "strict_protocol_validation": {
+        "json_valid": false,
+        "technical_pass": false,
+        "generation_complete": false,
+        "quote_findings": [],
+        "artistic_scores": null,
+        "human_review": "pending",
+        "professional_accepted": false
+      },
+      "derived_content_validation": {
+        "json_valid": true,
+        "technical_pass": false,
+        "generation_complete": false,
+        "quote_findings": [
+          {
+            "code": "prop_state",
+            "quote": "সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন।",
+            "observation": "প্রথম দৃশ্যে নীল ব্যাগটি আলমারিতে তালাবদ্ধ ছিল এবং সালমা চাবি নিয়েছেন। কিন্তু পরবর্তী দৃশ্যে রুবার হাতে ব্যাগটি দেখা যাচ্ছে, যেখানে ব্যাগের তালা থাকার কথা নয়।",
+            "category": "continuity",
+            "decision": "revise"
+          }
+        ],
+        "artistic_scores": null,
+        "human_review": "pending",
+        "professional_accepted": false,
+        "contract_fields_valid": true,
+        "contract_field_types_valid": true,
+        "critic_control_pass": false,
+        "true_positive_defects": 0,
+        "false_positive_findings": 0,
+        "missed_expected_defects": 1,
+        "unsupported_quotes": 0
+      },
+      "raw_copy_method": "final assistant Copy message button in existing Chrome Space",
+      "ui_response_completed": true,
+      "finish_reason": null,
+      "truncation": "unknown",
+      "artistic_acceptance": false,
+      "independent_human_review": "pending"
+    }
+  ],
+  "selected_production_model": null,
+  "professional_ready": false,
+  "finding": "Gemma clean control abstains correctly after fence stripping. Defect control quotes the source and identifies the bag access contradiction, but returns category continuity instead of required contract; wording also confuses the cupboard lock with the bag. Both raw responses violate JSON-only protocol. No overall technical or artistic acceptance."
+}
