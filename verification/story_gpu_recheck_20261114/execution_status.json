@@ -1,0 +1,94 @@
+{
+  "baseline": "9a2304e3b60f8198364d4b02f7b9bdfcc45d0acc",
+  "registered_story": {
+    "primary_candidate": "qwen35_27",
+    "secondary_candidates": [
+      "gemma3_27",
+      "gemma3_12"
+    ],
+    "required_modalities": [
+      "text"
+    ],
+    "required_capability": "Causal episodic story, character arcs, Bengali emotional narrative",
+    "status": "Blocked — With Exact Reason",
+    "validated_selection": null,
+    "human_review": "Not conducted",
+    "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+    "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+    "research_status": "Research Shortlisted",
+    "no_gpu_staging": {
+      "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "runtime_verified": false,
+      "production_ready": false
+    }
+  },
+  "profiles": [
+    {
+      "profile": "qwen35_27",
+      "repo": "Qwen/Qwen3.5-27B",
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "source": "https://huggingface.co/Qwen/Qwen3.5-27B",
+      "adapter": "hf_text_nf4",
+      "selected_weight_bytes": 55563022432,
+      "planning_gpu_gib": 24,
+      "planning_ram_gib": 32,
+      "planning_estimates_are_verified_minimum": false,
+      "exact_bundle_and_license_receipt_verified": false,
+      "runtime_fit_verified": false,
+      "ran": false
+    },
+    {
+      "profile": "gemma3_27",
+      "repo": "google/gemma-3-27b-it",
+      "revision": "005ad3404e59d6023443cb575daa05336842228a",
+      "source": "https://huggingface.co/google/gemma-3-27b-it",
+      "adapter": "hf_text_nf4",
+      "selected_weight_bytes": 54864980440,
+      "planning_gpu_gib": 24,
+      "planning_ram_gib": 48,
+      "planning_estimates_are_verified_minimum": false,
+      "exact_bundle_and_license_receipt_verified": false,
+      "runtime_fit_verified": false,
+      "ran": false
+    },
+    {
+      "profile": "gemma3_12",
+      "repo": "google/gemma-3-12b-it",
+      "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "source": "https://huggingface.co/google/gemma-3-12b-it",
+      "adapter": "hf_text_nf4",
+      "selected_weight_bytes": 24374793024,
+      "planning_gpu_gib": 16,
+      "planning_ram_gib": 24,
+      "planning_estimates_are_verified_minimum": false,
+      "exact_bundle_and_license_receipt_verified": false,
+      "runtime_fit_verified": false,
+      "ran": false
+    }
+  ],
+  "actual_model": null,
+  "qwen35_27_ran": false,
+  "fallback_used": false,
+  "weights_downloaded": false,
+  "license_accepted": false,
+  "model_calls": 0,
+  "max_authorized_calls_including_failures": 7,
+  "canary": null,
+  "complete_story": null,
+  "creative_qc": null,
+  "targeted_revision": null,
+  "human_review_package": null,
+  "independent_human_review": "PENDING — no new candidate",
+  "owner_acceptance": "PENDING — no new candidate",
+  "generation_elapsed_seconds": null,
+  "input_tokens": null,
+  "output_tokens": null,
+  "peak_gpu_memory_bytes": null,
+  "standalone_benchmark_succeeded": false,
+  "pipeline_integration_succeeded": false,
+  "production_ready": false,
+  "additional_pipeline_blocker": "story_quality.require_runtime remains an unconditional block pending scoped isolated-worker binding. General shared worker must not bypass it. Exact manifest/rights receipts and tokenizer/resource compatibility remain unverified.",
+  "next_owner_action": "When available, sign in to Colab in shared Cloud Desktop using Take over, then Return control. No paid plan. Resume with actual free allocation/quota/GPU/RAM/disk verification before selecting registered eligible exact bundle.",
+  "resume_budget": "Reuse existing canary and five bounded sections; at most one targeted revision within seven total calls including failures. No engineering rerun, blind retries or invented output."
+}

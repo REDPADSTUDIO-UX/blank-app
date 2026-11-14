@@ -1,0 +1,40 @@
+[
+  {
+    "provider": "Colab",
+    "url": "https://colab.research.google.com/",
+    "timestamp_utc": "2026-11-14T08:45:45.001081+00:00",
+    "http_status": 200,
+    "final_url": "https://colab.research.google.com/",
+    "bytes_read": 65536,
+    "reachable": true,
+    "elapsed_seconds": 0.249
+  },
+  {
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/code",
+    "timestamp_utc": "2026-11-14T08:45:45.249794+00:00",
+    "http_status": 200,
+    "final_url": "https://www.kaggle.com/code",
+    "bytes_read": 5754,
+    "reachable": true,
+    "elapsed_seconds": 0.325
+  },
+  {
+    "provider": "Lightning",
+    "url": "https://lightning.ai/",
+    "timestamp_utc": "2026-11-14T08:45:45.575218+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "reachable": false,
+    "elapsed_seconds": 0.117
+  },
+  {
+    "provider": "Hugging Face",
+    "url": "https://huggingface.co/",
+    "timestamp_utc": "2026-11-14T08:45:45.692359+00:00",
+    "http_status": 200,
+    "final_url": "https://huggingface.co/",
+    "bytes_read": 65536,
+    "reachable": true,
+    "elapsed_seconds": 0.146
+  }
+]
