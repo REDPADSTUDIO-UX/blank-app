@@ -122,11 +122,15 @@ def validate_facts(facts,sources):
     return copy.deepcopy(facts)
 
 
-def assess(role,source,findings,*,creator,reviewer,receipts,provenance):
+def assess(role,source,findings,*,creator,reviewer,receipts,provenance,benchmark_id=None):
     """Validate a supplied independent review, never generate artistic scores.
     Receipts must come from a trusted human-review interface, not model output.
     """
     p=profile(role)
+    if benchmark_id is not None:
+        if role!='story' or benchmark_id!='intelligence.story.v1':raise AgentError('Unknown specialist review benchmark.')
+        from .story_quality import spec as story_spec
+        p['criteria']=story_spec()['rubric']
     if not nonempty(creator) or not nonempty(reviewer) or creator==reviewer:raise AgentError('Independent identified reviewer required.')
     if provenance not in ('manually_authored_fixture','real_model_output'):raise AgentError('Explicit output provenance required.')
     if not isinstance(findings,list) or not isinstance(receipts,list):raise AgentError('Review lists required.')
@@ -145,6 +149,10 @@ def assess(role,source,findings,*,creator,reviewer,receipts,provenance):
         observed=any(isinstance(r,dict) and r.get('reviewer')==reviewer and r.get('source_sha256')==current and r.get('medium')==f['medium'] and r.get('target')==f['target'] and r.get('inspected') is True and nonempty(r.get('reference')) for r in receipts)
         if f['medium']=='text':observed=observed and nonempty(f['evidence']) and f['evidence'] in encode(source)
         elif not nonempty(f['evidence']):observed=False
+        if benchmark_id=='intelligence.story.v1':
+            target=next((b for b in source.get('beats',[]) if b.get('id')==f['target']),None)
+            if target is None:raise AgentError('Story review must cite an actual beat ID.')
+            observed=observed and nonempty(f['evidence']) and f['evidence'] in encode(target)
         if not observed and f['score'] is not None:raise AgentError('Cannot score uninspected or unsupported evidence.')
         accepted.append(dict(f,status='supported' if observed else 'abstain',grants_revision_authority=False))
     covered={f['criterion'] for f in accepted if f['status']=='supported'}

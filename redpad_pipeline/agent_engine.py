@@ -46,14 +46,18 @@ class Engine:
             row=db.execute('SELECT payload FROM outputs WHERE task=? AND revision=?',(task,revision)).fetchone()
             if not row:raise AgentError('No output available for review.')
             output=json.loads(row[0]);body=json.loads(output['summary'])
-        packet=review_packet(t['agent'],body.get('artifact',body),provenance='real_model_output' if output['provenance']=='local_inference' else 'manually_authored_fixture')
+        provenance='real_model_output' if output['provenance']=='local_inference' else 'manually_authored_fixture'
+        if body.get('artifact_type')=='story_benchmark':
+            from .story_quality import packet as story_packet
+            packet=story_packet(body['artifact'],provenance)
+        else:packet=review_packet(t['agent'],body.get('artifact',body),provenance=provenance)
         packet['task']=task;packet['revision']=revision
         return packet
     def record_quality_review(self,task,revision,findings,*,reviewer,receipts):
         """Trusted reviewer intake. Never a model-controlled approval operation."""
         from .intelligence import assess
         packet=self.quality_packet(task,revision)
-        report=assess(packet['role'],packet['source'],findings,creator=packet['role'],reviewer=reviewer,receipts=receipts,provenance=packet['provenance'])
+        report=assess(packet['role'],packet['source'],findings,creator=packet['role'],reviewer=reviewer,receipts=receipts,provenance=packet['provenance'],benchmark_id=packet.get('benchmark_id'))
         with self.store.tx() as db:
             db.execute('BEGIN IMMEDIATE')
             t=self.store._task(db,task);self.store._current(db,t)
@@ -96,6 +100,11 @@ class Engine:
             if task:
                 existing=self.store._task(db,task)
                 if existing['agent']!=key or existing['state']!='Revision requested': raise AgentError('Only requested revisions can be queued again.')
+                previous_run=db.execute('SELECT inputs FROM agent_runs WHERE task=? ORDER BY rowid DESC LIMIT 1',(task,)).fetchone()
+                previous_inputs=json.loads(previous_run[0]) if previous_run else {}
+                if previous_inputs.get('story_benchmark_v1') is True:
+                    if inputs.get('story_benchmark_v1') is not True or any(inputs.get(k)!=previous_inputs.get(k) for k in ('locks','brief','benchmark_id')):
+                        raise AgentError('Story revision cannot drop source locks or switch its benchmark/brief; owner lock changes require a separate approval workflow.')
                 expected=existing['revision']
                 # Preserve original dependency chain; revisions cannot drop source checks.
                 original=[r['id'] for r in json.loads(existing['refs'])]
@@ -207,6 +216,14 @@ class Engine:
             if producer_director and (t['agent']!='director' or run['mode']!='local'):raise AgentError('Director conversation requires actual local inference, never software echo.')
             specialist=isinstance(inputs,dict) and inputs.get('specialist_v1') is True
             story_stage=isinstance(inputs,dict) and inputs.get('story_stage_v1') is True
+            story_benchmark=inputs.get('story_benchmark_v1') is True
+            if story_benchmark:
+                from .story_quality import intake as story_intake
+                story_intake(t['agent'],inputs,sources,prior)
+                if run['mode']=='media':raise AgentError('Story benchmark cannot use media execution.')
+                if run['mode']=='local' and complete is None:
+                    from .story_quality import require_runtime
+                    require_runtime(self.store,rid)
             grounded=isinstance(inputs,dict) and inputs.get('grounded_review_v1') is True
             review_compilation=isinstance(inputs,dict) and inputs.get('grounded_review_compilation_v1') is True
             if review_compilation and run['mode']!='software':raise AgentError('Critic compilation preserves approved reports; no new giant generation is permitted.')
@@ -255,7 +272,18 @@ class Engine:
                     if t['agent']=='costume' and inputs['sources'].get('casting'):
                         prompt+='\nCasting-bound looks also REQUIRE actor_id from the locked actor; hair, makeup, apparent_age, chronology (number), and scene_state object with injury/sweat/rain/dirt. Keep chronological look continuity or cite the approved change_reason.'
                     prompt+='\nCreate original department records grounded ONLY in the approved sources. Keep source IDs, character identity, chronology, costume and prop facts. Do not invent assets or mark plans as generated media. Unsupported controls remain editorial guidance. Never change locked records outside explicit revision targets. QC observations are unverified model findings, not independent human approval.'
-                if producer_director:
+                if story_benchmark:
+                    from .story_quality import instructions,output_contract
+                    story_system=conditioned(instructions())
+                    story_prompt=prompt+'\nSTORY OUTPUT CONTRACT:\n'+encode(output_contract())
+                    request_sha=hashlib.sha256(encode({'system':story_system,'prompt':story_prompt}).encode()).hexdigest()
+                    with self.store.tx() as db:
+                        self.store.event(db,t['id'],'system','story_benchmark_request',{'run':rid,'attempt':run['attempt']+1,'system':story_system,'prompt':story_prompt,'sha256':request_sha,'settings':local_options or {},'provenance':provenance})
+                    raw=complete(story_system,story_prompt)
+                    with self.store.tx() as db:
+                        db.execute('INSERT INTO creative_model_attempts VALUES (?,?,?,?,?,?,?,?)',(rid,run['attempt']+1,t['agent'],model,provenance,request_sha,encode(raw),time.time()))
+                    inputs=dict(inputs,artifact=raw)
+                elif producer_director:
                     raw=complete(conditioned('Return JSON only with reply (natural Bengali), delegations (list), risks (list). Each delegation: action (develop_story/develop_script/review_story/review_script/prepare_departments/revise), episode integer, target_task string, targets list of exact IDs, instruction string. Use empty delegations when uncertain. Cite only supplied/extracted reference material. Never invent unseen media observations, approvals or completed work. Locked revisions require explicit Producer authorization.'),prompt)
                     inputs=dict(inputs,reply=raw)
                     with self.store.tx() as db:db.execute('INSERT INTO creative_model_attempts VALUES (?,?,?,?,?,?,?,?)',(rid,run['attempt']+1,t['agent'],model,provenance,hashlib.sha256(prompt.encode()).hexdigest(),encode(raw),time.time()))
@@ -308,7 +336,11 @@ class Engine:
             else:
                 if specialist:
                     check_handoff(t['agent'],inputs,sources,prior)
-                if producer_director:
+                if story_benchmark:
+                    from .story_quality import prepare as prepare_story
+                    result=prepare_story(t['agent'],inputs,sources,prior)
+                    result['upstream']=[{'task':r['id'],'revision':r['revision']} for r in refs]
+                elif producer_director:
                     from .producer_control import response
                     result=response(inputs['reply'])
                 elif review_compilation:

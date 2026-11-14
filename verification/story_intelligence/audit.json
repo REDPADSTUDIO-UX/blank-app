@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "baseline": "6f5e3fda85710f0dd0a6d028c768de168f8915f1",
+  "branch": "feature/video-music-editing-studio",
+  "registered_agents": 21,
+  "selected_model": {
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "adapter": "hf_text_nf4"
+  },
+  "rubric_criteria": 15,
+  "prepared_adversarial_cases": 7,
+  "real_model_runs": 0,
+  "candidate_story_generated": false,
+  "creative_improvement_measured": false,
+  "professional_acceptance": false,
+  "preservation": [
+    {
+      "path": "redpad_pipeline/agent_catalog.json",
+      "sha256": "4c30b21812fa36784a8e363552655eb18df392fc7b13157381dd46896df16865",
+      "unchanged": true
+    },
+    {
+      "path": "assets/professional/models.json",
+      "sha256": "66aea06431593317c4821120c1a78cdbe3902733afa4b662e4b4d1586c14c300",
+      "unchanged": true
+    },
+    {
+      "path": "assets/professional/phase3_candidates.json",
+      "sha256": "f157f9113a7db1616acc9b2473cfc669099b6bd9423cd4017b7d660765ed0c1f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/professional/phase3_19agent_no_gpu_staging.json",
+      "sha256": "ef776a5bd4f8cb4d17b97ac957e77812e4e15da78bff74f056a7f9cab8d4276e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/professional/phase3_voice_selected_source_lock.json",
+      "sha256": "f3889f39e28d6e98d926f95017586f1d1100466362e7717b292f7793a16304c7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/professional/suite.json",
+      "sha256": "cff39d6ad3a3cd94e5518ed5a790a88d504163b02c44727089c6e1491900ee07",
+      "unchanged": true
+    },
+    {
+      "path": "assets/filmmaking/intelligence.json",
+      "sha256": "78eca8cacc4335f1cfcf3158ec709069d8065de1619f78708b3b280cc6f18279",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/shared_model_services.py",
+      "sha256": "62934d210285f79116a99abba8d60f19af5a888508ca511dbcdda55a512b0f4a",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/shared_model_worker.py",
+      "sha256": "5b953bfbba3fc02b11d60ca18dd2922f112a4a11d3a5157ea3bd0bfaf2c92d2e",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/native_execution.py",
+      "sha256": "228b38b147b04ddfde54176e991a4446eabc14795433112f2113ca512a8028c2",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/producer_control.py",
+      "sha256": "9ecf944b97989c6f4524f91f617674ae65d4c38efdd86ef9fe1e26411e5d0219",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_intelligence.py",
+      "sha256": "d6d62a1ebe7b1e25bfc8749ff368199fdb5228aff15ac115962ad06306da14f4",
+      "unchanged": true
+    },
+    {
+      "path": "verification/intelligence/test_results.json",
+      "sha256": "5e07126008a640f34254a76530236a9f2b357cbf556b1b2abd333f9fd18dcdc2",
+      "unchanged": true
+    },
+    {
+      "path": "verification/approved_gpu_writing/qwen_causal_outline_raw.txt",
+      "sha256": "e8192f3ec0fc587534e4702ade04e613f02ef3af099e0e6de6c54107b52a80c3",
+      "unchanged": true
+    },
+    {
+      "path": "verification/approved_gpu_writing/gemma_dialogue_raw.txt",
+      "sha256": "fadd411a0d4aff5a33a0bb06c34b619bb5ef7a60dbd8d0930a7030cc189e1bdc",
+      "unchanged": true
+    }
+  ],
+  "prior_evidence_review": [
+    {
+      "path": "PHASE3_APPROVED_GPU_WRITING_REPORT_BN.md",
+      "finding": "Prior Qwen 9B GGUF causal outline had repetitive beats, unearned knowledge and weak choice/consequence. This is not selected 27B NF4 evidence."
+    },
+    {
+      "path": "verification/approved_gpu_writing/qwen_causal_outline_raw.txt",
+      "finding": "Raw prior outline inspected; kept unchanged."
+    },
+    {
+      "path": "verification/approved_gpu_writing/gemma_dialogue_raw.txt",
+      "finding": "Prior report and raw identity reviewed, not rerun; language/format findings belong to that experiment."
+    },
+    {
+      "path": "verification/phase3_cpu/trial_story.json",
+      "finding": "Prior failed local Story attempt retained; no capability success inferred."
+    }
+  ],
+  "runtime_state": "blocked_before_writer_construction",
+  "runtime_gate_limitation": "Scoped owner authorization plus kernel-isolated selected-model binding remains unverified; executable GPU launch is not implemented by this checkpoint.",
+  "test_scope_note": "Initial 113-test shared run included pre-existing all-agent authored loops including offline YouTube metadata; final 58-test run excludes YouTube tests. No YouTube APIs or publishing were executed."
+}

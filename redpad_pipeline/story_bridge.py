@@ -79,6 +79,31 @@ def validate_stage(role,data,sources,prior=None):
 
 class StoryBridge:
     def __init__(self,program):self.program=program
+    def queue_benchmark(self,artifact=None,*,source_tasks=None,research=None,locks=None,task=None,targets=None):
+        """The original bounded Story case on the existing project/Engine ledger.
+        Missing real-runtime authorization blocks before model construction.
+        Supplied artifacts remain software fixtures, never candidate evidence.
+        """
+        from .story_quality import request as benchmark_request
+        p=self.program;deps=source_tasks or []
+        if not p.summary()['project']:raise AgentError('Open the existing Studio project first.')
+        base=None
+        if task:
+            with p.store.tx() as db:
+                current=p.store._task(db,task);p.store._current(db,current)
+                if current['agent']!='story' or current['state']!='Revision requested':raise AgentError('Owner-requested Story revision required.')
+                row=db.execute('SELECT payload FROM outputs WHERE task=? AND revision=?',(task,current['revision'])).fetchone()
+                if not row:raise AgentError('Missing immutable Story revision base.')
+                base=json.loads(json.loads(row[0])['summary'])['artifact']
+                previous=db.execute('SELECT inputs FROM agent_runs WHERE task=? ORDER BY rowid DESC LIMIT 1',(task,)).fetchone()
+                original=json.loads(previous[0]) if previous else {}
+                if locks is None:locks=original.get('locks',[])
+                if research is None:research=original.get('research',[])
+                deps=list(dict.fromkeys([*deps,*[r['id'] for r in json.loads(current['refs'])]]))
+        sources={tid:{'$from':tid,'path':['artifact']} for tid in deps}
+        data=benchmark_request(artifact,sources=sources,research=research,locks=locks,base=base,targets=targets)
+        return p.engine.enqueue('story',data,deps,mode='software' if artifact is not None else 'local',task=task,
+                                idempotency_key='story-benchmark:'+digest([p.project_id,data,task]))
     def _linked(self,label):
         with self.program.store.tx() as db:r=db.execute('SELECT run FROM studio_links WHERE label=?',(label,)).fetchone()
         if not r:raise AgentError('Missing stage: '+label)
