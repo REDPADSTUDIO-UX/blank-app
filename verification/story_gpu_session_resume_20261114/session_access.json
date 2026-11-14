@@ -1,0 +1,84 @@
+{
+  "recorded_utc": "2026-11-14T08:53:47.914036+00:00",
+  "baseline": "cf3cc3a4c55d999e8e1e9d50cdb4057da1c6b7cd",
+  "owner_reported_colab_signin": true,
+  "owner_clarified_signin_location": "In my own browser",
+  "connected_browser": "Cloud Desktop Chromium, window 25165827; browser id 1",
+  "authenticated_colab_accessible": false,
+  "colab_fresh_actions": [
+    "Inspected current browser inventory and screenshot",
+    "Refreshed Colab homepage",
+    "Clicked New notebook",
+    "Observed Google sign-in required modal"
+  ],
+  "ordered_platform_results": [
+    {
+      "provider": "Colab",
+      "statuses": [
+        "REACHABLE",
+        "LOGIN_REQUIRED"
+      ],
+      "observation": "After refresh and New notebook: Google sign-in required; You must be logged in with a Google Account to continue.",
+      "gpu_runtime_started": false
+    },
+    {
+      "provider": "Kaggle",
+      "statuses": [
+        "REACHABLE",
+        "LOGIN_REQUIRED"
+      ],
+      "observation": "Fresh Code page -> New Notebook; guest scratchpad notebook5a342e58da; Sign In or Register to continue editing; Draft Session off (run a cell to start). No run submitted.",
+      "gpu_runtime_started": false
+    },
+    {
+      "provider": "Lightning",
+      "statuses": [
+        "REACHABLE",
+        "BLOCKED"
+      ],
+      "observation": "Coming soon: Lightning has not expanded to your area yet.",
+      "gpu_runtime_started": false
+    },
+    {
+      "provider": "Hugging Face",
+      "statuses": [
+        "REACHABLE",
+        "NOT_VERIFIED"
+      ],
+      "observation": "Homepage Log In/Sign Up; no authenticated private eligible GPU runtime demonstrated. Prior official ZeroGPU documentation retained as historical documentation, not fresh allocation evidence.",
+      "gpu_runtime_started": false
+    },
+    {
+      "provider": "Amazon SageMaker Studio Lab",
+      "statuses": [
+        "BLOCKED"
+      ],
+      "observation": "One fresh official-site HTTP check returned 403 Forbidden; no browser/runtime/account/quota checked; no bot-detection classification.",
+      "gpu_runtime_started": false
+    }
+  ],
+  "additional_connectors": "Current available/deferred inventory found no browser extension control, Colab/notebook/GPU allocation connector. CUA native Chromium input remains available.",
+  "model_calls": 0,
+  "call_ceiling": 7,
+  "actual_model": null,
+  "gpu_specs": null,
+  "canary": null,
+  "story": null,
+  "creative_qc": null,
+  "revision": null,
+  "review_package": null,
+  "runtime_seconds": null,
+  "tokens": null,
+  "peak_vram_bytes": null,
+  "human_review": "PENDING",
+  "owner_acceptance": "PENDING",
+  "implementation_changed": false,
+  "cpu_tests_rerun": false,
+  "paid_resources_used": false,
+  "production_modified": false,
+  "main_modified": false,
+  "next_owner_action": "Use this conversation Cloud Desktop panel: Take over -> sign in to Google Colab there -> Return control. Personal browser authentication cannot be reused through the currently available tools. Never send credentials/cookies/tokens.",
+  "resume_after_access": "Verify actual eligible free GPU/quota/RAM/disk, exact approved registered bundle/source/license receipts, tokenizer feasibility and isolated worker binding; then reuse existing seven-call Story checkpoint.",
+  "evidence_scope": "Browser observations are direct screenshot transcriptions, not saved screenshot files. Individual browser event timestamps unavailable; recorded_utc is evidence-writing time.",
+  "owner_handoff_status": "Owner confirmed: I’ll sign in inside Cloud Desktop. Browser left on Colab homepage; awaiting sign-in and Return control. No browser input during takeover."
+}
