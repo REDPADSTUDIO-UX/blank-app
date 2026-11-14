@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "baseline": "ce9a235530f4a500482dbf056bbf8e03c5adcff8",
+  "branch": "feature/video-music-editing-studio",
+  "audit_method": "Second-pass schema, identity, role-specific criteria, existing contracts, benchmark bindings and unchanged baseline byte checks. CPU software evidence only.",
+  "registered_agents": 21,
+  "profile_count": 21,
+  "pinned_candidate_profiles": 18,
+  "preserved_19_agent_staging": 19,
+  "preservation": [
+    {
+      "path": "redpad_pipeline/agent_catalog.json",
+      "sha256": "4c30b21812fa36784a8e363552655eb18df392fc7b13157381dd46896df16865",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "assets/professional/models.json",
+      "sha256": "66aea06431593317c4821120c1a78cdbe3902733afa4b662e4b4d1586c14c300",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "assets/professional/phase3_candidates.json",
+      "sha256": "f157f9113a7db1616acc9b2473cfc669099b6bd9423cd4017b7d660765ed0c1f",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "assets/professional/phase3_19agent_no_gpu_staging.json",
+      "sha256": "ef776a5bd4f8cb4d17b97ac957e77812e4e15da78bff74f056a7f9cab8d4276e",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "assets/professional/phase3_voice_selected_source_lock.json",
+      "sha256": "f3889f39e28d6e98d926f95017586f1d1100466362e7717b292f7793a16304c7",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "redpad_pipeline/native_execution.py",
+      "sha256": "228b38b147b04ddfde54176e991a4446eabc14795433112f2113ca512a8028c2",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "redpad_pipeline/native_local_worker.py",
+      "sha256": "cf2a910d3c9da76fec67373ecb9b30715293cf19df50601f6065ff5174fc1edc",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "redpad_pipeline/native_voice_worker.py",
+      "sha256": "48612e3da2004ede041e97364081de74e26db8b8c799deafda255d43d4f5fb3c",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "redpad_pipeline/voice_consent.py",
+      "sha256": "33562ba9796c8f1519b601636d02e33142ce974ab552d64a0b0a1f93033bac20",
+      "unchanged_from_baseline": true
+    },
+    {
+      "path": "redpad_pipeline/producer_control.py",
+      "sha256": "9ecf944b97989c6f4524f91f617674ae65d4c38efdd86ef9fe1e26411e5d0219",
+      "unchanged_from_baseline": true
+    }
+  ],
+  "readiness": [
+    {
+      "agent": "director",
+      "profile_sha256": "cb8c4eff95288afab1c3b72470eda9560f1dd686f38cff59cfbb360bef2a459a",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.director.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "qc",
+      "profile_sha256": "7d19bebd64c2fe2c15095d6c2fcf34b6e8c24d0c090241a60a591b92c9cdfdf5",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.qc.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "story",
+      "profile_sha256": "50095df9fc98eb4c0c3211727a64faef6dd13d26c6cea222c1704293665dbd80",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.story.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "script",
+      "profile_sha256": "4e2dddc96c1e84592de30fde8f41f39f45d0b68f9cf19f9e601a52e905c74699",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.script.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "character",
+      "profile_sha256": "22bc95d109add79aa4dc6df8bcae37a1146e048f4279f326a879e02b78ae6107",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.character.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "art",
+      "profile_sha256": "001455aa8d46f7c5e655126d83a093b9b1a8d5bea139664ee142fe2035c21e7d",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.art.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "location",
+      "profile_sha256": "dc67ef10a9fb79d159ee169ef895c57cfeee59ba7328908a5429966e019fd4a6",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.location.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "costume",
+      "profile_sha256": "2a857ac9137f2e4e4731342129a43a157aa5b94c97c3d1700b65e72373dfb807",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.costume.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "storyboard",
+      "profile_sha256": "64618b0d927e4981f0c184acc43ac517f2ecde16bf2054855cd025f8df54aad9",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.storyboard.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "performance",
+      "profile_sha256": "a504e227a548d28c7a9be056a091f060a84503a5e34016fad4e212b524585b94",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.performance.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "cinematographer",
+      "profile_sha256": "44d7fb3c8460113aeecbe403fb2eb7189f8b6532390a425cba571928dac99b85",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.cinematographer.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "motion",
+      "profile_sha256": "3a63fd8280c28cb27659191018864fec8e7b214f318a837bc288f7dbc5c4945b",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.motion.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "video",
+      "profile_sha256": "b78df5c09b4df4d1050017e2877e1d7d80269ebf5f36c2a353cb35c6561a3365",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.video.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "voice",
+      "profile_sha256": "51f4e8a9061eb47f95dacff9518536352ceaac1cf3731e526e54694807d5a98f",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.voice.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "continuity",
+      "profile_sha256": "2bafb282701a7316ef2687d12fae72fef372a7867c5f507731ba97b86e258612",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.continuity.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "music",
+      "profile_sha256": "889472758b9b0134e417c6ba230c532893b77bcbff0a9ffb69f8661d341cadce",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.music.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "editing",
+      "profile_sha256": "0e967552a55a40449e5933e62d5217e41d1f2a835a8988c8ef97a8702a7f8fa1",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.editing.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "production_manager",
+      "profile_sha256": "1ba669cda0f6bcbcf8e394c7c9148c44b714fe85eb43c3a99059f4ce90afe163",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.production_manager.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "growth",
+      "profile_sha256": "f028dd9925cd27788fe812fc3ba20001490c82d25095561c9919a03272d7833d",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.growth.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "youtube",
+      "profile_sha256": "302a113e690b1abcefe8e8e2cf46303aa3a5b5154471dc4c73fa2c0dc7f8895f",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.youtube.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    },
+    {
+      "agent": "casting",
+      "profile_sha256": "285e48195c722cf22cd9e43d54b846bee269802b9be49913079a889400e791d6",
+      "criteria_count": 4,
+      "benchmark_id": "intelligence.casting.v1",
+      "software": "integrated_preparation",
+      "model": "unverified",
+      "expert": "pending",
+      "owner": "pending",
+      "gpu_execution_enabled": false
+    }
+  ],
+  "new_model_executions": 0,
+  "professional_acceptance": 0,
+  "research_limitation": "Public Banglapedia/Gutenberg access returned proxy 403. No fresh external source verification claimed.",
+  "remaining": [
+    "Fresh external Bangladeshi cultural/storytelling research verification",
+    "Real selected-model runtime evaluation with explicit future authorization",
+    "Independent Bengali and modality expert reviews",
+    "Final owner acceptance"
+  ]
+}

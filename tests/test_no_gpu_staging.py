@@ -109,7 +109,11 @@ class NoGPUStagingTests(unittest.TestCase):
     def test_music_15_is_not_silently_sent_to_existing_35_worker(self):
         r=request('music','ace15');draft=prepare('music','ace15','music',r)
         self.assertEqual(draft['repo'],'ACE-Step/Ace-Step1.5')
-        self.assertTrue(any('No legacy replacement' in b for b in draft['blockers']))
+        self.assertTrue(any('explicit owner-authorized NativeExecution' in b for b in draft['blockers']))
+        self.assertFalse(draft['runtime_verified'])
+        self.assertFalse(draft['inference_verified'])
+        self.assertFalse(draft['production_ready'])
+        self.assertIsNone(draft['fallback'])
         with self.assertRaises(AgentError):prepare('music','stable_audio_small','music',r)
 
     def test_staging_is_restart_safe_idempotent_and_never_changes_routes_or_task_state(self):

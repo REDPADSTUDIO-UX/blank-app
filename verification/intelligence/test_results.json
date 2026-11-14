@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "CPU software tests, not model capability",
+  "final_regression": {
+    "tests": 351,
+    "failures": 0,
+    "errors": 0,
+    "log": "final_regression.txt"
+  },
+  "focused_safety": {
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "log": "final_focused.txt"
+  },
+  "unique_tests": 351,
+  "reruns_are_not_independent_trials": true,
+  "new_model_executions": 0,
+  "gpu_executions": 0,
+  "paid_api_calls": 0,
+  "deployments": 0,
+  "weights_downloaded": false,
+  "professional_acceptance": 0
+}

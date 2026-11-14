@@ -14,6 +14,10 @@ def show_execution(store,key):
     st.caption('The prefilled Bengali example is supplied test data, not model output. Edit it or queue it to test this department.')
     with st.expander('Input contract / editable starting example'):
         st.json(contract(key))
+    with st.expander('Creative quality preparation / independent review criteria'):
+        from .intelligence import profile
+        st.caption('Preparation only. Model capability and professional creative acceptance require real outputs and independent review.')
+        st.json(profile(key))
     from .specialists import IMPLEMENTED,example
     specialist=key in IMPLEMENTED and st.checkbox('Specialist workflow v1',value=True,key='specialist_mode_'+key)
     initial=example(key) if specialist else contract(key)
@@ -99,6 +103,13 @@ def show_execution(store,key):
                         if body.get('findings'):st.write(body['findings'])
                     except ValueError: st.write(envelope['summary'])
             st.download_button('Download task artifacts',json.dumps(versions,ensure_ascii=False,indent=2),'department-artifacts.json',key='department_artifacts_'+rid)
+            with st.expander('Prepare independent creative review packet'):
+                try:
+                    current=next(t for t in store.tasks() if t['id']==run['task'])
+                    packet=engine.quality_packet(run['task'],current['revision'])
+                    st.caption('Metadata-blind preparation only. Style or source content can reveal identity. No review or approval has been performed.')
+                    st.download_button('Download review packet',json.dumps(packet,ensure_ascii=False,indent=2),'creative-review.json',key='quality_packet_'+rid)
+                except AgentError as exc:st.caption(str(exc))
         if key=='qc' and next(t for t in store.tasks() if t['id']==run['task'])['state']=='Approved':
             candidates=json.loads(next(t for t in store.tasks() if t['id']==run['task'])['refs'])
             if candidates:

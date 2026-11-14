@@ -34,7 +34,8 @@ def review(source,findings,reviewer_role):
         if not isinstance(f,dict) or not fields<=f.keys() or f['target'] not in items:raise AgentError('Source-specific review fields required.')
         if f['category'] not in ('contract','narrative','subjective','missing_evidence') or f['severity'] not in ('info','warning','error','blocker') or f['decision'] not in ('revise','abstain','clear'):raise AgentError('Review classification invalid.')
         if type(f['confidence']) not in (float,int) or not math.isfinite(f['confidence']) or not 0<=f['confidence']<=1:raise AgentError('Bounded explicit reviewer confidence required.')
-        if f['target_agent'] not in ('story','script','character','art','location','costume','storyboard','performance','cinematographer','motion','video','voice','music','editing','continuity','production_manager','growth','youtube','director'):raise AgentError('Invalid revision recipient; QC cannot review itself.')
+        from .agents import AGENTS
+        if f['target_agent'] not in set(AGENTS)-{'qc'}:raise AgentError('Invalid revision recipient; QC cannot review itself.')
         if f['decision']=='revise' and (not f['quote'] or f['quote'] not in encode(items[f['target']]) or not f['instruction']):
             unsupported.append(dict(f,reason='Quotation absent from this target or missing precise instruction'));continue
         if f['category']=='subjective':f['artistic_adjudication_required']=True

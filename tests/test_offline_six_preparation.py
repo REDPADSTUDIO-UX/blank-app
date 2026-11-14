@@ -231,7 +231,10 @@ class OfflineSixTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256((root/'assets/professional/models.json').read_bytes()).hexdigest(),b['models_sha256'])
 
     def test_voice_wav_metadata_checked_without_transcript_or_speaker_claim(self):
-        stage,spec=self.speech();job=self.services.prepare_offline_request(stage['id'],spec=spec)
+        stage,spec=self.speech()
+        from tests.test_selected_voice_binding import reviewed_fixture
+        spec=reviewed_fixture(self,stage,spec)
+        job=self.services.prepare_offline_request(stage['id'],spec=spec)
         self.assertTrue(job['reference_audio_header']['metadata_checked'])
         self.assertFalse(job['reference_audio_header']['transcript_verified'])
         bad=copy.deepcopy(spec);bad['reference_metadata']['sample_rate']=48000

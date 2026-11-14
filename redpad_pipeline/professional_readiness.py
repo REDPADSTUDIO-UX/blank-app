@@ -58,6 +58,9 @@ class ProfessionalLab:
                  'expected_change':expected_change,'change_type':change_type,'fix_ref':fix_ref,'max_calls':max_calls,
                  'case':spec,'case_sha256':sha(spec),'source_brief':suite()['shared_original_brief'],
                  'state':'planned_not_executed','professional_ready':False,'production_ready':False,'created':time.time()}
+        from .intelligence import profile, digest as intelligence_digest
+        quality=profile(role)
+        payload['intelligence']={'profile_sha256':intelligence_digest(quality),'benchmark':quality['benchmark'],'rubric':quality['criteria']}
         fingerprint=sha({k:v for k,v in payload.items() if k not in ('id','created')})
         with self.store.tx() as db:
             if db.execute('SELECT 1 FROM professional_trials WHERE fingerprint=?',(fingerprint,)).fetchone():raise AgentError('Identical experiment already exists; resume it rather than reset its call budget.')
@@ -294,6 +297,7 @@ class ProfessionalLab:
             code=hashlib.sha256((id+s['id']).encode()).hexdigest()[:12];key[code]={'sample':s['id'],'model':s.get('model'),'sha256':s['sha256']}
             items.append({'id':code,'kind':s['kind'],'original_raw':s.get('raw'),'asset':s.get('path'),'sha256':s['sha256'],'technical_pass':s['technical_pass']})
         return {'case':t['case'],'source_brief':t['source_brief'],'samples':items,'human_review_completed':False,
+                'intelligence':t.get('intelligence'),'reviewer_disagreements':[],
                 'limitations':'Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.'},key
 
 def audit():
