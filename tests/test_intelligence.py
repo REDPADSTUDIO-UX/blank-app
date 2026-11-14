@@ -117,6 +117,34 @@ class IntelligenceTests(unittest.TestCase):
   with self.assertRaises(AgentError):q.validate_facts([dict(f,quote='fabricated')],{'a':source})
   with self.assertRaises(AgentError):q.validate_facts([dict(f,source_sha256='stale')],{'a':source})
   self.assertEqual(q.validate_facts([{'kind':'assumption','claim':'Audience may prefer silence'}],{}),[{'kind':'assumption','claim':'Audience may prefer silence'}])
+ def test_partial_inspection_cannot_be_hidden_by_criterion_coverage(self):
+  source={'s1':'lost key'}
+  findings=[dict(self.finding(),id=c['id'],criterion=c['id'],severity='info') for c in q.profile('story')['criteria']]
+  findings.append(dict(self.finding(),id='unseen',target='s2'))
+  receipt=dict(reviewer='reviewer',source_sha256=digest(source),medium='text',target='s1',inspected=True,reference='authored control')
+  report=q.assess('story',source,findings,creator='story',reviewer='reviewer',receipts=[receipt],provenance='manually_authored_fixture')
+  self.assertEqual(report['unassessed_criteria'],[])
+  self.assertEqual(report['decision'],'abstain')
+  plan=q.revision_requests(report)
+  self.assertEqual(plan['requests'],[])
+  self.assertEqual(plan['evidence_required_for'],['unseen'])
+ def test_qc_handoffs_route_all_roles_without_revision_authority(self):
+  source={'s1':'lost key'}
+  findings=[dict(self.finding(),id=role,responsible_agent=role) for role in AGENTS]
+  receipt=dict(reviewer='reviewer',source_sha256=digest(source),medium='text',target='s1',inspected=True,reference='authored control')
+  report=q.assess('story',source,findings,creator='story',reviewer='reviewer',receipts=[receipt],provenance='manually_authored_fixture')
+  plan=q.revision_requests(report)
+  self.assertEqual({r['responsible_agent'] for r in plan['requests']},set(AGENTS))
+  self.assertFalse(plan['grants_revision_authority'])
+  for request in plan['requests']:
+   self.assertEqual(request['targets'],['s1'])
+   self.assertEqual(request['source_sha256'],digest(source))
+   self.assertEqual(request['required_re_evaluation'],[findings[0]['retest']])
+   self.assertFalse(request['execution_enabled'])
+  findings[0]['evidence']='tampered caller data'
+  self.assertEqual(report['findings'][0]['evidence'],'lost key')
+  plan['requests'][0]['findings'][0]['evidence']='tampered handoff'
+  self.assertEqual(report['findings'][0]['evidence'],'lost key')
  def test_targeted_revision_preserves_untouched_records_and_owner_lock(self):
   base=[{'id':'a','age':27},{'id':'b','line':'hello'}]
   new=[{'id':'b','line':'wait'}]
@@ -147,6 +175,9 @@ class IntelligenceTests(unittest.TestCase):
   run,body=self.output('art',example('art'));task=run['task']
   report=self.engine.record_quality_review(task,1,[],reviewer='independent human',receipts=[])
   self.assertEqual(report['decision'],'abstain')
+  self.assertEqual(report['targeted_revision_requests']['requests'],[])
+  event=next(h for h in self.store.history() if h['action']=='intelligence_review')
+  self.assertEqual(json.loads(event['detail'])['report']['targeted_revision_requests'],report['targeted_revision_requests'])
   self.assertEqual(self.store.tasks()[0]['state'],'Awaiting QC')
   rows=body['artifact']['records'];replacement=copy.deepcopy(rows[0]);replacement['style']='Restrained original style'
   with self.assertRaises(AgentError):self.engine.enqueue_targeted_revision(task,1,[replacement],[replacement['id']])

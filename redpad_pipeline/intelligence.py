@@ -154,12 +154,38 @@ def assess(role,source,findings,*,creator,reviewer,receipts,provenance,benchmark
             if target is None:raise AgentError('Story review must cite an actual beat ID.')
             observed=observed and nonempty(f['evidence']) and f['evidence'] in encode(target)
         if not observed and f['score'] is not None:raise AgentError('Cannot score uninspected or unsupported evidence.')
-        accepted.append(dict(f,status='supported' if observed else 'abstain',grants_revision_authority=False))
+        accepted.append(dict(copy.deepcopy(f),status='supported' if observed else 'abstain',grants_revision_authority=False))
     covered={f['criterion'] for f in accepted if f['status']=='supported'}
     return {'schema_version':1,'role':role,'source_sha256':current,'creator':creator,'reviewer':reviewer,
             'provenance':provenance,'findings':accepted,'unassessed_criteria':sorted(set(criteria)-covered),
-            'decision':'abstain' if covered!=set(criteria) else 'defects_present' if any(f['severity'] in ('error','blocker') for f in accepted) else 'human_adjudication_required',
+            'decision':'abstain' if covered!=set(criteria) or any(f['status']=='abstain' for f in accepted) else 'defects_present' if any(f['severity'] in ('error','blocker') for f in accepted) else 'human_adjudication_required',
             'professional_acceptance':False,'owner_approval':False}
+
+
+def revision_requests(report):
+    """Prepare departmental handoffs from validated QC; never enqueue or approve.
+
+    Keep uninspected findings separate even when another finding covers the same
+    criterion. Callers must use assess(), then the existing owner revision gate.
+    """
+    requests={};missing=[]
+    for finding in report['findings']:
+        if finding['status']!='supported':
+            missing.append(finding['id'])
+            continue
+        if finding['severity']=='info':continue
+        role=finding['responsible_agent']
+        request=requests.setdefault(role,{'responsible_agent':role,'targets':[],
+            'source_sha256':report['source_sha256'],'findings':[],
+            'required_re_evaluation':[],'status':'owner_revision_request_required',
+            'execution_enabled':False,'owner_approval':False})
+        if finding['target'] not in request['targets']:request['targets'].append(finding['target'])
+        request['findings'].append(copy.deepcopy(finding))
+        if finding['retest'] not in request['required_re_evaluation']:
+            request['required_re_evaluation'].append(finding['retest'])
+    return {'schema_version':1,'requests':list(requests.values()),
+            'evidence_required_for':missing,'downstream_reviews':'recheck_after_source_revision',
+            'grants_revision_authority':False}
 
 
 def targeted_revision(base,replacement,targets,locked=()):

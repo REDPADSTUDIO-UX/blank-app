@@ -55,9 +55,10 @@ class Engine:
         return packet
     def record_quality_review(self,task,revision,findings,*,reviewer,receipts):
         """Trusted reviewer intake. Never a model-controlled approval operation."""
-        from .intelligence import assess
+        from .intelligence import assess, revision_requests
         packet=self.quality_packet(task,revision)
         report=assess(packet['role'],packet['source'],findings,creator=packet['role'],reviewer=reviewer,receipts=receipts,provenance=packet['provenance'],benchmark_id=packet.get('benchmark_id'))
+        report['targeted_revision_requests']=revision_requests(report)
         with self.store.tx() as db:
             db.execute('BEGIN IMMEDIATE')
             t=self.store._task(db,task);self.store._current(db,t)
