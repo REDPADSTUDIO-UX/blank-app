@@ -1,0 +1,25 @@
+{
+  "selected": [
+    "tests.test_offline_six_preparation.OfflineSixTests.test_ace15_exact_native_params_and_deny_auto_download_sync_policy",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_indicf5_reference_transcript_consent_and_original_bengali_preserved",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_indicf5_cannot_substitute_consent_or_enable_remote_custom_code"
+  ],
+  "tests": 3,
+  "errors": 0,
+  "failures": 0,
+  "forbidden_resource_attempts": {
+    "socket.socket": 0,
+    "subprocess.run": 0,
+    "subprocess.Popen": 0,
+    "urllib.request.OpenerDirector.open": 0,
+    "redpad_pipeline.kaggle_runtime.probe": 0,
+    "redpad_pipeline.shared_model_services.SharedServices.execute": 0,
+    "redpad_pipeline.screenwriter.LocalWriter.__call__": 0
+  },
+  "gpu": false,
+  "model_inference": false,
+  "weights_opened_or_downloaded": false,
+  "requests_import_only_shim": true,
+  "http_transport_tested": false,
+  "scope": "software-only manual fixtures; no artistic/model evidence"
+}

@@ -1,0 +1,8 @@
+test_readiness_casting_complete_with_explicit_voice_blocker_not_false_readiness (tests.test_voice_casting_integration.VoiceCastingTests.test_readiness_casting_complete_with_explicit_voice_blocker_not_false_readiness) ... ok
+test_shared_source_lock_matches_authoritative_git_blob_correction (tests.test_voice_casting_integration.VoiceCastingTests.test_shared_source_lock_matches_authoritative_git_blob_correction) ... ok
+test_pinned_install_identity_precision_and_source_mismatch_rejected_without_weight_reads (tests.test_native_local_execution.NativeLocalTests.test_pinned_install_identity_precision_and_source_mismatch_rejected_without_weight_reads) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.086s
+
+OK

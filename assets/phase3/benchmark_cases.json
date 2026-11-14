@@ -1,0 +1,107 @@
+[
+  {
+    "id": "family_architecture",
+    "agent": "story",
+    "kind": "season",
+    "brief": {
+      "title": "ফেরার আগে",
+      "premise": "ঢাকার একটি পরিবারের প্রাপ্তবয়স্ক দুই সদস্য একটি ভুল বোঝাবুঝি মেটাতে গিয়ে নিজেদের গোপন ভয় স্বীকার করে।",
+      "genre": "family romance",
+      "tone": "স্বাভাবিক উষ্ণতা, চরিত্রভিত্তিক রসিকতা ও সংযত আবেগ",
+      "episodes": 5,
+      "episode": 1,
+      "seconds": 300
+    },
+    "shape_fixture": "romance_season",
+    "requires_source": false,
+    "goal": "Authentic family bonds, organic wit, logical romance; no repeated coincidence"
+  },
+  {
+    "id": "horror_architecture_30",
+    "agent": "story",
+    "kind": "season",
+    "brief": {
+      "title": "দ্বিতীয় তালা",
+      "premise": "পুরোনো ঢাকার এক বাড়িতে চাবির অবস্থান বদলানোর সঙ্গে হারিয়ে যাওয়া এক পরিচয়ের সূত্র মেলে; প্রতিটি প্রকাশের মূল্য আছে।",
+      "genre": "horror",
+      "tone": "photorealistic contemporary Bangladesh, restrained suspense",
+      "episodes": 30,
+      "episode": 1,
+      "seconds": 300
+    },
+    "shape_fixture": "season",
+    "requires_source": false,
+    "goal": "30 distinct episodes, mystery/reveal ledger, arcs and long-term continuity"
+  },
+  {
+    "id": "director_review",
+    "agent": "director",
+    "kind": "direction",
+    "brief": {
+      "title": "দ্বিতীয় তালা",
+      "premise": "পুরোনো ঢাকার এক বাড়িতে চাবির অবস্থান বদলানোর সঙ্গে হারিয়ে যাওয়া এক পরিচয়ের সূত্র মেলে; প্রতিটি প্রকাশের মূল্য আছে।",
+      "genre": "horror",
+      "tone": "photorealistic contemporary Bangladesh, restrained suspense",
+      "episodes": 30,
+      "episode": 1,
+      "seconds": 300
+    },
+    "shape_fixture": "direction_story",
+    "requires_source": true,
+    "goal": "Quote exact source evidence; review emotion, subtext, humor, pacing and motivation"
+  },
+  {
+    "id": "episode_5min",
+    "agent": "script",
+    "kind": "screenplay",
+    "brief": {
+      "title": "দ্বিতীয় তালা",
+      "premise": "পুরোনো ঢাকার এক বাড়িতে চাবির অবস্থান বদলানোর সঙ্গে হারিয়ে যাওয়া এক পরিচয়ের সূত্র মেলে; প্রতিটি প্রকাশের মূল্য আছে।",
+      "genre": "horror",
+      "tone": "photorealistic contemporary Bangladesh, restrained suspense",
+      "episodes": 30,
+      "episode": 1,
+      "seconds": 300
+    },
+    "shape_fixture": "screenplay",
+    "requires_source": true,
+    "goal": "Approximately 300 seconds; approved season AND Director source required"
+  },
+  {
+    "id": "weak_script_rewrite",
+    "agent": "script",
+    "kind": "rewrite",
+    "brief": {
+      "title": "দ্বিতীয় তালা",
+      "premise": "পুরোনো ঢাকার এক বাড়িতে চাবির অবস্থান বদলানোর সঙ্গে হারিয়ে যাওয়া এক পরিচয়ের সূত্র মেলে; প্রতিটি প্রকাশের মূল্য আছে।",
+      "genre": "horror",
+      "tone": "photorealistic contemporary Bangladesh, restrained suspense",
+      "episodes": 30,
+      "episode": 1,
+      "seconds": 300
+    },
+    "shape_fixture": "screenplay",
+    "requires_source": true,
+    "targets": [
+      "s2"
+    ],
+    "goal": "Rewrite only the requested weak source scene; preserve accepted scenes"
+  },
+  {
+    "id": "continuity_audit",
+    "agent": "director",
+    "kind": "direction",
+    "brief": {
+      "title": "দ্বিতীয় তালা",
+      "premise": "পুরোনো ঢাকার এক বাড়িতে চাবির অবস্থান বদলানোর সঙ্গে হারিয়ে যাওয়া এক পরিচয়ের সূত্র মেলে; প্রতিটি প্রকাশের মূল্য আছে।",
+      "genre": "horror",
+      "tone": "photorealistic contemporary Bangladesh, restrained suspense",
+      "episodes": 3,
+      "episode": 1,
+      "seconds": 300
+    },
+    "shape_fixture": "direction_story",
+    "requires_source": true,
+    "goal": "Review an owner-approved controlled-contradiction source, cite exact defects; no automatic correctness claim"
+  }
+]

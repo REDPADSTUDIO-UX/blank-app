@@ -1,0 +1,12 @@
+test_concurrent_native_request_dedup_is_atomic_and_restart_safe (tests.test_native_local_execution.NativeLocalTests.test_concurrent_native_request_dedup_is_atomic_and_restart_safe) ... ok
+test_native_install_rejects_unreviewed_cached_bytecode (tests.test_native_local_execution.NativeLocalTests.test_native_install_rejects_unreviewed_cached_bytecode) ... ok
+test_direct_native_cli_without_kernel_namespace_fails_before_model_import (tests.test_native_local_execution.NativeLocalTests.test_direct_native_cli_without_kernel_namespace_fails_before_model_import) ... ok
+test_video_container_metadata_checks_frames_fps_and_dimensions_without_media_generation (tests.test_native_local_execution.NativeLocalTests.test_video_container_metadata_checks_frames_fps_and_dimensions_without_media_generation) ... ok
+test_runtime_bridge_integrates_existing_service_without_new_route (tests.test_native_local_execution.NativeLocalTests.test_runtime_bridge_integrates_existing_service_without_new_route) ... ok
+test_isolated_child_environment_does_not_inherit_provider_tokens_or_proxies (tests.test_native_local_execution.NativeLocalTests.test_isolated_child_environment_does_not_inherit_provider_tokens_or_proxies) ... ok
+test_actual_running_dummy_is_cancelled_from_restarted_service (tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.230s
+
+OK

@@ -1,0 +1,21 @@
+{
+  "baseline_commit": "4d93a8c83e32ca17e9611797c10737ab9d76bed5",
+  "source_and_registry_hashes_unchanged": {
+    "assets/filmmaking/story_benchmark.json": "611afa3485cf0ec1c80794ab087955db8122ae7c39a50c0eaaa433afdc63baee",
+    "assets/filmmaking/story_benchmark.schema.json": "76576385301113dae575d1e0974f23a57fd377962aacd3527d80783aae964387",
+    "redpad_pipeline/story_quality.py": "562c3dcf2e20360bda635f4c4c0bded26768c84c9de4a3629a5138fd232cf971",
+    "redpad_pipeline/agent_engine.py": "1b7720f2a213d8200dd8267a7f630e43bf234a0570a5ce3150f92875c64d46cf",
+    "assets/professional/phase3_candidates.json": "f157f9113a7db1616acc9b2473cfc669099b6bd9423cd4017b7d660765ed0c1f",
+    "assets/professional/phase3_19agent_no_gpu_staging.json": "ef776a5bd4f8cb4d17b97ac957e77812e4e15da78bff74f056a7f9cab8d4276e",
+    "verification/story_intelligence/canary_request.json": "cecb63a79c15c6573f99a6fe3057bc6db806f28b0e80109d6713fba62b2f4c47",
+    "verification/story_intelligence/section_contracts.json": "b1b4315a66b10e1eb46df3019c2f16a512d019ffb420124566dc927564e0aa46"
+  },
+  "main_remote_before": "c03550cb6facc27ba90c3f3286a5b0a0e69748a8",
+  "scope": "Evidence/report/standalone operational cells only; completed source engineering and tests not repeated",
+  "export_archive_sha256": "61ed9cc9a23a63f4cfb1bf9c1a01014e119f48ddf082d8b942197112097e7d34",
+  "render_skip_reference": "https://render.com/docs/deploys#skipping-an-auto-deploy",
+  "planned_commit_skip_markers": [
+    "[skip ci]",
+    "[skip render]"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "state": "installed_not_yet_inferred",
+  "model_repo": "unsloth/Qwen3.5-9B-GGUF",
+  "model_revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+  "filename": "Qwen3.5-9B-Q4_K_M.gguf",
+  "expected_bytes": 5680522464,
+  "expected_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+  "runtime_source_revision": "release-b12318; embedded build version below",
+  "owner_download_approved": true,
+  "model_inference": false,
+  "paid_fallback": false,
+  "actual_gpu": "Tesla T4, 15360",
+  "actual_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+  "download_and_hash_seconds": 60.012006387998554,
+  "model_path": "/content/redpad_phase3/model/Qwen3.5-9B-Q4_K_M.gguf",
+  "runtime_variant": "official_prebuilt_cuda12.8_b12318",
+  "binary": "/content/redpad_phase3/official-b12318/llama-b12318/llama-server",
+  "binary_sha256": "0ec391741c38d09eb4074db407c162686e310799c0dc36ebb734775688384ff5",
+  "runtime_version": "version: 0.9.0-dev (build 12318, commit 7021f7e09)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+  "runtime_assets": [
+    {
+      "name": "cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "bytes": 594371580,
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "digest": "sha256:caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea",
+      "verified_sha256": "caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea"
+    },
+    {
+      "name": "llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "bytes": 197999267,
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+      "digest": "sha256:e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797",
+      "verified_sha256": "e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797"
+    }
+  ],
+  "runtime_prepare_seconds": 36.84645407500284,
+  "source_build": "interrupted_owned_group_stopped; partial objects retained; no model inference attempted"
+}

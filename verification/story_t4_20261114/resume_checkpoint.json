@@ -1,0 +1,19 @@
+{
+  "baseline_commit": "4d93a8c83e32ca17e9611797c10737ab9d76bed5",
+  "branch": "feature/video-music-editing-studio",
+  "actual_model": "qwen35_9_approved_gguf",
+  "qwen35_27_ran": false,
+  "calls_submitted": 2,
+  "ceiling": 7,
+  "canary": "Bengali JSON complete, GPU offload proven; creative weakness noted",
+  "foundation": "failed: repetitive degeneration, 1536 tokens, finish_reason=length, incomplete JSON",
+  "complete_story": false,
+  "acts_and_reflection_ran": false,
+  "targeted_revision_ran": false,
+  "remaining_calls_are_not_permission_to_ignore_truncation_stop": true,
+  "stop_source": "assets/filmmaking/story_benchmark.json budget.policy; verification/story_gpu_attempts_20261114/resume_checkpoint.json",
+  "pipeline_gate_unchanged": true,
+  "human_review": "pending",
+  "all_owned_model_servers_stopped": true,
+  "resume": "Do not rerun these experiment IDs. Preserve raw failure. Diagnose bounded schema-constrained decoding/repetition control and token-feasibility as a separately labelled variant before any new generation. No claim that this would fix creative quality; no license or access approval currently blocking the tested fallback."
+}

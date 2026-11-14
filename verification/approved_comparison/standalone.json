@@ -1,0 +1,58 @@
+[
+  {
+    "module": "smoke_streamlit_ui",
+    "exit_code": 0,
+    "seconds": 12.341,
+    "stdout": "PASS: Streamlit app opens and Video Studio tab is present\nPASS: add-channel UI successfully saves a test channel\nPASS: UI button creates playable MP4; draft awaits human approval\nPASS: preview /tmp/redpad-ui-test-bsydu6r_/redpad_media/video/draft_1_98df538c4a26.mp4 size 187127\nPASS: request changes, review, approve, rerender reset, stale video invalidation\nPASS: vertical and landscape renders; video and download widgets in both review and studio\n",
+    "stderr": "2026-11-07 01:21:30.765 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n"
+  },
+  {
+    "module": "test_production_ui",
+    "exit_code": 0,
+    "seconds": 17.783,
+    "stdout": "PASS: paid UI gated, offline job button, MP4/SRT downloads, previews, mock disclosure and human approval\n",
+    "stderr": "2026-11-07 01:21:43.214 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n"
+  },
+  {
+    "module": "test_drama_quality_ui",
+    "exit_code": 0,
+    "seconds": 4.024,
+    "stdout": "",
+    "stderr": "2026-11-07 01:22:00.971 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n.2026-11-07 01:22:02.784 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n.2026-11-07 01:22:03.272 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n.\n----------------------------------------------------------------------\nRan 3 tests in 2.766s\n\nOK\n"
+  },
+  {
+    "module": "test_marketing_ui",
+    "exit_code": 0,
+    "seconds": 6.187,
+    "stdout": "PASS: Streamlit Growth Engine campaign → 8 assets → approval → edit reset → analytics → export\nPASS: isolated read-only dashboard contains fictional fixtures, no ad calls\n",
+    "stderr": "2026-11-07 01:22:05.179 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n2026-11-07 01:22:07.009 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:07.380 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:07.974 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:08.233 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:08.340 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:08.349 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:09.017 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n2026-11-07 01:22:09.388 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n"
+  },
+  {
+    "module": "test_youtube_ui",
+    "exit_code": 0,
+    "seconds": 8.295,
+    "stdout": "PASS: Nishikotha local registration, clearly separate mock connection, real MP4 plan, owner approval, zero-network dry run; live buttons locked\n",
+    "stderr": "2026-11-07 01:22:11.469 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n"
+  },
+  {
+    "module": "test_private_preview",
+    "exit_code": 0,
+    "seconds": 3.19,
+    "stdout": "PASS: private Render preview requires password; valid password unlocks dashboard\nPASS: missing server password fails closed\n",
+    "stderr": "2026-11-07 01:22:19.273 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n2026-11-07 01:22:20.934 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n"
+  },
+  {
+    "module": "test_storyboard",
+    "exit_code": 0,
+    "seconds": 5.145,
+    "stdout": "PASS: offline sketch, JSON, version lock, human review, stale script and image safety\nPASS: actual Streamlit shot cards, edit, approve, version reset and zero requests\n",
+    "stderr": "2026-11-07 01:22:23.056 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n2026-11-07 01:22:25.184 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:25.190 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:25.540 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:25.545 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:25.628 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:25.633 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:25.991 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:25.994 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:26.044 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n2026-11-07 01:22:26.046 Please replace `use_container_width` with `width`.\n\n`use_container_width` will be removed after 2025-12-31.\n\nFor `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.\n"
+  },
+  {
+    "module": "test_production_pipeline",
+    "exit_code": 0,
+    "seconds": 15.748,
+    "stdout": "PASS: 30s offline moving scenes, tone, music/SFX, bilingual captions, MP4, review gate\n",
+    "stderr": "test_download_rejects_network_pivots (__main__.Contracts.test_download_rejects_network_pivots) ... ok\ntest_planner_contract_and_azure_xml (__main__.Contracts.test_planner_contract_and_azure_xml) ... ok\ntest_plans_and_long_timeline (__main__.Contracts.test_plans_and_long_timeline) ... ok\ntest_runway_payload_and_status (__main__.Contracts.test_runway_payload_and_status) ... ok\ntest_safe_errors_no_billed_http_retry (__main__.Contracts.test_safe_errors_no_billed_http_retry) ... ok\ntest_sound_effects_are_real_audio (__main__.Contracts.test_sound_effects_are_real_audio) ... ok\ntest_spend_and_credentials_gate (__main__.Contracts.test_spend_and_credentials_gate) ... ok\ntest_changed_script_cannot_publish (__main__.Jobs.test_changed_script_cannot_publish) ... ok\ntest_complete_real_codec_mock_and_review (__main__.Jobs.test_complete_real_codec_mock_and_review) ... ok\ntest_saved_task_resumes_without_new_post (__main__.Jobs.test_saved_task_resumes_without_new_post) ... ok\ntest_uncertain_submission_not_rebilled (__main__.Jobs.test_uncertain_submission_not_rebilled) ... ok\ntest_worker_lock_blocks_duplicate_runner (__main__.Jobs.test_worker_lock_blocks_duplicate_runner) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 15.066s\n\nOK\n"
+  }
+]

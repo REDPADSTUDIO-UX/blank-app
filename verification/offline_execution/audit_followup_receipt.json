@@ -1,0 +1,24 @@
+{
+  "selected": [
+    "tests.test_native_local_execution.NativeLocalTests.test_concurrent_native_request_dedup_is_atomic_and_restart_safe",
+    "tests.test_native_local_execution.NativeLocalTests.test_native_install_rejects_unreviewed_cached_bytecode",
+    "tests.test_native_local_execution.NativeLocalTests.test_direct_native_cli_without_kernel_namespace_fails_before_model_import",
+    "tests.test_native_local_execution.NativeLocalTests.test_video_container_metadata_checks_frames_fps_and_dimensions_without_media_generation",
+    "tests.test_native_local_execution.NativeLocalTests.test_runtime_bridge_integrates_existing_service_without_new_route",
+    "tests.test_native_local_execution.NativeLocalTests.test_isolated_child_environment_does_not_inherit_provider_tokens_or_proxies",
+    "tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service"
+  ],
+  "tests": 7,
+  "errors": 0,
+  "failures": 0,
+  "gpu_used": false,
+  "model_inference": false,
+  "real_weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "authorized_processes": "fixed CPU fixture only; source-pinned native process launch blocked by test filter",
+  "requests_import_only_shim": true,
+  "http_transport_verified": false,
+  "model_class_calls": "injected fake classes only, no model libraries imported",
+  "scope": "software engineering only; no model intelligence/artistic acceptance"
+}

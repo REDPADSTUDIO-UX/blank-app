@@ -1,0 +1,20 @@
+{
+  "gpu": "Tesla T4, 15360, 14913",
+  "ram": {
+    "total": 13605818368,
+    "available": 12179718144,
+    "percent": 10.5,
+    "used": 1089945600,
+    "free": 9150083072,
+    "active": 897617920,
+    "inactive": 2573373440,
+    "buffers": 459014144,
+    "cached": 2906775552,
+    "shared": 2551808,
+    "slab": 798748672
+  },
+  "checkpoint": "4d93a8c83e32ca17e9611797c10737ab9d76bed5",
+  "free_account_ui": "not subscribed; zero paid compute units; up to 1h20m estimate, not guaranteed",
+  "model_inferences": 0,
+  "production_gate_unchanged": true
+}

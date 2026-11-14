@@ -1,0 +1,28 @@
+{
+  "resumed_checkpoint": "0220a69787883b0c60b178571995f0019a4a9541",
+  "target_roles": [
+    "casting",
+    "cinematographer",
+    "continuity",
+    "editing",
+    "location",
+    "motion",
+    "music",
+    "performance",
+    "qc",
+    "video",
+    "voice"
+  ],
+  "newly_engineering_complete": [
+    "qc",
+    "location",
+    "editing",
+    "cinematographer",
+    "continuity"
+  ],
+  "no_gpu_complete_total": 13,
+  "gpu_inference_weights_paid_api": 0,
+  "production_ready": 0,
+  "eight_and_director_script_preserved": true,
+  "status_scope": "No-GPU engineering only, actual runtime/outputs/human review unverified"
+}

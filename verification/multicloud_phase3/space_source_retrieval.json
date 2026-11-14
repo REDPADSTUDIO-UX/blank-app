@@ -1,0 +1,14 @@
+{
+  "flux_source": {
+    "url": "https://huggingface.co/spaces/prithivMLmods/Flux.2-Klein-Edit-Ultra-Fast/raw/2225fd5fab9790c7e393c14f08d23fa182a7b71c/app.py",
+    "sha256": "48a5a64faa83500e5bb613f9945509bc257bada8a90ffd1ce8a9de612cfb1e51",
+    "bytes": 8353,
+    "local_research_copy": "/tmp/flux_source.py"
+  },
+  "qwen_space_source": {
+    "url": "https://huggingface.co/spaces/Gwx4/Qwen-Qwen3.5-27B/raw/4dbad5b249dbecc368c42a160865af6cd8bcb2db/app.py",
+    "sha256": "1f7ac77d22119a5feb8ddc3ef7824d7337b29cbbf7e62fa0afeb81f6a0663b92",
+    "bytes": 424,
+    "local_research_copy": "/tmp/qwen_space_source.py"
+  }
+}

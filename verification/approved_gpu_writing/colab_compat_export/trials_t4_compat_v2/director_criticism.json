@@ -1,0 +1,139 @@
+{
+  "experiment_id": "18ae28bcf0ef2ffb7d7bbd44c7ac315d9f9599f85959895a2c08f39c42f74c75",
+  "case": {
+    "id": "director_criticism",
+    "roles": [
+      "director"
+    ],
+    "prompt": "শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}.",
+    "source": "C2 — একই রান্নাঘর, একই সকাল, কোনো সময়ের বিরতি নেই। সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।",
+    "dimensions": [
+      "grounded_criticism"
+    ],
+    "expected_objective_defects": [
+      "prop_state"
+    ],
+    "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+    "required_keys": [
+      "findings"
+    ]
+  },
+  "settings": {
+    "context_tokens": 2048,
+    "max_new_tokens": 1024,
+    "temperature": 0.7,
+    "seed": 117,
+    "enable_thinking": false,
+    "parallel": 1,
+    "case_timeout_seconds": 180,
+    "compatibility_variant": "flash_attention_off_batch128_threads2_after_owned_compile_cleanup"
+  },
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।"
+      },
+      {
+        "role": "user",
+        "content": "শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}.\n\nSOURCE MATERIAL:\nC2 — একই রান্নাঘর, একই সকাল, কোনো সময়ের বিরতি নেই। সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।"
+      }
+    ],
+    "max_tokens": 1024,
+    "temperature": 0.7,
+    "seed": 117,
+    "stream": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "cache_prompt": false
+  },
+  "installation": {
+    "state": "installed_not_yet_inferred",
+    "model_repo": "unsloth/Qwen3.5-9B-GGUF",
+    "model_revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+    "filename": "Qwen3.5-9B-Q4_K_M.gguf",
+    "expected_bytes": 5680522464,
+    "expected_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "runtime_source_revision": "release-b12318; embedded build version below",
+    "owner_download_approved": true,
+    "model_inference": false,
+    "paid_fallback": false,
+    "actual_gpu": "Tesla T4, 15360",
+    "actual_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "download_and_hash_seconds": 60.012006387998554,
+    "model_path": "/content/redpad_phase3/model/Qwen3.5-9B-Q4_K_M.gguf",
+    "runtime_variant": "official_prebuilt_cuda12.8_b12318",
+    "binary": "/content/redpad_phase3/official-b12318/llama-b12318/llama-server",
+    "binary_sha256": "0ec391741c38d09eb4074db407c162686e310799c0dc36ebb734775688384ff5",
+    "runtime_version": "version: 0.9.0-dev (build 12318, commit 7021f7e09)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+    "runtime_assets": [
+      {
+        "name": "cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "bytes": 594371580,
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "digest": "sha256:caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea",
+        "verified_sha256": "caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea"
+      },
+      {
+        "name": "llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "bytes": 197999267,
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "digest": "sha256:e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797",
+        "verified_sha256": "e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797"
+      }
+    ],
+    "runtime_prepare_seconds": 36.84645407500284,
+    "source_build": "interrupted_owned_group_stopped; partial objects retained; no model inference attempted"
+  },
+  "state": "Completed",
+  "actual_output_received": true,
+  "human_review_completed": false,
+  "professional_accepted": false,
+  "automatic_retries": 0,
+  "raw_http_base64": "eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1wiZmluZGluZ3NcIjpbe1wiY29kZVwiOlwicHJvcF9zdGF0ZVwiLFwicXVvdGVcIjpcIuCmuOCmvuCmsuCmruCmviDgpo/gppXgpq7gpr7gpqTgp43gprAg4Kao4KeA4KayIOCmrOCnjeCmr+CmvuCml+Cmn+CmvyDgpqTgpr7gprLgpr7gpqzgpqbgp43gpqcg4KaG4Kay4Kau4Ka+4Kaw4Ka/4Kak4KeHIOCmsOCnh+CmluCnhyDgpprgpr7gpqzgpr8g4Kao4Ka/4Kac4KeH4KawIOCmquCmleCnh+Cmn+CnhyDgpqjgp4fgpqjgpaQg4KaV4KeH4KaJIOCmhuCmsuCmruCmvuCmsOCmvyDgppbgp4vgprLgp4cg4Kao4Ka+4KWkIOCmquCmsOCnh+CmsCBhY3Rpb246IOCmsOCngeCmrOCmviDgpo/gppXgpocg4Kao4KeA4KayIOCmrOCnjeCmr+CmvuCmlyDgprngpr7gpqTgp4cg4KaV4Kaw4KeHIOCmrOCnjeCmr+CmvuCml+Cnh+CmsCDgprjgpqjgpqYg4Kaq4Kah4Ka84KeHIOCmhuCmpuCmqOCmvuCmqOCmleCnhyDgpqbgp4fgppbgpr7gpq/gprzgpaRcIixcIm9ic2VydmF0aW9uXCI6XCLgpqrgp43gprDgpqXgpq4g4Kam4KeD4Ka24KeN4Kav4KeHIOCmuOCmvuCmsuCmruCmviDgpqzgp43gpq/gpr7gppfgpp/gpr8g4Kak4Ka+4Kay4Ka+4Kas4Kam4KeN4KanIOCmhuCmsuCmruCmvuCmsOCmv+CmpOCnhyDgprDgp4fgppbgp4cg4Kaa4Ka+4Kas4Ka/IOCmqOCmv+CmnOCnh+CmsCDgpqrgppXgp4fgpp/gp4cg4Kao4Ka/4Kav4Ka84KeH4Kab4KeH4KaoIOCmj+CmrOCmgiDgppXgp4fgpokg4KaG4Kay4Kau4Ka+4Kaw4Ka/IOCmluCni+CmsuCnhyDgpqjgpr7gpaQg4Kam4KeN4Kas4Ka/4Kak4KeA4Kav4Ka8IOCmpuCng+CmtuCnjeCmr+CnhyDgprDgp4Hgpqzgpr4g4KaP4KaV4KaHIOCmqOCngOCmsiDgpqzgp43gpq/gpr7gppcg4Ka54Ka+4Kak4KeHIOCmleCmsOCnhyDgpqzgp43gpq/gpr7gppfgp4fgprAg4Ka44Kao4KamIOCmpuCnh+CmluCmvuCmr+CmvCwg4Kav4Ka+IOCmhuCml+CnhyDgpqTgpr7gprLgpr7gpqzgpqbgp43gpqcg4Kab4Ka/4KayIOCmj+CmrOCmgiDgppXgp4vgpqjgp4sg4Kaa4Ka+4Kas4Ka/IOCmrOCnjeCmr+CmrOCmueCmvuCmsCDgpqjgpr4g4KaV4Kaw4KeHIOCmhuCmsuCmruCmvuCmsOCmvyDgpqXgp4fgppXgp4cg4Kas4KeH4KawIOCmueCmr+CmvOCmqOCmv+ClpFwiLFwiY2F0ZWdvcnlcIjpcImNvbnRyYWN0XCIsXCJkZWNpc2lvblwiOlwicmV2aXNlXCJ9XX0ifX1dLCJjcmVhdGVkIjoxNzk0NDk0ODU0LCJtb2RlbCI6Ii9jb250ZW50L3JlZHBhZF9waGFzZTMvbW9kZWwvUXdlbjMuNS05Qi1RNF9LX00uZ2d1ZiIsInN5c3RlbV9maW5nZXJwcmludCI6ImIxMjMxOC03MDIxZjdlMDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJ1c2FnZSI6eyJjb21wbGV0aW9uX3Rva2VucyI6MjA1LCJwcm9tcHRfdG9rZW5zIjoyNzEsInRvdGFsX3Rva2VucyI6NDc2LCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MH19LCJpZCI6ImNoYXRjbXBsLU5oYUczbXNSdFVyZGFMczJDM3FGQkxnRG0yeDJ5UjFuIiwidGltaW5ncyI6eyJjYWNoZV9uIjowLCJwcm9tcHRfbiI6MjcxLCJwcm9tcHRfbXMiOjQ3Mi41MzQsInByb21wdF9wZXJfdG9rZW5fbXMiOjEuNzQzNjY3ODk2Njc4OTY2NywicHJvbXB0X3Blcl9zZWNvbmQiOjU3My41MDM3MDU1NTM0NjI5LCJwcmVkaWN0ZWRfbiI6MjA1LCJwcmVkaWN0ZWRfbXMiOjk2MjIuNjA2LCJwcmVkaWN0ZWRfcGVyX3Rva2VuX21zIjo0Ny4xNjk2MzcyNTQ5MDE5NiwicHJlZGljdGVkX3Blcl9zZWNvbmQiOjIxLjIwMDA3ODIzMjQ0NTU1Nn19",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"findings\":[{\"code\":\"prop_state\",\"quote\":\"সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।\",\"observation\":\"প্রথম দৃশ্যে সালমা ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নিয়েছেন এবং কেউ আলমারি খোলে না। দ্বিতীয় দৃশ্যে রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ দেখায়, যা আগে তালাবদ্ধ ছিল এবং কোনো চাবি ব্যবহার না করে আলমারি থেকে বের হয়নি।\",\"category\":\"contract\",\"decision\":\"revise\"}]}"
+        }
+      }
+    ],
+    "created": 1794494854,
+    "model": "/content/redpad_phase3/model/Qwen3.5-9B-Q4_K_M.gguf",
+    "system_fingerprint": "b12318-7021f7e09",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 205,
+      "prompt_tokens": 271,
+      "total_tokens": 476,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-NhaG3msRtUrdaLs2C3qFBLgDm2x2yR1n",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 271,
+      "prompt_ms": 472.534,
+      "prompt_per_token_ms": 1.7436678966789667,
+      "prompt_per_second": 573.5037055534629,
+      "predicted_n": 205,
+      "predicted_ms": 9622.606,
+      "predicted_per_token_ms": 47.16963725490196,
+      "predicted_per_second": 21.200078232445556
+    }
+  },
+  "raw_content": "{\"findings\":[{\"code\":\"prop_state\",\"quote\":\"সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।\",\"observation\":\"প্রথম দৃশ্যে সালমা ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নিয়েছেন এবং কেউ আলমারি খোলে না। দ্বিতীয় দৃশ্যে রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ দেখায়, যা আগে তালাবদ্ধ ছিল এবং কোনো চাবি ব্যবহার না করে আলমারি থেকে বের হয়নি।\",\"category\":\"contract\",\"decision\":\"revise\"}]}",
+  "raw_content_sha256": "d82b7c817e8aaeb4940a516b613aac6f10548832df13c5b50022d767008c45a1",
+  "finish_reason": "stop",
+  "truncated": false,
+  "wall_seconds": 10.16495153699725,
+  "peak_server_rss_bytes": 2234953728,
+  "peak_device_used_mib": 5303,
+  "memory_scope": "Sampled1s; GPU whole-device used incl baseline, not isolated allocator peak"
+}

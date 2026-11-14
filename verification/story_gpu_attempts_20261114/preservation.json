@@ -1,0 +1,67 @@
+{
+  "baseline": "bc33937f071bf66fd38e694a92e55d86c2df7caa",
+  "files": [
+    {
+      "path": "redpad_pipeline/story_quality.py",
+      "sha256": "562c3dcf2e20360bda635f4c4c0bded26768c84c9de4a3629a5138fd232cf971",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "redpad_pipeline/story_bridge.py",
+      "sha256": "45fa36a6c5d7b5f304973e2fe987e10fbe85c84245a38216c79fe0d7a4051406",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "redpad_pipeline/agent_engine.py",
+      "sha256": "1b7720f2a213d8200dd8267a7f630e43bf234a0570a5ce3150f92875c64d46cf",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "redpad_pipeline/intelligence.py",
+      "sha256": "67f5b0b7f635b841b1a0c50513f96d8a3ff76ce1e1dfee9fd63eb8868ccabfc7",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "redpad_pipeline/shared_model_services.py",
+      "sha256": "62934d210285f79116a99abba8d60f19af5a888508ca511dbcdda55a512b0f4a",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "redpad_pipeline/shared_model_worker.py",
+      "sha256": "5b953bfbba3fc02b11d60ca18dd2922f112a4a11d3a5157ea3bd0bfaf2c92d2e",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "assets/filmmaking/story_benchmark.json",
+      "sha256": "611afa3485cf0ec1c80794ab087955db8122ae7c39a50c0eaaa433afdc63baee",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "assets/filmmaking/story_benchmark.schema.json",
+      "sha256": "76576385301113dae575d1e0974f23a57fd377962aacd3527d80783aae964387",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "assets/professional/phase3_candidates.json",
+      "sha256": "f157f9113a7db1616acc9b2473cfc669099b6bd9423cd4017b7d660765ed0c1f",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "assets/professional/models.json",
+      "sha256": "66aea06431593317c4821120c1a78cdbe3902733afa4b662e4b4d1586c14c300",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "redpad_pipeline/agent_catalog.json",
+      "sha256": "4c30b21812fa36784a8e363552655eb18df392fc7b13157381dd46896df16865",
+      "unchanged_from_checkpoint": true
+    },
+    {
+      "path": "verification/story_intelligence/test_results.json",
+      "sha256": "b24c43efaf80614f040d705282807713067de21624aa29ad8f2fa1b0d997cb67",
+      "unchanged_from_checkpoint": true
+    }
+  ],
+  "software_tests_rerun": false,
+  "reason": "No implementation changes or model execution occurred; prior Story preparation retained. Verification covered real platform access attempts, JSON consistency and byte preservation."
+}

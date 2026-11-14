@@ -1,0 +1,343 @@
+======================================================================
+ERROR: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='youtube')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 19, in test_every_specialist_positive_negative_recovery_and_model_block
+    data=example(key);result=prepare(key,data)
+                             ^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialists.py", line 147, in prepare
+    derived,findings=process(key,rows,data)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_workflows.py", line 77, in process
+    return media_process(key,rows,data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_media.py", line 78, in process
+    return operations(key,rows,data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_operations.py", line 51, in process
+    from .youtube import channel_id,YouTubeError
+  File "/workspace/blank-app/redpad_pipeline/youtube.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+======================================================================
+ERROR: test_youtube_prepare_only_no_network (tests.test_specialists.SpecialistTests.test_youtube_prepare_only_no_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 123, in test_youtube_prepare_only_no_network
+    result=prepare('youtube',data)['artifact']['derived'];self.assertFalse(result['publish']);self.assertFalse(result['upload'])
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialists.py", line 147, in prepare
+    derived,findings=process(key,rows,data)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_workflows.py", line 77, in process
+    return media_process(key,rows,data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_media.py", line 78, in process
+    return operations(key,rows,data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_operations.py", line 51, in process
+    from .youtube import channel_id,YouTubeError
+  File "/workspace/blank-app/redpad_pipeline/youtube.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+======================================================================
+ERROR: test_branched_project_queue_is_idempotent_and_approval_gated (tests.test_specialist_integration.Integration.test_branched_project_queue_is_idempotent_and_approval_gated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialist_integration.py", line 101, in test_branched_project_queue_is_idempotent_and_approval_gated
+    project=queue_project(self.e,inputs,[script,director]);count=len(self.s.tasks())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_project.py", line 37, in queue_project
+    prepare(key,data)
+  File "/workspace/blank-app/redpad_pipeline/specialists.py", line 147, in prepare
+    derived,findings=process(key,rows,data)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_workflows.py", line 77, in process
+    return media_process(key,rows,data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_media.py", line 78, in process
+    return operations(key,rows,data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_operations.py", line 51, in process
+    from .youtube import channel_id,YouTubeError
+  File "/workspace/blank-app/redpad_pipeline/youtube.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+======================================================================
+ERROR: test_local_backend_boundaries_and_safe_errors (tests.test_specialist_integration.Integration.test_local_backend_boundaries_and_safe_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialist_integration.py", line 82, in test_local_backend_boundaries_and_safe_errors
+    with self.assertRaises(MediaBlocked):ReadOnlyAnalyticsAdapter().query('channel_profile','UC'+'a'*22)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/specialist_adapters.py", line 65, in query
+    from .youtube import channel_id as validate_channel
+  File "/workspace/blank-app/redpad_pipeline/youtube.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+======================================================================
+ERROR: test_deterministic_operations_never_publish_or_fabricate_receipts (tests.test_no_gpu_staging.NoGPUStagingTests.test_deterministic_operations_never_publish_or_fabricate_receipts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_no_gpu_staging.py", line 161, in test_deterministic_operations_never_publish_or_fabricate_receipts
+    self.assertFalse(tool_request('youtube','read_only_analytics',dict(operation='channel_profile',channel_id=channel))['executed'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/no_gpu_staging.py", line 216, in tool_request
+    from .youtube import channel_id
+  File "/workspace/blank-app/redpad_pipeline/youtube.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+======================================================================
+ERROR: test_task_bound_tools_keep_same_approval_and_no_publishing_boundary (tests.test_no_gpu_staging.NoGPUStagingTests.test_task_bound_tools_keep_same_approval_and_no_publishing_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_no_gpu_staging.py", line 180, in test_task_bound_tools_keep_same_approval_and_no_publishing_boundary
+    a=self.services.stage_tool_request(run,'read_only_analytics',{'operation':'channel_profile','channel_id':'UC'+'a'*22})
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/shared_model_services.py", line 109, in stage_tool_request
+    return StagingLedger(self.store).stage_tool(run,operation,request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/no_gpu_staging.py", line 341, in stage_tool
+    plan=tool_request(context['role'],operation,request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/no_gpu_staging.py", line 216, in tool_request
+    from .youtube import channel_id
+  File "/workspace/blank-app/redpad_pipeline/youtube.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+======================================================================
+FAIL: test_fail_retry_and_recovery (tests.test_agent_foundation.FoundationTests.test_fail_retry_and_recovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_agent_foundation.py", line 104, in test_fail_retry_and_recovery
+    self.e.retry(run['id'],inputs=fixture('story'));self.assertEqual(self.e.execute(run['id']),'Awaiting QC')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='art')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='character')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='cinematographer')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='continuity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='costume')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='editing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='growth')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='location')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='motion')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='music')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='performance')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='production_manager')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='qc')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='storyboard')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='video')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_every_specialist_positive_negative_recovery_and_model_block (tests.test_specialists.SpecialistTests.test_every_specialist_positive_negative_recovery_and_model_block) (agent='voice')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialists.py", line 24, in test_every_specialist_positive_negative_recovery_and_model_block
+    self.e.retry(rid,inputs=data);self.assertEqual(self.e.execute(rid),'Awaiting QC')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+
+
+======================================================================
+FAIL: test_each_specialist_revisions_approval_sources_and_recovery (tests.test_specialist_integration.Integration.test_each_specialist_revisions_approval_sources_and_recovery) (agent='youtube')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_specialist_integration.py", line 26, in test_each_specialist_revisions_approval_sources_and_recovery
+    tid=self.task(key);old=self.artifact(tid)
+        ^^^^^^^^^^^^^^
+  File "/workspace/blank-app/tests/test_specialist_integration.py", line 18, in task
+    self.assertEqual(state,'Awaiting QC',next(r['error'] for r in self.e.runs() if r['id']==rid))
+AssertionError: 'Failed' != 'Awaiting QC'
+- Failed
++ Awaiting QC
+ : Execution failed; invalid response or internal failure. No partial output saved.
+
+======================================================================
+FAIL: test_music_15_is_not_silently_sent_to_existing_35_worker (tests.test_no_gpu_staging.NoGPUStagingTests.test_music_15_is_not_silently_sent_to_existing_35_worker)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_no_gpu_staging.py", line 112, in test_music_15_is_not_silently_sent_to_existing_35_worker
+    self.assertTrue(any('No legacy replacement' in b for b in draft['blockers']))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 153 tests in 8.449s
+
+FAILED (failures=19, errors=6)

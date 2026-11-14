@@ -1,0 +1,14 @@
+{
+  "parent": "f71e282a7274da850bab51c9848de925fe718e9a",
+  "scope_sha256": "b059b6108e7353259cc6c3a0c174dfb8fad054ae02727bbda013103f673302b8",
+  "agents_preserved": 20,
+  "knowledge_conditioning_not_weight_training": true,
+  "new_model_variants": 0,
+  "new_cloud_resources": 0,
+  "paid_calls": 0,
+  "youtube_writes": 0,
+  "production_data_accessed": false,
+  "Kaggle_or_Google_revisited": false,
+  "knowledge_snapshots_preserved": true,
+  "next_action": "Resume existing stages after blockers; independent editorial review and stronger-model approval remain separate. Do not regenerate completed cases."
+}

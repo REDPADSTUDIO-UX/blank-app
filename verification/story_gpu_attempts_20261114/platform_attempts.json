@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "baseline": "bc33937f071bf66fd38e694a92e55d86c2df7caa",
+  "attempt_order_preserved": true,
+  "attempt_scope": "Actual access attempts from this connected environment, not a claim of global provider outage, exhausted personal quota or no free GPUs worldwide.",
+  "attempts": [
+    {
+      "order": 1,
+      "platform": "Google Colab Free",
+      "url": "https://colab.research.google.com/",
+      "status": "blocked_before_platform_access",
+      "browser_observation": {
+        "surface": "Cloud Chromium native window via CUA",
+        "observed_page": "This site can’t be reached",
+        "error": "ERR_TUNNEL_CONNECTION_FAILED",
+        "account_state": "not_reached",
+        "gpu_type": null,
+        "gpu_vram": null,
+        "quota": "not_observed",
+        "runtime_started": false,
+        "observation_provenance": "Assistant observed actual screenshot in tool result; this JSON is a transcription, not a DOM extraction."
+      },
+      "shell_evidence": {
+        "platform": "colab",
+        "url": "https://colab.research.google.com/",
+        "error_type": "URLError",
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+        "seconds": 0.015
+      },
+      "canary_attempted": false,
+      "primary_benchmark_attempted": false,
+      "model_loaded": null,
+      "reason": "Platform domain absent from enforced restricted network allowlist; browser tunnel failure corroborated by HTTP CONNECT 403. Account/GPU/quota feasibility could not be inspected.",
+      "next_action": "Allow the platform domains through environment settings, then retry normal authorized browser/CLI access; do not bypass the proxy."
+    },
+    {
+      "order": 2,
+      "platform": "Kaggle Notebooks Free GPU",
+      "url": "https://www.kaggle.com/code",
+      "status": "blocked_before_platform_access",
+      "browser_observation": {
+        "surface": "Cloud Chromium native window via CUA",
+        "observed_page": "This site can’t be reached",
+        "error": "ERR_TUNNEL_CONNECTION_FAILED",
+        "account_state": "not_reached",
+        "gpu_type": null,
+        "gpu_vram": null,
+        "quota": "not_observed",
+        "runtime_started": false,
+        "observation_provenance": "Assistant observed actual screenshot in tool result; this JSON is a transcription, not a DOM extraction."
+      },
+      "shell_evidence": {
+        "platform": "kaggle",
+        "url": "https://www.kaggle.com/code",
+        "error_type": "URLError",
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+        "seconds": 0.003
+      },
+      "canary_attempted": false,
+      "primary_benchmark_attempted": false,
+      "model_loaded": null,
+      "reason": "Platform domain absent from enforced restricted network allowlist; browser tunnel failure corroborated by HTTP CONNECT 403. Account/GPU/quota feasibility could not be inspected.",
+      "next_action": "Allow the platform domains through environment settings, then retry normal authorized browser/CLI access; do not bypass the proxy."
+    },
+    {
+      "order": 3,
+      "platform": "Lightning AI Free tier",
+      "url": "https://lightning.ai/",
+      "status": "blocked_before_platform_access",
+      "browser_observation": {
+        "surface": "Cloud Chromium native window via CUA",
+        "observed_page": "This site can’t be reached",
+        "error": "ERR_TUNNEL_CONNECTION_FAILED",
+        "account_state": "not_reached",
+        "gpu_type": null,
+        "gpu_vram": null,
+        "quota": "not_observed",
+        "runtime_started": false,
+        "observation_provenance": "Assistant observed actual screenshot in tool result; this JSON is a transcription, not a DOM extraction."
+      },
+      "shell_evidence": {
+        "platform": "lightning",
+        "url": "https://lightning.ai/",
+        "error_type": "URLError",
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+        "seconds": 0.003
+      },
+      "canary_attempted": false,
+      "primary_benchmark_attempted": false,
+      "model_loaded": null,
+      "reason": "Platform domain absent from enforced restricted network allowlist; browser tunnel failure corroborated by HTTP CONNECT 403. Account/GPU/quota feasibility could not be inspected.",
+      "next_action": "Allow the platform domains through environment settings, then retry normal authorized browser/CLI access; do not bypass the proxy."
+    },
+    {
+      "order": 4,
+      "platform": "Hugging Face free GPU / ZeroGPU",
+      "url": "https://huggingface.co/spaces",
+      "status": "blocked_before_platform_access",
+      "browser_observation": {
+        "surface": "Cloud Chromium native window via CUA",
+        "observed_page": "This site can’t be reached",
+        "error": "ERR_TUNNEL_CONNECTION_FAILED",
+        "account_state": "not_reached",
+        "gpu_type": null,
+        "gpu_vram": null,
+        "quota": "not_observed",
+        "runtime_started": false,
+        "observation_provenance": "Assistant observed actual screenshot in tool result; this JSON is a transcription, not a DOM extraction."
+      },
+      "shell_evidence": {
+        "platform": "hugging_face",
+        "url": "https://huggingface.co/spaces",
+        "error_type": "URLError",
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+        "seconds": 0.003
+      },
+      "canary_attempted": false,
+      "primary_benchmark_attempted": false,
+      "model_loaded": null,
+      "reason": "Platform domain absent from enforced restricted network allowlist; browser tunnel failure corroborated by HTTP CONNECT 403. Account/GPU/quota feasibility could not be inspected.",
+      "next_action": "Allow the platform domains through environment settings, then retry normal authorized browser/CLI access; do not bypass the proxy."
+    },
+    {
+      "order": 5,
+      "platform": "Other already owner-authorized FREE runtime",
+      "status": "no_eligible_runtime_exposed",
+      "inventory_checked": [
+        "Current connected tools: no GPU/notebook execution connector",
+        "Cloud environment: no configured outbound cloud identity or runtime variables",
+        "Attached host inventory: zero GPUs, nvidia-smi absent",
+        "Existing provider ledger: no additional verified free runtime; paid RunPod excluded"
+      ],
+      "runtime_started": false,
+      "canary_attempted": false,
+      "reason": "No concrete additional already-authorized free runtime available to attempt. No paid signup, new account, deployment or hosted generation API was used."
+    }
+  ],
+  "screenshots": "Actual browser screenshots are visible in conversation tool results. Remote desktop screenshot paths were not accessible from the repository workspace, so no image files/hashes are claimed in Git.",
+  "browser_tool_notes": [
+    "No callable Browser extension tool was exposed.",
+    "Cloud browser tab API returned Browser Use could not read requirements.",
+    "Native Chromium window successfully navigated all four URLs and showed the observed network errors."
+  ],
+  "successful_platform": null,
+  "real_model_runs": 0,
+  "real_story_output": null,
+  "human_review": "pending_no_candidate",
+  "owner_acceptance": "not_granted_for_any_new_output"
+}

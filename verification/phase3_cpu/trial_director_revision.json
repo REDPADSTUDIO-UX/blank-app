@@ -1,0 +1,134 @@
+{
+  "name": "trial_director_revision",
+  "agent": "director",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "device": "CPU",
+  "request": {
+    "agent": "director",
+    "instructions": "আগের review-এ quote বানানো হয়েছে এবং ভুল grammar পরামর্শ ছিল। এবার শুধু TWO findings লিখুন, প্রতিটিতে issue ও instruction একটি ছোট বাংলা বাক্য। প্রথম quote হুবহু “INT. বাসভাড়া - সকাল”; দ্বিতীয় quote হুবহু “তানিiflowerা”। এগুলো actual source-এ আছে—কোনো নাম বা শব্দ যোগ করবেন না। Return {\"strengths\":[],\"findings\":[{\"criterion\":\"dialogue\",\"quote\":str,\"issue\":str,\"instruction\":str},{\"criterion\":\"logic\",\"quote\":str,\"issue\":str,\"instruction\":str}]}. বাসভাড়া টাকা, স্থান নয়; চরিত্রের মিশ্র-অক্ষরের বিকৃত নামও লক্ষ্য করুন। নতুন ঘটনা, midnight, hat বা তথ্য বানাবেন না। কোনো numeric score বা approval নয়।",
+    "brief": {
+      "title": "একটা ছাতা",
+      "premise": "ঢাকার বৃষ্টির সকাল। রাশেদ (৩২) ও তানিয়া (২৯) বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নয়।",
+      "genre": "family drama",
+      "tone": "natural Bangladeshi Bengali, restrained emotion, gentle character wit"
+    },
+    "experimental_source": {
+      "title": "একটা ছাতা",
+      "hook": {
+        "image": "তানিiflowerা বাসভাড়া থেকে বাইরে যাচ্ছে, রাশেদের ছাতা হাতে দেখা যাচ্ছে কিন্তু তার মুখে না",
+        "question": "তানিiflowerা কেন ছাতা দেখে বিস্ময় করে?",
+        "payoff": "রাশেদ তার ছাতা দেখেছে কিন্তু তানিiflowerা জানে না"
+      },
+      "characters": [
+        {
+          "name": "রাশেদ",
+          "want": "অফিসে জরুরি উপস্থিতি করতে পারে",
+          "voice": "স্থায়ী, সামান্য ক্ষুদ্র হাসি"
+        },
+        {
+          "name": "তানিiflowerা",
+          "want": "চাকরির সাক্ষাৎকার পাওয়া",
+          "voice": "সামান্য বিস্ময়, স্বাভাবিক হাসি"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "s1",
+          "heading": "INT. বাসভাড়া - সকাল",
+          "seconds": 30,
+          "objective": "রাশেদ ছাতা নিয়ে বাইরে যায়",
+          "obstacle": "তানিiflowerা বাইরে যাচ্ছে না",
+          "turn": "তানিiflowerা ছাতা দেখে মুখে হাসি দেয়",
+          "consequence": "তানিiflowerা বাইরে যায় না",
+          "beats": [
+            {
+              "type": "action",
+              "text": "রাশেদ ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "তানিiflowerা",
+              "text": "ওই ছাতা আগে কখন দেখেছিলি?"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "রাশেদ",
+              "text": "কাল রাতে হাতে ছিল না, আজ পরে হাতে আসল।"
+            }
+          ],
+          "sound": {
+            "music": "সাদা সামান্য বাজনা",
+            "sfx": "বৃষ্টির শব্দ, ছাতা বাজানোর শব্দ"
+          }
+        },
+        {
+          "id": "s2",
+          "heading": "EXT. বাসভাড়া দরজা - সকাল",
+          "seconds": 30,
+          "objective": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়",
+          "obstacle": "স্ক্রিনে রাশেদের ছাতা দেখা যায়",
+          "turn": "তানিiflowerা স্ক্রিন বন্ধ করে দেয়",
+          "consequence": "রাশেদ ফেরত আসে, ছাতা হাতে না দেখা যায়",
+          "beats": [
+            {
+              "type": "action",
+              "text": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়, স্ক্রিনে রাশেদের ছাতা দেখা যায়।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "তানিiflowerা",
+              "text": "আমি কি কোনো ছাতা দেখেছি?"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "রাশেদ",
+              "text": "তুমি ছাতা দেখে না, আমি তো দেখেছি।"
+            }
+          ],
+          "sound": {
+            "music": "সাদা সামান্য বাজনা",
+            "sfx": "স্ক্রিনে ছাতা দেখা, তানিiflowerা হাত বন্ধ করে দেয়"
+          }
+        }
+      ]
+    },
+    "targets": null
+  },
+  "prompt_sha256": "ca224460859e32f92718b8e90b419ed06d4c526c2dc91f34a8858f251288fcbe",
+  "raw": "{\"strengths\":[],\"findings\":[{\"criterion\":\"dialogue\",\"quote\":\"ওই ছাতা আগে কখন দেখেছিলি?\",\"issue\":\"তানিiflowerা ছাতা দেখে বিস্ময় করে, কিন্তু রাশেদের কথা শুনে মুখে হাসি দেয় — এটি স্বাভাবিক হাসি নয়, তার মানসিক অবস্থা প্রকাশ করে না\",\"instruction\":\"তানিiflowerা ছাতা দেখে হাসি দেয় বললে সেটি স্বাভাবিক হাসি হিসেবে না বোঝাতে হবে, যে তার মনে কিছু অস্বস্তি বা অবাক আছে, কিন্তু সেটি ক্ষুদ্র হাসির মাধ্যমে প্রকাশ করা হয়েছে\"},{\"criterion\":\"logic\",\"quote\":\"তুমি ছাতা দেখে না, আমি তো দেখেছি।\",\"issue\":\"রাশেদ তানিiflowerা ছাতা দেখে না বলে জানাচ্ছে, কিন্তু তানিiflowerা তার ছাতা দেখে না বলে প্রতিক্রিয়া দেয় — এটি তাদের মধ্যে অভ্য",
+  "result": null,
+  "error": "Local response incomplete; draft was not accepted.",
+  "state": "Failed",
+  "validation": {},
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.2,
+      "num_predict": 512,
+      "num_ctx": 4096,
+      "seed": 42
+    },
+    "inference_completed": false,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 512,
+    "eval_duration_ns": 66283367000,
+    "prompt_eval_count": 2071,
+    "prompt_eval_duration_ns": 41747793000,
+    "load_duration_ns": 2806507021,
+    "total_duration_ns": 110851128829,
+    "finish_reason": "length",
+    "wall_seconds": 110.889,
+    "raw_sha256": "0dd4c4a4dade3c7a389e601483741bc401b0ad06018511ab8d4185bb80e17ce4"
+  },
+  "wall_seconds": 110.89,
+  "aggregate_process_peak_rss_bytes": 3309756416,
+  "memory_note": "Sampled aggregate RSS of caller and descendant server/runner, not unique model allocation",
+  "provenance": "incomplete_or_failed_local_attempt",
+  "source_approval": "Unapproved research candidate only",
+  "production_approved": false,
+  "independent_human_review": false
+}

@@ -1,0 +1,47 @@
+{
+  "failures_and_corrections": [
+    {
+      "failure": "30-episode direction packet exceeded 100000-character record cap; source fan-out fixture later stalled.",
+      "correction": "Bounded per-episode critic compilation; transaction-local DAG memoization/cycle detection. A stalled owned software fixture was interrupted; no model was running."
+    },
+    {
+      "failure": "Original authored screenplay omitted required distinct voice/sound metadata.",
+      "correction": "Fixed authored fixture input, without changing or claiming improvement to a model output."
+    },
+    {
+      "failure": "Empty subtitle rejected a legitimate silent shot.",
+      "correction": "Allow explicit empty subtitle while requiring typed string and safe timing."
+    },
+    {
+      "failure": "Legacy speech adapter expected MediaBlocked for missing configuration.",
+      "correction": "Preserve MediaBlocked compatibility and require explicit documented preset/style."
+    },
+    {
+      "failure": "Old micro-scene schema rejected a complete 90+ character visual action.",
+      "correction": "Bounded per-scene action/dialogue limits corrected; raw content retained, no manual model polishing."
+    },
+    {
+      "failure": "Initial new test database clone used a different project ID.",
+      "correction": "Preserve project ID when snapshotting fixtures; do not relabel source projects."
+    }
+  ],
+  "retained_failed_regression": "regression_initial_failed.json",
+  "ram_gib_current_probe": 9.73,
+  "new_model_calls": 0,
+  "new_large_model_downloads": 0,
+  "actual_human_reviews": 0,
+  "weight_training": false,
+  "recovery": {
+    "full_workspace_recovered": true,
+    "saved_implementation_checkpoint": "b459290568a880da15a8c7dd4ad67eaf071782e8",
+    "original_54_outputs_reopened_without_generation": true,
+    "new_model_calls_after_recovery": 0,
+    "new_human_reviews_after_recovery": 0,
+    "unfinished_fixture_taint_guard": "implemented; explicit bool, inherited fixture provenance, derived mix flag; targeted tests passed",
+    "final_required_regression": {
+      "tests": 368,
+      "exit_code": 0,
+      "evidence": "recovery_regression.json"
+    }
+  }
+}

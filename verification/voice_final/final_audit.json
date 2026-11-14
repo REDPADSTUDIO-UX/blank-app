@@ -1,0 +1,95 @@
+{
+  "resumed_commit": "e7dc992f187d9bd545b88d3ee11dd174ac08566c",
+  "audit_kind": "Current automated code/evidence audit by same assistant; not independent human review",
+  "new_distinct_checks": 24,
+  "affected_existing_distinct_checks": 12,
+  "distinct_successful_checks": 36,
+  "successful_test_ids": [
+    "tests.test_native_local_execution.NativeLocalTests.test_readiness_separates_engineering_from_gated_voice_source",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_all_19_roles_all_declared_supported_contracts_without_resources",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_indic_speak_keeps_native_entry_unbound_until_exact_revision_verified",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_indicf5_reference_transcript_consent_and_original_bengali_preserved",
+    "tests.test_selected_voice_binding.SelectedCastingTests.test_f5_casting_uses_same_scoped_receipt_and_revocation_stales_handoff",
+    "tests.test_selected_voice_binding.SelectedCastingTests.test_selected_speak_casting_stages_exact_worker_keeps_director_qc_producer_pending",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_both_exact_native_install_recipes_validate_metadata_without_opening_weights",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_complete_token_map_rejects_same_base_but_wrong_conditioning_or_audio_id",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_decoder_rejects_unbounded_config_unknown_head_or_stock_fallback",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_direct_f5_preparation_binds_consent_original_transcript_and_supervisor",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_direct_f5_revocation_or_task_revision_stales_prepared_request",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_extra_or_changed_source_and_wrong_snac_origin_are_rejected",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_f5_fixed_structure_fp32_strict_load_with_fake_classes_only",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_f5_reference_zero_energy_wrong_rate_and_truncation_fail_before_loading",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_f5_vocabulary_preserves_space_bengali_combining_marks_and_indices",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_missing_actual_bundle_fails_before_any_model_import_or_download",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_missing_or_wrong_source_review_manifest_cannot_report_a_verified_binding",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_native_queue_is_idempotent_but_launch_is_still_forbidden",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_reference_document_alone_cannot_prepare_f5_native_execution",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_review_manifest_has_exact_accessible_revisions_and_no_weight_content",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_selected_f5_wrapper_never_accepts_generic_or_partial_ema_checkpoint",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_selected_speak_constructor_never_calls_networking_upstream_init",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_source_agreement_does_not_authorize_worker_or_cpu_inference",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_unknown_speaker_control_tokens_and_endpoint_controls_rejected",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_unsupported_emotion_pronunciation_and_auto_remote_code_controls_rejected",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_upstream_source_execution_imports_are_absent_at_module_scope",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_voice_bridge_or_source_review_change_stales_prepared_request",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_wrong_selected_source_revision_and_config_hash_are_rejected",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_director_inspection_contains_explicit_voice_blocker_without_approval",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_missing_source_casting_draft_abstains_without_hidden_fallback",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_public_source_and_exact_selected_gated_sources_are_separate",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_readiness_casting_complete_with_explicit_voice_blocker_not_false_readiness",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_reference_voice_actor_spoof_rejected_and_document_only_draft_cannot_clone",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_unreviewed_selected_voice_fails_before_any_model_import"
+  ],
+  "test_invocations": 43,
+  "unique_error_retained": [
+    "unittest.loader._FailedTest.test_readiness_preserves_complete_vs_runtime_blocked_and_partial"
+  ],
+  "error_resolution": "Test selector name corrected; actual intended readiness test passed. No code assertion failures observed.",
+  "recheck_reasons": [
+    "After adding zero-energy/wrong-rate/truncated-reference guard, only four affected F5 positives rerun alongside one new guard test.",
+    "After requiring source-review manifest at binding resolution, only two affected source gates rerun alongside two first-time checks."
+  ],
+  "engineering_complete": 19,
+  "partial": 0,
+  "runtime": "MODEL/GPU VALIDATION BLOCKED",
+  "artistic": "HUMAN REVIEW PENDING",
+  "professionally_accepted_of_21": 0,
+  "source_files_reviewed": 19,
+  "source_byte_attestation": "Exact revision Raw page text hashes; not an independent Git-blob byte attestation. Future approved local source must match or fail closed.",
+  "models_profiles_other_seventeen_director_script_preserved": true,
+  "source_sha256": {
+    "voice_source_policy.py": "5dd859db99a8f3f2d40405882a35d39806ea9c755d41614bd877de41734fd76a",
+    "voice_native_contracts.py": "b569912f89ba4722235e036a9fde4520fd1aa212d28aa7eb132f9c82fea36e45",
+    "native_voice_worker.py": "48612e3da2004ede041e97364081de74e26db8b8c799deafda255d43d4f5fb3c",
+    "native_execution.py": "228b38b147b04ddfde54176e991a4446eabc14795433112f2113ca512a8028c2",
+    "native_local_bundle.py": "bd5b7b9767dc3756a37e998994806340854ac15410496fde11da60414122edd7",
+    "native_local_worker.py": "cf2a910d3c9da76fec67373ecb9b30715293cf19df50601f6065ff5174fc1edc",
+    "offline_preparation.py": "423b5f5316f90ca41be327d376b57d0315e7be6b07b462ef486e4e23ccc79d22",
+    "offline_specialist_preparation.py": "5c03f91f0ee3f2f4eb147fd7cd9ce18bb9c46523c7b5af65769a0d8cf843ca60"
+  },
+  "real_generation_or_listening_results": null,
+  "gpu_cpu_inference_real_weights_hosted_paid_new_licenses": 0,
+  "historical_supervisor_evidence_reused": "verification/offline_execution/second_audit.json: fixed CPU dummy timeout/cancellation/recovery; not repeated because lifecycle implementation unchanged.",
+  "remaining_runtime_dependencies": {
+    "indic_speak": [
+      "Approved exact 7,068,852,569-byte selected weight recipe; no download approved by this task",
+      "Exact approved SNAC 24kHz auxiliary revision/files + dependencies",
+      "Matching selected v9 EMA weights-only codec state and BF16 package/device compatibility",
+      "Bounded source prompt/token-contract and ckpt-8937/8944 documentation discrepancy test",
+      "Independent Bengali listening/speaker/pronunciation/emotion review and owner acceptance"
+    ],
+    "indicf5": [
+      "Approved exact 1,402,789,408-byte selected safetensors recipe; no download approved by this task",
+      "Actual selected INF5 wrapper key/shape and fixed FP32 DiT/CFM/Vocos compatibility",
+      "Approved installed f5_tts/dependencies + complete owner source/code/license receipt",
+      "Actual authorized voice reference/transcript, scoped non-revoked human consent and independent listening"
+    ],
+    "shared": [
+      "Owner hardware kernel isolation preflight (prior bwrap failure remains unresolved)",
+      "Separate explicit model installation/download and runtime/GPU authorization",
+      "Raw output + provenance + independent QC/Director/Producer approval gates"
+    ]
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "intelligence.story.v1",
+  "professional_case_id": "professional_story_v1",
+  "selected_profile": "qwen35_27",
+  "model_repo": "Qwen/Qwen3.5-27B",
+  "model_revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+  "adapter": "hf_text_nf4",
+  "case_status": "original authored specification, not candidate output or owner-approved production story",
+  "workflow": [
+    "brief",
+    "research_context",
+    "premise",
+    "character_motivations",
+    "causal_beats",
+    "emotional_arc",
+    "story_treatment",
+    "self_critique",
+    "independent_qc",
+    "targeted_revision",
+    "owner_review"
+  ],
+  "instructions": [
+    "Write original natural Bengali story prose from the supplied existing professional brief. Do not copy another drama or imitate a living writer.",
+    "Ask a central dramatic question requiring a costly protagonist decision. Father supports the job but fears solitude; daughter’s independence is not selfishness.",
+    "Give each major character want, need, fear, contradiction, relationship, internal conflict, observable behavior and emotional change.",
+    "Every beat changes information, relationships, emotion, stakes, goals or options through a credible cause. Track character knowledge and possessions.",
+    "Earn at least two subtle emotional moments through earlier setup, small human actions and consequences; tragedy or speeches are not automatic emotion.",
+    "Include one motivated humorous moment from personality, irony, awkwardness or relationship; avoid unrelated jokes.",
+    "Use fair clues and information control for one earned reveal; escalate choices and consequences rather than repeat scenes.",
+    "Use visible action, location or sound for filmability. Flag cultural and economic specifics as hypotheses unless supplied verified sources establish them.",
+    "Return only the artifact contract. Self-critique is a proposal, never an independent professional score. Preserve exact owner locks and untargeted records."
+  ],
+  "research_policy": {
+    "new_principles": "authored creative hypotheses requiring independent Bengali review",
+    "existing_sources": "assets/filmmaking/knowledge.json; original lessons only where approved; excluded sources remain excluded",
+    "topics": [
+      "family and generation",
+      "relationship conflict and vulnerability",
+      "middle/working-class livelihood without stereotype",
+      "urban/rural specifics require evidence",
+      "romance and emotional progression",
+      "situational humor and subtext",
+      "suspense, fair misdirection, setbacks, setup/payoff and meaningful endings"
+    ],
+    "audience_claims": "Hypotheses unless actual attributed analytics supplied"
+  },
+  "rubric": [
+    {
+      "id": "story.creative.1",
+      "criterion": "originality",
+      "question": "Distinct choices and situations; no originality guarantee without comparative review",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.2",
+      "criterion": "causal_logic",
+      "question": "Each turn follows an established action and consequence",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.3",
+      "criterion": "character_agency",
+      "question": "Protagonist chooses between costly alternatives",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.4",
+      "criterion": "psychological_depth",
+      "question": "Wants conflict with fears and observable behavior",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.5",
+      "criterion": "relationship_credibility",
+      "question": "Both father and daughter have defensible competing needs",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.6",
+      "criterion": "emotional_authenticity",
+      "question": "Earlier investment and restrained action earn emotional moments",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.7",
+      "criterion": "organic_humor",
+      "question": "Humor grows from a specific personality or situation",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.8",
+      "criterion": "bangladesh_authenticity",
+      "question": "Social details are specific, attributed where factual, and avoid stereotypes",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.9",
+      "criterion": "hook_suspense",
+      "question": "Fairly controlled information motivates curiosity",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.10",
+      "criterion": "escalation",
+      "question": "Choices narrow or costs increase instead of repetitive conflict",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.11",
+      "criterion": "setup_payoff",
+      "question": "Earlier visible plants motivate later consequences",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.12",
+      "criterion": "ending_quality",
+      "question": "Ending follows choices and changes both characters without a formulaic rescue",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.13",
+      "criterion": "filmability",
+      "question": "Action, location or sound communicates each major beat",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.14",
+      "criterion": "consistency",
+      "question": "Knowledge, timeline, possessions and locked facts remain coherent",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.15",
+      "criterion": "audience_engagement",
+      "question": "Engagement is a reviewer hypothesis, not invented audience analytics",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    }
+  ],
+  "adversarial": [
+    {
+      "id": "A",
+      "defect": "coincidence",
+      "authored_control": "Lost payment reappears without a prior recovery event.",
+      "expected": "Identify the unsupported recovery and revise affected causal beats only.",
+      "execution": "prepared_not_run"
+    },
+    {
+      "id": "B",
+      "defect": "secret_knowledge",
+      "authored_control": "Daughter reacts to a ticket before discovering it.",
+      "expected": "Require a previous disclosure or discovery event; preserve knowledge states.",
+      "execution": "prepared_not_run"
+    },
+    {
+      "id": "C",
+      "defect": "forced_emotion",
+      "authored_control": "Unprepared terminal illness is introduced solely to force tears.",
+      "expected": "Identify missing emotional investment; prefer established behavior and consequences.",
+      "execution": "prepared_not_run"
+    },
+    {
+      "id": "D",
+      "defect": "forced_humor",
+      "authored_control": "An unrelated joke interrupts a serious choice.",
+      "expected": "Tie humor to personality, relationship or situation; remove unsupported interruption.",
+      "execution": "prepared_not_run"
+    },
+    {
+      "id": "E",
+      "defect": "flat_characters",
+      "authored_control": "Father only obstructs and daughter only reacts.",
+      "expected": "Give both defensible wants, fears, contradictions and consequential choices.",
+      "execution": "prepared_not_run"
+    },
+    {
+      "id": "F",
+      "defect": "repetition",
+      "authored_control": "Three scenes repeat fear of departure without changing any story state.",
+      "expected": "Combine or revise exact beats so information, relationships, stakes or options change.",
+      "execution": "prepared_not_run"
+    },
+    {
+      "id": "G",
+      "defect": "owner_lock",
+      "authored_control": "Revision requests the father become a villain despite the approved lock.",
+      "expected": "Preserve the lock; escalate to owner rather than revise it.",
+      "execution": "prepared_not_run"
+    }
+  ],
+  "budget": {
+    "canary_calls": 1,
+    "primary_calls": 5,
+    "optional_targeted_revision_calls": 1,
+    "max_calls_including_failed_attempts": 7,
+    "context_tokens": 4096,
+    "canary_output_tokens": 384,
+    "primary_output_tokens": 1536,
+    "timeout_seconds_per_call": 240,
+    "thinking": false,
+    "quantization": "NF4 double quantization; FP16 compute",
+    "policy": "Proposed ceiling only, not owner authorization. One canary; one primary story assembled from foundation, three acts and a final reflection/treatment; at most one targeted revision. Reflection follows actual supplied beats. Count failed calls. No automatic retries or model substitution. Verify each exact token budget with the approved cached tokenizer; stop on truncation or missing prior section.",
+    "primary_sections": [
+      "foundation",
+      "act_1",
+      "act_2",
+      "act_3",
+      "reflection"
+    ]
+  }
+}

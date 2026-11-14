@@ -1,0 +1,20 @@
+{
+  "baseline": "e7dc992f187d9bd545b88d3ee11dd174ac08566c",
+  "unchanged": {
+    "native_execution.py": {
+      "process_identity": "1bfd2401980a292abce579d147d41e7a8c3b8b3d1aa1f467a2ff0ab830065e4e",
+      "terminate_group": "3d63f284ed1f2893b2624c4433f8a4b2a156645970cb326e48bdd0cdea8ffbe9",
+      "cancel_owned_process": "0b1afaf0c2d773df76d3d26468fb81c53fa194a9f93e9abd114e14251142959b",
+      "cancel": "62a0f604f99978a92114c5fa20a3de04b33e1010eb5318db0a753b739bc99bb9",
+      "recover": "a916c3e0b3c9ff89d538759bf21d191f54f4bd0473689af6ab2339940512c26d",
+      "_finish": "1191caa9ab473b6c9431502327f84c44aa7b04f9ba529524483713106690c3a3"
+    },
+    "native_local_worker.py": "all existing seven worker/helpers unchanged; voice dispatch added",
+    "casting_voice.py": "77f9d699d026eda98dc27f749c42f3491909405790c9c8ba977cf8728ffdf29f",
+    "voice_consent.py": "33562ba9796c8f1519b601636d02e33142ce974ab552d64a0b0a1f93033bac20",
+    "casting.py": "8322fa0e2081bc55bb73f5bf5710f90e4d62fafc8844bd9578aa62930ba7cae0",
+    "agent_engine.py": "cdb5f86a31135d2178bd28f47c4a4243efa46c2e66031f805760272c477e0536",
+    "native_fixture_worker.py": "63250f9d0b5cff346af698a3167aeea1908fe6bbaa73836aa82a1b469e464dee"
+  },
+  "historical_tests_reused_not_rerun": true
+}

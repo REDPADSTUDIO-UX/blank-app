@@ -1,0 +1,81 @@
+{
+  "scope_sha256": "419856f2f28e46bf417da13a7b3f61facaa1833e2dfbfe774442ea82fbe84ce1",
+  "scope_path": "assets/phase3/master_scope.md",
+  "continuation_parent": "28e6ece21d07ee6a5913c1a92a1bde7b16d63743",
+  "registered_agents": 20,
+  "workstreams": {
+    "A": {
+      "software": "Model routing/benchmark retained; real digest-format bug fixed",
+      "inference": "Restored exact authorized control; six new equivalent tasks completed",
+      "blocker": "Gemma/Qwen3.5 download and Gemma terms approval; no winner/human review"
+    },
+    "B": {
+      "software": "Source-specific criticism, revision guards and existing creative workflows retained",
+      "inference": "Qwen story/dialogue still poor; one seeded defect correctly identified in Director/QC roles",
+      "blocker": "Accepted writing quality; full coherent 30-episode model-generated architecture unverified"
+    },
+    "C": {
+      "software": "Character/art/location/costume contracts retained; hash-bound local reference approval added",
+      "inference": "No new reference image model run",
+      "blocker": "Approved image models/weights, actual identity/cultural consistency review"
+    },
+    "D": {
+      "software": "Storyboards/performance/camera/motion plans now receive approved source bindings and specialist schema guidance",
+      "inference": "No neural acting/motion/physics/camera result",
+      "blocker": "Actual reviewed reference assets and compatible video compute"
+    },
+    "E": {
+      "software": "Wan2.2 TI2V 5B, LTX 0.9.5 and SVD-XT local worker paths implemented and mocked protocol-tested",
+      "inference": "BLOCKED for all three",
+      "blocker": "GPU, checkpoints, license acceptance and actual hardware compatibility"
+    },
+    "F": {
+      "software": "Offline preset Indic Parler-TTS worker added; procedural music/SFX and existing real-media editing retained",
+      "inference": "No new voice, neural audio or lip-sync output",
+      "blocker": "Authorized TTS weights and compatible dependency environment; listening review; lip-sync backend"
+    },
+    "G": {
+      "software": "Master project ledger and versioned graph auto-queues all 17 drafting agents without manual source copying",
+      "inference": "Software handoff tests use explicitly labeled simulations",
+      "blocker": "Real approved creative outputs; no self-approval or automatic promotion"
+    },
+    "H": {
+      "software": "Growth metadata and read-only/approval-based YouTube interfaces retained",
+      "inference": "No new connected-account read or write attempted",
+      "blocker": "No publishing authorized; final approved media absent"
+    },
+    "I": {
+      "software": "Five-area unified owner Dashboard added; all legacy tabs and 20 advanced workspaces retained",
+      "inference": "AppTest validation, not a live deployment",
+      "blocker": "Long-series staged creative generation beyond the planned hierarchy remains unfinished; no giant generation call permitted"
+    },
+    "J": {
+      "software": "Technical inspection/timeout/recovery/source hash checks and existing editing gates",
+      "inference": "No actual cinematic scene or five-minute episode produced in this continuation",
+      "blocker": "Real accepted writing/references/video/speech plus independent QC and owner approval"
+    }
+  },
+  "control_inference": {
+    "actual_attempts": 6,
+    "runtime_complete": 6,
+    "schema_valid": 6,
+    "wall_seconds": 214.35,
+    "human_review_completed": false,
+    "production_approved": false
+  },
+  "model_winners": {
+    "story": null,
+    "script": null,
+    "director": null,
+    "qc": null
+  },
+  "new_model_variants_downloaded": 0,
+  "restored_previously_authorized_model": true,
+  "all_three_video_inference_verified": false,
+  "end_to_end_cinematic_ready": false,
+  "next_executable_task": "After explicit candidate consent: verify pinned candidate manifests, download only the two approved variants, benchmark the same six cases and obtain independent Bengali review. In parallel, select an explicitly authorized compatible GPU/checkpoint plan before any media inference.",
+  "resume_rule": "Keep all approved outputs and existing run IDs; retry only stopped failures whose prerequisite has changed.",
+  "regression_passed": 312,
+  "regression_failed": 0,
+  "standalone_passed": 8
+}

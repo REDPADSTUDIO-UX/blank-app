@@ -1,0 +1,8 @@
+{
+  "model_license": "Apache-2.0 publisher metadata; preserve notices",
+  "publisher_readme_url": "https://huggingface.co/unsloth/Qwen3.5-9B-GGUF/raw/3885219b6810b007914f3a7950a8d1b469d598a5/README.md",
+  "readme_sha256": "e50f8066e39c38cbc2da5dd94b9a9a2712b64c4921f107a5adb4b3ca5b6bbac0",
+  "runtime_license": "MIT; llama_cpp_license.txt",
+  "new_gemma_terms_accepted": false,
+  "hosted_gemma_checkpoint_not_downloaded": true
+}

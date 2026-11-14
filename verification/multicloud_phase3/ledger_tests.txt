@@ -1,0 +1,13 @@
+test_blocker_history_is_append_only (tests.test_multicloud_ledger.CloudLedgerTests.test_blocker_history_is_append_only) ... ok
+test_completed_sample_skips_even_without_new_provider_auth (tests.test_multicloud_ledger.CloudLedgerTests.test_completed_sample_skips_even_without_new_provider_auth) ... ok
+test_hash_mismatch_and_symlink_rejected (tests.test_multicloud_ledger.CloudLedgerTests.test_hash_mismatch_and_symlink_rejected) ... ok
+test_hosted_receipt_cannot_become_winner_or_replace_output (tests.test_multicloud_ledger.CloudLedgerTests.test_hosted_receipt_cannot_become_winner_or_replace_output) ... ok
+test_identity_is_provider_neutral_and_strict (tests.test_multicloud_ledger.CloudLedgerTests.test_identity_is_provider_neutral_and_strict) ... ok
+test_inflight_and_failed_calls_never_blindly_retry (tests.test_multicloud_ledger.CloudLedgerTests.test_inflight_and_failed_calls_never_blindly_retry) ... ok
+test_paid_and_unknown_free_allocations_fail_closed (tests.test_multicloud_ledger.CloudLedgerTests.test_paid_and_unknown_free_allocations_fail_closed) ... ok
+test_reuses_existing_canonical_job_without_execution (tests.test_multicloud_ledger.CloudLedgerTests.test_reuses_existing_canonical_job_without_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.018s
+
+OK

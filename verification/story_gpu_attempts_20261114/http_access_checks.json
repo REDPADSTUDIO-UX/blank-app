@@ -1,0 +1,30 @@
+[
+  {
+    "platform": "colab",
+    "url": "https://colab.research.google.com/",
+    "error_type": "URLError",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "seconds": 0.015
+  },
+  {
+    "platform": "kaggle",
+    "url": "https://www.kaggle.com/code",
+    "error_type": "URLError",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "seconds": 0.003
+  },
+  {
+    "platform": "lightning",
+    "url": "https://lightning.ai/",
+    "error_type": "URLError",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "seconds": 0.003
+  },
+  {
+    "platform": "hugging_face",
+    "url": "https://huggingface.co/spaces",
+    "error_type": "URLError",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "seconds": 0.003
+  }
+]

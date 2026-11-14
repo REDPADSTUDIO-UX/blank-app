@@ -1,0 +1,14 @@
+{
+  "model": "gemma3:4b-it-q4_K_M",
+  "digest": "sha256:68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7",
+  "suite_sha256": "43e18c4f1c2dc88c70aa8e768ecadcf537d579e301de056b0837d3875a91a8eb",
+  "options": {
+    "num_ctx": 4096,
+    "num_predict": 1024,
+    "temperature": 0.35,
+    "seed": 42,
+    "timeout_seconds": 180,
+    "stream": true
+  },
+  "candidate": "30277ec9891ca8a830db"
+}

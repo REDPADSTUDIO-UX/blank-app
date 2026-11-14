@@ -1,0 +1,339 @@
+{
+  "suite_sha256": "43e18c4f1c2dc88c70aa8e768ecadcf537d579e301de056b0837d3875a91a8eb",
+  "options": {
+    "num_ctx": 4096,
+    "num_predict": 1024,
+    "temperature": 0.35,
+    "seed": 42,
+    "timeout_seconds": 180,
+    "stream": true
+  },
+  "cases": [
+    {
+      "id": "story",
+      "role": "story",
+      "data": "কুষ্টিয়ার এক দর্জি মায়ের চিকিৎসার টাকার জন্য মেয়ের কলেজের শেষ কিস্তি খরচ করে ফেলে। মেয়ে জানে না; আজ ভর্তি নিশ্চিত করার শেষ দিন। মা নিজে সিদ্ধান্ত নিতে সক্ষম। কোনো আকস্মিক ধনী উদ্ধারকারী নয়।",
+      "task": "মৌলিক সংক্ষিপ্ত পর্বের কাঠামো দিন: কার চাওয়া, তার দামি সিদ্ধান্ত, তার ফল, আচরণে আবেগের পরিবর্তন, প্রথম দৃশ্যের হুক ও সিদ্ধান্ত থেকে জন্মানো cliffhanger। প্রতি field-এ একটি ছোট বাংলা বাক্য।",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "want": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "costly_choice": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "consequence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "emotional_change": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "opening_image": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "earned_cliffhanger": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          }
+        },
+        "required": [
+          "want",
+          "costly_choice",
+          "consequence",
+          "emotional_change",
+          "opening_image",
+          "earned_cliffhanger"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "romance",
+      "role": "script",
+      "data": "ঢাকার বাসায় নীলা ও সাব্বির, বিবাহের কথা চলছে। নীলা নিজের বদলির চাকরিটা নিতে চায়, সাব্বির শহর ছাড়তে ভয় পায়। কাউকে খলনায়ক বানাবেন না। বিদ্যুৎ নেই, দুজন মিলে পাখা ঠিক করছে।",
+      "task": "একটি visual-first ক্ষুদ্র দৃশ্য। opening_action, সাব্বিরের first_reply, নীলার second_reply, closing_action ও INT. heading দিন। কথাগুলো সরাসরি speech, নাম বা বলে যোগ করবেন না। প্রতি কথায় ৬–১০টি শব্দ। রোমান্টিক টান, না-বলা ভয় ও একটি ছোট যত্নের কাজ।",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "heading": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "^INT\\."
+          },
+          "opening_action": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 90
+          },
+          "first_reply": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "second_reply": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "closing_action": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 90
+          }
+        },
+        "required": [
+          "heading",
+          "opening_action",
+          "first_reply",
+          "second_reply",
+          "closing_action"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "humor",
+      "role": "script",
+      "data": "চট্টগ্রামের বাসায় মা রেহানা ছেলের অফিসের ব্যাগে অতিরিক্ত খাবার দেন; ছেলে ইমরান ওজন কমানোর চেষ্টা করছে। দুজনের স্নেহ আছে, কাউকে অপমান নয়।",
+      "task": "একটি ছোট visual-first দৃশ্য। opening_action, ইমরানের first_reply, রেহানার responsive second_reply, closing_action, INT. heading। শুধু সরাসরি speech; নাম বা বলে নয়। অভ্যাসের সংঘাত থেকে মৃদু witty exchange, বক্তৃতা নয়। প্রতি কথায় ৬–১০টি শব্দ।",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "heading": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "^INT\\."
+          },
+          "opening_action": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 90
+          },
+          "first_reply": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "second_reply": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "closing_action": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 90
+          }
+        },
+        "required": [
+          "heading",
+          "opening_action",
+          "first_reply",
+          "second_reply",
+          "closing_action"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "revision",
+      "role": "script",
+      "data": {
+        "source": {
+          "s1": "রুমি খামের ভেতর কলেজের বিল রাখে।",
+          "s2": "বাবা: আমি তোমার জন্য সব করেছি। রুমি: আমি সব বুঝি।"
+        },
+        "locked": [
+          "s1"
+        ],
+        "target": "s2"
+      },
+      "task": "শুধু s2 বদলান। আগে ছোট দৃশ্যমান কাজ, তারপর বাবা ও রুমির দুইটি সংক্ষিপ্ত সরাসরি কথা। বিল/চরিত্র/সম্পর্ক বদলাবেন না। অভিযোগের বদলে না-বলা সংকোচ দেখান। s1 ফেরত দেবেন না।",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "scene_id": {
+            "type": "string",
+            "enum": [
+              "s2"
+            ]
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "father": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "rumi": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          }
+        },
+        "required": [
+          "scene_id",
+          "action",
+          "father",
+          "rumi"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "criticism",
+      "role": "director",
+      "data": {
+        "heading": "INT. বাসা — সকাল",
+        "lines": {
+          "L1": "তানিয়া নিজের চাকরির সাক্ষাৎকারে যাবে; রাশেদ নিজের অফিসে যাবে।",
+          "L2": "টেবিলে তাদের একমাত্র ছাতা। তানিয়া সেটি ব্যাগে রাখে।",
+          "L3": "রাশেদ একই ছাতাটি টেবিল থেকে তুলে খুলে ফেলে; কেউ ফেরত দেয়নি।",
+          "L4": "দুজনই বেরোনোর আগে বাসভাড়া গুনে রাখে।"
+        }
+      },
+      "task": "এই নির্দিষ্ট উৎসে বাস্তব ভুল থাকলে line_id ও category দিয়ে সংক্ষিপ্ত সমালোচনা করুন। উদ্ধৃতি বানাবেন না। নেই এমন আবেগ/ঘটনা/ভুল কল্পনা করবেন না। নিশ্চিত না হলে findings খালি রাখুন।",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "findings": {
+            "type": "array",
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "properties": {
+                "line_id": {
+                  "type": "string",
+                  "enum": [
+                    "L1",
+                    "L2",
+                    "L3",
+                    "L4"
+                  ]
+                },
+                "category": {
+                  "type": "string",
+                  "enum": [
+                    "continuity",
+                    "logic",
+                    "dialogue",
+                    "visual",
+                    "motivation"
+                  ]
+                },
+                "problem": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "suggestion": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                }
+              },
+              "required": [
+                "line_id",
+                "category",
+                "problem",
+                "suggestion"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "findings"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "qc",
+      "role": "qc",
+      "data": {
+        "heading": "INT. বাসা — সকাল",
+        "lines": {
+          "L1": "তানিয়া নিজের চাকরির সাক্ষাৎকারে যাবে; রাশেদ নিজের অফিসে যাবে।",
+          "L2": "টেবিলে তাদের একমাত্র ছাতা। তানিয়া সেটি ব্যাগে রাখে।",
+          "L3": "রাশেদ একই ছাতাটি টেবিল থেকে তুলে খুলে ফেলে; কেউ ফেরত দেয়নি।",
+          "L4": "দুজনই বেরোনোর আগে বাসভাড়া গুনে রাখে।"
+        }
+      },
+      "task": "একটি independent QC observation লিখুন। শুধু প্রমাণিত ভুল, বিদ্যমান line_id ও category। আংশিক বা সুন্দর লেখাকে অনুমোদন দেবেন না; নির্ভুল দৃশ্যপটকে খারাপ বলবেন না। উদ্ধৃতি লিখবেন না।",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "findings": {
+            "type": "array",
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "properties": {
+                "line_id": {
+                  "type": "string",
+                  "enum": [
+                    "L1",
+                    "L2",
+                    "L3",
+                    "L4"
+                  ]
+                },
+                "category": {
+                  "type": "string",
+                  "enum": [
+                    "continuity",
+                    "logic",
+                    "dialogue",
+                    "visual",
+                    "motivation"
+                  ]
+                },
+                "problem": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "suggestion": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                }
+              },
+              "required": [
+                "line_id",
+                "category",
+                "problem",
+                "suggestion"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "findings"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ],
+  "human_review_completed": false,
+  "actual_new_inference_calls": 0
+}

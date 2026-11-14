@@ -1,0 +1,19 @@
+{
+  "selected": [
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_available_preset_voice_cannot_fall_back_to_generic_text_model",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_voice_source_profile_revision_cannot_drift_to_an_unreviewed_checkpoint",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_missing_source_casting_draft_abstains_without_hidden_fallback",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_explicit_parler_department_choice_stages_existing_worker_without_generation"
+  ],
+  "tests": 4,
+  "errors": 0,
+  "failures": 0,
+  "requests_import_only_shim": true,
+  "gpu": false,
+  "model_inference": false,
+  "weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "actual_human_voice_or_artistic_review": false,
+  "scope": "manual software fixtures and injected classes only; any process recheck is the existing fixed CPU dummy, not native model inference"
+}

@@ -1,0 +1,32 @@
+{
+  "84ec7425407d": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "digest": "sha256:0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "raw_sha256": "896ab510d60bbc3ce22f322f4c6ad23a349a1a3a9b99608e1f50ea57721999d4"
+  },
+  "0c256aaa48e3": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "digest": "sha256:0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "raw_sha256": "13e78806dcb67e800b81a8489aa760e7f6a864d0f7f82f4c040b8b91a6b44ca8"
+  },
+  "0b44b50d7d05": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "digest": "sha256:0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "raw_sha256": "6bc7f4d273c928c08ee6cf8d279b90af5646f384232a41205c2f4c9439a29e69"
+  },
+  "c433065c576e": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "digest": "sha256:0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "raw_sha256": "f832bda7c523d6747bf7289455921084cacb050279662642af546463727337d7"
+  },
+  "772a0434a341": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "digest": "sha256:0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "raw_sha256": "8b1ade7e6b8fc048c8fb1bdea277c1e4657094492044b916f77113640b81c696"
+  },
+  "7301b86a3276": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "digest": "sha256:0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "raw_sha256": "426d4420255f9623b87dcfeb567aaa2d05aa2550b976ba1d51f3054a38b0c840"
+  }
+}

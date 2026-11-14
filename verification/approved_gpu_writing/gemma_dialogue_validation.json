@@ -1,0 +1,37 @@
+{
+  "json_valid": false,
+  "technical_pass": false,
+  "generation_complete": true,
+  "quote_findings": [],
+  "artistic_scores": null,
+  "human_review": "pending",
+  "professional_accepted": false,
+  "raw_sha256": "fadd411a0d4aff5a33a0bb06c34b619bb5ef7a60dbd8d0930a7030cc189e1bdc",
+  "raw_file_capture": "Exact copied bot message bytes in UTF-8; no text repaired or newline added",
+  "diagnostic_only_after_fence_strip": {
+    "keys": [
+      "scene",
+      "interactions"
+    ],
+    "interaction_count": 12,
+    "strict_schema_pass": false
+  },
+  "preliminary_editorial_findings_not_independent_review": [
+    {
+      "finding": "Character relationship inconsistency: Adnan refers to Ruba as brother",
+      "quote": "ভাইয়ের দিকে তাকিয়ে রুবার চোখে অসহায়তা দেখে।"
+    },
+    {
+      "finding": "No clear character-based witty exchanges in the 12 rows",
+      "status": "assistant judgment; independent Bengali review pending"
+    },
+    {
+      "finding": "Awkward action wording",
+      "quote": "রুবার মুখের পরিবর্তন টানে"
+    },
+    {
+      "finding": "Gas/cooking obstacle receives no decision-led development",
+      "status": "assistant judgment, not a human acceptance score"
+    }
+  ]
+}

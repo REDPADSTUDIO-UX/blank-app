@@ -1,0 +1,36 @@
+{
+  "render_operation": "read-only list_services",
+  "services": [
+    {
+      "name": "redpad-ai-studio-v3-safe-preview",
+      "id": "srv-dbhfgfijnfac739sjpm0",
+      "branch": "feature/video-music-editing-studio",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off"
+    },
+    {
+      "name": "redpad-growth-engine-demo",
+      "id": "srv-dbhf5vp42hec73ca7bag",
+      "branch": "feature/video-music-editing-studio",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off"
+    },
+    {
+      "name": "redpad-ai-studio-private-preview",
+      "id": "srv-dbfiesvb9u1s73d2qblg",
+      "branch": "feature/video-music-editing-studio",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off"
+    }
+  ],
+  "all_auto_deploy_disabled": true,
+  "expected_main": "c03550cb6facc27ba90c3f3286a5b0a0e69748a8",
+  "feature_parent": "e43bf25eefe95565c91a535fb84d4c18b41a5707",
+  "render_mutations": 0,
+  "production_data_access": 0,
+  "paid_api_calls": 0,
+  "model_downloads": 0,
+  "gpu_resources_created": 0,
+  "license_acceptances": 0,
+  "youtube_operations": 0
+}

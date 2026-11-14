@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "candidates": [
+    {
+      "rank": 1,
+      "profile": "qwen35_27",
+      "selection": "primary",
+      "repo": "Qwen/Qwen3.5-27B",
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "adapter": "hf_text_nf4",
+      "gpu_gib_planning_estimate_not_measured_minimum": 24,
+      "ram_gib_planning_estimate_not_measured_minimum": 32,
+      "license_conditions": "Apache-2.0 obligations; no terms accepted here.",
+      "current_exact_license_receipt_verified": false,
+      "ran": false,
+      "feasibility": "not_established_on_provider; all current access attempts blocked before hardware inspection",
+      "fallback_used": false
+    },
+    {
+      "rank": 2,
+      "profile": "gemma3_27",
+      "selection": "registered_shortlisted_alternative",
+      "repo": "google/gemma-3-27b-it",
+      "revision": "005ad3404e59d6023443cb575daa05336842228a",
+      "adapter": "hf_text_nf4",
+      "gpu_gib_planning_estimate_not_measured_minimum": 24,
+      "ram_gib_planning_estimate_not_measured_minimum": 48,
+      "license_conditions": "Gemma custom terms, use restrictions and explicit gated access acceptance required.",
+      "current_exact_license_receipt_verified": false,
+      "ran": false,
+      "feasibility": "not_established_on_provider; all current access attempts blocked before hardware inspection",
+      "fallback_used": false
+    },
+    {
+      "rank": 3,
+      "profile": "gemma3_12",
+      "selection": "registered_shortlisted_alternative",
+      "repo": "google/gemma-3-12b-it",
+      "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "adapter": "hf_text_nf4",
+      "gpu_gib_planning_estimate_not_measured_minimum": 16,
+      "ram_gib_planning_estimate_not_measured_minimum": 24,
+      "license_conditions": "Gemma custom terms and gated access acceptance required; not Apache-2.0.",
+      "current_exact_license_receipt_verified": false,
+      "ran": false,
+      "feasibility": "not_established_on_provider; all current access attempts blocked before hardware inspection",
+      "fallback_used": false
+    }
+  ],
+  "decision": "No primary or fallback runtime was reachable. A smaller model cannot resolve a destination-policy block. No model-quality winner selected.",
+  "historical_9b_note": "Prior specifically approved 9B GGUF Colab evidence is historical, not a currently connected runtime or the selected 27B NF4 result. No old experiment was relabeled or rerun.",
+  "hosted_api_used": false,
+  "weights_downloaded": false,
+  "new_license_accepted": false
+}

@@ -1,0 +1,18 @@
+{
+  "selected": [
+    "tests.test_native_local_execution.NativeLocalTests"
+  ],
+  "tests": 24,
+  "errors": 0,
+  "failures": 0,
+  "gpu_used": false,
+  "model_inference": false,
+  "real_weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "authorized_processes": "fixed CPU fixture only; source-pinned native process launch blocked by test filter",
+  "requests_import_only_shim": true,
+  "http_transport_verified": false,
+  "model_class_calls": "injected fake classes only, no model libraries imported",
+  "scope": "software engineering only; no model intelligence/artistic acceptance"
+}

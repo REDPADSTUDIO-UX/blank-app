@@ -1,0 +1,14 @@
+{
+  "repo": "unsloth/Qwen3.5-9B-GGUF",
+  "revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+  "file": "Qwen3.5-9B-Q4_K_M.gguf",
+  "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+  "bytes": 5680522464,
+  "binary": "/content/redpad_story_t4_20261114/runtime/llama-b12318/llama-server",
+  "binary_sha256": "0ec391741c38d09eb4074db407c162686e310799c0dc36ebb734775688384ff5",
+  "runtime_version": "version: 0.9.0-dev (build 12318, commit 7021f7e09)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+  "license": "Apache-2.0 model; MIT runtime",
+  "variant": "qwen35_9_approved_gguf; standalone fallback; NOT qwen35_27 NF4",
+  "production_approved": false,
+  "model_inferences": 0
+}

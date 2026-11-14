@@ -1,0 +1,40 @@
+{
+  "date_dhaka": "2026-11-12",
+  "checkpoint_verified": "3ef4dac7aa259ceeec9d364570aca146a6b54f38",
+  "browser": {
+    "family": "Chrome",
+    "surface": "owner_connected_extension",
+    "connection_verified": true
+  },
+  "lightning": {
+    "url": "https://lightning.ai/",
+    "visible_text": [
+      "Coming soon",
+      "Apologies, but Lightning hasn't expanded to your area yet."
+    ],
+    "state": "region_access_blocked",
+    "bypass_attempted": false
+  },
+  "hugging_face": {
+    "authenticated": true,
+    "space": "huggingface-projects/gemma-3-12b-it",
+    "space_running_on_zero_visible": true,
+    "personal_zero_gpu_remaining_quota_verified": false,
+    "new_requests": 0,
+    "prior_unknown_request_not_polled": true,
+    "prior_payload_egress_consent_still_pending": true
+  },
+  "colab": {
+    "authenticated": true,
+    "free_t4_actual_tensor_canary_passed": true,
+    "paid_subscription": false,
+    "compute_units": 0,
+    "maximum_runtime": "UI says up to 5h10m; not guaranteed",
+    "new_model_inference_count": 0
+  },
+  "main_sha_unchanged_at_start": "c03550cb6facc27ba90c3f3286a5b0a0e69748a8",
+  "paid_services_activated": false,
+  "weights_downloaded": false,
+  "old_tests_repeated": false,
+  "dashboard_modified": false
+}

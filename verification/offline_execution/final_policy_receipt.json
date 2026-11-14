@@ -1,0 +1,21 @@
+{
+  "selected": [
+    "tests.test_native_local_execution.NativeLocalTests.test_cancellation_will_not_signal_an_unrelated_or_reused_pid",
+    "tests.test_native_local_execution.NativeLocalTests.test_controller_policy_change_marks_existing_queue_stale",
+    "tests.test_native_local_execution.NativeLocalTests.test_real_dummy_process_returns_software_receipt_never_inference_or_approval",
+    "tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service"
+  ],
+  "tests": 4,
+  "errors": 0,
+  "failures": 0,
+  "gpu_used": false,
+  "model_inference": false,
+  "real_weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "authorized_processes": "fixed CPU fixture only; source-pinned native process launch blocked by test filter",
+  "requests_import_only_shim": true,
+  "http_transport_verified": false,
+  "model_class_calls": "injected fake classes only, no model libraries imported",
+  "scope": "software engineering only; no model intelligence/artistic acceptance"
+}

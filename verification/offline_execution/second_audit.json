@@ -1,0 +1,132 @@
+{
+  "audit": "Second automated code audit, same assistant; NOT independent human review",
+  "findings_fixed": [
+    "atomic queue deduplication",
+    "controller/worker source fingerprints",
+    "reject unreviewed cached Python bytecode",
+    "kernel namespace check before model imports",
+    "nested artifact path and symlink handling",
+    "cancel escalation and PID reuse protection",
+    "recovery distinguishes active controller preflight/postprocess from abandoned execution"
+  ],
+  "source_sha256": {
+    "native_execution.py": "c1c664ea4a1e95d73172f7bb2f990c6e328c2e7bbe919c34800a29f52783e597",
+    "native_local_bundle.py": "22da020052e1055eee13a057f683a6dc2ce98d7a3311da4c223eac27e0f05b24",
+    "native_local_worker.py": "083921aa146deb98e2332ea8c6d063b4843a4524afc8414812b1eb8541cba64d",
+    "native_fixture_worker.py": "63250f9d0b5cff346af698a3167aeea1908fe6bbaa73836aa82a1b469e464dee"
+  },
+  "distinct_tests_successfully_verified": 52,
+  "tests": [
+    "tests.test_native_local_execution.NativeLocalTests.test_ace_init_bridge_denies_download_sync_and_remote_custom_model_loading",
+    "tests.test_native_local_execution.NativeLocalTests.test_ace_main_loader_uses_explicit_reviewed_class_and_safetensors_only",
+    "tests.test_native_local_execution.NativeLocalTests.test_actual_dummy_failure_classification_preserves_raw_logs",
+    "tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service",
+    "tests.test_native_local_execution.NativeLocalTests.test_actual_timeout_terminates_fixture_worker",
+    "tests.test_native_local_execution.NativeLocalTests.test_audit_rejects_internet_shell_and_unknown_child_without_calls",
+    "tests.test_native_local_execution.NativeLocalTests.test_bundle_missing_unmanifested_changed_or_symlink_files_fail_closed",
+    "tests.test_native_local_execution.NativeLocalTests.test_cancel_after_controller_loss_is_terminal_without_automatic_restart",
+    "tests.test_native_local_execution.NativeLocalTests.test_cancellation_before_launch_and_no_implicit_retry",
+    "tests.test_native_local_execution.NativeLocalTests.test_cancellation_will_not_signal_an_unrelated_or_reused_pid",
+    "tests.test_native_local_execution.NativeLocalTests.test_concurrent_native_request_dedup_is_atomic_and_restart_safe",
+    "tests.test_native_local_execution.NativeLocalTests.test_controller_policy_change_marks_existing_queue_stale",
+    "tests.test_native_local_execution.NativeLocalTests.test_direct_native_cli_without_kernel_namespace_fails_before_model_import",
+    "tests.test_native_local_execution.NativeLocalTests.test_fixed_worker_network_denial_checked_without_real_network_attempt",
+    "tests.test_native_local_execution.NativeLocalTests.test_fixture_command_not_arbitrary_user_script_model_or_hosted_endpoint",
+    "tests.test_native_local_execution.NativeLocalTests.test_install_cannot_create_owner_license_approval_implicitly",
+    "tests.test_native_local_execution.NativeLocalTests.test_isolated_child_environment_does_not_inherit_provider_tokens_or_proxies",
+    "tests.test_native_local_execution.NativeLocalTests.test_kernel_isolation_argv_is_local_ro_networkless_and_no_shell",
+    "tests.test_native_local_execution.NativeLocalTests.test_ltx_worker_calls_verified_split_api_with_no_quantization_and_local_image",
+    "tests.test_native_local_execution.NativeLocalTests.test_mock_cannot_report_model_inference_success",
+    "tests.test_native_local_execution.NativeLocalTests.test_native_install_rejects_unreviewed_cached_bytecode",
+    "tests.test_native_local_execution.NativeLocalTests.test_no_model_loading_import_at_worker_module_top_level",
+    "tests.test_native_local_execution.NativeLocalTests.test_output_root_and_run_id_cannot_escape_or_reuse_existing_directory",
+    "tests.test_native_local_execution.NativeLocalTests.test_pinned_install_identity_precision_and_source_mismatch_rejected_without_weight_reads",
+    "tests.test_native_local_execution.NativeLocalTests.test_prepared_stage_binding_rejects_hidden_fallback_and_wrong_role",
+    "tests.test_native_local_execution.NativeLocalTests.test_previous_thirteen_and_director_script_profiles_unchanged",
+    "tests.test_native_local_execution.NativeLocalTests.test_process_group_timeout_cleans_spawned_dummy_descendant",
+    "tests.test_native_local_execution.NativeLocalTests.test_readiness_separates_seventeen_engineered_agents_from_two_gated_sources",
+    "tests.test_native_local_execution.NativeLocalTests.test_real_dummy_process_returns_software_receipt_never_inference_or_approval",
+    "tests.test_native_local_execution.NativeLocalTests.test_recovery_does_not_interrupt_active_controller_during_preflight_or_postprocess",
+    "tests.test_native_local_execution.NativeLocalTests.test_restart_recovery_does_not_restart_abandoned_process_or_kill_reused_pid",
+    "tests.test_native_local_execution.NativeLocalTests.test_runtime_bridge_integrates_existing_service_without_new_route",
+    "tests.test_native_local_execution.NativeLocalTests.test_safe_auxiliary_tensor_checks_use_fake_loader_only_no_actual_pt_loading",
+    "tests.test_native_local_execution.NativeLocalTests.test_shared_wan_worker_uses_fixed_native_class_local_components_and_distinct_refs",
+    "tests.test_native_local_execution.NativeLocalTests.test_task_staging_native_worker_queue_binding_is_idempotent_and_not_launch_permission",
+    "tests.test_native_local_execution.NativeLocalTests.test_video_container_metadata_checks_frames_fps_and_dimensions_without_media_generation",
+    "tests.test_native_local_execution.NativeLocalTests.test_worker_does_not_launch_without_explicit_authorization",
+    "tests.test_native_local_execution.NativeLocalTests.test_worker_source_change_is_stale_before_launch",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_all_19_roles_all_declared_supported_contracts_without_resources",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_video_families_have_different_native_controls",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_motion_frame_binding_does_not_become_a_temporal_physics_critic",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_native_wan_and_svd_keep_supported_worker_controls",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_parler_and_stable_audio_prepare_only_their_existing_local_payloads",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_ace15_exact_native_params_and_deny_auto_download_sync_policy",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_casting_assessment_task_handoff_persists_but_never_creates_approval",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_extra_consent_evidence_change_stales_existing_preparation",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_ltx_exact_split_preparation_has_no_guessed_upsampler_or_executable_argv",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_real_portrait_cannot_be_declared_fictional_for_wan_or_casting",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_shared_native_wan_preparation_for_all_three_roles_is_not_acting_critic",
+    "tests.test_producer_control.ProducerTests.test_casting_cannot_bypass_director_qc_or_identity_rights"
+  ],
+  "role_matrix": {
+    "performance": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "artistic": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "native_path": "fixed native local worker + authenticated bundle + isolated supervisor"
+    },
+    "motion": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "artistic": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "native_path": "fixed native local worker + authenticated bundle + isolated supervisor"
+    },
+    "video": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "artistic": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "native_path": "fixed native local worker + authenticated bundle + isolated supervisor"
+    },
+    "voice": {
+      "engineering": "PARTIAL",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "artistic": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "native_path": "Parler/Wan/surrounding workflow implemented; exact selected gated voice source remains unavailable"
+    },
+    "music": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "artistic": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "native_path": "fixed native local worker + authenticated bundle + isolated supervisor"
+    },
+    "casting": {
+      "engineering": "PARTIAL",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "artistic": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "native_path": "Parler/Wan/surrounding workflow implemented; exact selected gated voice source remains unavailable"
+    }
+  },
+  "ordinary_cpu_engineering_findings_open": [],
+  "unavoidable_source_blockers": {
+    "voice": "Exact pinned Indic-Speak inference/speaker map and IndicF5 gated source/auxiliary review require owner-authorized access, not guessing from preview-v2.",
+    "casting": "Selected Indic-Speak shared binding depends on the same unavailable exact voice source."
+  },
+  "runtime_blockers": [
+    "Current environment denies bwrap kernel network namespace; native inference must not launch here",
+    "No actual model install/weights/license approved by this task",
+    "LTX official pinned upsampler exact SHA/size still unverified; third-party mirror digest is not adopted",
+    "Wan exact approved auxiliary origins/hashes and actual weights-only compatibility",
+    "Full owner-approved local dependency/code bundles and actual GPU/MPI/media/listening tests"
+  ],
+  "gpu_inference_weights_hosted_paid_license_acceptance": 0,
+  "human_artistic_reviews": 0,
+  "production_ready": 0
+}

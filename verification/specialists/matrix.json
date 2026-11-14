@@ -1,0 +1,469 @@
+{
+  "phase": 2,
+  "registered_agents": 20,
+  "specialists": 17,
+  "stages": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "inference_runs": 0,
+  "creative_media_quality_verified": false,
+  "fixture_provenance": "Original manually authored fictional Bengali metadata; temporary test sidecars",
+  "resources": {
+    "cuda_device": false,
+    "torch_installed": false,
+    "ollama_executable": false,
+    "local_models": [],
+    "local_probe": "Not requested",
+    "inference_verified": false,
+    "large_downloads": false,
+    "paid_fallback": false
+  },
+  "matrix": [
+    {
+      "agent": "qc",
+      "stage": "A",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "2c2bf7229bf414d786d96d61ac1945fa0a91bbb2f1ab5dd29ac74f206db713d1",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "QC cannot review itself."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 1,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "character",
+      "stage": "A",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "d1cd1c3193962fbe8b2f4c8390c4981a6827db218cd666e2ca14a2a7a1ff3e8c",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Invalid character age."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 2,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "art",
+      "stage": "A",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "3fcd8746659c281aff73266f307d6e67c821dee5ddc28af1d4b95af383742308",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Scene IDs and prop inventory required."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 1,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "location",
+      "stage": "A",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "58c51c720af26762cd002ce39cb412d8a6ba0e75a73d36b7b47b9c57b0fcd46b",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rule finding",
+        "evidence": [
+          "door_destination_conflict"
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 3,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "costume",
+      "stage": "A",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "041166c9f721d4075c080165cb382d0e4b7b10f14c72c7bc55242a5af062fb48",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rule finding",
+        "evidence": [
+          "unexplained_costume_change"
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 3,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "storyboard",
+      "stage": "B",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "75ce105925b0c13e2f39f3a59da638a34633b9bf9e6bc147587a25616a3d3929",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Shot order must be consecutive."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 3,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "performance",
+      "stage": "B",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "402d8d545cab8c6ad4c38b3484b5554ddf3c0e0f7a8ddbd2026792202729fa19",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Invalid acting intensity/pause."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 1,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "cinematographer",
+      "stage": "B",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "ac293c4c22c0654a73d8e0406408fe7e6e6e92156c18b62a8777b8ae1921d9ac",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rule finding",
+        "evidence": [
+          "axis_crossing",
+          "axis_crossing"
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 3,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "motion",
+      "stage": "B",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "369762b90ba76055e288cee62e62af7e28df7bef793a92e9457d44c342273afb",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rule finding",
+        "evidence": [
+          "missing_support"
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 2,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "continuity",
+      "stage": "B",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "e36ad23acf36ec58570b68b3c8416c231fc62654616cd7e9ce46323c8a765386",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rule finding",
+        "evidence": [
+          "unexplained_outfit"
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 3,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "video",
+      "stage": "C",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "e4bf208469073a3a8e0de97debbe0f3477195e878860904af125d0c8e952de89",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Unsupported provider capability."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 1,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "voice",
+      "stage": "C",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "8316dfb159c9799a9ab29dcdcf8110cbff828d0c95cf24e099e4a91743e3a95e",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Speaker identity remapped."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 2,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "music",
+      "stage": "C",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "dfa21b963f181da8d4a91a5a280c435d2e5d87ba52c73ce6d58cb6141e58bfc8",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Only isolated relative asset references accepted."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 1,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "editing",
+      "stage": "C",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "acbae5c453fd705551d35d5944d38e0817c141439734ad43fad1ea24be199ccc",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Subtitle outside clip."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 3,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "production_manager",
+      "stage": "D",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "5dbaee51a4c810f0cc8a989e13f3da942cec7e983d79af8760872c322d16a33e",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Production dependency cycle."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 3,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "growth",
+      "stage": "D",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "b50f5f527794a10b9e91af49f8721550f9bfbaef2425017e2b4e3c0ea0c8a27e",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Promotional titles must be 1–100 characters (internal limit)."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 2,
+      "approval_boundary": "self/model approval rejected"
+    },
+    {
+      "agent": "youtube",
+      "stage": "D",
+      "software_developed": true,
+      "software_tested": true,
+      "input_sha256": "7787a6f505d3dccc08ce1edcef65a0c12032c0f7180618a050d1b30462d6a273",
+      "positive": "Awaiting QC → independent review → owner Approved",
+      "negative": {
+        "result": "rejected",
+        "evidence": [
+          "Only read-only preparation is authorized; upload/publish/schedule prohibited."
+        ]
+      },
+      "local_model": "Blocked — no model configured",
+      "provenance": "software",
+      "model_inference": false,
+      "media_generated": false,
+      "creative_media_quality_verified": false,
+      "tests": [
+        "tests.test_specialists",
+        "tests.test_specialist_integration",
+        "tests.test_specialist_ui"
+      ],
+      "artifact_record_count": 1,
+      "approval_boundary": "self/model approval rejected"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "experiment_id": "5c5b37e72ca3d64e77e56e1eb6725356cef10a5ec662c7728aefe220433b849d",
+  "case": {
+    "id": "causal_outline",
+    "roles": [
+      "story"
+    ],
+    "prompt": "Brief থেকে ৬টি সংযুক্ত beat লিখুন। প্রতি beat-এ cause, choice, consequence, emotion, knowledge_change রাখুন। JSON: {\"beats\":[...]}. টাকা, ব্যাগ ও জানা-অজানা তথ্যের continuity অক্ষত রাখুন।",
+    "source": "ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।",
+    "dimensions": [
+      "causality",
+      "psychology",
+      "continuity"
+    ],
+    "expected_objective_defects": null,
+    "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+    "required_keys": [
+      "beats"
+    ]
+  },
+  "settings": {
+    "context_tokens": 2048,
+    "max_new_tokens": 1024,
+    "temperature": 0.7,
+    "seed": 117,
+    "enable_thinking": false,
+    "parallel": 1,
+    "case_timeout_seconds": 180,
+    "compatibility_variant": "flash_attention_off_batch128_threads2_after_owned_compile_cleanup"
+  },
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।"
+      },
+      {
+        "role": "user",
+        "content": "Brief থেকে ৬টি সংযুক্ত beat লিখুন। প্রতি beat-এ cause, choice, consequence, emotion, knowledge_change রাখুন। JSON: {\"beats\":[...]}. টাকা, ব্যাগ ও জানা-অজানা তথ্যের continuity অক্ষত রাখুন।\n\nSOURCE MATERIAL:\nঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।"
+      }
+    ],
+    "max_tokens": 1024,
+    "temperature": 0.7,
+    "seed": 117,
+    "stream": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "cache_prompt": false
+  },
+  "installation": {
+    "state": "installed_not_yet_inferred",
+    "model_repo": "unsloth/Qwen3.5-9B-GGUF",
+    "model_revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+    "filename": "Qwen3.5-9B-Q4_K_M.gguf",
+    "expected_bytes": 5680522464,
+    "expected_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "runtime_source_revision": "release-b12318; embedded build version below",
+    "owner_download_approved": true,
+    "model_inference": false,
+    "paid_fallback": false,
+    "actual_gpu": "Tesla T4, 15360",
+    "actual_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "download_and_hash_seconds": 60.012006387998554,
+    "model_path": "/content/redpad_phase3/model/Qwen3.5-9B-Q4_K_M.gguf",
+    "runtime_variant": "official_prebuilt_cuda12.8_b12318",
+    "binary": "/content/redpad_phase3/official-b12318/llama-b12318/llama-server",
+    "binary_sha256": "0ec391741c38d09eb4074db407c162686e310799c0dc36ebb734775688384ff5",
+    "runtime_version": "version: 0.9.0-dev (build 12318, commit 7021f7e09)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+    "runtime_assets": [
+      {
+        "name": "cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "bytes": 594371580,
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "digest": "sha256:caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea",
+        "verified_sha256": "caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea"
+      },
+      {
+        "name": "llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "bytes": 197999267,
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "digest": "sha256:e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797",
+        "verified_sha256": "e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797"
+      }
+    ],
+    "runtime_prepare_seconds": 36.84645407500284,
+    "source_build": "interrupted_owned_group_stopped; partial objects retained; no model inference attempted"
+  },
+  "state": "Completed",
+  "actual_output_received": true,
+  "human_review_completed": false,
+  "professional_accepted": false,
+  "automatic_retries": 0,
+  "raw_http_base64": "eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1wiYmVhdHNcIjpbe1wiY2F1c2VcIjpcIuCmsOCngeCmrOCmviDgpq7gpr4g4Ka44Ka+4Kay4Kau4Ka+4KawIOCmrOCnjeCmr+CmvuCml+CnhyDgpqrgp4HgprDgp4vgpqjgp4sg4Ka44Kao4KamIOCmluCngeCmgeCmnOCnhyDgpqrgpr7gpq/gprwsIOCmr+CmviDgpofgpqjgp43gpp/gpr7gprDgpq3gpr/gpongpq/gprzgp4fgprAg4KaV4Kal4Ka+IOCmquCnjeCmsOCmleCmvuCmtiDgppXgprDgp4cg4Kao4Ka+4KWkXCIsXCJjaG9pY2VcIjpcIuCmuOCnhyDgpq7gpr4g4Ka44Ka+4Kay4Kau4Ka+4KawIOCmrOCnjeCmr+CmvuCml+Cmn+CmvyDgpqTgp4HgprLgp4cg4Kao4Ka/4Kav4Ka84KeHIOCmrOCmvuCmuOCmvuCmr+CmvCDgpqvgpr/gprDgp4cg4KaG4Ka44KeH4KWkXCIsXCJjb25zZXF1ZW5jZVwiOlwi4Kas4KeN4Kav4Ka+4KaX4Kaf4Ka/IOCmqOCmv+Cmr+CmvOCnhyDgprDgp4Hgpqzgpr4g4Kau4Ka+4Kav4Ka84KeH4KawIOCmheCmnOCmvuCmqOCnjeCmpOCnh+CmhyDgpqTgpr7gpqbgp4fgprAg4KaF4Kaw4KeN4Kah4Ka+4KawIOCmquCnjOCmgeCmm+CnhyDgpqbgp4fgppPgpq/gprzgpr7gprAg4Kaa4KeH4Ka34KeN4Kaf4Ka+IOCmleCmsOCnh+ClpFwiLFwiZW1vdGlvblwiOlwi4Kaw4KeB4Kas4Ka+IOCmheCmqOCngeCmtuCni+CmmuCmqOCmviDgppMg4Kaa4Ka/4Kao4KeN4Kak4Ka+4Kav4Ka8IOCmreCni+Cml+Cnh+CmqCDgpq/gp4cg4Ka44KeHIOCmruCmvuCmr+CmvOCnh+CmsCDgpq7gpr/gpqXgp43gpq/gpr4g4KaV4Kal4Ka+4Kaf4Ka/IOCmluCngeCmgeCmnOCnhyDgpqrgp4fgpq/gprzgp4fgppvgp4fgpaRcIixcImtub3dsZWRnZV9jaGFuZ2VcIjpcIuCmsOCngeCmrOCmviDgpqzgp4Hgpp3gpqTgp4cg4Kaq4Ka+4Kaw4KeHIOCmr+CnhyDgpq7gpr4g4Ka44Ka+4Kay4Kau4Ka+IOCmuOCmpOCnjeCmr+Cmv+CmhyDgpofgpqjgp43gpp/gpr7gprDgpq3gpr/gpongpq/gprzgp4fgprAg4Kac4Kao4KeN4KavIOCmr+CmvuCmmuCnjeCmm+Cnh+CmqCwg4Kaq4Ka+4Ka24KeH4KawIOCmrOCmvuCmuOCmvuCmr+CmvCDgpq/gpr7gppPgpq/gprzgpr7gprAg4KaV4Kal4Ka+IOCmruCmv+CmpeCnjeCmr+CmvuClpFwifSx7XCJjYXVzZVwiOlwi4Kaw4Ka+4Kao4KeN4Kao4Ka+4KawIOCml+CnjeCmr+CmvuCmuCDgpqzgpqjgp43gpqcg4Kal4Ka+4KaV4Ka+4Kav4Ka8IOCmsOCngeCmrOCmviDgppMg4KaG4Kam4Kao4Ka+4KaoIOCmheCmsOCnjeCmoeCmvuCmsCDgpqrgp4LgprDgpqMg4KaV4Kaw4Kak4KeHIOCmquCmvuCmsOCnh+CmqCDgpqjgpr7gpaRcIixcImNob2ljZVwiOlwi4Kaw4KeB4Kas4Ka+IOCmruCmviDgprjgpr7gprLgpq7gpr7gprAg4Kas4KeN4Kav4Ka+4KaXIOCmpeCnh+CmleCnhyDgpoXgppfgp43gprDgpr/gpq4g4Kaf4Ka+4KaV4Ka+IOCmhuCmqOCmpOCnhyDgpprgp4fgprfgp43gpp/gpr4g4KaV4Kaw4KeH4Kao4KWkXCIsXCJjb25zZXF1ZW5jZVwiOlwi4Kas4KeN4Kav4Ka+4KaX4KeHIOCmleCni+CmqOCniyDgpoXgpqTgpr/gprDgpr/gppXgp43gpqQg4Kaf4Ka+4KaV4Ka+IOCmpeCmvuCmleCnhyDgpqjgpr4sIOCmpOCmvuCmhyDgpoXgppfgp43gprDgpr/gpq4g4Kaf4Ka+4KaV4Ka+IOCmq+Cnh+CmsOCmpCDgpqbgpr/gpqTgp4cg4Ka54Kav4Ka84KWkXCIsXCJlbW90aW9uXCI6XCLgprDgp4Hgpqzgpr4g4Ka54Kak4Ka+4Ka2IOCmkyDgpqbgp4Hgprbgp43gpprgpr/gpqjgp43gpqTgpr7gpq/gprwg4KaG4KaV4KeN4Kaw4Ka+4Kao4KeN4KakIOCmueCmqCDgppXgpr7gprDgpqMg4Kak4Ka+4Kaw4Ka+IOCmheCmsOCnjeCmoeCmvuCmsCDgpqrgp4LgprDgpqMg4KaV4Kaw4Kak4KeHIOCmquCmvuCmsOCnh+CmqOCmv+ClpFwiLFwia25vd2xlZGdlX2NoYW5nZVwiOlwi4Kaw4KeB4Kas4Ka+IOCmrOCngeCmneCmpOCnhyDgpqrgpr7gprDgp4fgpqgg4Kav4KeHIOCmruCmviDgprjgpr7gprLgpq7gpr7gprAg4Kas4KeN4Kav4Ka+4KaX4KeHIOCmqOCmpOCngeCmqCDgppXgp4vgpqjgp4sg4Kaf4Ka+4KaV4Ka+IOCmqOCnh+Cmhywg4Kav4Ka+IOCmpOCmvuCmpuCnh+CmsCDgpqrgprDgpr/gprjgp43gpqXgpr/gpqTgpr/gpp/gpr/gppXgp4cg4KaG4Kaw4KaTIOCmleCmoOCmv+CmqCDgppXgprDgp4cg4Kak4KeL4Kay4KeH4KWkXCJ9LHtcImNhdXNlXCI6XCLgpq7gpr4g4Ka44Ka+4Kay4Kau4Ka+4KawIOCmh+CmqOCnjeCmn+CmvuCmsOCmreCmv+CmieCmr+CmvOCnh+CmsCDgppXgpqXgpr4g4Kaw4KeB4Kas4Ka+IOCmnOCmvuCmqOCmpOCnhyDgpqrgpr7gprDgp4fgpaRcIixcImNob2ljZVwiOlwi4Kaw4KeB4Kas4Ka+IOCmruCmviDgprjgpr7gprLgpq7gpr7gppXgp4cg4KaH4Kao4KeN4Kaf4Ka+4Kaw4Kat4Ka/4KaJIOCmqOCmv+Cmr+CmvOCnhyDgppXgpqXgpr4g4Kas4Kay4Ka+4KawIOCmrOCmv+Cmt+Cmr+CmvOCmn+CmvyDgprLgp4HgppXgpr/gpq/gprzgp4cg4Kaw4Ka+4KaW4KeH4Kao4KWkXCIsXCJjb25zZXF1ZW5jZVwiOlwi4Kau4Ka+IOCmuOCmvuCmsuCmruCmviDgpofgpqjgp43gpp/gpr7gprDgpq3gpr/gpongpq/gprzgp4cg4Kav4Ka+4KaoIOCmj+CmrOCmgiDgprjgpq7gp43gpq3gpqzgpqQg4Kaa4Ka+4KaV4Kaw4Ka/IOCmquCmvuCmqOClpFwiLFwiZW1vdGlvblwiOlwi4Kaw4KeB4Kas4Ka+IOCmruCmviDgprjgpr7gprLgpq7gpr7gprAg4Kac4Kao4KeN4KavIOCmieCmpuCnjeCmrOCnh+CmlyDgppMg4KaG4Ka24Ka+4KawIOCmruCmv+CmtuCnjeCmsOCmoyDgpoXgpqjgp4Hgpq3gpqwg4KaV4Kaw4KeH4Kao4KWkXCIsXCJrbm93bGVkZ2VfY2hhbmdlXCI6XCLgprDgp4Hgpqzgpr4g4Kas4KeB4Kad4Kak4KeHIOCmquCmvuCmsOCnh+CmqCDgpq/gp4cg4Kau4Ka+IOCmuOCmvuCmsuCmruCmvuCmsCDgpprgpr7gppXgprDgpr/gprAg4Ka44KeB4Kav4KeL4KaX4Kaf4Ka/IOCmpOCmvuCmpuCnh+CmsCDgpoXgprDgp43gpqXgpqjgp4jgpqTgpr/gppUg4Kaq4Kaw4Ka/4Ka44KeN4Kal4Ka/4Kak4Ka/IOCmieCmqOCnjeCmqOCmpCDgppXgprDgpqTgp4cg4Kaq4Ka+4Kaw4KeH4KWkXCJ9LHtcImNhdXNlXCI6XCLgprDgp4Hgpqzgpr4g4KaTIOCmhuCmpuCmqOCmvuCmqCDgpoXgprDgp43gpqHgpr7gprAg4Kaq4KeC4Kaw4KajIOCmleCmsOCmpOCnhyDgpqrgpr7gprDgp4fgpqgg4Kao4Ka+4KWkXCIsXCJjaG9pY2VcIjpcIuCmsOCngeCmrOCmviDgpq7gpr4g4Ka44Ka+4Kay4Kau4Ka+4KaV4KeHIOCmh+CmqOCnjeCmn+CmvuCmsOCmreCmv+CmieCmr+CmvOCnh+CmsCDgppXgpqXgpr4g4Kas4Kay4Ka+4KawIOCmrOCmv+Cmt+Cmr+CmvOCmn+CmvyDgprLgp4HgppXgpr/gpq/gprzgp4cg4Kaw4Ka+4KaW4KeH4Kao4KWkXCIsXCJjb25zZXF1ZW5jZVwiOlwi4Kau4Ka+IOCmuOCmvuCmsuCmruCmviDgpofgpqjgp43gpp/gpr7gprDgpq3gpr/gpongpq/gprzgp4cg4Kav4Ka+4KaoIOCmj+CmrOCmgiDgprjgpq7gp43gpq3gpqzgpqQg4Kaa4Ka+4KaV4Kaw4Ka/IOCmquCmvuCmqOClpFwiLFwiZW1vdGlvblwiOlwi4Kaw4KeB4Kas4Ka+IOCmruCmviDgprjgpr7gprLgpq7gpr7gprAg4Kac4Kao4KeN4KavIOCmieCmpuCnjeCmrOCnh+CmlyDgppMg4KaG4Ka24Ka+4KawIOCmruCmv+CmtuCnjeCmsOCmoyDgpoXgpqjgp4Hgpq3gpqwg4KaV4Kaw4KeH4Kao4KWkXCIsXCJrbm93bGVkZ2VfY2hhbmdlXCI6XCLgprDgp4Hgpqzgpr4g4Kas4KeB4Kad4Kak4KeHIOCmquCmvuCmsOCnh+CmqCDgpq/gp4cg4Kau4Ka+IOCmuOCmvuCmsuCmruCmvuCmsCDgpprgpr7gppXgprDgpr/gprAg4Ka44KeB4Kav4KeL4KaX4Kaf4Ka/IOCmpOCmvuCmpuCnh+CmsCDgpoXgprDgp43gpqXgpqjgp4jgpqTgpr/gppUg4Kaq4Kaw4Ka/4Ka44KeN4Kal4Ka/4Kak4Ka/IOCmieCmqOCnjeCmqOCmpCDgppXgprDgpqTgp4cg4Kaq4Ka+4Kaw4KeH4KWkXCJ9LHtcImNhdXNlXCI6XCLgprDgp4Hgpqzgpr4g4Kau4Ka+IOCmuOCmvuCmsuCmruCmvuCmsCDgpqzgp43gpq/gpr7gppfgp4cg4Kaq4KeB4Kaw4KeL4Kao4KeLIOCmuOCmqOCmpiDgppbgp4HgpoHgppzgp4cg4Kaq4Ka+4Kav4Ka84KWkXCIsXCJjaG9pY2VcIjpcIuCmuOCnhyDgpq7gpr4g4Ka44Ka+4Kay4Kau4Ka+4KawIOCmrOCnjeCmr+CmvuCml+Cmn+CmvyDgpqTgp4HgprLgp4cg4Kao4Ka/4Kav4Ka84KeHIOCmrOCmvuCmuOCmvuCmr+CmvCDgpqvgpr/gprDgp4cg4KaG4Ka44KeH4KWkXCIsXCJjb25zZXF1ZW5jZVwiOlwi4Kas4KeN4Kav4Ka+4KaX4Kaf4Ka/IOCmqOCmv+Cmr+CmvOCnhyDgprDgp4Hgpqzgpr4g4Kau4Ka+4Kav4Ka84KeH4KawIOCmheCmnOCmvuCmqOCnjeCmpOCnh+CmhyDgpqTgpr7gpqbgp4fgprAg4KaF4Kaw4KeN4Kah4Ka+4KawIOCmquCnjOCmgeCmm+CnhyDgpqbgp4fgppPgpq/gprzgpr7gprAg4Kaa4KeH4Ka34KeN4Kaf4Ka+IOCmleCmsOCnh+ClpFwiLFwiZW1vdGlvblwiOlwi4Kaw4KeB4Kas4Ka+IOCmheCmqOCngeCmtuCni+CmmuCmqOCmviDgppMg4Kaa4Ka/4Kao4KeN4Kak4Ka+4Kav4Ka8IOCmreCni+Cml+Cnh+CmqCDgpq/gp4cg4Ka44KeHIOCmruCmvuCmr+CmvOCnh+CmsCDgpq7gpr/gpqXgp43gpq/gpr4g4KaV4Kal4Ka+4Kaf4Ka/IOCmluCngeCmgeCmnOCnhyDgpqrgp4fgpq/gprzgp4fgppvgp4fgpaRcIixcImtub3dsZWRnZV9jaGFuZ2VcIjpcIuCmsOCngeCmrOCmviDgpqzgp4Hgpp3gpqTgp4cg4Kaq4Ka+4Kaw4KeHIOCmr+CnhyDgpq7gpr4g4Ka44Ka+4Kay4Kau4Ka+IOCmuOCmpOCnjeCmr+Cmv+CmhyDgpofgpqjgp43gpp/gpr7gprDgpq3gpr/gpongpq/gprzgp4fgprAg4Kac4Kao4KeN4KavIOCmr+CmvuCmmuCnjeCmm+Cnh+CmqCwg4Kaq4Ka+4Ka24KeH4KawIOCmrOCmvuCmuOCmvuCmr+CmvCDgpq/gpr7gppPgpq/gprzgpr7gprAg4KaV4Kal4Ka+IOCmruCmv+CmpeCnjeCmr+CmvuClpFwifSx7XCJjYXVzZVwiOlwi4Kaw4Ka+4Kao4KeN4Kao4Ka+4KawIOCml+CnjeCmr+CmvuCmuCDgpqzgpqjgp43gpqcg4Kal4Ka+4KaV4Ka+4Kav4Ka8IOCmsOCngeCmrOCmviDgppMg4KaG4Kam4Kao4Ka+4KaoIOCmheCmsOCnjeCmoeCmvuCmsCDgpqrgp4LgprDgpqMg4KaV4Kaw4Kak4KeHIOCmquCmvuCmsOCnh+CmqCDgpqjgpr7gpaRcIixcImNob2ljZVwiOlwi4Kaw4KeB4Kas4Ka+IOCmruCmviDgprjgpr7gprLgpq7gpr7gprAg4Kas4KeN4Kav4Ka+4KaXIOCmpeCnh+CmleCnhyDgpoXgppfgp43gprDgpr/gpq4g4Kaf4Ka+4KaV4Ka+IOCmhuCmqOCmpOCnhyDgpprgp4fgprfgp43gpp/gpr4g4KaV4Kaw4KeH4Kao4KWkXCIsXCJjb25zZXF1ZW5jZVwiOlwi4Kas4KeN4Kav4Ka+4KaX4KeHIOCmleCni+CmqOCniyDgpoXgpqTgpr/gprDgpr/gppXgp43gpqQg4Kaf4Ka+4KaV4Ka+IOCmpeCmvuCmleCnhyDgpqjgpr4sIOCmpOCmvuCmhyDgpoXgppfgp43gprDgpr/gpq4g4Kaf4Ka+4KaV4Ka+IOCmq+Cnh+CmsOCmpCDgpqbgpr/gpqTgp4cg4Ka54Kav4Ka84KWkXCIsXCJlbW90aW9uXCI6XCLgprDgp4Hgpqzgpr4g4Ka54Kak4Ka+4Ka2IOCmkyDgpqbgp4Hgprbgp43gpprgpr/gpqjgp43gpqTgpr7gpq/gprwg4KaG4KaV4KeN4Kaw4Ka+4Kao4KeN4KakIOCmueCmqCDgppXgpr7gprDgpqMg4Kak4Ka+4Kaw4Ka+IOCmheCmsOCnjeCmoeCmvuCmsCDgpqrgp4LgprDgpqMg4KaV4Kaw4Kak4KeHIOCmquCmvuCmsOCnh+CmqOCmv+ClpFwiLFwia25vd2xlZGdlX2NoYW5nZVwiOlwi4Kaw4KeB4Kas4Ka+IOCmrOCngeCmneCmpOCnhyDgpqrgpr7gprDgp4fgpqgg4Kav4KeHIOCmruCmviDgprjgpr7gprLgpq7gpr7gprAg4Kas4KeN4Kav4Ka+4KaX4KeHIOCmqOCmpOCngeCmqCDgppXgp4vgpqjgp4sg4Kaf4Ka+4KaV4Ka+IOCmqOCnh+Cmhywg4Kav4Ka+IOCmpOCmvuCmpuCnh+CmsCDgpqrgprDgpr/gprjgp43gpqXgpr/gpqTgpr/gpp/gpr/gppXgp4cg4KaG4Kaw4KaTIOCmleCmoOCmv+CmqCDgppXgprDgp4cg4Kak4KeL4Kay4KeH4KWkXCJ9XX0ifX1dLCJjcmVhdGVkIjoxNzk0NDk0ODQzLCJtb2RlbCI6Ii9jb250ZW50L3JlZHBhZF9waGFzZTMvbW9kZWwvUXdlbjMuNS05Qi1RNF9LX00uZ2d1ZiIsInN5c3RlbV9maW5nZXJwcmludCI6ImIxMjMxOC03MDIxZjdlMDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJ1c2FnZSI6eyJjb21wbGV0aW9uX3Rva2VucyI6MTAyMiwicHJvbXB0X3Rva2VucyI6Mzk1LCJ0b3RhbF90b2tlbnMiOjE0MTcsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjowfX0sImlkIjoiY2hhdGNtcGwtT3dUYzR6enpEdmxURWdWcHRnQVlRcWtGck9ZZ3JJZDIiLCJ0aW1pbmdzIjp7ImNhY2hlX24iOjAsInByb21wdF9uIjozOTUsInByb21wdF9tcyI6NjUxLjY2MSwicHJvbXB0X3Blcl90b2tlbl9tcyI6MS42NDk3NzQ2ODM1NDQzMDM3LCJwcm9tcHRfcGVyX3NlY29uZCI6NjA2LjE0MzM3ODIyODg2NDQsInByZWRpY3RlZF9uIjoxMDIyLCJwcmVkaWN0ZWRfbXMiOjQ3NzA4LjIsInByZWRpY3RlZF9wZXJfdG9rZW5fbXMiOjQ2LjcyNjkzNDM3ODA2MDcyLCJwcmVkaWN0ZWRfcGVyX3NlY29uZCI6MjEuNDAwOTMzMTcyOTEzNjc1fX0=",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"beats\":[{\"cause\":\"রুবা মা সালমার ব্যাগে পুরোনো সনদ খুঁজে পায়, যা ইন্টারভিউয়ের কথা প্রকাশ করে না।\",\"choice\":\"সে মা সালমার ব্যাগটি তুলে নিয়ে বাসায় ফিরে আসে।\",\"consequence\":\"ব্যাগটি নিয়ে রুবা মায়ের অজান্তেই তাদের অর্ডার পৌঁছে দেওয়ার চেষ্টা করে।\",\"emotion\":\"রুবা অনুশোচনা ও চিন্তায় ভোগেন যে সে মায়ের মিথ্যা কথাটি খুঁজে পেয়েছে।\",\"knowledge_change\":\"রুবা বুঝতে পারে যে মা সালমা সত্যিই ইন্টারভিউয়ের জন্য যাচ্ছেন, পাশের বাসায় যাওয়ার কথা মিথ্যা।\"},{\"cause\":\"রান্নার গ্যাস বন্ধ থাকায় রুবা ও আদনান অর্ডার পূরণ করতে পারেন না।\",\"choice\":\"রুবা মা সালমার ব্যাগ থেকে অগ্রিম টাকা আনতে চেষ্টা করেন।\",\"consequence\":\"ব্যাগে কোনো অতিরিক্ত টাকা থাকে না, তাই অগ্রিম টাকা ফেরত দিতে হয়।\",\"emotion\":\"রুবা হতাশ ও দুশ্চিন্তায় আক্রান্ত হন কারণ তারা অর্ডার পূরণ করতে পারেনি।\",\"knowledge_change\":\"রুবা বুঝতে পারেন যে মা সালমার ব্যাগে নতুন কোনো টাকা নেই, যা তাদের পরিস্থিতিটিকে আরও কঠিন করে তোলে।\"},{\"cause\":\"মা সালমার ইন্টারভিউয়ের কথা রুবা জানতে পারে।\",\"choice\":\"রুবা মা সালমাকে ইন্টারভিউ নিয়ে কথা বলার বিষয়টি লুকিয়ে রাখেন।\",\"consequence\":\"মা সালমা ইন্টারভিউয়ে যান এবং সম্ভবত চাকরি পান।\",\"emotion\":\"রুবা মা সালমার জন্য উদ্বেগ ও আশার মিশ্রণ অনুভব করেন।\",\"knowledge_change\":\"রুবা বুঝতে পারেন যে মা সালমার চাকরির সুযোগটি তাদের অর্থনৈতিক পরিস্থিতি উন্নত করতে পারে।\"},{\"cause\":\"রুবা ও আদনান অর্ডার পূরণ করতে পারেন না।\",\"choice\":\"রুবা মা সালমাকে ইন্টারভিউয়ের কথা বলার বিষয়টি লুকিয়ে রাখেন।\",\"consequence\":\"মা সালমা ইন্টারভিউয়ে যান এবং সম্ভবত চাকরি পান।\",\"emotion\":\"রুবা মা সালমার জন্য উদ্বেগ ও আশার মিশ্রণ অনুভব করেন।\",\"knowledge_change\":\"রুবা বুঝতে পারেন যে মা সালমার চাকরির সুযোগটি তাদের অর্থনৈতিক পরিস্থিতি উন্নত করতে পারে।\"},{\"cause\":\"রুবা মা সালমার ব্যাগে পুরোনো সনদ খুঁজে পায়।\",\"choice\":\"সে মা সালমার ব্যাগটি তুলে নিয়ে বাসায় ফিরে আসে।\",\"consequence\":\"ব্যাগটি নিয়ে রুবা মায়ের অজান্তেই তাদের অর্ডার পৌঁছে দেওয়ার চেষ্টা করে।\",\"emotion\":\"রুবা অনুশোচনা ও চিন্তায় ভোগেন যে সে মায়ের মিথ্যা কথাটি খুঁজে পেয়েছে।\",\"knowledge_change\":\"রুবা বুঝতে পারে যে মা সালমা সত্যিই ইন্টারভিউয়ের জন্য যাচ্ছেন, পাশের বাসায় যাওয়ার কথা মিথ্যা।\"},{\"cause\":\"রান্নার গ্যাস বন্ধ থাকায় রুবা ও আদনান অর্ডার পূরণ করতে পারেন না।\",\"choice\":\"রুবা মা সালমার ব্যাগ থেকে অগ্রিম টাকা আনতে চেষ্টা করেন।\",\"consequence\":\"ব্যাগে কোনো অতিরিক্ত টাকা থাকে না, তাই অগ্রিম টাকা ফেরত দিতে হয়।\",\"emotion\":\"রুবা হতাশ ও দুশ্চিন্তায় আক্রান্ত হন কারণ তারা অর্ডার পূরণ করতে পারেনি।\",\"knowledge_change\":\"রুবা বুঝতে পারেন যে মা সালমার ব্যাগে নতুন কোনো টাকা নেই, যা তাদের পরিস্থিতিটিকে আরও কঠিন করে তোলে।\"}]}"
+        }
+      }
+    ],
+    "created": 1794494843,
+    "model": "/content/redpad_phase3/model/Qwen3.5-9B-Q4_K_M.gguf",
+    "system_fingerprint": "b12318-7021f7e09",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 1022,
+      "prompt_tokens": 395,
+      "total_tokens": 1417,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-OwTc4zzzDvlTEgVptgAYQqkFrOYgrId2",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 395,
+      "prompt_ms": 651.661,
+      "prompt_per_token_ms": 1.6497746835443037,
+      "prompt_per_second": 606.1433782288644,
+      "predicted_n": 1022,
+      "predicted_ms": 47708.2,
+      "predicted_per_token_ms": 46.72693437806072,
+      "predicted_per_second": 21.400933172913675
+    }
+  },
+  "raw_content": "{\"beats\":[{\"cause\":\"রুবা মা সালমার ব্যাগে পুরোনো সনদ খুঁজে পায়, যা ইন্টারভিউয়ের কথা প্রকাশ করে না।\",\"choice\":\"সে মা সালমার ব্যাগটি তুলে নিয়ে বাসায় ফিরে আসে।\",\"consequence\":\"ব্যাগটি নিয়ে রুবা মায়ের অজান্তেই তাদের অর্ডার পৌঁছে দেওয়ার চেষ্টা করে।\",\"emotion\":\"রুবা অনুশোচনা ও চিন্তায় ভোগেন যে সে মায়ের মিথ্যা কথাটি খুঁজে পেয়েছে।\",\"knowledge_change\":\"রুবা বুঝতে পারে যে মা সালমা সত্যিই ইন্টারভিউয়ের জন্য যাচ্ছেন, পাশের বাসায় যাওয়ার কথা মিথ্যা।\"},{\"cause\":\"রান্নার গ্যাস বন্ধ থাকায় রুবা ও আদনান অর্ডার পূরণ করতে পারেন না।\",\"choice\":\"রুবা মা সালমার ব্যাগ থেকে অগ্রিম টাকা আনতে চেষ্টা করেন।\",\"consequence\":\"ব্যাগে কোনো অতিরিক্ত টাকা থাকে না, তাই অগ্রিম টাকা ফেরত দিতে হয়।\",\"emotion\":\"রুবা হতাশ ও দুশ্চিন্তায় আক্রান্ত হন কারণ তারা অর্ডার পূরণ করতে পারেনি।\",\"knowledge_change\":\"রুবা বুঝতে পারেন যে মা সালমার ব্যাগে নতুন কোনো টাকা নেই, যা তাদের পরিস্থিতিটিকে আরও কঠিন করে তোলে।\"},{\"cause\":\"মা সালমার ইন্টারভিউয়ের কথা রুবা জানতে পারে।\",\"choice\":\"রুবা মা সালমাকে ইন্টারভিউ নিয়ে কথা বলার বিষয়টি লুকিয়ে রাখেন।\",\"consequence\":\"মা সালমা ইন্টারভিউয়ে যান এবং সম্ভবত চাকরি পান।\",\"emotion\":\"রুবা মা সালমার জন্য উদ্বেগ ও আশার মিশ্রণ অনুভব করেন।\",\"knowledge_change\":\"রুবা বুঝতে পারেন যে মা সালমার চাকরির সুযোগটি তাদের অর্থনৈতিক পরিস্থিতি উন্নত করতে পারে।\"},{\"cause\":\"রুবা ও আদনান অর্ডার পূরণ করতে পারেন না।\",\"choice\":\"রুবা মা সালমাকে ইন্টারভিউয়ের কথা বলার বিষয়টি লুকিয়ে রাখেন।\",\"consequence\":\"মা সালমা ইন্টারভিউয়ে যান এবং সম্ভবত চাকরি পান।\",\"emotion\":\"রুবা মা সালমার জন্য উদ্বেগ ও আশার মিশ্রণ অনুভব করেন।\",\"knowledge_change\":\"রুবা বুঝতে পারেন যে মা সালমার চাকরির সুযোগটি তাদের অর্থনৈতিক পরিস্থিতি উন্নত করতে পারে।\"},{\"cause\":\"রুবা মা সালমার ব্যাগে পুরোনো সনদ খুঁজে পায়।\",\"choice\":\"সে মা সালমার ব্যাগটি তুলে নিয়ে বাসায় ফিরে আসে।\",\"consequence\":\"ব্যাগটি নিয়ে রুবা মায়ের অজান্তেই তাদের অর্ডার পৌঁছে দেওয়ার চেষ্টা করে।\",\"emotion\":\"রুবা অনুশোচনা ও চিন্তায় ভোগেন যে সে মায়ের মিথ্যা কথাটি খুঁজে পেয়েছে।\",\"knowledge_change\":\"রুবা বুঝতে পারে যে মা সালমা সত্যিই ইন্টারভিউয়ের জন্য যাচ্ছেন, পাশের বাসায় যাওয়ার কথা মিথ্যা।\"},{\"cause\":\"রান্নার গ্যাস বন্ধ থাকায় রুবা ও আদনান অর্ডার পূরণ করতে পারেন না।\",\"choice\":\"রুবা মা সালমার ব্যাগ থেকে অগ্রিম টাকা আনতে চেষ্টা করেন।\",\"consequence\":\"ব্যাগে কোনো অতিরিক্ত টাকা থাকে না, তাই অগ্রিম টাকা ফেরত দিতে হয়।\",\"emotion\":\"রুবা হতাশ ও দুশ্চিন্তায় আক্রান্ত হন কারণ তারা অর্ডার পূরণ করতে পারেনি।\",\"knowledge_change\":\"রুবা বুঝতে পারেন যে মা সালমার ব্যাগে নতুন কোনো টাকা নেই, যা তাদের পরিস্থিতিটিকে আরও কঠিন করে তোলে।\"}]}",
+  "raw_content_sha256": "e8192f3ec0fc587534e4702ade04e613f02ef3af099e0e6de6c54107b52a80c3",
+  "finish_reason": "stop",
+  "truncated": false,
+  "wall_seconds": 48.42440850699859,
+  "peak_server_rss_bytes": 1977565184,
+  "peak_device_used_mib": 5303,
+  "memory_scope": "Sampled1s; GPU whole-device used incl baseline, not isolated allocator peak"
+}

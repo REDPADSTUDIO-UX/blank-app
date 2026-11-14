@@ -1,0 +1,8 @@
+test_prepared_native_voice_stales_if_casting_dependency_pins_are_dropped (tests.test_voice_casting_integration.VoiceCastingTests.test_prepared_native_voice_stales_if_casting_dependency_pins_are_dropped) ... ok
+test_voice_plan_change_stales_prior_director_inspection (tests.test_voice_casting_integration.VoiceCastingTests.test_voice_plan_change_stales_prior_director_inspection) ... ok
+test_director_review_rejects_changed_voice_reference_metadata (tests.test_voice_casting_integration.VoiceCastingTests.test_director_review_rejects_changed_voice_reference_metadata) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.355s
+
+OK

@@ -1,0 +1,129 @@
+{
+  "experiment_id": "772d7a532fb5af5173082184cd34c457056c28a52f45501445bf1a2c028806f5",
+  "case": {
+    "id": "runtime_text_canary",
+    "system": "আপনি বাংলা সহকারী। নির্দেশনা অনুসরণ করুন।",
+    "prompt": "কেবল এই বাক্যটি লিখুন: আজ সকালটা শান্ত।",
+    "source": "এইটি runtime canary, creative benchmark নয়।",
+    "required_keys": [],
+    "expected_objective_defects": null
+  },
+  "settings": {
+    "context_tokens": 2048,
+    "max_new_tokens": 1024,
+    "temperature": 0.7,
+    "seed": 117,
+    "enable_thinking": false,
+    "parallel": 1,
+    "case_timeout_seconds": 180,
+    "compatibility_variant": "flash_attention_off_batch128_threads2_after_owned_compile_cleanup"
+  },
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "আপনি বাংলা সহকারী। নির্দেশনা অনুসরণ করুন।"
+      },
+      {
+        "role": "user",
+        "content": "কেবল এই বাক্যটি লিখুন: আজ সকালটা শান্ত।\n\nSOURCE MATERIAL:\nএইটি runtime canary, creative benchmark নয়।"
+      }
+    ],
+    "max_tokens": 32,
+    "temperature": 0.7,
+    "seed": 117,
+    "stream": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "cache_prompt": false
+  },
+  "installation": {
+    "state": "installed_not_yet_inferred",
+    "model_repo": "unsloth/Qwen3.5-9B-GGUF",
+    "model_revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+    "filename": "Qwen3.5-9B-Q4_K_M.gguf",
+    "expected_bytes": 5680522464,
+    "expected_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "runtime_source_revision": "release-b12318; embedded build version below",
+    "owner_download_approved": true,
+    "model_inference": false,
+    "paid_fallback": false,
+    "actual_gpu": "Tesla T4, 15360",
+    "actual_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "download_and_hash_seconds": 60.012006387998554,
+    "model_path": "/content/redpad_phase3/model/Qwen3.5-9B-Q4_K_M.gguf",
+    "runtime_variant": "official_prebuilt_cuda12.8_b12318",
+    "binary": "/content/redpad_phase3/official-b12318/llama-b12318/llama-server",
+    "binary_sha256": "0ec391741c38d09eb4074db407c162686e310799c0dc36ebb734775688384ff5",
+    "runtime_version": "version: 0.9.0-dev (build 12318, commit 7021f7e09)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+    "runtime_assets": [
+      {
+        "name": "cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "bytes": 594371580,
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "digest": "sha256:caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea",
+        "verified_sha256": "caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea"
+      },
+      {
+        "name": "llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "bytes": 197999267,
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "digest": "sha256:e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797",
+        "verified_sha256": "e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797"
+      }
+    ],
+    "runtime_prepare_seconds": 36.84645407500284,
+    "source_build": "interrupted_owned_group_stopped; partial objects retained; no model inference attempted"
+  },
+  "state": "Completed",
+  "actual_output_received": true,
+  "human_review_completed": false,
+  "professional_accepted": false,
+  "automatic_retries": 0,
+  "raw_http_base64": "eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoi4KaG4KacIOCmuOCmleCmvuCmsuCmn+CmviDgprbgpr7gpqjgp43gpqTgpaQifX1dLCJjcmVhdGVkIjoxNzk0NDk0NzcxLCJtb2RlbCI6Ii9jb250ZW50L3JlZHBhZF9waGFzZTMvbW9kZWwvUXdlbjMuNS05Qi1RNF9LX00uZ2d1ZiIsInN5c3RlbV9maW5nZXJwcmludCI6ImIxMjMxOC03MDIxZjdlMDkiLCJvYmplY3QiOiJjaGF0LmNvbXBsZXRpb24iLCJ1c2FnZSI6eyJjb21wbGV0aW9uX3Rva2VucyI6OSwicHJvbXB0X3Rva2VucyI6NzAsInRvdGFsX3Rva2VucyI6NzksInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjowfX0sImlkIjoiY2hhdGNtcGwtMWlXOEJHZndMS0VsQk9CemNxZHEwZGtBT1BHWnVVNXciLCJ0aW1pbmdzIjp7ImNhY2hlX24iOjAsInByb21wdF9uIjo3MCwicHJvbXB0X21zIjozMTk5Ljc4NCwicHJvbXB0X3Blcl90b2tlbl9tcyI6NDUuNzExMiwicHJvbXB0X3Blcl9zZWNvbmQiOjIxLjg3NjQ3NjY2MjE3NDY5NiwicHJlZGljdGVkX24iOjksInByZWRpY3RlZF9tcyI6Mzg1LjYwMSwicHJlZGljdGVkX3Blcl90b2tlbl9tcyI6NDguMjAwMTI1LCJwcmVkaWN0ZWRfcGVyX3NlY29uZCI6MjAuNzQ2ODM0MTYyNzc0NDczfX0=",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "আজ সকালটা শান্ত।"
+        }
+      }
+    ],
+    "created": 1794494771,
+    "model": "/content/redpad_phase3/model/Qwen3.5-9B-Q4_K_M.gguf",
+    "system_fingerprint": "b12318-7021f7e09",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 9,
+      "prompt_tokens": 70,
+      "total_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-1iW8BGfwLKElBOBzcqdq0dkAOPGZuU5w",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 70,
+      "prompt_ms": 3199.784,
+      "prompt_per_token_ms": 45.7112,
+      "prompt_per_second": 21.876476662174696,
+      "predicted_n": 9,
+      "predicted_ms": 385.601,
+      "predicted_per_token_ms": 48.200125,
+      "predicted_per_second": 20.746834162774473
+    }
+  },
+  "raw_content": "আজ সকালটা শান্ত।",
+  "raw_content_sha256": "734454633499d436bf65d1f9af523c742f816a9b62f3e72bbbf48734cca3d19f",
+  "finish_reason": "stop",
+  "truncated": false,
+  "wall_seconds": 3.590698407999298,
+  "peak_server_rss_bytes": 1525809152,
+  "peak_device_used_mib": 5291,
+  "memory_scope": "Sampled1s; GPU whole-device used incl baseline, not isolated allocator peak"
+}

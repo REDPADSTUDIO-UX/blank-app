@@ -1,0 +1,247 @@
+{
+  "checkpoint": "0de2bf336ca2c3c1f7abff1b155962aeaec83cc9",
+  "target_roles": [
+    "casting",
+    "motion",
+    "music",
+    "performance",
+    "video",
+    "voice"
+  ],
+  "engineering_complete": 13,
+  "partial": 6,
+  "production_ready": 0,
+  "professionally_verified_of_21": 0,
+  "roles": {
+    "casting": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "reference_edit": [
+          "flux2_klein4"
+        ],
+        "reference_video": [
+          "wan_animate2"
+        ],
+        "text_to_audio": [
+          "indic_speak"
+        ],
+        "video_inspection": []
+      },
+      "unsupported_required_operations": [
+        "video_inspection"
+      ],
+      "execution_binding_pending": [
+        "wan_animate2",
+        "indic_speak"
+      ],
+      "deterministic_operations": [
+        "casting_assessment",
+        "casting_evidence",
+        "temporal_assessment"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null,
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution.",
+        "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified."
+      ],
+      "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+      "native_source_revisions": {
+        "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
+      },
+      "offline_preparation_evidence": "verification/offline_6/"
+    },
+    "motion": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "reference_video": [
+          "wan_animate2"
+        ],
+        "image_inspection": [
+          "vision7"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "wan_animate2",
+        "vision7"
+      ],
+      "deterministic_operations": [
+        "temporal_assessment"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution."
+      ],
+      "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+      "native_source_revisions": {
+        "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
+      },
+      "offline_preparation_evidence": "verification/offline_6/"
+    },
+    "music": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "music": [
+          "ace15"
+        ],
+        "sound_effect": [
+          "stable_audio_small"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "ace15",
+        "stable_audio_small"
+      ],
+      "deterministic_operations": [
+        "cue_manifest"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null,
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Source pinned at ca1e85fe9430179831e6bc6be790c332190a3866; initialize_service auto-download/code-sync must be disabled by reviewed local bridge. weights_only=True observed but bounded auxiliary tensor checks/full model-code review remain. Never use ACE 3.5B."
+      ],
+      "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+      "native_source_revisions": {
+        "ace15": "ca1e85fe9430179831e6bc6be790c332190a3866"
+      },
+      "offline_preparation_evidence": "verification/offline_6/"
+    },
+    "performance": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "reference_video": [
+          "wan_animate2"
+        ],
+        "video_inspection": []
+      },
+      "unsupported_required_operations": [
+        "video_inspection"
+      ],
+      "execution_binding_pending": [
+        "wan_animate2"
+      ],
+      "deterministic_operations": [
+        "temporal_assessment"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null,
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Native CLI/YAML/WanAnimate2MPIPipeline source reviewed at 3ad2fef7d61d6200c9c653e0fe47be7616b323f3; exact auxiliary .pth/component safety and local MPI execution bridge remain unverified. No Diffusers/old Animate substitution."
+      ],
+      "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+      "native_source_revisions": {
+        "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
+      },
+      "offline_preparation_evidence": "verification/offline_6/"
+    },
+    "video": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "image_to_video": [
+          "wan22_5",
+          "ltx25",
+          "svd_xt"
+        ],
+        "text_to_video": [
+          "wan22_5",
+          "ltx25"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "wan22_5",
+        "ltx25",
+        "svd_xt"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null,
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Split ModelPaths/DistilledPipeline source reviewed at f0f2f8607189c78a72420b2b63cb1975b5eca179; selected pinned BF16 recipe still lacks approved exact spatial upsampler/tokenizer dependencies and verified local execution bridge. No older LTX or repack."
+      ],
+      "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+      "native_source_revisions": {
+        "ltx25": "f0f2f8607189c78a72420b2b63cb1975b5eca179"
+      },
+      "offline_preparation_evidence": "verification/offline_6/"
+    },
+    "voice": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text_to_audio": [
+          "indic_speak",
+          "indic_parler"
+        ],
+        "reference_voice": [
+          "indicf5"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "indic_speak",
+        "indicf5",
+        "indic_parler"
+      ],
+      "deterministic_operations": [
+        "voice_metadata"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null,
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified.",
+        "Requires reviewed custom code and local auxiliary dependencies; trust_remote_code=True is not authorized. Gated access and specific voice consent pending."
+      ],
+      "specialist_preparation": "source-reviewed native call and evidence preparation; no executable runtime bridge",
+      "native_source_revisions": {},
+      "offline_preparation_evidence": "verification/offline_6/"
+    }
+  },
+  "other_thirteen_and_director_script_preserved": true,
+  "all_pinned_model_profiles_preserved": true,
+  "gpu_inference_model_weights_hosted_paid_license_acceptance": 0
+}

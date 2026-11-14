@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "blocked_on_environment_network_policy",
+  "user_authorization_this_request": {
+    "free_gpu_platform_attempts": true,
+    "bounded_story_inference_on_accessible_free_runtime": true,
+    "registered_story_alternative_if_primary_infeasible": true,
+    "paid_resources": false,
+    "hosted_inference_apis": false,
+    "new_risky_license_acceptance": false
+  },
+  "next_actions": [
+    "In running environment settings permit intended Colab, Kaggle, Lightning and Hugging Face domains; keep existing package-manager/GitHub access. Current tools expose no request_changes action.",
+    "Restart access checks in Colab -> Kaggle -> Lightning -> Hugging Face order. Inspect actual redirects/account/resource/quota state after network access works. Existing sessions are not demonstrated in this environment.",
+    "Use primary pinned Qwen3.5-27B only if actual available GPU/RAM/disk, exact approved bundle, source/license receipts, dependencies and safe local worker binding pass. Otherwise use eligible registered alternative with provenance; never hosted APIs.",
+    "Retain existing Story runtime safety gate until scoped free allocation and isolated selected-model worker are verified. No gate was weakened during these access failures.",
+    "One Bengali canary, at most one immediate technical-fix retry. Then existing five-section primary story with exact source/prompt/raw-output receipts and lossless assembly.",
+    "Count failed calls within existing seven-call ceiling: first-attempt canary success leaves one optional targeted revision after five primary sections; a canary retry consumes that optional slot. Stop on truncation/context overflow.",
+    "Only evaluate actual output under all 15 criteria. Independent human review remains pending unless a real qualified review occurs."
+  ],
+  "existing_cpu_checkpoint_command": "python -m redpad_pipeline.story_quality --output work/story-gpu-resume-new",
+  "command_scope": "CPU-only request/schema preparation; not a GPU launcher. Do not run it again merely to repeat already completed engineering.",
+  "new_canary": null,
+  "new_story": null,
+  "new_qc": null,
+  "new_targeted_revision": null,
+  "before_after_comparison": null
+}

@@ -1,0 +1,6 @@
+test_previous_thirteen_and_director_script_profiles_unchanged (tests.test_native_local_execution.NativeLocalTests.test_previous_thirteen_and_director_script_profiles_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.039s
+
+OK

@@ -1,0 +1,32 @@
+2026-11-14 12:58:32.992 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-14 12:58:34.569 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-14 12:58:34.819 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-14 12:58:35.082 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+======================================================================
+ERROR: test_voice_wav_metadata_checked_without_transcript_or_speaker_claim (tests.test_offline_six_preparation.OfflineSixTests.test_voice_wav_metadata_checked_without_transcript_or_speaker_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_offline_six_preparation.py", line 234, in test_voice_wav_metadata_checked_without_transcript_or_speaker_claim
+    stage,spec=self.speech();job=self.services.prepare_offline_request(stage['id'],spec=spec)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/shared_model_services.py", line 113, in prepare_offline_request
+    return PreparedRequests(self.store).prepare(id,spec=spec,verify_bundle=verify_bundle)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/offline_preparation.py", line 129, in prepare
+    stage=self.staging.get(stage_id);job=prepare_native(stage,self.store,spec=spec,verify_bundle=verify_bundle)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/offline_preparation.py", line 70, in prepare_native
+    job=prepare_specialist(staged,store,spec)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/offline_specialist_preparation.py", line 234, in prepare_specialist
+    consent=require_reference_consent(store,staged,spec)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/voice_native_contracts.py", line 117, in require_reference_consent
+    if not receipt:raise AgentError('Specific explicit human voice consent review required; document/rights metadata is insufficient.')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+redpad_pipeline.agents.AgentError: Specific explicit human voice consent review required; document/rights metadata is insufficient.
+
+----------------------------------------------------------------------
+Ran 350 tests in 22.696s
+
+FAILED (errors=1)

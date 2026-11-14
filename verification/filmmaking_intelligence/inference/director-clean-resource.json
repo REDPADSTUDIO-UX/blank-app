@@ -1,0 +1,6 @@
+{
+  "wall_seconds_including_checks": 19.215,
+  "peak_aggregate_rss_bytes": 4337963008,
+  "sample_interval_seconds": 0.5,
+  "limitations": "Aggregate sampled RSS, shared pages may be counted twice; not PSS or minimum RAM."
+}

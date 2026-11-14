@@ -1,0 +1,6 @@
+test_revision_rechecks_latest_owner_scope_before_saving (tests.test_director.DirectorTests.test_revision_rechecks_latest_owner_scope_before_saving) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+OK

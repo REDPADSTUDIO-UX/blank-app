@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "captured_unix": 1794472373.5994766,
+  "provider": "current_development_host_not_verified_as_kaggle",
+  "python": "3.14.10",
+  "platform": "Linux",
+  "cpu_count": 9,
+  "host_memory": {
+    "MemTotal_bytes": 10451427328,
+    "MemAvailable_bytes": 8323411968
+  },
+  "cgroup_available_bytes": null,
+  "disk_free_bytes": 64079597568,
+  "disk_total_bytes": 67586535424,
+  "gpus": [],
+  "gpu_probe_error": "FileNotFoundError",
+  "cuda_driver_supported_version": null,
+  "libraries": {
+    "torch": null,
+    "transformers": null,
+    "accelerate": null,
+    "bitsandbytes": null,
+    "diffusers": null,
+    "safetensors": null,
+    "huggingface_hub": "0.36.2",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "kaggle": "2.2.5"
+  },
+  "kaggle_account_connected": null,
+  "accelerator_setting": null,
+  "remaining_gpu_quota_hours": null,
+  "maximum_session_hours": null,
+  "internet_download_available": null,
+  "free_tier_verified": false,
+  "quota_source": null,
+  "scope": "Measured process-host inventory only. Driver CUDA support is not installed toolkit/runtime. System RAM can exceed container cgroup limits. Account, quota, accelerator setting and free tier require actual Kaggle settings inspection. No model inference or download."
+}

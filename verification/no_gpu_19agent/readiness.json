@@ -1,0 +1,476 @@
+{
+  "baseline_checkpoint": "8741ad26ccd76a6d855b3c4b7c0bdf39dfb9e187",
+  "scope": 19,
+  "engineering_complete": 8,
+  "partial": 11,
+  "production_ready": 0,
+  "gpu_used": false,
+  "model_inferences": 0,
+  "weight_downloads": 0,
+  "forbidden_resource_attempts": {
+    "socket.socket": 0,
+    "subprocess.run": 0,
+    "subprocess.Popen": 0,
+    "urllib.request.OpenerDirector.open": 0
+  },
+  "director_script_and_profiles_preserved": true,
+  "gpu_sequence": [
+    "story",
+    "character",
+    "art",
+    "costume",
+    "storyboard",
+    "growth",
+    "production_manager",
+    "youtube",
+    "video",
+    "voice",
+    "music",
+    "location",
+    "cinematographer",
+    "continuity",
+    "qc",
+    "performance",
+    "motion",
+    "editing",
+    "casting"
+  ],
+  "roles": {
+    "qc": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27",
+          "qwen35_9"
+        ],
+        "image_inspection": [
+          "vision7"
+        ],
+        "audio_inspection": []
+      },
+      "unsupported_required_operations": [
+        "audio_inspection"
+      ],
+      "execution_binding_pending": [
+        "vision7"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+    },
+    "story": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27",
+          "gemma3_27",
+          "gemma3_12"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "character": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "reference_edit": [
+          "flux2_klein4"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "art": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "reference_edit": [
+          "flux2_klein4"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "location": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "reference_edit": [
+          "flux2_klein4"
+        ],
+        "image_inspection": [
+          "vision7"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "vision7"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+    },
+    "costume": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "reference_edit": [
+          "flux2_klein4"
+        ],
+        "text": [
+          "qwen35_27"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "storyboard": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "reference_edit": [
+          "flux2_klein4"
+        ],
+        "text": [
+          "qwen35_27"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "performance": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "reference_video": [
+          "wan_animate2"
+        ],
+        "video_inspection": []
+      },
+      "unsupported_required_operations": [
+        "video_inspection"
+      ],
+      "execution_binding_pending": [
+        "wan_animate2"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "cinematographer": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "image_inspection": [
+          "vision7"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "vision7"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+    },
+    "motion": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "reference_video": [
+          "wan_animate2"
+        ],
+        "image_inspection": [
+          "vision7"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "wan_animate2",
+        "vision7"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+    },
+    "video": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "image_to_video": [
+          "wan22_5",
+          "ltx25",
+          "svd_xt"
+        ],
+        "text_to_video": [
+          "wan22_5",
+          "ltx25"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "wan22_5",
+        "ltx25",
+        "svd_xt"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "voice": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text_to_audio": [
+          "indic_speak",
+          "indic_parler"
+        ],
+        "reference_voice": [
+          "indicf5"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "indic_speak",
+        "indicf5",
+        "indic_parler"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "continuity": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "image_inspection": [
+          "vision7"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "vision7"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+    },
+    "music": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "music": [
+          "ace15"
+        ],
+        "sound_effect": [
+          "stable_audio_small"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "ace15",
+        "stable_audio_small"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "editing": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27",
+          "qwen35_9"
+        ],
+        "image_inspection": [
+          "vision7"
+        ],
+        "audio_inspection": []
+      },
+      "unsupported_required_operations": [
+        "audio_inspection"
+      ],
+      "execution_binding_pending": [
+        "vision7"
+      ],
+      "deterministic_operations": [
+        "assembly_receipt"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment."
+    },
+    "production_manager": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen36_27",
+          "qwen35_9"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [
+        "schedule_check"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "growth": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "reference_edit": [
+          "flux2_klein4"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [
+        "read_only_analytics"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "youtube": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_9"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [
+        "read_only_analytics",
+        "release_manifest"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    },
+    "casting": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "reference_edit": [
+          "flux2_klein4"
+        ],
+        "reference_video": [
+          "wan_animate2"
+        ],
+        "text_to_audio": [
+          "indic_speak"
+        ],
+        "video_inspection": []
+      },
+      "unsupported_required_operations": [
+        "video_inspection"
+      ],
+      "execution_binding_pending": [
+        "wan_animate2",
+        "indic_speak"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "OWNER REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null
+    }
+  }
+}

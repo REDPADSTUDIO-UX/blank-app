@@ -1,0 +1,6 @@
+test_exact_21_agents_18_pinned_candidates_no_winners (tests.test_kaggle_model_services.KaggleServices.test_exact_21_agents_18_pinned_candidates_no_winners) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+OK

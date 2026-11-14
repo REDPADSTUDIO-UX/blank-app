@@ -1,0 +1,15 @@
+{
+  "model": "qwen3.5:4b-q4_K_M",
+  "digest": "sha256:d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+  "suite_sha256": "43e18c4f1c2dc88c70aa8e768ecadcf537d579e301de056b0837d3875a91a8eb",
+  "options": {
+    "num_ctx": 4096,
+    "num_predict": 1024,
+    "temperature": 0.35,
+    "seed": 42,
+    "timeout_seconds": 180,
+    "stream": true
+  },
+  "candidate": "832de91260ab3b2d7465",
+  "think": false
+}

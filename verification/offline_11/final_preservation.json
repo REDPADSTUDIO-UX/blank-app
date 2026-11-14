@@ -1,0 +1,10 @@
+{
+  "eight_role_rows_unchanged": true,
+  "director_script_and_eight_agent_records_unchanged": true,
+  "all_18_profile_metadata_unchanged": true,
+  "models_json_unchanged": true,
+  "registered_agents": 21,
+  "no_gpu_engineering_complete": 13,
+  "new_unique_test_methods": 21,
+  "gpu_or_inference_performed": false
+}

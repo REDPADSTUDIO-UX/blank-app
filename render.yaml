@@ -1,0 +1,25 @@
+# REDPAD AI Studio: password-protected, no-paid-APIs preview deployment.
+# Create the Render service from this Blueprint after connecting Render + GitHub.
+# This does not deploy itself. Codespaces data/secrets are NOT transferred.
+services:
+  - type: web
+    name: redpad-ai-studio-private-preview
+    runtime: python
+    plan: free
+    region: singapore
+    repo: https://github.com/REDPADSTUDIO-UX/blank-app
+    branch: feature/video-music-editing-studio
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m streamlit run streamlit_app.py --server.headless=true --server.address=0.0.0.0 --server.port=$PORT --browser.gatherUsageStats=false
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.8
+      - key: REDPAD_REQUIRE_PREVIEW_LOGIN
+        value: "true"
+      - key: REDPAD_DASHBOARD_PASSWORD
+        generateValue: true
+      - key: REDPAD_ENABLE_PAID_GENERATION
+        value: "false"
+      - key: REDPAD_MAX_JOB_USD
+        value: "0"

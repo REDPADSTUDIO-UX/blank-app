@@ -1,0 +1,27 @@
+{
+  "observations_current": true,
+  "network_mode": "restricted",
+  "network_state": "enforced",
+  "domain_grants": [
+    {
+      "host": "colab.research.google.com",
+      "in_effective_allowlist": false
+    },
+    {
+      "host": "www.kaggle.com",
+      "in_effective_allowlist": false
+    },
+    {
+      "host": "lightning.ai",
+      "in_effective_allowlist": false
+    },
+    {
+      "host": "huggingface.co",
+      "in_effective_allowlist": false
+    }
+  ],
+  "additional_runtime_connectors_found": false,
+  "configured_runtime_variables": 0,
+  "configured_outbound_identities": 0,
+  "scope": "Only task-relevant policy metadata retained; no secret values, private routes or unrelated internal hosts."
+}

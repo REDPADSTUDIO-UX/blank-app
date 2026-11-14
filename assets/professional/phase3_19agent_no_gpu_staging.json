@@ -1,0 +1,1636 @@
+{
+  "schema": "redpad-phase3-no-gpu-candidate-binding-v1",
+  "source_registry": "assets/professional/phase3_candidates.json",
+  "source_registry_version": "21-agent-director-recovery-2026-11-13.2",
+  "owner_instruction": "19 agents excluding Director and Script; no GPU, no downloads, no weights, no paid resources",
+  "intent": "staged configuration for later validation; NOT production routing, NOT best model winner",
+  "excluded_agents": [
+    "director",
+    "script"
+  ],
+  "total_agents": 19,
+  "models_inferred": false,
+  "weights_downloaded": false,
+  "production_routes_changed": false,
+  "validated_winners": 0,
+  "roles": [
+    {
+      "agent": "qc",
+      "group": "quality",
+      "required_capability": "Evidence-grounded criticism, calibrated abstention and deterministic checks",
+      "required_modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "qwen35_9"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_9",
+          "repo": "Qwen/Qwen3.5-9B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Planted defect vs clean-scene abstention",
+        "Independent review and visual/audio QA"
+      ],
+      "required_operations": [
+        "text",
+        "image_inspection",
+        "audio_inspection",
+        "state_ledger"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_27",
+            "qwen35_9"
+          ],
+          "image_inspection": [
+            "vision7"
+          ],
+          "audio_inspection": []
+        },
+        "unsupported_required_operations": [
+          "audio_inspection"
+        ],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "state_ledger"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_validation_pending": [
+          "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+        ],
+        "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
+      },
+      "supplemental_research_candidates": [
+        "vision7"
+      ],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
+    },
+    {
+      "agent": "story",
+      "group": "text",
+      "required_capability": "Causal episodic story, character arcs, Bengali emotional narrative",
+      "required_modalities": [
+        "text"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "gemma3_27",
+        "gemma3_12"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "gemma3_27",
+          "repo": "google/gemma-3-27b-it",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "gemma3_12",
+          "repo": "google/gemma-3-12b-it",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Complete episode causality and emotional arc",
+        "Owner review of grounded Bengali storytelling"
+      ],
+      "required_operations": [
+        "text"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_27",
+            "gemma3_27",
+            "gemma3_12"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "OWNER REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+    },
+    {
+      "agent": "character",
+      "group": "image_identity",
+      "required_capability": "Psychology bible and consistent fictional identities",
+      "required_modalities": [
+        "text",
+        "reference_edit"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "flux2_klein4"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Fixed fictional identity consistency across 3 scenes",
+        "Character psychology consistency"
+      ],
+      "required_operations": [
+        "text",
+        "reference_edit"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_27"
+          ],
+          "reference_edit": [
+            "flux2_klein4"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "OWNER REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+    },
+    {
+      "agent": "art",
+      "group": "image",
+      "required_capability": "Culturally grounded sets, props, palette and visual design",
+      "required_modalities": [
+        "text",
+        "reference_edit"
+      ],
+      "primary_research_candidate": "flux2_klein4",
+      "alternative_research_candidates": [
+        "qwen35_27",
+        "z_image_turbo"
+      ],
+      "model_links": [
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "z_image_turbo",
+          "repo": "Tongyi-MAI/Z-Image-Turbo",
+          "adapter": "z_image",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Culturally credible Dhaka set and palette",
+        "Prop/reference identity consistency"
+      ],
+      "required_operations": [
+        "text",
+        "reference_edit"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_27"
+          ],
+          "reference_edit": [
+            "flux2_klein4"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "OWNER REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+    },
+    {
+      "agent": "location",
+      "group": "image_spatial",
+      "required_capability": "Reference locations and spatial/camera-access validation",
+      "required_modalities": [
+        "reference_edit",
+        "image"
+      ],
+      "primary_research_candidate": "flux2_klein4",
+      "alternative_research_candidates": [
+        "qwen35_27"
+      ],
+      "model_links": [
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Location geography and spatial logic",
+        "Camera-access validation against references"
+      ],
+      "required_operations": [
+        "reference_edit",
+        "image_inspection"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "reference_edit": [
+            "flux2_klein4"
+          ],
+          "image_inspection": [
+            "vision7"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_validation_pending": [
+          "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+        ],
+        "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
+      },
+      "supplemental_research_candidates": [
+        "vision7"
+      ],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
+    },
+    {
+      "agent": "costume",
+      "group": "image_identity",
+      "required_capability": "Locked actor, costume/hair/makeup and chronological scene states",
+      "required_modalities": [
+        "reference_edit",
+        "text"
+      ],
+      "primary_research_candidate": "flux2_klein4",
+      "alternative_research_candidates": [
+        "qwen35_27"
+      ],
+      "model_links": [
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Same-person costume/hair/makeup timeline",
+        "Visual state-lock review"
+      ],
+      "required_operations": [
+        "reference_edit",
+        "text"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "reference_edit": [
+            "flux2_klein4"
+          ],
+          "text": [
+            "qwen35_27"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "OWNER REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+    },
+    {
+      "agent": "storyboard",
+      "group": "image_layout",
+      "required_capability": "Coverage, geography and visual continuity",
+      "required_modalities": [
+        "reference_edit",
+        "text"
+      ],
+      "primary_research_candidate": "flux2_klein4",
+      "alternative_research_candidates": [
+        "qwen35_27"
+      ],
+      "model_links": [
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Coverage and screen-direction across scene panels",
+        "Image-to-script grounding"
+      ],
+      "required_operations": [
+        "reference_edit",
+        "text"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "reference_edit": [
+            "flux2_klein4"
+          ],
+          "text": [
+            "qwen35_27"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "OWNER REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+    },
+    {
+      "agent": "performance",
+      "group": "acting_video",
+      "required_capability": "Playable acting intentions and actual performance assessment",
+      "required_modalities": [
+        "text",
+        "reference_video"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "wan_animate2"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "wan_animate2",
+          "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Acting intention vs generated actual performance",
+        "Identity/rights continuity"
+      ],
+      "required_operations": [
+        "text",
+        "reference_video",
+        "video_inspection",
+        "temporal_assessment"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_27"
+          ],
+          "reference_video": [
+            "wan_animate2"
+          ],
+          "video_inspection": []
+        },
+        "unsupported_required_operations": [
+          "video_inspection"
+        ],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "temporal_assessment"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null,
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
+        "missing_official_interface": [],
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
+        "native_source_revisions": {
+          "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
+        },
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "runtime_validation_pending": [
+          "Exact authenticated owner-approved complete weights/code/dependency bundle",
+          "Kernel network isolation and local device availability",
+          "Real local loading, GPU/MPI compatibility and technical output gates",
+          "Independent specialist artistic evaluation and owner acceptance"
+        ]
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/"
+    },
+    {
+      "agent": "cinematographer",
+      "group": "vision",
+      "required_capability": "Lens, light, blocking, screen direction and visual inspection",
+      "required_modalities": [
+        "text",
+        "image"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "flux2_klein4"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Lens/light/blocking plausibility",
+        "Grounded critique of real frames"
+      ],
+      "required_operations": [
+        "text",
+        "image_inspection"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_27"
+          ],
+          "image_inspection": [
+            "vision7"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_validation_pending": [
+          "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+        ],
+        "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
+      },
+      "supplemental_research_candidates": [
+        "vision7"
+      ],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
+    },
+    {
+      "agent": "motion",
+      "group": "motion",
+      "required_capability": "Physical motion, interactions and temporal assessment",
+      "required_modalities": [
+        "reference_video",
+        "image"
+      ],
+      "primary_research_candidate": "wan_animate2",
+      "alternative_research_candidates": [
+        "qwen35_27"
+      ],
+      "model_links": [
+        {
+          "profile": "wan_animate2",
+          "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Motion physics temporal coherence",
+        "Cross-frame actor/object continuity"
+      ],
+      "required_operations": [
+        "reference_video",
+        "image_inspection",
+        "temporal_assessment"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "reference_video": [
+            "wan_animate2"
+          ],
+          "image_inspection": [
+            "vision7"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "temporal_assessment"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
+        "missing_official_interface": [],
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
+        "native_source_revisions": {
+          "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
+        },
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "runtime_validation_pending": [
+          "Exact authenticated owner-approved complete weights/code/dependency bundle",
+          "Kernel network isolation and local device availability",
+          "Real local loading, GPU/MPI compatibility and technical output gates",
+          "Independent specialist artistic evaluation and owner acceptance"
+        ]
+      },
+      "supplemental_research_candidates": [
+        "vision7"
+      ],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/"
+    },
+    {
+      "agent": "video",
+      "group": "video",
+      "required_capability": "Native short cinematic clips; compare equivalent supported controls only",
+      "required_modalities": [
+        "image_to_video",
+        "text_to_video"
+      ],
+      "primary_research_candidate": "wan22_5",
+      "alternative_research_candidates": [
+        "ltx25",
+        "svd_xt"
+      ],
+      "model_links": [
+        {
+          "profile": "wan22_5",
+          "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+          "adapter": "existing_wan_adapter",
+          "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "ltx25",
+          "repo": "Lightricks/LTX-2.5",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "svd_xt",
+          "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+          "adapter": "existing_svd_adapter",
+          "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Short video motion and prompt fidelity",
+        "Human cinema visual review"
+      ],
+      "required_operations": [
+        "image_to_video",
+        "text_to_video"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "image_to_video": [
+            "wan22_5",
+            "ltx25",
+            "svd_xt"
+          ],
+          "text_to_video": [
+            "wan22_5",
+            "ltx25"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null,
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
+        "missing_official_interface": [],
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
+        "native_source_revisions": {
+          "ltx25": "f0f2f8607189c78a72420b2b63cb1975b5eca179"
+        },
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "runtime_validation_pending": [
+          "Exact authenticated owner-approved complete weights/code/dependency bundle",
+          "Kernel network isolation and local device availability",
+          "Real local loading, GPU/MPI compatibility and technical output gates",
+          "Independent specialist artistic evaluation and owner acceptance"
+        ]
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/"
+    },
+    {
+      "agent": "voice",
+      "group": "voice",
+      "required_capability": "Bengali intelligibility, accent, prosody, emotion and speaker continuity",
+      "required_modalities": [
+        "text_to_audio",
+        "reference_voice"
+      ],
+      "primary_research_candidate": "indic_speak",
+      "alternative_research_candidates": [
+        "indicf5",
+        "indic_parler"
+      ],
+      "model_links": [
+        {
+          "profile": "indic_speak",
+          "repo": "bodhan-ai/indic-speak",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "indicf5",
+          "repo": "ai4bharat/IndicF5",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "indic_parler",
+          "repo": "ai4bharat/indic-parler-tts",
+          "adapter": "existing_parler_adapter",
+          "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Bangla pronunciation/emotion/prosody",
+        "Consent-backed speaker continuity"
+      ],
+      "required_operations": [
+        "text_to_audio",
+        "reference_voice",
+        "voice_metadata"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text_to_audio": [
+            "indic_speak",
+            "indic_parler"
+          ],
+          "reference_voice": [
+            "indicf5"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "voice_metadata"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null,
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
+        "missing_official_interface": [],
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
+        "native_source_revisions": {
+          "indic_speak": "76e0814f189321efe550011850cd288dae366aad",
+          "indicf5": "fb652a96e508091045890dae5bb99fe511facbcf"
+        },
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "voice_binding_status": {
+          "indic_speak": {
+            "profile": "indic_speak",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Exact selected source reviewed through owner-authenticated Chrome. Local bundle/dependency/license approval and actual runtime/listening remain pending; no inference authority.",
+            "missing_source": []
+          },
+          "indicf5": {
+            "profile": "indicf5",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Exact custom source reviewed; model.py itself must NEVER execute (unguarded downloads/inference/upload). Fixed local constructor and strict selected wrapper state replace it. Actual checkpoint layout/shape/runtime/listening remain unverified.",
+            "missing_source": []
+          },
+          "indic_parler": {
+            "profile": "indic_parler",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "runtime_verified": false,
+            "fallback": null
+          }
+        },
+        "voice_casting_evidence": "verification/voice_casting/",
+        "voice_selected_evidence": "verification/voice_final/",
+        "runtime_validation_pending": [
+          "Exact approved local voice/source/dependency bundle, offline isolation and separately authorized runtime",
+          "Selected SNAC/Vocos and INF5 wrapper key/shape compatibility with actual weights",
+          "Bounded Bengali output, technical QC, independent listening/speaker review and owner acceptance"
+        ]
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/",
+      "voice_casting_evidence": "verification/voice_casting/"
+    },
+    {
+      "agent": "continuity",
+      "group": "vision",
+      "required_capability": "Cross-scene source/media state inspection; generator is not a critic",
+      "required_modalities": [
+        "text",
+        "image"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "flux2_klein4"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Correct positive/negative prop-state controls",
+        "Video-frame evidence and abstention"
+      ],
+      "required_operations": [
+        "text",
+        "image_inspection",
+        "state_ledger"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_27"
+          ],
+          "image_inspection": [
+            "vision7"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "state_ledger"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_validation_pending": [
+          "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+        ],
+        "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
+      },
+      "supplemental_research_candidates": [
+        "vision7"
+      ],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
+    },
+    {
+      "agent": "music",
+      "group": "audio",
+      "required_capability": "Dramatic music fit, motivated SFX and listening evidence",
+      "required_modalities": [
+        "music",
+        "sound_effect"
+      ],
+      "primary_research_candidate": "ace15",
+      "alternative_research_candidates": [
+        "stable_audio_small"
+      ],
+      "model_links": [
+        {
+          "profile": "ace15",
+          "repo": "ACE-Step/Ace-Step1.5",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "stable_audio_small",
+          "repo": "stabilityai/stable-audio-open-small",
+          "adapter": "existing_sfx_adapter",
+          "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Emotion-matched music and SFX timing",
+        "Listening quality and copyright review"
+      ],
+      "required_operations": [
+        "music",
+        "sound_effect",
+        "cue_manifest"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "music": [
+            "ace15"
+          ],
+          "sound_effect": [
+            "stable_audio_small"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "cue_manifest"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null,
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
+        "missing_official_interface": [],
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
+        "native_source_revisions": {
+          "ace15": "ca1e85fe9430179831e6bc6be790c332190a3866"
+        },
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "runtime_validation_pending": [
+          "Exact authenticated owner-approved complete weights/code/dependency bundle",
+          "Kernel network isolation and local device availability",
+          "Real local loading, GPU/MPI compatibility and technical output gates",
+          "Independent specialist artistic evaluation and owner acceptance"
+        ]
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/"
+    },
+    {
+      "agent": "editing",
+      "group": "editing",
+      "required_capability": "Narrative edit guidance, actual receipt-bound FFmpeg assembly and A/V QC",
+      "required_modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "qwen35_9"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_9",
+          "repo": "Qwen/Qwen3.5-9B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Actual FFmpeg receipt verification",
+        "A/V continuity and story pacing"
+      ],
+      "required_operations": [
+        "text",
+        "image_inspection",
+        "audio_inspection",
+        "assembly_receipt",
+        "edit_manifest"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_27",
+            "qwen35_9"
+          ],
+          "image_inspection": [
+            "vision7"
+          ],
+          "audio_inspection": []
+        },
+        "unsupported_required_operations": [
+          "audio_inspection"
+        ],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "assembly_receipt",
+          "edit_manifest"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "RUNTIME BLOCKED",
+        "runtime_validation_pending": [
+          "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+        ],
+        "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
+      },
+      "supplemental_research_candidates": [
+        "vision7"
+      ],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_11/"
+    },
+    {
+      "agent": "production_manager",
+      "group": "operations",
+      "required_capability": "Resource-aware scheduling, provenance, recovery and deterministic operations",
+      "required_modalities": [
+        "text"
+      ],
+      "primary_research_candidate": "qwen36_27",
+      "alternative_research_candidates": [
+        "qwen35_9"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen36_27",
+          "repo": "Qwen/Qwen3.6-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "qwen35_9",
+          "repo": "Qwen/Qwen3.5-9B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Recovery and cost/schedule constraint cases",
+        "Deterministic plan compliance"
+      ],
+      "required_operations": [
+        "text",
+        "schedule_check"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen36_27",
+            "qwen35_9"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "schedule_check"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "OWNER REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+    },
+    {
+      "agent": "growth",
+      "group": "marketing",
+      "required_capability": "Truthful packaging and authorized measured analytics",
+      "required_modalities": [
+        "text",
+        "reference_edit"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "flux2_klein4"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Truthful packaging against approved materials",
+        "Measurable analytics without fabricated data"
+      ],
+      "required_operations": [
+        "text",
+        "reference_edit",
+        "read_only_analytics"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_27"
+          ],
+          "reference_edit": [
+            "flux2_klein4"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "read_only_analytics"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "OWNER REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+    },
+    {
+      "agent": "youtube",
+      "group": "channel",
+      "required_capability": "Read-only channel validation and local release preparation; never publish",
+      "required_modalities": [
+        "text"
+      ],
+      "primary_research_candidate": "qwen35_9",
+      "alternative_research_candidates": [],
+      "model_links": [
+        {
+          "profile": "qwen35_9",
+          "repo": "Qwen/Qwen3.5-9B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Read-only channel metadata validation",
+        "No upload or publish actions"
+      ],
+      "required_operations": [
+        "text",
+        "read_only_analytics",
+        "release_manifest"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_9"
+          ]
+        },
+        "unsupported_required_operations": [],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "read_only_analytics",
+          "release_manifest"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "OWNER REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement."
+    },
+    {
+      "agent": "casting",
+      "group": "casting",
+      "required_capability": "Character fit, rights-authorized actor identity and actual acting/voice/chemistry evidence",
+      "required_modalities": [
+        "text",
+        "reference_edit",
+        "reference_video",
+        "text_to_audio"
+      ],
+      "primary_research_candidate": "qwen35_27",
+      "alternative_research_candidates": [
+        "flux2_klein4",
+        "wan_animate2",
+        "indic_speak"
+      ],
+      "model_links": [
+        {
+          "profile": "qwen35_27",
+          "repo": "Qwen/Qwen3.5-27B",
+          "adapter": "hf_text_nf4",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "flux2_klein4",
+          "repo": "black-forest-labs/FLUX.2-klein-4B",
+          "adapter": "flux2_klein",
+          "adapter_status": "prospective_implementation_unverified",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "wan_animate2",
+          "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        },
+        {
+          "profile": "indic_speak",
+          "repo": "bodhan-ai/indic-speak",
+          "adapter": "contract_only",
+          "adapter_status": "contract_only_no_execution_adapter",
+          "download_approved": false,
+          "inference_verified": false
+        }
+      ],
+      "integration_stage": "cpu_contracts_validated_runtime_blocked",
+      "production_routing_allowed": false,
+      "winner_selected": false,
+      "real_agent_gpu_test": "NOT_TESTED",
+      "human_acceptance": "PENDING",
+      "gpu_test_cases": [
+        "Fictional actor identity/consent locks",
+        "Acting/voice/chemistry references"
+      ],
+      "required_operations": [
+        "text",
+        "reference_edit",
+        "reference_video",
+        "text_to_audio",
+        "video_inspection",
+        "temporal_assessment",
+        "casting_evidence",
+        "casting_assessment"
+      ],
+      "no_gpu_readiness": {
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "configuration_validated": true,
+        "operation_candidates": {
+          "text": [
+            "qwen35_27"
+          ],
+          "reference_edit": [
+            "flux2_klein4"
+          ],
+          "reference_video": [
+            "wan_animate2"
+          ],
+          "text_to_audio": [
+            "indic_speak"
+          ],
+          "video_inspection": []
+        },
+        "unsupported_required_operations": [
+          "video_inspection"
+        ],
+        "execution_binding_pending": [],
+        "deterministic_operations": [
+          "casting_assessment",
+          "casting_evidence",
+          "temporal_assessment"
+        ],
+        "gpu_status": "GPU TEST BLOCKED",
+        "human_status": "HUMAN REVIEW PENDING",
+        "production_ready": false,
+        "runtime_verified": false,
+        "vision_dependency_note": null,
+        "offline_native_preparation": "implemented; no runtime launch",
+        "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
+        "missing_official_interface": [],
+        "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
+        "native_source_revisions": {
+          "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3"
+        },
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "voice_binding_status": {
+          "indic_speak": {
+            "profile": "indic_speak",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Exact selected source reviewed through owner-authenticated Chrome. Local bundle/dependency/license approval and actual runtime/listening remain pending; no inference authority.",
+            "missing_source": []
+          },
+          "indicf5": {
+            "profile": "indicf5",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Exact custom source reviewed; model.py itself must NEVER execute (unguarded downloads/inference/upload). Fixed local constructor and strict selected wrapper state replace it. Actual checkpoint layout/shape/runtime/listening remain unverified.",
+            "missing_source": []
+          },
+          "indic_parler": {
+            "profile": "indic_parler",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "runtime_verified": false,
+            "fallback": null
+          }
+        },
+        "voice_casting_evidence": "verification/voice_casting/",
+        "voice_selected_evidence": "verification/voice_final/",
+        "blocked_dependency_policy": "Selected voice source bindings implemented; runtime remains unavailable without exact approved local bundle and explicit launch. Audition abstention, no fallback; existing QC/Director/Producer gates preserved.",
+        "runtime_validation_pending": [
+          "Approved local voice/performance model files and exact source binding",
+          "Actual audition, voice compatibility and pair-performance evidence",
+          "Independent human, Director/QC review and explicit Producer identity lock"
+        ]
+      },
+      "supplemental_research_candidates": [],
+      "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
+      "offline_preparation_evidence": "verification/offline_6/",
+      "native_execution_evidence": "verification/offline_execution/",
+      "voice_casting_evidence": "verification/voice_casting/"
+    }
+  ],
+  "no_gpu_engineering_ledger_version": "cpu-contract-validation-v1",
+  "validation_evidence": "verification/no_gpu_19agent/",
+  "status_scope": "NO-GPU ENGINEERING COMPLETE means safe preparation code/config only; not runtime, model quality, human acceptance or production integration.",
+  "future_gpu_execution_sequence": [
+    "story",
+    "character",
+    "art",
+    "costume",
+    "storyboard",
+    "growth",
+    "production_manager",
+    "youtube",
+    "video",
+    "voice",
+    "music",
+    "location",
+    "cinematographer",
+    "continuity",
+    "qc",
+    "performance",
+    "motion",
+    "editing",
+    "casting"
+  ],
+  "offline_11_engineering_revision": "offline-first-preparation-v1",
+  "offline_6_engineering_revision": "native-source-preparation-v1",
+  "native_local_execution_revision": "source-pinned-offline-workers-v1",
+  "voice_casting_engineering_revision": "selected-voice-bindings-v2"
+}

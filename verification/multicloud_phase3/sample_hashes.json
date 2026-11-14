@@ -1,0 +1,10 @@
+{
+  "hf_hosted_ruba_canary.png": "943b00e32a922cc51321d3b29f73932f2dd8e4c4136cf3790a1dcda15ab2e592",
+  "hf_image_canary_attempt.json": "940aec4f8324358e03a83e8ead16ef52ac8c90864cfcc12f6a7ee4e8b8966ebe",
+  "hf_canary_submission.json": "4d523cdac9f215f01da22c842983ec59eb9761e601898441fb62247eaa10d248",
+  "hf_canary_events.txt": "20e3edd7056b82d749f7b8506bb60627f81103e445b3690f262131237eb55377",
+  "space_source_retrieval.json": "eb528d247752b25151bc557d76961db099fe7c84783ec70ce0eb736fb138528f",
+  "flux_api_info.json": "427e4b524ec60c7bfebcd345529a9a286e765980b7b26b7eeccc16769a45ba76",
+  "flux_space_metadata.json": "07d6e20cb239186bf2b9846d822796d388e4ab0e02b688002b71f751315bee15",
+  "small_decoder_model.json": "40986c4629acdb05488c53862c785716c0382420cd579fe9389be33dcf121038"
+}

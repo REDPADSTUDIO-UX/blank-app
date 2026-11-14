@@ -1,0 +1,13 @@
+# Original Ghor 1:17 Episode 1 — isolated zero-paid-API production
+
+This is an original 300-second animated mystery drama with acted dialogue, not narration over six stills. The final uses CPU procedural 2D character rigs, consistent two-location sets, speech-driven mouth movement, gestures, blinks, weather, props, camera pushes, Bangla subtitles and an original synthesized soundtrack/foley. Naturalness remains limited by synthetic speech and simple rigs. It is not photorealistic generated video or perfect lip-sync.
+
+`plan.json`, `screenplay.md`, `production_bible.md` and `season_outline.md` are the canonical authored inputs. `voices.py` checkpoints no-key consumer Edge speech. `redpad_pipeline.drama_animation` renders real frames and combines audio through FFmpeg. `polish_audio.py` normalizes spoken activity without regeneration. `verify.py` decodes the actual final file and checks black/frozen/silent segments, actor-region movement and dialogue activity. `export_preview.py` exports those actual verified artifacts to the isolated read-only review preview; the original Streamlit Video Studio also displays the same project through `redpad_pipeline.drama_ui`.
+
+All generated data stays in ignored `redpad_media/drama/ghor117_ep01`. The isolated local SQLite channel/content/video/review records never touch the original Render database. Render has not been deployed, restarted or migrated. Do not push a watched branch until backup/recovery or absence of automatic deployment is independently verified.
+
+Three successful anonymous ZeroGPU Wan2.2 tests (one photoreal cassette, two puppet shots) were produced. The two scene enhancements were rejected for extra recorder props and distorted lettering; they are not in the final MP4. The next scene hit free quota. No paid fallback or repeated uncertain submissions occurred. Earlier SDK initialization failures were diagnosed as missing SOCKS support / Space-ID resolution; the direct official Space URL worked. `remote_gpu.py` now connects through its existing official BASE endpoint.
+
+Voice generation never calls the Azure Speech API, uses no cloud API key, activates no billing and uses existing no-cost consumer speech access. All requests and files are checkpointed. Hazera and Mina share the Nabanita underlying voice, with different pitch/rate; this is disclosed.
+
+The local feature-branch commit and a portable production package preserve this work. No original repository main branch is modified. Publication is restricted to the final validated Episode 1 under the user's explicit authorization; upload state and resulting URL are recorded only after actual verification.

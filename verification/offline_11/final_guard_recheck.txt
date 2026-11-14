@@ -1,0 +1,8 @@
+test_grounded_response_contract_abstention_and_seeded_false_positive (tests.test_offline_11_preparation.OfflineElevenTests.test_grounded_response_contract_abstention_and_seeded_false_positive) ... ok
+test_exact_bundle_binding_uses_manual_metadata_fixture_not_model_weights (tests.test_offline_11_preparation.OfflineElevenTests.test_exact_bundle_binding_uses_manual_metadata_fixture_not_model_weights) ... ok
+test_cinematography_lens_needs_source_metadata (tests.test_offline_11_preparation.OfflineElevenTests.test_cinematography_lens_needs_source_metadata) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.046s
+
+OK

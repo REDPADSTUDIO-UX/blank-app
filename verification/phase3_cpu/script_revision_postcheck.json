@@ -1,0 +1,96 @@
+{
+  "note": "No new inference. Original raw response preserved; only single-target wrapper normalized. Artistic quality still unverified.",
+  "original_record": "trial_script_revision.json",
+  "postcheck": {
+    "scope": "CPU micro-benchmark only",
+    "normalization": "single scene object wrapped as one-element array",
+    "merged_screenplay": {
+      "title": "একটা ছাতা",
+      "hook": {
+        "image": "তানিiflowerা বাসভাড়া থেকে বাইরে যাচ্ছে, রাশেদের ছাতা হাতে দেখা যাচ্ছে কিন্তু তার মুখে না",
+        "question": "তানিiflowerা কেন ছাতা দেখে বিস্ময় করে?",
+        "payoff": "রাশেদ তার ছাতা দেখেছে কিন্তু তানিiflowerা জানে না"
+      },
+      "characters": [
+        {
+          "name": "রাশেদ",
+          "want": "অফিসে জরুরি উপস্থিতি করতে পারে",
+          "voice": "স্থায়ী, সামান্য ক্ষুদ্র হাসি"
+        },
+        {
+          "name": "তানিiflowerা",
+          "want": "চাকরির সাক্ষাৎকার পাওয়া",
+          "voice": "সামান্য বিস্ময়, স্বাভাবিক হাসি"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "s1",
+          "heading": "INT. বাসভাড়া - সকাল",
+          "seconds": 30,
+          "objective": "রাশেদ ছাতা নিয়ে বাইরে যায়",
+          "obstacle": "তানিiflowerা বাইরে যাচ্ছে না",
+          "turn": "তানিiflowerা ছাতা দেখে মুখে হাসি দেয়",
+          "consequence": "তানিiflowerা বাইরে যায় না",
+          "beats": [
+            {
+              "type": "action",
+              "text": "রাশেদ ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "তানিiflowerা",
+              "text": "ওই ছাতা আগে কখন দেখেছিলি?"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "রাশেদ",
+              "text": "কাল রাতে হাতে ছিল না, আজ পরে হাতে আসল।"
+            }
+          ],
+          "sound": {
+            "music": "সাদা সামান্য বাজনা",
+            "sfx": "বৃষ্টির শব্দ, ছাতা বাজানোর শব্দ"
+          }
+        },
+        {
+          "id": "s2",
+          "heading": "EXT. বাসভাড়া দরজা - সকাল",
+          "seconds": 30,
+          "objective": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়",
+          "obstacle": "স্ক্রিনে রাশেদের ছাতা দেখা যায়",
+          "turn": "তানিiflowerা স্ক্রিন বন্ধ করে দেয়",
+          "consequence": "রাশেদ ফেরত আসে, ছাতা হাতে না দেখা যায়",
+          "beats": [
+            {
+              "type": "action",
+              "text": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়, স্ক্রিনে রাশেদের ছাতা দেখা যায়।"
+            },
+            {
+              "type": "action",
+              "text": "তানিiflowerা হঠাৎ হাত বাড়িয়ে দেয়, দরজা বন্ধ করে দেয়।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "তানিiflowerা",
+              "text": "বাসভাড়া থেকে বাইরে যাওয়ার আগে কি আমি ছাতা দেখি?"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "রাশেদ",
+              "text": "কাল রাতে হাতে ছিল না, আজ পরে হাতে আসল।"
+            }
+          ],
+          "sound": {
+            "music": "সাদা সামান্য বাজনা",
+            "sfx": "স্ক্রিনে ছাতা দেখা, তানিiflowerা হাত বন্ধ করে দেয়"
+          }
+        }
+      ]
+    },
+    "unchanged_scene_s1": true,
+    "production_approved": false
+  },
+  "source_s1_sha256": "fcae336cab61c3d8f6be3f27274c30e987eb5271361ccb50cae400aa409bb9f1",
+  "merged_s1_sha256": "fcae336cab61c3d8f6be3f27274c30e987eb5271361ccb50cae400aa409bb9f1"
+}

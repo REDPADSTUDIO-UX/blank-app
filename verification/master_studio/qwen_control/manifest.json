@@ -1,0 +1,14 @@
+{
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "digest": "sha256:0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "suite_sha256": "43e18c4f1c2dc88c70aa8e768ecadcf537d579e301de056b0837d3875a91a8eb",
+  "options": {
+    "num_ctx": 4096,
+    "num_predict": 1024,
+    "temperature": 0.35,
+    "seed": 42,
+    "timeout_seconds": 180,
+    "stream": true
+  },
+  "candidate": "f59fb841a0c3afb06308"
+}

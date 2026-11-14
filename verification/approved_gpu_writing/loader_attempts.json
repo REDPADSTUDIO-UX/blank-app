@@ -1,0 +1,71 @@
+{
+  "source_build": {
+    "result": "interrupted at about13minutes to conserve free quota; not a model inference",
+    "partial_compilation_log": "cuda_build_progress_initial.log.txt"
+  },
+  "first_load": {
+    "timeout_seconds": 120,
+    "result": "deadline exceeded; owned server stopped",
+    "model_generation_requests": 0,
+    "log": "first_qwen_loader.log.txt"
+  },
+  "explicit_device_retry": {
+    "timeout_seconds": 240,
+    "parameters_changed": [
+      "CUDA0 explicitly selected",
+      "no-warmup"
+    ],
+    "result": "health ready but version-specific log-based offload guard rejected; server stopped",
+    "model_generation_requests": 0,
+    "note": "Raw detailed second-loader log overwritten by subsequent loader; notebook traceback retained, no claim of full log preservation."
+  },
+  "direct_gpu_probe_variant": {
+    "hypothesis": "New runtime log verbosity/format does not establish negative GPU capability; require actual owned-process GPU memory and use verbose diagnostic logs",
+    "parameters_changed": [
+      "log verbosity5",
+      "owned GPU process PID memory >=4096MiB"
+    ],
+    "state": "GPU load verified; first decode timed out at180seconds, batch stopped",
+    "measured_process_pid": 78391,
+    "measured_process_gpu_used_mib": 5200,
+    "reported_layers_offloaded": "33/33",
+    "model_load_seconds": 6.084763208997174,
+    "canary_call_count": 1,
+    "actual_model_response_received": false,
+    "wall_seconds": 180.10172633399998,
+    "peak_device_used_mib": 5351,
+    "peak_server_rss_bytes": 1488740352,
+    "case_artifact": "colab_export/trials/runtime_text_canary.json"
+  },
+  "intermediate_notebook_edit": {
+    "result": "An existing editor fill produced an invalid cell; not model inference",
+    "fix": "New empty cell with complete source copied back and compared equal before execution",
+    "new_source_verified_equal": true
+  },
+  "new_model_weights_downloaded": 1,
+  "other_models_downloaded": 0,
+  "paid_compute": false,
+  "owned_build_cleanup": {
+    "residual_compile_processes": 9,
+    "artifact": "colab_export/owned_build_cleanup.json",
+    "note": "Initial command-line exact-match cleanup did not stop the differently named cmake/descendants. Later cwd+compiler-name scoped cleanup stopped the remaining owned build processes. No unrelated process killed."
+  },
+  "t4_compatibility_probe": {
+    "state": "Completed:6 actual responses, including1 runtime canary and5 specialist tasks;0 truncated",
+    "new_evidence": "Verbose log stopped at first decode;9 residual CPU compiler processes found and stopped; previous decode usedFlashAttention and batch2048",
+    "changed_conditions": [
+      "owned compile cleanup",
+      "FlashAttention off",
+      "batch128/microbatch128",
+      "batchCPUthreads2",
+      "canary max_tokens32; creative cap1024"
+    ],
+    "new_variant_output_folder": "trials_t4_compat_v2",
+    "no_prior_success_repeated": true,
+    "professional_accepted": false,
+    "human_review_completed": false,
+    "decode_failure_rate": 0.0,
+    "canary_wall_seconds": 3.590698407999298,
+    "compatibility_cause_not_isolated": true
+  }
+}

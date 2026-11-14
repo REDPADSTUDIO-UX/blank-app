@@ -1,0 +1,2208 @@
+{
+  "version": "21-agent-director-recovery-2026-11-13.2",
+  "profiles": {
+    "qwen35_27": {
+      "id": "qwen35_27",
+      "repo": "Qwen/Qwen3.5-27B",
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "source": "https://huggingface.co/Qwen/Qwen3.5-27B",
+      "license_metadata": "apache-2.0",
+      "license_conditions": "Apache-2.0 obligations; no terms accepted here.",
+      "gated": false,
+      "modalities": [
+        "text"
+      ],
+      "adapter": "hf_text_nf4",
+      "adapter_status": "prospective_implementation_unverified",
+      "selected_weight_files": [
+        {
+          "path": "model.safetensors-00001-of-00011.safetensors",
+          "bytes": 5263851872,
+          "sha256": "9019228d172c87d5603266c2d56672d119e838facffa164de803a1ebf0d716d2"
+        },
+        {
+          "path": "model.safetensors-00002-of-00011.safetensors",
+          "bytes": 5347741440,
+          "sha256": "890ef00c920b01c1c02755088c8d8ca5cdd6a1faa2a9a729eecd00857648b411"
+        },
+        {
+          "path": "model.safetensors-00003-of-00011.safetensors",
+          "bytes": 5347741504,
+          "sha256": "8aca03689ad0717fb91455809a6670eecca818bea8c0b6bd3a591a8807cc3223"
+        },
+        {
+          "path": "model.safetensors-00004-of-00011.safetensors",
+          "bytes": 5347741504,
+          "sha256": "20f539430c60fa611b3522b8408749a080b63f1fe034e551a6539ef864ca079a"
+        },
+        {
+          "path": "model.safetensors-00005-of-00011.safetensors",
+          "bytes": 5347741504,
+          "sha256": "57a0c074c654f05fc2d6b5112eeec387ac04986e928e42f502993e69aa03a49d"
+        },
+        {
+          "path": "model.safetensors-00006-of-00011.safetensors",
+          "bytes": 5347741504,
+          "sha256": "cfa4e6fbfc600854ef6c8e5465d0a1e43832a64b5e539f1e880333e3b1086703"
+        },
+        {
+          "path": "model.safetensors-00007-of-00011.safetensors",
+          "bytes": 5347741496,
+          "sha256": "d426963325b2319cb9e1442bc8b89b9a7748a8f7a907aa4041c11531cda6b014"
+        },
+        {
+          "path": "model.safetensors-00008-of-00011.safetensors",
+          "bytes": 5368714128,
+          "sha256": "fe60dbb9d25354c4eb2a9a59d9b1afd07741c8bebab5870f5eea6eadb4cf9a06"
+        },
+        {
+          "path": "model.safetensors-00009-of-00011.safetensors",
+          "bytes": 5347745520,
+          "sha256": "71a153d882242734a1fc7e000734727f00f6ec8ca70b044f5e44fcf97736ef8f"
+        },
+        {
+          "path": "model.safetensors-00010-of-00011.safetensors",
+          "bytes": 5347749200,
+          "sha256": "146745698b9f21940e2982beb1816a0eef3b80d77ab9cd884695b9a08c2697eb"
+        },
+        {
+          "path": "model.safetensors-00011-of-00011.safetensors",
+          "bytes": 2148512760,
+          "sha256": "d947ce7483c4109b55039f1359f4494d22390cf123568100abd89816802f097d"
+        }
+      ],
+      "selected_weight_bytes": 55563022432,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 24,
+      "planning_ram_gib": 32,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "NF4-on-load, FP16 compute, text only",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "execution_modalities": [
+        "text"
+      ],
+      "auxiliary_files": [
+        {
+          "path": "chat_template.jinja",
+          "bytes": 7756,
+          "sha256": null,
+          "git_blob_sha1": "a585dec894e63da457d9440ec6aa7caa16d20860"
+        },
+        {
+          "path": "config.json",
+          "bytes": 4134,
+          "sha256": null,
+          "git_blob_sha1": "bde2be7f34a16fcdf78b9050319cdb330a15fecd"
+        },
+        {
+          "path": "generation_config.json",
+          "bytes": 244,
+          "sha256": null,
+          "git_blob_sha1": "85b45ab4f3a24f95a061c5260559471a259187cc"
+        },
+        {
+          "path": "merges.txt",
+          "bytes": 3353259,
+          "sha256": null,
+          "git_blob_sha1": "a494e019ca1502219fd0128658b979e5f05ae8e8"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "bytes": 126601,
+          "sha256": null,
+          "git_blob_sha1": "a7726bc7355fa586dd0c55f3b4adc410461e9318"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "bytes": 390,
+          "sha256": null,
+          "git_blob_sha1": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 12807982,
+          "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+          "git_blob_sha1": "a73a846725794819aa6e1c9e97d8dc9671c2006d"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 16710,
+          "sha256": null,
+          "git_blob_sha1": "eda48d3e75a8e59a8479ee4ec8b37f76e711d9c1"
+        },
+        {
+          "path": "video_preprocessor_config.json",
+          "bytes": 385,
+          "sha256": null,
+          "git_blob_sha1": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe"
+        },
+        {
+          "path": "vocab.json",
+          "bytes": 6722759,
+          "sha256": null,
+          "git_blob_sha1": "0aa0ce0658d60ac4a5d609f4eadb0e8e43514176"
+        }
+      ],
+      "selected_auxiliary_bytes": 23040220
+    },
+    "qwen35_moe": {
+      "id": "qwen35_moe",
+      "repo": "Qwen/Qwen3.5-35B-A3B",
+      "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+      "source": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+      "license_metadata": "apache-2.0",
+      "license_conditions": "Apache-2.0; 3B active parameters do not mean 3B resident weights.",
+      "gated": false,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "adapter": "contract_only",
+      "adapter_status": "contract_only_no_execution_adapter",
+      "selected_weight_files": [
+        {
+          "path": "model.safetensors-00001-of-00014.safetensors",
+          "bytes": 5368709816,
+          "sha256": "1b9f16fdae2411c0c50dbc7a5dacaebd033b28f3fd083e708f53cda3420e7247"
+        },
+        {
+          "path": "model.safetensors-00002-of-00014.safetensors",
+          "bytes": 5368709808,
+          "sha256": "79f06bc069d273b37ae7e1ef21eb24d8641ac74227b6139b00af55addf27e9ee"
+        },
+        {
+          "path": "model.safetensors-00003-of-00014.safetensors",
+          "bytes": 5368709808,
+          "sha256": "2cb56343806fd845eb2ca3ff5c46b1de409e05dc09d03edb86f7fb2d752b4f3d"
+        },
+        {
+          "path": "model.safetensors-00004-of-00014.safetensors",
+          "bytes": 5368709816,
+          "sha256": "39a39c799e52db2ca3d6123dad077b7dbfff3dbad4bcc9cbf66502db7be650a3"
+        },
+        {
+          "path": "model.safetensors-00005-of-00014.safetensors",
+          "bytes": 5368709816,
+          "sha256": "1a3b31ebb04bffa60d0ad5d9f2973d476d88959bb842ce003f068a6a9c5d4776"
+        },
+        {
+          "path": "model.safetensors-00006-of-00014.safetensors",
+          "bytes": 5368709816,
+          "sha256": "af5f17d292df6b200ee928d7dac30a66eab3e8f6d5d88a84fe1d27859d4a64fe"
+        },
+        {
+          "path": "model.safetensors-00007-of-00014.safetensors",
+          "bytes": 5368709808,
+          "sha256": "52885dbecd4e8e2e52e6cd50a1693a640ce622f219c35bf317aad89f72d956fc"
+        },
+        {
+          "path": "model.safetensors-00008-of-00014.safetensors",
+          "bytes": 5368709808,
+          "sha256": "43f232ba029dc4ca5ad994e38913c6ff74f110198e005ee2f35e42f9ce438cb3"
+        },
+        {
+          "path": "model.safetensors-00009-of-00014.safetensors",
+          "bytes": 5255463936,
+          "sha256": "8fa6a375dd539822b19ad18ad002f8acedd4920ff770bc284cfb428a213c9f17"
+        },
+        {
+          "path": "model.safetensors-00010-of-00014.safetensors",
+          "bytes": 5368710456,
+          "sha256": "d89e80aaf84c0b8a442162fc97c38fe7ce85d11ae728f67aa449350da86f8212"
+        },
+        {
+          "path": "model.safetensors-00011-of-00014.safetensors",
+          "bytes": 5368710464,
+          "sha256": "5b774025e5ed974256ce40498bfe4e1ad9ae8a4f13f9e9145666d24ea7404cae"
+        },
+        {
+          "path": "model.safetensors-00012-of-00014.safetensors",
+          "bytes": 5368710456,
+          "sha256": "d0f0bd7a5f09e6e05aee9a6ef5ba97fe678b0e19b891a81969682b0bdc9bb5c7"
+        },
+        {
+          "path": "model.safetensors-00013-of-00014.safetensors",
+          "bytes": 5367839544,
+          "sha256": "da8cc27a2a99eeba5674bfef03c80b3c4f08edfd839ad319a7702fcaedfd874f"
+        },
+        {
+          "path": "model.safetensors-00014-of-00014.safetensors",
+          "bytes": 2224764664,
+          "sha256": "d5e08a7dd670d7ef8da38e7af29cb8cdf42ecded5dfb2d9fcaf06cae79dfaa41"
+        }
+      ],
+      "selected_weight_bytes": 71903878016,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 32,
+      "planning_ram_gib": 64,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "execution_modalities": [
+        "text",
+        "image"
+      ]
+    },
+    "qwen36_27": {
+      "id": "qwen36_27",
+      "repo": "Qwen/Qwen3.6-27B",
+      "revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+      "source": "https://huggingface.co/Qwen/Qwen3.6-27B",
+      "license_metadata": "apache-2.0",
+      "license_conditions": "Apache-2.0; no Bengali superiority established.",
+      "gated": false,
+      "modalities": [
+        "text"
+      ],
+      "adapter": "hf_text_nf4",
+      "adapter_status": "prospective_implementation_unverified",
+      "selected_weight_files": [
+        {
+          "path": "model-00001-of-00015.safetensors",
+          "bytes": 3968861352,
+          "sha256": "5f21d4e349aef6c74bedef7b3835dc8c11a16dd5ce72f4437e2284f1e83736e9"
+        },
+        {
+          "path": "model-00002-of-00015.safetensors",
+          "bytes": 3921677136,
+          "sha256": "03de44dc7e933025498d72f8d7ea32d5cde16eb7a85b35ff1fa49a737f4b2242"
+        },
+        {
+          "path": "model-00003-of-00015.safetensors",
+          "bytes": 3921677128,
+          "sha256": "5c3a68304dabeaa5a0eb70a5e383d2b8134997ef6d5c1e8afdcd236091c847f2"
+        },
+        {
+          "path": "model-00004-of-00015.safetensors",
+          "bytes": 3921677128,
+          "sha256": "ba8b0849cb4c4c97e674709bfe56a9c008d7563a68ac57120ceb2855a73a9944"
+        },
+        {
+          "path": "model-00005-of-00015.safetensors",
+          "bytes": 3921677112,
+          "sha256": "a5abc1d5e9583409193e2cd58a671a4ed98467a6eaf883cd4377e3cc02021c22"
+        },
+        {
+          "path": "model-00006-of-00015.safetensors",
+          "bytes": 3900710888,
+          "sha256": "160d914e2e4704a401a3eab9e9eec3380e5723a35981c9169bedfb82ea32e6d6"
+        },
+        {
+          "path": "model-00007-of-00015.safetensors",
+          "bytes": 3994391976,
+          "sha256": "0bcd0ce28c7d2cc6f5ab2c21902cd032fec0cc5f29e0897e3bb0967add388e47"
+        },
+        {
+          "path": "model-00008-of-00015.safetensors",
+          "bytes": 3879219776,
+          "sha256": "584a0ed8018d3b19ce8e533d08a460454650027901be6323b50b591da143dca6"
+        },
+        {
+          "path": "model-00009-of-00015.safetensors",
+          "bytes": 3921677136,
+          "sha256": "e7e3e1a17a2673340eb6bba95c3c6f07b12e7746ee738dde56551cbde27656f5"
+        },
+        {
+          "path": "model-00010-of-00015.safetensors",
+          "bytes": 3921677128,
+          "sha256": "e8934789f4742c11da88f937da84bdbb8764c8a7f7ebe9e7b056bcbd41b14285"
+        },
+        {
+          "path": "model-00011-of-00015.safetensors",
+          "bytes": 3921677136,
+          "sha256": "44e8fe06d2d609bf20b16b1d2f42348ca2dc99179721f76035ff50db678f9a8a"
+        },
+        {
+          "path": "model-00012-of-00015.safetensors",
+          "bytes": 3921677136,
+          "sha256": "33c5d7d18e1b3f661334dff736fc7d00561f1f1bb9d2970c669b40d2e582974e"
+        },
+        {
+          "path": "model-00013-of-00015.safetensors",
+          "bytes": 3995081848,
+          "sha256": "68db2ebb03231238c2a114f3642df967a970a1d96b029adc427838cb5cf7f27a"
+        },
+        {
+          "path": "model-00014-of-00015.safetensors",
+          "bytes": 3942652952,
+          "sha256": "26c114fb6d5d4131ab227552d489d7a97c8c958a9ed94f6d3d1584f6cfe4b9fb"
+        },
+        {
+          "path": "model-00015-of-00015.safetensors",
+          "bytes": 508670568,
+          "sha256": "b84b5b1315e865c9a19a444045d422a73e3e2e31ce3766797cffd3507c68c9c9"
+        }
+      ],
+      "selected_weight_bytes": 55563006400,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 24,
+      "planning_ram_gib": 32,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "NF4-on-load, FP16 compute, text only",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "execution_modalities": [
+        "text"
+      ],
+      "auxiliary_files": [
+        {
+          "path": "chat_template.jinja",
+          "bytes": 7816,
+          "sha256": null,
+          "git_blob_sha1": "9f90096466ed430d886acc098258a558c2e4a5ed"
+        },
+        {
+          "path": "config.json",
+          "bytes": 4308,
+          "sha256": null,
+          "git_blob_sha1": "9f3dd1b1c6d0b43f4b33819dbdd1b60369f9006e"
+        },
+        {
+          "path": "configuration.json",
+          "bytes": 51,
+          "sha256": null,
+          "git_blob_sha1": "3a6d425685de8896b2bc8b59b671e41aea1d7bf3"
+        },
+        {
+          "path": "generation_config.json",
+          "bytes": 202,
+          "sha256": null,
+          "git_blob_sha1": "023756cfadf88e5bf69eefeee3e172f38c448d64"
+        },
+        {
+          "path": "merges.txt",
+          "bytes": 3353259,
+          "sha256": null,
+          "git_blob_sha1": "a494e019ca1502219fd0128658b979e5f05ae8e8"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "bytes": 112216,
+          "sha256": null,
+          "git_blob_sha1": "ea32be691d17374c05b277246085e81b70e6ec0f"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "bytes": 390,
+          "sha256": null,
+          "git_blob_sha1": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 12807982,
+          "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+          "git_blob_sha1": "a73a846725794819aa6e1c9e97d8dc9671c2006d"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 9983,
+          "sha256": null,
+          "git_blob_sha1": "189a6d97a891b48ec3008ad6e02b50836373b285"
+        },
+        {
+          "path": "video_preprocessor_config.json",
+          "bytes": 385,
+          "sha256": null,
+          "git_blob_sha1": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe"
+        },
+        {
+          "path": "vocab.json",
+          "bytes": 6722759,
+          "sha256": null,
+          "git_blob_sha1": "0aa0ce0658d60ac4a5d609f4eadb0e8e43514176"
+        }
+      ],
+      "selected_auxiliary_bytes": 23019351
+    },
+    "qwen35_9": {
+      "id": "qwen35_9",
+      "repo": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "source": "https://huggingface.co/Qwen/Qwen3.5-9B",
+      "license_metadata": "apache-2.0",
+      "license_conditions": "Apache-2.0; native BF16 source quantized to NF4 only in memory.",
+      "gated": false,
+      "modalities": [
+        "text"
+      ],
+      "adapter": "hf_text_nf4",
+      "adapter_status": "prospective_implementation_unverified",
+      "selected_weight_files": [
+        {
+          "path": "model.safetensors-00001-of-00004.safetensors",
+          "bytes": 5276436216,
+          "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+        },
+        {
+          "path": "model.safetensors-00002-of-00004.safetensors",
+          "bytes": 5335161512,
+          "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+        },
+        {
+          "path": "model.safetensors-00003-of-00004.safetensors",
+          "bytes": 5368717440,
+          "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+        },
+        {
+          "path": "model.safetensors-00004-of-00004.safetensors",
+          "bytes": 3325995712,
+          "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+        }
+      ],
+      "selected_weight_bytes": 19306310880,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 12,
+      "planning_ram_gib": 16,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "NF4-on-load, FP16 compute, text only",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "execution_modalities": [
+        "text"
+      ],
+      "auxiliary_files": [
+        {
+          "path": "chat_template.jinja",
+          "bytes": 7756,
+          "sha256": null,
+          "git_blob_sha1": "a585dec894e63da457d9440ec6aa7caa16d20860"
+        },
+        {
+          "path": "config.json",
+          "bytes": 3126,
+          "sha256": null,
+          "git_blob_sha1": "273ce437e01baf96a07cd9eb3d5f48bac8d7c657"
+        },
+        {
+          "path": "merges.txt",
+          "bytes": 3353259,
+          "sha256": null,
+          "git_blob_sha1": "a494e019ca1502219fd0128658b979e5f05ae8e8"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "bytes": 79657,
+          "sha256": null,
+          "git_blob_sha1": "e4c1cb7dba5096b43b9d92bc781aba5e3aa8acd8"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "bytes": 390,
+          "sha256": null,
+          "git_blob_sha1": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 12807982,
+          "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+          "git_blob_sha1": "a73a846725794819aa6e1c9e97d8dc9671c2006d"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 16710,
+          "sha256": null,
+          "git_blob_sha1": "eda48d3e75a8e59a8479ee4ec8b37f76e711d9c1"
+        },
+        {
+          "path": "video_preprocessor_config.json",
+          "bytes": 385,
+          "sha256": null,
+          "git_blob_sha1": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe"
+        },
+        {
+          "path": "vocab.json",
+          "bytes": 6722759,
+          "sha256": null,
+          "git_blob_sha1": "0aa0ce0658d60ac4a5d609f4eadb0e8e43514176"
+        }
+      ],
+      "selected_auxiliary_bytes": 22992024
+    },
+    "gemma3_27": {
+      "id": "gemma3_27",
+      "repo": "google/gemma-3-27b-it",
+      "revision": "005ad3404e59d6023443cb575daa05336842228a",
+      "source": "https://huggingface.co/google/gemma-3-27b-it",
+      "license_metadata": "gemma",
+      "license_conditions": "Gemma custom terms, use restrictions and explicit gated access acceptance required.",
+      "gated": "manual",
+      "modalities": [
+        "text"
+      ],
+      "adapter": "hf_text_nf4",
+      "adapter_status": "prospective_implementation_unverified",
+      "selected_weight_files": [
+        {
+          "path": "model-00001-of-00012.safetensors",
+          "bytes": 4854573696,
+          "sha256": "4da0290139f018bdea488b556c136d0f0ca4506fe5f5555cd97c0f6f2e886add"
+        },
+        {
+          "path": "model-00002-of-00012.safetensors",
+          "bytes": 4954792944,
+          "sha256": "bf17dbadf9c7cd696e4768639601c3300ea659e49f018000956078cefd475cdf"
+        },
+        {
+          "path": "model-00003-of-00012.safetensors",
+          "bytes": 4954792976,
+          "sha256": "c12b9d629d07b4583e19a467713f92b5c1ae8c9d7ef11faf1bdb91c4c7b59efc"
+        },
+        {
+          "path": "model-00004-of-00012.safetensors",
+          "bytes": 4954793016,
+          "sha256": "7171ed512e46c90cb579a58f66851bad09b028220422ceb1ae85080ab4ffb958"
+        },
+        {
+          "path": "model-00005-of-00012.safetensors",
+          "bytes": 4954793016,
+          "sha256": "9fb9667695749e55d808f407d78f18f80bd8ff999175c2c480cad7075ff5b2cf"
+        },
+        {
+          "path": "model-00006-of-00012.safetensors",
+          "bytes": 4954793016,
+          "sha256": "91ae339063266e0c12da89af8aa0cfdb3f9dc9bb1b4b2678863793a28026dbe7"
+        },
+        {
+          "path": "model-00007-of-00012.safetensors",
+          "bytes": 4954793016,
+          "sha256": "0497dda2b32df5d583caaffae35a96f3524a1e4305b850f4b1ce2e60fc354fe4"
+        },
+        {
+          "path": "model-00008-of-00012.safetensors",
+          "bytes": 4954793016,
+          "sha256": "9061b71b9cc82e187bd72c8f4594c5c1d900b0bc98c416d72902209514cf8ac4"
+        },
+        {
+          "path": "model-00009-of-00012.safetensors",
+          "bytes": 4954793016,
+          "sha256": "ebf2e19c3385d4b342e1517639293fe093ad793f41895862713e38603635c769"
+        },
+        {
+          "path": "model-00010-of-00012.safetensors",
+          "bytes": 4954793016,
+          "sha256": "d651ceb24678d80796a36f9a026f7178631b44e9d86f6f87e52093d915f702ad"
+        },
+        {
+          "path": "model-00011-of-00012.safetensors",
+          "bytes": 4954793016,
+          "sha256": "4a2de7fa772158381c7569a5699cadb9da3b06d92b802f54ac1c09f4a2c2e594"
+        },
+        {
+          "path": "model-00012-of-00012.safetensors",
+          "bytes": 462476696,
+          "sha256": "61f4d0c537a889d474396c6fb21ebb90946a64d70345403d47627ecb559e8e91"
+        }
+      ],
+      "selected_weight_bytes": 54864980440,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 24,
+      "planning_ram_gib": 48,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "NF4-on-load, FP16 compute, text only",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text"
+      ],
+      "execution_modalities": [
+        "text"
+      ],
+      "auxiliary_files": [
+        {
+          "path": "added_tokens.json",
+          "bytes": 35,
+          "sha256": null,
+          "git_blob_sha1": "e17bde03d42feda32d1abfca6d3b598b9a020df7"
+        },
+        {
+          "path": "chat_template.json",
+          "bytes": 1615,
+          "sha256": null,
+          "git_blob_sha1": "719b0cd0d7a373a400b0c119ee0e051f41ea88d9"
+        },
+        {
+          "path": "config.json",
+          "bytes": 972,
+          "sha256": null,
+          "git_blob_sha1": "11752a47dd94ad115fc842aca7d446ccfab0ff76"
+        },
+        {
+          "path": "generation_config.json",
+          "bytes": 215,
+          "sha256": null,
+          "git_blob_sha1": "37a4c871d263a349f50e4a313db3e72164950702"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "bytes": 126651,
+          "sha256": null,
+          "git_blob_sha1": "85edb4d608406373b4bba267cf7438234773c316"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "bytes": 570,
+          "sha256": null,
+          "git_blob_sha1": "b1e00fc184f61b698181821169c6374cd5813e5c"
+        },
+        {
+          "path": "processor_config.json",
+          "bytes": 70,
+          "sha256": null,
+          "git_blob_sha1": "453c7966d4b5d0b4a317c585989f64c58c2a6bf0"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 662,
+          "sha256": null,
+          "git_blob_sha1": "1a6193244714d3d78be48666cb02cdbfac62ad86"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 33384568,
+          "sha256": "4667f2089529e8e7657cfb6d1c19910ae71ff5f28aa7ab2ff2763330affad795",
+          "git_blob_sha1": "29401f984828a18bb09a6128d437c6766785eb66"
+        },
+        {
+          "path": "tokenizer.model",
+          "bytes": 4689074,
+          "sha256": "1299c11d7cf632ef3b4e11937501358ada021bbdf7c47638d13c0ee982f2e79c",
+          "git_blob_sha1": "14f810a829755bae3fafd6f97096dbd2eac556bd"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 1156999,
+          "sha256": null,
+          "git_blob_sha1": "7bdd14f0eaec30c8d2c56bc9d543587676e19c0f"
+        }
+      ],
+      "selected_auxiliary_bytes": 39361431
+    },
+    "gemma3_12": {
+      "id": "gemma3_12",
+      "repo": "google/gemma-3-12b-it",
+      "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "source": "https://huggingface.co/google/gemma-3-12b-it",
+      "license_metadata": "gemma",
+      "license_conditions": "Gemma custom terms and gated access acceptance required; not Apache-2.0.",
+      "gated": "manual",
+      "modalities": [
+        "text"
+      ],
+      "adapter": "hf_text_nf4",
+      "adapter_status": "prospective_implementation_unverified",
+      "selected_weight_files": [
+        {
+          "path": "model-00001-of-00005.safetensors",
+          "bytes": 4979902192,
+          "sha256": "4847447e92599833e8dbaa3067cd201c3bb5c052efa91f11ba891e43234f7832"
+        },
+        {
+          "path": "model-00002-of-00005.safetensors",
+          "bytes": 4931296592,
+          "sha256": "891bd54eed03cba9ee1e705533a02a8217fcc29f356e4a1f53e5fd0d178883ad"
+        },
+        {
+          "path": "model-00003-of-00005.safetensors",
+          "bytes": 4931296656,
+          "sha256": "7cee411d9d57324e50ce064a192cc5a858276d508611b12fc599e0c9767112e0"
+        },
+        {
+          "path": "model-00004-of-00005.safetensors",
+          "bytes": 4931296656,
+          "sha256": "8bc75a29a730c9e743cad013feda3b0991a913fafe787c58a1c6e20afad97723"
+        },
+        {
+          "path": "model-00005-of-00005.safetensors",
+          "bytes": 4601000928,
+          "sha256": "ed14bd4908c98fed9f61e8cd410167e0846de9abd78e0452ab092072e5d9252d"
+        }
+      ],
+      "selected_weight_bytes": 24374793024,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 16,
+      "planning_ram_gib": 24,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "NF4-on-load, FP16 compute, text only",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text"
+      ],
+      "execution_modalities": [
+        "text"
+      ],
+      "auxiliary_files": [
+        {
+          "path": "added_tokens.json",
+          "bytes": 35,
+          "sha256": null,
+          "git_blob_sha1": "e17bde03d42feda32d1abfca6d3b598b9a020df7"
+        },
+        {
+          "path": "chat_template.json",
+          "bytes": 1615,
+          "sha256": null,
+          "git_blob_sha1": "719b0cd0d7a373a400b0c119ee0e051f41ea88d9"
+        },
+        {
+          "path": "config.json",
+          "bytes": 916,
+          "sha256": null,
+          "git_blob_sha1": "0fbe1ff508fb71af7056eed3397faaa0349a8f09"
+        },
+        {
+          "path": "generation_config.json",
+          "bytes": 215,
+          "sha256": null,
+          "git_blob_sha1": "37a4c871d263a349f50e4a313db3e72164950702"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "bytes": 108605,
+          "sha256": null,
+          "git_blob_sha1": "c5eb054c21efb5496f4623aeb619a750c9ed9357"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "bytes": 570,
+          "sha256": null,
+          "git_blob_sha1": "b1e00fc184f61b698181821169c6374cd5813e5c"
+        },
+        {
+          "path": "processor_config.json",
+          "bytes": 70,
+          "sha256": null,
+          "git_blob_sha1": "453c7966d4b5d0b4a317c585989f64c58c2a6bf0"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 662,
+          "sha256": null,
+          "git_blob_sha1": "1a6193244714d3d78be48666cb02cdbfac62ad86"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 33384568,
+          "sha256": "4667f2089529e8e7657cfb6d1c19910ae71ff5f28aa7ab2ff2763330affad795",
+          "git_blob_sha1": "29401f984828a18bb09a6128d437c6766785eb66"
+        },
+        {
+          "path": "tokenizer.model",
+          "bytes": 4689074,
+          "sha256": "1299c11d7cf632ef3b4e11937501358ada021bbdf7c47638d13c0ee982f2e79c",
+          "git_blob_sha1": "14f810a829755bae3fafd6f97096dbd2eac556bd"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 1156999,
+          "sha256": null,
+          "git_blob_sha1": "7bdd14f0eaec30c8d2c56bc9d543587676e19c0f"
+        }
+      ],
+      "selected_auxiliary_bytes": 39343329
+    },
+    "flux2_klein4": {
+      "id": "flux2_klein4",
+      "repo": "black-forest-labs/FLUX.2-klein-4B",
+      "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+      "source": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
+      "license_metadata": "apache-2.0",
+      "license_conditions": "Apache-2.0; 4B distinguished from noncommercial 9B variants. Publisher mentions ~13GB VRAM; 16GiB is conservative unmeasured gate.",
+      "gated": false,
+      "modalities": [
+        "text_to_image",
+        "reference_edit"
+      ],
+      "adapter": "flux2_klein",
+      "adapter_status": "prospective_implementation_unverified",
+      "selected_weight_files": [
+        {
+          "path": "text_encoder/model-00001-of-00002.safetensors",
+          "bytes": 4967215360,
+          "sha256": "8c0506e7f4936fa7e26183a4fd8da4e2bdbc5990ba64ae441f965d51228f36ea"
+        },
+        {
+          "path": "text_encoder/model-00002-of-00002.safetensors",
+          "bytes": 3077766632,
+          "sha256": "82f2bd839378541b0557bfabaf37c7d3d637071fdcb73302dedd7cf61162ce07"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model.safetensors",
+          "bytes": 7751109744,
+          "sha256": "9f29f9edcfdae452a653ffb51a534ca4decd389952c225724ff3b94042612a6e"
+        },
+        {
+          "path": "vae/diffusion_pytorch_model.safetensors",
+          "bytes": 168120878,
+          "sha256": "ca70d2202afe6415bdbcb8793ba8cd99fd159cfe6192381504d6c4d3036e0f04"
+        }
+      ],
+      "selected_weight_bytes": 15964212614,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 16,
+      "planning_ram_gib": 24,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text_to_image",
+        "reference_edit"
+      ],
+      "execution_modalities": [
+        "text_to_image",
+        "reference_edit"
+      ],
+      "auxiliary_files": [
+        {
+          "path": "model_index.json",
+          "bytes": 446,
+          "sha256": null,
+          "git_blob_sha1": "554a39bf1019138dd0b28809b745df8ef33657c8"
+        },
+        {
+          "path": "scheduler/scheduler_config.json",
+          "bytes": 486,
+          "sha256": null,
+          "git_blob_sha1": "7e53605e2643440b310fa554f087641893883c5f"
+        },
+        {
+          "path": "text_encoder/config.json",
+          "bytes": 1536,
+          "sha256": null,
+          "git_blob_sha1": "86f951d170cfd1fdc1c8a57a041e05c27b7b789b"
+        },
+        {
+          "path": "text_encoder/generation_config.json",
+          "bytes": 214,
+          "sha256": null,
+          "git_blob_sha1": "f5af93d0c7764fa38e3b1cd3aaba1b6307246d3b"
+        },
+        {
+          "path": "text_encoder/model.safetensors.index.json",
+          "bytes": 32855,
+          "sha256": null,
+          "git_blob_sha1": "b65d8063815c8679d85bb919337b36fae8de75cf"
+        },
+        {
+          "path": "tokenizer/added_tokens.json",
+          "bytes": 707,
+          "sha256": null,
+          "git_blob_sha1": "b54f9135e44c1e81047e8d05cb027af8bc039eed"
+        },
+        {
+          "path": "tokenizer/chat_template.jinja",
+          "bytes": 4168,
+          "sha256": null,
+          "git_blob_sha1": "01be9b307daa2d425f7c168c9fb145a286e0afb4"
+        },
+        {
+          "path": "tokenizer/merges.txt",
+          "bytes": 1671853,
+          "sha256": null,
+          "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+        },
+        {
+          "path": "tokenizer/special_tokens_map.json",
+          "bytes": 613,
+          "sha256": null,
+          "git_blob_sha1": "ac23c0aaa2434523c494330aeb79c58395378103"
+        },
+        {
+          "path": "tokenizer/tokenizer.json",
+          "bytes": 11422654,
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "git_blob_sha1": "cd71f61a15a522601badb3dc960d800d9cb3766c"
+        },
+        {
+          "path": "tokenizer/tokenizer_config.json",
+          "bytes": 5404,
+          "sha256": null,
+          "git_blob_sha1": "ddaf69808214a44fdd26d3785b66c1367c78277a"
+        },
+        {
+          "path": "tokenizer/vocab.json",
+          "bytes": 2776833,
+          "sha256": null,
+          "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+        },
+        {
+          "path": "transformer/config.json",
+          "bytes": 541,
+          "sha256": null,
+          "git_blob_sha1": "f21592ae2bc9f43052e78785bde7414f219ae369"
+        },
+        {
+          "path": "vae/config.json",
+          "bytes": 821,
+          "sha256": null,
+          "git_blob_sha1": "c3f38eb4c188a96a462519159356bd0fcc28cd14"
+        }
+      ],
+      "selected_auxiliary_bytes": 15919131
+    },
+    "z_image_turbo": {
+      "id": "z_image_turbo",
+      "repo": "Tongyi-MAI/Z-Image-Turbo",
+      "revision": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+      "source": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+      "license_metadata": "apache-2.0",
+      "license_conditions": "Apache-2.0; text-to-image does not implement reference identity editing.",
+      "gated": false,
+      "modalities": [
+        "text_to_image"
+      ],
+      "adapter": "z_image",
+      "adapter_status": "prospective_implementation_unverified",
+      "selected_weight_files": [
+        {
+          "path": "text_encoder/model-00001-of-00003.safetensors",
+          "bytes": 3957900840,
+          "sha256": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223"
+        },
+        {
+          "path": "text_encoder/model-00002-of-00003.safetensors",
+          "bytes": 3987450520,
+          "sha256": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5"
+        },
+        {
+          "path": "text_encoder/model-00003-of-00003.safetensors",
+          "bytes": 99630640,
+          "sha256": "7ca841ee75b9c61267c0c6148fd8d096d3d21b6d3e161256a9b878154f91fc52"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+          "bytes": 9973693184,
+          "sha256": "95facd593e2549e8252acb571c653d57f7ddb7f1060d4e81712f152555a88804"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+          "bytes": 9973714824,
+          "sha256": "a4bbe43ee184a1fb5af4b412d27555f532893bdc3165b1149e304ed82b5d7015"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+          "bytes": 4672282880,
+          "sha256": "aba4e37a590e63210878160a718d916d80398f4e1f78ab6c9b2b2a00d92769fa"
+        },
+        {
+          "path": "vae/diffusion_pytorch_model.safetensors",
+          "bytes": 167666902,
+          "sha256": "f5b59a26851551b67ae1fe58d32e76486e1e812def4696a4bea97f16604d40a3"
+        }
+      ],
+      "selected_weight_bytes": 32832339790,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 24,
+      "planning_ram_gib": 48,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text_to_image"
+      ],
+      "execution_modalities": [
+        "text_to_image"
+      ],
+      "auxiliary_files": [
+        {
+          "path": "model_index.json",
+          "bytes": 467,
+          "sha256": null,
+          "git_blob_sha1": "570c63a7c5580f63d0a8ed622324f50015dcf914"
+        },
+        {
+          "path": "scheduler/scheduler_config.json",
+          "bytes": 173,
+          "sha256": null,
+          "git_blob_sha1": "2349bc43351afa730341d07dd44fce4ace1c4257"
+        },
+        {
+          "path": "text_encoder/config.json",
+          "bytes": 726,
+          "sha256": null,
+          "git_blob_sha1": "e49eccdc32f36da9c09cfa0e737084f9e0105e5e"
+        },
+        {
+          "path": "text_encoder/generation_config.json",
+          "bytes": 239,
+          "sha256": null,
+          "git_blob_sha1": "20a8a9156fc8c3f25295ca067f61fdf120d517c5"
+        },
+        {
+          "path": "text_encoder/model.safetensors.index.json",
+          "bytes": 32819,
+          "sha256": null,
+          "git_blob_sha1": "95c0a0059df040d75dc6c396b174382cf61d2f91"
+        },
+        {
+          "path": "tokenizer/merges.txt",
+          "bytes": 1671853,
+          "sha256": null,
+          "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+        },
+        {
+          "path": "tokenizer/tokenizer.json",
+          "bytes": 11422654,
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "git_blob_sha1": "cd71f61a15a522601badb3dc960d800d9cb3766c"
+        },
+        {
+          "path": "tokenizer/tokenizer_config.json",
+          "bytes": 9732,
+          "sha256": null,
+          "git_blob_sha1": "417d038a63fa3de29cfde265caedae14d1a58d92"
+        },
+        {
+          "path": "tokenizer/vocab.json",
+          "bytes": 2776833,
+          "sha256": null,
+          "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+        },
+        {
+          "path": "transformer/config.json",
+          "bytes": 473,
+          "sha256": null,
+          "git_blob_sha1": "c579190a5e03d602a2fd9647221c9d0d9441f150"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+          "bytes": 48969,
+          "sha256": null,
+          "git_blob_sha1": "a3cadc1ed28e334ef58d4e6bbda107e25168ef47"
+        },
+        {
+          "path": "vae/config.json",
+          "bytes": 805,
+          "sha256": null,
+          "git_blob_sha1": "894fa30ac1950cef422189d2d4cef11043c62875"
+        }
+      ],
+      "selected_auxiliary_bytes": 15965743
+    },
+    "wan_animate2": {
+      "id": "wan_animate2",
+      "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+      "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+      "source": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B",
+      "license_metadata": "apache-2.0",
+      "license_conditions": "Apache-2.0 base/distilled native checkpoints plus auxiliary components need exact audit. No old Animate substitution.",
+      "gated": false,
+      "modalities": [
+        "reference_video"
+      ],
+      "adapter": "contract_only",
+      "adapter_status": "contract_only_no_execution_adapter",
+      "selected_weight_files": [
+        {
+          "path": "wan_animate_2/wan_animate_2_bf16.safetensors",
+          "bytes": 32789901704,
+          "sha256": "48abc389b8d9bba17a7f54a1cd7f1286fd3e3e0e292ddf756721aee324aede09"
+        }
+      ],
+      "selected_weight_bytes": 32789901704,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 80,
+      "planning_ram_gib": 128,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "reference_video"
+      ],
+      "execution_modalities": [
+        "reference_video"
+      ]
+    },
+    "wan_animate2_distilled": {
+      "id": "wan_animate2_distilled",
+      "repo": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+      "revision": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+      "source": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+      "license_metadata": "apache-2.0",
+      "license_conditions": "Apache-2.0; separately identified distilled Diffusers candidate, not silently substituted for native base.",
+      "gated": false,
+      "modalities": [
+        "reference_video"
+      ],
+      "adapter": "contract_only",
+      "adapter_status": "contract_only_no_execution_adapter",
+      "selected_weight_files": [
+        {
+          "path": "image_encoder/model.safetensors",
+          "bytes": 1261596224,
+          "sha256": "e672f7dcb7f46458f8edc218669bc25d7ab1fc48bec53e8bd5b957bc1386a5e4"
+        },
+        {
+          "path": "text_encoder/model-00001-of-00003.safetensors",
+          "bytes": 4935812536,
+          "sha256": "a8e861969c7433e707cc5a74065d795d36cca07ec96eb6763eb4083df7248f58"
+        },
+        {
+          "path": "text_encoder/model-00002-of-00003.safetensors",
+          "bytes": 4983103192,
+          "sha256": "d57d948ece4837d850b7a859a4415121d57cacf8b9ee1d4db200c67f592902d7"
+        },
+        {
+          "path": "text_encoder/model-00003-of-00003.safetensors",
+          "bytes": 1442935480,
+          "sha256": "0da9ee284e21d1406df708788db1d502d95d75f69faa25cd26151bf8829b7c5f"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00001-of-00004.safetensors",
+          "bytes": 9874593104,
+          "sha256": "ebc182727d948cb61cac929af3b2887e0a4b7c8b683b7356628cf0350d332c0a"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00002-of-00004.safetensors",
+          "bytes": 9975379320,
+          "sha256": "e808cf7a7e7aaf358478a2198152f9e3ec8609c66712be397c21b4b7ec7ef501"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00003-of-00004.safetensors",
+          "bytes": 9954401600,
+          "sha256": "444eeea631fe6d2df80780f521f6c7716bd079fc177279ba09d2d20479f2dfaf"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00004-of-00004.safetensors",
+          "bytes": 2985521520,
+          "sha256": "130fd0a278a06096e483f08b2492ddd86b89fef8676b3d7b30556b3230a9b005"
+        },
+        {
+          "path": "vae/diffusion_pytorch_model.safetensors",
+          "bytes": 507591892,
+          "sha256": "d6e524b3fffede1787a74e81b30976dce5400c4439ba64222168e607ed19e793"
+        }
+      ],
+      "selected_weight_bytes": 45920934868,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 64,
+      "planning_ram_gib": 96,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "reference_video"
+      ],
+      "execution_modalities": [
+        "reference_video"
+      ]
+    },
+    "wan22_5": {
+      "id": "wan22_5",
+      "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "revision": "b8fff7315c768468a5333511427288870b2e9635",
+      "source": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "license_metadata": "apache-2.0",
+      "license_conditions": "Apache-2.0; existing Wan Diffusers recipe fit unmeasured; current BF16 worker requires capable GPU.",
+      "gated": false,
+      "modalities": [
+        "text_to_video",
+        "image_to_video"
+      ],
+      "adapter": "existing_wan_adapter",
+      "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+      "selected_weight_files": [
+        {
+          "path": "text_encoder/model-00001-of-00003.safetensors",
+          "bytes": 4935812536,
+          "sha256": "a8e861969c7433e707cc5a74065d795d36cca07ec96eb6763eb4083df7248f58"
+        },
+        {
+          "path": "text_encoder/model-00002-of-00003.safetensors",
+          "bytes": 4983103192,
+          "sha256": "d57d948ece4837d850b7a859a4415121d57cacf8b9ee1d4db200c67f592902d7"
+        },
+        {
+          "path": "text_encoder/model-00003-of-00003.safetensors",
+          "bytes": 1442935480,
+          "sha256": "0da9ee284e21d1406df708788db1d502d95d75f69faa25cd26151bf8829b7c5f"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00001-of-00005.safetensors",
+          "bytes": 4978254344,
+          "sha256": "511bec832a201caa410d09c5ce7dbbf8ad2708c345d82038f684fc74cce982be"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00002-of-00005.safetensors",
+          "bytes": 4846784976,
+          "sha256": "7c42724912b1911429125dc50c0e9a49ccbada5a601b657d4ed2e15e7597c193"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00003-of-00005.safetensors",
+          "bytes": 4972658392,
+          "sha256": "e9c3d0c76de786566382f8258101fea973ae37681c6e9fe0e5fe1fb93b806424"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00004-of-00005.safetensors",
+          "bytes": 4846785080,
+          "sha256": "a331121771790939678db6f585553fd5184609f7d02593c699a4d241b0d834c5"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00005-of-00005.safetensors",
+          "bytes": 354751840,
+          "sha256": "78b655685c47efdb2349f36826bb101264e9f212a16325d584aeb5f53c88e719"
+        },
+        {
+          "path": "vae/diffusion_pytorch_model.safetensors",
+          "bytes": 2818777808,
+          "sha256": "62cd18f19438e35b32ac63020e2852f566e9b02f46b6cdbd87972a356e3c6f4b"
+        }
+      ],
+      "selected_weight_bytes": 34179863648,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 24,
+      "planning_ram_gib": 64,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text_to_video",
+        "image_to_video"
+      ],
+      "execution_modalities": [
+        "text_to_video",
+        "image_to_video"
+      ]
+    },
+    "ltx25": {
+      "id": "ltx25",
+      "repo": "Lightricks/LTX-2.5",
+      "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+      "source": "https://huggingface.co/Lightricks/LTX-2.5",
+      "license_metadata": "other",
+      "license_conditions": "LTX-2.x community terms: conditional free commercial use below entity/affiliate USD10m annual revenue; fine-tune transfer and components require review. Gated. NVFP4 needs Blackwell; Comfy int8 files are not PyTorch pipeline weights.",
+      "gated": "auto",
+      "modalities": [
+        "text_to_video",
+        "image_to_video",
+        "audio_video"
+      ],
+      "adapter": "contract_only",
+      "adapter_status": "contract_only_no_execution_adapter",
+      "selected_weight_files": [
+        {
+          "path": "diffusion_models/ltx-2.5-22b-distilled-transformer-bf16.safetensors",
+          "bytes": 42018190584,
+          "sha256": "31eb3cad89b9e54e99dd3baf286f70825ac4f6c660a70d9184d895be76d7bff4"
+        },
+        {
+          "path": "model_patches/ltx-2.5-duration-head-bf16.safetensors",
+          "bytes": 3843690,
+          "sha256": "2ec71e4206ed365d015f00c05a48caccfb0ee862986809d06ae376c09f5d9190"
+        },
+        {
+          "path": "text_encoders/gemma4-12b-with-proj-ltx-2.5-bf16.safetensors",
+          "bytes": 26263858182,
+          "sha256": "ef7243612fdae7a75cb4d5cee9433e81380675fb6c213bd98ae74a9cd16561d1"
+        },
+        {
+          "path": "vae/ltx-2.5-audio-vae-bf16.safetensors",
+          "bytes": 364866540,
+          "sha256": "c52733d37f6a7fb7949c3dc0fb468c6cb2169e4d836983a73babb9f0d54837a5"
+        },
+        {
+          "path": "vae/ltx-2.5-video-vae-bf16.safetensors",
+          "bytes": 1472223346,
+          "sha256": "847e14ca7f3355debca0cea4eaa24ac0fbcdf0061da054ac89ca638a869ddba3"
+        }
+      ],
+      "selected_weight_bytes": 70122982342,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 80,
+      "planning_ram_gib": 128,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text_to_video",
+        "image_to_video",
+        "audio_video"
+      ],
+      "execution_modalities": [
+        "text_to_video",
+        "image_to_video",
+        "audio_video"
+      ]
+    },
+    "svd_xt": {
+      "id": "svd_xt",
+      "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+      "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+      "source": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt",
+      "license_metadata": "other",
+      "license_conditions": "Stability Community terms, owner eligibility/registration/attribution and revenue conditions require review; no text prompt or acting control.",
+      "gated": false,
+      "modalities": [
+        "image_to_video"
+      ],
+      "adapter": "existing_svd_adapter",
+      "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+      "selected_weight_files": [
+        {
+          "path": "image_encoder/model.fp16.safetensors",
+          "bytes": 1264217240,
+          "sha256": "ae616c24393dd1854372b0639e5541666f7521cbe219669255e865cb7f89466a"
+        },
+        {
+          "path": "unet/diffusion_pytorch_model.fp16.safetensors",
+          "bytes": 3049435868,
+          "sha256": "9fbc02e90f37d422f5e3a4aeaee95f6629dc8c45ca211b951626e930daf2bddf"
+        },
+        {
+          "path": "vae/diffusion_pytorch_model.fp16.safetensors",
+          "bytes": 195531910,
+          "sha256": "af602cd0eb4ad6086ec94fbf1438dfb1be5ec9ac03fd0215640854e90d6463a3"
+        }
+      ],
+      "selected_weight_bytes": 4509185018,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 12,
+      "planning_ram_gib": 32,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "image_to_video"
+      ],
+      "execution_modalities": [
+        "image_to_video"
+      ]
+    },
+    "indic_speak": {
+      "id": "indic_speak",
+      "repo": "bodhan-ai/indic-speak",
+      "revision": "76e0814f189321efe550011850cd288dae366aad",
+      "source": "https://huggingface.co/bodhan-ai/indic-speak",
+      "license_metadata": "other",
+      "license_conditions": "Indic Open Model License v1.0 plus Llama/SNAC/Vocos upstream audit. Self-hosting differs from serving others through an API; written permission/exceptions and scale thresholds apply. No cloning; style control preview quality.",
+      "gated": "auto",
+      "modalities": [
+        "text_to_audio"
+      ],
+      "adapter": "contract_only",
+      "adapter_status": "contract_only_no_execution_adapter",
+      "selected_weight_files": [
+        {
+          "path": "model.safetensors",
+          "bytes": 6601886504,
+          "sha256": "da52519cbce2351e853f9a2ef6793f7972aea9cd6cd1f085f935f382e05197ab"
+        },
+        {
+          "path": "vocos/best.pt",
+          "bytes": 466966065,
+          "sha256": "867426748123693b8ca5b26d9b407af158ac0bbae3f140901bc004b7ebc5738d"
+        }
+      ],
+      "selected_weight_bytes": 7068852569,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 12,
+      "planning_ram_gib": 24,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text_to_audio"
+      ],
+      "execution_modalities": [
+        "text_to_audio"
+      ]
+    },
+    "indicf5": {
+      "id": "indicf5",
+      "repo": "ai4bharat/IndicF5",
+      "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+      "source": "https://huggingface.co/ai4bharat/IndicF5",
+      "license_metadata": "mit",
+      "license_conditions": "MIT model metadata plus gated access, authorized voice reference/transcript and reviewed custom code required.",
+      "gated": "auto",
+      "modalities": [
+        "reference_voice"
+      ],
+      "adapter": "contract_only",
+      "adapter_status": "contract_only_no_execution_adapter",
+      "selected_weight_files": [
+        {
+          "path": "model.safetensors",
+          "bytes": 1402789408,
+          "sha256": "ba7f3671180fb7784e24bd1dafc96e729a38ce02e7f6d3877cdef32525a1865c"
+        }
+      ],
+      "selected_weight_bytes": 1402789408,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 8,
+      "planning_ram_gib": 16,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "reference_voice"
+      ],
+      "execution_modalities": [
+        "reference_voice"
+      ]
+    },
+    "indic_parler": {
+      "id": "indic_parler",
+      "repo": "ai4bharat/indic-parler-tts",
+      "revision": "660bc53c64ae83150613264111708a0465211237",
+      "source": "https://huggingface.co/ai4bharat/indic-parler-tts",
+      "license_metadata": "apache-2.0",
+      "license_conditions": "Apache-2.0 model metadata plus gated access. Existing preset worker; Bengali accent/emotion unverified.",
+      "gated": "auto",
+      "modalities": [
+        "text_to_audio"
+      ],
+      "adapter": "existing_parler_adapter",
+      "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+      "selected_weight_files": [
+        {
+          "path": "model.safetensors",
+          "bytes": 3751321772,
+          "sha256": "c68daecb60f80c8f1faf0a6d2e6ddd6de8e224fb19750f3e9a33bca43c552c90"
+        }
+      ],
+      "selected_weight_bytes": 3751321772,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 8,
+      "planning_ram_gib": 16,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "text_to_audio"
+      ],
+      "execution_modalities": [
+        "text_to_audio"
+      ]
+    },
+    "ace15": {
+      "id": "ace15",
+      "repo": "ACE-Step/Ace-Step1.5",
+      "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+      "source": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+      "license_metadata": "mit",
+      "license_conditions": "MIT; ACE-Step 1.5 API/checkpoints differ from existing 3.5B worker. Component and generated-rights review required.",
+      "gated": false,
+      "modalities": [
+        "music"
+      ],
+      "adapter": "contract_only",
+      "adapter_status": "contract_only_no_execution_adapter",
+      "selected_weight_files": [
+        {
+          "path": "Qwen3-Embedding-0.6B/model.safetensors",
+          "bytes": 1191586416,
+          "sha256": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd"
+        },
+        {
+          "path": "acestep-5Hz-lm-1.7B/model.safetensors",
+          "bytes": 3708521528,
+          "sha256": "f161689da73e5ecefa28ff780d51c2d92a00f056d021d7933c779ed5c6cd7db8"
+        },
+        {
+          "path": "acestep-v15-turbo/model.safetensors",
+          "bytes": 4787825604,
+          "sha256": "3f6e0797fad420a39bd33979eb6e840e30989e34a3794e843d23b60ec6e422d7"
+        },
+        {
+          "path": "acestep-v15-turbo/silence_latent.pt",
+          "bytes": 3841215,
+          "sha256": "a778e9dd942f5e8b2c09c55370782d318834432b03dabbcdf70e6ed49ad6358b"
+        },
+        {
+          "path": "vae/diffusion_pytorch_model.safetensors",
+          "bytes": 337431388,
+          "sha256": "da17edb604c40deaf09e9b24974e590d1ca83a374070e5d0884cfa4bed9a99b0"
+        }
+      ],
+      "selected_weight_bytes": 10029206151,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 8,
+      "planning_ram_gib": 24,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "music"
+      ],
+      "execution_modalities": [
+        "music"
+      ]
+    },
+    "stable_audio_small": {
+      "id": "stable_audio_small",
+      "repo": "stabilityai/stable-audio-open-small",
+      "revision": "ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3",
+      "source": "https://huggingface.co/stabilityai/stable-audio-open-small",
+      "license_metadata": "other",
+      "license_conditions": "Stability Community license and gated access; entity eligibility and exact component terms require owner approval.",
+      "gated": "auto",
+      "modalities": [
+        "sound_effect"
+      ],
+      "adapter": "existing_sfx_adapter",
+      "adapter_status": "legacy_adapter_present_exact_profile_link_requires_separate_binding_and_real_test",
+      "selected_weight_files": [
+        {
+          "path": "model.safetensors",
+          "bytes": 1676829212,
+          "sha256": "0ee8b9edbe3104cb079dd163b62589d67d9c321ea8942cbbd81e6f7d3f390be2"
+        }
+      ],
+      "selected_weight_bytes": 1676829212,
+      "download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "planning_gpu_gib": 8,
+      "planning_ram_gib": 16,
+      "memory_evidence": "unmeasured_conservative_engineering_gate_not_publisher_minimum",
+      "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+      "download_approved": false,
+      "inference_verified": false,
+      "selected": false,
+      "publisher_modalities": [
+        "sound_effect"
+      ],
+      "execution_modalities": [
+        "sound_effect"
+      ]
+    }
+  },
+  "agents": {
+    "director": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "qwen35_moe",
+        "qwen36_27"
+      ],
+      "required_modalities": [
+        "text",
+        "image"
+      ],
+      "required_capability": "Creative direction, grounded diagnosis, specialist delegation and independent visual review",
+      "status": "IN PROGRESS",
+      "validated_selection": null,
+      "human_review": "Owner A-over-B preference recorded; neither accepted; independent specialist review pending",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Current Colab read-only probe: nvidia-smi absent, exact approved GGUF/cache and runtime absent; daily free allowance exhausted. Hosted full plan malformed, locked camera output semantically weak, delegation Error/no response; independent professional sample/shot review incomplete.",
+      "research_status": "Research Shortlisted",
+      "latest_evidence": "verification/director_recovery_20261113/results.json"
+    },
+    "qc": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "qwen35_9"
+      ],
+      "required_modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "required_capability": "Evidence-grounded criticism, calibrated abstention and deterministic checks",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
+      }
+    },
+    "story": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "gemma3_27",
+        "gemma3_12"
+      ],
+      "required_modalities": [
+        "text"
+      ],
+      "required_capability": "Causal episodic story, character arcs, Bengali emotional narrative",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
+    },
+    "script": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "gemma3_27",
+        "qwen35_9"
+      ],
+      "required_modalities": [
+        "text"
+      ],
+      "required_capability": "Natural Bangladeshi dialogue, subtext, wit, visual scenes and exact rewrite",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted"
+    },
+    "character": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "flux2_klein4"
+      ],
+      "required_modalities": [
+        "text",
+        "reference_edit"
+      ],
+      "required_capability": "Psychology bible and consistent fictional identities",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
+    },
+    "art": {
+      "primary_candidate": "flux2_klein4",
+      "secondary_candidates": [
+        "qwen35_27",
+        "z_image_turbo"
+      ],
+      "required_modalities": [
+        "text",
+        "reference_edit"
+      ],
+      "required_capability": "Culturally grounded sets, props, palette and visual design",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
+    },
+    "location": {
+      "primary_candidate": "flux2_klein4",
+      "secondary_candidates": [
+        "qwen35_27"
+      ],
+      "required_modalities": [
+        "reference_edit",
+        "image"
+      ],
+      "required_capability": "Reference locations and spatial/camera-access validation",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
+      }
+    },
+    "costume": {
+      "primary_candidate": "flux2_klein4",
+      "secondary_candidates": [
+        "qwen35_27"
+      ],
+      "required_modalities": [
+        "reference_edit",
+        "text"
+      ],
+      "required_capability": "Locked actor, costume/hair/makeup and chronological scene states",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
+    },
+    "storyboard": {
+      "primary_candidate": "flux2_klein4",
+      "secondary_candidates": [
+        "qwen35_27"
+      ],
+      "required_modalities": [
+        "reference_edit",
+        "text"
+      ],
+      "required_capability": "Coverage, geography and visual continuity",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
+    },
+    "performance": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "wan_animate2"
+      ],
+      "required_modalities": [
+        "text",
+        "reference_video"
+      ],
+      "required_capability": "Playable acting intentions and actual performance assessment",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
+      }
+    },
+    "cinematographer": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "flux2_klein4"
+      ],
+      "required_modalities": [
+        "text",
+        "image"
+      ],
+      "required_capability": "Lens, light, blocking, screen direction and visual inspection",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
+      }
+    },
+    "motion": {
+      "primary_candidate": "wan_animate2",
+      "secondary_candidates": [
+        "qwen35_27"
+      ],
+      "required_modalities": [
+        "reference_video",
+        "image"
+      ],
+      "required_capability": "Physical motion, interactions and temporal assessment",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
+      }
+    },
+    "video": {
+      "primary_candidate": "wan22_5",
+      "secondary_candidates": [
+        "ltx25",
+        "svd_xt"
+      ],
+      "required_modalities": [
+        "image_to_video",
+        "text_to_video"
+      ],
+      "required_capability": "Native short cinematic clips; compare equivalent supported controls only",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
+      }
+    },
+    "voice": {
+      "primary_candidate": "indic_speak",
+      "secondary_candidates": [
+        "indicf5",
+        "indic_parler"
+      ],
+      "required_modalities": [
+        "text_to_audio",
+        "reference_voice"
+      ],
+      "required_capability": "Bengali intelligibility, accent, prosody, emotion and speaker continuity",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "voice_casting_evidence": "verification/voice_casting/",
+        "selected_source_bindings": {
+          "indic_speak": {
+            "profile": "indic_speak",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Exact selected source reviewed through owner-authenticated Chrome. Local bundle/dependency/license approval and actual runtime/listening remain pending; no inference authority.",
+            "missing_source": []
+          },
+          "indicf5": {
+            "profile": "indicf5",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Exact custom source reviewed; model.py itself must NEVER execute (unguarded downloads/inference/upload). Fixed local constructor and strict selected wrapper state replace it. Actual checkpoint layout/shape/runtime/listening remain unverified.",
+            "missing_source": []
+          },
+          "indic_parler": {
+            "profile": "indic_parler",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "runtime_verified": false,
+            "fallback": null
+          }
+        }
+      }
+    },
+    "continuity": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "flux2_klein4"
+      ],
+      "required_modalities": [
+        "text",
+        "image"
+      ],
+      "required_capability": "Cross-scene source/media state inspection; generator is not a critic",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
+      }
+    },
+    "music": {
+      "primary_candidate": "ace15",
+      "secondary_candidates": [
+        "stable_audio_small"
+      ],
+      "required_modalities": [
+        "music",
+        "sound_effect"
+      ],
+      "required_capability": "Dramatic music fit, motivated SFX and listening evidence",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/"
+      }
+    },
+    "editing": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "qwen35_9"
+      ],
+      "required_modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "required_capability": "Narrative edit guidance, actual receipt-bound FFmpeg assembly and A/V QC",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_11/"
+      }
+    },
+    "production_manager": {
+      "primary_candidate": "qwen36_27",
+      "secondary_candidates": [
+        "qwen35_9"
+      ],
+      "required_modalities": [
+        "text"
+      ],
+      "required_capability": "Resource-aware scheduling, provenance, recovery and deterministic operations",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
+    },
+    "growth": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "flux2_klein4"
+      ],
+      "required_modalities": [
+        "text",
+        "reference_edit"
+      ],
+      "required_capability": "Truthful packaging and authorized measured analytics",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
+    },
+    "youtube": {
+      "primary_candidate": "qwen35_9",
+      "secondary_candidates": [],
+      "required_modalities": [
+        "text"
+      ],
+      "required_capability": "Read-only channel validation and local release preparation; never publish",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false
+      }
+    },
+    "casting": {
+      "primary_candidate": "qwen35_27",
+      "secondary_candidates": [
+        "flux2_klein4",
+        "wan_animate2",
+        "indic_speak"
+      ],
+      "required_modalities": [
+        "text",
+        "reference_edit",
+        "reference_video",
+        "text_to_audio"
+      ],
+      "required_capability": "Character fit, rights-authorized actor identity and actual acting/voice/chemistry evidence",
+      "status": "Blocked — With Exact Reason",
+      "validated_selection": null,
+      "human_review": "Not conducted",
+      "fallback": "Explicit approved installed local candidate only, runtime-unavailable condition; benchmark substitution must be a separate labeled run",
+      "blocker": "Kaggle access/quota unverified; download/license approvals and genuine comparative outputs missing",
+      "research_status": "Research Shortlisted",
+      "no_gpu_staging": {
+        "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+        "runtime_verified": false,
+        "production_ready": false,
+        "offline_preparation_evidence": "verification/offline_6/",
+        "native_execution_evidence": "verification/offline_execution/",
+        "voice_casting_evidence": "verification/voice_casting/"
+      }
+    }
+  },
+  "production_routes_changed": false,
+  "winner_selected": false,
+  "evaluation_variants": {
+    "qwen35_9_approved_gguf": {
+      "base_profile": "qwen35_9",
+      "repo": "unsloth/Qwen3.5-9B-GGUF",
+      "revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+      "file": "Qwen3.5-9B-Q4_K_M.gguf",
+      "bytes": 5680522464,
+      "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+      "evidence": "verification/approved_gpu_writing/qwen_test_summary.json",
+      "production_approved": false,
+      "scope": "Approved GGUF actually tested on prior free Colab T4; not the BF16/NF4 base profile installation."
+    },
+    "gemma3_12_hosted_exploratory": {
+      "base_profile": "gemma3_12",
+      "source": "https://huggingface.co/spaces/huggingface-projects/gemma-3-12b-it",
+      "reported_model": "google/gemma-3-12b-it",
+      "exact_weight_revision": null,
+      "evidence": "verification/director_first_20261113/results.json",
+      "owner_feedback": "verification/director_first_20261113/owner_feedback.json",
+      "production_approved": false,
+      "scope": "Hosted demo evidence only; not pinned local model verification, license acceptance, approved download or model ranking.",
+      "evidence_runs": [
+        {
+          "evidence": "verification/approved_gpu_writing/gemma_browser_receipt.json",
+          "case_ids": [
+            "natural_dialogue"
+          ],
+          "classification": "prior hosted exploratory output; do not repeat"
+        },
+        {
+          "evidence": "verification/director_first_20261113/results.json",
+          "case_ids": [
+            "clean_abstention",
+            "director_criticism"
+          ],
+          "classification": "prior hosted exploratory controls; do not repeat"
+        },
+        {
+          "evidence": "verification/director_recovery_20261113/results.json",
+          "case_ids": [
+            "director_plan",
+            "source_understanding",
+            "locked_camera_revision",
+            "source_questions",
+            "delegation"
+          ],
+          "classification": "four new responses, one Error/unknown response; one leading diagnostic excluded; no production promotion"
+        }
+      ]
+    }
+  }
+}

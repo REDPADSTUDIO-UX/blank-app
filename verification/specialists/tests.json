@@ -1,0 +1,22 @@
+{
+  "phase": 2,
+  "unit_integration_ui": {
+    "command": "python -m unittest discover -s tests -p 'test_*.py' -q",
+    "passed": 230,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 28.672,
+    "log_sha256": "42af98dcb0aa5c762f4332b507dae3e87b74183d8f37d2748914f4108f4972f8"
+  },
+  "standalone_passed": 8,
+  "specialist_ui_agents": 17,
+  "registered_agents": 20,
+  "specialist_agents": 17,
+  "real_inference_runs": 0,
+  "creative_media_quality_verified": false,
+  "notes": [
+    "Synthetic codec media and injected-provider responses are test fixtures only",
+    "Streamlit AppTest is not a full browser visual inspection",
+    "Existing Streamlit deprecation warnings do not fail the suite"
+  ]
+}

@@ -1,0 +1,13 @@
+test_failure_saves_nothing (tests.test_free_voice.VoiceTests.test_failure_saves_nothing) ... ok
+test_registers_actual_returned_bytes (tests.test_free_voice.VoiceTests.test_registers_actual_returned_bytes) ... ok
+test_paid_or_unknown_account_blocked (tests.test_remote_gpu.FreeAccountTests.test_paid_or_unknown_account_blocked) ... ok
+test_invalid_input_never_submits (tests.test_remote_gpu.RemoteGPUTests.test_invalid_input_never_submits) ... ok
+test_local_validation_failure_preserves_download_for_recovery (tests.test_remote_gpu.RemoteGPUTests.test_local_validation_failure_preserves_download_for_recovery) ... ok
+test_quota_saves_no_clip_and_no_retry (tests.test_remote_gpu.RemoteGPUTests.test_quota_saves_no_clip_and_no_retry) ... ok
+test_success_is_actual_download_and_no_token (tests.test_remote_gpu.RemoteGPUTests.test_success_is_actual_download_and_no_token) ... ok
+test_exact_21_agents_18_pinned_candidates_no_winners (tests.test_kaggle_model_services.KaggleServices.test_exact_21_agents_18_pinned_candidates_no_winners) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.240s
+
+OK

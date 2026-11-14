@@ -1,0 +1,30 @@
+{
+  "checked_date": "2026-11-02",
+  "workspace_id": "tea-dbfic56c6qcc739r52i0",
+  "confirmed_by_user": true,
+  "services": [
+    {
+      "id": "srv-dbhfgfijnfac739sjpm0",
+      "name": "redpad-ai-studio-v3-safe-preview",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off",
+      "previews": "off"
+    },
+    {
+      "id": "srv-dbhf5vp42hec73ca7bag",
+      "name": "redpad-growth-engine-demo",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off",
+      "previews": "off"
+    },
+    {
+      "id": "srv-dbfiesvb9u1s73d2qblg",
+      "name": "redpad-ai-studio-private-preview",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off",
+      "previews": "off"
+    }
+  ],
+  "original_backup_and_recovery": "unverified",
+  "mutations_performed": []
+}

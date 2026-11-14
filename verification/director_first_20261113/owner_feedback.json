@@ -1,0 +1,28 @@
+{
+  "source": "Owner supplied master instruction, Pasted text(20261113-062416).txt",
+  "source_sha256": "e6793664400257ff5bf529a277d0a3e0f18268953ae7932de3c03e4f09c0d525",
+  "identity_key": "verification/approved_gpu_writing/reviewer_identity_key_OWNER_ONLY.json",
+  "identity_key_sha256": "65b1030c9c3895edefe84afb62fb4f9e33d877e843f4858e731bc36b1ac1ffac",
+  "preferred_sample": "A",
+  "A": {
+    "reported_model": "hosted Gemma 3 12B IT",
+    "source": "verification/approved_gpu_writing/gemma_dialogue_raw.txt",
+    "sha256": "fadd411a0d4aff5a33a0bb06c34b619bb5ef7a60dbd8d0930a7030cc189e1bdc"
+  },
+  "B": {
+    "model_variant": "Qwen3.5-9B-Q4_K_M.gguf",
+    "source": "verification/approved_gpu_writing/qwen_natural_dialogue_raw.txt",
+    "sha256": "10a19b7131973150b9e3b33a90d725c1beb1975b7bf4620c018fa282d0e4756a"
+  },
+  "owner_findings": [
+    "A more coherent and natural than B, still weak emotion, psychology, subtext and depth.",
+    "B invents mother losing a job although source says she is seeking one."
+  ],
+  "professional_acceptance": {
+    "A": false,
+    "B": false
+  },
+  "numeric_scores": null,
+  "independent_expert_attestation": false,
+  "model_winner": null
+}

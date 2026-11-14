@@ -1,0 +1,22 @@
+[
+  {
+    "check": "Initial targeted unittest command",
+    "outcome": "command error",
+    "detail": "Referenced nonexistent tests.test_model_benchmark; corrected to existing tests.test_model_routing. Other 32 tests in that command passed."
+  },
+  {
+    "check": "Corrected targeted suite before archive regression",
+    "outcome": "passed",
+    "tests": 51
+  },
+  {
+    "check": "New archive Dashboard regression, first run",
+    "outcome": "failed",
+    "detail": "StreamlitValueAssignmentNotAllowedError: models_blind used as both programmatic session-state value and download widget key."
+  },
+  {
+    "check": "Archive Dashboard regression after fix",
+    "outcome": "passed",
+    "detail": "Download widget now has distinct models_blind_download key; archived failures remain immutable; no inference on open."
+  }
+]

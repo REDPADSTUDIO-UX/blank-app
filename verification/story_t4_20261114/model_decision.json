@@ -1,0 +1,43 @@
+{
+  "checkpoint": "4d93a8c83e32ca17e9611797c10737ab9d76bed5",
+  "branch": "feature/video-music-editing-studio",
+  "observed_live_gpu": {
+    "name": "Tesla T4",
+    "total_mib": 15360,
+    "free_mib": 14913
+  },
+  "observed_live_ram": {
+    "total_kib": 13286932,
+    "available_kib": 11918992
+  },
+  "observed_live_disk_free_bytes": 120839217152,
+  "free_quota_ui": "No subscription; zero compute units. Initial estimate up to 1h20m, later 1h10m. Estimate is not guaranteed allocation duration or total account quota.",
+  "decisions": [
+    {
+      "model": "Qwen/Qwen3.5-27B",
+      "decision": "not_attempted",
+      "reason": "Current 15GiB GPU and ~12.67GiB RAM below registered 24/32GiB planning gate; 55.56GB original source download; safe fit not demonstrated."
+    },
+    {
+      "model": "google/gemma-3-27b-it",
+      "decision": "not_attempted",
+      "reason": "Below registered 24/48GiB planning gate; gated terms/install receipts unverified."
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "decision": "not_attempted",
+      "reason": "Below registered 16/24GiB planning gate; gated terms/install receipts unverified; cannot infer licensed local access from hosted demo."
+    },
+    {
+      "model": "unsloth/Qwen3.5-9B-GGUF",
+      "decision": "separate_approved_fallback_variant",
+      "profile": "qwen35_9_approved_gguf",
+      "revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+      "reason": "Existing explicit download authorization, pinned SHA, Apache-2.0 metadata and genuine prior T4 fit evidence. Current user authorizes compatible approved fallback. Fresh install bytes verified before inference. Not a 27B result or production routing change."
+    }
+  ],
+  "production_runtime_gate_unchanged": true,
+  "standalone_only": true,
+  "kernel_network_isolation_verified": false,
+  "network_scope": "Official-source setup downloads; inference server localhost only; no public endpoint, hosted inference or private repository transferred to Colab. Not a claim of kernel egress isolation."
+}
