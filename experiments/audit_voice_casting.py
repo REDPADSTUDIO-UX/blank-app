@@ -6,6 +6,10 @@ from redpad_pipeline.voice_source_policy import PUBLIC_SOURCE
 
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'verification/voice_casting'
 def audit():
+    if all(x['selected_source_verified'] for x in PUBLIC_SOURCE.values()):
+        # Keep the checkpoint-specific 18/19 receipt intact; current audit writes separately.
+        from .audit_selected_voice import audit as current_audit
+        return current_audit()
     files=['casting_voice.py','voice_consent.py','voice_source_policy.py','native_voice_worker.py','casting.py','native_execution.py','agent_engine.py']
     texts={n:(ROOT/'redpad_pipeline'/n).read_text() for n in files}
     for s in texts.values():ast.parse(s)

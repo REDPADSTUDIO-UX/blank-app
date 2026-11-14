@@ -119,6 +119,11 @@ def legacy(job):
     return payload['output']
 
 
+def voice(job):
+    from .native_voice_worker import run
+    return run(job)
+
+
 def main(path):
     job=json.loads(Path(path).read_text());out=Path(job['output_dir'])
     if job.get('research_execution_authorized') is not True or job.get('network_namespace_required') is not True:raise PermissionError('Explicit isolated research authorization required')
@@ -136,16 +141,24 @@ def main(path):
     begin={'inference_started':False,'inference_completed':False,'software_fixture':False,'human_reviewed':False,'production_ready':False}
     state=out/'worker_state.json';state.write_text(json.dumps(begin))
     begin['inference_started']=True;state.write_text(json.dumps(begin))
-    result={'ltx25':ltx,'wan_animate2':wan,'ace15':ace}.get(job['profile'],legacy)(job)
+    result={'ltx25':ltx,'wan_animate2':wan,'ace15':ace,'indic_speak':voice,'indicf5':voice}.get(job['profile'],legacy)(job)
     raw=Path(result).absolute()
     if any(p.is_symlink() for p in (raw,*raw.parents)):raise ValueError('Symlink output prohibited')
     artifact=raw.resolve()
     if not artifact.is_relative_to(out.resolve()) or not artifact.is_file() or not 0<artifact.stat().st_size<=512*1024*1024:raise ValueError('Invalid or escaped output artifact')
     begin.update(inference_completed=True,artifact=artifact.relative_to(out.resolve()).as_posix(),artifact_sha256=digest_file(artifact),bytes=artifact.stat().st_size)
+    if job['profile'] in ('indic_speak','indicf5'):
+        float_path=out/'raw_audio.npy'
+        begin['raw_float_artifact']={'path':float_path.name,'sha256':digest_file(float_path)}
+        begin['voice_settings']=job['call']
+        begin['voice_transformations']={'text':'NFC; original retained in request','audio':'native dtype/raw values retained; PCM16 WAV; no loudness/silence rewriting','reference':'original PCM and transcript hashes; punctuation suffix for F5 only'}
     if artifact.suffix=='.wav':
         import wave
         with wave.open(str(artifact),'rb') as w:
             if job['profile']=='ace15' and w.getframerate()!=48000:raise ValueError('ACE output sample rate differs')
+            if job['profile'] in ('indic_speak','indicf5'):
+                from .native_voice_worker import validate_wav
+                validate_wav(artifact,24000)
             begin.update(sample_rate=w.getframerate(),channels=w.getnchannels(),audio_seconds=w.getnframes()/w.getframerate())
     state.write_text(json.dumps(begin,indent=2))
 

@@ -88,11 +88,19 @@ def compile_job(prepared,stage,install,output_dir):
             row=next((x for x in pins if x['id']==pin['id'] and x['version']==pin['version']),None)
             if not row:raise AgentError('Missing pinned native reference.')
             paths[key]=row['id']  # Parent replaces IDs with verified copied file paths.
-    if pid in ('ltx25','wan_animate2','ace15') and 'native_call_preparation' not in prepared:raise AgentError('Explicit specialist spec required; old contract-only draft cannot launch.')
+    if pid in ('ltx25','wan_animate2','ace15','indic_speak','indicf5') and 'native_call_preparation' not in prepared:raise AgentError('Explicit specialist spec required; old contract-only draft cannot launch.')
     call=prepared.get('native_call_preparation')
     job={'profile':pid,'stage_id':stage['id'],'prepared_id':prepared['prepared_id'],'install':install,
          'references':paths,'call':call,'output_dir':str(output_dir),'research_execution_authorized':True,
          'network_namespace_required':True,'production_ready':False}
+    if pid in ('indic_speak','indicf5'):
+        from .voice_native_contracts import validate_voice_request
+        validate_voice_request(pid,r)
+        if prepared.get('original_request')!=r:raise AgentError('Voice request/source identity differs.')
+        job['request']=dict(r)
+        if pid=='indicf5':
+            job['consent']=call.get('consent')
+            if not job['consent'] or not job['consent'].get('explicit_human_review_recorded'):raise AgentError('Scoped reference consent required before queue/launch.')
     if 'payload' in prepared:
         payload=dict(prepared['payload']);payload['checkpoint']=install['model_root']
         payload['output']=str(Path(output_dir)/('output.mp4' if pid in ('wan22_5','svd_xt') else 'output.wav'))
@@ -246,6 +254,9 @@ class NativeExecution:
                 if pid in ('ltx25','wan_animate2','wan22_5','svd_xt'):
                     expected={k:(spec[k] if spec else stage['plan']['request'][k]) for k in ('width','height','fps','frames')}
                     result['technical_validation']=inspect_native_output(artifact,expected)
+                if pid in ('indic_speak','indicf5'):
+                    from .native_voice_worker import validate_wav
+                    result['technical_validation']=validate_wav(artifact,24000)
                 result.update(profile=pid,stage_id=stage['id'],prepared_id=data['prepared_id'],install_id=data['install_id'],model_revision=install['revision'])
                 # Reject stale task/source/rights/consent changes that occurred during work.
                 PreparedRequests(self.store).get(data['prepared_id']);self.installs.get(data['install_id'])

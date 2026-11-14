@@ -131,7 +131,8 @@ def video_spec(spec,r,pid):
 
 
 def speech_spec(spec,r,pid):
-    fields(spec,('style_notes','pronunciation_notes','reference_metadata','permission'))
+    keys=('style_notes','pronunciation_notes','reference_metadata','permission')
+    fields(spec,keys+(('consent_review',) if isinstance(spec,dict) and 'consent_review' in spec and pid=='indicf5' else ()))
     for k in ('style_notes','pronunciation_notes'):
         if not isinstance(spec[k],str) or len(spec[k])>1000:raise AgentError('Bounded owner speech annotations required.')
     pins=[]
@@ -145,6 +146,9 @@ def speech_spec(spec,r,pid):
         pins.append((r['consent_reference'],'document'))
     elif spec['reference_metadata'] is not None or spec['permission'] is not None:
         raise AgentError('This preset model has no reference-voice cloning capability.')
+    if pid in ('indic_speak','indicf5'):
+        from .voice_native_contracts import validate_voice_request
+        validate_voice_request(pid,r,spec)
     return pins
 
 
@@ -226,13 +230,21 @@ def prepare_specialist(staged,store,spec):
         blockers=['Spatial upsampler belongs to pinned LTX-2.5 repository layout per card, but exact file SHA/size, recipe inclusion and owner download/license approval unresolved.',
                   'Packed text encoder includes tokenizer/config assets; actual embedded metadata and BF16 runtime/package loading remain weight/runtime gates.']
     elif pid=='indicf5':
-        native={'entry':'reviewed local IndicF5 callable required; remote AutoModel custom-code execution disabled',
-                'arguments':{'text':unicodedata.normalize('NFC',r['text']),'ref_audio_path':r['reference'],'ref_text':r['reference_transcript']},'sample_rate':24000}
-        blockers=['Pinned gated custom code and transitive local auxiliary loader not reviewed; no trust_remote_code enabled.', 'Specific voice consent and identity require independent confirmation.']
+        from .voice_native_contracts import require_reference_consent,inspect_f5_reference,F5_DIT,F5_MEL
+        consent=require_reference_consent(store,staged,spec)
+        if audio_header['sample_rate']!=24000 or audio_header['channels']!=1 or audio_header['duration_ms']>15000:raise AgentError('IndicF5 reference must be mono 24 kHz, at most 15 seconds; explicit conversion/reapproval required.')
+        from .producer_references import References
+        refs=References(store);inspect_f5_reference(refs.path(refs.get(r['reference']['id'])))
+        native={'entry':'redpad_pipeline.native_voice_worker.build_selected_f5','call':'f5_tts.infer.utils_infer.infer_process',
+                'arguments':{'text':unicodedata.normalize('NFC',r['text']),'ref_audio_path':r['reference'],'ref_text':r['reference_transcript']},'sample_rate':24000,
+                'architecture':F5_DIT,'mel_spec':F5_MEL,'dtype':'float32','consent':consent,
+                'reference_policy':'original audio/transcript hashes retained; no ASR, clipping, silence removal or implicit resampling; upstream punctuation suffix only'}
+        blockers=['Exact approved local model/source/dependencies and selected wrapper key/shape compatibility require authorized runtime validation.', 'Independent speaker verification, pronunciation/emotion listening and artistic/owner review pending.']
     elif pid=='indic_speak':
-        native={'entry':None,'documented_current_card':'inference.TTS(local_directory), __call__(text,speaker), save(...); card example refers to preview-v2',
-                'arguments':{'text':unicodedata.normalize('NFC',r['text']),'speaker':r['speaker_id']},'sample_rate':24000}
-        blockers=['Exact selected revision inference implementation/speaker catalogue unavailable; current preview-v2 example cannot bind selected model.', 'Vocos best.pt/SNAC and gated upstream terms need review; no fallback or implicit download.']
+        native={'entry':'inference.TTS.__call__','loader':'redpad_pipeline.native_voice_worker.build_selected_speak',
+                'arguments':{'text':unicodedata.normalize('NFC',r['text']),'speaker':r['speaker_id'],'style':'','temperature':.6,'top_p':.9,'top_k':50,'max_new_tokens':2048,'stock':False},'sample_rate':24000,
+                'codec':'selected Vocos v9 EMA + local SNAC 24kHz; no stock decoder fallback','dtype':'bfloat16'}
+        blockers=['Exact approved model/source/SNAC/dependency manifests and BF16 runtime remain unverified.', 'Selected inference.py prefills start_of_speech while token_contract describes model-emitted start; exact source behavior retained, bounded real audio test still required.', 'voices.md measurements name ckpt-8944 while selected file commit names ckpt-8937; catalogue is a source recommendation, not verified speaker performance.']
     else:
         native={'entry':'acestep.inference.generate_music','handler':'acestep.handler.AceStepHandler',
                 'arguments':{'params':{'task_type':'text2music','caption':r['prompt'],'lyrics':'','instrumental':True,'thinking':False,'use_cot_metas':False,'use_cot_caption':False,'use_cot_language':False,'duration':r['seconds'],'seed':r['seed'],'inference_steps':8},
@@ -241,9 +253,10 @@ def prepare_specialist(staged,store,spec):
                 'initialization_policy':{'automatic_download':False,'model_code_sync':False,'custom_code':False}}
         blockers=['Upstream auto-download/code-sync hooks are replaced by implemented deny-download/sync local bridge; authenticated full bundle and actual runtime remain mandatory.',
                   'Implemented bounded weights-only silence tensor checks; actual tensor compatibility and owner complete dependency/code approval remain required.']
-    implemented=pid in PINS
+    from .voice_native_contracts import VOICE_PINS
+    implemented=pid in PINS or pid in VOICE_PINS
     return {'stage_id':staged['id'],'profile':pid,'repo':p['repo'],'revision':p['revision'],
-            'profile_sha256':fingerprint(p),'source_revision':PINS.get(pid),
+            'profile_sha256':fingerprint(p),'source_revision':PINS.get(pid,VOICE_PINS.get(pid)),
             'native_call_preparation':native,'spec_sha256':fingerprint(spec),'extra_reference_pins':bound,
             'reference_audio_header':audio_header,'video_metadata_independently_verified':False,
             'original_request':r,'owner_annotations':spec,'status':'RUNTIME VALIDATION BLOCKED',

@@ -155,10 +155,10 @@ class OfflineElevenTests(unittest.TestCase):
             with self.assertRaises(AgentError):verify_existing_bundle('vision7',folder,approval)
 
     def test_scope_and_readiness_separate_engineering_from_inference(self):
-        r=readiness();self.assertEqual(sum(x['engineering_status']=='NO-GPU ENGINEERING COMPLETE' for x in r.values()),18)
+        r=readiness();self.assertEqual(sum(x['engineering_status']=='NO-GPU ENGINEERING COMPLETE' for x in r.values()),19)
         for k in ('qc','location','cinematographer','continuity','editing'):self.assertEqual(r[k]['engineering_status'],'NO-GPU ENGINEERING COMPLETE');self.assertFalse(r[k]['runtime_verified'])
         for k in ('performance','motion','video','music','casting'):self.assertEqual(r[k]['engineering_status'],'NO-GPU ENGINEERING COMPLETE')
-        self.assertEqual(r['voice']['engineering_status'],'PARTIAL')
+        self.assertEqual(r['voice']['engineering_status'],'NO-GPU ENGINEERING COMPLETE')
 
     def test_prepared_requests_survive_restart_are_idempotent_and_invalidate_with_source(self):
         stage,spec=self.image_stage('continuity');job=self.services.prepare_offline_request(stage['id'],spec=spec)

@@ -9,13 +9,15 @@ from .agents import AgentError,encode
 from .no_gpu_staging import fingerprint,load,resolve_profile
 from .offline_specialist_preparation import PINS,LTX_SLOTS,LTX_AUXILIARY,relative
 
-SUPPORTED={'ltx25','wan_animate2','ace15','indic_parler','wan22_5','svd_xt','stable_audio_small'}
+SUPPORTED={'ltx25','wan_animate2','ace15','indic_parler','wan22_5','svd_xt','stable_audio_small','indic_speak','indicf5'}
 REQUIRED={
  'ltx25':list(LTX_SLOTS.values())+[LTX_AUXILIARY['path']],
  'wan_animate2':['wan_animate_2/wan_animate_2_bf16.safetensors','videomodel/Wan-AI/models_t5_umt5-xxl-enc-bf16.pth','videomodel/Wan-AI/vae.pth','videomodel/Wan-AI/models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth'],
  'ace15':['acestep-v15-turbo/model.safetensors','acestep-v15-turbo/config.json','acestep-v15-turbo/silence_latent.pt','Qwen3-Embedding-0.6B/model.safetensors','Qwen3-Embedding-0.6B/config.json','Qwen3-Embedding-0.6B/tokenizer.json','vae/config.json','vae/diffusion_pytorch_model.safetensors'],
  'indic_parler':['config.json','tokenizer_config.json','description_tokenizer/tokenizer_config.json'],
- 'wan22_5':['model_index.json'],'svd_xt':['model_index.json'],'stable_audio_small':['model_config.json']}
+ 'wan22_5':['model_index.json'],'svd_xt':['model_index.json'],'stable_audio_small':['model_config.json'],
+ 'indic_speak':['config.json','generation_config.json','tokenizer.json','tokenizer_config.json','model.safetensors','vocos/best.pt','snac/config.json','snac/pytorch_model.bin'],
+ 'indicf5':['config.json','checkpoints/vocab.txt','model.safetensors']}
 SOURCE_FILES={
  'ltx25':['packages/ltx-pipelines/src/ltx_pipelines/distilled.py','packages/ltx-pipelines/src/ltx_pipelines/utils/model_paths.py','packages/ltx-core/src/ltx_core/text_encoders/gemma/gemma_assets.py'],
  'wan_animate2':['infer/wan_animate_2.yaml','pipelines/wan_animate_2_pipeline.py','wanxiang/eval_i2v.py'],
@@ -66,7 +68,10 @@ def validate_install(record,*,verify=True):
     if pid=='wan_animate2':
         for folder in ('videomodel/Wan-AI/umt5-xxl/','videomodel/Wan-AI/xlm-roberta-large/'):
             if not any(n.startswith(folder) and 'tokenizer' in n for n in record['model_files']):raise AgentError('Complete local native tokenizers required.')
-    if pid in PINS:
+    if pid in ('indic_speak','indicf5'):
+        from .voice_native_contracts import validate_source_receipt
+        validate_source_receipt(record)
+    elif pid in PINS:
         if record['source_revision']!=PINS[pid] or any(n not in record['source_files'] for n in SOURCE_FILES[pid]):raise AgentError('Exact reviewed native code checkout required.')
         expected=json.loads((Path(__file__).resolve().parents[1]/'assets/professional/phase3_native_source_lock.json').read_text())
         for n,sha in expected['files'][pid].items():
@@ -76,11 +81,14 @@ def validate_install(record,*,verify=True):
     for n in REQUIRED[pid]:
         origin=record['component_origins'].get(n)
         if not isinstance(origin,dict) or not origin.get('repo') or not re.fullmatch('[a-f0-9]{40}',origin.get('revision','')):raise AgentError('Exact auxiliary origin/revision owner review required.')
+        if pid in ('indic_speak','indicf5'):
+            expected_repo='hubertsiuzdak/snac_24khz' if n.startswith('snac/') else p['repo']
+            if origin['repo']!=expected_repo or (expected_repo==p['repo'] and origin['revision']!=p['revision']):raise AgentError('Wrong selected voice component origin; no substitution.')
         if pid=='ltx25' and (origin['repo'],origin['revision'])!=(p['repo'],p['revision']):raise AgentError('LTX components must stay in exact pinned split repository.')
     if pid=='ltx25' and LTX_AUXILIARY['sha256'] is None:raise AgentError('Official spatial upsampler SHA/size unverified; exact weight verification gate remains blocked.')
     if verify:
         verify_tree(record['model_root'],record['model_files'])
-        if pid in PINS:verify_tree(record['source_root'],record['source_files'])
+        if pid in PINS or pid in ('indic_speak','indicf5'):verify_tree(record['source_root'],record['source_files'])
     return record
 
 

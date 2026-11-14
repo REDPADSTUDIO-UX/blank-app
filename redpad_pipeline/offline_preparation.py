@@ -21,12 +21,12 @@ INTERFACES={
  'ltx25':{'documented_local_entry':'ltx_pipelines.distilled',
    'inputs':['transformer-path','text-encoder-path','video-vae-path','audio-vae-path','spatial-upsampler-path'],
    'blocker':'Pinned split BF16 offline worker implemented; packed TE includes tokenizer/config assets. Official spatial upsampler SHA/size and owner component/license approval still blocked; actual local loading/GPU output unverified. No older LTX or repack.'},
- 'indic_speak':{'documented_local_entry':'inference.TTS (current model card)',
+ 'indic_speak':{'documented_local_entry':'selected inference.TTS.__call__ with reviewed offline constructor',
    'inputs':['local directory','text','speaker'],
-   'blocker':'Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified.'},
- 'indicf5':{'documented_local_entry':'custom AutoModel callable (model card)',
+   'blocker':'Exact source binding implemented; complete approved local bundle, SNAC dependency/terms and actual BF16/audio validation pending.'},
+ 'indicf5':{'documented_local_entry':'fixed local selected INF5Model structure + exact f5_tts infer_process; never model.py or remote AutoModel',
    'inputs':['text','ref_audio_path','ref_text'],
-   'blocker':'Requires reviewed custom code and local auxiliary dependencies; trust_remote_code=True is not authorized. Gated access and specific voice consent pending.'},
+   'blocker':'Selected source reviewed; local wrapper safetensors compatibility, approved dependencies, scoped reference consent and actual FP32/audio validation pending.'},
  'ace15':{'documented_local_entry':'ACE-Step 1.5 project local package',
    'inputs':['caption','instrumental generation','duration','seed'],
    'blocker':'Pinned ACE 1.5 fixed-class offline initialization bridge implemented with deny-download/sync hooks, local-only loaders and bounded tensor checks. Exact approved full bundle/dependency/code review and actual GPU/audio validation pending. Never use ACE 3.5B.'}}
@@ -70,6 +70,10 @@ def prepare_native(staged,store,*,spec=None,verify_bundle=False):
             job=prepare_specialist(staged,store,spec)
             job['preparer_source_sha256']=hashlib.sha256((Path(__file__).parent/'offline_specialist_preparation.py').read_bytes()).hexdigest()
             if job.get('native_worker_implemented'):job['worker_source_sha256']=hashlib.sha256((Path(__file__).parent/'native_local_worker.py').read_bytes()).hexdigest()
+            if pid in ('indic_speak','indicf5'):
+                from .voice_native_contracts import LOCK
+                job['voice_binding_sha256']={name:hashlib.sha256((Path(__file__).parent/name).read_bytes()).hexdigest() for name in ('native_voice_worker.py','voice_native_contracts.py','voice_source_policy.py')}
+                job['voice_source_lock_sha256']=hashlib.sha256(LOCK.read_bytes()).hexdigest()
             return job
         return {'stage_id':staged['id'],'profile':pid,'interface':INTERFACES[pid],
                 'status':'RUNTIME BLOCKED','contract_only':True,'worker_module':None,
@@ -167,10 +171,17 @@ def readiness_updates(rows):
                     from .voice_source_policy import binding_status
                     r['voice_binding_status']={pid:binding_status(pid) for pid in ('indic_speak','indicf5','indic_parler')}
                     r['voice_casting_evidence']='verification/voice_casting/'
+                    r['voice_selected_evidence']='verification/voice_final/'
+                    if role=='voice' and all(not v['source_blocked'] and v.get('selected_binding_implemented',True) for v in r['voice_binding_status'].values()):
+                        r['engineering_status']='NO-GPU ENGINEERING COMPLETE'
+                        r['execution_binding_pending']=[];r['missing_official_interface']=[]
+                        from .voice_native_contracts import VOICE_PINS
+                        r['native_source_revisions']=dict(VOICE_PINS)
+                        r['runtime_validation_pending']=['Exact approved local voice/source/dependency bundle, offline isolation and separately authorized runtime','Selected SNAC/Vocos and INF5 wrapper key/shape compatibility with actual weights','Bounded Bengali output, technical QC, independent listening/speaker review and owner acceptance']
                     if role=='casting':
                         r['engineering_status']='NO-GPU ENGINEERING COMPLETE'
                         r['execution_binding_pending']=[]
                         r['missing_official_interface']=[]
-                        r['blocked_dependency_policy']='Selected voice source unavailable: explicit abstention, no fallback; casting handoff/QC/Director/Producer workflow fully implemented.'
+                        r['blocked_dependency_policy']='Selected voice source bindings implemented; runtime remains unavailable without exact approved local bundle and explicit launch. Audition abstention, no fallback; existing QC/Director/Producer gates preserved.'
                         r['runtime_validation_pending']=['Approved local voice/performance model files and exact source binding','Actual audition, voice compatibility and pair-performance evidence','Independent human, Director/QC review and explicit Producer identity lock']
     return rows

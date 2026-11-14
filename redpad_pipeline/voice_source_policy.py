@@ -1,15 +1,17 @@
-"""Reviewed public code is separate from gated pinned-checkpoint compatibility."""
+"""Public history, exact selected source review and runtime authority are separate."""
 from .agents import AgentError
 
 PUBLIC_SOURCE={'indic_speak':{'repo':'Bodhan-AI/bodhan_genai','revision':'62090c5e8f77588f1adb1dd745af1b9b8530dfb7',
  'entry':'bodhan_genai.tts.engine.offline.IndicTTSEngine','adapter':'redpad_pipeline.native_voice_worker',
  'selected_repo':'bodhan-ai/indic-speak','selected_revision':'76e0814f189321efe550011850cd288dae366aad',
- 'selected_source_verified':False,'missing':['inference.py','token_contract.md','voices.md','config.json','tokenizer_config.json','vocos matching decoder/config source'],
- 'reason':'Public engine names the same repository; exact selected token/speaker/decoder contract remains gated. No inference.py or preview-v2 equivalence assumed.'},
+ 'selected_source_verified':True,'selected_entry':'inference.TTS.__call__; offline constructor replacement in native_voice_worker',
+ 'missing':[],
+ 'reason':'Exact selected source reviewed through owner-authenticated Chrome. Local bundle/dependency/license approval and actual runtime/listening remain pending; no inference authority.'},
  'indicf5':{'repo':'AI4Bharat/IndicF5','revision':'13f7c4d627cc10111aea8fe9c0039462cacacdc7',
- 'entry':None,'adapter':None,'selected_repo':'ai4bharat/IndicF5','selected_revision':'fb652a96e508091045890dae5bb99fe511facbcf',
- 'selected_source_verified':False,'missing':['model.py','config.json','checkpoints/vocab.txt','matching f5_tts package source'],
- 'reason':'Public README delegates initialization to gated custom model.py; generic public Gradio defaults to a different SWivid checkpoint, which must not be substituted.'}}
+ 'entry':'redpad_pipeline.native_voice_worker.build_selected_f5','adapter':'redpad_pipeline.native_voice_worker','selected_repo':'ai4bharat/IndicF5','selected_revision':'fb652a96e508091045890dae5bb99fe511facbcf',
+ 'selected_source_verified':True,'selected_entry':'fixed local INF5Model structure + exact f5_tts.infer.utils_infer.infer_process',
+ 'missing':[],
+ 'reason':'Exact custom source reviewed; model.py itself must NEVER execute (unguarded downloads/inference/upload). Fixed local constructor and strict selected wrapper state replace it. Actual checkpoint layout/shape/runtime/listening remain unverified.'}}
 
 def binding_status(pid):
     if pid=='indic_parler':return {'profile':pid,'adapter_implemented':True,'source_blocked':False,'runtime_verified':False,'fallback':None}
@@ -18,9 +20,13 @@ def binding_status(pid):
     from .no_gpu_staging import load
     registry,_=load();selected=registry['profiles'][pid]
     if (selected['repo'],selected['revision'])!=(p['selected_repo'],p['selected_revision']):raise AgentError('Voice source/checkpoint identity changed; no version substitution.')
-    return {'profile':pid,'adapter_implemented':pid=='indic_speak','source_blocked':not p['selected_source_verified'],
-            'adapter_scope':'public engine only, not a verified selected checkpoint binding' if pid=='indic_speak' else 'exact gated loader disabled',
-            'selected_binding_implemented':False,
+    from .voice_native_contracts import source_lock
+    reviewed=source_lock()['models'][pid]
+    if (reviewed['repo'],reviewed['revision'])!=(p['selected_repo'],p['selected_revision']) or not reviewed['files']:raise AgentError('Selected voice source review identity differs.')
+    return {'profile':pid,'adapter_implemented':True,'source_blocked':not p['selected_source_verified'],
+            'adapter_scope':'exact selected source binding; runtime disabled until separate explicit authorization',
+            'selected_binding_implemented':True,'source_evidence':'assets/professional/phase3_voice_selected_source_lock.json',
+            'launch_authorized':False,'production_integrated':False,
             'runtime_verified':False,'fallback':None,'blocker':p['reason'],'missing_source':p['missing']}
 
 def require_selected_source(pid):

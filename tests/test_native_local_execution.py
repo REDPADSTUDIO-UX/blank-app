@@ -280,10 +280,10 @@ class NativeLocalTests(unittest.TestCase):
 
     def test_readiness_separates_engineering_from_gated_voice_source(self):
         from redpad_pipeline.no_gpu_staging import readiness
-        rows=readiness();self.assertEqual(sum(r['engineering_status']=='NO-GPU ENGINEERING COMPLETE' for r in rows.values()),18)
+        rows=readiness();self.assertEqual(sum(r['engineering_status']=='NO-GPU ENGINEERING COMPLETE' for r in rows.values()),19)
         for role in ('performance','motion','video','music'):
             self.assertFalse(rows[role]['runtime_verified']);self.assertFalse(rows[role]['production_ready'])
-        self.assertEqual(rows['voice']['engineering_status'],'PARTIAL');self.assertEqual(rows['casting']['engineering_status'],'NO-GPU ENGINEERING COMPLETE')
+        self.assertEqual(rows['voice']['engineering_status'],'NO-GPU ENGINEERING COMPLETE');self.assertEqual(rows['casting']['engineering_status'],'NO-GPU ENGINEERING COMPLETE')
 
     def test_cancellation_will_not_signal_an_unrelated_or_reused_pid(self):
         from redpad_pipeline.native_execution import cancel_owned_process

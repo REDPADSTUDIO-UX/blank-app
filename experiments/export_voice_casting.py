@@ -20,10 +20,12 @@ def export():
     for k,h in b['untouched_agents'].items():assert sha(reg['agents'][k])==h,k
     assert sha(reg['profiles'])==b['profiles_sha256']
     assert hashlib.sha256((ROOT/'assets/professional/models.json').read_bytes()).hexdigest()==b['models_sha256']
-    ledger['voice_casting_engineering_revision']='scoped-voice-handoff-v1'
+    ledger['voice_casting_engineering_revision']='selected-voice-bindings-v2'
+    reg['agents']['voice']['no_gpu_staging']['selected_source_bindings']={pid:binding_status(pid) for pid in ('indic_speak','indicf5','indic_parler')}
     lp.write_text(json.dumps(ledger,ensure_ascii=False,indent=2)+'\n');rp.write_text(json.dumps(reg,ensure_ascii=False,indent=2)+'\n')
     matrix={k:{'engineering':rows[k]['engineering_status'],'runtime':'MODEL/GPU VALIDATION BLOCKED','creative':'HUMAN REVIEW PENDING','production_ready':False} for k in rows}
-    result={'resumed_commit':b['checkpoint'],'total_agents_in_matrix':19,'director_script':'separate unchanged workstreams','engineering_complete':18,'partial':1,'professionally_accepted_of_21':0,'other_seventeen_and_all_profiles_preserved':True,'gpu_inference_weights_hosted_paid_license_acceptance':0,'roles':matrix,'voice_candidates':{pid:binding_status(pid) for pid in ('indic_speak','indicf5','indic_parler')}}
+    complete=sum(r['engineering_status']=='NO-GPU ENGINEERING COMPLETE' for r in rows.values())
+    result={'resumed_commit':'e7dc992f187d9bd545b88d3ee11dd174ac08566c','total_agents_in_matrix':19,'director_script':'separate unchanged workstreams','engineering_complete':complete,'partial':19-complete,'professionally_accepted_of_21':0,'other_seventeen_and_all_profiles_preserved':True,'gpu_inference_weights_hosted_paid_license_acceptance':0,'roles':matrix,'voice_candidates':{pid:binding_status(pid) for pid in ('indic_speak','indicf5','indic_parler')},'latest_evidence':'verification/voice_final/'}
     (OUT/'readiness_19.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k not in ('roles','voice_candidates')},indent=2))
 if __name__=='__main__':export()

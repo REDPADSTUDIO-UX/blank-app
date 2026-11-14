@@ -1,0 +1,19 @@
+{
+  "selected": [
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference"
+  ],
+  "attempted": [
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference"
+  ],
+  "successful": [
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference"
+  ],
+  "errors": [],
+  "failures": [],
+  "gpu": false,
+  "inference": false,
+  "real_weights_read_loaded_downloaded": false,
+  "custom_upstream_executed": false,
+  "human_review": false,
+  "fixture_scope": "Manual fixtures and injected classes only; no native model process launched."
+}

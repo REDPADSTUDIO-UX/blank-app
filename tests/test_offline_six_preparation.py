@@ -123,8 +123,8 @@ class OfflineSixTests(unittest.TestCase):
         if pid=='indicf5':
             import io,wave
             b=io.BytesIO()
-            with wave.open(b,'wb') as w:w.setnchannels(1);w.setsampwidth(2);w.setframerate(24000);w.writeframes(b'\0\0'*2400)
-            audio=self.refs.put('silence.wav',b.getvalue(),'audio',source='MANUAL SILENCE UNIT FIXTURE; NOT AI OR HUMAN SPEECH',rights='fictional_ai')
+            with wave.open(b,'wb') as w:w.setnchannels(1);w.setsampwidth(2);w.setframerate(24000);w.writeframes(b'\x01\0'*2400)
+            audio=self.refs.put('manual-signal.wav',b.getvalue(),'audio',source='MANUAL PCM TEST SIGNAL; NOT AI OR HUMAN SPEECH',rights='fictional_ai')
             r.update(reference=self.pin(audio),consent_reference=self.pin(self.doc()),reference_transcript='ম্যানুয়াল পরীক্ষার লেখা')
             spec['reference_metadata']=dict(reference=r['reference'],sample_rate=24000,channels=1,duration_ms=100,transcript=r['reference_transcript'])
             spec['permission']=dict(identity_kind='fictional',actor_ids=[r['speaker_id']],uses=['voice_clone'],reference_ids=[r['reference']['id']],consent_reference=r['consent_reference'])
@@ -132,10 +132,12 @@ class OfflineSixTests(unittest.TestCase):
         return stage,spec
 
     def test_indicf5_reference_transcript_consent_and_original_bengali_preserved(self):
-        stage,spec=self.speech();job=self.services.prepare_offline_request(stage['id'],spec=spec)
+        stage,spec=self.speech()
+        from tests.test_selected_voice_binding import reviewed_fixture
+        spec=reviewed_fixture(self,stage,spec);job=self.services.prepare_offline_request(stage['id'],spec=spec)
         self.assertEqual(job['original_request']['text'],stage['plan']['request']['text'])
         self.assertEqual(job['native_call_preparation']['sample_rate'],24000)
-        self.assertIn('disabled',job['native_call_preparation']['entry']);self.assertFalse(job['consent_verified'])
+        self.assertEqual(job['native_call_preparation']['entry'],'redpad_pipeline.native_voice_worker.build_selected_f5');self.assertFalse(job['consent_verified'])
         bad=copy.deepcopy(spec);bad['reference_metadata']['transcript']='different'
         with self.assertRaises(AgentError):self.services.prepare_offline_request(stage['id'],spec=bad)
 
@@ -146,7 +148,7 @@ class OfflineSixTests(unittest.TestCase):
 
     def test_indic_speak_keeps_native_entry_unbound_until_exact_revision_verified(self):
         stage,spec=self.speech('indic_speak');job=self.services.prepare_offline_request(stage['id'],spec=spec)
-        self.assertIsNone(job['native_call_preparation']['entry']);self.assertIsNone(job['source_revision'])
+        self.assertEqual(job['native_call_preparation']['entry'],'inference.TTS.__call__');self.assertEqual(job['source_revision'],'76e0814f189321efe550011850cd288dae366aad')
         with self.assertRaises(AgentError):speech_spec(dict(spec,reference_metadata={'reference':'fake'}),stage['plan']['request'],'indic_speak')
 
     def music(self):

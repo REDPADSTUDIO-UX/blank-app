@@ -27,7 +27,7 @@ def request(operation,profile):
         return dict(prompt='SOFTWARE FIXTURE',seconds=2,seed=117,image_reference=pin if operation in ('reference_video','image_to_video') else None,video_reference=pin if operation=='reference_video' else None)
     if profile=='indic_parler':return dict(text='শুধু পরীক্ষা',language='bn',preset='Arjun',style='neutral',seed=117)
     if operation in ('text_to_audio','reference_voice'):
-        r=dict(text='শুধু পরীক্ষা',language='bn',speaker_id='fictional_fixture',seed=117)
+        r=dict(text='শুধু পরীক্ষা',language='bn',speaker_id='Ishita' if profile=='indic_speak' else 'fictional_fixture',seed=117)
         if operation=='reference_voice':r.update(reference=pin,reference_transcript='শুধু পরীক্ষা',consent_reference={'id':'consent-fixture','version':1})
         return r
     if operation=='music':return dict(prompt='SOFTWARE FIXTURE',seconds=2,seed=117)
@@ -170,7 +170,7 @@ class NoGPUStagingTests(unittest.TestCase):
     def test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art(self):
         rows=readiness();self.assertEqual(len(rows),19)
         self.assertEqual(rows['story']['engineering_status'],'NO-GPU ENGINEERING COMPLETE')
-        self.assertEqual(rows['voice']['engineering_status'],'PARTIAL')
+        self.assertEqual(rows['voice']['engineering_status'],'NO-GPU ENGINEERING COMPLETE')
         for r in rows.values():
             self.assertFalse(r['production_ready']);self.assertFalse(r['runtime_verified'])
             self.assertEqual(r['gpu_status'],'GPU TEST BLOCKED');self.assertIn(r['human_status'],('OWNER REVIEW PENDING','HUMAN REVIEW PENDING'))

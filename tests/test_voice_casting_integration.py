@@ -30,21 +30,23 @@ class VoiceCastingTests(unittest.TestCase):
         return b.getvalue()
 
     def test_public_source_and_exact_selected_gated_sources_are_separate(self):
-        speak=binding_status('indic_speak');self.assertTrue(speak['adapter_implemented']);self.assertTrue(speak['source_blocked']);self.assertIsNone(speak['fallback'])
-        self.assertTrue(binding_status('indicf5')['source_blocked']);self.assertFalse(binding_status('indic_parler')['source_blocked'])
+        speak=binding_status('indic_speak');self.assertTrue(speak['adapter_implemented']);self.assertFalse(speak['source_blocked']);self.assertIsNone(speak['fallback'])
+        self.assertFalse(binding_status('indicf5')['source_blocked']);self.assertFalse(binding_status('indic_parler')['source_blocked'])
         for pid in ('indic_speak','indicf5'):
-            with self.assertRaises(AgentError):require_selected_source(pid)
+            require_selected_source(pid)
+            self.assertFalse(binding_status(pid)['launch_authorized'])
 
     def test_unreviewed_selected_voice_fails_before_any_model_import(self):
         with self.assertRaises(AgentError):run({'install':{},'request':{}})
         self.assertIsNone(sys.modules['torch'])
 
     def test_missing_source_casting_draft_abstains_without_hidden_fallback(self):
-        d=self.draft();self.assertTrue(d['abstain']);self.assertFalse(d['professional_accepted']);self.assertEqual(d['plan']['profile'],'indic_speak')
-        h=self.w.handoff(d['id']);self.assertIsNotNone(h['voice_run'])
-        with self.assertRaises(AgentError):self.w.stage(d['id'])
-        # Existing Engine is guarded too: it cannot route to an older configured writer.
-        self.assertEqual(self.e.execute(h['voice_run']),'Blocked')
+        from redpad_pipeline.voice_source_policy import PUBLIC_SOURCE
+        with patch.dict(PUBLIC_SOURCE['indic_speak'],selected_source_verified=False):
+            d=self.draft();self.assertTrue(d['abstain']);self.assertFalse(d['professional_accepted']);self.assertEqual(d['plan']['profile'],'indic_speak')
+            h=self.w.handoff(d['id']);self.assertIsNotNone(h['voice_run'])
+            with self.assertRaises(AgentError):self.w.stage(d['id'])
+            self.assertEqual(self.e.execute(h['voice_run']),'Blocked')
 
     def test_persistent_idempotent_casting_handoff_uses_existing_store(self):
         d=self.draft();h=self.w.handoff(d['id']);self.assertEqual(h,self.w.handoff(d['id']))
@@ -84,7 +86,7 @@ class VoiceCastingTests(unittest.TestCase):
         d=self.draft();rid=self.c.casting.queue_review(d['snapshot']['task'])
         with self.s.tx() as db:r=db.execute('SELECT inputs FROM agent_runs WHERE id=?',(rid,)).fetchone()
         packet=json.loads(r[0])['context']['voice_auditions'][0]
-        self.assertTrue(packet['voice_source_blocked']);self.assertFalse(packet['voice_accepted']);self.assertFalse(packet['chemistry_accepted'])
+        self.assertFalse(packet['voice_source_blocked']);self.assertFalse(packet['voice_accepted']);self.assertFalse(packet['chemistry_accepted'])
 
     def test_voice_plan_change_stales_prior_director_inspection(self):
         cast=self.casting()[0];rid=self.c.casting.queue_review(cast)
@@ -226,9 +228,9 @@ class VoiceCastingTests(unittest.TestCase):
 
     def test_readiness_casting_complete_with_explicit_voice_blocker_not_false_readiness(self):
         from redpad_pipeline.no_gpu_staging import readiness
-        r=readiness();self.assertEqual(sum(x['engineering_status']=='NO-GPU ENGINEERING COMPLETE' for x in r.values()),18)
-        self.assertEqual(r['voice']['engineering_status'],'PARTIAL');self.assertEqual(r['casting']['engineering_status'],'NO-GPU ENGINEERING COMPLETE')
-        self.assertTrue(r['casting']['voice_binding_status']['indic_speak']['source_blocked'])
+        r=readiness();self.assertEqual(sum(x['engineering_status']=='NO-GPU ENGINEERING COMPLETE' for x in r.values()),19)
+        self.assertEqual(r['voice']['engineering_status'],'NO-GPU ENGINEERING COMPLETE');self.assertEqual(r['casting']['engineering_status'],'NO-GPU ENGINEERING COMPLETE')
+        self.assertFalse(r['casting']['voice_binding_status']['indic_speak']['source_blocked'])
         self.assertFalse(r['casting']['runtime_verified']);self.assertFalse(r['casting']['production_ready'])
 
     def test_shared_source_lock_matches_authoritative_git_blob_correction(self):

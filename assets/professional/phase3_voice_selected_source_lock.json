@@ -1,0 +1,121 @@
+{
+  "schema": "reviewed-voice-source-v1",
+  "retrieval": "Authenticated Chrome; exact revision raw-file rendered text encoded UTF-8. No independent Git-blob byte attestation. Local byte equality plus future owner full-bundle review required.",
+  "weights_accessed": false,
+  "runtime_authorized": false,
+  "models": {
+    "indic_speak": {
+      "repo": "bodhan-ai/indic-speak",
+      "revision": "76e0814f189321efe550011850cd288dae366aad",
+      "files": {
+        "config.json": {
+          "bytes": 862,
+          "sha256": "6d902d2609382ac1f49ef6a42c7f06bd63c4597b1e200e55e2fb688933cf6578",
+          "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/config.json"
+        },
+        "generation_config.json": {
+          "bytes": 205,
+          "sha256": "690a45cdedd4a8a0a318a2b046c646c3e089c1934c2b3bd9eba8aab7523cf493",
+          "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/generation_config.json"
+        },
+        "inference.py": {
+          "bytes": 7939,
+          "sha256": "9be5d6391bc527a7ac626cb819494f98b486ac6b616e247e9ca74c4cae525ef5",
+          "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/inference.py"
+        },
+        "token_contract.md": {
+          "bytes": 8382,
+          "sha256": "dafd0ccf483b4850c5447013b8d7e522b02209f406e47c554b8136869f0aba89",
+          "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/token_contract.md"
+        },
+        "tokenizer_config.json": {
+          "bytes": 373,
+          "sha256": "d299149aa5531c99445445bc1e6ade526822f70c58dcec924e7583824833e10a",
+          "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/tokenizer_config.json"
+        },
+        "vocos/config.yaml": {
+          "bytes": 1144,
+          "sha256": "d7bf584bccb653560eb06ec7b60e5202a11c0808f558dc83cbbaf1c714eac735",
+          "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/vocos/config.yaml"
+        },
+        "vocos/load.py": {
+          "bytes": 878,
+          "sha256": "c53eac936e1d1231accf32f36bc697e185f79fe29af463749f1362d786b22df9",
+          "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/vocos/load.py"
+        },
+        "vocos/model.py": {
+          "bytes": 6687,
+          "sha256": "1526bbb54d51b6f0509283acf7879ef4e59ad6155ff7ae06c62dd1d3079eda7f",
+          "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/vocos/model.py"
+        },
+        "voices.md": {
+          "bytes": 10280,
+          "sha256": "77b5515e0b429216592a7c9f8822779f30192b6de20059d47390f8c0fd317048",
+          "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/voices.md"
+        }
+      }
+    },
+    "indicf5": {
+      "repo": "ai4bharat/IndicF5",
+      "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+      "files": {
+        "checkpoints/vocab.txt": {
+          "bytes": 11283,
+          "sha256": "d3a5ff6aac12ea4fb50628a66a97b20c1e83b9e5ca356e5afae17b511cda96df",
+          "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/checkpoints/vocab.txt"
+        },
+        "config.json": {
+          "bytes": 350,
+          "sha256": "9d2bc0d96078b6914e9d77d3b7236c473fa11220a12b7ac0e3fdd148d0533591",
+          "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/config.json"
+        },
+        "f5_tts/infer/utils_infer.py": {
+          "bytes": 18459,
+          "sha256": "8caa6090a0d2ea6a81d17152977b045d4aeca74e16e5c3adf751c2e99ef806b7",
+          "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/infer/utils_infer.py"
+        },
+        "f5_tts/model/__init__.py": {
+          "bytes": 269,
+          "sha256": "b1fd6734ba5c90507acbb47f4b335dd7979cc84a9831ea2a1c2996caa26f834f",
+          "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/model/__init__.py"
+        },
+        "f5_tts/model/backbones/dit.py": {
+          "bytes": 5240,
+          "sha256": "c42d6390f3ba6d0dbbebc07e501b89456891fa242882eedc20d5e6f9ddeeb44a",
+          "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/model/backbones/dit.py"
+        },
+        "f5_tts/model/cfm.py": {
+          "bytes": 9415,
+          "sha256": "f6bbfa57a32373c3eb1c417d778871dcfe2a64f993db734ed2df92d96cd374c0",
+          "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/model/cfm.py"
+        },
+        "f5_tts/model/modules.py": {
+          "bytes": 21737,
+          "sha256": "f72f28273af28cd3f31c660ff7d18136e250e29f1c3b3d3c29440d3bca08a619",
+          "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/model/modules.py"
+        },
+        "f5_tts/model/utils.py": {
+          "bytes": 6355,
+          "sha256": "cca61472a203df620b126d4c2e0759647323d7880543abafb714e4650c70146f",
+          "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/model/utils.py"
+        },
+        "model.py": {
+          "bytes": 5774,
+          "sha256": "64ae04ffd86ba942de8342229a2883a915b54d74e21717b0cee2b13782df4c60",
+          "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/model.py"
+        }
+      }
+    },
+    "vocos_mel": {
+      "repo": "charactr/vocos-mel-24khz",
+      "revision": "e7e2fcf1f10089bbedc1e6f658685c26498c20c7",
+      "files": {
+        "config.yaml": {
+          "bytes": 461,
+          "sha256": "da9033922f969a47f0c160010226919e59f27761fd5066f3828d46de6650b0fc",
+          "url": "https://huggingface.co/charactr/vocos-mel-24khz/raw/e7e2fcf1f10089bbedc1e6f658685c26498c20c7/config.yaml"
+        }
+      }
+    }
+  }
+}

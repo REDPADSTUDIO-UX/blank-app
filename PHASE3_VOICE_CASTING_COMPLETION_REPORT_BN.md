@@ -1,3 +1,9 @@
+# Latest continuation
+
+Owner-authorized source access এখন যাচাইকৃত; final selected bindings ও current ১৯/১৯
+no-GPU engineering audit: [PHASE3_FINAL_VOICE_INTEGRATION_REPORT_BN.md](PHASE3_FINAL_VOICE_INTEGRATION_REPORT_BN.md)।
+নিচের ১৮/১৯ report পূর্বের checkpoint-এর historical evidence হিসেবে রাখা হয়েছে।
+
 # REDPAD Phase 3 — Voice ও Casting offline engineering
 
 ১৩ নভেম্বর ২০২৬, বাংলাদেশ সময়। Remote feature HEAD

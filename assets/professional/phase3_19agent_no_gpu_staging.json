@@ -920,7 +920,7 @@
         "voice_metadata"
       ],
       "no_gpu_readiness": {
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "configuration_validated": true,
         "operation_candidates": {
           "text_to_audio": [
@@ -932,11 +932,7 @@
           ]
         },
         "unsupported_required_operations": [],
-        "execution_binding_pending": [
-          "indic_speak",
-          "indicf5",
-          "indic_parler"
-        ],
+        "execution_binding_pending": [],
         "deterministic_operations": [
           "voice_metadata"
         ],
@@ -947,47 +943,42 @@
         "vision_dependency_note": null,
         "offline_native_preparation": "implemented; no runtime launch",
         "runtime_status": "MODEL/GPU VALIDATION BLOCKED",
-        "missing_official_interface": [
-          "Exact gated selected Indic-Speak implementation/speaker/component mapping and IndicF5 source unavailable without owner-authorized access/terms; surrounding runtime/rights engineering implemented."
-        ],
+        "missing_official_interface": [],
         "specialist_preparation": "source-reviewed native local worker, isolated supervisor and evidence preparation; no runtime/model acceptance",
-        "native_source_revisions": {},
+        "native_source_revisions": {
+          "indic_speak": "76e0814f189321efe550011850cd288dae366aad",
+          "indicf5": "fb652a96e508091045890dae5bb99fe511facbcf"
+        },
         "offline_preparation_evidence": "verification/offline_6/",
         "native_execution_evidence": "verification/offline_execution/",
         "voice_binding_status": {
           "indic_speak": {
             "profile": "indic_speak",
             "adapter_implemented": true,
-            "source_blocked": true,
-            "adapter_scope": "public engine only, not a verified selected checkpoint binding",
-            "selected_binding_implemented": false,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
             "runtime_verified": false,
             "fallback": null,
-            "blocker": "Public engine names the same repository; exact selected token/speaker/decoder contract remains gated. No inference.py or preview-v2 equivalence assumed.",
-            "missing_source": [
-              "inference.py",
-              "token_contract.md",
-              "voices.md",
-              "config.json",
-              "tokenizer_config.json",
-              "vocos matching decoder/config source"
-            ]
+            "blocker": "Exact selected source reviewed through owner-authenticated Chrome. Local bundle/dependency/license approval and actual runtime/listening remain pending; no inference authority.",
+            "missing_source": []
           },
           "indicf5": {
             "profile": "indicf5",
-            "adapter_implemented": false,
-            "source_blocked": true,
-            "adapter_scope": "exact gated loader disabled",
-            "selected_binding_implemented": false,
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
             "runtime_verified": false,
             "fallback": null,
-            "blocker": "Public README delegates initialization to gated custom model.py; generic public Gradio defaults to a different SWivid checkpoint, which must not be substituted.",
-            "missing_source": [
-              "model.py",
-              "config.json",
-              "checkpoints/vocab.txt",
-              "matching f5_tts package source"
-            ]
+            "blocker": "Exact custom source reviewed; model.py itself must NEVER execute (unguarded downloads/inference/upload). Fixed local constructor and strict selected wrapper state replace it. Actual checkpoint layout/shape/runtime/listening remain unverified.",
+            "missing_source": []
           },
           "indic_parler": {
             "profile": "indic_parler",
@@ -997,7 +988,13 @@
             "fallback": null
           }
         },
-        "voice_casting_evidence": "verification/voice_casting/"
+        "voice_casting_evidence": "verification/voice_casting/",
+        "voice_selected_evidence": "verification/voice_final/",
+        "runtime_validation_pending": [
+          "Exact approved local voice/source/dependency bundle, offline isolation and separately authorized runtime",
+          "Selected SNAC/Vocos and INF5 wrapper key/shape compatibility with actual weights",
+          "Bounded Bengali output, technical QC, independent listening/speaker review and owner acceptance"
+        ]
       },
       "supplemental_research_candidates": [],
       "supplemental_binding_scope": "Existing professional suite/models.json only; explicit separate image critic, not a primary/secondary replacement.",
@@ -1559,36 +1556,30 @@
           "indic_speak": {
             "profile": "indic_speak",
             "adapter_implemented": true,
-            "source_blocked": true,
-            "adapter_scope": "public engine only, not a verified selected checkpoint binding",
-            "selected_binding_implemented": false,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
             "runtime_verified": false,
             "fallback": null,
-            "blocker": "Public engine names the same repository; exact selected token/speaker/decoder contract remains gated. No inference.py or preview-v2 equivalence assumed.",
-            "missing_source": [
-              "inference.py",
-              "token_contract.md",
-              "voices.md",
-              "config.json",
-              "tokenizer_config.json",
-              "vocos matching decoder/config source"
-            ]
+            "blocker": "Exact selected source reviewed through owner-authenticated Chrome. Local bundle/dependency/license approval and actual runtime/listening remain pending; no inference authority.",
+            "missing_source": []
           },
           "indicf5": {
             "profile": "indicf5",
-            "adapter_implemented": false,
-            "source_blocked": true,
-            "adapter_scope": "exact gated loader disabled",
-            "selected_binding_implemented": false,
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
             "runtime_verified": false,
             "fallback": null,
-            "blocker": "Public README delegates initialization to gated custom model.py; generic public Gradio defaults to a different SWivid checkpoint, which must not be substituted.",
-            "missing_source": [
-              "model.py",
-              "config.json",
-              "checkpoints/vocab.txt",
-              "matching f5_tts package source"
-            ]
+            "blocker": "Exact custom source reviewed; model.py itself must NEVER execute (unguarded downloads/inference/upload). Fixed local constructor and strict selected wrapper state replace it. Actual checkpoint layout/shape/runtime/listening remain unverified.",
+            "missing_source": []
           },
           "indic_parler": {
             "profile": "indic_parler",
@@ -1599,7 +1590,8 @@
           }
         },
         "voice_casting_evidence": "verification/voice_casting/",
-        "blocked_dependency_policy": "Selected voice source unavailable: explicit abstention, no fallback; casting handoff/QC/Director/Producer workflow fully implemented.",
+        "voice_selected_evidence": "verification/voice_final/",
+        "blocked_dependency_policy": "Selected voice source bindings implemented; runtime remains unavailable without exact approved local bundle and explicit launch. Audition abstention, no fallback; existing QC/Director/Producer gates preserved.",
         "runtime_validation_pending": [
           "Approved local voice/performance model files and exact source binding",
           "Actual audition, voice compatibility and pair-performance evidence",
@@ -1640,5 +1632,5 @@
   "offline_11_engineering_revision": "offline-first-preparation-v1",
   "offline_6_engineering_revision": "native-source-preparation-v1",
   "native_local_execution_revision": "source-pinned-offline-workers-v1",
-  "voice_casting_engineering_revision": "scoped-voice-handoff-v1"
+  "voice_casting_engineering_revision": "selected-voice-bindings-v2"
 }

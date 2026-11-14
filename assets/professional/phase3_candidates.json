@@ -1937,12 +1937,49 @@
       "research_status": "Research Shortlisted",
       "no_gpu_staging": {
         "ledger": "assets/professional/phase3_19agent_no_gpu_staging.json",
-        "engineering_status": "PARTIAL",
+        "engineering_status": "NO-GPU ENGINEERING COMPLETE",
         "runtime_verified": false,
         "production_ready": false,
         "offline_preparation_evidence": "verification/offline_6/",
         "native_execution_evidence": "verification/offline_execution/",
-        "voice_casting_evidence": "verification/voice_casting/"
+        "voice_casting_evidence": "verification/voice_casting/",
+        "selected_source_bindings": {
+          "indic_speak": {
+            "profile": "indic_speak",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Exact selected source reviewed through owner-authenticated Chrome. Local bundle/dependency/license approval and actual runtime/listening remain pending; no inference authority.",
+            "missing_source": []
+          },
+          "indicf5": {
+            "profile": "indicf5",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+            "selected_binding_implemented": true,
+            "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+            "launch_authorized": false,
+            "production_integrated": false,
+            "runtime_verified": false,
+            "fallback": null,
+            "blocker": "Exact custom source reviewed; model.py itself must NEVER execute (unguarded downloads/inference/upload). Fixed local constructor and strict selected wrapper state replace it. Actual checkpoint layout/shape/runtime/listening remain unverified.",
+            "missing_source": []
+          },
+          "indic_parler": {
+            "profile": "indic_parler",
+            "adapter_implemented": true,
+            "source_blocked": false,
+            "runtime_verified": false,
+            "fallback": null
+          }
+        }
       }
     },
     "continuity": {

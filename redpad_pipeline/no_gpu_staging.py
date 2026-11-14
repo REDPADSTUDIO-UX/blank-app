@@ -167,6 +167,9 @@ def validate_request(p,operation,r):
         if operation=='reference_voice':keys+=('reference','reference_transcript','consent_reference')
         fields(r,keys);text(r['text'],300);text(r['speaker_id'],100);integer(r['seed'],0,2**31-1)
         if r['language']!='bn' or not re.search('[\u0980-\u09ff]',r['text']):raise AgentError('Bengali speech contract required.')
+        if p['id']=='indic_speak':
+            from .voice_native_contracts import BENGALI_SPEAKERS
+            if r['speaker_id'] not in BENGALI_SPEAKERS:raise AgentError('Unknown selected Bengali preset speaker; no invented mapping.')
         if operation=='reference_voice':ref(r['reference']);ref(r['consent_reference']);text(r['reference_transcript'],1000)
     elif operation=='music':
         fields(r,('prompt','seconds','seed'));text(r['prompt']);integer(r['seconds'],1,15);integer(r['seed'],0,2**31-1)
@@ -184,7 +187,7 @@ def prepare(role,profile_id,operation,request):
     blockers=['No-GPU staging only: no model/runtime queried or executed.',
               'Exact installed files, revision, precision, component hashes, owner download/license approval and measured runtime must pass existing execution gates.',
               'Raw output and provenance, technical benchmark, independent specialist review and owner acceptance remain mandatory.']
-    if profile_id in {'ltx25','wan_animate2','ace15'}:blockers.append('Source-pinned isolated native worker implemented separately; only explicit owner-authorized NativeExecution with an authenticated complete local bundle can execute. No automatic launch or production route.')
+    if profile_id in {'ltx25','wan_animate2','ace15','indic_speak','indicf5'}:blockers.append('Source-pinned isolated native worker implemented separately; only explicit owner-authorized NativeExecution with an authenticated complete local bundle can execute. No automatic launch or production route.')
     elif profile_id in CONTRACT_ONLY:blockers.append('Exact gated native execution interface remains unavailable; contract validation only. No legacy replacement.')
     if profile_id in LEGACY:blockers.append('Legacy native controls reused; exact profile installation binding and runtime API still need verification. No executable route enabled.')
     if profile_id=='vision7':blockers.append('Existing suite-authorized image critic staged explicitly as supplemental, not a primary replacement. Exact installation binding/API/calibration unverified; no whole-video or listening capability.')
