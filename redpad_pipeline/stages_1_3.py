@@ -109,7 +109,7 @@ def youtube_checks(raw):
 def runtime_probe():
     from .kaggle_runtime import probe
     result=probe();result['observed_at_utc']=datetime.now(timezone.utc).isoformat()
-    result['free_runtime_connected']=False
+    result['free_runtime_connected']=None  # Host inventory cannot authenticate a Colab account/session.
     result['known_cache_paths']={str(p):p.exists() for p in (
         Path('/content/redpad_stages_1_3'),Path('/workspace/blank-app/phase3_models'),
         Path('/workspace/models'),Path('/workspace/.cache/huggingface'))}
@@ -152,6 +152,7 @@ class Session:
         if state.get('halted_for_review'):raise AgentError('Prior technical/runtime failure must be inspected; automatic retry disabled.')
         if any(c['status']!='captured' for c in state['calls']):raise AgentError('Prior failed/interrupted reservation requires explicit inspection; no automatic retry.')
         before=runtime_probe();state['latest_preflight']=before
+        state['operator_verified_free_runtime']=free_runtime_verified is True
         try:
             if not before['gpus']:raise AgentError('BLOCKED — GPU ACCESS: no CUDA GPU visible on this execution host.')
             if authorized is not True or free_runtime_verified is not True:raise AgentError('Actual free-runtime and bounded research authorization must be verified first.')
