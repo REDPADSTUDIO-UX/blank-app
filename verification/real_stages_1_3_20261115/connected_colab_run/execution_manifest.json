@@ -1,0 +1,160 @@
+{
+  "resumed_feature_commit": "9cdca34fb8df48cdcff0ec559ff9ccb960e334dc",
+  "notebook_source_commit": "877a475f344d85e19ea45338f3dff8d421a888e5",
+  "browser": "Connected Chrome extension; owner existing authenticated free Colab",
+  "observed_date_bangladesh": "2026-11-15",
+  "initial_ui_session_limit": "up to 4 hours at initial inspection; estimate, not guaranteed quota",
+  "remaining_gpu_quota_hours": null,
+  "ui_free_tier_verified": true,
+  "ui_notebook_saved": "All changes saved observed after recovery and final summary",
+  "browser_event": "One UI interaction timed out while runtime disconnected and autosave failed. DOM confirmed Stage 1 cell was not inserted/executed. One official Reconnect succeeded; canary gates then executed once per stage. Autosave later recovered.",
+  "actual_gpu": [
+    {
+      "index": 0,
+      "name": "Tesla T4",
+      "total_bytes": 16106127360,
+      "free_bytes": 15637413888,
+      "driver": "580.82.07",
+      "compute_capability": "7.5"
+    }
+  ],
+  "system_ram_total_gib": 12.671405792236328,
+  "system_ram_available_gib": 11.465736389160156,
+  "stages": [
+    {
+      "stage": 1,
+      "model": "qwen35_9",
+      "repo": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "status": "BLOCKED",
+      "blocking_layer": "actual Colab hardware/resource preflight before worker reservation",
+      "actual_blocker": "Available host/container RAM below conservative planning gate.",
+      "planning_ram_gib": 16,
+      "planning_gpu_gib": 12,
+      "selected_weight_bytes": 19306310880,
+      "selected_weight_files": [
+        {
+          "path": "model.safetensors-00001-of-00004.safetensors",
+          "bytes": 5276436216,
+          "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+        },
+        {
+          "path": "model.safetensors-00002-of-00004.safetensors",
+          "bytes": 5335161512,
+          "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+        },
+        {
+          "path": "model.safetensors-00003-of-00004.safetensors",
+          "bytes": 5368717440,
+          "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+        },
+        {
+          "path": "model.safetensors-00004-of-00004.safetensors",
+          "bytes": 3325995712,
+          "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+        }
+      ],
+      "download_approved": false,
+      "additional_known_blockers": [
+        "No matching model weights in inspected caches",
+        "No existing authorized install receipt in isolated research store",
+        "bitsandbytes unavailable"
+      ],
+      "runtime_model_compatibility": "NOT TESTED",
+      "human_review_package": "NOT READY — no genuine generated samples",
+      "real_inference_calls": 0,
+      "worker_launches": 0
+    },
+    {
+      "stage": 2,
+      "model": "ace15",
+      "repo": "ACE-Step/Ace-Step1.5",
+      "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+      "status": "BLOCKED",
+      "blocking_layer": "actual Colab hardware/resource preflight before worker reservation",
+      "actual_blocker": "Available host/container RAM below conservative planning gate.",
+      "planning_ram_gib": 24,
+      "planning_gpu_gib": 8,
+      "selected_weight_bytes": 10029206151,
+      "selected_weight_files": [
+        {
+          "path": "Qwen3-Embedding-0.6B/model.safetensors",
+          "bytes": 1191586416,
+          "sha256": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd"
+        },
+        {
+          "path": "acestep-5Hz-lm-1.7B/model.safetensors",
+          "bytes": 3708521528,
+          "sha256": "f161689da73e5ecefa28ff780d51c2d92a00f056d021d7933c779ed5c6cd7db8"
+        },
+        {
+          "path": "acestep-v15-turbo/model.safetensors",
+          "bytes": 4787825604,
+          "sha256": "3f6e0797fad420a39bd33979eb6e840e30989e34a3794e843d23b60ec6e422d7"
+        },
+        {
+          "path": "acestep-v15-turbo/silence_latent.pt",
+          "bytes": 3841215,
+          "sha256": "a778e9dd942f5e8b2c09c55370782d318834432b03dabbcdf70e6ed49ad6358b"
+        },
+        {
+          "path": "vae/diffusion_pytorch_model.safetensors",
+          "bytes": 337431388,
+          "sha256": "da17edb604c40deaf09e9b24974e590d1ca83a374070e5d0884cfa4bed9a99b0"
+        }
+      ],
+      "download_approved": false,
+      "additional_known_blockers": [
+        "No matching model weights in inspected caches",
+        "No existing authorized install receipt in isolated research store",
+        "bwrap unavailable; native isolation must not be bypassed"
+      ],
+      "runtime_model_compatibility": "NOT TESTED",
+      "human_review_package": "NOT READY — no genuine generated samples",
+      "real_inference_calls": 0,
+      "worker_launches": 0
+    },
+    {
+      "stage": 3,
+      "model": "indic_speak",
+      "repo": "bodhan-ai/indic-speak",
+      "revision": "76e0814f189321efe550011850cd288dae366aad",
+      "status": "BLOCKED",
+      "blocking_layer": "actual Colab hardware/resource preflight before worker reservation",
+      "actual_blocker": "Available host/container RAM below conservative planning gate.",
+      "planning_ram_gib": 24,
+      "planning_gpu_gib": 12,
+      "selected_weight_bytes": 7068852569,
+      "selected_weight_files": [
+        {
+          "path": "model.safetensors",
+          "bytes": 6601886504,
+          "sha256": "da52519cbce2351e853f9a2ef6793f7972aea9cd6cd1f085f935f382e05197ab"
+        },
+        {
+          "path": "vocos/best.pt",
+          "bytes": 466966065,
+          "sha256": "867426748123693b8ca5b26d9b407af158ac0bbae3f140901bc004b7ebc5738d"
+        }
+      ],
+      "download_approved": false,
+      "additional_known_blockers": [
+        "No matching model weights in inspected caches",
+        "No existing authorized install receipt in isolated research store",
+        "bwrap unavailable; native isolation must not be bypassed"
+      ],
+      "runtime_model_compatibility": "NOT TESTED",
+      "human_review_package": "NOT READY — no genuine generated samples",
+      "real_inference_calls": 0,
+      "worker_launches": 0
+    }
+  ],
+  "real_model_outputs": 0,
+  "generated_audio_files": 0,
+  "professional_or_artistic_acceptances": 0,
+  "model_weight_reads_or_downloads": 0,
+  "dependency_installs_or_gate_changes": 0,
+  "old_engineering_tests_or_successful_benchmarks_repeated": false,
+  "paid_apis_billing_render_youtube_actions": false,
+  "scope_note": "The raw shared probe uses a generic non-Kaggle provider label and cannot attest a Colab account. Separate Chrome UI evidence established free Colab and actual GPU; original probe fields retained unchanged."
+}

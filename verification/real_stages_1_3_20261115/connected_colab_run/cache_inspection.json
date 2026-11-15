@@ -1,0 +1,17 @@
+{
+  "roots": {
+    "/content": true,
+    "/root/.cache/huggingface/hub": false,
+    "/root/.cache/torch": false,
+    "/workspace/models": false,
+    "/workspace/blank-app/phase3_models": false
+  },
+  "weight_files": [],
+  "approved_receipt_counts": {
+    "shared_model_installs": 0,
+    "native_local_installs": 0
+  },
+  "gpu_processes": "",
+  "isolation_tool": null,
+  "weights_read_or_downloaded": false
+}
