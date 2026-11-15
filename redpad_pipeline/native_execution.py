@@ -211,7 +211,13 @@ class NativeExecution:
                 from .no_gpu_staging import StagingLedger
                 from .producer_references import References
                 prepared=PreparedRequests(self.store).get(data['prepared_id']);stage=StagingLedger(self.store).get(prepared['stage_id'])
-                install=self.installs.get(data['install_id']);job=compile_job(prepared,stage,install,folder);refs=References(self.store)
+                install=self.installs.get(data['install_id'])
+                from .professional_readiness import trial_context,sha as trial_sha
+                binding=trial_context(self.store,'native:'+id)
+                if binding and (binding.get('backend')!='native' or binding['job_sha256']!=row['sha256'] or
+                    binding['stage_sha256']!=trial_sha(stage) or binding['install_sha256']!=trial_sha(install)):
+                    raise AgentError('Professional native trial binding changed before execution.')
+                job=compile_job(prepared,stage,install,folder);refs=References(self.store)
                 for k,reference_id in job['references'].items():
                     original=next(p for p in stage['references'] if p['id']==reference_id);source=refs.path(original)
                     target=folder/(reference_id+original['extension']);shutil.copyfile(source,target)

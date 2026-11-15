@@ -219,7 +219,9 @@ class SharedWriter:
         except WritingError:
             # Worker folders retain raw partial/failure evidence; Engine preserves structured failure.
             raise
-        self.last_raw_output=(folder/'raw_response.txt').read_text();self.last_evidence={**evidence,'raw_sha256':sha(folder/'raw_response.txt')}
+        self.last_raw_output=(folder/'raw_response.txt').read_text();self.last_evidence={**evidence,'raw_sha256':sha(folder/'raw_response.txt'),
+            'model_digest':evidence['model_manifest_sha256'],
+            'inference_completed':evidence.get('actual_inference_verified') is True and evidence['worker'].get('inference_completed') is True}
         if evidence['worker'].get('truncated'):raise WritingError('Model output reached its generation limit; raw response preserved, not repaired.')
         try:return json.loads(self.last_raw_output)
         except ValueError:raise WritingError('Raw model response is not JSON; original output preserved without manual repair.') from None

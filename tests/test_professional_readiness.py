@@ -91,6 +91,108 @@ class ProfessionalTests(unittest.TestCase):
    p=json.loads(db.execute('SELECT payload FROM professional_samples WHERE id=?',(sample['id'],)).fetchone()[0]);p['raw']='tampered'
    db.execute('UPDATE professional_samples SET payload=? WHERE id=?',(encode(p),sample['id']))
   with self.assertRaises(AgentError):self.lab.status(trial['id'])
+ def test_disagreeing_reviewers_cannot_silently_replace_each_other(self):
+  trial=self.plan();samples=[self.sample(trial,n) for n in (1,2,3)]
+  first=self.review(trial,samples);first['reviewer']='test reviewer A'
+  self.lab.expert_review(trial['id'],first,True)
+  second=copy.deepcopy(first);second['reviewer']='test reviewer B'
+  criterion=next(iter(second['criteria']));second['criteria'][criterion]['passed']=False
+  status=self.lab.expert_review(trial['id'],second,True)
+  self.assertEqual(status['layers']['independent_creative_review'],'disputed')
+  self.assertFalse(status['expert_accepted_this_benchmark_only'])
+  # Another all-pass A review cannot erase B's dissent.
+  status=self.lab.expert_review(trial['id'],first,True)
+  self.assertFalse(status['expert_accepted_this_benchmark_only'])
+  packet,key=self.lab.blind_packet(trial['id'])
+  self.assertEqual(len(packet['reviewer_disagreements']),1)
+  self.assertNotIn('candidate_models',packet['case'])
+  for judgment in packet['reviewer_disagreements'][0]['judgments']:
+   self.assertIn(judgment['evidence'][0]['sample'],key)
+  self.assertIsNone(packet['review_form']['criteria'][criterion]['passed'])
+  # A new attested B judgment can reconcile, with all originals retained.
+  second['criteria'][criterion]['passed']=True
+  status=self.lab.expert_review(trial['id'],second,True)
+  self.assertTrue(status['expert_accepted_this_benchmark_only'])
+  self.assertEqual(status['review_history_count'],4)
+  self.assertEqual(status['layers']['owner'],'production_acceptance_not_granted')
+ def test_all_21_selected_pins_can_plan_without_changing_old_catalog(self):
+  from redpad_pipeline.professional_readiness import evaluation_models
+  from redpad_pipeline.no_gpu_staging import load
+  registry,_=load();original=copy.deepcopy(models())
+  for role,selection in registry['agents'].items():
+   pid=selection['primary_candidate'];key='pinned/'+pid
+   trial=self.lab.plan(role,[key],'Test the existing selected pinned candidate against its original role benchmark.',
+       'Independent expert checks original evidence against the role rubric.',max_calls=1)
+   self.assertEqual(trial['model_profiles'][key]['revision'],registry['profiles'][pid]['revision'])
+   self.assertEqual(trial['state'],'planned_not_executed')
+   self.assertEqual(self.lab.blind_packet(trial['id'])[0]['samples'],[])
+   self.assertIn(key,evaluation_models(role))
+  self.assertEqual(models(),original)
+ def test_selected_shared_text_binding_and_capture_keep_exact_identity(self):
+  from redpad_pipeline.shared_model_services import SharedServices,profile
+  from redpad_pipeline.professional_readiness import verify_trial_model
+  p=profile('qwen35_27');services=SharedServices(self.store)
+  installed={'repo':p['repo'],'revision':p['revision'],'manifest':{'sha256':'synthetic-manifest'}}
+  data=fixture('story');data['project']='synthetic shared wire fixture'
+  trial=self.lab.plan('story',['pinned/qwen35_27'],'Test selected shared candidate binding without inference or worker execution.',
+      'Verify exact pinned identity and retain the original synthetic wire output.',max_calls=1)
+  folder=Path(self.tmp.name)/'fixture-worker';folder.mkdir()
+  raw=json.dumps(data,ensure_ascii=False);(folder/'raw_response.txt').write_text(raw)
+  evidence={'actual_inference_verified':True,'model_manifest_sha256':'synthetic-manifest',
+            'worker':{'inference_completed':True,'truncated':False}}
+  with patch.object(SharedServices,'installed',return_value=installed),patch.object(SharedServices,'execute',return_value=(folder,evidence)) as worker:
+   services.configure('story','qwen35_27')
+   rid=self.engine.enqueue('story',data,mode='local')
+   context=self.lab.bind(trial['id'],rid,'synthetic-shared')
+   self.assertEqual(context['backend'],'shared')
+   with patch('redpad_pipeline.model_routing.inventory',side_effect=AssertionError('Shared pins must not use Ollama identity')):
+    self.assertEqual(self.engine.execute(rid),'Awaiting QC')
+   self.assertEqual(worker.call_count,1)
+   sample=self.lab.capture_text(trial['id'],rid)
+   self.assertEqual(sample['raw'],raw);self.assertTrue(sample['identity_match'])
+   self.assertFalse(self.lab.status(trial['id'])['expert_accepted_this_benchmark_only'])
+  with patch.object(SharedServices,'installed',return_value={**installed,'manifest':{'sha256':'changed'}}):
+   with self.assertRaises(AgentError):verify_trial_model(self.store,context,context['expected_model'])
+ def test_shared_image_trial_captures_only_unchanged_bound_worker_output(self):
+  from PIL import Image
+  from redpad_pipeline.shared_model_services import SharedServices,profile
+  p=profile('flux2_klein4');services=SharedServices(self.store)
+  trial=self.lab.plan('art',['pinned/flux2_klein4'],'Test exact shared image worker evidence binding with CPU-only authored fixtures.',
+      'Verify source bytes and refuse changed media; no actual visual quality claim.',max_calls=1)
+  installed={'repo':p['repo'],'revision':p['revision'],'manifest':{'sha256':'synthetic-image-manifest'}}
+  folder=Path(self.tmp.name)/'agent_media'/'shared_model_services'/'fixture';folder.mkdir(parents=True)
+  image=folder/'image.png';Image.new('RGB',(512,512),'gray').save(image)
+  evidence={'actual_inference_verified':True,'model_manifest_sha256':'synthetic-image-manifest',
+            'worker':{'inference_completed':True}}
+  request=dict(prompt='Authored CPU image fixture',width=512,height=512,steps=4,seed=117,references=[])
+  with patch.object(SharedServices,'installed',return_value=installed),patch.object(SharedServices,'execute',return_value=(folder,evidence)):
+   services.configure('art','flux2_klein4',capability='text_to_image')
+   rid=self.engine.enqueue('art',dict(operation='shared_image',profile='flux2_klein4',request=request),mode='media')
+   self.lab.bind(trial['id'],rid,'synthetic-image')
+   self.assertEqual(self.engine.execute(rid),'Awaiting QC')
+   captured=self.lab.capture_media(trial['id'],rid)
+   self.assertEqual(captured['sha256'],file_sha(image))
+   packet,key=self.lab.blind_packet(trial['id'])
+   sample=packet['samples'][0]
+   self.assertEqual(sample['asset'],sample['id'])
+   self.assertEqual(key[sample['id']]['asset'],captured['path'])
+   self.assertNotIn('shared_model_services',json.dumps(packet))
+   Image.new('RGB',(512,512),'red').save(image)
+   with self.assertRaises(AgentError):self.lab.status(trial['id'])
+ def test_anonymous_review_intake_maps_anchors_and_rejects_stale_packets(self):
+  trial=self.plan();samples=[self.sample(trial,n) for n in (1,2,3)]
+  packet,key=self.lab.blind_packet(trial['id']);codes={v['sample']:k for k,v in key.items()}
+  review=self.review(trial,samples);review['examined_samples']=[codes[s['id']] for s in samples]
+  for finding in review['criteria'].values():
+   for anchor in finding['evidence']:anchor['sample']=codes[anchor['sample']]
+  original=copy.deepcopy(review)
+  result=self.lab.record_blind_review(trial['id'],review,packet['evidence_set_sha256'],True)
+  self.assertTrue(result['expert_accepted_this_benchmark_only']);self.assertFalse(result['production_ready'])
+  self.assertEqual(review,original)
+  bad=copy.deepcopy(review);bad['examined_samples']=['invented']
+  with self.assertRaises(AgentError):self.lab.record_blind_review(trial['id'],bad,packet['evidence_set_sha256'],True)
+  self.sample(trial,4)
+  with self.assertRaises(AgentError):self.lab.record_blind_review(trial['id'],review,packet['evidence_set_sha256'],True)
  def test_own_revised_output_cannot_reuse_prior_expert_acceptance(self):
   trial=self.plan();sample=self.sample(trial)
   with self.store.tx() as db:db.execute('UPDATE tasks SET revision=revision+1 WHERE id=(SELECT task FROM agent_runs WHERE id=?)',(sample['run'],))

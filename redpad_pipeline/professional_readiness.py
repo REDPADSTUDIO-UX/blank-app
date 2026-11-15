@@ -2,7 +2,7 @@
 No download, model launch, external reviewer contact or automatic approval.
 Human expertise/independence is explicitly owner-attested, never inferred.
 """
-import hashlib,json,re,time
+import copy,hashlib,json,re,time
 from pathlib import Path
 from uuid import uuid4
 from .agents import AGENTS,AgentError,encode
@@ -11,6 +11,29 @@ ROOT=Path(__file__).resolve().parents[1]
 def sha(value):return hashlib.sha256(encode(value).encode()).hexdigest()
 def suite():return json.loads((ROOT/'assets/professional/suite.json').read_text())
 def models():return json.loads((ROOT/'assets/professional/models.json').read_text())['models']
+def evaluation_models(role=None):
+    """Reference both existing catalogs; namespaced pins never replace old trials."""
+    from .no_gpu_staging import load
+    registry,_=load();result=copy.deepcopy(models())
+    selected=set(registry['profiles']) if role is None else {
+        registry['agents'][role]['primary_candidate'],*registry['agents'][role]['secondary_candidates']}
+    for mid in sorted(selected):
+        result['pinned/'+mid]={**copy.deepcopy(registry['profiles'][mid]),
+            'profile_id':mid,'registry':'assets/professional/phase3_candidates.json'}
+    return result
+
+def verify_trial_model(store,context,model):
+    """Read exact installed identity using the already selected worker family."""
+    if model!=context['expected_model']:raise AgentError('Professional benchmark model changed.')
+    if context.get('backend')=='shared':
+        from .shared_model_services import SharedServices
+        installed=SharedServices(store).installed(context['profile_id'],True)
+        actual=installed['manifest']['sha256']
+    else:
+        from .model_routing import inventory
+        actual=inventory().get(model)
+    if actual!=context['expected_digest']:raise AgentError('Professional benchmark checkpoint changed.')
+
 def file_sha(path):
     h=hashlib.sha256()
     with path.open('rb') as f:
@@ -25,7 +48,7 @@ def trial_context(store,run):
     context=json.loads(row['context'])
     if sha(context)!=row['sha256']:raise AgentError('Professional trial context changed.')
     with store.tx() as db:
-        used=db.execute('SELECT sum(CASE WHEN r.attempt<1 THEN 1 ELSE r.attempt END) FROM professional_bindings b JOIN agent_runs r ON r.id=b.run WHERE b.trial=?',(context['trial'],)).fetchone()[0] or 0
+        used=db.execute('SELECT sum(CASE WHEN r.attempt IS NULL OR r.attempt<1 THEN 1 ELSE r.attempt END) FROM professional_bindings b LEFT JOIN agent_runs r ON r.id=b.run WHERE b.trial=?',(context['trial'],)).fetchone()[0] or 0
     if used>context['max_calls']:raise AgentError('Professional trial retry/call budget exhausted; do not repeat weak generations.')
     return context
 
@@ -40,9 +63,10 @@ class ProfessionalLab:
         ''')
 
     def plan(self,role,model_ids,hypothesis,expected_change,*,change_type='model_candidate',fix_ref=None,max_calls=3):
-        specs=suite()['agents'];catalog=models()
+        specs=suite()['agents'];catalog=evaluation_models(role) if role in AGENTS else models()
         if role not in specs or not isinstance(model_ids,list) or not 1<=len(model_ids)<=5 or len(set(model_ids))!=len(model_ids):raise AgentError('Choose a department and one to five specialist model/tool profiles.')
-        if any(m not in specs[role]['candidate_models']+['legacy4'] for m in model_ids):raise AgentError('Model profile is not researched for this specialist task.')
+        allowed=specs[role]['candidate_models']+['legacy4']+[k for k in catalog if k.startswith('pinned/')]
+        if any(m not in allowed for m in model_ids):raise AgentError('Model profile is not researched for this specialist task.')
         if not isinstance(hypothesis,str) or len(hypothesis.strip())<30 or not isinstance(expected_change,str) or len(expected_change.strip())<20:raise AgentError('Record a specific capability hypothesis and observable improvement target before another call.')
         if change_type not in ('model_candidate','schema_fix','state_fix','adapter_fix','conditioning_control'):raise AgentError('Unsupported improvement hypothesis type.')
         if type(max_calls) is not int or not 1<=max_calls<=24:raise AgentError('A trial has a one to twenty-four call budget, including required supporting media.')
@@ -84,16 +108,34 @@ class ProfessionalLab:
             count=db.execute('SELECT count(*) FROM professional_bindings WHERE trial=?',(id,)).fetchone()[0]
         if not r or r['state']!='Ready for Input' or r['mode']=='local' and r['agent']!=t['role']:raise AgentError('Bind only a queued specialist run, before execution.')
         if count>=t['max_calls']:raise AgentError('Trial call budget exhausted; no repeated success or hidden retry.')
+        backend='ollama';profile_id=None
         if r['mode']=='local':
-            policy=ModelRoutes(self.store).policy(t['role']);name=policy['models'][0]['name'] if policy else r['model'] or self.store.status(t['role'])['model']
-            profiles=[p for p in t['model_profiles'].values() if p.get('runtime_tag')==name]
-            if not profiles:raise AgentError('Current run route differs from the trial model; configure a separate approved research route explicitly.')
-            approved=next((m for m in ModelRoutes(self.store).models() if m['approved'] and m['name']==name),None)
-            if not approved or inventory().get(name)!=approved['digest']:raise AgentError('Exact model is not installed and explicitly approved; no download or paid fallback.')
-            model_digest=approved['digest']
+            from .shared_model_services import SharedServices,profile as shared_profile
+            shared=SharedServices(self.store)
+            backend=shared.choose_backend(run,t['role'])
+            if backend=='shared':
+                route=shared.snapshot(run,t['role']);profile_id=route['profile'];p=shared_profile(profile_id)
+                if route['capability']!='text' or p['adapter']!='hf_text_nf4':raise AgentError('Professional text trial requires the selected text worker.')
+                if not any(v.get('profile_id')==profile_id and v['revision']==p['revision'] for v in t['model_profiles'].values()):raise AgentError('Shared route differs from pinned trial profile.')
+                installed=shared.installed(profile_id,True);name=p['repo']+'@'+p['revision']+':nf4';model_digest=installed['manifest']['sha256']
+            else:
+                policy=ModelRoutes(self.store).policy(t['role']);name=policy['models'][0]['name'] if policy else r['model'] or self.store.status(t['role'])['model']
+                profiles=[p for p in t['model_profiles'].values() if p.get('runtime_tag')==name]
+                if not profiles:raise AgentError('Current run route differs from the trial model; configure a separate approved research route explicitly.')
+                approved=next((m for m in ModelRoutes(self.store).models() if m['approved'] and m['name']==name),None)
+                if not approved or inventory().get(name)!=approved['digest']:raise AgentError('Exact model is not installed and explicitly approved; no download or paid fallback.')
+                model_digest=approved['digest']
         elif r['mode']=='media':
             inputs=json.loads(r['inputs']);operation=inputs.get('operation')
-            if operation=='offline_video':
+            if operation=='shared_image':
+                from .shared_model_services import SharedServices,profile as shared_profile
+                profile_id=inputs.get('profile');p=shared_profile(profile_id);shared=SharedServices(self.store)
+                route=shared.policy(r['agent'])
+                if not route or route['profile']!=profile_id or route['capability'] not in ('text_to_image','reference_edit'):raise AgentError('Explicit matching shared image research route required.')
+                if not any(v.get('profile_id')==profile_id and v['revision']==p['revision'] for v in t['model_profiles'].values()):raise AgentError('Selected image worker differs from trial pins.')
+                installed=shared.installed(profile_id,True);name=p['repo']+'@'+p['revision']
+                model_digest=installed['manifest']['sha256'];backend='shared'
+            elif operation=='offline_video':
                 from .offline_media import approved,CATALOG
                 engine=inputs.get('engine');approval=approved(engine,True);name=CATALOG[engine]['model']
             elif operation=='offline_speech':
@@ -109,22 +151,85 @@ class ProfessionalLab:
                 from .offline_vision import approval as vision_approval,MODEL
                 approval=vision_approval(True);name=MODEL
             else:raise AgentError('Only approved owned generative workers may produce benchmark media; procedural sketches are excluded.')
-            if name not in [p.get('repo') for p in t['model_profiles'].values()]:raise AgentError('Owned media model differs from trial profiles.')
-            model_digest=approval['manifest']['sha256']
+            if operation!='shared_image':
+                if name not in [p.get('repo') for p in t['model_profiles'].values()]:raise AgentError('Owned media model differs from trial profiles.')
+                model_digest=approval['manifest']['sha256']
         else:raise AgentError('A software/contract fixture cannot be bound as generative model evidence.')
         context={'trial':id,'role':t['role'],'sample_key':sample_key,'case_sha256':t['case_sha256'],
                  'task':t['case']['real_world_task'],'brief':t['source_brief'],'hypothesis':t['hypothesis'],
                  'expected_change':t['expected_change'],'expected_model':name,'expected_digest':model_digest,
+                 'backend':backend,'profile_id':profile_id,
                  'max_calls':t['max_calls'],
                  'input_sha256':hashlib.sha256(r['inputs'].encode()).hexdigest(),
                  'instruction':'Create actual original specialist output in the existing output contract. Preserve approved source facts; no fabricated media, scores, review or approvals.'}
         with self.store.tx() as db:
             db.execute('BEGIN IMMEDIATE')
-            used=db.execute('SELECT sum(CASE WHEN r.attempt<1 THEN 1 ELSE r.attempt END) FROM professional_bindings b JOIN agent_runs r ON r.id=b.run WHERE b.trial=?',(id,)).fetchone()[0] or 0
+            used=db.execute('SELECT sum(CASE WHEN r.attempt IS NULL OR r.attempt<1 THEN 1 ELSE r.attempt END) FROM professional_bindings b LEFT JOIN agent_runs r ON r.id=b.run WHERE b.trial=?',(id,)).fetchone()[0] or 0
             if used>=t['max_calls']:raise AgentError('Trial reserved call budget exhausted.')
             try:db.execute('INSERT INTO professional_bindings VALUES (?,?,?,?,?)',(run,id,sample_key,encode(context),sha(context)))
             except Exception:raise AgentError('Run or sample is already bound; do not repeat it.') from None
         return context
+
+    def bind_native(self,id,native_run,sample_key):
+        """Bind an already queued native worker, never queue/launch or grant rights."""
+        from .native_execution import NativeExecution
+        from .offline_preparation import PreparedRequests
+        from .no_gpu_staging import StagingLedger
+        t=self.trial(id);runtime=NativeExecution(self.store);row=runtime._row(native_run)
+        job=json.loads(row['payload'])
+        if row['state']!='QUEUED' or job['software_fixture']:raise AgentError('Bind only an unexecuted real native job; CPU fixtures are excluded.')
+        if not isinstance(sample_key,str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,60}',sample_key):raise AgentError('Safe unique sample key required.')
+        prepared=PreparedRequests(self.store).get(job['prepared_id']);stage=StagingLedger(self.store).get(prepared['stage_id'])
+        install=runtime.installs.get(job['install_id'])
+        if not any(p.get('profile_id')==prepared['profile'] and p['revision']==install['revision'] for p in t['model_profiles'].values()):raise AgentError('Native worker is not a declared pinned trial candidate.')
+        context={'trial':id,'role':t['role'],'sample_key':sample_key,'backend':'native',
+            'native_run':native_run,'job_sha256':row['sha256'],'stage_sha256':sha(stage),
+            'install_sha256':sha(install),'prepared_id':job['prepared_id'],
+            'max_calls':t['max_calls'],'case_sha256':t['case_sha256']}
+        with self.store.tx() as db:
+            db.execute('BEGIN IMMEDIATE')
+            used=db.execute('SELECT sum(CASE WHEN r.attempt IS NULL OR r.attempt<1 THEN 1 ELSE r.attempt END) FROM professional_bindings b LEFT JOIN agent_runs r ON r.id=b.run WHERE b.trial=?',(id,)).fetchone()[0] or 0
+            if used>=t['max_calls']:raise AgentError('Trial call budget exhausted.')
+            try:db.execute('INSERT INTO professional_bindings VALUES (?,?,?,?,?)',('native:'+native_run,id,sample_key,encode(context),sha(context)))
+            except Exception:raise AgentError('Native run or sample already bound; no budget reset.') from None
+        return context
+
+    def _native_sample(self,id,native_run):
+        from .native_execution import NativeExecution
+        from .native_local_bundle import local_path
+        from .offline_preparation import PreparedRequests
+        from .no_gpu_staging import StagingLedger
+        t=self.trial(id);context=trial_context(self.store,'native:'+native_run)
+        if not context or context['trial']!=id or context.get('backend')!='native':raise AgentError('Native run must be bound before execution.')
+        runtime=NativeExecution(self.store);row=runtime._row(native_run);job=json.loads(row['payload'])
+        if job['software_fixture'] or row['state']!='RETURNED FOR TECHNICAL REVIEW' or row['sha256']!=context['job_sha256']:raise AgentError('No completed bound native model output.')
+        prepared=PreparedRequests(self.store).get(job['prepared_id']);stage=StagingLedger(self.store).get(prepared['stage_id'])
+        install=runtime.installs.get(job['install_id']);result=json.loads(row['result'])
+        if sha(stage)!=context['stage_sha256'] or sha(install)!=context['install_sha256']:raise AgentError('Native source or checkpoint changed after binding.')
+        if result.get('inference_completed') is not True or result.get('software_fixture') is not False or result.get('profile')!=prepared['profile'] or result.get('model_revision')!=install['revision']:raise AgentError('Native inference identity incomplete.')
+        artifact=local_path(runtime.root/native_run,result['artifact'])
+        if file_sha(artifact)!=result['artifact_sha256']:raise AgentError('Native output bytes changed.')
+        kind='video' if artifact.suffix.lower()=='.mp4' else 'audio' if artifact.suffix.lower()=='.wav' else None
+        if kind not in t['case']['required_output_kinds']:raise AgentError('Native artifact modality is not a deliverable for this case.')
+        technical=copy.deepcopy(result.get('technical_validation',{}))
+        relative=str(artifact.relative_to(self.store.path.parent/'agent_media'))
+        if kind=='audio':
+            from .audio_evaluation import measure
+            measured=measure(relative,self.store.path);technical['duration']=measured['duration_seconds']
+        if technical.get('duration',0)<=0:raise AgentError('Native output lacks measured duration/technical inspection.')
+        sources=stage['context']['source_revisions']
+        if stage['context']['role']!=t['role']:
+            known={encode(r) for s in self.samples(id) if s.get('native_run')!=native_run for r in s.get('source_refs',[])}
+            if not known.intersection(encode(r) for r in sources):raise AgentError('Supporting native media must share an approved source with the specialist plan.')
+        return {'id':'native:'+native_run,'native_run':native_run,'run':stage['context']['run'],
+            'kind':kind,'role':t['role'],'model':install['repo']+'@'+install['revision'],
+            'model_digest':context['install_sha256'],'path':relative,'sha256':file_sha(artifact),
+            'source_refs':sources,'runtime_evidence':{'inspection':technical,'native_result':result},
+            'technical_pass':True,'actual_model_output':True,'provenance':'owned_local_native_worker',
+            'case_sha256':t['case_sha256']}
+
+    def capture_native(self,id,native_run):
+        return self._save_sample(id,self._native_sample(id,native_run))
 
     def capture_text(self,id,run):
         t=self.trial(id);context=trial_context(self.store,run)
@@ -169,7 +274,8 @@ class ProfessionalLab:
         body=json.loads(json.loads(out[0])['summary']);artifact=body['artifact'];meta=artifact.get('metadata',{})
         if 'raw_text' in artifact:raise AgentError('A visual critic response is text evidence. Capture original text; it is not generated media.')
         if not artifact.get('actual_generation') or not meta.get('actual_inference_verified') or not meta.get('model_identity_verified') or meta.get('worker_inference',{}).get('inference_completed') is not True:raise AgentError('A plan, fixture or procedural sketch is not verified generative-media inference.')
-        if artifact['model'] not in [p.get('repo') for p in t['model_profiles'].values()]:raise AgentError('Media model was not declared in this trial.')
+        declared={v.get('repo')+'@'+v['revision'] if v.get('registry') else v.get('repo') for v in t['model_profiles'].values() if v.get('repo')}
+        if artifact['model'] not in declared:raise AgentError('Media model was not declared in this trial.')
         if artifact['model']!=context['expected_model'] or meta.get('model_manifest_sha256',meta.get('manifest_sha256'))!=context['expected_digest']:raise AgentError('Generated media checkpoint differs from the pre-bound model.')
         p=media_path(self.store.path,artifact['path'])
         if file_sha(p)!=meta.get('output_sha256'):raise AgentError('Generated media changed after inference.')
@@ -226,6 +332,9 @@ class ProfessionalLab:
         samples=self.samples(id)
         with self.store.tx() as db:
             for item in samples:
+                if item.get('native_run'):
+                    if self._native_sample(id,item['native_run'])!=item:raise AgentError('Native evidence changed after capture.')
+                    continue
                 if item.get('path') and file_sha(media_path(self.store.path,item['path']))!=item['sha256']:raise AgentError('Reviewed asset changed; previous evaluation is stale.')
                 if item['kind'] in ('text','trace') and hashlib.sha256(item['raw'].encode()).hexdigest()!=item['sha256']:raise AgentError('Reviewed text changed.')
                 r=db.execute('SELECT task,attempt,state,inputs FROM agent_runs WHERE id=?',(item['run'],)).fetchone()
@@ -278,15 +387,33 @@ class ProfessionalLab:
     def status(self,id):
         t=self.trial(id);samples=self._check_current_samples(id)
         counts={kind:len({s['sha256'] for s in samples if s['kind']==kind and s['technical_pass'] and (s['actual_model_output'] or kind=='trace' and s.get('actual_execution_trace'))}) for kind in t['case']['required_output_kinds']}
-        per_engine={p['repo']:len({s['sha256'] for s in samples if s['kind']=='video' and s.get('model')==p['repo'] and s['technical_pass']}) for p in t['model_profiles'].values() if p.get('repo') in [models()[m].get('repo') for m in ('wan','ltx','svd')]}
+        video_profiles=[p for p in t['model_profiles'].values() if p.get('repo') in [models()[m].get('repo') for m in ('wan','ltx','svd')] or
+                        p.get('registry') and set(p.get('modalities',[]))&{'text_to_video','image_to_video','reference_video','audio_video'}]
+        per_engine={p['repo']:len({s['sha256'] for s in samples if s['kind']=='video' and s.get('model') in (p['repo'],p['repo']+'@'+p['revision']) and s['technical_pass']}) for p in video_profiles}
         engine_coverage=True
         if t['role']=='video':engine_coverage=len(per_engine)==3 and all(n>=t['case']['per_model_video_minimum'] for n in per_engine.values())
         enough=all(counts[k]>=n for k,n in t['case']['minimum_counts'].items()) and all(s['technical_pass'] for s in samples) and engine_coverage
         with self.store.tx() as db:reviews=[json.loads(r[0]) for r in db.execute('SELECT payload FROM professional_reviews WHERE trial=? ORDER BY rowid',(id,))]
-        latest=reviews[-1] if reviews else None
-        accepted=bool(enough and latest and latest['sample_set_sha256']==sha(samples) and all(f['passed'] for f in latest['review']['criteria'].values()))
+        # Keep every original review. For the current sample set, use each
+        # reviewer's latest attested judgment, never silently overwrite peers.
+        current={}
+        for item in reviews:
+            if item['sample_set_sha256']==sha(samples):current[item['review']['reviewer']]=item
+        disagreements=[]
+        for criterion in t['case']['criteria']:
+            judgments=[{'reviewer':r['review']['reviewer'],**copy.deepcopy(r['review']['criteria'][criterion])} for r in current.values()]
+            if len({j['passed'] for j in judgments})>1:
+                disagreements.append({'criterion':criterion,'status':'unresolved','judgments':judgments,
+                                      'resolution':'Independent reviewers must re-examine cited evidence; preserve prior reviews.'})
+        accepted=bool(enough and current and not disagreements and all(
+            f['passed'] for item in current.values() for f in item['review']['criteria'].values()))
         return {'trial':id,'role':t['role'],'real_output_counts':counts,'required_counts':t['case']['minimum_counts'],'per_video_model_counts':per_engine,'engine_coverage_complete':engine_coverage,'failed_captured_outputs':sum(not s['technical_pass'] for s in samples),
-                'representative_outputs_complete':enough,'independent_expert_review_recorded':bool(latest),
+                'representative_outputs_complete':enough,'independent_expert_review_recorded':bool(current),
+                'review_history_count':len(reviews),'current_reviewer_count':len(current),
+                'reviewer_disagreements':disagreements,
+                'layers':{'software':'evaluation_contract_integrated','model':'representative_outputs_captured' if enough else 'capability_unverified',
+                          'independent_creative_review':'disputed' if disagreements else 'benchmark_accepted' if accepted else 'pending_or_failed',
+                          'owner':'production_acceptance_not_granted'},
                 'expert_accepted_this_benchmark_only':accepted,'professional_ready':False,'production_ready':False,
                 'state':'benchmark_expert_accepted_owner_production_approval_pending' if accepted else 'expert_review_pending_or_failed' if enough else 'real_outputs_and_compute_pending',
                 'scope':'No test/KB/prompt/schema success proves professional intelligence; existing QC/owner production gates remain mandatory.'}
@@ -295,10 +422,42 @@ class ProfessionalLab:
         t=self.trial(id);items=[];key={}
         for s in self._check_current_samples(id):
             code=hashlib.sha256((id+s['id']).encode()).hexdigest()[:12];key[code]={'sample':s['id'],'model':s.get('model'),'sha256':s['sha256']}
-            items.append({'id':code,'kind':s['kind'],'original_raw':s.get('raw'),'asset':s.get('path'),'sha256':s['sha256'],'technical_pass':s['technical_pass']})
-        return {'case':t['case'],'source_brief':t['source_brief'],'samples':items,'human_review_completed':False,
-                'intelligence':t.get('intelligence'),'reviewer_disagreements':[],
+            key[code]['asset']=s.get('path')
+            items.append({'id':code,'kind':s['kind'],'original_raw':s.get('raw'),'asset':code if s.get('path') else None,'sha256':s['sha256'],'technical_pass':s['technical_pass']})
+        # Candidate lists and filesystem paths belong in the administrator key.
+        # Original content remains unchanged, so this is metadata blindness only.
+        case=copy.deepcopy(t['case']);case.pop('candidate_models',None)
+        status=self.status(id)
+        disagreements=copy.deepcopy(status['reviewer_disagreements'])
+        aliases={v['sample']:k for k,v in key.items()}
+        for dispute in disagreements:
+            for judgment in dispute['judgments']:
+                for anchor in judgment['evidence']:anchor['sample']=aliases[anchor['sample']]
+        return {'case':case,'source_brief':t['source_brief'],'samples':items,'human_review_completed':status['independent_expert_review_recorded'],
+                'intelligence':t.get('intelligence'),'reviewer_disagreements':disagreements,
+                'evidence_set_sha256':sha(self.samples(id)),
+                'review_form':{'reviewer_type':None,'reviewer':None,'expertise':None,'independent':None,
+                    'qualified_for_role':None,'modes':[],'examined_samples':[],
+                    'criteria':{c:{'passed':None,'finding':None,'evidence':[]} for c in t['case']['criteria']}},
                 'limitations':'Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.'},key
+
+    def record_blind_review(self,id,review,evidence_set_sha256,confirmed=False):
+        """Translate anonymous anchors privately, then reuse the same expert gate."""
+        packet,key=self.blind_packet(id)
+        if evidence_set_sha256!=packet['evidence_set_sha256']:raise AgentError('Anonymous review evidence set changed; export a current packet.')
+        if not isinstance(review,dict):raise AgentError('Structured anonymous human review required.')
+        translated=copy.deepcopy(review)
+        if not isinstance(translated.get('examined_samples'),list) or not isinstance(translated.get('criteria'),dict):raise AgentError('Anonymous sample list and criterion map required.')
+        def original(code):
+            if not isinstance(code,str) or code not in key:raise AgentError('Unknown anonymous sample ID.')
+            return key[code]['sample']
+        translated['examined_samples']=[original(c) for c in translated.get('examined_samples',[])]
+        for finding in translated.get('criteria',{}).values():
+            if not isinstance(finding,dict) or not isinstance(finding.get('evidence'),list):raise AgentError('Structured criterion evidence required.')
+            for anchor in finding['evidence']:
+                if not isinstance(anchor,dict):raise AgentError('Structured anonymous evidence anchor required.')
+                anchor['sample']=original(anchor.get('sample'))
+        return self.expert_review(id,translated,confirmed)
 
 def audit():
     """Current repository evidence, not a claim about all future model capability."""

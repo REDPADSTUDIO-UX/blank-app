@@ -109,6 +109,15 @@ def show_execution(store,key):
                     packet=engine.quality_packet(run['task'],current['revision'])
                     st.caption('Metadata-blind preparation only. Style or source content can reveal identity. No review or approval has been performed.')
                     st.download_button('Download review packet',json.dumps(packet,ensure_ascii=False,indent=2),'creative-review.json',key='quality_packet_'+rid)
+                    st.caption('Record an actual independent review with source-bound findings and inspection receipts. Empty or uninspected evidence abstains. This does not approve or execute revisions.')
+                    reviewer=st.text_input('Independent reviewer ID',key='quality_reviewer_'+rid)
+                    finding_text=st.text_area('QC findings JSON list',value='[]',key='quality_findings_'+rid)
+                    receipt_text=st.text_area('Actual inspection receipts JSON list',value='[]',key='quality_receipts_'+rid)
+                    confirmed=st.checkbox('Owner attests this is an actual independent review, not model self-review',key='quality_confirm_'+rid)
+                    if st.button('Record evidence-bound QC review',disabled=not confirmed,key='quality_record_'+rid):
+                        try:
+                            st.json(engine.record_quality_review(run['task'],current['revision'],json.loads(finding_text),reviewer=reviewer,receipts=json.loads(receipt_text)))
+                        except (AgentError,ValueError,TypeError) as exc:st.error(str(exc))
                 except AgentError as exc:st.caption(str(exc))
         if key=='qc' and next(t for t in store.tasks() if t['id']==run['task'])['state']=='Approved':
             candidates=json.loads(next(t for t in store.tasks() if t['id']==run['task'])['refs'])

@@ -146,15 +146,30 @@ def assess(role,source,findings,*,creator,reviewer,receipts,provenance,benchmark
         if type(f['confidence']) not in (int,float) or not math.isfinite(f['confidence']) or not 0<=f['confidence']<=1:raise AgentError('Invalid confidence.')
         if f['responsible_agent'] not in AGENTS or any(not nonempty(f[x]) for x in ('target','explanation','correction','retest')):raise AgentError('Actionable target, ownership and retest required.')
         if f['score'] is not None and (type(f['score']) not in (float,int) or not math.isfinite(f['score']) or not 1<=f['score']<=5):raise AgentError('Invalid criterion score.')
+        if 'resolves' in f and (not isinstance(f['resolves'],list) or any(not nonempty(x) for x in f['resolves']) or len(set(f['resolves']))!=len(f['resolves'])):raise AgentError('Distinct original finding IDs required for re-evaluation.')
         observed=any(isinstance(r,dict) and r.get('reviewer')==reviewer and r.get('source_sha256')==current and r.get('medium')==f['medium'] and r.get('target')==f['target'] and r.get('inspected') is True and nonempty(r.get('reference')) for r in receipts)
-        if f['medium']=='text':observed=observed and nonempty(f['evidence']) and f['evidence'] in encode(source)
+        if f['medium']=='text':
+            # A quote elsewhere in the production cannot substantiate this target.
+            targets=[]
+            def locate(value):
+                if isinstance(value,dict):
+                    if value.get('id')==f['target']:targets.append(value)
+                    if f['target'] in value:targets.append(value[f['target']])
+                    for child in value.values():locate(child)
+                elif isinstance(value,list):
+                    for child in value:locate(child)
+            locate(source)
+            observed=observed and nonempty(f['evidence']) and any(f['evidence'] in encode(t) for t in targets)
         elif not nonempty(f['evidence']):observed=False
         if benchmark_id=='intelligence.story.v1':
             target=next((b for b in source.get('beats',[]) if b.get('id')==f['target']),None)
             if target is None:raise AgentError('Story review must cite an actual beat ID.')
             observed=observed and nonempty(f['evidence']) and f['evidence'] in encode(target)
         if not observed and f['score'] is not None:raise AgentError('Cannot score uninspected or unsupported evidence.')
-        accepted.append(dict(copy.deepcopy(f),status='supported' if observed else 'abstain',grants_revision_authority=False))
+        accepted.append(dict(copy.deepcopy(f),status='supported' if observed else 'abstain',
+            category=criteria[f['criterion']]['criterion'],
+            defect_class='evidence_gap' if not observed else 'supported_defect' if f['severity']!='info' else 'observation',
+            grants_revision_authority=False))
     covered={f['criterion'] for f in accepted if f['status']=='supported'}
     return {'schema_version':1,'role':role,'source_sha256':current,'creator':creator,'reviewer':reviewer,
             'provenance':provenance,'findings':accepted,'unassessed_criteria':sorted(set(criteria)-covered),
@@ -204,6 +219,104 @@ def targeted_revision(base,replacement,targets,locked=()):
     return {'records':revised,'base_sha256':digest(base),'revision_sha256':digest(revised),'targets':targets,
             'unchanged_targets':[t for t in targets if before[t]==after[t]],
             'downstream_reviews':'stale_until_retested','owner_approval':False,'history':{'before':copy.deepcopy(base),'after':copy.deepcopy(revised)}}
+
+
+def re_evaluation(before,after):
+    """Compare source-bound independent assessments; silence never closes a defect.
+
+    A human must explicitly cite the original issue via resolves on the same
+    criterion/target/department. Closure is review evidence, not owner acceptance.
+    """
+    if before['role']!=after['role'] or before['source_sha256']==after['source_sha256']:
+        raise AgentError('Re-evaluation requires the same role and a changed source.')
+    rows=[]
+    for original in before['findings']:
+        if original['status']!='supported' or original['severity']=='info':continue
+        candidates=[f for f in after['findings'] if original['id'] in f.get('resolves',[]) and
+                    all(f[k]==original[k] for k in ('criterion','target','responsible_agent'))]
+        state='not_re_evaluated'
+        if candidates:
+            state='resolved_by_reviewer' if all(f['status']=='supported' and f['severity']=='info' for f in candidates) else 'evidence_missing' if any(f['status']=='abstain' for f in candidates) else 'defect_persists'
+            if any(f['status']=='supported' and f['severity']!='info' and
+                   all(f[k]==original[k] for k in ('criterion','target','responsible_agent')) for f in after['findings']):
+                state='defect_persists'
+        rows.append({'original_finding':original['id'],'target':original['target'],'status':state,
+                     'new_findings':[f['id'] for f in candidates]})
+    core=lambda report:{k:v for k,v in report.items() if k not in ('re_evaluation','re_evaluation_history')}
+    return {'before_sha256':digest(core(before)),'after_sha256':digest(core(after)),
+            'hash_scope':'Assessment report excluding re_evaluation and re_evaluation_history',
+            'original_source_sha256':before['source_sha256'],'revised_source_sha256':after['source_sha256'],
+            'defects':rows,'owner_approval':False,'professional_acceptance':False}
+
+
+def benchmark_audit():
+    """Structural coverage audit; never treats a specification as a model pass."""
+    from .professional_readiness import suite
+    data=load();cases=suite()['agents'];rows=[]
+    for role in AGENTS:
+        p=data['profiles'][role];b=p['benchmark'];case=cases[role]
+        coverage={k:bool(b.get(k)) for k in ('realistic','adversarial','evidence_completeness','targeted_revision','handoff','future_execution')}
+        coverage['rubric']=bool(p['criteria']) and all(c['anchors'] and c['required_medium'] for c in p['criteria'])
+        coverage['pass_fail_abstain']=set(b['policy'])=={'pass','fail','abstain'}
+        rows.append({'agent':role,'name':AGENTS[role]['name'],'benchmark_id':b['id'],
+                     'profile_sha256':digest(p),'professional_case_id':case['case_id'],'coverage':coverage,
+                     'required_outputs':case['minimum_counts'],'required_expertise':case['expertise_required'],
+                     'layers':copy.deepcopy(p['capability_status']),'model_result':None,
+                     'coverage_scope':'Versioned specifications and CPU contract controls; role-specific creative model benchmarks remain unexecuted in this session.'})
+    return {'version':data['version'],'agents':rows,'missing':[r['agent'] for r in rows if not all(r['coverage'].values())],
+            'new_inference_calls':0,'professional_acceptance_count':0}
+
+
+def sequential_evaluation_plan():
+    """Group pinned primary candidates without executing or changing routes.
+
+    Plan text first; approved shared media can be reused across role reviews.
+    Missing modalities explicitly require other selected workers, not text scores.
+    """
+    from .professional_readiness import suite
+    from .no_gpu_staging import load as candidates
+    registry,_=candidates()
+    cases=suite()['agents'];groups={}
+    for row in future_queue():
+        key=(row['model'],row['revision']);group=groups.setdefault(key,{'model':row['model'],
+            'repo':row['repo'],'revision':row['revision'],'adapter':row['adapter'],
+            'compute_estimate_gib':row['compute_estimate'],'estimate_not_measurement':True,'agents':[]})
+        role=row['agent'];case=cases[role];link=registry['agents'][role]
+        trial_profiles=['pinned/'+row['model']]
+        if role=='video':trial_profiles+=['pinned/'+mid for mid in link['secondary_candidates']]
+        group['agents'].append({'agent':role,'benchmark':row['benchmark'],'professional_trial_profiles':trial_profiles,
+            'minimum_unique_outputs':case['minimum_counts'],'review_modes':case['review_modes'],
+            'required_expertise':case['expertise_required'],
+            'selected_support_workers':[{'model':mid,'repo':registry['profiles'][mid]['repo'],
+                'revision':registry['profiles'][mid]['revision'],'adapter':registry['profiles'][mid]['adapter']}
+                for mid in link['secondary_candidates']],
+            'previous_evidence_policy':'Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.',
+            'initial_canary_calls':1,'retry_policy':'Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.',
+            'full_evaluation':'Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.',
+            'all_modalities_verified':False})
+    # Story canary is the first economical text check; retain original role IDs.
+    for group in groups.values():group['agents'].sort(key=lambda r:({'story':0,'character':1,'script':2,'director':3}.get(r['agent'],4)))
+    support=[]
+    for mid in registry['agents']['video']['secondary_candidates']:
+        p=registry['profiles'][mid]
+        if (mid,p['revision']) not in groups:
+            support.append({'order':len(groups)+len(support)+1,'model':mid,'repo':p['repo'],
+                'revision':p['revision'],'adapter':p['adapter'],'purpose':'Required three-engine video benchmark coverage',
+                'minimum_video_outputs':cases['video']['per_model_video_minimum'],'execution_enabled':False})
+    return {'schema_version':1,'batches':[dict(g,order=i+1) for i,g in enumerate(groups.values())],
+        'required_support_batches':support,
+        'max_concurrent_models':1,'max_concurrent_agents':1,'execution_enabled':False,
+        'phases':['Inspect existing evidence and source/model locks without inference',
+                  'One text canary, then independent review; stop if unsuitable',
+                  'Prepare approved reference assets and consent before media batches',
+                  'Unload current worker before loading the next pinned model; retain shared approved evidence',
+                  'Run required shortlisted video engines sequentially; do not call a single-engine canary a complete video benchmark',
+                  'Complete modality-dependent reviews after supporting workers finish; QC remains independent',
+                  'If model critique needs a reload, reserve one final shared critic pass after media batches; generator self-review is not independent expert acceptance',
+                  'Targeted revision and source-bound re-evaluation; owner acceptance remains separate'],
+        'hard_gates':['explicit future runtime authorization','complete local pinned bundle and source lock',
+                      'rights and consent','available measured compute','exact approved source revisions'],
+        'cost_policy':'No paid APIs or resources; do not repeat successful benchmarks. No cost, throughput or VRAM measurement is invented.'}
 
 
 def review_packet(role,source,*,provenance):

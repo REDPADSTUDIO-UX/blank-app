@@ -2,12 +2,15 @@
 import json
 import streamlit as st
 from .agents import AgentError
-from .professional_readiness import ProfessionalLab,audit,suite,models
+from .professional_readiness import ProfessionalLab,audit,suite,models,evaluation_models
 
 def show_summary():
     with st.expander('Professional readiness — capability and real output'):
         data=audit()
-        st.warning('০/২০ agent-এর professional capability যাচাইকৃত। Software tests, knowledge ও JSON pass শিল্পমানের প্রমাণ নয়।')
+        st.warning(f'০/{len(data["agents"])} agent-এর professional capability যাচাইকৃত। Software tests, knowledge ও JSON pass শিল্পমানের প্রমাণ নয়।')
+        from .intelligence import benchmark_audit, sequential_evaluation_plan
+        st.download_button('21-agent benchmark coverage audit',json.dumps(benchmark_audit(),ensure_ascii=False,indent=2),'benchmark-coverage.json',key='intelligence_coverage')
+        st.download_button('Sequential pinned-model evaluation plan',json.dumps(sequential_evaluation_plan(),ensure_ascii=False,indent=2),'sequential-evaluation.json',key='intelligence_sequential')
         st.dataframe([{'Agent':r['name'],'Software':'Foundation/partial adapters','Real capability':r['historical_real_model_attempts'],
                        'Production capable':r['production_capable'],'Needs':r['specialist_development_needed']} for r in data['agents']],hide_index=True)
         st.download_button('Download model / compute / specialist requirement matrix',json.dumps(data,ensure_ascii=False,indent=2),'professional-readiness.json',key='professional_matrix_download')
@@ -18,7 +21,7 @@ def show_trials(program):
         st.caption('Trials do not download models, contact reviewers, generate on opening, or grant production approval. Configure exact approved research models through existing model controls.')
         with st.form('professional_plan'):
             role=st.selectbox('Specialist under evaluation',list(suite()['agents']),key='professional_role')
-            profiles=st.multiselect('Researched model / tool profiles',list(models()),key='professional_models')
+            profiles=st.multiselect('Researched model / tool profiles',list(evaluation_models(role)),key='professional_models')
             hypothesis=st.text_area('Why this candidate should address an observed capability gap',key='professional_hypothesis')
             expected=st.text_area('Observable improvement and expert evaluation target',key='professional_target')
             budget=st.number_input('Maximum generation attempts, including media',1,24,3,key='professional_budget')
@@ -43,6 +46,16 @@ def show_trials(program):
             if st.button('Capture original executed evidence',key='professional_capture'):
                 try:st.json((lab.capture_text if kind=='text' else lab.capture_media if kind=='media' else lab.capture_trace)(trial,rid))
                 except (AgentError,OSError,ValueError) as exc:st.error(str(exc))
+        with st.expander('Existing native worker benchmark evidence'):
+            st.caption('Bind an already queued native worker before its separately authorized execution. Capture afterward; this control never launches a worker.')
+            native_id=st.text_input('Existing native worker run ID',key='professional_native_id')
+            native_sample=st.text_input('Native sample label',key='professional_native_label')
+            if st.button('Bind existing native worker',key='professional_native_bind'):
+                try:st.json(lab.bind_native(trial,native_id,native_sample))
+                except (AgentError,OSError,ValueError) as exc:st.error(str(exc))
+            if st.button('Capture original completed native output',key='professional_native_capture'):
+                try:st.json(lab.capture_native(trial,native_id))
+                except (AgentError,OSError,ValueError) as exc:st.error(str(exc))
         samples=lab.samples(trial)
         for item in samples:
             st.json(item)
@@ -61,6 +74,14 @@ def show_trials(program):
             st.download_button('Administrator mapping — withhold from reviewer',json.dumps(key,ensure_ascii=False,indent=2),'expert-admin-key.json',key='professional_blind_key')
         except (AgentError,OSError,ValueError) as exc:st.error(str(exc))
         if not samples:st.info('প্রকৃত output ছাড়া expert evaluation শুরু হবে না।');return
+        with st.expander('Import an actual completed anonymous review'):
+            returned=st.text_area('JSON with review and evidence_set_sha256 from the blind packet',key='professional_blind_return')
+            attested=st.checkbox('Owner attests this is a real independent qualified human review',key='professional_blind_attest')
+            if st.button('Record anonymous reviewer response',disabled=not attested,key='professional_blind_import'):
+                try:
+                    data=json.loads(returned)
+                    st.json(lab.record_blind_review(trial,data['review'],data['evidence_set_sha256'],attested))
+                except (AgentError,OSError,ValueError,TypeError,KeyError) as exc:st.error(str(exc))
         st.caption('Actual human evaluation only. No scores or acceptance are prefilled. Required expertise: '+lab.trial(trial)['case']['expertise_required'])
         reviewer=st.text_input('Actual reviewer name / ID',key='professional_reviewer')
         expertise=st.text_area('Reviewer’s relevant professional expertise',key='professional_expertise')
