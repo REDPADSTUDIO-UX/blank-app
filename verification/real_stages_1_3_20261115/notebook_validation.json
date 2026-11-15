@@ -1,0 +1,9 @@
+{
+  "notebook": "STAGES_1_3_CACHED_MODELS_ONLY.ipynb",
+  "sha256": "27b1425cf920bced5463327c0a04ec8f414aa8320f858404822abad3fcda95e7",
+  "code_cells_syntax_checked": 10,
+  "notebook_cells_executed": 0,
+  "model_inference_calls": 0,
+  "exact_source_commit": "877a475f344d85e19ea45338f3dff8d421a888e5",
+  "scope": "Static validation only; not a Colab execution, dependency compatibility test or GPU result."
+}
