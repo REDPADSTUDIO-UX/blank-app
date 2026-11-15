@@ -1,0 +1,23 @@
+{
+  "scope": "Current task access evidence; historical Colab T4 success is not a live connection.",
+  "environment_id": "ccarenv_b64_Y2NhcmVudl84NTc0YTFhZDIyYjQ4MTkxYTc5NzgyZWY5ODE0YjdkMg",
+  "cloud_environment_connected": true,
+  "local_browser_extension_control_exposed": false,
+  "cloud_browser_initial_inventory": {
+    "browser": "Chrome cdp",
+    "tabs": []
+  },
+  "colab_navigation_attempt_error": "Browser Use could not read requirements.",
+  "native_browser_control_attempt_error": "AT-SPI provider with process ID 6578 is unavailable for X11 window 29360131; registry reported 0 provider connections",
+  "owner_colab_runtime_connected": false,
+  "colab_authenticated_session_verified": false,
+  "colab_cells_executed": 0,
+  "free_quota_available": null,
+  "free_quota_not_invented": true,
+  "host_nvidia_smi": null,
+  "host_nvidia_devices": [],
+  "model_downloads": 0,
+  "model_inferences": 0,
+  "paid_calls": 0,
+  "next_step": "Use ChatGPT Work with a functioning browser connection to the existing owner free Colab; verify runtime and approved cache first. Never bypass authentication or isolation."
+}

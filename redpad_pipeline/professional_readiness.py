@@ -62,7 +62,7 @@ class ProfessionalLab:
             CREATE TABLE IF NOT EXISTS professional_reviews(id TEXT PRIMARY KEY,trial TEXT,payload TEXT);
         ''')
 
-    def plan(self,role,model_ids,hypothesis,expected_change,*,change_type='model_candidate',fix_ref=None,max_calls=3):
+    def plan(self,role,model_ids,hypothesis,expected_change,*,change_type='model_candidate',fix_ref=None,max_calls=3,scenario=None):
         specs=suite()['agents'];catalog=evaluation_models(role) if role in AGENTS else models()
         if role not in specs or not isinstance(model_ids,list) or not 1<=len(model_ids)<=5 or len(set(model_ids))!=len(model_ids):raise AgentError('Choose a department and one to five specialist model/tool profiles.')
         allowed=specs[role]['candidate_models']+['legacy4']+[k for k in catalog if k.startswith('pinned/')]
@@ -78,10 +78,14 @@ class ProfessionalLab:
             p=ROOT/path
             if any(x.is_symlink() for x in (p,*p.parents)) or not p.is_file() or file_sha(p)!=fix_ref.get('sha256'):raise AgentError('Fix hypothesis must reference the actual source-controlled component hash.')
         spec=specs[role];id=uuid4().hex
+        if scenario is not None:
+            if not isinstance(scenario,dict) or set(scenario)!={'id','brief','task'} or any(not isinstance(v,str) or not v.strip() for v in scenario.values()):raise AgentError('Explicit versioned scenario ID, original brief and task required.')
+            if not re.fullmatch(r'[a-z0-9_.-]{1,100}',scenario['id']):raise AgentError('Safe versioned scenario ID required.')
         payload={'id':id,'role':role,'model_profiles':{m:catalog[m] for m in model_ids},'hypothesis':hypothesis,
                  'expected_change':expected_change,'change_type':change_type,'fix_ref':fix_ref,'max_calls':max_calls,
-                 'case':spec,'case_sha256':sha(spec),'source_brief':suite()['shared_original_brief'],
+                 'case':spec,'case_sha256':sha(spec),'source_brief':scenario['brief'] if scenario else suite()['shared_original_brief'],
                  'state':'planned_not_executed','professional_ready':False,'production_ready':False,'created':time.time()}
+        if scenario:payload['scenario']=copy.deepcopy(scenario)
         from .intelligence import profile, digest as intelligence_digest
         quality=profile(role)
         payload['intelligence']={'profile_sha256':intelligence_digest(quality),'benchmark':quality['benchmark'],'rubric':quality['criteria']}
@@ -156,7 +160,7 @@ class ProfessionalLab:
                 model_digest=approval['manifest']['sha256']
         else:raise AgentError('A software/contract fixture cannot be bound as generative model evidence.')
         context={'trial':id,'role':t['role'],'sample_key':sample_key,'case_sha256':t['case_sha256'],
-                 'task':t['case']['real_world_task'],'brief':t['source_brief'],'hypothesis':t['hypothesis'],
+                 'task':t.get('scenario',{}).get('task',t['case']['real_world_task']),'brief':t['source_brief'],'hypothesis':t['hypothesis'],
                  'expected_change':t['expected_change'],'expected_model':name,'expected_digest':model_digest,
                  'backend':backend,'profile_id':profile_id,
                  'max_calls':t['max_calls'],
@@ -408,6 +412,7 @@ class ProfessionalLab:
         accepted=bool(enough and current and not disagreements and all(
             f['passed'] for item in current.values() for f in item['review']['criteria'].values()))
         return {'trial':id,'role':t['role'],'real_output_counts':counts,'required_counts':t['case']['minimum_counts'],'per_video_model_counts':per_engine,'engine_coverage_complete':engine_coverage,'failed_captured_outputs':sum(not s['technical_pass'] for s in samples),
+                'scenario_id':t.get('scenario',{}).get('id'),'original_case_acceptance_granted':False,
                 'representative_outputs_complete':enough,'independent_expert_review_recorded':bool(current),
                 'review_history_count':len(reviews),'current_reviewer_count':len(current),
                 'reviewer_disagreements':disagreements,
@@ -433,7 +438,7 @@ class ProfessionalLab:
         for dispute in disagreements:
             for judgment in dispute['judgments']:
                 for anchor in judgment['evidence']:anchor['sample']=aliases[anchor['sample']]
-        return {'case':case,'source_brief':t['source_brief'],'samples':items,'human_review_completed':status['independent_expert_review_recorded'],
+        return {'case':case,'scenario':t.get('scenario'),'source_brief':t['source_brief'],'samples':items,'human_review_completed':status['independent_expert_review_recorded'],
                 'intelligence':t.get('intelligence'),'reviewer_disagreements':disagreements,
                 'evidence_set_sha256':sha(self.samples(id)),
                 'review_form':{'reviewer_type':None,'reviewer':None,'expertise':None,'independent':None,
