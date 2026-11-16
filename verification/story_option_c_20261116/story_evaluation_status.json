@@ -1,0 +1,118 @@
+{
+  "new_model_outputs": 0,
+  "complete_story": null,
+  "technical_story_validation": "NOT RUN — no complete actual sections",
+  "independent_qc": "ABSTAIN / INSUFFICIENT EVIDENCE",
+  "before_after_improvement": null,
+  "human_review": "PENDING",
+  "owner_acceptance": false,
+  "prior_actual_evidence": "verification/story_t4_20261114/evaluation.json",
+  "criteria": [
+    {
+      "id": "story.creative.1",
+      "criterion": "originality",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.2",
+      "criterion": "causal_logic",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.3",
+      "criterion": "character_agency",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.4",
+      "criterion": "psychological_depth",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.5",
+      "criterion": "relationship_credibility",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.6",
+      "criterion": "emotional_authenticity",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.7",
+      "criterion": "organic_humor",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.8",
+      "criterion": "bangladesh_authenticity",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.9",
+      "criterion": "hook_suspense",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.10",
+      "criterion": "escalation",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.11",
+      "criterion": "setup_payoff",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.12",
+      "criterion": "ending_quality",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.13",
+      "criterion": "filmability",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.14",
+      "criterion": "consistency",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    },
+    {
+      "id": "story.creative.15",
+      "criterion": "audience_engagement",
+      "new_assessment": "NOT PERFORMED — no complete new story",
+      "score": null,
+      "beat_evidence": []
+    }
+  ],
+  "option_c_checkpoint": "No generation: missing local bundle; earlier partial-defect evidence preserved without rerunning evaluation"
+}
