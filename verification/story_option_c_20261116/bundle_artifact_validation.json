@@ -1,0 +1,10 @@
+{
+  "actual_receipt_and_manifest_fingerprints_match": true,
+  "historical_ledger_preserved": true,
+  "no_new_generation_submissions": true,
+  "all_servers_stopped": true,
+  "protected_files_byte_identical": 28,
+  "new_cpu_guard_checks_passed": 4,
+  "previous_tests_rerun": false,
+  "creative_quality_proven": false
+}
