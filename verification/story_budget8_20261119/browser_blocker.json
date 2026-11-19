@@ -1,0 +1,22 @@
+{
+  "observed_date_local": "2026-11-19",
+  "timezone": "Asia/Dhaka",
+  "browser": "Chrome extension",
+  "authenticated_existing_notebook_access": "VERIFIED",
+  "allocation_attempts": 1,
+  "allocation_result": "FAILED_TO_ASSIGN_BACKEND",
+  "dialog_title": "Failed to assign a backend",
+  "exact_provider_message": "No backend with GPU available. Would you like to use a runtime with no accelerator?",
+  "cpu_fallback_accepted": false,
+  "gpu_type_currently_measured": null,
+  "ram_currently_measured": null,
+  "current_cache_availability": "NOT VERIFIED; read-only metadata cell queued but not executed",
+  "metadata_cell": 23,
+  "model_generation_queued": false,
+  "runtime_ledger_restored": false,
+  "provider_reason_beyond_message": "UNKNOWN: message does not distinguish capacity, quota or another allocation condition",
+  "downloads": 0,
+  "new_inferences": 0,
+  "canary_repeated": false,
+  "cuda_diagnostics_repeated": false
+}

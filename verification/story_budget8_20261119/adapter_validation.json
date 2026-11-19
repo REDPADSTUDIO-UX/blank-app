@@ -1,0 +1,12 @@
+{
+  "original_section_factory_byte_identical": true,
+  "model_server_arguments_unchanged": true,
+  "context_tokens": 4096,
+  "section_output_tokens": 1536,
+  "generation_timeout_seconds": 240,
+  "actual_runtime_verified": false,
+  "new_budget_unit_checks_passed": 5,
+  "new_adapter_boundary_checks_passed": 2,
+  "distinct_new_cpu_checks": 7,
+  "scope": "CPU/static checks only; no real model output or creative acceptance"
+}

@@ -1,0 +1,10 @@
+{
+  "distinct_new_cpu_tests": 5,
+  "passed": 5,
+  "runtime_seconds": 0.004,
+  "test_file": "test_budget8.py",
+  "model_inferences": 0,
+  "gpu_execution": false,
+  "prior_completed_tests_rerun": false,
+  "scope": "Budget amendment, section order, unchanged limits and history preservation only; not real creative output"
+}
