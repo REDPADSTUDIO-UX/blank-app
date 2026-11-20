@@ -7,8 +7,7 @@ import re
 import sqlite3
 from uuid import uuid4
 
-CATALOG = json.loads(Path(__file__).with_name('agent_catalog.json').read_text())
-AGENTS = {a['key']: a for a in CATALOG}
+CATALOG_PATH = Path(__file__).with_name('agent_catalog.json')
 CPU_ARCHIVE=Path(__file__).resolve().parents[1]/'verification/phase3_cpu'
 
 def archived_cpu_inference(key,model):
@@ -24,6 +23,19 @@ def archived_cpu_inference(key,model):
 
 class AgentError(ValueError):
     pass
+
+def validate_catalog(rows):
+    if not isinstance(rows,list) or not rows:raise AgentError('Nonempty agent registry required.')
+    ids=set();keys=set()
+    for row in rows:
+        if not isinstance(row,dict) or not all(isinstance(row.get(k),str) and row[k].strip() for k in ('id','key','name')):raise AgentError('Agent identity fields required.')
+        if row['id'] in ids or row['key'] in keys:raise AgentError('Duplicate agent ID or key in registry.')
+        if row['id']!='redpad.agent.'+row['key']:raise AgentError('Registry ID/key mismatch.')
+        ids.add(row['id']);keys.add(row['key'])
+    return rows
+
+CATALOG = validate_catalog(json.loads(CATALOG_PATH.read_text()))
+AGENTS = {a['key']: a for a in CATALOG}
 
 def agent(key):
     if key not in AGENTS:
@@ -95,7 +107,7 @@ class AgentStore:
         from .specialists import ALL_SPECIALISTS as IMPLEMENTED
         return {'model_route':route,'model_route_scope':route['mode'] if route else 'legacy single-model configuration',
                 'specialist_development':'Specialist workflow implemented' if key in IMPLEMENTED else 'Creative workflow retained',
-                'software_tested':'See verification/specialists/matrix.json (recorded test evidence)',
+                'software_tested':'See verification/agent_implementation_matrix_current.json (registry-validated current evidence)',
                 'real_inference_verified':inference_verified,'inference_evidence_scope':'Saved CPU research archive; not production approval' if archive_verified else 'This agent task store','creative_media_quality_verified':False,
                 'registration':'Registered','software':'Software Working','configuration':'Configured' if row and row[0] else 'Not configured',
                 'model':row[0] if row else '', 'connection':('Local inference recorded; current availability not probed' if inference_verified else 'Model Not Connected'),'readiness':'Blocked',
@@ -116,7 +128,7 @@ class AgentStore:
         if not row: raise AgentError('Unknown task.')
         return dict(row)
     def _current(self,db,t,checked=None,active=None):
-        # A shared 20-department DAG revisits the same approved ancestors many
+        # A shared department DAG revisits the same approved ancestors many
         # times. Cache only inside this transaction/read, never across revisions.
         checked=set() if checked is None else checked;active=set() if active is None else active
         token=(t['id'],t['revision'],t['refs'])

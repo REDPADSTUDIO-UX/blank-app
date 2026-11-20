@@ -38,6 +38,8 @@ def project_picker():
 
 def overview():
     st.header('Productions')
+    from .agent_reporting_ui import show_registry_status
+    show_registry_status(key='producer_registry')
     rows=[]
     for folder in sorted(PROGRAM_ROOT.iterdir()) if PROGRAM_ROOT.exists() else []:
         if not folder.is_dir() or not (folder/'agent_control.sqlite3').is_file() or folder.is_symlink():continue
@@ -106,6 +108,9 @@ def references(c):
 
 def director(c):
     st.header('Director Studio')
+    from .agent_reporting_ui import show_registry_status
+    with st.expander('Registered departments and project QC coverage'):
+        show_registry_status(c.store,key='producer_project_registry')
     p=c.p.summary()['project'];st.subheader(p['title'])
     c.collect()
     for message in c.conversation():
@@ -162,6 +167,9 @@ def casting_desk(c,row):
 
 def desk(c):
     st.header('Approval Desk')
+    from .agent_reporting_ui import show_registry_status
+    with st.expander('Registry-wide QC coverage'):
+        show_registry_status(c.store,key='approval_desk_registry')
     rows=c.desk()
     if not rows:st.info('No generated deliverables yet.');return
     groups=c.policy();milestone=st.selectbox('Milestone',['All']+sorted(set(groups.values())),key='producer_milestone')

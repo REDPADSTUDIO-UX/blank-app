@@ -33,6 +33,11 @@ jobs:
       - name: Test agent registry, contracts and Control Center (offline)
         run: python -m unittest tests.test_agents tests.test_agents_ui tests.test_director tests.test_director_ui tests.test_agent_foundation tests.test_agent_execution_ui tests.test_creative tests.test_creative_ui -v
 
+      - name: Check current registry, implementation matrix and QC coverage (offline)
+        run: |
+          python -m experiments.export_agent_matrix --check
+          python -m unittest tests.test_agent_reporting -v
+
       - name: Compile app and video module
         run: python -m compileall -q streamlit_app.py redpad_video_studio.py redpad_pipeline
 

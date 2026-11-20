@@ -10,7 +10,7 @@ from .local_ollama_session import local_cpu_session
 
 def show_studio_program():
     st.header('REDPAD • Film Studio')
-    st.caption('Director • Story • Script সামনে; ১৮টি specialist একই project-এর versioned workflow-এ। Planning, AI inference ও artistic approval আলাদা।')
+    st.caption(f'Director • Story • Script সামনে; {len(set(AGENTS)-{"director","story","script"})}টি specialist একই project-এর versioned workflow-এ। Planning, AI inference ও artistic approval আলাদা।')
     from .filmmaking_ui import show_knowledge,show_series
     from .professional_ui import show_summary,show_trials
     show_summary()
@@ -37,6 +37,8 @@ def show_studio_program():
     if 'master_open_id' not in st.session_state:
         st.info('একটি project খুলুন বা তৈরি করুন। Models/media নিজে থেকে download বা generate হবে না।');return
     program=StudioProgram(st.session_state['master_open_id']);summary=program.summary()
+    from .agent_reporting_ui import show_registry_status
+    show_registry_status(program.store,key='studio_registry')
     if summary['project'] is None:st.error('Saved project missing.');return
     st.subheader(summary['project']['title'])
     with st.expander('One project overview — ownership, episode progress and blockers'):

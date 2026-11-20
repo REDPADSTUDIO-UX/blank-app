@@ -9,7 +9,8 @@ def show_summary():
         data=audit()
         st.warning(f'০/{len(data["agents"])} agent-এর professional capability যাচাইকৃত। Software tests, knowledge ও JSON pass শিল্পমানের প্রমাণ নয়।')
         from .intelligence import benchmark_audit, sequential_evaluation_plan
-        st.download_button('21-agent benchmark coverage audit',json.dumps(benchmark_audit(),ensure_ascii=False,indent=2),'benchmark-coverage.json',key='intelligence_coverage')
+        from .agents import AGENTS
+        st.download_button(f'{len(AGENTS)}-agent benchmark coverage audit',json.dumps(benchmark_audit(),ensure_ascii=False,indent=2),'benchmark-coverage.json',key='intelligence_coverage')
         st.download_button('Sequential pinned-model evaluation plan',json.dumps(sequential_evaluation_plan(),ensure_ascii=False,indent=2),'sequential-evaluation.json',key='intelligence_sequential')
         st.dataframe([{'Agent':r['name'],'Software':'Foundation/partial adapters','Real capability':r['historical_real_model_attempts'],
                        'Production capable':r['production_capable'],'Needs':r['specialist_development_needed']} for r in data['agents']],hide_index=True)

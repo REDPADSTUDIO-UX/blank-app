@@ -6,11 +6,13 @@ from .agents import CATALOG, AGENTS, AgentStore, AgentError
 
 def render_agent_control(path):
     st.header('AI AGENTS CONTROL CENTER')
-    st.warning('21 registered departments; existing software workflows retained. Model inference and media generation are separate capabilities; no automatic publishing.')
+    st.warning(f'{len(CATALOG)} registered departments; existing software workflows retained. Model inference and media generation are separate capabilities; no automatic publishing.')
     with st.expander('Phase 3 — real-model experiments'):
         from .phase3_ui import show_phase3
         show_phase3()
     store = AgentStore(path)
+    from .agent_reporting_ui import show_registry_status
+    show_registry_status(store,key='agent_control_registry')
     from .model_routing_ui import show_model_routes
     show_model_routes(store)
     st.dataframe([{'ID':a['id'],'Agent':a['name'],'Department':a['department'],**store.status(a['key'])} for a in CATALOG],hide_index=True)

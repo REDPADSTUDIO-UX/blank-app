@@ -1,0 +1,18 @@
+test_casting_producer_lock_qc_reporting_routing_and_stale_handoff (tests.test_agent_reporting.CastingQCReportingTests.test_casting_producer_lock_qc_reporting_routing_and_stale_handoff) ... ok
+test_all_registry_cpu_workflows_and_qc_coverage (tests.test_agent_reporting.RegistryReportingTests.test_all_registry_cpu_workflows_and_qc_coverage) ... ok
+test_consistency_rejects_missing_extra_duplicate_ids_and_stale_counts (tests.test_agent_reporting.RegistryReportingTests.test_consistency_rejects_missing_extra_duplicate_ids_and_stale_counts) ... ok
+test_producer_dashboard_home_shows_registry_without_creating_production_state (tests.test_agent_reporting.RegistryReportingTests.test_producer_dashboard_home_shows_registry_without_creating_production_state) ... 2026-11-20 15:49:30.760 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_qc_findings_cover_every_reviewable_registry_agent (tests.test_agent_reporting.RegistryReportingTests.test_qc_findings_cover_every_reviewable_registry_agent) ... ok
+test_registry_and_current_matrix_include_casting (tests.test_agent_reporting.RegistryReportingTests.test_registry_and_current_matrix_include_casting) ... ok
+test_registry_duplicate_ids_keys_are_rejected_before_dictionary_collapse (tests.test_agent_reporting.RegistryReportingTests.test_registry_duplicate_ids_keys_are_rejected_before_dictionary_collapse) ... ok
+test_report_ui_registry_totals_casting_and_qc_rows (tests.test_agent_reporting.RegistryReportingTests.test_report_ui_registry_totals_casting_and_qc_rows) ... 2026-11-20 15:49:31.909 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_stale_handoffs_and_findings_are_reported_without_approval_mutation (tests.test_agent_reporting.RegistryReportingTests.test_stale_handoffs_and_findings_are_reported_without_approval_mutation) ... ok
+test_unattested_engineering_is_not_fabricated_and_models_never_promoted (tests.test_agent_reporting.RegistryReportingTests.test_unattested_engineering_is_not_fabricated_and_models_never_promoted) ... ok
+test_unknown_historical_recipient_is_visible_not_silently_dropped (tests.test_agent_reporting.RegistryReportingTests.test_unknown_historical_recipient_is_visible_not_silently_dropped) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.494s
+
+OK

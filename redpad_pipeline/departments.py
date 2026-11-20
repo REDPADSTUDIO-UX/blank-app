@@ -106,8 +106,9 @@ def prepare(key, data, upstream=None):
             require(check,['criterion','result','evidence','revision'])
             if check['result'] not in ('pass','fail','unverified') or not all(nonempty(check[k]) for k in ('criterion','evidence','revision')):
                 raise AgentError('Checks require evidence and actionable revision instructions.')
-            if check['result']!='pass': findings.append(copy.deepcopy(check))
-        output['artifact']={'checks':copy.deepcopy(data['checks']),'recommendation':'Revision Required' if findings else 'Recommend owner review',
+            if check['result']!='pass': findings.append(dict(copy.deepcopy(check),target_agent=data['subject_agent']))
+        output['artifact']={'subject_agent':data['subject_agent'],'checks':copy.deepcopy(data['checks']),'recommendation':'Revision Required' if findings else 'Recommend owner review',
+                            'derived':{'revision_routes':{data['subject_agent']:copy.deepcopy(findings)}},
                             'creative_quality_verified':False}
         output['findings']=findings
     elif key=='production_manager':

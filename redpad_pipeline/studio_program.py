@@ -1,4 +1,4 @@
-"""Unified, resumable development/production ledger over the existing 20 agents.
+"""Unified, resumable development/production ledger over the current registry.
 
 No production database, model downloads, approvals or automatic media generation.
 Project notes and hierarchy are planning data; generated artifacts live in the
@@ -186,7 +186,8 @@ class StudioProgram:
             agents.append(item)
         episodes=[{'episode':n,'outline':state(links.get('bridge:outline:'+str(n))),'sequences':state(links.get('bridge:sequences:'+str(n))),
                    'script':state(links.get('script:episode'+str(n))),'director':state(links.get('director_script:episode'+str(n)))} for n in range(1,(summary['project'] or {}).get('episodes',0)+1)]
-        return {'agents':agents,'episodes':episodes,'primary_owner_agents':['director','story','script'],'professional_quality_verified':False,'auto_publish':False}
+        from .agent_reporting import qc_report
+        return {'agents':agents,'registered_agents':len(AGENTS),'qc':qc_report(self.store),'episodes':episodes,'primary_owner_agents':['director','story','script'],'professional_quality_verified':False,'auto_publish':False}
 
     def checkpoint(self,source_commit,evidence):
         if not re.fullmatch(r'[a-f0-9]{40}',source_commit) or not isinstance(evidence,dict):raise AgentError('Exact source commit and attributed evidence required.')
