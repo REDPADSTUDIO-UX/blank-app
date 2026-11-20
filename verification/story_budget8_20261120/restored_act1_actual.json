@@ -1,0 +1,750 @@
+{
+  "source_commit": "7e779578bc919b6cca5e3a40f345c3775265e582",
+  "section": {
+    "case": {
+      "id": "driverbound_act_1_v1",
+      "section": "act_1",
+      "system": "Write original natural Bengali story prose from the supplied existing professional brief. Do not copy another drama or imitate a living writer.\nAsk a central dramatic question requiring a costly protagonist decision. Father supports the job but fears solitude; daughter’s independence is not selfishness.\nGive each major character want, need, fear, contradiction, relationship, internal conflict, observable behavior and emotional change.\nEvery beat changes information, relationships, emotion, stakes, goals or options through a credible cause. Track character knowledge and possessions.\nEarn at least two subtle emotional moments through earlier setup, small human actions and consequences; tragedy or speeches are not automatic emotion.\nInclude one motivated humorous moment from personality, irony, awkwardness or relationship; avoid unrelated jokes.\nUse fair clues and information control for one earned reveal; escalate choices and consequences rather than repeat scenes.\nUse visible action, location or sound for filmability. Flag cultural and economic specifics as hypotheses unless supplied verified sources establish them.\nReturn only the artifact contract. Self-critique is a proposal, never an independent professional score. Preserve exact owner locks and untargeted records.\nYou are generating one bounded section of ONE story. JSON only, minified, no markdown, no thinking. All required schema fields must be present. Be brief to finish within 1536 output tokens. No scores or human-review claims. Use concise Bengali phrases: goal/choice/consequence/action/emotion each 2-5 words, location/sound 1-2 words. Track before/after with ONE compact progress key and copy exact previous after to next before. Knowledge facts use short ASCII IDs; no needless new facts. Empty requires/learns maps when no knowledge change; empty plants/payoffs/emotion_setups arrays when inapplicable. humor/humor_motivation empty unless motivated. Exactly 4 beats. This is a compact causal treatment, not dialogue.",
+      "prompt": "ORIGINAL BRIEF (unchanged):\nফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।\nSECTION: act_1\nExactly FOUR short beats B1-B4 act=1. Start the same morning with bag repair, concealed ticket and a credible costly choice. First cause=brief; later cause must cite earlier beat. No knowledge without shown discovery. Establish humor and emotional investment. Preserve time, room geography, one key and clothes.\nACTUAL PRIOR GENERATED CONTEXT:\n{\"foundation\":{\"logline\":\"একটি ছোট বাসায় পিতা ও কন্যার মধ্যে টিকিট কেনার গোপনীয়তা এবং একাকীত্বের ভয়ের সংঘর্ষ।\",\"dramatic_question\":\"হাসান কি সত্যিই নীরাকে বাদ দিয়ে একা থাকতে চান নাকি তার কল্যাণে নিজের ভয়কে দমন করছেন?\",\"characters\":[{\"id\":\"N-01\",\"want\":\"স্বাধীনতা এবং নতুন জীবন পাওয়া\",\"need\":\"বাস্তবিক মূল্যবোধের অনুভূতি\",\"fear\":\"অপরের কাছে দুর্বল হিসেবে দেখা যাওয়া\",\"contradiction\":\"স্বাধীন হতে চায় কিন্তু বাবার একাকীত্ব ভয় পেয়ে পিছিয়ে দিতে পারে\",\"relationship\":\"হাসানের প্রতি শ্রদ্ধাশীল কন্যা\",\"internal_conflict\":\"ক্যারিয়ার বনাম পরিবারের যত্ন\",\"behavior\":\"চোখ নিচু করে টিকিট লুকানোর চেষ্টা করছে\",\"emotional_change\":\"আমন্ত্রণ পেয়ে সন্দেহ থেকে আশাবাদী হয়ে ওঠে\",\"name\":\"নীরা\",\"biography\":\"২৭ বছর বয়সী এক অফিস কর্মী যিনি রাজশাহীতে চাকরি খুঁজছেন।\"},{\"id\":\"H-01\",\"want\":\"মেয়ের কল্যাণ এবং সন্তোষজনক পরিবার\",\"need\":\"নিজের শরীর ও মস্তিষ্কের কাজে ফুটিয়া উঠা\",\"fear\":\"মৃত্যুর আগে একা থাকার ভয়\",\"contradiction\":\"মেয়ের যাত্রাকে সমর্থন দেন কিন্তু ব্যাগের হাতল সরাতে গিয়ে হাত কাঁপেন\",\"relationship\":\"নীরার প্রতি ভালোবাসাপূর্ণ পিতা\",\"internal_conflict\":\"কন্যার স্বপ্ন বনাম নিজের একাকীত্বের ভয়\",\"behavior\":\"লাল টিনের বাক্সে টিকিট রেখে হাতের ব্যাগ সাজান\",\"emotional_change\":\"আশায় থাকা থেকে আবেগহীন হয়ে পড়ে\",\"name\":\"হাসান\",\"biography\":\"৫৮ বছর বয়সী এক দারজি যিনি কুশলী হাতে কাজ করেন।\"}],\"initial_knowledge\":{\"H-01\":[\"টিকিট কিনেছে কিন্তু নীরা জানে না।\",\"বাসার উত্তর দিকে রান্নাঘর।\"],\"N-01\":[\"হাসান টিকিট লুকিয়ে রেখেছেন।\",\"হাসানের হাত কাঁপছে।\"]}}}\nEXACT SECTION SCHEMA:\n{\"type\":\"array\",\"minItems\":4,\"maxItems\":6,\"items\":{\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"id\",\"act\",\"actor\",\"goal\",\"choice\",\"cause\",\"consequence\",\"action\",\"location\",\"sound\",\"emotion\",\"before\",\"after\",\"requires\",\"learns\",\"plants\",\"payoffs\",\"emotion_setups\",\"subtle_emotion\",\"humor\",\"humor_motivation\"],\"properties\":{\"id\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"act\":{\"const\":1},\"actor\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"goal\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"choice\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"cause\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"consequence\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"action\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"location\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"sound\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"emotion\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"before\":{\"type\":\"object\",\"minProperties\":1,\"maxProperties\":30,\"additionalProperties\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500}},\"after\":{\"type\":\"object\",\"minProperties\":1,\"maxProperties\":30,\"additionalProperties\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500}},\"requires\":{\"type\":\"object\",\"additionalProperties\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1},\"uniqueItems\":true,\"maxItems\":30}},\"learns\":{\"type\":\"object\",\"additionalProperties\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1},\"uniqueItems\":true,\"maxItems\":30}},\"plants\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1},\"uniqueItems\":true,\"maxItems\":30},\"payoffs\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1},\"uniqueItems\":true,\"maxItems\":30},\"emotion_setups\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1},\"uniqueItems\":true,\"maxItems\":30},\"subtle_emotion\":{\"type\":\"boolean\"},\"humor\":{\"type\":\"string\",\"maxLength\":600},\"humor_motivation\":{\"type\":\"string\",\"maxLength\":600}}}}",
+      "max_new_tokens": 1536,
+      "schema": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "act",
+            "actor",
+            "goal",
+            "choice",
+            "cause",
+            "consequence",
+            "action",
+            "location",
+            "sound",
+            "emotion",
+            "before",
+            "after",
+            "requires",
+            "learns",
+            "plants",
+            "payoffs",
+            "emotion_setups",
+            "subtle_emotion",
+            "humor",
+            "humor_motivation"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            },
+            "act": {
+              "const": 1
+            },
+            "actor": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            },
+            "goal": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            },
+            "choice": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            },
+            "cause": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            },
+            "consequence": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            },
+            "action": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            },
+            "location": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            },
+            "sound": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            },
+            "emotion": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            },
+            "before": {
+              "type": "object",
+              "minProperties": 1,
+              "maxProperties": 30,
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              }
+            },
+            "after": {
+              "type": "object",
+              "minProperties": 1,
+              "maxProperties": 30,
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              }
+            },
+            "requires": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true,
+                "maxItems": 30
+              }
+            },
+            "learns": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true,
+                "maxItems": 30
+              }
+            },
+            "plants": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "maxItems": 30
+            },
+            "payoffs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "maxItems": 30
+            },
+            "emotion_setups": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "maxItems": 30
+            },
+            "subtle_emotion": {
+              "type": "boolean"
+            },
+            "humor": {
+              "type": "string",
+              "maxLength": 600
+            },
+            "humor_motivation": {
+              "type": "string",
+              "maxLength": 600
+            }
+          }
+        }
+      }
+    },
+    "installation": {
+      "observed_at_utc": "2026-11-20T11:11:09.099047+00:00",
+      "research_only": true,
+      "owner_download_authorization": "Current user explicitly authorized ONLY the three pinned artifacts",
+      "model_inferences": 0,
+      "historical_calls_consumed": 2,
+      "total_call_ceiling": 7,
+      "artifacts": [
+        {
+          "file": "Qwen3.5-9B-Q4_K_M.gguf",
+          "url": "https://huggingface.co/unsloth/Qwen3.5-9B-GGUF/resolve/3885219b6810b007914f3a7950a8d1b469d598a5/Qwen3.5-9B-Q4_K_M.gguf",
+          "expected_bytes": 5680522464,
+          "expected_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+          "downloaded": true,
+          "download_seconds": 73.854658428,
+          "actual_bytes": 5680522464,
+          "actual_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8"
+        },
+        {
+          "file": "cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+          "expected_bytes": 594371580,
+          "expected_sha256": "caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea",
+          "downloaded": true,
+          "download_seconds": 13.10222130000011,
+          "actual_bytes": 594371580,
+          "actual_sha256": "caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea"
+        },
+        {
+          "file": "llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+          "expected_bytes": 197999267,
+          "expected_sha256": "e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797",
+          "downloaded": true,
+          "download_seconds": 5.171607084000016,
+          "actual_bytes": 197999267,
+          "actual_sha256": "e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797"
+        }
+      ],
+      "gpu": "Tesla T4, 15360, 14913, 580.82.07, 7.5",
+      "host_ram": {
+        "MemTotal": 13605818368,
+        "MemAvailable": 12267323392
+      },
+      "disk_free_bytes": 120839217152,
+      "drive_mount_detected": false,
+      "model": {
+        "repo": "unsloth/Qwen3.5-9B-GGUF",
+        "revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+        "file": "Qwen3.5-9B-Q4_K_M.gguf",
+        "bytes": 5680522464,
+        "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8"
+      },
+      "model_path": "/content/redpad_story_t4_20261114/Qwen3.5-9B-Q4_K_M.gguf",
+      "binary": "/content/redpad_story_t4_20261114/option_c_approved/runtime/llama-b12318/llama-server",
+      "binary_sha256": "0ec391741c38d09eb4074db407c162686e310799c0dc36ebb734775688384ff5",
+      "runtime_version": "version: 0.9.0-dev (build 12318, commit 7021f7e09)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+      "runtime_libraries": "/content/redpad_story_t4_20261114/option_c_approved/runtime/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64:/content/redpad_story_t4_20261114/option_c_approved/runtime/llama-b12318",
+      "license": "Apache-2.0 model; MIT runtime; prior pinned source evidence retained",
+      "runtime_compatibility": "Exact binary version executes; model-load compatibility remains untested",
+      "production_worker_changed": false,
+      "security_equivalent_to_studio": false,
+      "status": "BUNDLE_VERIFIED"
+    },
+    "state": "completed",
+    "human_review": "pending",
+    "production_approved": false,
+    "automatic_retries": 0,
+    "variant": "option_c_driverbound_schema_v1",
+    "historical_calls": 2,
+    "kernel_isolation_verified": false,
+    "load_seconds": 5.1081390159999955,
+    "owned_gpu_process": "6539, 5204\n",
+    "offload_lines": [
+      "0.02.693.806 I load_tensors: offloaded 33/33 layers to GPU",
+      "0.02.693.815 I load_tensors:        CUDA0 model buffer size =  4861.28 MiB"
+    ],
+    "exact_prompt_tokens": 1866,
+    "context_tokens": 4096,
+    "output_ceiling": 1536,
+    "template_sha256": "118efac9c38110fd0bbe42946215a63d7fcf5cc37f418d8575a4cbeca22e73f5",
+    "request": {
+      "messages": [
+        {
+          "role": "system",
+          "content": "Write original natural Bengali story prose from the supplied existing professional brief. Do not copy another drama or imitate a living writer.\nAsk a central dramatic question requiring a costly protagonist decision. Father supports the job but fears solitude; daughter’s independence is not selfishness.\nGive each major character want, need, fear, contradiction, relationship, internal conflict, observable behavior and emotional change.\nEvery beat changes information, relationships, emotion, stakes, goals or options through a credible cause. Track character knowledge and possessions.\nEarn at least two subtle emotional moments through earlier setup, small human actions and consequences; tragedy or speeches are not automatic emotion.\nInclude one motivated humorous moment from personality, irony, awkwardness or relationship; avoid unrelated jokes.\nUse fair clues and information control for one earned reveal; escalate choices and consequences rather than repeat scenes.\nUse visible action, location or sound for filmability. Flag cultural and economic specifics as hypotheses unless supplied verified sources establish them.\nReturn only the artifact contract. Self-critique is a proposal, never an independent professional score. Preserve exact owner locks and untargeted records.\nYou are generating one bounded section of ONE story. JSON only, minified, no markdown, no thinking. All required schema fields must be present. Be brief to finish within 1536 output tokens. No scores or human-review claims. Use concise Bengali phrases: goal/choice/consequence/action/emotion each 2-5 words, location/sound 1-2 words. Track before/after with ONE compact progress key and copy exact previous after to next before. Knowledge facts use short ASCII IDs; no needless new facts. Empty requires/learns maps when no knowledge change; empty plants/payoffs/emotion_setups arrays when inapplicable. humor/humor_motivation empty unless motivated. Exactly 4 beats. This is a compact causal treatment, not dialogue."
+        },
+        {
+          "role": "user",
+          "content": "ORIGINAL BRIEF (unchanged):\nফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।\nSECTION: act_1\nExactly FOUR short beats B1-B4 act=1. Start the same morning with bag repair, concealed ticket and a credible costly choice. First cause=brief; later cause must cite earlier beat. No knowledge without shown discovery. Establish humor and emotional investment. Preserve time, room geography, one key and clothes.\nACTUAL PRIOR GENERATED CONTEXT:\n{\"foundation\":{\"logline\":\"একটি ছোট বাসায় পিতা ও কন্যার মধ্যে টিকিট কেনার গোপনীয়তা এবং একাকীত্বের ভয়ের সংঘর্ষ।\",\"dramatic_question\":\"হাসান কি সত্যিই নীরাকে বাদ দিয়ে একা থাকতে চান নাকি তার কল্যাণে নিজের ভয়কে দমন করছেন?\",\"characters\":[{\"id\":\"N-01\",\"want\":\"স্বাধীনতা এবং নতুন জীবন পাওয়া\",\"need\":\"বাস্তবিক মূল্যবোধের অনুভূতি\",\"fear\":\"অপরের কাছে দুর্বল হিসেবে দেখা যাওয়া\",\"contradiction\":\"স্বাধীন হতে চায় কিন্তু বাবার একাকীত্ব ভয় পেয়ে পিছিয়ে দিতে পারে\",\"relationship\":\"হাসানের প্রতি শ্রদ্ধাশীল কন্যা\",\"internal_conflict\":\"ক্যারিয়ার বনাম পরিবারের যত্ন\",\"behavior\":\"চোখ নিচু করে টিকিট লুকানোর চেষ্টা করছে\",\"emotional_change\":\"আমন্ত্রণ পেয়ে সন্দেহ থেকে আশাবাদী হয়ে ওঠে\",\"name\":\"নীরা\",\"biography\":\"২৭ বছর বয়সী এক অফিস কর্মী যিনি রাজশাহীতে চাকরি খুঁজছেন।\"},{\"id\":\"H-01\",\"want\":\"মেয়ের কল্যাণ এবং সন্তোষজনক পরিবার\",\"need\":\"নিজের শরীর ও মস্তিষ্কের কাজে ফুটিয়া উঠা\",\"fear\":\"মৃত্যুর আগে একা থাকার ভয়\",\"contradiction\":\"মেয়ের যাত্রাকে সমর্থন দেন কিন্তু ব্যাগের হাতল সরাতে গিয়ে হাত কাঁপেন\",\"relationship\":\"নীরার প্রতি ভালোবাসাপূর্ণ পিতা\",\"internal_conflict\":\"কন্যার স্বপ্ন বনাম নিজের একাকীত্বের ভয়\",\"behavior\":\"লাল টিনের বাক্সে টিকিট রেখে হাতের ব্যাগ সাজান\",\"emotional_change\":\"আশায় থাকা থেকে আবেগহীন হয়ে পড়ে\",\"name\":\"হাসান\",\"biography\":\"৫৮ বছর বয়সী এক দারজি যিনি কুশলী হাতে কাজ করেন।\"}],\"initial_knowledge\":{\"H-01\":[\"টিকিট কিনেছে কিন্তু নীরা জানে না।\",\"বাসার উত্তর দিকে রান্নাঘর।\"],\"N-01\":[\"হাসান টিকিট লুকিয়ে রেখেছেন।\",\"হাসানের হাত কাঁপছে।\"]}}}\nEXACT SECTION SCHEMA:\n{\"type\":\"array\",\"minItems\":4,\"maxItems\":6,\"items\":{\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"id\",\"act\",\"actor\",\"goal\",\"choice\",\"cause\",\"consequence\",\"action\",\"location\",\"sound\",\"emotion\",\"before\",\"after\",\"requires\",\"learns\",\"plants\",\"payoffs\",\"emotion_setups\",\"subtle_emotion\",\"humor\",\"humor_motivation\"],\"properties\":{\"id\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"act\":{\"const\":1},\"actor\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"goal\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"choice\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"cause\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"consequence\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"action\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"location\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"sound\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"emotion\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500},\"before\":{\"type\":\"object\",\"minProperties\":1,\"maxProperties\":30,\"additionalProperties\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500}},\"after\":{\"type\":\"object\",\"minProperties\":1,\"maxProperties\":30,\"additionalProperties\":{\"type\":\"string\",\"minLength\":1,\"maxLength\":2500}},\"requires\":{\"type\":\"object\",\"additionalProperties\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1},\"uniqueItems\":true,\"maxItems\":30}},\"learns\":{\"type\":\"object\",\"additionalProperties\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1},\"uniqueItems\":true,\"maxItems\":30}},\"plants\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1},\"uniqueItems\":true,\"maxItems\":30},\"payoffs\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1},\"uniqueItems\":true,\"maxItems\":30},\"emotion_setups\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"minLength\":1},\"uniqueItems\":true,\"maxItems\":30},\"subtle_emotion\":{\"type\":\"boolean\"},\"humor\":{\"type\":\"string\",\"maxLength\":600},\"humor_motivation\":{\"type\":\"string\",\"maxLength\":600}}}}"
+        }
+      ],
+      "max_tokens": 1536,
+      "temperature": 0.7,
+      "seed": 117,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "cache_prompt": false,
+      "response_format": {
+        "type": "json_schema",
+        "schema": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "act",
+              "actor",
+              "goal",
+              "choice",
+              "cause",
+              "consequence",
+              "action",
+              "location",
+              "sound",
+              "emotion",
+              "before",
+              "after",
+              "requires",
+              "learns",
+              "plants",
+              "payoffs",
+              "emotion_setups",
+              "subtle_emotion",
+              "humor",
+              "humor_motivation"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "act": {
+                "const": 1
+              },
+              "actor": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "goal": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "choice": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "cause": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "consequence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "action": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "location": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "sound": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "emotion": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "before": {
+                "type": "object",
+                "minProperties": 1,
+                "maxProperties": 30,
+                "additionalProperties": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2500
+                }
+              },
+              "after": {
+                "type": "object",
+                "minProperties": 1,
+                "maxProperties": 30,
+                "additionalProperties": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2500
+                }
+              },
+              "requires": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "uniqueItems": true,
+                  "maxItems": 30
+                }
+              },
+              "learns": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "uniqueItems": true,
+                  "maxItems": 30
+                }
+              },
+              "plants": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true,
+                "maxItems": 30
+              },
+              "payoffs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true,
+                "maxItems": 30
+              },
+              "emotion_setups": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true,
+                "maxItems": 30
+              },
+              "subtle_emotion": {
+                "type": "boolean"
+              },
+              "humor": {
+                "type": "string",
+                "maxLength": 600
+              },
+              "humor_motivation": {
+                "type": "string",
+                "maxLength": 600
+              }
+            }
+          }
+        }
+      },
+      "repeat_penalty": 1.08
+    },
+    "raw_http_base64": "eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjoiW3tcImlkXCI6XCJCMS1hY3RfMVwiLCBcImFjdFwiOiAxLCBcImFjdG9yXCI6IFwi4Ka54Ka+4Ka44Ka+4KaoXCIsIFwiZ29hbFwiOiBcIuCmruCnh+Cmr+CmvOCnh+CmsCDgpqzgp43gpq/gpr7gppcg4Ka44Ka+4Kac4Ka+4Kao4KeLXCIsIFwiY2hvaWNlXCI6IFwi4Kay4Ka+4KayIOCmn+Cmv+CmqOCnh+CmsCDgpqzgpr7gppXgp43gprjgp4cg4Kaf4Ka/4KaV4Ka/4KafIOCmsOCmvuCmluCmvlwiLCBcImNhdXNlXCI6IFwi4Kas4Ka+4Kas4Ka+4KawIOCmmuCmvuCmquCnhyDgpq7gp4fgpq/gprzgp4fgppXgp4cg4Kaw4Ka+4Kac4Ka24Ka+4Ka54KeA4Kak4KeHIOCmquCmvuCmoOCmvuCmqOCni+CmsCDgprjgpr/gpqbgp43gpqfgpr7gpqjgp43gpqQg4Kao4KeH4KaT4Kav4Ka84Ka+IOCmueCmr+CmvOCnh+Cmm+Cnh1wiLCBcImNvbnNlcXVlbmNlXCI6IFwi4Kao4KeA4Kaw4Ka+IOCmj+CmluCmqOCmkyDgpp/gpr/gppXgpr/gpp8g4Ka44Kau4KeN4Kaq4Kaw4KeN4KaV4KeHIOCmleCmv+Cmm+CngSDgppzgpr7gpqjgp4fgpqgg4Kao4Ka+XCIsIFwiYWN0aW9uXCI6IFwi4Ka54Ka+4Ka44Ka+4KaoIOCmueCmvuCmpOCnh+CmsCDgpqzgp43gpq/gpr7gppfgp4fgprAg4Ka54Ka+4Kak4KayIOCmuOCni+CmnOCmviDgppXgprDgp4cg4Kay4Ka+4KayIOCmn+Cmv+CmqOCnhyDgpp/gpr/gppXgpr/gpp8g4Kai4KeB4KaV4Ka/4Kav4Ka84KeHIOCmpuCnh+CmqFwiLCBcImxvY2F0aW9uXCI6IFwi4KaV4Ka+4KaB4Kag4Ka+4Kay4Kas4Ka+4KaX4Ka+4Kao4KeH4KawIOCmmOCmsFwiLCBcInNvdW5kXCI6IFwi4KaV4KeB4Kaa4KaV4KeB4KaaIOCmtuCmrOCnjeCmplwiLCBcImVtb3Rpb25cIjogXCLgprbgpr7gpqjgp43gpqQg4KaV4Ka/4Kao4KeN4Kak4KeBIOCmieCmpuCnjeCmrOCnh+Cml+Cmr+CngeCmleCnjeCmpFwiLCBcImJlZm9yZVwiOiB7XCJILTAxX2ludGVudFwiOiBcIuCmruCnh+Cmr+CmvOCnh+CmsCDgppzgpqjgp43gpq8g4Ka44Kas4Ka44Kau4Kav4Ka8IOCmuOCmvuCmnOCmvuCmqOCni1wifSwgXCJhZnRlclwiOiB7XCJILTAxX2ludGVudFwiOiBcIuCml+Cni+CmquCmqOCnhyDgpqrgp43gprDgprjgp43gpqTgp4HgpqTgpr8g4Kao4Ka/4KaT4Kav4Ka84Ka+XCIsIFwiTi0wMV9rbm93bGVkZ2VcIjogXCLgpp/gpr/gppXgpr/gpp8g4Ka44Kau4KeN4Kaq4Kaw4KeN4KaV4KeHIOCmheCmnOCnjeCmnuCmpOCmvlwifSwgXCJyZXF1aXJlc1wiOiB7XCJrbm93bGVkZ2VcIjogW1wi4Kas4Ka+4Ka44Ka+4KawIOCmreCnjOCml+Cni+CmsuCmv+CmlSDgppfgpqDgpqhcIl19LCBcImxlYXJuc1wiOiB7fSwgXCJwbGFudHNcIjogW1wi4Kaf4Ka/4KaV4Ka/4Kaf4KeH4KawIOCml+Cni+CmquCmqOCngOCmr+CmvOCmpOCmvlwiXSwgXCJwYXlvZmZzXCI6IFtdLCBcImVtb3Rpb25fc2V0dXBzXCI6IFtcIuCmrOCmvuCmrOCmvuCmsCDgpo/gppXgpr7gppXgp4DgpqTgp43gpqwg4Kat4Kav4Ka8XCJdLCBcInN1YnRsZV9lbW90aW9uXCI6IHRydWUsIFwiaHVtb3JcIjogXCJcIiwgXCJodW1vcl9tb3RpdmF0aW9uXCI6IFwiXCJ9LCB7XCJpZFwiOlwiQjItYWN0XzFcIiwgXCJhY3RcIjogMSwgXCJhY3RvclwiOiBcIuCmqOCngOCmsOCmvlwiLCBcImdvYWxcIjogXCLgprjgppXgpr7gprLgp4fgprAg4Kaw4Ka+4Kao4KeN4Kao4Ka+IOCmtuCnh+CmtyDgppXgprDgpr5cIiwgXCJjaG9pY2VcIjogXCLgpqzgpr7gpqzgpr7gprAg4KaV4Ka+4KaB4Kaq4KeB4Kao4Ka/IOCmsuCmleCnjeCmt+CnjeCmryDgppXgprDgpr5cIiwgXCJjYXVzZVwiOiBcIuCmueCmvuCmuOCmvuCmqOCnh+CmsCDgprngpr7gpqTgp4fgprAg4Kas4KeN4Kav4Ka+4KaXIOCmuOCmvuCmnOCmvuCmqOCniyDgpqbgp4fgppbgp4cg4Ka54Ka+4Ka44Ka+4Kao4KeH4KawIOCmreCmr+CmvCDgpqzgp4vgpp3gpr4g4Kav4Ka+4Kav4Ka8XCIsIFwiY29uc2VxdWVuY2VcIjogXCLgpqjgp4DgprDgpr4g4Kas4KeB4Kad4Kak4KeHIOCmquCmvuCmsOCnh+CmqCDgpqzgpr7gpqzgpr4g4KaP4KaV4Ka+IOCmpeCmvuCmleCmpOCnhyDgpprgpr7gpqgg4Kao4Ka+XCIsIFwiYWN0aW9uXCI6IFwi4Kao4KeA4Kaw4Ka+IOCmsOCmvuCmqOCnjeCmqOCmvuCmsCDgpqrgpr7gpqTgp43gprAg4KaJ4Kag4Ka/4Kav4Ka84KeHIOCmrOCmvuCmrOCmvuCmsCDgppXgpr7gpoHgpqrgp4Hgpqjgpr8g4Kay4KaV4KeN4Ka34KeN4KavIOCmleCmsOCnhyDgpq7gp4Pgpqbgp4Eg4Ka54Ka+4Ka44KeH4KaoXCIsIFwibG9jYXRpb25cIjogXCLgprDgpr7gpqjgp43gpqjgpr7gppjgprBcIiwgXCJzb3VuZFwiOiBcIuCmmuCmvuCmruCmoeCmvOCmvuCmr+CmvCDgpobgppPgpq/gprzgpr7gppxcIiwgXCJlbW90aW9uXCI6IFwi4Ka44Kao4KeN4Kam4KeH4Ka5IOCmpeCnh+CmleCnhyDgpobgprbgpr7gpqzgpr7gpqbgp4BcIiwgXCJiZWZvcmVcIjoge1wiTi0wMV9mZWVsaW5nc1wiOiBcIuCmheCmnOCmvuCmqOCmviDgpq3gpqzgpr/gprfgp43gpq/gp45cIn0sIFwiYWZ0ZXJcIjoge1wiTi0wMV9mZWVsaW5nc1wiOiBcIuCmrOCmvuCmrOCmvuCmsCDgpprgpr/gpqjgp43gpqTgpr4g4Kas4KeB4Kad4KeH4Kab4Ka/XCIsIFwiSC0wMV9zdGF0ZVwiOiBcIuCmueCmvuCmpCDgppXgpr7gpoHgpqrgppvgp4dcIn0sIFwicmVxdWlyZXNcIjoge1wia25vd2xlZGdlXCI6IFtcIuCmueCmvuCmuOCmvuCmqOCnh+CmsCDgprbgprDgp4DgprDgp4fgprAg4Kat4Ka+4Ka34Ka+XCJdfSwgXCJsZWFybnNcIjoge1wia25vd2xlZGdlXCI6IFtcIuCmrOCmvuCmrOCmvuCmsCDgpo/gppXgpr7gppXgp4DgpqTgp43gpqwg4Kat4Kav4Ka8XCJdfSwgXCJwbGFudHNcIjogW10sIFwicGF5b2Zmc1wiOiBbXSwgXCJlbW90aW9uX3NldHVwc1wiOiBbXSwgXCJzdWJ0bGVfZW1vdGlvblwiOiB0cnVlLCBcImh1bW9yXCI6IFwiXCIsIFwiaHVtb3JfbW90aXZhdGlvblwiOiBcIlwifSwge1wiaWRcIjpcIkIzLWFjdF8xXCIsIFwiYWN0XCI6IDEsIFwiYWN0b3JcIjogXCLgpqjgp4DgprDgpr5cIiwgXCJnb2FsXCI6IFwi4Kas4Ka+4Kas4Ka+4KawIOCmnOCmqOCnjeCmryDgpqbgp4vgprngpr4g4KaV4Kaw4Ka+XCIsIFwiY2hvaWNlXCI6IFwi4KaF4Kay4KeN4KaqIOCmleCmpeCmviDgpqzgprLgp4cg4Kas4Ka+4Kas4Ka+4KawIOCmuOCmruCmsOCnjeCmpeCmqCDgppzgpr7gpqjgpr7gpqjgp4tcIiwgXCJjYXVzZVwiOiBcIuCmsOCmvuCmqOCnjeCmqOCmvuCmmOCmsOCnhyDgpqzgpr7gpqzgpr7gprAg4KaV4Ka+4KaB4Kaq4KeB4Kao4Ka/IOCmpuCnh+CmluCnhyDgpo/gpqzgpoIg4Kak4Ka+4KawIOCmmuCmv+CmqOCnjeCmpOCmviDgpqzgp4Hgpp3gpqTgp4cg4Kaq4KeH4Kaw4KeHXCIsIFwiY29uc2VxdWVuY2VcIjogXCLgprngpr7gprjgpr7gpqgg4Kau4KeH4Kav4Ka84KeH4KawIOCmleCmpeCmvuCmr+CmvCDgprbgpr7gpqjgp43gpqQg4Ka54KaoXCIsIFwiYWN0aW9uXCI6IFwi4Kao4KeA4Kaw4Ka+ICfgpqzgpr7gpqzgpr4sIOCmhuCmruCmvyDgpq/gpr7gpqzgp4snIOCmrOCmsuCnhyDgprngpr7gprjgpr7gpqjgppXgp4cg4KaP4KaV4Kaf4Ka/IOCmpuCni+CmueCmviDgpqbgp4fgpq/gprxcIiwgXCJsb2NhdGlvblwiOiBcIuCmsOCmvuCmqOCnjeCmqOCmvuCmmOCmsOCnh+CmsCDgpqbgprDgppzgpr7gprAg4Kaq4Ka+4Ka24KeHXCIsIFwic291bmRcIjogXCLgppXgp4HgpprgppXgp4Hgppog4Ka24Kas4KeN4KamIOCmrOCmqOCnjeCmpyDgprngpq/gprxcIiwgXCJlbW90aW9uXCI6IFwi4Kao4Ka/4Kaw4KeN4Kat4Kaw4Ka24KeA4KayIOCmj+CmrOCmgiDgprjgp43gpqrgprfgp43gpp9cIiwgXCJiZWZvcmVcIjoge1wiTi0wMV9zdGF0ZVwiOiBcIuCmheCmuOCnjeCmquCmt+CnjeCmnyDgpq3gpq/gprxcIn0sIFwiYWZ0ZXJcIjoge1wiTi0wMV9zdGF0ZVwiOiBcIuCmqOCmv+CmsOCnjeCmp+CmvuCmsOCmv+CmpCDgprjgpr/gpqbgp43gpqfgpr7gpqjgp43gpqRcIiwgXCJILTAxX3N0YXRlXCI6IFwi4KaG4Kas4KeH4KaX4Ka54KeA4KaoIOCmpeCnh+CmleCnhyDgprbgpr7gpqjgp43gpqRcIn0sIFwicmVxdWlyZXNcIjoge1wia25vd2xlZGdlXCI6IFtcIuCmruCnh+Cmr+CmvOCnh+CmsCDgprjgp43gpqzgpr7gpqfgp4DgpqjgpqTgpr7gprAg4Kaq4KeN4Kaw4Kav4Ka84KeL4Kac4Kao4KeA4Kav4Ka84Kak4Ka+XCJdfSwgXCJsZWFybnNcIjoge30sIFwicGxhbnRzXCI6IFtdLCBcInBheW9mZnNcIjogW10sIFwiZW1vdGlvbl9zZXR1cHNcIjogW10sIFwic3VidGxlX2Vtb3Rpb25cIjogdHJ1ZSwgXCJodW1vclwiOiBcIlwiLCBcImh1bW9yX21vdGl2YXRpb25cIjogXCJcIn0sIHtcImlkXCI6XCJCNC1hY3RfMVwiLCBcImFjdFwiOiAxLCBcImFjdG9yXCI6IFwi4Ka54Ka+4Ka44Ka+4KaoXCIsIFwiZ29hbFwiOiBcIuCmruCnh+Cmr+CmvOCnh+CmsCDgprjgp43gpqzgpr7gpqfgp4DgpqjgpqTgpr4g4Ka44Kau4Kaw4KeN4Kal4KaoIOCmleCmsOCmvlwiLCBcImNob2ljZVwiOiBcIuCmj+CmleCmvuCmleCngOCmpOCnjeCmrOCnh+CmsCDgpq3gpq/gprwg4Kam4Kau4KaoIOCmleCmsOCnhyDgpq7gp4fgpq/gprzgp4fgppXgp4cg4Kaq4Ka+4Kag4Ka/4Kav4Ka84KeHIOCmpuCnh+Cmk+Cmr+CmvOCmvlwiLCBcImNhdXNlXCI6IFwi4Kao4KeA4Kaw4Ka+IOCmpOCmvuCmsCDgprjgpr/gpqbgp43gpqfgpr7gpqjgp43gpqQg4Kao4Ka/4Kav4Ka84KeH4Kab4KeHIOCmj+CmrOCmgiDgpqzgpr7gpqzgpr7gprAg4KaV4Kal4Ka+4Kav4Ka8IOCmtuCmvuCmqOCnjeCmpCDgprngpq/gprzgp4fgppvgp4fgpqhcIiwgXCJjb25zZXF1ZW5jZVwiOiBcIuCmueCmvuCmuOCmvuCmqCDgpq7gp4Pgpqbgp4Eg4Ka54Ka+4Ka44KeH4KaoIOCmj+CmrOCmgiDgpqzgp43gpq/gpr7gppfgpp/gpr8g4Kak4KeB4Kay4KeHIOCmqOCnh+CmqFwiLCBcImFjdGlvblwiOiBcIuCmueCmvuCmuOCmvuCmqCDgpqzgp43gpq/gpr7gppfgpp/gpr8g4Kau4Ka+4Kad4KaW4Ka+4Kao4KeHIOCmsOCnh+CmluCnhyDgpq7gp4fgpq/gprzgp4fgprAg4Kaa4KeL4KaW4KeH4KawIOCmpuCmv+CmleCnhyDgpqTgpr7gppXgpr/gpq/gprzgp4cg4Kas4Kay4KeH4KaoLCAn4Ka44Kar4KayIOCmueCmkydcIiwgXCJsb2NhdGlvblwiOiBcIuCmrOCmvuCmuOCmvuCmsCDgpqrgp43gprDgpqzgp4fgprbgpqbgp43gpqzgpr7gprBcIiwgXCJzb3VuZFwiOiBcIuCmnOCngeCmpOCni+CmsCDgprbgpqzgp43gpqYg4Kaq4Kah4Ka84Ka+4Kav4Ka8XCIsIFwiZW1vdGlvblwiOiBcIuCmhuCmtuCmvuCmrOCmvuCmpuCngCDgppXgpr/gpqjgp43gpqTgp4Eg4Kam4KeB4KaD4KaW4Kaq4KeN4Kaw4Kas4KajXCIsIFwiYmVmb3JlXCI6IHtcIkgtMDFfc3RhdGVcIjogXCLgppXgpr7gpqTgprAg4KaP4Kas4KaCIOCmreCmr+CmvOCmvuCmqOCmlVwifSwgXCJhZnRlclwiOiB7XCJILTAxX3N0YXRlXCI6IFwi4Ka44Kau4KeN4Kau4Kak4Ka/IOCmpuCmv+Cmr+CmvOCnh+Cmm+Cnh+CmqFwiLCBcIk4tMDFfc3RhdGVcIjogXCLgpqrgp43gprDgprjgp43gpqTgp4HgpqQg4Ka54Kav4Ka84KeH4Kab4KeH4KaoXCJ9LCBcInJlcXVpcmVzXCI6IHtcImtub3dsZWRnZVwiOiBbXCLgpq7gp4fgpq/gprzgp4fgprAg4Ka44Ka+4Kar4Kay4KeN4Kav4KeH4KawIOCml+CngeCmsOCngeCmpOCnjeCmrFwiXX0sIFwibGVhcm5zXCI6IHt9LCBcInBsYW50c1wiOiBbXSwgXCJwYXlvZmZzXCI6IFtdLCBcImVtb3Rpb25fc2V0dXBzXCI6IFtdLCBcInN1YnRsZV9lbW90aW9uXCI6IGZhbHNlLCBcImh1bW9yXCI6IFwiXCIsIFwiaHVtb3JfbW90aXZhdGlvblwiOiBcIlwifV0ifX1dLCJjcmVhdGVkIjoxNzk1MTczNzAwLCJtb2RlbCI6Ii9jb250ZW50L3JlZHBhZF9zdG9yeV90NF8yMDI2MTExNC9Rd2VuMy41LTlCLVE0X0tfTS5nZ3VmIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiYjEyMzE4LTcwMjFmN2UwOSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsInVzYWdlIjp7ImNvbXBsZXRpb25fdG9rZW5zIjoxMjU2LCJwcm9tcHRfdG9rZW5zIjoxODY2LCJ0b3RhbF90b2tlbnMiOjMxMjIsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjowfX0sImlkIjoiY2hhdGNtcGwtQTNqaUtpUFBleGFURzJiUEptOFpaeDhyTDRsRWQ2NEMiLCJ0aW1pbmdzIjp7ImNhY2hlX24iOjAsInByb21wdF9uIjoxODY2LCJwcm9tcHRfbXMiOjUxNTQuMDMzLCJwcm9tcHRfcGVyX3Rva2VuX21zIjoyLjc2MjA3NTU2MjcwMDk2NDgsInByb21wdF9wZXJfc2Vjb25kIjozNjIuMDQ2NTc1OTUzMjM4OTcsInByZWRpY3RlZF9uIjoxMjU2LCJwcmVkaWN0ZWRfbXMiOjQyNDA5LjM1MSwicHJlZGljdGVkX3Blcl90b2tlbl9tcyI6MzMuNzkyMzExNTUzNzg0ODYsInByZWRpY3RlZF9wZXJfc2Vjb25kIjoyOS41OTI1MzAxOTQ1NzkwMTZ9fQ==",
+    "response": {
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "[{\"id\":\"B1-act_1\", \"act\": 1, \"actor\": \"হাসান\", \"goal\": \"মেয়ের ব্যাগ সাজানো\", \"choice\": \"লাল টিনের বাক্সে টিকিট রাখা\", \"cause\": \"বাবার চাপে মেয়েকে রাজশাহীতে পাঠানোর সিদ্ধান্ত নেওয়া হয়েছে\", \"consequence\": \"নীরা এখনও টিকিট সম্পর্কে কিছু জানেন না\", \"action\": \"হাসান হাতের ব্যাগের হাতল সোজা করে লাল টিনে টিকিট ঢুকিয়ে দেন\", \"location\": \"কাঁঠালবাগানের ঘর\", \"sound\": \"কুচকুচ শব্দ\", \"emotion\": \"শান্ত কিন্তু উদ্বেগযুক্ত\", \"before\": {\"H-01_intent\": \"মেয়ের জন্য সবসময় সাজানো\"}, \"after\": {\"H-01_intent\": \"গোপনে প্রস্তুতি নিওয়া\", \"N-01_knowledge\": \"টিকিট সম্পর্কে অজ্ঞতা\"}, \"requires\": {\"knowledge\": [\"বাসার ভৌগোলিক গঠন\"]}, \"learns\": {}, \"plants\": [\"টিকিটের গোপনীয়তা\"], \"payoffs\": [], \"emotion_setups\": [\"বাবার একাকীত্ব ভয়\"], \"subtle_emotion\": true, \"humor\": \"\", \"humor_motivation\": \"\"}, {\"id\":\"B2-act_1\", \"act\": 1, \"actor\": \"নীরা\", \"goal\": \"সকালের রান্না শেষ করা\", \"choice\": \"বাবার কাঁপুনি লক্ষ্য করা\", \"cause\": \"হাসানের হাতের ব্যাগ সাজানো দেখে হাসানের ভয় বোঝা যায়\", \"consequence\": \"নীরা বুঝতে পারেন বাবা একা থাকতে চান না\", \"action\": \"নীরা রান্নার পাত্র উঠিয়ে বাবার কাঁপুনি লক্ষ্য করে মৃদু হাসেন\", \"location\": \"রান্নাঘর\", \"sound\": \"চামড়ায় আওয়াজ\", \"emotion\": \"সন্দেহ থেকে আশাবাদী\", \"before\": {\"N-01_feelings\": \"অজানা ভবিষ্যৎ\"}, \"after\": {\"N-01_feelings\": \"বাবার চিন্তা বুঝেছি\", \"H-01_state\": \"হাত কাঁপছে\"}, \"requires\": {\"knowledge\": [\"হাসানের শরীরের ভাষা\"]}, \"learns\": {\"knowledge\": [\"বাবার একাকীত্ব ভয়\"]}, \"plants\": [], \"payoffs\": [], \"emotion_setups\": [], \"subtle_emotion\": true, \"humor\": \"\", \"humor_motivation\": \"\"}, {\"id\":\"B3-act_1\", \"act\": 1, \"actor\": \"নীরা\", \"goal\": \"বাবার জন্য দোহা করা\", \"choice\": \"অল্প কথা বলে বাবার সমর্থন জানানো\", \"cause\": \"রান্নাঘরে বাবার কাঁপুনি দেখে এবং তার চিন্তা বুঝতে পেরে\", \"consequence\": \"হাসান মেয়ের কথায় শান্ত হন\", \"action\": \"নীরা 'বাবা, আমি যাবো' বলে হাসানকে একটি দোহা দেয়\", \"location\": \"রান্নাঘরের দরজার পাশে\", \"sound\": \"কুচকুচ শব্দ বন্ধ হয়\", \"emotion\": \"নির্ভরশীল এবং স্পষ্ট\", \"before\": {\"N-01_state\": \"অস্পষ্ট ভয়\"}, \"after\": {\"N-01_state\": \"নির্ধারিত সিদ্ধান্ত\", \"H-01_state\": \"আবেগহীন থেকে শান্ত\"}, \"requires\": {\"knowledge\": [\"মেয়ের স্বাধীনতার প্রয়োজনীয়তা\"]}, \"learns\": {}, \"plants\": [], \"payoffs\": [], \"emotion_setups\": [], \"subtle_emotion\": true, \"humor\": \"\", \"humor_motivation\": \"\"}, {\"id\":\"B4-act_1\", \"act\": 1, \"actor\": \"হাসান\", \"goal\": \"মেয়ের স্বাধীনতা সমর্থন করা\", \"choice\": \"একাকীত্বের ভয় দমন করে মেয়েকে পাঠিয়ে দেওয়া\", \"cause\": \"নীরা তার সিদ্ধান্ত নিয়েছে এবং বাবার কথায় শান্ত হয়েছেন\", \"consequence\": \"হাসান মৃদু হাসেন এবং ব্যাগটি তুলে নেন\", \"action\": \"হাসান ব্যাগটি মাঝখানে রেখে মেয়ের চোখের দিকে তাকিয়ে বলেন, 'সফল হও'\", \"location\": \"বাসার প্রবেশদ্বার\", \"sound\": \"জুতোর শব্দ পড়ায়\", \"emotion\": \"আশাবাদী কিন্তু দুঃখপ্রবণ\", \"before\": {\"H-01_state\": \"কাতর এবং ভয়ানক\"}, \"after\": {\"H-01_state\": \"সম্মতি দিয়েছেন\", \"N-01_state\": \"প্রস্তুত হয়েছেন\"}, \"requires\": {\"knowledge\": [\"মেয়ের সাফল্যের গুরুত্ব\"]}, \"learns\": {}, \"plants\": [], \"payoffs\": [], \"emotion_setups\": [], \"subtle_emotion\": false, \"humor\": \"\", \"humor_motivation\": \"\"}]"
+          }
+        }
+      ],
+      "created": 1795173700,
+      "model": "/content/redpad_story_t4_20261114/Qwen3.5-9B-Q4_K_M.gguf",
+      "system_fingerprint": "b12318-7021f7e09",
+      "object": "chat.completion",
+      "usage": {
+        "completion_tokens": 1256,
+        "prompt_tokens": 1866,
+        "total_tokens": 3122,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "id": "chatcmpl-A3jiKiPPexaTG2bPJm8ZZx8rL4lEd64C",
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 1866,
+        "prompt_ms": 5154.033,
+        "prompt_per_token_ms": 2.7620755627009648,
+        "prompt_per_second": 362.04657595323897,
+        "predicted_n": 1256,
+        "predicted_ms": 42409.351,
+        "predicted_per_token_ms": 33.79231155378486,
+        "predicted_per_second": 29.592530194579016
+      }
+    },
+    "raw_content": "[{\"id\":\"B1-act_1\", \"act\": 1, \"actor\": \"হাসান\", \"goal\": \"মেয়ের ব্যাগ সাজানো\", \"choice\": \"লাল টিনের বাক্সে টিকিট রাখা\", \"cause\": \"বাবার চাপে মেয়েকে রাজশাহীতে পাঠানোর সিদ্ধান্ত নেওয়া হয়েছে\", \"consequence\": \"নীরা এখনও টিকিট সম্পর্কে কিছু জানেন না\", \"action\": \"হাসান হাতের ব্যাগের হাতল সোজা করে লাল টিনে টিকিট ঢুকিয়ে দেন\", \"location\": \"কাঁঠালবাগানের ঘর\", \"sound\": \"কুচকুচ শব্দ\", \"emotion\": \"শান্ত কিন্তু উদ্বেগযুক্ত\", \"before\": {\"H-01_intent\": \"মেয়ের জন্য সবসময় সাজানো\"}, \"after\": {\"H-01_intent\": \"গোপনে প্রস্তুতি নিওয়া\", \"N-01_knowledge\": \"টিকিট সম্পর্কে অজ্ঞতা\"}, \"requires\": {\"knowledge\": [\"বাসার ভৌগোলিক গঠন\"]}, \"learns\": {}, \"plants\": [\"টিকিটের গোপনীয়তা\"], \"payoffs\": [], \"emotion_setups\": [\"বাবার একাকীত্ব ভয়\"], \"subtle_emotion\": true, \"humor\": \"\", \"humor_motivation\": \"\"}, {\"id\":\"B2-act_1\", \"act\": 1, \"actor\": \"নীরা\", \"goal\": \"সকালের রান্না শেষ করা\", \"choice\": \"বাবার কাঁপুনি লক্ষ্য করা\", \"cause\": \"হাসানের হাতের ব্যাগ সাজানো দেখে হাসানের ভয় বোঝা যায়\", \"consequence\": \"নীরা বুঝতে পারেন বাবা একা থাকতে চান না\", \"action\": \"নীরা রান্নার পাত্র উঠিয়ে বাবার কাঁপুনি লক্ষ্য করে মৃদু হাসেন\", \"location\": \"রান্নাঘর\", \"sound\": \"চামড়ায় আওয়াজ\", \"emotion\": \"সন্দেহ থেকে আশাবাদী\", \"before\": {\"N-01_feelings\": \"অজানা ভবিষ্যৎ\"}, \"after\": {\"N-01_feelings\": \"বাবার চিন্তা বুঝেছি\", \"H-01_state\": \"হাত কাঁপছে\"}, \"requires\": {\"knowledge\": [\"হাসানের শরীরের ভাষা\"]}, \"learns\": {\"knowledge\": [\"বাবার একাকীত্ব ভয়\"]}, \"plants\": [], \"payoffs\": [], \"emotion_setups\": [], \"subtle_emotion\": true, \"humor\": \"\", \"humor_motivation\": \"\"}, {\"id\":\"B3-act_1\", \"act\": 1, \"actor\": \"নীরা\", \"goal\": \"বাবার জন্য দোহা করা\", \"choice\": \"অল্প কথা বলে বাবার সমর্থন জানানো\", \"cause\": \"রান্নাঘরে বাবার কাঁপুনি দেখে এবং তার চিন্তা বুঝতে পেরে\", \"consequence\": \"হাসান মেয়ের কথায় শান্ত হন\", \"action\": \"নীরা 'বাবা, আমি যাবো' বলে হাসানকে একটি দোহা দেয়\", \"location\": \"রান্নাঘরের দরজার পাশে\", \"sound\": \"কুচকুচ শব্দ বন্ধ হয়\", \"emotion\": \"নির্ভরশীল এবং স্পষ্ট\", \"before\": {\"N-01_state\": \"অস্পষ্ট ভয়\"}, \"after\": {\"N-01_state\": \"নির্ধারিত সিদ্ধান্ত\", \"H-01_state\": \"আবেগহীন থেকে শান্ত\"}, \"requires\": {\"knowledge\": [\"মেয়ের স্বাধীনতার প্রয়োজনীয়তা\"]}, \"learns\": {}, \"plants\": [], \"payoffs\": [], \"emotion_setups\": [], \"subtle_emotion\": true, \"humor\": \"\", \"humor_motivation\": \"\"}, {\"id\":\"B4-act_1\", \"act\": 1, \"actor\": \"হাসান\", \"goal\": \"মেয়ের স্বাধীনতা সমর্থন করা\", \"choice\": \"একাকীত্বের ভয় দমন করে মেয়েকে পাঠিয়ে দেওয়া\", \"cause\": \"নীরা তার সিদ্ধান্ত নিয়েছে এবং বাবার কথায় শান্ত হয়েছেন\", \"consequence\": \"হাসান মৃদু হাসেন এবং ব্যাগটি তুলে নেন\", \"action\": \"হাসান ব্যাগটি মাঝখানে রেখে মেয়ের চোখের দিকে তাকিয়ে বলেন, 'সফল হও'\", \"location\": \"বাসার প্রবেশদ্বার\", \"sound\": \"জুতোর শব্দ পড়ায়\", \"emotion\": \"আশাবাদী কিন্তু দুঃখপ্রবণ\", \"before\": {\"H-01_state\": \"কাতর এবং ভয়ানক\"}, \"after\": {\"H-01_state\": \"সম্মতি দিয়েছেন\", \"N-01_state\": \"প্রস্তুত হয়েছেন\"}, \"requires\": {\"knowledge\": [\"মেয়ের সাফল্যের গুরুত্ব\"]}, \"learns\": {}, \"plants\": [], \"payoffs\": [], \"emotion_setups\": [], \"subtle_emotion\": false, \"humor\": \"\", \"humor_motivation\": \"\"}]",
+    "raw_content_sha256": "7dac5fbe11683a192bd5ea4f4360769d40134b3a4bd7f8f012f6d009f68daabe",
+    "finish_reason": "stop",
+    "generation_seconds": 47.57597051999983,
+    "peak_sampled_server_rss_bytes": 1466253312,
+    "peak_sampled_device_used_mib": 5251,
+    "memory_scope": "1s whole device sampling, includes baseline; not allocator peak",
+    "parsed": [
+      {
+        "id": "B1-act_1",
+        "act": 1,
+        "actor": "হাসান",
+        "goal": "মেয়ের ব্যাগ সাজানো",
+        "choice": "লাল টিনের বাক্সে টিকিট রাখা",
+        "cause": "বাবার চাপে মেয়েকে রাজশাহীতে পাঠানোর সিদ্ধান্ত নেওয়া হয়েছে",
+        "consequence": "নীরা এখনও টিকিট সম্পর্কে কিছু জানেন না",
+        "action": "হাসান হাতের ব্যাগের হাতল সোজা করে লাল টিনে টিকিট ঢুকিয়ে দেন",
+        "location": "কাঁঠালবাগানের ঘর",
+        "sound": "কুচকুচ শব্দ",
+        "emotion": "শান্ত কিন্তু উদ্বেগযুক্ত",
+        "before": {
+          "H-01_intent": "মেয়ের জন্য সবসময় সাজানো"
+        },
+        "after": {
+          "H-01_intent": "গোপনে প্রস্তুতি নিওয়া",
+          "N-01_knowledge": "টিকিট সম্পর্কে অজ্ঞতা"
+        },
+        "requires": {
+          "knowledge": [
+            "বাসার ভৌগোলিক গঠন"
+          ]
+        },
+        "learns": {},
+        "plants": [
+          "টিকিটের গোপনীয়তা"
+        ],
+        "payoffs": [],
+        "emotion_setups": [
+          "বাবার একাকীত্ব ভয়"
+        ],
+        "subtle_emotion": true,
+        "humor": "",
+        "humor_motivation": ""
+      },
+      {
+        "id": "B2-act_1",
+        "act": 1,
+        "actor": "নীরা",
+        "goal": "সকালের রান্না শেষ করা",
+        "choice": "বাবার কাঁপুনি লক্ষ্য করা",
+        "cause": "হাসানের হাতের ব্যাগ সাজানো দেখে হাসানের ভয় বোঝা যায়",
+        "consequence": "নীরা বুঝতে পারেন বাবা একা থাকতে চান না",
+        "action": "নীরা রান্নার পাত্র উঠিয়ে বাবার কাঁপুনি লক্ষ্য করে মৃদু হাসেন",
+        "location": "রান্নাঘর",
+        "sound": "চামড়ায় আওয়াজ",
+        "emotion": "সন্দেহ থেকে আশাবাদী",
+        "before": {
+          "N-01_feelings": "অজানা ভবিষ্যৎ"
+        },
+        "after": {
+          "N-01_feelings": "বাবার চিন্তা বুঝেছি",
+          "H-01_state": "হাত কাঁপছে"
+        },
+        "requires": {
+          "knowledge": [
+            "হাসানের শরীরের ভাষা"
+          ]
+        },
+        "learns": {
+          "knowledge": [
+            "বাবার একাকীত্ব ভয়"
+          ]
+        },
+        "plants": [],
+        "payoffs": [],
+        "emotion_setups": [],
+        "subtle_emotion": true,
+        "humor": "",
+        "humor_motivation": ""
+      },
+      {
+        "id": "B3-act_1",
+        "act": 1,
+        "actor": "নীরা",
+        "goal": "বাবার জন্য দোহা করা",
+        "choice": "অল্প কথা বলে বাবার সমর্থন জানানো",
+        "cause": "রান্নাঘরে বাবার কাঁপুনি দেখে এবং তার চিন্তা বুঝতে পেরে",
+        "consequence": "হাসান মেয়ের কথায় শান্ত হন",
+        "action": "নীরা 'বাবা, আমি যাবো' বলে হাসানকে একটি দোহা দেয়",
+        "location": "রান্নাঘরের দরজার পাশে",
+        "sound": "কুচকুচ শব্দ বন্ধ হয়",
+        "emotion": "নির্ভরশীল এবং স্পষ্ট",
+        "before": {
+          "N-01_state": "অস্পষ্ট ভয়"
+        },
+        "after": {
+          "N-01_state": "নির্ধারিত সিদ্ধান্ত",
+          "H-01_state": "আবেগহীন থেকে শান্ত"
+        },
+        "requires": {
+          "knowledge": [
+            "মেয়ের স্বাধীনতার প্রয়োজনীয়তা"
+          ]
+        },
+        "learns": {},
+        "plants": [],
+        "payoffs": [],
+        "emotion_setups": [],
+        "subtle_emotion": true,
+        "humor": "",
+        "humor_motivation": ""
+      },
+      {
+        "id": "B4-act_1",
+        "act": 1,
+        "actor": "হাসান",
+        "goal": "মেয়ের স্বাধীনতা সমর্থন করা",
+        "choice": "একাকীত্বের ভয় দমন করে মেয়েকে পাঠিয়ে দেওয়া",
+        "cause": "নীরা তার সিদ্ধান্ত নিয়েছে এবং বাবার কথায় শান্ত হয়েছেন",
+        "consequence": "হাসান মৃদু হাসেন এবং ব্যাগটি তুলে নেন",
+        "action": "হাসান ব্যাগটি মাঝখানে রেখে মেয়ের চোখের দিকে তাকিয়ে বলেন, 'সফল হও'",
+        "location": "বাসার প্রবেশদ্বার",
+        "sound": "জুতোর শব্দ পড়ায়",
+        "emotion": "আশাবাদী কিন্তু দুঃখপ্রবণ",
+        "before": {
+          "H-01_state": "কাতর এবং ভয়ানক"
+        },
+        "after": {
+          "H-01_state": "সম্মতি দিয়েছেন",
+          "N-01_state": "প্রস্তুত হয়েছেন"
+        },
+        "requires": {
+          "knowledge": [
+            "মেয়ের সাফল্যের গুরুত্ব"
+          ]
+        },
+        "learns": {},
+        "plants": [],
+        "payoffs": [],
+        "emotion_setups": [],
+        "subtle_emotion": false,
+        "humor": "",
+        "humor_motivation": ""
+      }
+    ],
+    "total_seconds": 53.032740402999934,
+    "server_stopped": true
+  },
+  "server_log": "0.00.452.787 I srv  llama_server: initializing ...\n0.00.452.839 I cmn  common_param: common_params_print_info: build 12318 (7021f7e09) with GNU 13.3.0 for Linux x86_64\n0.00.452.840 I cmn  common_param: common_params_print_info: verbosity = 4 (adjust with the `-lv N` CLI arg)\n0.00.452.841 I cmn  common_param: device_info:\n0.00.676.946 I cmn  common_param:   - CUDA0   : Tesla T4 (14912 MiB, 14807 MiB free)\n0.00.676.959 I cmn  common_param:   - CPU     : Intel(R) Xeon(R) CPU @ 2.00GHz (12975 MiB, 12975 MiB free)\n0.00.677.089 I cmn  common_param: system_info: n_threads = 2 (n_threads_batch = 2) / 2 | CUDA : ARCHS = 500,610,700,750,800,860,890,900,1200 | USE_GRAPHS = 1 | FA_QUANTS = q4_0-q4_0,q8_0-q8_0,f16-f16,bf16-bf16,f8_e4m3-f8_e4m3 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | AVX512 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | \n0.00.677.192 I srv  init_listene: running without SSL\n0.00.677.396 I srv  init_listene: The UI is disabled\n0.00.677.412 I srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable\n0.00.679.686 I srv          init: using 5 threads for HTTP server\n0.00.679.845 W srv  server_setup: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)\n0.00.681.379 I srv    load_model: loading model '/content/redpad_story_t4_20261114/Qwen3.5-9B-Q4_K_M.gguf'\n0.00.681.411 I srv    load_model: local path '/content/redpad_story_t4_20261114/Qwen3.5-9B-Q4_K_M.gguf'\n0.00.681.454 I cmn  common_fit_a: fitting params to device memory ...\n0.00.681.467 I cmn  common_fit_a: (for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on)\n0.00.681.541 I common_params_fit_impl: getting device memory data for initial parameters:\n0.01.313.806 I common_memory_breakdown_print: | memory breakdown [MiB] | total    free    self   model   context   compute    unaccounted |\n0.01.313.857 I common_memory_breakdown_print: |   - CUDA0 (T4)         | 14912 = 14807 + (5086 =  4861 +     178 +      47) +       -4981 |\n0.01.313.870 I common_memory_breakdown_print: |   - Host               |                   556 =   545 +       0 +      11                |\n0.01.391.237 I common_params_fit_impl: projected to use 5086 MiB of device memory vs. 14807 MiB of free device memory\n0.01.391.292 I common_params_fit_impl: will leave 9721 >= 1024 MiB of free device memory, no changes needed\n0.01.391.305 I common_fit_params: successfully fit params to free device memory\n0.01.391.322 I common_fit_params: fitting params to free memory took 0.71 seconds\n0.01.508.220 I llama_model_loader: loaded meta data with 46 key-value pairs and 427 tensors from /content/redpad_story_t4_20261114/Qwen3.5-9B-Q4_K_M.gguf (version GGUF V3 (latest))\n0.01.508.260 I llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.\n0.01.508.267 I llama_model_loader: - kv   0:                       general.architecture str              = qwen35\n0.01.508.269 I llama_model_loader: - kv   1:                               general.type str              = model\n0.01.508.270 I llama_model_loader: - kv   2:                               general.name str              = Qwen3.5-9B\n0.01.508.271 I llama_model_loader: - kv   3:                           general.basename str              = Qwen3.5-9B\n0.01.508.272 I llama_model_loader: - kv   4:                       general.quantized_by str              = Unsloth\n0.01.508.272 I llama_model_loader: - kv   5:                         general.size_label str              = 9B\n0.01.508.274 I llama_model_loader: - kv   6:                            general.license str              = apache-2.0\n0.01.508.276 I llama_model_loader: - kv   7:                       general.license.link str              = https://huggingface.co/Qwen/Qwen3.5-9...\n0.01.508.278 I llama_model_loader: - kv   8:                           general.repo_url str              = https://huggingface.co/unsloth\n0.01.508.280 I llama_model_loader: - kv   9:                   general.base_model.count u32              = 1\n0.01.508.281 I llama_model_loader: - kv  10:                  general.base_model.0.name str              = Qwen3.5 9B\n0.01.508.282 I llama_model_loader: - kv  11:          general.base_model.0.organization str              = Qwen\n0.01.508.284 I llama_model_loader: - kv  12:              general.base_model.0.repo_url str              = https://huggingface.co/Qwen/Qwen3.5-9B\n0.01.508.288 I llama_model_loader: - kv  13:                               general.tags arr[str,2]       = [\"unsloth\", \"image-text-to-text\"]\n0.01.508.290 I llama_model_loader: - kv  14:                         qwen35.block_count u32              = 32\n0.01.508.291 I llama_model_loader: - kv  15:                      qwen35.context_length u32              = 262144\n0.01.508.292 I llama_model_loader: - kv  16:                    qwen35.embedding_length u32              = 4096\n0.01.508.293 I llama_model_loader: - kv  17:                 qwen35.feed_forward_length u32              = 12288\n0.01.508.294 I llama_model_loader: - kv  18:                qwen35.attention.head_count u32              = 16\n0.01.508.295 I llama_model_loader: - kv  19:             qwen35.attention.head_count_kv u32              = 4\n0.01.508.297 I llama_model_loader: - kv  20:             qwen35.rope.dimension_sections arr[i32,4]       = [11, 11, 10, 0]\n0.01.508.304 I llama_model_loader: - kv  21:                      qwen35.rope.freq_base f32              = 10000000.000000\n0.01.508.306 I llama_model_loader: - kv  22:    qwen35.attention.layer_norm_rms_epsilon f32              = 0.000001\n0.01.508.307 I llama_model_loader: - kv  23:                qwen35.attention.key_length u32              = 256\n0.01.508.308 I llama_model_loader: - kv  24:              qwen35.attention.value_length u32              = 256\n0.01.508.309 I llama_model_loader: - kv  25:                     qwen35.ssm.conv_kernel u32              = 4\n0.01.508.310 I llama_model_loader: - kv  26:                      qwen35.ssm.state_size u32              = 128\n0.01.508.311 I llama_model_loader: - kv  27:                     qwen35.ssm.group_count u32              = 16\n0.01.508.312 I llama_model_loader: - kv  28:                  qwen35.ssm.time_step_rank u32              = 32\n0.01.508.312 I llama_model_loader: - kv  29:                      qwen35.ssm.inner_size u32              = 4096\n0.01.508.313 I llama_model_loader: - kv  30:             qwen35.full_attention_interval u32              = 4\n0.01.508.314 I llama_model_loader: - kv  31:                qwen35.rope.dimension_count u32              = 64\n0.01.508.315 I llama_model_loader: - kv  32:                       tokenizer.ggml.model str              = gpt2\n0.01.508.316 I llama_model_loader: - kv  33:                         tokenizer.ggml.pre str              = qwen35\n0.01.508.319 I llama_model_loader: - kv  34:                      tokenizer.ggml.tokens arr[str,248320]  = [\"!\", \"\\\"\", \"#\", \"$\", \"%\", \"&\", \"'\", ...\n0.01.508.322 I llama_model_loader: - kv  35:                  tokenizer.ggml.token_type arr[i32,248320]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...\n0.01.508.325 I llama_model_loader: - kv  36:                      tokenizer.ggml.merges arr[str,247587]  = [\"Ġ Ġ\", \"ĠĠ ĠĠ\", \"i n\", \"Ġ t\",...\n0.01.508.326 I llama_model_loader: - kv  37:                tokenizer.ggml.eos_token_id u32              = 248046\n0.01.508.327 I llama_model_loader: - kv  38:            tokenizer.ggml.padding_token_id u32              = 248055\n0.01.508.331 I llama_model_loader: - kv  39:                    tokenizer.chat_template str              = {%- set image_count = namespace(value...\n0.01.508.332 I llama_model_loader: - kv  40:               general.quantization_version u32              = 2\n0.01.508.332 I llama_model_loader: - kv  41:                          general.file_type u32              = 15\n0.01.508.334 I llama_model_loader: - kv  42:                      quantize.imatrix.file str              = Qwen3.5-9B-GGUF/imatrix_unsloth.gguf\n0.01.508.335 I llama_model_loader: - kv  43:                   quantize.imatrix.dataset str              = unsloth_calibration_Qwen3.5-9B.txt\n0.01.508.336 I llama_model_loader: - kv  44:             quantize.imatrix.entries_count u32              = 248\n0.01.508.337 I llama_model_loader: - kv  45:              quantize.imatrix.chunks_count u32              = 80\n0.01.508.337 I llama_model_loader: - type  f32:  177 tensors\n0.01.508.338 I llama_model_loader: - type q8_0:   48 tensors\n0.01.508.339 I llama_model_loader: - type q4_K:  132 tensors\n0.01.508.339 I llama_model_loader: - type q5_K:   48 tensors\n0.01.508.340 I llama_model_loader: - type q6_K:   22 tensors\n0.01.508.342 I print_info: file format = GGUF V3 (latest)\n0.01.508.343 I print_info: file type   = Q4_K - Medium\n0.01.508.345 I print_info: file size   = 5.28 GiB (5.07 BPW) \n0.01.512.070 I llama_prepare_model_devices: using device CUDA0 (Tesla T4) (0000:00:04.0) - 14807 MiB free\n0.01.717.280 I load: 0 unused tokens\n0.01.773.859 I load: printing all EOG tokens:\n0.01.773.872 I load:   - 248044 ('<|endoftext|>')\n0.01.773.874 I load:   - 248046 ('<|im_end|>')\n0.01.773.874 I load:   - 248063 ('<|fim_pad|>')\n0.01.773.875 I load:   - 248064 ('<|repo_name|>')\n0.01.773.876 I load:   - 248065 ('<|file_sep|>')\n0.01.774.566 I load: special tokens cache size = 33\n0.01.879.638 I load: token to piece cache size = 1.7581 MB\n0.01.879.667 I print_info: arch                  = qwen35\n0.01.879.668 I print_info: vocab_only            = 0\n0.01.879.669 I print_info: no_alloc              = 0\n0.01.879.669 I print_info: n_ctx_train           = 262144\n0.01.879.670 I print_info: n_embd_inp            = 4096\n0.01.879.671 I print_info: n_embd                = 4096\n0.01.879.671 I print_info: n_embd_out            = 4096\n0.01.879.672 I print_info: n_layer               = 32\n0.01.879.673 I print_info: n_layer_all           = 32\n0.01.879.684 I print_info: n_head                = 16\n0.01.879.686 I print_info: n_head_kv             = 4\n0.01.879.687 I print_info: n_rot                 = 64\n0.01.879.688 I print_info: n_swa                 = 0\n0.01.879.689 I print_info: is_swa_any            = 0\n0.01.879.690 I print_info: non_causal_type       = 0\n0.01.879.690 I print_info: n_embd_head_k         = 256\n0.01.879.691 I print_info: n_embd_head_v         = 256\n0.01.879.693 I print_info: n_gqa                 = 4\n0.01.879.696 I print_info: n_embd_k_gqa          = 1024\n0.01.879.699 I print_info: n_embd_v_gqa          = 1024\n0.01.879.701 I print_info: f_norm_eps            = 0.0e+00\n0.01.879.703 I print_info: f_norm_rms_eps        = 1.0e-06\n0.01.879.703 I print_info: f_clamp_kqv           = 0.0e+00\n0.01.879.704 I print_info: f_max_alibi_bias      = 0.0e+00\n0.01.879.705 I print_info: f_logit_scale         = 0.0e+00\n0.01.879.706 I print_info: f_attn_scale          = 0.0e+00\n0.01.879.706 I print_info: f_attn_value_scale    = 0.0000\n0.01.879.708 I print_info: n_ff                  = 12288\n0.01.879.709 I print_info: n_expert              = 0\n0.01.879.710 I print_info: n_expert_used         = 0\n0.01.879.710 I print_info: n_expert_groups       = 0\n0.01.879.711 I print_info: n_group_used          = 0\n0.01.879.712 I print_info: causal attn           = 1\n0.01.879.713 I print_info: pooling type          = -1\n0.01.879.713 I print_info: rope type             = 40\n0.01.879.714 I print_info: rope scaling          = linear\n0.01.879.716 I print_info: freq_base_train       = 10000000.0\n0.01.879.717 I print_info: freq_scale_train      = 1\n0.01.879.717 I print_info: n_ctx_orig_yarn       = 262144\n0.01.879.718 I print_info: rope_yarn_log_mul     = 0.0000\n0.01.879.719 I print_info: rope_finetuned        = unknown\n0.01.879.719 I print_info: mrope sections        = [11, 11, 10, 0]\n0.01.879.720 I print_info: ssm_d_conv            = 4\n0.01.879.720 I print_info: ssm_d_inner           = 4096\n0.01.879.721 I print_info: ssm_d_state           = 128\n0.01.879.721 I print_info: ssm_dt_rank           = 32\n0.01.879.722 I print_info: ssm_n_group           = 16\n0.01.879.722 I print_info: ssm_dt_b_c_rms        = 0\n0.01.879.724 I print_info: model type            = 9B\n0.01.879.725 I print_info: model params          = 8.95 B\n0.01.879.726 I print_info: general.name          = Qwen3.5-9B\n0.01.879.727 I print_info: vocab type            = BPE\n0.01.879.728 I print_info: n_vocab               = 248320\n0.01.879.729 I print_info: n_merges              = 247587\n0.01.879.730 I print_info: BOS token             = 11 ','\n0.01.879.731 I print_info: EOS token             = 248046 '<|im_end|>'\n0.01.879.731 I print_info: EOT token             = 248046 '<|im_end|>'\n0.01.879.732 I print_info: PAD token             = 248055 '<|vision_pad|>'\n0.01.879.733 I print_info: LF token              = 198 'Ċ'\n0.01.879.733 I print_info: FIM PRE token         = 248060 '<|fim_prefix|>'\n0.01.879.734 I print_info: FIM SUF token         = 248062 '<|fim_suffix|>'\n0.01.879.734 I print_info: FIM MID token         = 248061 '<|fim_middle|>'\n0.01.879.735 I print_info: FIM PAD token         = 248063 '<|fim_pad|>'\n0.01.879.735 I print_info: FIM REP token         = 248064 '<|repo_name|>'\n0.01.879.736 I print_info: FIM SEP token         = 248065 '<|file_sep|>'\n0.01.879.737 I print_info: EOG token             = 248044 '<|endoftext|>'\n0.01.879.738 I print_info: EOG token             = 248046 '<|im_end|>'\n0.01.879.738 I print_info: EOG token             = 248063 '<|fim_pad|>'\n0.01.879.739 I print_info: EOG token             = 248064 '<|repo_name|>'\n0.01.879.739 I print_info: EOG token             = 248065 '<|file_sep|>'\n0.01.879.740 I print_info: max token length      = 256\n0.01.882.801 I load_tensors: loading model tensors, this can take a while... (load_mode = mmap)\n0.02.693.797 I load_tensors: offloading output layer to GPU\n0.02.693.805 I load_tensors: offloading 31 repeating layers to GPU\n0.02.693.806 I load_tensors: offloaded 33/33 layers to GPU\n0.02.693.813 I load_tensors:   CPU_Mapped model buffer size =   545.62 MiB\n0.02.693.815 I load_tensors:        CUDA0 model buffer size =  4861.28 MiB\n0.04.064.046 I cmn  common_init_: added <|endoftext|> logit bias = -inf\n0.04.064.074 I cmn  common_init_: added <|im_end|> logit bias = -inf\n0.04.064.076 I cmn  common_init_: added <|fim_pad|> logit bias = -inf\n0.04.064.076 I cmn  common_init_: added <|repo_name|> logit bias = -inf\n0.04.064.077 I cmn  common_init_: added <|file_sep|> logit bias = -inf\n0.04.064.216 I llama_context: constructing llama_context\n0.04.064.237 I llama_context: n_seq_max             = 1\n0.04.064.238 I llama_context: n_ctx                 = 4096\n0.04.064.238 I llama_context: n_ctx_seq             = 4096\n0.04.064.239 I llama_context: n_batch               = 128\n0.04.064.240 I llama_context: n_ubatch              = 128\n0.04.064.241 I llama_context: causal_attn           = 1\n0.04.064.242 I llama_context: flash_attn            = disabled\n0.04.064.242 I llama_context: kv_unified            = false\n0.04.064.247 I llama_context: freq_base             = 10000000.0\n0.04.064.248 I llama_context: freq_scale            = 1\n0.04.064.249 I llama_context: n_rs_seq              = 0\n0.04.064.250 I llama_context: n_outputs_max         = 1\n0.04.064.250 I llama_context: n_outputs_max_per_seq = 1\n0.04.064.251 I llama_context: n_ctx_seq (4096) < n_ctx_train (262144) -- the full capacity of the model will not be utilized\n0.04.072.819 I llama_context:  CUDA_Host  output buffer size =     0.95 MiB\n0.04.073.811 I llama_kv_cache:      CUDA0 KV buffer size =   128.00 MiB\n0.04.073.842 I llama_kv_cache: size =  128.00 MiB (  4096 cells,   8 layers,  1/1 seqs), K (f16):   64.00 MiB, V (f16):   64.00 MiB\n0.04.073.844 I llama_kv_cache: n_rot_k = 0, n_embd_head_k_all = 256\n0.04.073.845 I llama_kv_cache: n_rot_v = 0, n_embd_head_k_all = 256\n0.04.074.327 I llama_memory_recurrent:      CUDA0 RS buffer size =    50.25 MiB\n0.04.074.356 I llama_memory_recurrent: size =   50.25 MiB (     1 cells,  32 layers,  1 seqs  0 rs_seq), R (f32):    2.25 MiB, S (f32):   48.00 MiB, P (f32):    0.00 MiB\n0.04.075.942 I sched_reserve: reserving ...\n0.04.076.674 I resolve_fused_ops: resolving fused DeepSeek V4 HC support:\n0.04.078.227 I resolve_fused_ops: fused DeepSeek V4 HC pre enabled\n0.04.079.449 I resolve_fused_ops: fused DeepSeek V4 HC comb enabled\n0.04.080.669 I resolve_fused_ops: fused DeepSeek V4 HC post enabled\n0.04.091.391 I sched_reserve:      CUDA0 compute buffer size =    47.00 MiB\n0.04.091.421 I sched_reserve:  CUDA_Host compute buffer size =    11.00 MiB\n0.04.091.425 I sched_reserve: graph: nodes = 1945, splits = 2, input objects = 4, input tensors = 10\n0.04.091.432 I sched_reserve: reserve took 15.48 ms, sched copies = 1\n0.04.091.561 I cmn          init: llama threadpool init, n_threads = 2\n0.04.265.702 I cmn  common_conte: the context does not support partial sequence removal\n0.04.306.751 I srv    load_model: speculative decoding will use checkpoints\n0.04.306.772 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 4096, kv_unified = 'false'\n0.04.306.792 I spec common_specu: no implementations specified for speculative decoding\n0.04.306.795 I slot   load_model: id  0 | task -1 | new slot, n_ctx = 4096\n0.04.306.823 I srv    load_model: prompt cache is enabled, size limit: 8192 MiB\n0.04.306.854 I srv    load_model: use `--cache-ram 0` to disable the prompt cache\n0.04.306.855 I srv    load_model: for more info see https://github.com/ggml-org/llama.cpp/pull/16391\n0.04.306.855 I srv    load_model: context checkpoints enabled, max = 32, min spacing = 8192\n0.04.306.888 I srv          init: idle slots will be saved to prompt cache upon starting a new task\n0.04.313.590 I srv          init: init: chat template, example_format: '<|im_start|>system\nYou are a helpful assistant<|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\nHi there<|im_end|>\n<|im_start|>user\nHow are you?<|im_end|>\n<|im_start|>assistant\n<think>\n'\n0.04.314.539 I srv          init: init: chat template, thinking = 1\n0.04.314.592 I srv          init: preserve_reasoning kwarg: not supported by template\n0.04.314.661 I srv  server_run_i: model loaded\n0.04.314.687 I srv  server_on_li: listening on http://127.0.0.1:18082\n0.04.314.798 I srv  update_slots: all slots are idle\n0.05.092.482 I srv  server_strea: conv_id= (empty=1)\n0.05.098.262 I slot get_availabl: id  0 | task -1 |  - skipping, slot is empty\n0.05.098.285 I slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = -1\n0.05.098.286 I srv  get_availabl: updating prompt cache\n0.05.098.300 I srv          load:  - looking for better prompt, base f_keep = -1.000, f_sim = 0.000\n0.05.098.308 I srv        update:  - cache state: 0 prompts, 0.000 MiB (limits: 8192.000 MiB, 4096 tokens, 8589934592 est)\n0.05.098.309 I srv  get_availabl: prompt cache update took 0.02 ms\n0.05.099.721 I slot launch_slot_: id  0 | task -1 | sampler chain: logits -> penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> min-p -> ?xtc -> temp-ext -> dist \n0.05.099.761 I slot launch_slot_: id  0 | task -1 | sampler params: \n\trepeat_last_n = 64, repeat_penalty = 1.080, frequency_penalty = 0.000, presence_penalty = 0.000\n\tdry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64\n\ttop_k = 40, top_p = 0.950, min_p = 0.050, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.700\n\tmirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900\n0.05.099.764 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0\n0.05.099.783 I slot   operator(): id  0 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 0, task.n_tokens = 1866\n0.05.099.788 I slot   operator(): id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)\n0.05.284.305 I slot   operator(): id  0 | task 0 | cached n_tokens = 128, memory_seq_rm [128, end)\n0.05.489.974 I slot   operator(): id  0 | task 0 | cached n_tokens = 256, memory_seq_rm [256, end)\n0.05.633.709 I slot   operator(): id  0 | task 0 | cached n_tokens = 384, memory_seq_rm [384, end)\n0.08.431.861 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =    393, progress = 0.21, t =   3.33 s / 117.95 tokens per second\n0.08.431.881 I slot   operator(): id  0 | task 0 | cached n_tokens = 393, memory_seq_rm [393, end)\n0.08.511.242 I slot create_check: id  0 | task 0 | created context checkpoint 1 of 32 (pos_min = 392, pos_max = 392, n_tokens = 393, size = 50.251 MiB)\n0.08.545.421 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =    521, progress = 0.28, t =   3.45 s / 151.21 tokens per second\n0.08.545.443 I slot   operator(): id  0 | task 0 | cached n_tokens = 521, memory_seq_rm [521, end)\n0.08.731.660 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =    649, progress = 0.35, t =   3.63 s / 178.70 tokens per second\n0.08.731.678 I slot   operator(): id  0 | task 0 | cached n_tokens = 649, memory_seq_rm [649, end)\n0.08.879.561 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =    777, progress = 0.42, t =   3.78 s / 205.57 tokens per second\n0.08.879.579 I slot   operator(): id  0 | task 0 | cached n_tokens = 777, memory_seq_rm [777, end)\n0.08.997.534 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =    905, progress = 0.48, t =   3.90 s / 232.19 tokens per second\n0.08.997.553 I slot   operator(): id  0 | task 0 | cached n_tokens = 905, memory_seq_rm [905, end)\n0.09.143.305 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   1033, progress = 0.55, t =   4.04 s / 255.47 tokens per second\n0.09.143.322 I slot   operator(): id  0 | task 0 | cached n_tokens = 1033, memory_seq_rm [1033, end)\n0.09.262.064 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   1161, progress = 0.62, t =   4.16 s / 278.94 tokens per second\n0.09.262.083 I slot   operator(): id  0 | task 0 | cached n_tokens = 1161, memory_seq_rm [1161, end)\n0.09.409.228 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   1289, progress = 0.69, t =   4.31 s / 299.11 tokens per second\n0.09.409.247 I slot   operator(): id  0 | task 0 | cached n_tokens = 1289, memory_seq_rm [1289, end)\n0.09.534.000 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   1417, progress = 0.76, t =   4.43 s / 319.56 tokens per second\n0.09.534.007 I slot   operator(): id  0 | task 0 | cached n_tokens = 1417, memory_seq_rm [1417, end)\n0.09.678.122 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   1545, progress = 0.83, t =   4.58 s / 337.46 tokens per second\n0.09.678.141 I slot   operator(): id  0 | task 0 | cached n_tokens = 1545, memory_seq_rm [1545, end)\n0.09.798.276 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   1673, progress = 0.90, t =   4.70 s / 356.07 tokens per second\n0.09.798.293 I slot   operator(): id  0 | task 0 | cached n_tokens = 1673, memory_seq_rm [1673, end)\n0.09.941.591 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   1738, progress = 0.93, t =   4.84 s / 358.96 tokens per second\n0.09.941.612 I slot   operator(): id  0 | task 0 | cached n_tokens = 1738, memory_seq_rm [1738, end)\n0.10.047.224 I slot create_check: id  0 | task 0 | created context checkpoint 2 of 32 (pos_min = 1737, pos_max = 1737, n_tokens = 1738, size = 50.251 MiB)\n0.10.067.976 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =   1862, progress = 1.00, t =   4.97 s / 374.79 tokens per second\n0.10.067.995 I slot   operator(): id  0 | task 0 | cached n_tokens = 1862, memory_seq_rm [1862, end)\n0.10.068.561 I slot init_sampler: id  0 | task 0 | init sampler, took 0.53 ms, tokens: text = 1866, total = 1866\n0.10.207.967 I slot create_check: id  0 | task 0 | created context checkpoint 3 of 32 (pos_min = 1861, pos_max = 1861, n_tokens = 1862, size = 50.251 MiB)\n0.13.374.093 I slot print_timing: id  0 | task 0 | n_gen =    100, tg =  31.73 t/s, tg_3s =  32.05 t/s\n0.16.393.204 I slot print_timing: id  0 | task 0 | n_gen =    194, tg =  31.44 t/s, tg_3s =  31.13 t/s\n0.19.397.076 I slot print_timing: id  0 | task 0 | n_gen =    287, tg =  31.28 t/s, tg_3s =  30.96 t/s\n0.22.404.080 I slot print_timing: id  0 | task 0 | n_gen =    380, tg =  31.19 t/s, tg_3s =  30.93 t/s\n0.25.412.128 I slot print_timing: id  0 | task 0 | n_gen =    472, tg =  31.07 t/s, tg_3s =  30.58 t/s\n0.28.413.667 I slot print_timing: id  0 | task 0 | n_gen =    562, tg =  30.89 t/s, tg_3s =  29.98 t/s\n0.31.445.606 I slot print_timing: id  0 | task 0 | n_gen =    651, tg =  30.67 t/s, tg_3s =  29.35 t/s\n0.34.446.520 I slot print_timing: id  0 | task 0 | n_gen =    738, tg =  30.46 t/s, tg_3s =  28.99 t/s\n0.37.448.273 I slot print_timing: id  0 | task 0 | n_gen =    826, tg =  30.34 t/s, tg_3s =  29.32 t/s\n0.40.480.113 I slot print_timing: id  0 | task 0 | n_gen =    914, tg =  30.21 t/s, tg_3s =  29.03 t/s\n0.43.485.270 I slot print_timing: id  0 | task 0 | n_gen =    999, tg =  30.03 t/s, tg_3s =  28.28 t/s\n0.46.513.455 I slot print_timing: id  0 | task 0 | n_gen =   1085, tg =  29.90 t/s, tg_3s =  28.40 t/s\n0.49.538.979 I slot print_timing: id  0 | task 0 | n_gen =   1171, tg =  29.78 t/s, tg_3s =  28.42 t/s\n0.52.552.426 I slot print_timing: id  0 | task 0 | n_gen =   1253, tg =  29.60 t/s, tg_3s =  27.21 t/s\n0.52.663.183 I slot print_timing: id  0 | task 0 | prompt eval time =    5154.03 ms /  1866 tokens (    2.76 ms per token,   362.05 tokens per second)\n0.52.663.232 I slot print_timing: id  0 | task 0 |        eval time =   42409.35 ms /  1256 tokens (   33.79 ms per token,    29.59 tokens per second)\n0.52.663.250 I slot print_timing: id  0 | task 0 |       total time =   47563.38 ms /  3122 tokens\n0.52.663.274 I slot print_timing: id  0 | task 0 |    graphs reused =       1254\n0.52.663.289 I slot print_timing: id  0 | task 0 |   graph reallocs =          0    /     0        (same size) / (changed size)\n0.52.664.948 I slot      release: id  0 | task 0 | stop processing: n_tokens = 3121, truncated = 0\n0.52.665.004 I srv  update_slots: all slots are idle\n0.52.685.741 I srv    operator(): operator(): cleaning up before exit...\n0.52.688.127 I common_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |\n0.52.688.161 I common_memory_breakdown_print: |   - CUDA0 (T4)         | 14912 = 9661 + (5086 =  4861 +     178 +      47) +         164 |\n0.52.688.176 I common_memory_breakdown_print: |   - Host               |                  556 =   545 +       0 +      11                |\n",
+  "ledger": {
+    "ceiling": 8,
+    "historical": [
+      {
+        "case": "canary",
+        "state": "completed",
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 124,
+          "prompt_tokens": 127,
+          "total_tokens": 251,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "load_seconds": 71.12815384999999,
+        "generation_seconds": 70.35668729099984,
+        "total_seconds": 144.57331105899993,
+        "sampled_device_used_mib": 5231,
+        "sampled_server_rss_bytes": 1621516288,
+        "offload_lines": [
+          "0.24.336.465 I load_tensors: offloaded 33/33 layers to GPU",
+          "0.24.336.476 I load_tensors:        CUDA0 model buffer size =  4861.28 MiB"
+        ],
+        "template_sha256": "051a136079635359b9a55cc2fac4dacf3e3be05127ce7be999a6f73b86058306",
+        "raw_sha256": "a9dd98d39e91e1eb4b794e6b5626878a5af19408aa294b762d26422f49541d5d",
+        "server_stopped": true,
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 127,
+          "prompt_ms": 65937.343,
+          "prompt_per_token_ms": 519.1916771653542,
+          "prompt_per_second": 1.9260709367679558,
+          "predicted_n": 124,
+          "predicted_ms": 4413.226,
+          "predicted_per_token_ms": 35.87988617886179,
+          "predicted_per_second": 27.870768458266134
+        }
+      },
+      {
+        "case": "foundation",
+        "state": "stopped_with_evidence",
+        "finish_reason": "length",
+        "usage": {
+          "completion_tokens": 1536,
+          "prompt_tokens": 1135,
+          "total_tokens": 2671,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "load_seconds": 4.228568951999932,
+        "generation_seconds": 74.07867742000008,
+        "total_seconds": 78.63082022799995,
+        "sampled_device_used_mib": 5249,
+        "sampled_server_rss_bytes": 1443651584,
+        "offload_lines": [
+          "0.02.191.595 I load_tensors: offloaded 33/33 layers to GPU",
+          "0.02.191.605 I load_tensors:        CUDA0 model buffer size =  4861.28 MiB"
+        ],
+        "template_sha256": "3cf9abff64e0769fe7ff6ac526c9feb1d03bad2e7533cee350af39e86d083cc4",
+        "raw_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661",
+        "server_stopped": true,
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 1135,
+          "prompt_ms": 1627.216,
+          "prompt_per_token_ms": 1.4336704845814976,
+          "prompt_per_second": 697.5103489641203,
+          "predicted_n": 1536,
+          "predicted_ms": 72443.023,
+          "predicted_per_token_ms": 47.19415179153094,
+          "predicted_per_second": 21.18906606092349
+        }
+      }
+    ],
+    "new_calls": [
+      {
+        "id": "driverbound_canary_v1",
+        "state": "completed",
+        "payload_sha256": "241487f5015374a0b8da8d09e35db998b339a35a96047bead90f54f09c6d4bf2",
+        "finish_reason": "stop",
+        "raw_sha256": "1ff2f6a5c4173cdd1841c1ac043f48ca3ac3eb8586ebe1bf45a9aa418e76b7ff"
+      },
+      {
+        "id": "driverbound_foundation_v1",
+        "section": "foundation",
+        "state": "completed",
+        "payload_sha256": "22ab2d6385a800045ba5b26667e1c452778d90ab220222b90c6e8f882a702994",
+        "finish_reason": "stop",
+        "raw_sha256": "61046abd5a395d4ae3b74a2d3ee83432a3894bcd3fe2f5d0b974d6b42f484756"
+      },
+      {
+        "id": "driverbound_act_1_v1",
+        "section": "act_1",
+        "state": "completed",
+        "payload_sha256": "ea4d32a5d4447fa39d9958fb57ca348b0ef9b35c46afdb20ec227ccaf72ccbdf",
+        "finish_reason": "stop",
+        "raw_sha256": "7dac5fbe11683a192bd5ea4f4360769d40134b3a4bd7f8f012f6d009f68daabe"
+      }
+    ],
+    "authorization": "owner-story-total8-five-sections-20261119",
+    "amendment": {
+      "previous_ceiling": 7,
+      "revised_ceiling": 8,
+      "consumed_at_authorization": 3,
+      "baseline_sha256": "d75415abad0062b6279f3317a0cf2ec421543ad0326e80802a8a704fe19cebb5",
+      "scope": "Five mandatory Story sections only"
+    }
+  }
+}
