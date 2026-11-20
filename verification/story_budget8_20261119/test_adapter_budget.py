@@ -23,7 +23,7 @@ class AdapterBudgetTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             def stop_before_runtime():raise RuntimeError('ELIGIBILITY_SENTINEL_NO_MODEL')
             scope={'OUT':Path(folder),'budget':lambda:ledger,'BASELINE':BASELINE,
-              'SECTIONS':SECTIONS,'validate':validate,'section_eligibility':stop_before_runtime}
+              'SECTIONS':SECTIONS,'validate':validate,'section_eligibility':stop_before_runtime,'require_story_handoff':lambda parts:None}
             exec(compile(ast.Module(body=[node],type_ignores=[]),'runner-guard-only','exec'),scope)
             scope['run_one']({'id':'driverbound_'+section+'_v1','section':section})
 

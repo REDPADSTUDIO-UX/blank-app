@@ -26,6 +26,93 @@ import json
 AUTHORIZATION='owner-story-total8-five-sections-20261119'
 SECTIONS=('foundation','act_1','act_2','act_3','reflection')
 
+"""Research-only structural handoff guard, embedded into the standalone runner.
+No prose repair, ID aliasing, inference, ledger mutation or artistic acceptance.
+"""
+
+class StoryHandoffError(ValueError):
+    def __init__(self, findings):
+        self.findings = findings
+        super().__init__('STORY_HANDOFF_INVALID: ' + '; '.join(
+            f"{f['path']}: {f['code']}" for f in findings))
+
+
+def require_story_handoff(parts):
+    """Validate a completed prefix without modifying any supplied artifact.
+    JSON schema is checked separately. These checks enforce existing prompt
+    identities and the cross-field rules of the full Story structural validator.
+    A pass does not establish semantic knowledge or professional quality.
+    """
+    findings = []
+    def issue(path, code):
+        findings.append({'path': path, 'code': code, 'repair_applied': False})
+    if parts == {}:
+        return
+    order = ('foundation', 'act_1', 'act_2', 'act_3', 'reflection')
+    if not isinstance(parts, dict) or tuple(parts) != order[:len(parts)]:
+        raise StoryHandoffError([{'path': '$', 'code': 'section_prefix_invalid', 'repair_applied': False}])
+    foundation = parts['foundation']
+    try:
+        ids = [c['id'] for c in foundation['characters']]
+        initial = foundation['initial_knowledge']
+        if len(ids) != 2 or set(ids) != {'N', 'H'}:
+            issue('foundation.characters', 'expected_exact_N_H_ids')
+        if set(initial) != set(ids):
+            issue('foundation.initial_knowledge', 'character_keys_mismatch')
+        known = {k: set(v) for k, v in initial.items()}
+        seen, plants, paid, last = set(), set(), set(), None
+        for act in range(1, 4):
+            name = f'act_{act}'
+            if name not in parts:
+                break
+            rows = parts[name]
+            if not isinstance(rows, list) or len(rows) != 4:
+                issue(name, 'expected_four_beats')
+                continue
+            for offset, beat in enumerate(rows, 1):
+                path = f'{name}[{offset - 1}]'
+                bid = beat['id']
+                if bid != f'B{(act - 1) * 4 + offset}' or bid in seen or beat['act'] != act:
+                    issue(path + '.id', 'beat_identity_or_act_invalid')
+                if beat['actor'] not in ids:
+                    issue(path + '.actor', 'unknown_character')
+                if (beat['cause'] != 'brief' if not seen else beat['cause'] not in seen):
+                    issue(path + '.cause', 'earlier_causal_reference_required')
+                if last is not None and beat['before'] != last:
+                    issue(path + '.before', 'predecessor_state_mismatch')
+                if set(beat['before']) != set(beat['after']) or beat['before'] == beat['after']:
+                    issue(path + '.after', 'tracked_state_change_invalid')
+                for field in ('requires', 'learns'):
+                    for char, facts in beat[field].items():
+                        if char not in known:
+                            issue(path + '.' + field + '.' + char, 'unknown_knowledge_character')
+                        elif field == 'requires' and not set(facts) <= known[char]:
+                            issue(path + '.requires.' + char, 'knowledge_not_established')
+                for payoff in beat['payoffs']:
+                    if payoff not in plants or payoff in paid:
+                        issue(path + '.payoffs', 'earlier_unresolved_plant_required')
+                    paid.add(payoff)
+                for plant in beat['plants']:
+                    if plant in plants:
+                        issue(path + '.plants', 'duplicate_plant')
+                    plants.add(plant)
+                if not set(beat['emotion_setups']) <= seen:
+                    issue(path + '.emotion_setups', 'earlier_emotional_reference_required')
+                for char, facts in beat['learns'].items():
+                    if char in known:
+                        known[char].update(facts)
+                seen.add(bid)
+                last = beat['after']
+        if 'reflection' in parts:
+            for row in parts['reflection']['self_critique']:
+                if row['beat'] not in seen:
+                    issue('reflection.self_critique', 'unknown_beat')
+    except (KeyError, TypeError, AttributeError, ValueError):
+        issue('$', 'malformed_handoff_shape')
+    if findings:
+        raise StoryHandoffError(findings)
+
+
 def digest(value):
     return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
 
@@ -117,6 +204,7 @@ def run_one(case):
  extra=validate(ledger,BASELINE)
  if case.get('section')!=SECTIONS[len(extra)]:raise RuntimeError('Only the next mandatory section is authorized')
  if any(e['state']!='completed' for e in extra):raise RuntimeError('Required prior section incomplete')
+ require_story_handoff(case.get('prior_sections',{}))
  section_eligibility()
  if any(x['id']==case['id'] for x in ledger['new_calls']):raise RuntimeError('Prior submitted attempt; never retry blindly')
  server=None;log=RESEARCH/(case['id']+'.server.log');started=time.monotonic()
@@ -175,9 +263,13 @@ def run_one(case):
   if case.get('schema'):
    import jsonschema
    jsonschema.validate(parsed,case['schema'])
+  state['schema_validated']=True
+  require_story_handoff(dict(case['prior_sections'],**{case['section']:parsed}))
+  state['handoff_validated']=True
   state['parsed']=parsed
  except Exception as e:
   state.update(error_type=type(e).__name__,error=str(e),state='stopped_with_evidence')
+  if isinstance(e,StoryHandoffError):state['handoff_findings']=e.findings
  finally:
   if server is not None and server.poll() is None:
    os.killpg(server.pid,signal.SIGTERM)
@@ -194,6 +286,7 @@ def run_one(case):
  return state
 
 def generate_section(name):
+ if name not in SECTIONS:raise StoryHandoffError([{'path':'section','code':'unknown_section','repair_applied':False}])
  canary=json.loads((OUT/'driverbound_canary_v1.json').read_text())
  assert canary['state']=='completed' and canary['finish_reason']=='stop'
  prior={}
@@ -202,6 +295,7 @@ def generate_section(name):
   result=json.loads((OUT/('driverbound_'+n+'_v1.json')).read_text())
   assert result['state']=='completed' and result['finish_reason']=='stop'
   prior[n]=result['parsed']
+ require_story_handoff(prior)
  foundation=prior.get('foundation')
  beats=[b for n in ('act_1','act_2','act_3') for b in prior.get(n,[])]
  context={}
@@ -227,5 +321,5 @@ def generate_section(name):
  if name.startswith('act_'):
   system+=' Use concise Bengali phrases: goal/choice/consequence/action/emotion each 2-5 words, location/sound 1-2 words. Track before/after with ONE compact progress key and copy exact previous after to next before. Knowledge facts use short ASCII IDs; no needless new facts. Empty requires/learns maps when no knowledge change; empty plants/payoffs/emotion_setups arrays when inapplicable. humor/humor_motivation empty unless motivated. Exactly 4 beats. This is a compact causal treatment, not dialogue.'
  prompt='ORIGINAL BRIEF (unchanged):\n'+BUNDLE['brief']+'\nSECTION: '+name+'\n'+details[name]+'\nACTUAL PRIOR GENERATED CONTEXT:\n'+json.dumps(context,ensure_ascii=False,separators=(',',':'))+'\nEXACT SECTION SCHEMA:\n'+json.dumps(BUNDLE['contracts'][name],separators=(',',':'))
- return run_one({'id':'driverbound_'+name+'_v1','section':name,'system':system,'prompt':prompt,'max_new_tokens':1536,'schema':BUNDLE['contracts'][name]})
+ return run_one({'id':'driverbound_'+name+'_v1','section':name,'prior_sections':prior,'system':system,'prompt':prompt,'max_new_tokens':1536,'schema':BUNDLE['contracts'][name]})
 print('SECTION_ONLY_BUDGET8_READY: no generation submitted; call generate_section for the next mandatory section only.')

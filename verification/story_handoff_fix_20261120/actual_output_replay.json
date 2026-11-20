@@ -1,0 +1,144 @@
+{
+  "scope": "CPU replay of saved genuine model output; not new inference",
+  "error_type": "StoryHandoffError",
+  "findings": [
+    {
+      "path": "foundation.characters",
+      "code": "expected_exact_N_H_ids",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[0].id",
+      "code": "beat_identity_or_act_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[0].actor",
+      "code": "unknown_character",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[0].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[0].after",
+      "code": "tracked_state_change_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[0].requires.knowledge",
+      "code": "unknown_knowledge_character",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[0].emotion_setups",
+      "code": "earlier_emotional_reference_required",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[1].id",
+      "code": "beat_identity_or_act_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[1].actor",
+      "code": "unknown_character",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[1].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[1].before",
+      "code": "predecessor_state_mismatch",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[1].after",
+      "code": "tracked_state_change_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[1].requires.knowledge",
+      "code": "unknown_knowledge_character",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[1].learns.knowledge",
+      "code": "unknown_knowledge_character",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[2].id",
+      "code": "beat_identity_or_act_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[2].actor",
+      "code": "unknown_character",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[2].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[2].before",
+      "code": "predecessor_state_mismatch",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[2].after",
+      "code": "tracked_state_change_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[2].requires.knowledge",
+      "code": "unknown_knowledge_character",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[3].id",
+      "code": "beat_identity_or_act_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[3].actor",
+      "code": "unknown_character",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[3].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[3].before",
+      "code": "predecessor_state_mismatch",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[3].after",
+      "code": "tracked_state_change_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[3].requires.knowledge",
+      "code": "unknown_knowledge_character",
+      "repair_applied": false
+    }
+  ],
+  "no_runtime_launch": true,
+  "no_output_repair": true,
+  "consumed": 5,
+  "ceiling": 8,
+  "remaining": 3,
+  "new_model_calls": 0,
+  "human_review": "PENDING",
+  "benchmark_resume": "BLOCKED_INVALID_PRIOR_OUTPUT"
+}
