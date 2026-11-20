@@ -1,0 +1,234 @@
+{
+  "observed_at_utc": "2026-11-20T11:24:46.505454+00:00",
+  "runner_git_blob_sha1": "c96920edee05bd382b1de90e3e4ad072161df161",
+  "runner_unchanged": true,
+  "historical_prefix_unchanged": true,
+  "consumed": 5,
+  "ceiling": 8,
+  "remaining": 3,
+  "output_integrity_checks": [
+    {
+      "section": "foundation",
+      "raw_http_matches": true,
+      "raw_file_hash_matches": true,
+      "reserved_payload_hash_matches": true,
+      "original_schema_pass": true,
+      "finish_reason": "stop",
+      "server_stopped": true,
+      "usage": {
+        "completion_tokens": 867,
+        "prompt_tokens": 1150,
+        "total_tokens": 2017,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "section": "act_1",
+      "raw_http_matches": true,
+      "raw_file_hash_matches": true,
+      "reserved_payload_hash_matches": true,
+      "original_schema_pass": true,
+      "finish_reason": "stop",
+      "server_stopped": true,
+      "usage": {
+        "completion_tokens": 1256,
+        "prompt_tokens": 1866,
+        "total_tokens": 3122,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    }
+  ],
+  "character_ids": [
+    "N-01",
+    "H-01"
+  ],
+  "required_foundation_ids": [
+    "N",
+    "H"
+  ],
+  "unknown_character_knowledge_keys": [
+    {
+      "beat": "B1-act_1",
+      "field": "requires",
+      "key": "knowledge"
+    },
+    {
+      "beat": "B2-act_1",
+      "field": "requires",
+      "key": "knowledge"
+    },
+    {
+      "beat": "B2-act_1",
+      "field": "learns",
+      "key": "knowledge"
+    },
+    {
+      "beat": "B3-act_1",
+      "field": "requires",
+      "key": "knowledge"
+    },
+    {
+      "beat": "B4-act_1",
+      "field": "requires",
+      "key": "knowledge"
+    }
+  ],
+  "state_chain_breaks": [
+    {
+      "previous": "B1-act_1",
+      "next": "B2-act_1"
+    },
+    {
+      "previous": "B2-act_1",
+      "next": "B3-act_1"
+    },
+    {
+      "previous": "B3-act_1",
+      "next": "B4-act_1"
+    }
+  ],
+  "blocker": {
+    "stage": "act_2",
+    "error_type": "KeyError",
+    "error": "'knowledge'",
+    "traceback": "Traceback (most recent call last):\n  File \"/tmp/ipykernel_801/3557394870.py\", line 5, in <cell line: 0>\n    act2_result=generate_section('act_2')\n  File \"sections_only_resume_cell.py\", line 215, in generate_section\nKeyError: 'knowledge'\n",
+    "ledger_unchanged": true,
+    "ledger": {
+      "ceiling": 8,
+      "historical": [
+        {
+          "case": "canary",
+          "state": "completed",
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 124,
+            "prompt_tokens": 127,
+            "total_tokens": 251,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "load_seconds": 71.12815384999999,
+          "generation_seconds": 70.35668729099984,
+          "total_seconds": 144.57331105899993,
+          "sampled_device_used_mib": 5231,
+          "sampled_server_rss_bytes": 1621516288,
+          "offload_lines": [
+            "0.24.336.465 I load_tensors: offloaded 33/33 layers to GPU",
+            "0.24.336.476 I load_tensors:        CUDA0 model buffer size =  4861.28 MiB"
+          ],
+          "template_sha256": "051a136079635359b9a55cc2fac4dacf3e3be05127ce7be999a6f73b86058306",
+          "raw_sha256": "a9dd98d39e91e1eb4b794e6b5626878a5af19408aa294b762d26422f49541d5d",
+          "server_stopped": true,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 127,
+            "prompt_ms": 65937.343,
+            "prompt_per_token_ms": 519.1916771653542,
+            "prompt_per_second": 1.9260709367679558,
+            "predicted_n": 124,
+            "predicted_ms": 4413.226,
+            "predicted_per_token_ms": 35.87988617886179,
+            "predicted_per_second": 27.870768458266134
+          }
+        },
+        {
+          "case": "foundation",
+          "state": "stopped_with_evidence",
+          "finish_reason": "length",
+          "usage": {
+            "completion_tokens": 1536,
+            "prompt_tokens": 1135,
+            "total_tokens": 2671,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "load_seconds": 4.228568951999932,
+          "generation_seconds": 74.07867742000008,
+          "total_seconds": 78.63082022799995,
+          "sampled_device_used_mib": 5249,
+          "sampled_server_rss_bytes": 1443651584,
+          "offload_lines": [
+            "0.02.191.595 I load_tensors: offloaded 33/33 layers to GPU",
+            "0.02.191.605 I load_tensors:        CUDA0 model buffer size =  4861.28 MiB"
+          ],
+          "template_sha256": "3cf9abff64e0769fe7ff6ac526c9feb1d03bad2e7533cee350af39e86d083cc4",
+          "raw_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661",
+          "server_stopped": true,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 1135,
+            "prompt_ms": 1627.216,
+            "prompt_per_token_ms": 1.4336704845814976,
+            "prompt_per_second": 697.5103489641203,
+            "predicted_n": 1536,
+            "predicted_ms": 72443.023,
+            "predicted_per_token_ms": 47.19415179153094,
+            "predicted_per_second": 21.18906606092349
+          }
+        }
+      ],
+      "new_calls": [
+        {
+          "id": "driverbound_canary_v1",
+          "state": "completed",
+          "payload_sha256": "241487f5015374a0b8da8d09e35db998b339a35a96047bead90f54f09c6d4bf2",
+          "finish_reason": "stop",
+          "raw_sha256": "1ff2f6a5c4173cdd1841c1ac043f48ca3ac3eb8586ebe1bf45a9aa418e76b7ff"
+        },
+        {
+          "id": "driverbound_foundation_v1",
+          "section": "foundation",
+          "state": "completed",
+          "payload_sha256": "22ab2d6385a800045ba5b26667e1c452778d90ab220222b90c6e8f882a702994",
+          "finish_reason": "stop",
+          "raw_sha256": "61046abd5a395d4ae3b74a2d3ee83432a3894bcd3fe2f5d0b974d6b42f484756"
+        },
+        {
+          "id": "driverbound_act_1_v1",
+          "section": "act_1",
+          "state": "completed",
+          "payload_sha256": "ea4d32a5d4447fa39d9958fb57ca348b0ef9b35c46afdb20ec227ccaf72ccbdf",
+          "finish_reason": "stop",
+          "raw_sha256": "7dac5fbe11683a192bd5ea4f4360769d40134b3a4bd7f8f012f6d009f68daabe"
+        }
+      ],
+      "authorization": "owner-story-total8-five-sections-20261119",
+      "amendment": {
+        "previous_ceiling": 7,
+        "revised_ceiling": 8,
+        "consumed_at_authorization": 3,
+        "baseline_sha256": "d75415abad0062b6279f3317a0cf2ec421543ad0326e80802a8a704fe19cebb5",
+        "scope": "Five mandatory Story sections only"
+      }
+    },
+    "act2_output_exists": false,
+    "stop_without_retry": true
+  },
+  "postflight": {
+    "gpu": "Tesla T4, 15360, 14913, 580.82.07",
+    "gpu_processes": ""
+  },
+  "complete_story": false,
+  "full_story_structural_validation": "NOT RUN — missing Act 2, Act 3, Reflection",
+  "fifteen_criterion_full_story_qc": "NOT RUN — partial evidence only; no numeric scores",
+  "human_review": "PENDING; complete-story packet NOT READY",
+  "no_canary_rerun": true,
+  "new_generation_calls": 2,
+  "production_worker_changed": false,
+  "evidence_validation_operational_notes": [
+    {
+      "issue": "Dependency assertion initially inspected main executable rather than dynamically loaded CUDA backend.",
+      "resolution": "Original failed cell retained. Actual libggml-cuda.so ldd resolves driver from /usr/lib64-nvidia; no checksum failed or isolation changed."
+    },
+    {
+      "issue": "Final evidence checker initially assumed all ledger entries had a section field; historical canary does not.",
+      "resolution": "Failed validation retained; evidence-only checker corrected to read optional section. No model call or historical entry changed."
+    }
+  ]
+}
