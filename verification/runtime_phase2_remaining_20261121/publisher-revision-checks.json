@@ -1,0 +1,75 @@
+{
+  "qwen35_moe": {
+    "config_url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B/raw/59d61f3ce65a6d9863b86d2e96597125219dc754/config.json",
+    "status": 200,
+    "git_blob_sha1": "2fd92bfc9ee58bd0274ad207d4120c3e7458dde8",
+    "tree_url": "https://huggingface.co/api/models/Qwen/Qwen3.5-35B-A3B/tree/59d61f3ce65a6d9863b86d2e96597125219dc754?expand=true",
+    "tree_status": 200,
+    "tree_blob_matches": true
+  },
+  "wan_animate2_distilled": {
+    "config_url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/raw/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/model_index.json",
+    "status": 200,
+    "git_blob_sha1": "a9ac565b8c4910ddd307178af00d69b94fd113dd",
+    "tree_url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/tree/59e4141466bcb1bf9733eca1bc78be6891c9fbdf?expand=true",
+    "tree_status": 200,
+    "tree_blob_matches": true
+  },
+  "ltx25": {
+    "method": "HEAD without redirects",
+    "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/49b093a39c19169a8a81721dcc541e07e945232f/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+    "status": 401,
+    "linked_etag": null,
+    "weights_requested": false
+  },
+  "stable-audio-tools": {
+    "url": "https://pypi.org/pypi/stable-audio-tools/0.0.20/json",
+    "version": "0.0.20",
+    "requires_python": "<3.11,>=3.10",
+    "license": null,
+    "license_expression": null,
+    "requires_dist": [
+      "alias-free-torch==0.0.6",
+      "dill",
+      "einops",
+      "einops-exts",
+      "huggingface_hub",
+      "importlib-resources==5.12.0",
+      "torchsde",
+      "nnAudio",
+      "PyWavelets==1.4.1",
+      "safetensors",
+      "scipy",
+      "sentencepiece==0.1.99",
+      "soxr",
+      "torch==2.7.1",
+      "torchaudio==2.7.1",
+      "tqdm",
+      "transformers",
+      "v-diffusion-pytorch==0.0.2",
+      "vector-quantize-pytorch==1.14.41",
+      "setuptools<81",
+      "auraloss==0.4.0; extra == \"train\"",
+      "descript-audio-codec==1.0.0; extra == \"train\"",
+      "encodec==0.1.1; extra == \"train\"",
+      "inf-cl; extra == \"train\"",
+      "laion-clap==1.1.4; extra == \"train\"",
+      "pandas==2.0.2; extra == \"train\"",
+      "prefigure==0.0.9; extra == \"train\"",
+      "pytorch_lightning==2.5.5; extra == \"train\"",
+      "torchmetrics==0.11.4; extra == \"train\"",
+      "wandb==0.15.4; extra == \"train\"",
+      "webdataset==0.2.100; extra == \"train\"",
+      "gradio==6.3.0; extra == \"ui\"",
+      "stable-audio-tools-dev[train,ui]; extra == \"all\""
+    ]
+  },
+  "encodec": {
+    "url": "https://pypi.org/pypi/encodec/0.1.1/json",
+    "version": "0.1.1",
+    "requires_python": ">=3.8.0",
+    "license": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "license_expression": null,
+    "requires_dist": null
+  }
+}
