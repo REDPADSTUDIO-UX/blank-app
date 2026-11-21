@@ -401,10 +401,11 @@ class NativeLocalTests(unittest.TestCase):
         old=subprocess.Popen;envs=[]
         def capture(argv,**kw):envs.append(kw['env']);return old(argv,**kw)
         id=self.runtime.queue_fixture()
-        with patch.dict(os.environ,{'OPENAI_API_KEY':'UNIT_NOT_SECRET','HF_TOKEN':'UNIT_NOT_SECRET','HTTPS_PROXY':'http://fixture.invalid'}),patch('subprocess.Popen',side_effect=capture):
+        with patch.dict(os.environ,{'OPENAI_API_KEY':'UNIT_NOT_SECRET','HF_TOKEN':'UNIT_NOT_SECRET','HTTPS_PROXY':'http://fixture.invalid','LOGNAME':'HOST_USER_MUST_NOT_LEAK'}),patch('subprocess.Popen',side_effect=capture):
             self.assertEqual(self.runtime.run(id,authorized=True,timeout=2)['state'],'CPU MOCK COMPLETE')
         self.assertNotIn('HF_TOKEN',envs[0]);self.assertNotIn('OPENAI_API_KEY',envs[0]);self.assertNotIn('HTTPS_PROXY',envs[0])
         self.assertEqual(envs[0]['TORCH_FORCE_WEIGHTS_ONLY_LOAD'],'1')
+        self.assertEqual(envs[0]['LOGNAME'],'redpad-worker')
 
     def test_task_staging_native_worker_queue_binding_is_idempotent_and_not_launch_permission(self):
         from tests.test_offline_six_preparation import OfflineSixTests

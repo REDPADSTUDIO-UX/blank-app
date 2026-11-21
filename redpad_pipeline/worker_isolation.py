@@ -199,7 +199,7 @@ def verify_running_runtime(identity):
 def environment(*, fixture_root=None, gpu=False):
     env = {
         'PATH': '/usr/bin:/bin' if fixture_root else '/redpad/runtime/bin:/usr/bin:/bin',
-        'HOME': '/tmp', 'TMPDIR': '/tmp',
+        'HOME': '/tmp', 'TMPDIR': '/tmp', 'LOGNAME': 'redpad-worker',
         'PYTHONPATH': str(fixture_root) if fixture_root else '/redpad/studio',
         'PYTHONDONTWRITEBYTECODE': '1', 'PYTHONNOUSERSITE': '1', 'PYTHONSAFEPATH': '1',
         'HF_HUB_OFFLINE': '1', 'TRANSFORMERS_OFFLINE': '1', 'HF_DATASETS_OFFLINE': '1',
