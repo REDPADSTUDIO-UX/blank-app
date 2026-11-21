@@ -1,0 +1,13 @@
+# Reproduction and diagnostic history
+
+The base was feature commit 815cacfa26dd370039e7e11c01889d8b7174fc83. Logs record local CPU diagnostics. No production workflow or worker was changed.
+
+Qwen ran with `python qwen_preflight_fixture.py` and `env HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 /tmp/redpad-exact/wan-env/bin/python -B qwen_backend_fixture.py /tmp/redpad-approved/overlay`. The latter used CPython 3.11.18, Torch 2.7.1+cpu and Transformers 5.22.2. Both exited 0. The manifest came from the pinned public config, index, card and publisher tree. No shard GET was issued.
+
+Wan source archive URL is https://codeload.github.com/kelseyee/diffusers/tar.gz/14f482c30c91021cc0e363a0a17a115b44972aee . Archive and separately mounted native library hashes are recorded in wan-source-and-libraries.sha256. The preexisting wan-env prefix is described by the historical ../runtime_phase2_exact_20261121/wan_animate2.lock.txt. The diagnostic overlay used `uv --cache-dir /tmp/redpad-uv-cache pip install --target /tmp/redpad-approved/overlay --python /tmp/redpad-exact/wan-env/bin/python 'huggingface-hub==1.31.0' 'safetensors==0.8.0' 'transformers==5.22.2'`, then `uv --cache-dir /tmp/redpad-uv-cache pip install --no-deps --target /tmp/redpad-approved/overlay 'opencv-python-headless==4.13.0.90'`. Overlay resolution output is in deps2.log and cv.log. The diagnostic is deliberately distinct from a production lock.
+
+The first Hub 1.23.0 solve was rejected due to Transformers requiring Hub 1.31.0 or newer. Bubblewrap reported a read-only uid map. A Landlock probe returned ENOSYS. Docker first needed the interpreter's symlink mount path, then a private tmpfs for Torch's import, then the individually mounted libxcb, libXau and libXdmcp libraries for OpenCV. The diagnostic did not mount the checkout, workspace home, docker socket, credential directories or any GPU devices. Source, interpreter, overlay and system-library mounts were read-only. See wan-attempt1.log through wan-attempt5.log for the unsuccessful diagnostic attempts.
+
+Copy wan_sandbox_fixture.py to /tmp/redpad-approved and create /tmp/redpad-approved/private-canary as a synthetic host-only file. Execute `timeout 90 bash wan-container-command.sh` from this directory with the exact prefixes and source unpacked at the paths in the command. The final run exited 0. Routine retries are excluded from the reported 21 successful checks. Wan checks cover isolation and synthetic contracts within this Docker diagnostic, with no video forward pass or model tensor load.
+
+LTX receipt contains only nonsecret credential presence results and publisher artifact identifiers. The HTTP 401 is the previous anonymous HEAD evidence from ../phase2_external_20261122/public-evidence.json.

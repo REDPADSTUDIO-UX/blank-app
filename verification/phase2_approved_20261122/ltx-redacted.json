@@ -1,0 +1,13 @@
+{
+  "repository": "Lightricks/LTX-2.5",
+  "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+  "path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+  "publisher_public_tree_size": 995778752,
+  "authoritative_sha256": null,
+  "authenticated_request": "not attempted: no already authorized Hugging Face credential available in the configured runtime",
+  "credential_presence_checks": ["HF_TOKEN", "HUGGING_FACE_HUB_TOKEN", "configured HF_TOKEN_PATH or default HF_HOME token file"],
+  "historical_anonymous_resolve_head_status": 401,
+  "required_access": "existing read-capable Hugging Face account credential with access already granted to the gated repository, or authoritative publisher checksum for the exact revision/path/size",
+  "checkpoint_bytes_fetched": 0,
+  "gate": "CLOSED"
+}

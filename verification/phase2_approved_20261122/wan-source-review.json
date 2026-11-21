@@ -1,0 +1,123 @@
+{
+  "head": "14f482c30c91021cc0e363a0a17a115b44972aee",
+  "head_repository": "kelseyee/diffusers",
+  "base": "9c6a68c32b3b2a64db91800b624d33cec6e25ab8",
+  "merged": false,
+  "sources": [
+    {
+      "url": "https://api.github.com/repos/huggingface/diffusers/pulls/14412",
+      "sha256": "08862590937a124ebf482a0b82abdb677dedcb3d8eef659824d219f4c0f4770d"
+    },
+    {
+      "url": "https://api.github.com/repos/huggingface/diffusers/pulls/14412/files?per_page=100",
+      "sha256": "d697999e1f6ee6e1b132670babe32f6f6fb214c134de10b959f07c857bd38201"
+    }
+  ],
+  "changed_files": [
+    {
+      "filename": "src/diffusers/__init__.py",
+      "status": "modified",
+      "sha": "34b57dfce51c72ea76330c695537346a6f15f94b",
+      "additions": 4,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/loaders/single_file_model.py",
+      "status": "modified",
+      "sha": "a07657159d3662e0c1df46ec22c4eeb74925c0f2",
+      "additions": 5,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/loaders/single_file_utils.py",
+      "status": "modified",
+      "sha": "c22ddb9a3a180908e425375bc00902fca9749517",
+      "additions": 21,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/models/__init__.py",
+      "status": "modified",
+      "sha": "92dc0f15cc74665e0428fa41ee271305e0f37989",
+      "additions": 2,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/models/transformers/__init__.py",
+      "status": "modified",
+      "sha": "2333acc067626229afd2a7ac3567efcb774d4d2a",
+      "additions": 1,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/models/transformers/transformer_wan_animate_2.py",
+      "status": "added",
+      "sha": "e9edd44b1f9c6b96ec7a5e69f48fad256f9b2357",
+      "additions": 1120,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/modular_pipelines/wan/__init__.py",
+      "status": "modified",
+      "sha": "0e0f062973117652cc66c56ac486538dcf4fa3bc",
+      "additions": 4,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/modular_pipelines/wan/modular_blocks_wan_animate_2.py",
+      "status": "added",
+      "sha": "21f8cd1bab4641517dd373cceb034662b9f61d5b",
+      "additions": 462,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/modular_pipelines/wan/modular_pipeline.py",
+      "status": "modified",
+      "sha": "74069843b71415a112c75dd77a4aaceca8c510f5",
+      "additions": 10,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/pipelines/__init__.py",
+      "status": "modified",
+      "sha": "84862742a670f9f0aa30b5ffb65938db6cc684c8",
+      "additions": 2,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/pipelines/pipeline_utils.py",
+      "status": "modified",
+      "sha": "60e16bdd47d8d4d63e4e0bea9d16d7c0ace648e9",
+      "additions": 19,
+      "deletions": 5
+    },
+    {
+      "filename": "src/diffusers/pipelines/wan/__init__.py",
+      "status": "modified",
+      "sha": "3eac9b5a666b2da293056017011b0133f18e673d",
+      "additions": 2,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/pipelines/wan/pipeline_wan_animate_2.py",
+      "status": "added",
+      "sha": "ef167144102060fb1493bf4513b9041b1e5cc682",
+      "additions": 731,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/utils/dummy_pt_objects.py",
+      "status": "modified",
+      "sha": "95f294311a38c8efc7b7f38e213453c7334397bd",
+      "additions": 15,
+      "deletions": 0
+    },
+    {
+      "filename": "src/diffusers/utils/dummy_torch_and_transformers_objects.py",
+      "status": "modified",
+      "sha": "ce6fc692a16d139ec6d93f26baa3b901e9e790e5",
+      "additions": 15,
+      "deletions": 0
+    }
+  ]
+}

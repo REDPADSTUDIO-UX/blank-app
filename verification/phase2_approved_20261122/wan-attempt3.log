@@ -1,0 +1,74 @@
+PASS unlisted_file_denied
+PASS source_write_denied
+Traceback (most recent call last):
+  File "/fixture.py", line 31, in <module>
+    import diffusers
+  File "/source/src/diffusers/__init__.py", line 5, in <module>
+    from .utils import (
+  File "/source/src/diffusers/utils/__init__.py", line 137, in <module>
+    from .peft_utils import (
+  File "/source/src/diffusers/utils/peft_utils.py", line 26, in <module>
+    from .torch_utils import empty_device_cache
+  File "/source/src/diffusers/utils/torch_utils.py", line 115, in <module>
+    from torch._dynamo import allow_in_graph as maybe_allow_in_graph
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/_dynamo/__init__.py", line 13, in <module>
+    from . import config, convert_frame, eval_frame, resume_execution
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py", line 52, in <module>
+    from torch._dynamo.symbolic_convert import TensorifyState
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py", line 57, in <module>
+    from . import (
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/_dynamo/trace_rules.py", line 32, in <module>
+    from .variables import (
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/_dynamo/variables/__init__.py", line 19, in <module>
+    from .base import VariableTracker
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/_dynamo/variables/base.py", line 581, in <module>
+    from . import builder
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/_dynamo/variables/builder.py", line 86, in <module>
+    from ..side_effects import SideEffects
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/_dynamo/side_effects.py", line 21, in <module>
+    from .codegen import PyCodegen
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/_dynamo/codegen.py", line 43, in <module>
+    from .variables.functions import (
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/_dynamo/variables/functions.py", line 71, in <module>
+    from torch.distributed.fsdp._fully_shard import _fsdp_param_group
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/fsdp/__init__.py", line 1, in <module>
+    from ._flat_param import FlatParameter as FlatParameter
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/fsdp/_flat_param.py", line 33, in <module>
+    from ._fsdp_extensions import (
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/fsdp/_fsdp_extensions.py", line 6, in <module>
+    from torch.distributed._shard.sharded_tensor.api import ShardedTensor
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/_shard/__init__.py", line 1, in <module>
+    from .api import _shard_tensor, load_with_process_group, shard_module, shard_parameter
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/_shard/api.py", line 9, in <module>
+    from torch.distributed._shard.sharded_tensor import ShardedTensor
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/_shard/sharded_tensor/__init__.py", line 8, in <module>
+    from .api import (
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/_shard/sharded_tensor/api.py", line 32, in <module>
+    from .reshard import reshard_local_shard, reshuffle_local_shard
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/_shard/sharded_tensor/reshard.py", line 13, in <module>
+    from torch.distributed.nn.functional import all_to_all, all_to_all_single
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/nn/__init__.py", line 7, in <module>
+    from .api.remote_module import RemoteModule
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/nn/api/remote_module.py", line 14, in <module>
+    from torch.distributed.nn.jit import instantiator
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/distributed/nn/jit/instantiator.py", line 21, in <module>
+    _TEMP_DIR = tempfile.TemporaryDirectory()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-phase2/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/tempfile.py", line 871, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-phase2/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/tempfile.py", line 374, in mkdtemp
+    prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-phase2/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/tempfile.py", line 127, in _sanitize_params
+    dir = gettempdir()
+          ^^^^^^^^^^^^
+  File "/tmp/redpad-phase2/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/tempfile.py", line 316, in gettempdir
+    return _os.fsdecode(_gettempdir())
+                        ^^^^^^^^^^^^^
+  File "/tmp/redpad-phase2/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/tempfile.py", line 309, in _gettempdir
+    tempdir = _get_default_tempdir()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-phase2/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/tempfile.py", line 224, in _get_default_tempdir
+    raise FileNotFoundError(_errno.ENOENT,
+FileNotFoundError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/']

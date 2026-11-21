@@ -1,0 +1,46 @@
+PASS unlisted_file_denied
+PASS source_write_denied
+Traceback (most recent call last):
+  File "/source/src/diffusers/utils/import_utils.py", line 1036, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-phase2/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/source/src/diffusers/pipelines/wan/pipeline_wan_animate_2.py", line 19, in <module>
+    import cv2
+  File "/overlay/cv2/__init__.py", line 181, in <module>
+    bootstrap()
+  File "/overlay/cv2/__init__.py", line 153, in bootstrap
+    native_module = importlib.import_module("cv2")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-phase2/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ImportError: libxcb.so.1: cannot open shared object file: No such file or directory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/fixture.py", line 33, in <module>
+    from diffusers import WanAnimate2Pipeline, WanAnimate2Transformer3DModel
+  File "<frozen importlib._bootstrap>", line 1229, in _handle_fromlist
+  File "/source/src/diffusers/utils/import_utils.py", line 1027, in __getattr__
+    value = getattr(module, name)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/source/src/diffusers/utils/import_utils.py", line 1027, in __getattr__
+    value = getattr(module, name)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/source/src/diffusers/utils/import_utils.py", line 1026, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/source/src/diffusers/utils/import_utils.py", line 1038, in _get_module
+    raise RuntimeError(
+RuntimeError: Failed to import diffusers.pipelines.wan.pipeline_wan_animate_2 because of the following error (look up to see its traceback):
+libxcb.so.1: cannot open shared object file: No such file or directory
