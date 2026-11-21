@@ -59,6 +59,8 @@ for folder in ('/','/redpad','/redpad/input','/redpad/studio','/redpad/runtime',
         denied(lambda: (Path(folder)/'unauthorized-phase1').write_text('canary'))
     except AssertionError as exc:
         raise AssertionError('unexpected write result at '+folder) from exc
+with open('/dev/null','wb',buffering=0) as sink:
+    assert sink.write(b'synthetic device I/O') == 20
 print('PASS C writable output boundary',flush=True)
 assert not Path('/proc/net/route').read_text().splitlines()[1:]
 try:

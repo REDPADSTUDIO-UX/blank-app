@@ -6,6 +6,6 @@ test_process_group_timeout_cleans_spawned_dummy_descendant (tests.test_native_lo
 test_restart_recovery_does_not_restart_abandoned_process_or_kill_reused_pid (tests.test_native_local_execution.NativeLocalTests.test_restart_recovery_does_not_restart_abandoned_process_or_kill_reused_pid) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.898s
+Ran 6 tests in 0.869s
 
 OK
