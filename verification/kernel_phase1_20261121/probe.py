@@ -24,6 +24,8 @@ def denied(action, *additional):
     else:
         raise AssertionError('operation unexpectedly succeeded: '+str(action))
 private,parent,port=sys.argv[1:]
+assert 'HF_TOKEN' not in os.environ and 'HTTPS_PROXY' not in os.environ
+assert 'LD_PRELOAD' not in os.environ
 host=json.loads(parent)
 for name in ('user','mnt','net','pid'):
     assert os.readlink('/proc/self/ns/'+name)!=host[name], name
@@ -52,7 +54,7 @@ Path('/redpad/output/result.txt').write_text('canary')
 Path('/tmp/allowed').write_text('canary')
 assert Path('/redpad/model/component.txt').read_text()=='synthetic component'
 assert Path('/redpad/source/component.txt').read_text()=='synthetic component'
-for folder in ('/','/redpad','/redpad/input','/redpad/studio','/redpad/runtime','/redpad/model','/redpad/source'):
+for folder in ('/','/redpad','/redpad/input','/redpad/studio','/redpad/runtime','/redpad/model','/redpad/source','/dev','/proc'):
     try:
         denied(lambda: (Path(folder)/'unauthorized-phase1').write_text('canary'))
     except AssertionError as exc:
@@ -133,6 +135,8 @@ def main():
         print('BLOCKED — HOST LIMITATION: /usr/bin/bwrap is unavailable')
         return 2
     print(subprocess.check_output([str(bubblewrap), '--version'], text=True).strip())
+    os.environ['HF_TOKEN']='phase1-synthetic-marker'
+    os.environ['HTTPS_PROXY']='phase1-synthetic-marker'
     print('Worker environment:', json.dumps(environment(), sort_keys=True))
     prefix = Path(sys.base_prefix).resolve()
     interpreter = Path(sys.executable).resolve()
