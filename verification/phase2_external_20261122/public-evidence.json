@@ -1,0 +1,4479 @@
+{
+  "review_date_dhaka": "2026-11-22",
+  "sources": {
+    "qwen_fp8_meta": {
+      "url": "https://huggingface.co/api/models/Qwen/Qwen3.5-35B-A3B-FP8/revision/9d1823d2dee688a6b25e77009dc727688c44936e",
+      "method": "GET",
+      "status": 200,
+      "bytes": 32022,
+      "sha256": "98e0ce7269c0306576aee90479c856ddbd83c248e76f1f38bb2e96ed04de68b1",
+      "metadata": {
+        "id": "Qwen/Qwen3.5-35B-A3B-FP8",
+        "sha": "9d1823d2dee688a6b25e77009dc727688c44936e",
+        "gated": false,
+        "private": false,
+        "cardData": {
+          "library_name": "transformers",
+          "license": "apache-2.0",
+          "license_link": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B/blob/main/LICENSE",
+          "pipeline_tag": "image-text-to-text",
+          "base_model": [
+            "Qwen/Qwen3.5-35B-A3B"
+          ]
+        },
+        "config": {
+          "architectures": [
+            "Qwen3_5MoeForConditionalGeneration"
+          ],
+          "model_type": "qwen3_5_moe",
+          "quantization_config": {
+            "quant_method": "fp8",
+            "modules_to_not_convert": [
+              "lm_head",
+              "model.language_model.embed_tokens",
+              "model.language_model.layers.0.linear_attn.conv1d",
+              "model.language_model.layers.0.linear_attn.in_proj_a",
+              "model.language_model.layers.0.linear_attn.in_proj_b",
+              "model.language_model.layers.0.mlp.gate",
+              "model.language_model.layers.0.mlp.shared_expert_gate",
+              "model.language_model.layers.1.linear_attn.conv1d",
+              "model.language_model.layers.1.linear_attn.in_proj_a",
+              "model.language_model.layers.1.linear_attn.in_proj_b",
+              "model.language_model.layers.1.mlp.gate",
+              "model.language_model.layers.1.mlp.shared_expert_gate",
+              "model.language_model.layers.10.linear_attn.conv1d",
+              "model.language_model.layers.10.linear_attn.in_proj_a",
+              "model.language_model.layers.10.linear_attn.in_proj_b",
+              "model.language_model.layers.10.mlp.gate",
+              "model.language_model.layers.10.mlp.shared_expert_gate",
+              "model.language_model.layers.11.mlp.gate",
+              "model.language_model.layers.11.mlp.shared_expert_gate",
+              "model.language_model.layers.12.linear_attn.conv1d",
+              "model.language_model.layers.12.linear_attn.in_proj_a",
+              "model.language_model.layers.12.linear_attn.in_proj_b",
+              "model.language_model.layers.12.mlp.gate",
+              "model.language_model.layers.12.mlp.shared_expert_gate",
+              "model.language_model.layers.13.linear_attn.conv1d",
+              "model.language_model.layers.13.linear_attn.in_proj_a",
+              "model.language_model.layers.13.linear_attn.in_proj_b",
+              "model.language_model.layers.13.mlp.gate",
+              "model.language_model.layers.13.mlp.shared_expert_gate",
+              "model.language_model.layers.14.linear_attn.conv1d",
+              "model.language_model.layers.14.linear_attn.in_proj_a",
+              "model.language_model.layers.14.linear_attn.in_proj_b",
+              "model.language_model.layers.14.mlp.gate",
+              "model.language_model.layers.14.mlp.shared_expert_gate",
+              "model.language_model.layers.15.mlp.gate",
+              "model.language_model.layers.15.mlp.shared_expert_gate",
+              "model.language_model.layers.16.linear_attn.conv1d",
+              "model.language_model.layers.16.linear_attn.in_proj_a",
+              "model.language_model.layers.16.linear_attn.in_proj_b",
+              "model.language_model.layers.16.mlp.gate",
+              "model.language_model.layers.16.mlp.shared_expert_gate",
+              "model.language_model.layers.17.linear_attn.conv1d",
+              "model.language_model.layers.17.linear_attn.in_proj_a",
+              "model.language_model.layers.17.linear_attn.in_proj_b",
+              "model.language_model.layers.17.mlp.gate",
+              "model.language_model.layers.17.mlp.shared_expert_gate",
+              "model.language_model.layers.18.linear_attn.conv1d",
+              "model.language_model.layers.18.linear_attn.in_proj_a",
+              "model.language_model.layers.18.linear_attn.in_proj_b",
+              "model.language_model.layers.18.mlp.gate",
+              "model.language_model.layers.18.mlp.shared_expert_gate",
+              "model.language_model.layers.19.mlp.gate",
+              "model.language_model.layers.19.mlp.shared_expert_gate",
+              "model.language_model.layers.2.linear_attn.conv1d",
+              "model.language_model.layers.2.linear_attn.in_proj_a",
+              "model.language_model.layers.2.linear_attn.in_proj_b",
+              "model.language_model.layers.2.mlp.gate",
+              "model.language_model.layers.2.mlp.shared_expert_gate",
+              "model.language_model.layers.20.linear_attn.conv1d",
+              "model.language_model.layers.20.linear_attn.in_proj_a",
+              "model.language_model.layers.20.linear_attn.in_proj_b",
+              "model.language_model.layers.20.mlp.gate",
+              "model.language_model.layers.20.mlp.shared_expert_gate",
+              "model.language_model.layers.21.linear_attn.conv1d",
+              "model.language_model.layers.21.linear_attn.in_proj_a",
+              "model.language_model.layers.21.linear_attn.in_proj_b",
+              "model.language_model.layers.21.mlp.gate",
+              "model.language_model.layers.21.mlp.shared_expert_gate",
+              "model.language_model.layers.22.linear_attn.conv1d",
+              "model.language_model.layers.22.linear_attn.in_proj_a",
+              "model.language_model.layers.22.linear_attn.in_proj_b",
+              "model.language_model.layers.22.mlp.gate",
+              "model.language_model.layers.22.mlp.shared_expert_gate",
+              "model.language_model.layers.23.mlp.gate",
+              "model.language_model.layers.23.mlp.shared_expert_gate",
+              "model.language_model.layers.24.linear_attn.conv1d",
+              "model.language_model.layers.24.linear_attn.in_proj_a",
+              "model.language_model.layers.24.linear_attn.in_proj_b",
+              "model.language_model.layers.24.mlp.gate",
+              "model.language_model.layers.24.mlp.shared_expert_gate",
+              "model.language_model.layers.25.linear_attn.conv1d",
+              "model.language_model.layers.25.linear_attn.in_proj_a",
+              "model.language_model.layers.25.linear_attn.in_proj_b",
+              "model.language_model.layers.25.mlp.gate",
+              "model.language_model.layers.25.mlp.shared_expert_gate",
+              "model.language_model.layers.26.linear_attn.conv1d",
+              "model.language_model.layers.26.linear_attn.in_proj_a",
+              "model.language_model.layers.26.linear_attn.in_proj_b",
+              "model.language_model.layers.26.mlp.gate",
+              "model.language_model.layers.26.mlp.shared_expert_gate",
+              "model.language_model.layers.27.mlp.gate",
+              "model.language_model.layers.27.mlp.shared_expert_gate",
+              "model.language_model.layers.28.linear_attn.conv1d",
+              "model.language_model.layers.28.linear_attn.in_proj_a",
+              "model.language_model.layers.28.linear_attn.in_proj_b",
+              "model.language_model.layers.28.mlp.gate",
+              "model.language_model.layers.28.mlp.shared_expert_gate",
+              "model.language_model.layers.29.linear_attn.conv1d",
+              "model.language_model.layers.29.linear_attn.in_proj_a",
+              "model.language_model.layers.29.linear_attn.in_proj_b",
+              "model.language_model.layers.29.mlp.gate",
+              "model.language_model.layers.29.mlp.shared_expert_gate",
+              "model.language_model.layers.3.mlp.gate",
+              "model.language_model.layers.3.mlp.shared_expert_gate",
+              "model.language_model.layers.30.linear_attn.conv1d",
+              "model.language_model.layers.30.linear_attn.in_proj_a",
+              "model.language_model.layers.30.linear_attn.in_proj_b",
+              "model.language_model.layers.30.mlp.gate",
+              "model.language_model.layers.30.mlp.shared_expert_gate",
+              "model.language_model.layers.31.mlp.gate",
+              "model.language_model.layers.31.mlp.shared_expert_gate",
+              "model.language_model.layers.32.linear_attn.conv1d",
+              "model.language_model.layers.32.linear_attn.in_proj_a",
+              "model.language_model.layers.32.linear_attn.in_proj_b",
+              "model.language_model.layers.32.mlp.gate",
+              "model.language_model.layers.32.mlp.shared_expert_gate",
+              "model.language_model.layers.33.linear_attn.conv1d",
+              "model.language_model.layers.33.linear_attn.in_proj_a",
+              "model.language_model.layers.33.linear_attn.in_proj_b",
+              "model.language_model.layers.33.mlp.gate",
+              "model.language_model.layers.33.mlp.shared_expert_gate",
+              "model.language_model.layers.34.linear_attn.conv1d",
+              "model.language_model.layers.34.linear_attn.in_proj_a",
+              "model.language_model.layers.34.linear_attn.in_proj_b",
+              "model.language_model.layers.34.mlp.gate",
+              "model.language_model.layers.34.mlp.shared_expert_gate",
+              "model.language_model.layers.35.mlp.gate",
+              "model.language_model.layers.35.mlp.shared_expert_gate",
+              "model.language_model.layers.36.linear_attn.conv1d",
+              "model.language_model.layers.36.linear_attn.in_proj_a",
+              "model.language_model.layers.36.linear_attn.in_proj_b",
+              "model.language_model.layers.36.mlp.gate",
+              "model.language_model.layers.36.mlp.shared_expert_gate",
+              "model.language_model.layers.37.linear_attn.conv1d",
+              "model.language_model.layers.37.linear_attn.in_proj_a",
+              "model.language_model.layers.37.linear_attn.in_proj_b",
+              "model.language_model.layers.37.mlp.gate",
+              "model.language_model.layers.37.mlp.shared_expert_gate",
+              "model.language_model.layers.38.linear_attn.conv1d",
+              "model.language_model.layers.38.linear_attn.in_proj_a",
+              "model.language_model.layers.38.linear_attn.in_proj_b",
+              "model.language_model.layers.38.mlp.gate",
+              "model.language_model.layers.38.mlp.shared_expert_gate",
+              "model.language_model.layers.39.mlp.gate",
+              "model.language_model.layers.39.mlp.shared_expert_gate",
+              "model.language_model.layers.4.linear_attn.conv1d",
+              "model.language_model.layers.4.linear_attn.in_proj_a",
+              "model.language_model.layers.4.linear_attn.in_proj_b",
+              "model.language_model.layers.4.mlp.gate",
+              "model.language_model.layers.4.mlp.shared_expert_gate",
+              "model.language_model.layers.5.linear_attn.conv1d",
+              "model.language_model.layers.5.linear_attn.in_proj_a",
+              "model.language_model.layers.5.linear_attn.in_proj_b",
+              "model.language_model.layers.5.mlp.gate",
+              "model.language_model.layers.5.mlp.shared_expert_gate",
+              "model.language_model.layers.6.linear_attn.conv1d",
+              "model.language_model.layers.6.linear_attn.in_proj_a",
+              "model.language_model.layers.6.linear_attn.in_proj_b",
+              "model.language_model.layers.6.mlp.gate",
+              "model.language_model.layers.6.mlp.shared_expert_gate",
+              "model.language_model.layers.7.mlp.gate",
+              "model.language_model.layers.7.mlp.shared_expert_gate",
+              "model.language_model.layers.8.linear_attn.conv1d",
+              "model.language_model.layers.8.linear_attn.in_proj_a",
+              "model.language_model.layers.8.linear_attn.in_proj_b",
+              "model.language_model.layers.8.mlp.gate",
+              "model.language_model.layers.8.mlp.shared_expert_gate",
+              "model.language_model.layers.9.linear_attn.conv1d",
+              "model.language_model.layers.9.linear_attn.in_proj_a",
+              "model.language_model.layers.9.linear_attn.in_proj_b",
+              "model.language_model.layers.9.mlp.gate",
+              "model.language_model.layers.9.mlp.shared_expert_gate",
+              "model.visual.blocks.0.attn.proj",
+              "model.visual.blocks.0.attn.qkv",
+              "model.visual.blocks.0.mlp.linear_fc1",
+              "model.visual.blocks.0.mlp.linear_fc2",
+              "model.visual.blocks.1.attn.proj",
+              "model.visual.blocks.1.attn.qkv",
+              "model.visual.blocks.1.mlp.linear_fc1",
+              "model.visual.blocks.1.mlp.linear_fc2",
+              "model.visual.blocks.10.attn.proj",
+              "model.visual.blocks.10.attn.qkv",
+              "model.visual.blocks.10.mlp.linear_fc1",
+              "model.visual.blocks.10.mlp.linear_fc2",
+              "model.visual.blocks.11.attn.proj",
+              "model.visual.blocks.11.attn.qkv",
+              "model.visual.blocks.11.mlp.linear_fc1",
+              "model.visual.blocks.11.mlp.linear_fc2",
+              "model.visual.blocks.12.attn.proj",
+              "model.visual.blocks.12.attn.qkv",
+              "model.visual.blocks.12.mlp.linear_fc1",
+              "model.visual.blocks.12.mlp.linear_fc2",
+              "model.visual.blocks.13.attn.proj",
+              "model.visual.blocks.13.attn.qkv",
+              "model.visual.blocks.13.mlp.linear_fc1",
+              "model.visual.blocks.13.mlp.linear_fc2",
+              "model.visual.blocks.14.attn.proj",
+              "model.visual.blocks.14.attn.qkv",
+              "model.visual.blocks.14.mlp.linear_fc1",
+              "model.visual.blocks.14.mlp.linear_fc2",
+              "model.visual.blocks.15.attn.proj",
+              "model.visual.blocks.15.attn.qkv",
+              "model.visual.blocks.15.mlp.linear_fc1",
+              "model.visual.blocks.15.mlp.linear_fc2",
+              "model.visual.blocks.16.attn.proj",
+              "model.visual.blocks.16.attn.qkv",
+              "model.visual.blocks.16.mlp.linear_fc1",
+              "model.visual.blocks.16.mlp.linear_fc2",
+              "model.visual.blocks.17.attn.proj",
+              "model.visual.blocks.17.attn.qkv",
+              "model.visual.blocks.17.mlp.linear_fc1",
+              "model.visual.blocks.17.mlp.linear_fc2",
+              "model.visual.blocks.18.attn.proj",
+              "model.visual.blocks.18.attn.qkv",
+              "model.visual.blocks.18.mlp.linear_fc1",
+              "model.visual.blocks.18.mlp.linear_fc2",
+              "model.visual.blocks.19.attn.proj",
+              "model.visual.blocks.19.attn.qkv",
+              "model.visual.blocks.19.mlp.linear_fc1",
+              "model.visual.blocks.19.mlp.linear_fc2",
+              "model.visual.blocks.2.attn.proj",
+              "model.visual.blocks.2.attn.qkv",
+              "model.visual.blocks.2.mlp.linear_fc1",
+              "model.visual.blocks.2.mlp.linear_fc2",
+              "model.visual.blocks.20.attn.proj",
+              "model.visual.blocks.20.attn.qkv",
+              "model.visual.blocks.20.mlp.linear_fc1",
+              "model.visual.blocks.20.mlp.linear_fc2",
+              "model.visual.blocks.21.attn.proj",
+              "model.visual.blocks.21.attn.qkv",
+              "model.visual.blocks.21.mlp.linear_fc1",
+              "model.visual.blocks.21.mlp.linear_fc2",
+              "model.visual.blocks.22.attn.proj",
+              "model.visual.blocks.22.attn.qkv",
+              "model.visual.blocks.22.mlp.linear_fc1",
+              "model.visual.blocks.22.mlp.linear_fc2",
+              "model.visual.blocks.23.attn.proj",
+              "model.visual.blocks.23.attn.qkv",
+              "model.visual.blocks.23.mlp.linear_fc1",
+              "model.visual.blocks.23.mlp.linear_fc2",
+              "model.visual.blocks.24.attn.proj",
+              "model.visual.blocks.24.attn.qkv",
+              "model.visual.blocks.24.mlp.linear_fc1",
+              "model.visual.blocks.24.mlp.linear_fc2",
+              "model.visual.blocks.25.attn.proj",
+              "model.visual.blocks.25.attn.qkv",
+              "model.visual.blocks.25.mlp.linear_fc1",
+              "model.visual.blocks.25.mlp.linear_fc2",
+              "model.visual.blocks.26.attn.proj",
+              "model.visual.blocks.26.attn.qkv",
+              "model.visual.blocks.26.mlp.linear_fc1",
+              "model.visual.blocks.26.mlp.linear_fc2",
+              "model.visual.blocks.3.attn.proj",
+              "model.visual.blocks.3.attn.qkv",
+              "model.visual.blocks.3.mlp.linear_fc1",
+              "model.visual.blocks.3.mlp.linear_fc2",
+              "model.visual.blocks.4.attn.proj",
+              "model.visual.blocks.4.attn.qkv",
+              "model.visual.blocks.4.mlp.linear_fc1",
+              "model.visual.blocks.4.mlp.linear_fc2",
+              "model.visual.blocks.5.attn.proj",
+              "model.visual.blocks.5.attn.qkv",
+              "model.visual.blocks.5.mlp.linear_fc1",
+              "model.visual.blocks.5.mlp.linear_fc2",
+              "model.visual.blocks.6.attn.proj",
+              "model.visual.blocks.6.attn.qkv",
+              "model.visual.blocks.6.mlp.linear_fc1",
+              "model.visual.blocks.6.mlp.linear_fc2",
+              "model.visual.blocks.7.attn.proj",
+              "model.visual.blocks.7.attn.qkv",
+              "model.visual.blocks.7.mlp.linear_fc1",
+              "model.visual.blocks.7.mlp.linear_fc2",
+              "model.visual.blocks.8.attn.proj",
+              "model.visual.blocks.8.attn.qkv",
+              "model.visual.blocks.8.mlp.linear_fc1",
+              "model.visual.blocks.8.mlp.linear_fc2",
+              "model.visual.blocks.9.attn.proj",
+              "model.visual.blocks.9.attn.qkv",
+              "model.visual.blocks.9.mlp.linear_fc1",
+              "model.visual.blocks.9.mlp.linear_fc2",
+              "model.visual.merger.linear_fc1",
+              "model.visual.merger.linear_fc2",
+              "model.visual.patch_embed.proj",
+              "model.visual.pos_embed",
+              "mtp.fc",
+              "mtp.layers.0.mlp.gate",
+              "mtp.layers.0.mlp.shared_expert_gate"
+            ]
+          },
+          "tokenizer_config": {
+            "bos_token": null,
+            "eos_token": "<|im_end|>",
+            "unk_token": null,
+            "pad_token": "<|endoftext|>",
+            "chat_template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson | safe if args_value is mapping or (args_value is sequence and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+          },
+          "chat_template_jinja": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson | safe if args_value is mapping or (args_value is sequence and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+        },
+        "usedStorage": 42691977654
+      },
+      "text_assets": [
+        "README.md",
+        "config.json",
+        "configuration.json",
+        "generation_config.json",
+        "merges.txt",
+        "model.safetensors.index.json",
+        "preprocessor_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "video_preprocessor_config.json",
+        "vocab.json"
+      ]
+    },
+    "qwen_fp8_config": {
+      "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B-FP8/raw/9d1823d2dee688a6b25e77009dc727688c44936e/config.json",
+      "method": "GET",
+      "status": 200,
+      "bytes": 20530,
+      "sha256": "236c373b0682a4f40c2fa49ef8e5f722a87a8dbfe265286b6d5260b23d7cb229",
+      "content": {
+        "architectures": [
+          "Qwen3_5MoeForConditionalGeneration"
+        ],
+        "quantization_config": {
+          "quant_method": "fp8",
+          "activation_scheme": "dynamic",
+          "weight_per_tensor": false,
+          "act_per_tensor": false,
+          "weight_block_size": [
+            128,
+            128
+          ]
+        },
+        "transformers_version": "4.57.0.dev0"
+      },
+      "excluded_module_count": 287,
+      "excluded_module_sample": [
+        "lm_head",
+        "model.language_model.embed_tokens",
+        "model.language_model.layers.0.linear_attn.conv1d",
+        "model.language_model.layers.0.linear_attn.in_proj_a",
+        "model.language_model.layers.0.linear_attn.in_proj_b",
+        "model.language_model.layers.0.mlp.gate",
+        "model.language_model.layers.0.mlp.shared_expert_gate",
+        "model.language_model.layers.1.linear_attn.conv1d"
+      ]
+    },
+    "qwen_fp8_card": {
+      "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B-FP8/raw/9d1823d2dee688a6b25e77009dc727688c44936e/README.md",
+      "method": "GET",
+      "status": 200,
+      "bytes": 93391,
+      "sha256": "2e09fd9d54bd1854b1be9e161fe65002493e025812a2447399e8eeea6b90bbfc",
+      "lines": [
+        [
+          3,
+          "license: apache-2.0"
+        ],
+        [
+          4,
+          "license_link: https://huggingface.co/Qwen/Qwen3.5-35B-A3B/blob/main/LICENSE"
+        ],
+        [
+          10,
+          "# Qwen3.5-35B-A3B-FP8"
+        ],
+        [
+          17,
+          "> This repository contains FP8-quantized model weights and configuration files for the post-trained model in the Hugging Face Transformers format. "
+        ],
+        [
+          19,
+          "> These artifacts are compatible with Hugging Face Transformers, vLLM, SGLang, KTransformers, etc."
+        ],
+        [
+          21,
+          "> The quantization method is fine-grained fp8 quantization with block size of 128, and its performance metrics are nearly identical to those of the original model."
+        ],
+        [
+          72,
+          "    - LM Output: 248320 (Padded)"
+        ],
+        [
+          914,
+          "> For production workloads or high-throughput scenarios, dedicated serving engines such as SGLang, KTransformers or vLLM are strongly recommended."
+        ],
+        [
+          921,
+          "#### SGLang"
+        ],
+        [
+          923,
+          "[SGLang](https://github.com/sgl-project/sglang) is a fast serving framework for large language models and vision language models."
+        ],
+        [
+          924,
+          "SGLang from the main branch of the open-source repository is required for Qwen3.5, which can be installed using the following command in a fresh environment:"
+        ],
+        [
+          926,
+          "uv pip install 'git+https://github.com/sgl-project/sglang.git#subdirectory=python&egg=sglang[all]'"
+        ],
+        [
+          928,
+          "See [its documentation](https://docs.sglang.ai/get_started/install.html) for more details."
+        ],
+        [
+          935,
+          "    python -m sglang.launch_server --model-path Qwen/Qwen3.5-35B-A3B-FP8 --port 8000 --tp-size 8 --mem-fraction-static 0.8 --context-length 262144 --reasoning-parser qwen3"
+        ],
+        [
+          941,
+          "    python -m sglang.launch_server --model-path Qwen/Qwen3.5-35B-A3B-FP8 --port 8000 --tp-size 8 --mem-fraction-static 0.8 --context-length 262144 --reasoning-parser qwen3 --tool-call-parser qwen3_coder"
+        ],
+        [
+          947,
+          "    python -m sglang.launch_server --model-path Qwen/Qwen3.5-35B-A3B-FP8 --port 8000 --tp-size 8 --mem-fraction-static 0.8 --context-length 262144 --reasoning-parser qwen3 --speculative-algo NEXTN --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4"
+        ],
+        [
+          950,
+          "#### vLLM"
+        ],
+        [
+          952,
+          "[vLLM](https://github.com/vllm-project/vllm) is a high-throughput and memory-efficient inference and serving engine for LLMs."
+        ],
+        [
+          953,
+          "vLLM from the main branch of the open-source repository is required for Qwen3.5, which can be installed using the following command in a fresh environment:"
+        ],
+        [
+          955,
+          "uv pip install vllm --torch-backend=auto --extra-index-url https://wheels.vllm.ai/nightly"
+        ],
+        [
+          957,
+          "See [its documentation](https://docs.vllm.ai/en/stable/getting_started/installation/index.html) for more details. "
+        ],
+        [
+          959,
+          "For detailed Qwen3.5 usage guide, see the [vLLM Qwen3.5 recipe](https://docs.vllm.ai/projects/recipes/en/latest/Qwen/Qwen3.5.html)."
+        ],
+        [
+          966,
+          "    vllm serve Qwen/Qwen3.5-35B-A3B-FP8 --port 8000 --tensor-parallel-size 8 --max-model-len 262144 --reasoning-parser qwen3 "
+        ],
+        [
+          972,
+          "    vllm serve Qwen/Qwen3.5-35B-A3B-FP8 --port 8000 --tensor-parallel-size 8 --max-model-len 262144 --reasoning-parser qwen3 --enable-auto-tool-choice --tool-call-parser qwen3_coder "
+        ],
+        [
+          978,
+          "    vllm serve Qwen/Qwen3.5-35B-A3B-FP8 --port 8000 --tensor-parallel-size 8 --max-model-len 262144 --reasoning-parser qwen3 --speculative-config '{\"method\":\"qwen3_next_mtp\",\"num_speculative_tokens\":2}'"
+        ],
+        [
+          984,
+          "    vllm serve Qwen/Qwen3.5-35B-A3B-FP8 --port 8000 --tensor-parallel-size 8 --max-model-len 262144 --reasoning-parser qwen3 --language-model-only"
+        ],
+        [
+          989,
+          "[KTransformers](https://github.com/kvcache-ai/ktransformers) is a flexible framework for experiencing cutting-edge LLM inference optimizations with CPU-GPU heterogeneous computing."
+        ],
+        [
+          990,
+          "For running Qwen3.5 with KTransformers, see the [KTransformers Deployment Guide](https://github.com/kvcache-ai/ktransformers/blob/main/doc/en/Qwen3.5.md)."
+        ],
+        [
+          994,
+          "Hugging Face Transformers contains a _lightweight_ server which can be used for quick testing and moderate load deployment."
+        ],
+        [
+          1001,
+          "Then, run `transformers serve` to launch a server with API endpoints at `http://localhost:8000/v1`; it will place the model on accelerators if available:"
+        ],
+        [
+          1003,
+          "transformers serve --force-model Qwen/Qwen3.5-35B-A3B-FP8 --port 8000 --continuous-batching"
+        ],
+        [
+          1041,
+          "    model=\"Qwen/Qwen3.5-35B-A3B-FP8\","
+        ],
+        [
+          1081,
+          "    model=\"Qwen/Qwen3.5-35B-A3B-FP8\","
+        ],
+        [
+          1119,
+          "# When vLLM is launched with `--media-io-kwargs '{\"video\": {\"num_frames\": -1}}'`,"
+        ],
+        [
+          1121,
+          "# This feature is currently supported only in vLLM."
+        ],
+        [
+          1126,
+          "    model=\"Qwen/Qwen3.5-35B-A3B-FP8\","
+        ],
+        [
+          1173,
+          "    model=\"Qwen/Qwen3.5-35B-A3B-FP8\","
+        ],
+        [
+          1208,
+          "    'model': 'Qwen3.5-35B-A3B-FP8',"
+        ],
+        [
+          1226,
+          "#     # Use your own model service compatible with OpenAI API by vLLM/SGLang:"
+        ],
+        [
+          1234,
+          "#         # When using vLLM/SGLang OAI API, pass the parameter of whether to enable thinking mode in this way"
+        ],
+        [
+          1278,
+          "For long-horizon tasks where the total length (including both input and output) exceeds this limit, we recommend using RoPE scaling techniques to handle long texts effectively., e.g., YaRN."
+        ],
+        [
+          1280,
+          "YaRN is currently supported by several inference frameworks, e.g., `transformers`, `vllm`, `ktransformers` and `sglang`. "
+        ],
+        [
+          1303,
+          "  For `vllm`, you can use"
+        ],
+        [
+          1305,
+          "    VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 vllm serve ... --hf-overrides '{\"text_config\": {\"rope_parameters\": {\"mrope_interleaved\": true, \"mrope_section\": [11, 11, 10], \"rope_type\": \"yarn\", \"rope_theta\": 10000000, \"partial_rotary_factor\": 0.25, \"factor\": 4.0, \"original_max_position_embeddings\": 262144}}}' --max-model-len 1010000  "
+        ],
+        [
+          1308,
+          "  For `sglang` and `ktransformers`, you can use"
+        ],
+        [
+          1310,
+          "    SGLANG_ALLOW_OVERWRITE_LONGER_CONTEXT_LEN=1 python -m sglang.launch_server ... --json-model-override-args '{\"text_config\": {\"rope_parameters\": {\"mrope_interleaved\": true, \"mrope_section\": [11, 11, 10], \"rope_type\": \"yarn\", \"rope_theta\": 10000000, \"partial_rotary_factor\": 0.25, \"factor\": 4.0, \"original_max_position_embeddings\": 262144}}}' --context-length 1010000"
+        ],
+        [
+          1334,
+          "2. **Adequate Output Length**: We recommend using an output length of 32,768 tokens for most queries. For benchmarking on highly complex problems, such as those found in math and programming competitions, we suggest setting the max output length to 81,920 tokens. This provides the model with sufficient space to generate detailed and comprehensive responses, thereby enhancing its overall performance."
+        ],
+        [
+          1336,
+          "3. **Standardize Output Format**: We recommend using prompts to standardize model outputs when benchmarking."
+        ],
+        [
+          1340,
+          "4. **No Thinking Content in History**: In multi-turn conversations, the historical model output should only include the final output part and does not need to include the thinking content. It is implemented in the provided chat template in Jinja2. However, for frameworks that do not directly use the Jinja2 chat template, it is up to the developers to ensure that the best practice is followed."
+        ],
+        [
+          1347,
+          "    Alternatively, override the default values via engine startup parameters. For implementation details, refer to: [vLLM](https://github.com/vllm-project/vllm/pull/34330) / [SGLang](https://github.com/sgl-project/sglang/pull/18467)."
+        ]
+      ]
+    },
+    "qwen_base_meta": {
+      "url": "https://huggingface.co/api/models/Qwen/Qwen3.5-35B-A3B/revision/59d61f3ce65a6d9863b86d2e96597125219dc754",
+      "method": "GET",
+      "status": 200,
+      "bytes": 21426,
+      "sha256": "8499ee499edd58ada8cf9c21ac370f55f87c68734d25f35ce9335849e6e834c0",
+      "metadata": {
+        "id": "Qwen/Qwen3.5-35B-A3B",
+        "sha": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+        "gated": false,
+        "private": false,
+        "cardData": {
+          "library_name": "transformers",
+          "license": "apache-2.0",
+          "license_link": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B/blob/main/LICENSE",
+          "pipeline_tag": "image-text-to-text",
+          "base_model": [
+            "Qwen/Qwen3.5-35B-A3B-Base"
+          ]
+        },
+        "config": {
+          "architectures": [
+            "Qwen3_5MoeForConditionalGeneration"
+          ],
+          "model_type": "qwen3_5_moe",
+          "tokenizer_config": {
+            "bos_token": null,
+            "eos_token": "<|im_end|>",
+            "unk_token": null,
+            "pad_token": "<|endoftext|>",
+            "chat_template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson | safe if args_value is mapping or (args_value is sequence and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+          },
+          "chat_template_jinja": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson | safe if args_value is mapping or (args_value is sequence and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+        },
+        "usedStorage": 71928163942
+      },
+      "text_assets": [
+        "README.md",
+        "config.json",
+        "generation_config.json",
+        "merges.txt",
+        "model.safetensors.index.json",
+        "preprocessor_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "video_preprocessor_config.json",
+        "vocab.json"
+      ]
+    },
+    "qwen_fp8_requirements": {
+      "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B-FP8/raw/9d1823d2dee688a6b25e77009dc727688c44936e/requirements.txt",
+      "method": "GET",
+      "status": 404
+    },
+    "transformers_fp8_guard": {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.22.2/src/transformers/quantizers/quantizer_finegrained_fp8.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 7972,
+      "sha256": "42c41d06ddfd62ef0d8ebc27e0ff3fc2cc7078b6ef7289bb3b3df65ef2934888",
+      "lines": [
+        [
+          3,
+          "from ..utils import is_accelerate_available, is_torch_available, is_torch_xpu_available, logging"
+        ],
+        [
+          4,
+          "from .base import HfQuantizer"
+        ],
+        [
+          5,
+          "from .quantizers_utils import get_module_from_name"
+        ],
+        [
+          12,
+          "    from ..modeling_utils import PreTrainedModel"
+        ],
+        [
+          13,
+          "    from ..utils.quantization_config import FineGrainedFP8Config"
+        ],
+        [
+          18,
+          "class FineGrainedFP8HfQuantizer(HfQuantizer):"
+        ],
+        [
+          20,
+          "    FP8 quantization implementation supporting both standard and MoE models."
+        ],
+        [
+          25,
+          "    quantization_config: \"FineGrainedFP8Config\""
+        ],
+        [
+          33,
+          "            raise ImportError(\"Loading an FP8 quantized model requires accelerate (`pip install accelerate`)\")"
+        ],
+        [
+          35,
+          "        if self.quantization_config.dequantize:"
+        ],
+        [
+          38,
+          "        if not torch.cuda.is_available() and not is_torch_xpu_available():"
+        ],
+        [
+          41,
+          "                    \"Using FP8 quantized models requires a GPU or XPU, we will default to dequantizing the model to bf16 since no GPU or XPU is available\""
+        ],
+        [
+          43,
+          "                self.quantization_config.dequantize = True"
+        ],
+        [
+          46,
+          "                raise RuntimeError(\"No GPU or XPU found. A GPU or XPU is needed for FP8 quantization.\")"
+        ],
+        [
+          48,
+          "        if torch.cuda.is_available():"
+        ],
+        [
+          49,
+          "            compute_capability = torch.cuda.get_device_capability()"
+        ],
+        [
+          53,
+          "                    \"FP8 quantized models is only supported on GPUs with compute capability >= 8.9 (e.g 4090/H100)\""
+        ],
+        [
+          57,
+          "                self.quantization_config.dequantize = True"
+        ],
+        [
+          60,
+          "        device_map = kwargs.get(\"device_map\")"
+        ],
+        [
+          61,
+          "        if device_map is None:"
+        ],
+        [
+          63,
+          "                \"You have loaded an FP8 model on CPU and have a CUDA or XPU device available, make sure to set \""
+        ],
+        [
+          64,
+          "                \"your model on a GPU or XPU device in order to run your model. To remove this warning, \""
+        ],
+        [
+          65,
+          "                \"pass device_map = 'cuda' or 'xpu'. \""
+        ],
+        [
+          67,
+          "        elif isinstance(device_map, dict):"
+        ],
+        [
+          70,
+          "                and len(device_map) > 1"
+        ],
+        [
+          71,
+          "                and (\"cpu\" in device_map.values() or \"disk\" in device_map.values())"
+        ],
+        [
+          74,
+          "                    \"You are attempting to load an FP8 model with a device_map that contains a cpu/disk device.\""
+        ],
+        [
+          76,
+          "                    \"Please use a quantized checkpoint or remove the cpu/disk device from the device_map.\""
+        ],
+        [
+          80,
+          "        # `FP8GroupedLinear` is a subclass of `FP8Linear`, so the tuple covers it implicitly."
+        ],
+        [
+          81,
+          "        from ..integrations.finegrained_fp8 import FP8Experts, FP8Linear"
+        ],
+        [
+          84,
+          "        if isinstance(module, (FP8Linear, FP8Experts)):"
+        ],
+        [
+          101,
+          "        from ..conversion_mapping import get_model_conversion_mapping"
+        ],
+        [
+          117,
+          "        from ..integrations.finegrained_fp8 import replace_with_fp8_embedding, replace_with_fp8_linear"
+        ],
+        [
+          126,
+          "            replace_with_fp8_embedding(model, modules_to_convert, self.modules_to_not_convert)"
+        ],
+        [
+          128,
+          "        model = replace_with_fp8_linear("
+        ],
+        [
+          136,
+          "        # Single-process multi-device is unsafe for DeepGEMM (its kernels are bound to one CUDA"
+        ],
+        [
+          138,
+          "        from ..integrations.finegrained_fp8 import _disable_deepgemm_on_multi_device"
+        ],
+        [
+          140,
+          "        _disable_deepgemm_on_multi_device(model)"
+        ],
+        [
+          144,
+          "        from ..distributed.tensor_parallel import _get_parameter_plan, replace_layer_number_by_wildcard"
+        ],
+        [
+          145,
+          "        from ..integrations.finegrained_fp8 import FP8Experts"
+        ],
+        [
+          151,
+          "        overwrite = FP8Experts._impl_tp_layer_overrides.get(getattr(model.config, \"_experts_implementation\", None), {})"
+        ],
+        [
+          166,
+          "        from ..integrations.finegrained_fp8 import Fp8Quantize"
+        ],
+        [
+          168,
+          "        return Fp8Quantize(self)"
+        ],
+        [
+          173,
+          "        from ..integrations.finegrained_fp8 import Fp8Dequantize"
+        ],
+        [
+          175,
+          "        return {\"dequantize\": Fp8Dequantize}"
+        ],
+        [
+          178,
+          "        from ..core_model_loading import WeightRenaming"
+        ],
+        [
+          180,
+          "        # Some FP8 checkpoints ship per-block scales under `.scale` (e.g. DeepSeek-V4-Flash) or `.qscale_weight`"
+        ]
+      ]
+    },
+    "wan_head": {
+      "url": "https://api.github.com/repos/Wan-Video/Wan-Animate-2/commits?per_page=1",
+      "method": "GET",
+      "status": 200,
+      "bytes": 4520,
+      "sha256": "e650ccfd0497855753cfc5cdafe77be0253e40cb15803dae98ebbdb90976e46a",
+      "commits": [
+        {
+          "sha": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+          "date": "2026-08-08T06:27:43Z",
+          "subject": "Fix author list in README.md"
+        }
+      ]
+    },
+    "wan_file_history": {
+      "url": "https://api.github.com/repos/Wan-Video/Wan-Animate-2/commits?path=wanxiang%2Feval_i2v.py&per_page=10",
+      "method": "GET",
+      "status": 200,
+      "bytes": 2991,
+      "sha256": "412cba516595bcad9fbee458340d5694631054316babadc923ccda7510d85b02",
+      "commits": [
+        {
+          "sha": "823e7b83ab15dcf56bde694aa345f8a01d2ee683",
+          "date": "2026-08-06T07:34:25Z",
+          "subject": "ready for open source"
+        }
+      ]
+    },
+    "wan_pinned": {
+      "url": "https://raw.githubusercontent.com/Wan-Video/Wan-Animate-2/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/wanxiang/eval_i2v.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 6196,
+      "sha256": "9c984ab7f830ff6a9a543073272a387d9fe4af95197c035fb3c4fc52d4ef985d",
+      "ast": {
+        "classes": [
+          "T5Encoder",
+          "CLIP"
+        ],
+        "import_time_cuda_defaults": [
+          "torch.cuda.current_device()"
+        ]
+      },
+      "lines": [
+        [
+          4,
+          "import torch.cuda.amp as amp"
+        ],
+        [
+          6,
+          "from .utils import HuggingfaceTokenizer"
+        ],
+        [
+          7,
+          "from .utils.utils import to_"
+        ],
+        [
+          9,
+          "from .models.clip import clip_xlm_roberta_vit_h_14"
+        ],
+        [
+          15,
+          "    def __init__("
+        ],
+        [
+          20,
+          "        device=torch.cuda.current_device(),"
+        ],
+        [
+          27,
+          "        self.device = device"
+        ],
+        [
+          34,
+          "                encoder_only=True, return_tokenizer=False, dtype=dtype, device=device"
+        ],
+        [
+          39,
+          "        model.load_state_dict(torch.load(checkpoint_path, map_location=\"cpu\"))"
+        ],
+        [
+          50,
+          "            self.device,"
+        ],
+        [
+          59,
+          "    def __init__(self, name, dtype, device, checkpoint_path, tokenizer_path):"
+        ],
+        [
+          62,
+          "        self.device = device"
+        ],
+        [
+          72,
+          "            device=device,"
+        ],
+        [
+          75,
+          "        self.model.load_state_dict(torch.load(checkpoint_path, map_location=\"cpu\"))"
+        ],
+        [
+          111,
+          "    scheduler,"
+        ],
+        [
+          113,
+          "    device=None,"
+        ],
+        [
+          124,
+          "            inspect.signature(scheduler.set_timesteps).parameters.keys()"
+        ],
+        [
+          128,
+          "                f\"The current scheduler class {scheduler.__class__}'s `set_timesteps` does not support custom\""
+        ],
+        [
+          129,
+          "                f\" timestep schedules. Please check whether you are using the correct scheduler.\""
+        ],
+        [
+          131,
+          "        scheduler.set_timesteps(timesteps=timesteps, device=device, **kwargs)"
+        ],
+        [
+          132,
+          "        timesteps = scheduler.timesteps"
+        ],
+        [
+          136,
+          "            inspect.signature(scheduler.set_timesteps).parameters.keys()"
+        ],
+        [
+          140,
+          "                f\"The current scheduler class {scheduler.__class__}'s `set_timesteps` does not support custom\""
+        ],
+        [
+          141,
+          "                f\" sigmas schedules. Please check whether you are using the correct scheduler.\""
+        ],
+        [
+          143,
+          "        scheduler.set_timesteps(sigmas=sigmas, device=device, **kwargs)"
+        ],
+        [
+          144,
+          "        timesteps = scheduler.timesteps"
+        ],
+        [
+          147,
+          "        scheduler.set_timesteps(num_inference_steps, device=device, **kwargs)"
+        ],
+        [
+          148,
+          "        timesteps = scheduler.timesteps"
+        ],
+        [
+          152,
+          "def get_i2v_mask(lat_t, lat_h, lat_w, mask_len=1, device=\"cuda\"):"
+        ],
+        [
+          164,
+          "    msk = torch.zeros(1, (lat_t-1) * 4 + 1, lat_h, lat_w, device=device)"
+        ],
+        [
+          171,
+          "def get_i2vmask_mask(mask_pixel_values, lat_t, lat_h, lat_w, mask_len=1, device=\"cuda\"):"
+        ]
+      ]
+    },
+    "wan_requirements": {
+      "url": "https://raw.githubusercontent.com/Wan-Video/Wan-Animate-2/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/requirements.txt",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1596,
+      "sha256": "e04bd8e624d29868303d076fc547090ecf5747c26f2c7c102cccc34ff39c787b",
+      "lines": [
+        [
+          16,
+          "decord==0.6.0"
+        ],
+        [
+          82,
+          "torch==2.7.1+cu126"
+        ],
+        [
+          83,
+          "torchaudio==2.7.1+cu126"
+        ],
+        [
+          87,
+          "transformers==4.57.6"
+        ]
+      ]
+    },
+    "wan_readme": {
+      "url": "https://raw.githubusercontent.com/Wan-Video/Wan-Animate-2/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/README.md",
+      "method": "GET",
+      "status": 200,
+      "bytes": 9653,
+      "sha256": "90ba2d1fbe516ac38286ce0aec527dc20db5dcbc83d39a6d0fec2caf23e775a3",
+      "lines": [
+        [
+          13,
+          "[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/Wan-Video/Wan-Animate-2) &nbsp; [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE) &nbsp; [![arXiv](https://img.shields.io/badge/arXiv-2608.06009-b31b1b.svg)](https://arxiv.org/pdf/2608.06009) &nbsp; [![Project Page](https://img.shields.io/badge/Project-Page-Green)](https://humanaigc.github.io/wan-animate-2) &nbsp; [![Demo](https://img.shields.io/badge/Demo-ModelScope-FF6A00.svg)](https://www.modelscope.cn/studios/Wan-AI/Wan2.2-Animate)"
+        ],
+        [
+          19,
+          "We present Wan-Animate-2, a novel end-to-end character animation framework that directly consumes driving videos in a redesigned Diffusion Transformer, which achieves high-fidelity motion generation and strong identity preservation by eliminating intermediate motion extractors. We further add text-driven viewpoint control to decouple the output camera perspective from the driving video. In addition, we develop Wan-Animate-2-Lite, an efficient variant that reduces inference latency to real-time thresholds for streaming character animation."
+        ],
+        [
+          49,
+          "pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu126"
+        ],
+        [
+          55,
+          "4. Install [`flash_attn`](https://github.com/Dao-AILab/flash-attention):"
+        ],
+        [
+          57,
+          "pip install flash-attn --no-build-isolation"
+        ],
+        [
+          118,
+          "pip install flash-attn --no-build-isolation"
+        ],
+        [
+          124,
+          "  from diffusers import WanAnimate2Pipeline"
+        ],
+        [
+          127,
+          "  pipe = WanAnimate2Pipeline.from_pretrained("
+        ],
+        [
+          129,
+          "  ).to(\"cuda\")"
+        ],
+        [
+          131,
+          "  output = pipe("
+        ],
+        [
+          140,
+          "  export_to_video(output.frames[0], \"output.mp4\", fps=24)"
+        ],
+        [
+          145,
+          "  pipe = WanAnimate2Pipeline.from_pretrained("
+        ],
+        [
+          147,
+          "  ).to(\"cuda\")"
+        ],
+        [
+          149,
+          "  output = pipe("
+        ],
+        [
+          155,
+          "      flow_solver=\"euler\",       # Euler scheduler for distilled model"
+        ],
+        [
+          158,
+          "  export_to_video(output.frames[0], \"output.mp4\", fps=24)"
+        ],
+        [
+          181,
+          "@article{wang2026wananimate2,"
+        ],
+        [
+          192,
+          "## ⚖️ License"
+        ],
+        [
+          194,
+          "This project is licensed under the [Apache License 2.0](LICENSE)."
+        ]
+      ]
+    },
+    "wan_distilled_index": {
+      "url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/raw/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/model_index.json",
+      "method": "GET",
+      "status": 200,
+      "bytes": 564,
+      "sha256": "da26517859f8e2766366795750dbfe3f758968fc9dfa6650f4c9f5beb1e6bc1d",
+      "content": {
+        "_class_name": "WanAnimate2Pipeline",
+        "_diffusers_version": "0.36.0.dev0",
+        "image_encoder": [
+          "transformers",
+          "CLIPVisionModel"
+        ],
+        "image_processor": [
+          "transformers",
+          "CLIPImageProcessor"
+        ],
+        "scheduler": [
+          "diffusers",
+          "FlowMatchEulerDiscreteScheduler"
+        ],
+        "text_encoder": [
+          "transformers",
+          "UMT5EncoderModel"
+        ],
+        "tokenizer": [
+          "transformers",
+          "T5TokenizerFast"
+        ],
+        "transformer": [
+          "diffusers",
+          "WanAnimate2Transformer3DModel"
+        ],
+        "vae": [
+          "diffusers",
+          "AutoencoderKLWan"
+        ]
+      }
+    },
+    "wan_distilled_meta": {
+      "url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/revision/59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+      "method": "GET",
+      "status": 200,
+      "bytes": 2655,
+      "sha256": "91942620d17979a34165647e52d46887729783d6e49af15b9637ca98f393f3ac",
+      "metadata": {
+        "id": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+        "sha": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+        "gated": false,
+        "private": false,
+        "cardData": {
+          "frameworks": [
+            ""
+          ],
+          "library_name": "diffusers",
+          "license": "apache-2.0",
+          "tasks": [
+            "text-to-video-synthesis"
+          ]
+        },
+        "config": {
+          "diffusers": {
+            "_class_name": "WanAnimate2Pipeline"
+          }
+        },
+        "usedStorage": 78732220432
+      },
+      "text_assets": [
+        "README.md",
+        "configuration.json",
+        "image_encoder/config.json",
+        "image_processor/merges.txt",
+        "image_processor/preprocessor_config.json",
+        "image_processor/special_tokens_map.json",
+        "image_processor/tokenizer.json",
+        "image_processor/tokenizer_config.json",
+        "image_processor/vocab.json",
+        "model_index.json",
+        "modular_model_index.json",
+        "scheduler/scheduler_config.json",
+        "text_encoder/config.json",
+        "text_encoder/model.safetensors.index.json",
+        "tokenizer/special_tokens_map.json",
+        "tokenizer/tokenizer.json",
+        "tokenizer/tokenizer_config.json",
+        "transformer/config.json",
+        "transformer/diffusion_pytorch_model.safetensors.index.json",
+        "vae/config.json"
+      ]
+    },
+    "wan_distilled_card": {
+      "url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/raw/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/README.md",
+      "method": "GET",
+      "status": 200,
+      "bytes": 979,
+      "sha256": "86cf93daa4bce403b00d56a82063facc7313fa96eb2a5391b7ea486a5a7c66ad",
+      "lines": [
+        [
+          5,
+          "license: apache-2.0"
+        ]
+      ]
+    },
+    "diffusers_head": {
+      "url": "https://api.github.com/repos/huggingface/diffusers/commits?per_page=1",
+      "method": "GET",
+      "status": 200,
+      "bytes": 4522,
+      "sha256": "7d550958e9578161ee27361a5edf49cd3b58d7d0833781223a380e51341ead3f",
+      "commits": [
+        {
+          "sha": "ed32672706fec20ddac3a090c5a8290b3fd313cb",
+          "date": "2026-11-21T03:33:44Z",
+          "subject": "ci: add a workflow to pr post-release changes. (#15257)"
+        }
+      ]
+    },
+    "diffusers_exports": {
+      "url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.43.0/src/diffusers/pipelines/wan/__init__.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1808,
+      "sha256": "742b3deee85dd9118212bcdbfd5574ea6a5e0ecc03355dcc8768528293a7b70e",
+      "lines": [
+        [
+          3,
+          "from ...utils import ("
+        ],
+        [
+          21,
+          "    from ...utils import dummy_torch_and_transformers_objects  # noqa F403"
+        ],
+        [
+          26,
+          "    _import_structure[\"pipeline_wan_animate\"] = [\"WanAnimatePipeline\"]"
+        ],
+        [
+          36,
+          "        from ...utils.dummy_torch_and_transformers_objects import *"
+        ],
+        [
+          38,
+          "        from .pipeline_wan import WanPipeline"
+        ],
+        [
+          39,
+          "        from .pipeline_wan_animate import WanAnimatePipeline"
+        ],
+        [
+          40,
+          "        from .pipeline_wan_i2v import WanImageToVideoPipeline"
+        ],
+        [
+          41,
+          "        from .pipeline_wan_vace import WanVACEPipeline"
+        ],
+        [
+          42,
+          "        from .pipeline_wan_video2video import WanVideoToVideoPipeline"
+        ]
+      ]
+    },
+    "indic_speak_meta": {
+      "url": "https://huggingface.co/api/models/bodhan-ai/indic-speak/revision/76e0814f189321efe550011850cd288dae366aad",
+      "method": "GET",
+      "status": 200,
+      "bytes": 3153,
+      "sha256": "fda5ce55db695d5131675a8f31e584ade8bcc3ce8b0d2580ca5e6356047957d0",
+      "metadata": {
+        "id": "bodhan-ai/indic-speak",
+        "sha": "76e0814f189321efe550011850cd288dae366aad",
+        "gated": "auto",
+        "private": false,
+        "cardData": {
+          "extra_gated_prompt": "Please provide your details and agree to the [LICENSE](https://github.com/Bodhan-AI/bodhan-model-info/blob/main/licenses/indic-open-model-license/v1/Indic_Open_Model_License.md) [[simpler version](https://github.com/Bodhan-AI/bodhan-model-info/blob/main/licenses/indic-open-model-license/v1/Indic_Open_Model_License_Deed.md)] to request access.",
+          "extra_gated_fields": {
+            "Company / Organization": "text",
+            "Country": "country",
+            "Intended Use Case": {
+              "type": "select",
+              "options": [
+                "Research",
+                "Commercial",
+                "Education",
+                {
+                  "label": "Other",
+                  "value": "other"
+                }
+              ]
+            },
+            "I agree to the license terms": "checkbox"
+          },
+          "base_model": "meta-llama/Llama-3.2-3B",
+          "language": [
+            "en",
+            "hi",
+            "bn",
+            "mr",
+            "te",
+            "ta",
+            "gu",
+            "kn",
+            "ml",
+            "or",
+            "pa",
+            "as",
+            "ur",
+            "brx",
+            "doi",
+            "kok",
+            "ks",
+            "mai",
+            "ne",
+            "mni",
+            "sa",
+            "sat",
+            "sd"
+          ],
+          "library_name": "transformers",
+          "pipeline_tag": "text-to-speech",
+          "tags": [
+            "text-to-speech",
+            "tts",
+            "speech",
+            "audio",
+            "indic",
+            "multilingual",
+            "code-switching",
+            "code-mixing",
+            "stem",
+            "education",
+            "indic-speak"
+          ],
+          "metrics": [
+            "wer",
+            "cer",
+            "mos"
+          ],
+          "license": "other"
+        },
+        "config": {
+          "architectures": [
+            "LlamaForCausalLM"
+          ],
+          "model_type": "llama",
+          "tokenizer_config": {
+            "bos_token": "<|begin_of_text|>",
+            "eos_token": "<|end_of_text|>",
+            "unk_token": null,
+            "pad_token": "<|pad|>"
+          }
+        },
+        "usedStorage": 7325878240
+      },
+      "text_assets": [
+        "Bodhan_AI_Open_Model_License.md",
+        "README.md",
+        "config.json",
+        "generation_config.json",
+        "indic-open-license.md",
+        "inference.py",
+        "token_contract.md",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocos/__init__.py",
+        "vocos/load.py",
+        "vocos/model.py",
+        "voices.md"
+      ]
+    },
+    "indic_speak_card": {
+      "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/README.md",
+      "method": "GET",
+      "status": 401
+    },
+    "indic_f5_meta": {
+      "url": "https://huggingface.co/api/models/ai4bharat/IndicF5/revision/fb652a96e508091045890dae5bb99fe511facbcf",
+      "method": "GET",
+      "status": 200,
+      "bytes": 6723,
+      "sha256": "0fdaf0db9e15f815a151e85ccd300caec6b05d678f13ab2613df7e5a7393e340",
+      "metadata": {
+        "id": "ai4bharat/IndicF5",
+        "sha": "fb652a96e508091045890dae5bb99fe511facbcf",
+        "gated": "auto",
+        "private": false,
+        "cardData": {
+          "datasets": [
+            "ai4bharat/indicvoices_r",
+            "ai4bharat/Rasa"
+          ],
+          "language": [
+            "as",
+            "bn",
+            "gu",
+            "mr",
+            "hi",
+            "kn",
+            "ml",
+            "or",
+            "pa",
+            "ta",
+            "te"
+          ],
+          "pipeline_tag": "text-to-speech",
+          "license": "mit"
+        },
+        "config": {
+          "architectures": [
+            "INF5Model"
+          ],
+          "auto_map": {
+            "AutoConfig": "model.INF5Config",
+            "AutoModel": "model.INF5Model"
+          },
+          "model_type": "inf5"
+        },
+        "usedStorage": 1405840389
+      },
+      "text_assets": [
+        "README.md",
+        "checkpoints/vocab.txt",
+        "config.json",
+        "f5_tts/api.py",
+        "f5_tts/eval/README.md",
+        "f5_tts/eval/ecapa_tdnn.py",
+        "f5_tts/eval/eval_infer_batch.py",
+        "f5_tts/eval/eval_librispeech_test_clean.py",
+        "f5_tts/eval/eval_seedtts_testset.py",
+        "f5_tts/eval/utils_eval.py",
+        "f5_tts/infer/README.md",
+        "f5_tts/infer/SHARED.md",
+        "f5_tts/infer/examples/multi/story.txt",
+        "f5_tts/infer/examples/vocab.txt",
+        "f5_tts/infer/infer_batch_parallel.py",
+        "f5_tts/infer/infer_cli.py",
+        "f5_tts/infer/infer_cli_batch.py",
+        "f5_tts/infer/infer_gradio.py",
+        "f5_tts/infer/infer_gradio_orig.py",
+        "f5_tts/infer/speech_edit.py",
+        "f5_tts/infer/utils_infer.py",
+        "f5_tts/model/__init__.py",
+        "f5_tts/model/backbones/README.md",
+        "f5_tts/model/backbones/dit.py",
+        "f5_tts/model/backbones/mmdit.py",
+        "f5_tts/model/backbones/unett.py",
+        "f5_tts/model/cfm.py",
+        "f5_tts/model/dataset.py",
+        "f5_tts/model/modules.py",
+        "f5_tts/model/trainer.py",
+        "f5_tts/model/utils.py",
+        "f5_tts/scripts/count_max_epoch.py",
+        "f5_tts/scripts/count_params_gflops.py",
+        "f5_tts/socket_server.py",
+        "f5_tts/train/README.md",
+        "f5_tts/train/datasets/prepare_csv_wavs.py",
+        "f5_tts/train/datasets/prepare_csvs_wavs_v2.py",
+        "f5_tts/train/datasets/prepare_csvs_wavs_v3.py",
+        "f5_tts/train/datasets/prepare_emilia.py",
+        "f5_tts/train/datasets/prepare_in22_en_10k.py",
+        "f5_tts/train/datasets/prepare_libritts.py",
+        "f5_tts/train/datasets/prepare_ljspeech.py",
+        "f5_tts/train/datasets/prepare_optimized.py",
+        "f5_tts/train/datasets/prepare_wenetspeech4tts.py",
+        "f5_tts/train/finetune_cli.py",
+        "f5_tts/train/finetune_gradio.py",
+        "f5_tts/train/train.py",
+        "model.py"
+      ]
+    },
+    "indic_f5_card": {
+      "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/README.md",
+      "method": "GET",
+      "status": 401
+    },
+    "indic_f5_code": {
+      "url": "https://api.github.com/repos/ai4bharat/IndicF5",
+      "method": "GET",
+      "status": 200,
+      "bytes": 6081,
+      "sha256": "1e30917489cc85133b29bbd4da9f63af7f56271680e75924927b2215d46a26f7",
+      "metadata": {
+        "full_name": "AI4Bharat/IndicF5",
+        "default_branch": "main",
+        "license": null,
+        "description": null
+      }
+    },
+    "f5_upstream": {
+      "url": "https://api.github.com/repos/SWivid/F5-TTS/commits?per_page=1",
+      "method": "GET",
+      "status": 200,
+      "bytes": 4388,
+      "sha256": "9d4cca5c6bd57431c8753dac082a92426d2bfc5fb6a592bef71b471937be45d3",
+      "commits": [
+        {
+          "sha": "600e5fdfbf319f84735557aca80a7aaf60d487e6",
+          "date": "2026-11-03T15:05:09Z",
+          "subject": "Fix #1342 incompatible torch torchaudio torchcodec, thanks to @algmironov"
+        }
+      ]
+    },
+    "bigvgan_upstream": {
+      "url": "https://api.github.com/repos/NVIDIA/BigVGAN/commits?per_page=1",
+      "method": "GET",
+      "status": 200,
+      "bytes": 3093,
+      "sha256": "8e459297e2ec55d3a1bb03e2a7c910b1c8cc2c373c5b8b7b83bb57a1034bb7de",
+      "commits": [
+        {
+          "sha": "7d2b454564a6c7d014227f635b7423881f14bdac",
+          "date": "2024-09-05T03:44:13Z",
+          "subject": "v2.4"
+        }
+      ]
+    },
+    "encodec_license": {
+      "url": "https://raw.githubusercontent.com/facebookresearch/encodec/main/LICENSE",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1087,
+      "sha256": "cf9b17822d1fcd4ff32ccbe14183386fb3adf6f2ff92dc184130823f7fc28173",
+      "lines": [
+        [
+          1,
+          "MIT License"
+        ],
+        [
+          5,
+          "Permission is hereby granted, free of charge, to any person obtaining a copy"
+        ],
+        [
+          7,
+          "in the Software without restriction, including without limitation the rights"
+        ],
+        [
+          8,
+          "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell"
+        ],
+        [
+          12,
+          "The above copyright notice and this permission notice shall be included in all"
+        ]
+      ]
+    },
+    "snac_license": {
+      "url": "https://raw.githubusercontent.com/hubertsiuzdak/snac/main/LICENSE",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1100,
+      "sha256": "a82cc54b23e2fa07772629f94effa8abfb7e6bc8ebfd31cb7ae5c606520650de",
+      "lines": [
+        [
+          1,
+          "MIT License"
+        ],
+        [
+          6,
+          "Permission is hereby granted, free of charge, to any person obtaining a copy"
+        ],
+        [
+          8,
+          "in the Software without restriction, including without limitation the rights"
+        ],
+        [
+          9,
+          "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell"
+        ],
+        [
+          13,
+          "The above copyright notice and this permission notice shall be included in all"
+        ]
+      ]
+    },
+    "vocos_dependencies": {
+      "url": "https://pypi.org/pypi/vocos/0.1.0/json",
+      "method": "GET",
+      "status": 200,
+      "bytes": 6933,
+      "sha256": "89afee30c180d5a08ce26497fe59defce248dfb56894feba61ddbfddec8356ba",
+      "metadata": {
+        "version": "0.1.0",
+        "license": "",
+        "requires_dist": [
+          "torch",
+          "torchaudio",
+          "numpy",
+          "scipy",
+          "einops",
+          "pyyaml",
+          "huggingface-hub",
+          "encodec ==0.1.1",
+          "pytorch-lightning ==1.8.6 ; extra == 'train'",
+          "jsonargparse[signatures] ; extra == 'train'",
+          "transformers ; extra == 'train'",
+          "matplotlib ; extra == 'train'",
+          "torchcrepe ; extra == 'train'",
+          "pesq ; extra == 'train'",
+          "fairseq ; extra == 'train'"
+        ]
+      }
+    },
+    "vocos_codec_pin": {
+      "url": "https://pypi.org/pypi/encodec/0.1.1/json",
+      "method": "GET",
+      "status": 200,
+      "bytes": 8646,
+      "sha256": "e29e8dc6f497c43dfb7d85a8ef363016f0f48c8b46c64c937880c49a091a3e3e",
+      "metadata": {
+        "version": "0.1.1",
+        "license": "Creative Commons Attribution-NonCommercial 4.0 International",
+        "requires_dist": null
+      }
+    },
+    "ltx_pointer": {
+      "url": "https://huggingface.co/api/models/Lightricks/LTX-2.5/tree/49b093a39c19169a8a81721dcc541e07e945232f/latent_upscale_models?expand=true",
+      "method": "GET",
+      "status": 200,
+      "bytes": 2917,
+      "sha256": "61928959a44e7e1eb8e344b2729253d35f23e31b81c11b9be3bb2034ccd9e251",
+      "entry": [
+        {
+          "type": "file",
+          "oid": "cec7bee6186295d8120b8006785564c95027e526",
+          "size": 995778752,
+          "lfs": {
+            "oid": "****************************************************************",
+            "size": 995778752,
+            "pointerSize": 134
+          },
+          "xetHash": "****************************************************************",
+          "path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+          "lastCommit": {
+            "id": "dd53cc2cd45bbeaa3563dfb575cba3f49cf44761",
+            "title": "LTX-2.5 model release",
+            "date": "2026-08-11T18:52:50.000Z"
+          }
+        }
+      ],
+      "unscanned_vendor_link_present": true
+    },
+    "ltx_artifact_head": {
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/49b093a39c19169a8a81721dcc541e07e945232f/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "method": "HEAD",
+      "status": 401
+    },
+    "gated_access": {
+      "url": "https://huggingface.co/docs/hub/models-gated",
+      "method": "GET",
+      "status": 200,
+      "bytes": 239471,
+      "sha256": "6b04108e8211ceff8e9f79b38dcd26df6f041015b88ee4cd86d4040d925cea2b",
+      "lines": [
+        [
+          6,
+          "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\" />"
+        ],
+        [
+          158,
+          "\t\t<!--[--><div class=\"flex min-h-dvh flex-col\"><div class=\"SVELTE_HYDRATER contents\" data-target=\"ClientErrorCatcher\" data-props=\"{}\"><!----></div> <div class=\"SVELTE_HYDRATER contents\" data-target=\"SystemThemeMonitor\" data-props=\"{&quot;isLoggedIn&quot;:false}\"><!----></div> <!--[0--><div class=\"SVELTE_HYDRATER contents\" data-target=\"MainHeader\" data-props=\"{&quot;classNames&quot;:&quot;&quot;,&quot;isWide&quot;:true,&quot;isZh&quot;:false,&quot;canCreateKernels&quot;:false,&quot;isPro&quot;:false,&quot;isMac&quot;:false}\"><header class=\"border-b border-gray-100 \"><div class=\"w-full px-4  flex h-16 items-center\"><div class=\"flex min-w-0 flex"
+        ],
+        [
+          171,
+          "\t\t<link href=\"/docs/hub/main/en/_app/immutable/assets/0.tn0RQdqM.css\" rel=\"modulepreload\"> <!--[--><!--[0--><!--[--><!--[0--><!--[--><p></p> <div class=\"items-center shrink-0 min-w-[100px] max-sm:min-w-[50px] justify-end ml-auto flex\" style=\"float: inline-end; margin-inline-start: 10px; display: inline-flex; position: relative; z-index: 10;\"><div dir=\"ltr\" class=\"inline-flex rounded-md max-sm:rounded-sm\"><button class=\"inline-flex items-center gap-1 h-7 max-sm:h-7 px-2 max-sm:px-1.5 text-sm font-medium text-gray-800 border border-r-0 rounded-l-md max-sm:rounded-l-sm border-gray-200 bg-white hover:shadow-inner dark:border-gray-850 dark:bg-gray"
+        ],
+        [
+          184,
+          "  <span class=\"hljs-attr\">I agree to use this model for non-commercial use ONLY:</span> <span class=\"hljs-string\">checkbox</span>"
+        ],
+        [
+          186,
+          "<span class=\"hljs-attr\">extra_gated_heading:</span> <span class=\"hljs-string\">&quot;Acknowledge license to accept the repository&quot;</span>"
+        ],
+        [
+          188,
+          "<span class=\"hljs-attr\">extra_gated_button_content:</span> <span class=\"hljs-string\">&quot;Acknowledge license&quot;</span>"
+        ],
+        [
+          190,
+          "As a reminder, the model repo needs to be set to manual approval, otherwise users get access to it automatically.</p> <p>Possible use cases of programmatic management include:</p> <ul><li>If you have advanced user request screening requirements (for advanced compliance requirements, etc) or you wish to handle the user requests outside the Hub. <ul><li>An example for this was Meta’s <a href=\"https://huggingface.co/meta-llama/Llama-2-7b-chat-hf\" rel=\"nofollow\">Llama 2</a> initial release where users had to request access on a Meta website.</li> <li>You can ask users for their HF username in your access flow, and then use a script to programmati"
+        ],
+        [
+          191,
+          "<span class=\"hljs-meta\">&gt;&gt;&gt; </span>login()<!----></pre></div><!----> <p>You can also provide the <code>token</code> parameter to most loading methods in the libraries (<code>from_pretrained</code>, <code>hf_hub_download</code>, <code>load_dataset</code>, etc.), directly from your scripts.</p> <p>For more details about how to login, check out the <a href=\"https://huggingface.co/docs/huggingface_hub/quick-start#login\" rel=\"nofollow\">login guide</a>.</p> <!--[2--><h3 class=\"relative group\"><a id=\"restricting-access-for-eu-users\" class=\"header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opaci"
+        ],
+        [
+          192,
+          "<span class=\"hljs-attr\">license:</span> <span class=\"hljs-string\">mit</span>"
+        ]
+      ]
+    },
+    "wan_pr": {
+      "url": "https://api.github.com/repos/huggingface/diffusers/pulls/14412",
+      "method": "GET",
+      "status": 200,
+      "bytes": 26817,
+      "sha256": "08862590937a124ebf482a0b82abdb677dedcb3d8eef659824d219f4c0f4770d",
+      "metadata": {
+        "title": "support-wan-animate-2",
+        "state": "open",
+        "merged": false,
+        "merged_at": null,
+        "merge_commit_sha": null
+      },
+      "head": {
+        "sha": "14f482c30c91021cc0e363a0a17a115b44972aee",
+        "repo": "kelseyee/diffusers"
+      },
+      "base_sha": "9c6a68c32b3b2a64db91800b624d33cec6e25ab8"
+    },
+    "wan_pr_pipeline": {
+      "url": "https://raw.githubusercontent.com/kelseyee/diffusers/14f482c30c91021cc0e363a0a17a115b44972aee/src/diffusers/pipelines/wan/pipeline_wan_animate_2.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 31803,
+      "sha256": "f04b0e244e09a14ba0a67e5cde3712f408e5defaa941417b410f64466d35d8b8",
+      "ast": {
+        "classes": [
+          "WanAnimate2Pipeline"
+        ],
+        "import_time_cuda_defaults": []
+      },
+      "lines": [
+        [
+          3,
+          "# Licensed under the Apache License, Version 2.0 (the \"License\");"
+        ],
+        [
+          4,
+          "# you may not use this file except in compliance with the License."
+        ],
+        [
+          5,
+          "# You may obtain a copy of the License at"
+        ],
+        [
+          7,
+          "#     http://www.apache.org/licenses/LICENSE-2.0"
+        ],
+        [
+          10,
+          "# distributed under the License is distributed on an \"AS IS\" BASIS,"
+        ],
+        [
+          12,
+          "# See the License for the specific language governing permissions and"
+        ],
+        [
+          13,
+          "# limitations under the License."
+        ],
+        [
+          24,
+          "from ...image_processor import PipelineImageInput"
+        ],
+        [
+          25,
+          "from ...loaders import WanLoraLoaderMixin"
+        ],
+        [
+          26,
+          "from ...models import AutoencoderKLWan, WanAnimate2Transformer3DModel"
+        ],
+        [
+          27,
+          "from ...schedulers import DPMSolverMultistepScheduler"
+        ],
+        [
+          28,
+          "from ...utils import logging"
+        ],
+        [
+          29,
+          "from ...video_processor import VideoProcessor"
+        ],
+        [
+          30,
+          "from ..pipeline_utils import DiffusionPipeline"
+        ],
+        [
+          31,
+          "from .pipeline_output import WanPipelineOutput"
+        ],
+        [
+          43,
+          "def retrieve_timesteps(scheduler, num_inference_steps=None, device=None, sigmas=None, **kwargs):"
+        ],
+        [
+          45,
+          "        accept_sigmas = \"sigmas\" in set(inspect.signature(scheduler.set_timesteps).parameters.keys())"
+        ],
+        [
+          48,
+          "                f\"The current scheduler class {scheduler.__class__}'s `set_timesteps` does not support custom\""
+        ],
+        [
+          51,
+          "        scheduler.set_timesteps(sigmas=sigmas, device=device, **kwargs)"
+        ],
+        [
+          52,
+          "        timesteps = scheduler.timesteps"
+        ],
+        [
+          55,
+          "        scheduler.set_timesteps(num_inference_steps, device=device, **kwargs)"
+        ],
+        [
+          56,
+          "        timesteps = scheduler.timesteps"
+        ],
+        [
+          60,
+          "def get_i2v_mask(lat_t, lat_h, lat_w, mask_len=1, device=\"cuda\"):"
+        ],
+        [
+          65,
+          "    msk = torch.zeros(1, (lat_t - 1) * 4 + 1, lat_h, lat_w, device=device)"
+        ],
+        [
+          120,
+          "def clip_visual_encode(image_encoder, tensor, device, dtype):"
+        ],
+        [
+          128,
+          "    mean = torch.tensor(CLIP_MEAN, device=device, dtype=videos.dtype).view(1, 3, 1, 1)"
+        ],
+        [
+          129,
+          "    std = torch.tensor(CLIP_STD, device=device, dtype=videos.dtype).view(1, 3, 1, 1)"
+        ],
+        [
+          131,
+          "    with torch.amp.autocast(device_type=\"cuda\", dtype=dtype):"
+        ],
+        [
+          132,
+          "        out = image_encoder(pixel_values=videos, output_hidden_states=True)"
+        ],
+        [
+          136,
+          "class WanAnimate2Pipeline(DiffusionPipeline, WanLoraLoaderMixin):"
+        ],
+        [
+          152,
+          "        transformer ([`WanAnimate2Transformer3DModel`]):"
+        ],
+        [
+          154,
+          "        scheduler ([`DPMSolverMultistepScheduler`]):"
+        ],
+        [
+          155,
+          "            A scheduler for flow matching."
+        ],
+        [
+          160,
+          "    model_cpu_offload_seq = \"text_encoder->image_encoder->transformer->vae\""
+        ],
+        [
+          163,
+          "    def __init__("
+        ],
+        [
+          168,
+          "        scheduler: DPMSolverMultistepScheduler,"
+        ],
+        [
+          170,
+          "        transformer: WanAnimate2Transformer3DModel,"
+        ],
+        [
+          180,
+          "            scheduler=scheduler,"
+        ],
+        [
+          187,
+          "    def _get_t5_prompt_embeds(self, prompt, device=None, dtype=None, max_sequence_length=512):"
+        ],
+        [
+          188,
+          "        device = device or self._execution_device"
+        ],
+        [
+          205,
+          "        prompt_embeds = self.text_encoder(text_input_ids.to(device), mask.to(device)).last_hidden_state"
+        ],
+        [
+          206,
+          "        prompt_embeds = prompt_embeds.to(dtype=dtype, device=device)"
+        ],
+        [
+          214,
+          "    def encode_image(self, image, device=None):"
+        ],
+        [
+          215,
+          "        device = device or self._execution_device"
+        ],
+        [
+          216,
+          "        from transformers import CLIPImageProcessor"
+        ],
+        [
+          219,
+          "        processed = image_processor(images=image, return_tensors=\"pt\").to(device)"
+        ],
+        [
+          220,
+          "        image_embeds = self.image_encoder(**processed, output_hidden_states=True)"
+        ],
+        [
+          223,
+          "    def _encode_vae(self, video, device, dtype):"
+        ],
+        [
+          225,
+          "        video = video.to(device=device, dtype=dtype)"
+        ],
+        [
+          236,
+          "            .to(latents.device, latents.dtype)"
+        ],
+        [
+          239,
+          "            latents.device, latents.dtype"
+        ],
+        [
+          244,
+          "    def _decode_vae(self, latents, device):"
+        ],
+        [
+          250,
+          "            .to(latents.device, latents.dtype)"
+        ],
+        [
+          253,
+          "            latents.device, latents.dtype"
+        ],
+        [
+          298,
+          "        output_type: str | None = \"np\","
+        ],
+        [
+          327,
+          "                The output video FPS."
+        ],
+        [
+          336,
+          "            output_type (`str`, defaults to `\"np\"`):"
+        ],
+        [
+          337,
+          "                The output format."
+        ],
+        [
+          339,
+          "                Whether to return a `WanPipelineOutput`."
+        ],
+        [
+          345,
+          "        device = self._execution_device"
+        ],
+        [
+          349,
+          "            torch.cuda.manual_seed_all(seed)"
+        ],
+        [
+          353,
+          "            generator = torch.Generator(device=device)"
+        ],
+        [
+          363,
+          "        import decord"
+        ],
+        [
+          365,
+          "        vr = decord.VideoReader(driving_video if isinstance(driving_video, str) else None)"
+        ],
+        [
+          380,
+          "        driving_video = driving_video.to(device, dtype=torch.float32)"
+        ],
+        [
+          398,
+          "        prompt_embeds = self._get_t5_prompt_embeds(prompt, device=device, max_sequence_length=max_sequence_length)"
+        ],
+        [
+          403,
+          "                negative_prompt, device=device, max_sequence_length=max_sequence_length"
+        ],
+        [
+          408,
+          "            prompt_ref, device=device, max_sequence_length=max_sequence_length"
+        ],
+        [
+          413,
+          "        image_pixels = ref_tensor.permute(2, 0, 1).unsqueeze(0).unsqueeze(2).to(device, dtype=torch.float32)"
+        ],
+        [
+          416,
+          "        clip_fea = clip_visual_encode(self.image_encoder, ref_tensor.permute(2, 0, 1).to(device), device, self.transformer.dtype)"
+        ],
+        [
+          432,
+          "            .to(ref_latents.device, ref_latents.dtype)"
+        ],
+        [
+          435,
+          "            ref_latents.device, ref_latents.dtype"
+        ],
+        [
+          445,
+          "        mask_ref = get_i2v_mask(1, latent_h, latent_w, 1, device=device).to(self.transformer.dtype)"
+        ],
+        [
+          452,
+          "        # 5. Set up scheduler"
+        ],
+        [
+          454,
+          "            from diffusers import FlowMatchEulerDiscreteScheduler"
+        ],
+        [
+          456,
+          "            sample_scheduler = FlowMatchEulerDiscreteScheduler("
+        ],
+        [
+          462,
+          "            sample_scheduler = DPMSolverMultistepScheduler.from_config("
+        ],
+        [
+          463,
+          "                self.scheduler.config,"
+        ],
+        [
+          469,
+          "        sample_scheduler.set_timesteps(num_inference_steps, device=device)"
+        ],
+        [
+          470,
+          "        timesteps = sample_scheduler.timesteps"
+        ],
+        [
+          507,
+          "                self.image_encoder, condition_img, device, self.transformer.dtype"
+        ],
+        [
+          520,
+          "                    [prev_frames_interp, torch.zeros(3, T - mask_reft_len - 1, actual_h, actual_w, device=device)],"
+        ],
+        [
+          524,
+          "                cond_y_input = torch.zeros(3, T - 1, actual_h, actual_w, device=device).to(self.vae.dtype)"
+        ],
+        [
+          537,
+          "            # Derive lat_t from actual VAE output shape"
+        ],
+        [
+          541,
+          "            msk_reft = get_i2v_mask(lat_t_y, latent_h, latent_w, mask_reft_len, device=device).to("
+        ]
+      ]
+    },
+    "wan_pr_transformer": {
+      "url": "https://raw.githubusercontent.com/kelseyee/diffusers/14f482c30c91021cc0e363a0a17a115b44972aee/src/diffusers/models/transformers/transformer_wan_animate_2.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 37782,
+      "sha256": "8f6f18ab3f11b8efe42d80fb6eadbc63d5b32b2ac06e100d4c8af2aeb2ecf2e9",
+      "ast": {
+        "classes": [
+          "RMSNorm",
+          "LayerNorm",
+          "SelfAttention",
+          "CrossAttention",
+          "AttentionBlock",
+          "IncontextAttentionBlock",
+          "Head",
+          "MLPProj",
+          "WanAnimate2Transformer3DModel"
+        ],
+        "import_time_cuda_defaults": []
+      },
+      "lines": [
+        [
+          3,
+          "# Licensed under the Apache License, Version 2.0 (the \"License\");"
+        ],
+        [
+          4,
+          "# you may not use this file except in compliance with the License."
+        ],
+        [
+          5,
+          "# You may obtain a copy of the License at"
+        ],
+        [
+          7,
+          "#     http://www.apache.org/licenses/LICENSE-2.0"
+        ],
+        [
+          10,
+          "# distributed under the License is distributed on an \"AS IS\" BASIS,"
+        ],
+        [
+          12,
+          "# See the License for the specific language governing permissions and"
+        ],
+        [
+          13,
+          "# limitations under the License."
+        ],
+        [
+          23,
+          "from ...configuration_utils import ConfigMixin, register_to_config"
+        ],
+        [
+          24,
+          "from ...loaders import FromOriginalModelMixin, PeftAdapterMixin"
+        ],
+        [
+          25,
+          "from ..modeling_utils import ModelMixin"
+        ],
+        [
+          29,
+          "    from flash_attn_interface import flash_attn_varlen_func"
+        ],
+        [
+          34,
+          "        from flash_attn import flash_attn_varlen_func"
+        ],
+        [
+          38,
+          "        flash_attn_varlen_func = None"
+        ],
+        [
+          83,
+          "    assert q.device.type == \"cuda\" and q.size(-1) <= 256"
+        ],
+        [
+          94,
+          "        q_lens = torch.tensor([lq] * b, dtype=torch.int32).to(device=q.device, non_blocking=True)"
+        ],
+        [
+          102,
+          "        k_lens = torch.tensor([lk] * b, dtype=torch.int32).to(device=k.device, non_blocking=True)"
+        ],
+        [
+          115,
+          "        x = flash_attn_varlen_func("
+        ],
+        [
+          121,
+          "            .to(q.device, non_blocking=True),"
+        ],
+        [
+          124,
+          "            .to(q.device, non_blocking=True),"
+        ],
+        [
+          133,
+          "        x = flash_attn_varlen_func("
+        ],
+        [
+          139,
+          "            .to(q.device, non_blocking=True),"
+        ],
+        [
+          142,
+          "            .to(q.device, non_blocking=True),"
+        ],
+        [
+          152,
+          "    # output"
+        ],
+        [
+          177,
+          "    assert q.device.type == \"cuda\""
+        ],
+        [
+          237,
+          "@torch.amp.autocast(device_type=\"cuda\", enabled=False)"
+        ],
+        [
+          248,
+          "@torch.amp.autocast(device_type=\"cuda\", enabled=False)"
+        ],
+        [
+          256,
+          "    output = []"
+        ],
+        [
+          276,
+          "        output.append(x_i)"
+        ],
+        [
+          277,
+          "    return torch.stack(output).float()"
+        ],
+        [
+          288,
+          "        device=original_tensor.device,"
+        ],
+        [
+          295,
+          "    def __init__(self, dim, eps=1e-5):"
+        ],
+        [
+          313,
+          "    def __init__(self, dim, eps=1e-6, elementwise_affine=False):"
+        ],
+        [
+          321,
+          "    def __init__("
+        ],
+        [
+          364,
+          "        # output"
+        ],
+        [
+          371,
+          "    def __init__(self, dim, num_heads, window_size=(-1, -1), qk_norm=True, eps=1e-6, use_img_emb=True):"
+        ],
+        [
+          405,
+          "        # output"
+        ],
+        [
+          415,
+          "    def __init__("
+        ],
+        [
+          458,
+          "        with torch.amp.autocast(device_type=\"cuda\", dtype=torch.float32):"
+        ],
+        [
+          472,
+          "        with torch.amp.autocast(device_type=\"cuda\", dtype=torch.float32):"
+        ],
+        [
+          478,
+          "    def __init__("
+        ],
+        [
+          532,
+          "        with torch.amp.autocast(device_type=\"cuda\", dtype=torch.float32):"
+        ],
+        [
+          577,
+          "        device, dtype = q.device, q.dtype"
+        ],
+        [
+          585,
+          "        q_incontext = torch.zeros(B, target_q_len, N, C, device=device, dtype=dtype)"
+        ],
+        [
+          586,
+          "        k_incontext = torch.zeros(B, target_kv_len, N, C, device=device, dtype=dtype)"
+        ],
+        [
+          587,
+          "        v_incontext = torch.zeros(B, target_kv_len, N, C, device=device, dtype=dtype)"
+        ],
+        [
+          626,
+          "        with torch.amp.autocast(device_type=\"cuda\", dtype=torch.float32):"
+        ],
+        [
+          634,
+          "    def __init__(self, dim, out_dim, patch_size, eps=1e-6):"
+        ],
+        [
+          651,
+          "        with torch.amp.autocast(device_type=\"cuda\", dtype=torch.float32):"
+        ],
+        [
+          658,
+          "    def __init__(self, in_dim, out_dim):"
+        ],
+        [
+          674,
+          "class WanAnimate2Transformer3DModel(ModelMixin, ConfigMixin, PeftAdapterMixin, FromOriginalModelMixin):"
+        ],
+        [
+          699,
+          "            The number of channels in the output."
+        ],
+        [
+          743,
+          "    def __init__("
+        ],
+        [
+          841,
+          "    def create_mask(self, origin_len, origin_area, device):"
+        ],
+        [
+          883,
+          "            device=device,"
+        ],
+        [
+          903,
+          "        device = self.patch_embedding.weight.device"
+        ],
+        [
+          932,
+          "        if self.freqs_ref.device != device:"
+        ],
+        [
+          933,
+          "            self.freqs_ref = self.freqs_ref.to(device)"
+        ],
+        [
+          936,
+          "        with torch.amp.autocast(device_type=\"cuda\", dtype=torch.float32):"
+        ],
+        [
+          990,
+          "        device = self.patch_embedding.weight.device"
+        ],
+        [
+          1010,
+          "        if self.freqs.device != device:"
+        ],
+        [
+          1011,
+          "            self.freqs = self.freqs.to(device)"
+        ],
+        [
+          1028,
+          "        if self.freqs_ref.device != device:"
+        ],
+        [
+          1029,
+          "            self.freqs_ref = self.freqs_ref.to(device)"
+        ],
+        [
+          1032,
+          "        with torch.amp.autocast(device_type=\"cuda\", dtype=torch.float32):"
+        ],
+        [
+          1049,
+          "            self.block_masks[block_mask_id] = self.create_mask(origin_len, origin_area, x.device)"
+        ],
+        [
+          1115,
+          "        # init output layer"
+        ]
+      ]
+    },
+    "wan_pr_exports": {
+      "url": "https://raw.githubusercontent.com/kelseyee/diffusers/14f482c30c91021cc0e363a0a17a115b44972aee/src/diffusers/pipelines/wan/__init__.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1946,
+      "sha256": "5160a8c7a51ce8e4cc8ef8ad0d21d18ddca81914310c8081f15b1042fcc741cd",
+      "lines": [
+        [
+          3,
+          "from ...utils import ("
+        ],
+        [
+          21,
+          "    from ...utils import dummy_torch_and_transformers_objects  # noqa F403"
+        ],
+        [
+          26,
+          "    _import_structure[\"pipeline_wan_animate\"] = [\"WanAnimatePipeline\"]"
+        ],
+        [
+          27,
+          "    _import_structure[\"pipeline_wan_animate_2\"] = [\"WanAnimate2Pipeline\"]"
+        ],
+        [
+          37,
+          "        from ...utils.dummy_torch_and_transformers_objects import *"
+        ],
+        [
+          39,
+          "        from .pipeline_wan import WanPipeline"
+        ],
+        [
+          40,
+          "        from .pipeline_wan_animate import WanAnimatePipeline"
+        ],
+        [
+          41,
+          "        from .pipeline_wan_animate_2 import WanAnimate2Pipeline"
+        ],
+        [
+          42,
+          "        from .pipeline_wan_i2v import WanImageToVideoPipeline"
+        ],
+        [
+          43,
+          "        from .pipeline_wan_vace import WanVACEPipeline"
+        ],
+        [
+          44,
+          "        from .pipeline_wan_video2video import WanVideoToVideoPipeline"
+        ]
+      ]
+    },
+    "wan_pr_setup": {
+      "url": "https://raw.githubusercontent.com/kelseyee/diffusers/14f482c30c91021cc0e363a0a17a115b44972aee/setup.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 11262,
+      "sha256": "3473e536d78b157261c2e5bb38561478febe8bb278da8d915e6fb4d866b4426d",
+      "lines": [
+        [
+          3,
+          "# Licensed under the Apache License, Version 2.0 (the \"License\");"
+        ],
+        [
+          4,
+          "# you may not use this file except in compliance with the License."
+        ],
+        [
+          5,
+          "# You may obtain a copy of the License at"
+        ],
+        [
+          7,
+          "#     http://www.apache.org/licenses/LICENSE-2.0"
+        ],
+        [
+          10,
+          "# distributed under the License is distributed on an \"AS IS\" BASIS,"
+        ],
+        [
+          12,
+          "# See the License for the specific language governing permissions and"
+        ],
+        [
+          13,
+          "# limitations under the License."
+        ],
+        [
+          141,
+          "    \"torch>=2.6\","
+        ],
+        [
+          143,
+          "    \"transformers>=4.41.2\","
+        ],
+        [
+          280,
+          "    keywords=\"deep learning diffusion pytorch stable diffusion audioldm\","
+        ],
+        [
+          281,
+          "    license=\"Apache 2.0 License\","
+        ],
+        [
+          298,
+          "        \"License :: OSI Approved :: Apache Software License\","
+        ]
+      ]
+    },
+    "wan_pr_license": {
+      "url": "https://raw.githubusercontent.com/kelseyee/diffusers/14f482c30c91021cc0e363a0a17a115b44972aee/LICENSE",
+      "method": "GET",
+      "status": 200,
+      "bytes": 11357,
+      "sha256": "f9e2070c247517b1ddf65f7b11b393484a18da91a958fd18a97bd0f241c3125c",
+      "lines": [
+        [
+          1,
+          "                                 Apache License"
+        ],
+        [
+          3,
+          "                        http://www.apache.org/licenses/"
+        ],
+        [
+          9,
+          "      \"License\" shall mean the terms and conditions for use, reproduction,"
+        ],
+        [
+          13,
+          "      the copyright owner that is granting the License."
+        ],
+        [
+          24,
+          "      exercising permissions granted by this License."
+        ],
+        [
+          36,
+          "      Object form, made available under the License, as indicated by a"
+        ],
+        [
+          44,
+          "      of this License, Derivative Works shall not include works that remain"
+        ],
+        [
+          66,
+          "   2. Grant of Copyright License. Subject to the terms and conditions of"
+        ],
+        [
+          67,
+          "      this License, each Contributor hereby grants to You a perpetual,"
+        ],
+        [
+          69,
+          "      copyright license to reproduce, prepare Derivative Works of,"
+        ],
+        [
+          70,
+          "      publicly display, publicly perform, sublicense, and distribute the"
+        ],
+        [
+          73,
+          "   3. Grant of Patent License. Subject to the terms and conditions of"
+        ],
+        [
+          74,
+          "      this License, each Contributor hereby grants to You a perpetual,"
+        ],
+        [
+          76,
+          "      (except as stated in this section) patent license to make, have made,"
+        ],
+        [
+          78,
+          "      where such license applies only to those patent claims licensable"
+        ],
+        [
+          85,
+          "      or contributory patent infringement, then any patent licenses"
+        ],
+        [
+          86,
+          "      granted to You under this License for that Work shall terminate"
+        ],
+        [
+          95,
+          "          Derivative Works a copy of this License; and"
+        ],
+        [
+          117,
+          "          do not modify the License. You may add Your own attribution"
+        ],
+        [
+          121,
+          "          as modifying the License."
+        ],
+        [
+          124,
+          "      may provide additional or different license terms and conditions"
+        ],
+        [
+          128,
+          "      the conditions stated in this License."
+        ],
+        [
+          133,
+          "      this License, without any additional terms or conditions."
+        ],
+        [
+          135,
+          "      the terms of any separate license agreement you may have executed"
+        ],
+        [
+          138,
+          "   6. Trademarks. This License does not grant permission to use the trade"
+        ],
+        [
+          151,
+          "      risks associated with Your exercise of permissions under this License."
+        ],
+        [
+          159,
+          "      result of this License or out of the use or inability to use the"
+        ],
+        [
+          162,
+          "      other commercial damages or losses), even if such Contributor"
+        ],
+        [
+          169,
+          "      License. However, in accepting such obligations, You may act only"
+        ],
+        [
+          178,
+          "   APPENDIX: How to apply the Apache License to your work."
+        ],
+        [
+          180,
+          "      To apply the Apache License to your work, attach the following"
+        ],
+        [
+          191,
+          "   Licensed under the Apache License, Version 2.0 (the \"License\");"
+        ],
+        [
+          192,
+          "   you may not use this file except in compliance with the License."
+        ],
+        [
+          193,
+          "   You may obtain a copy of the License at"
+        ],
+        [
+          195,
+          "       http://www.apache.org/licenses/LICENSE-2.0"
+        ],
+        [
+          198,
+          "   distributed under the License is distributed on an \"AS IS\" BASIS,"
+        ],
+        [
+          200,
+          "   See the License for the specific language governing permissions and"
+        ],
+        [
+          201,
+          "   limitations under the License."
+        ]
+      ]
+    },
+    "diffusers_head_exports": {
+      "url": "https://raw.githubusercontent.com/huggingface/diffusers/ed32672706fec20ddac3a090c5a8290b3fd313cb/src/diffusers/pipelines/wan/__init__.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1808,
+      "sha256": "742b3deee85dd9118212bcdbfd5574ea6a5e0ecc03355dcc8768528293a7b70e",
+      "lines": [
+        [
+          3,
+          "from ...utils import ("
+        ],
+        [
+          21,
+          "    from ...utils import dummy_torch_and_transformers_objects  # noqa F403"
+        ],
+        [
+          26,
+          "    _import_structure[\"pipeline_wan_animate\"] = [\"WanAnimatePipeline\"]"
+        ],
+        [
+          36,
+          "        from ...utils.dummy_torch_and_transformers_objects import *"
+        ],
+        [
+          38,
+          "        from .pipeline_wan import WanPipeline"
+        ],
+        [
+          39,
+          "        from .pipeline_wan_animate import WanAnimatePipeline"
+        ],
+        [
+          40,
+          "        from .pipeline_wan_i2v import WanImageToVideoPipeline"
+        ],
+        [
+          41,
+          "        from .pipeline_wan_vace import WanVACEPipeline"
+        ],
+        [
+          42,
+          "        from .pipeline_wan_video2video import WanVideoToVideoPipeline"
+        ]
+      ]
+    },
+    "indic_f5_public_readme": {
+      "url": "https://raw.githubusercontent.com/AI4Bharat/IndicF5/13f7c4d627cc10111aea8fe9c0039462cacacdc7/README.md",
+      "method": "GET",
+      "status": 200,
+      "bytes": 2914,
+      "sha256": "0a6f76c6d1c1b380717422a95666915a88232d65fdea74147d87430952856d8d",
+      "lines": [
+        [
+          25,
+          "2. **A reference prompt audio** – An example speech clip that guides the model’s prosody and speaker characteristics."
+        ],
+        [
+          26,
+          "3. **Text spoken in the reference prompt audio** – The transcript of the reference prompt audio."
+        ],
+        [
+          30,
+          "from transformers import AutoModel"
+        ],
+        [
+          39,
+          "audio = model("
+        ],
+        [
+          41,
+          "    ref_audio_path=\"prompts/PAN_F_HAPPY_00001.wav\","
+        ],
+        [
+          45,
+          "# Normalize and save output"
+        ],
+        [
+          46,
+          "if audio.dtype == np.int16:"
+        ],
+        [
+          47,
+          "    audio = audio.astype(np.float32) / 32768.0"
+        ],
+        [
+          48,
+          "sf.write(\"samples/namaste.wav\", np.array(audio, dtype=np.float32), samplerate=24000)"
+        ]
+      ]
+    },
+    "indic_f5_pinned_entrypoint": {
+      "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/model.py",
+      "method": "GET",
+      "status": 401
+    },
+    "indic_speak_pinned_entrypoint": {
+      "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/inference.py",
+      "method": "GET",
+      "status": 401
+    },
+    "bodhan_head": {
+      "url": "https://api.github.com/repos/Bodhan-AI/bodhan-model-info/commits?per_page=1",
+      "method": "GET",
+      "status": 200,
+      "bytes": 3552,
+      "sha256": "d17951bb95a312d41417145eb4a738dc498889929b2e1a0e4232d784d2759d37",
+      "commits": [
+        {
+          "sha": "35a3b9943967a241fad7c290b930aa0fffd3fb29",
+          "date": "2026-09-07T08:26:17Z",
+          "subject": "updated license text"
+        }
+      ]
+    },
+    "bodhan_license": {
+      "url": "https://raw.githubusercontent.com/Bodhan-AI/bodhan-model-info/35a3b9943967a241fad7c290b930aa0fffd3fb29/licenses/indic-open-model-license/v1/Indic_Open_Model_License.md",
+      "method": "GET",
+      "status": 200,
+      "bytes": 25545,
+      "sha256": "7ec6f68c2af812693a0e4e095305a8121eeebde4efcf3260b5a034694161e112",
+      "lines": [
+        [
+          1,
+          "# INDIC OPEN MODEL LICENSE"
+        ],
+        [
+          11,
+          "This License governs use of Bodhan AI's open-weight AI models — for example, the automatic speech recognition, optical character recognition, text-to-speech, translation, and transliteration models identified in the accompanying model card (each, the \"Software,\" as defined below) — released by Bodhan AI, the Center of Excellence for Artificial Intelligence in Education, supported by the Ministry of Education, Govt. of India. This License is intended to give broad, no-cost access for research, government, nonprofit, and commercial use at any scale, including where You self-host the Software or a Derivative to power Your own product or service,"
+        ],
+        [
+          19,
+          "**\"Derivative\"** or \"Derivative Model\" means any model, weights, or configuration created by, or derived through, fine-tuning, distillation, merging, quantizing, or otherwise modifying the Software or an earlier Derivative, or is trained substantially on Output of the Software."
+        ],
+        [
+          21,
+          "**\"Output\"** means any content generated by running the Software or a Derivative, including transcriptions, translations, synthesized audio, or transliterations."
+        ],
+        [
+          23,
+          "**\"You\"** or \"Licensee\" means the individual or entity exercising rights under this License."
+        ],
+        [
+          27,
+          "**\"Host\"** or \"Hosting\" means making the Software or a Derivative available for use by a Third Party through an API, hosted inference endpoint, or similar remote-access mechanism that lets that Third Party submit inputs and receive Output, or fine-tune the Software or Derivative, without that Third Party obtaining its own copy of the underlying weights."
+        ],
+        [
+          35,
+          "**\"Internal Use\"** means use of the Software or a Derivative where neither Distribution nor Hosting has occurred — i.e., no Third Party receives Output, access, or a copy."
+        ],
+        [
+          43,
+          "Subject to Your compliance with this License, Licensor grants You a worldwide, royalty-free, non-exclusive, perpetual (subject to Section 11.3, Termination) license to use, reproduce, copy, modify, merge, publish, Distribute, sublicense, sell, deploy, fine-tune, and create Derivatives from the Software. This grant does not transfer any ownership or intellectual property right in the Software — see Section 8 (Intellectual Property)."
+        ],
+        [
+          61,
+          "**3.1** Approval required. Except as set out in this Section 3, You must obtain Licensor's prior written approval, and enter into a separate written commercial agreement with Licensor on terms to be agreed, before You Host the Software or a Derivative for a Third Party."
+        ],
+        [
+          66,
+          "- providing a product or service in which the Software or Derivative is used solely as an internal component, where no Third Party is given direct access to the model's inference or fine-tuning interface, its inputs, or its raw Output as such (as distinct from the product's own outputs)."
+        ],
+        [
+          82,
+          "**4.1** Waiver. You are not required to obtain approval under Section 3.1 for Hosting a Derivative if, within 90 days of first Hosting that Derivative for any Third Party, You publicly release that Derivative — in substantially the same form and with substantially the same capabilities as the Hosted version — under this License, and You keep that public release available and current with the Hosted version for as long as You continue Hosting it."
+        ],
+        [
+          86,
+          "## 5. Derivative Works Carry This License"
+        ],
+        [
+          88,
+          "**5.1** If You Make Available a Derivative to a Third Party (by Distribution or Hosting), it must be licensed under this exact License. You must not rewrite, replace, or represent the Derivative as being offered under different or modified license terms, and must not sublicense it under any alternative license."
+        ],
+        [
+          92,
+          "**5.3** Distribution of unmodified Software. If You Distribute the Software itself (not a Derivative) to a Third Party, You must include an unaltered copy of this License with it - it must be licensed under this exact License."
+        ],
+        [
+          96,
+          "Licensor does not condition any right granted under this License on Your nationality, domicile, revenue, or user base. The obligation in Section 3 turns on whether You Host the Software or a Derivative for a Third Party, and the obligation in Section 5 turns on whether You Make Available a Derivative to a Third Party — not on who You are or how large Your use is, except as expressly set out in Section 13 (Eligible Public-Interest Entity) and Section 14 (Large-Scale Product Use)."
+        ],
+        [
+          100,
+          "You may fine-tune, distill, quantize, and otherwise modify the Software without restriction for Internal Use. Obligations under this License attach only once a Derivative is Made Available to a Third Party, as set out in Sections 2, 3, 5, and 9."
+        ],
+        [
+          104,
+          "**8.1** Reservation of rights. Licensor retains all right, title, and interest in and to the Software, including all associated intellectual property rights. Except for the rights expressly granted in Section 1, no other rights or licenses are granted, whether by implication, estoppel, or otherwise."
+        ],
+        [
+          106,
+          "**8.2** No adverse IP claims. You must not apply for, obtain, or assist a Third Party in applying for or obtaining, any patent, copyright registration, trademark, design registration, or other intellectual property right over the Software, or over any Derivative to the extent it incorporates the Software's original weights, architecture, or training methodology, where doing so would restrict or interfere with Licensor's or any other licensee's rights under this License."
+        ],
+        [
+          110,
+          "**8.4** Trademarks. This License does not grant You any right to use Licensor's, AI4Bharat's, or IIT Madras's names, logos, or trademarks, except as required by the Attribution Notice in Section 2, and You must not use them in a way that suggests endorsement or affiliation without Licensor's prior written approval."
+        ],
+        [
+          114,
+          "**8.5** No circumvention of technical measures. You must not disable, remove, or attempt to circumvent any usage-restriction, safety-filter, or watermarking mechanism that Licensor embeds in the Software, except to the extent necessary for legitimate accessibility, security research, or interoperability purposes that do not defeat the mechanism's overall purpose."
+        ],
+        [
+          118,
+          "**9.1** \"Confidential Information\" means any non-public technical information relating to the Software that Licensor discloses to You outside of the public release on Hugging Face or another public repository — for example, unreleased source code, training data or data pipelines, evaluation methodology, or internal documentation — whether disclosed under this License or in connection with a request or approval under Section 3. It excludes information that is or becomes publicly available through no fault of Yours, or that You already lawfully possessed without an obligation of confidentiality."
+        ],
+        [
+          120,
+          "**9.2** You must protect Confidential Information with reasonable care, use it only to exercise Your rights under this License or an applicable commercial agreement with Licensor, and must not disclose it to any Third Party. Without limiting the foregoing, You must not provide Confidential Information to any Third Party for the purpose of developing a model or product that competes with the Software."
+        ],
+        [
+          122,
+          "**9.3** This Section 9 survives termination of this License indefinitely for information that qualifies as a trade secret, and for 3 years for other Confidential Information."
+        ],
+        [
+          126,
+          "Regardless of whether Your use is otherwise licensed, exempt, or free of charge under this License — including use by an Eligible Public-Interest Entity — You must not use the Software, any Derivative, or any Output to:"
+        ],
+        [
+          133,
+          "- impersonate a real, identifiable person's voice, image, or likeness without that person's consent, or otherwise generate non-consensual synthetic media of a real, identifiable person;"
+        ],
+        [
+          141,
+          "**11.1** Patent retaliation. This License, and any approval or agreement You hold under Section 3, terminates automatically and immediately if You or Your Affiliate initiate a patent infringement claim (including a cross-claim or counterclaim) against Licensor or its affiliates alleging that the Software, a Derivative, or an Output infringes a patent."
+        ],
+        [
+          143,
+          "**11.2** No warranty; limitation of liability. THE SOFTWARE AND ANY OUTPUT ARE PROVIDED \"AS IS,\" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. IN NO EVENT WILL LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE, A DERIVATIVE, OR AN OUTPUT, OR THE USE OR OTHER DEALINGS THEREIN."
+        ],
+        [
+          149,
+          "- If You materially breach this License, Licensor may terminate it on written notice; other than for the breaches in the next bullet, You have 30 days from that notice to cure, and Licensor may not terminate if You cure within that period."
+        ],
+        [
+          151,
+          "- Upon termination, You must cease all Distribution and Hosting under this License; Sections 8, 9, 11.2, 11.4, and 12 survive termination., together with Sections 11.5 (Indemnification), 11.6 (Compliance with Laws), and 11.7 (Data Protection) added below."
+        ],
+        [
+          155,
+          "**11.5** Indemnification. You must defend, indemnify, and hold harmless Licensor and its affiliates, officers, employees, and agents from and against any third-party claim, liability, damage, loss, or expense (including reasonable legal fees) arising out of or relating to Your use of the Software or a Derivative, Your breach of this License, or Your Output, except to the extent caused by Licensor's breach of this License."
+        ],
+        [
+          159,
+          "**11.7** Data Protection. If You process personal data using the Software or a Derivative, You are solely responsible for complying with applicable data protection and privacy laws (including India's Digital Personal Data Protection Act, 2023, where applicable) and for obtaining any consents necessary for that processing. Licensor does not process personal data on Your behalf merely by making the Software available."
+        ],
+        [
+          163,
+          "**12.1** This License is governed by the laws of India, without regard to conflict-of-laws principles."
+        ],
+        [
+          165,
+          "**12.2** Any dispute arising out of or relating to this License, including its interpretation, breach, or termination, will be referred to and finally resolved by arbitration under the Arbitration and Conciliation Act, 1996, seated in Chennai, conducted in English, before a sole arbitrator appointed by mutual agreement of the parties."
+        ],
+        [
+          177,
+          "**13.2** An entity does not qualify under this Section 13 to the extent it is acting as a proxy, shell, or pass-through for a commercial actor that would not itself qualify, or to the extent its use is for that commercial actor's benefit rather than the entity's own charitable, governmental, or academic purpose."
+        ],
+        [
+          183,
+          "If Your own product or service — other than through Third-Party Hosting under Section 3 — is powered by the Software or a Derivative and exceeds 500 million monthly active users or US$250 million in annual revenue, You must obtain a separate license from Licensor. This Section 14 does not apply to Eligible Public-Interest Entities."
+        ],
+        [
+          187,
+          "**15.1** Entire agreement. This License is the entire agreement between You and Licensor regarding the Software, and supersedes any prior agreements regarding the Software, except a separate written agreement under Section 3 or 14."
+        ],
+        [
+          189,
+          "**15.2** Severability. If any provision of this License is held unenforceable, the remaining provisions remain in full effect, and the unenforceable provision will be replaced with an enforceable provision that most closely reflects its intent."
+        ],
+        [
+          193,
+          "**15.4** Assignment. You may not assign this License without Licensor's written consent, except to a successor in a merger, acquisition, or sale of substantially all of Your assets; Licensor may freely assign this License."
+        ],
+        [
+          195,
+          "**15.5** Updates to this License. Licensor may publish future versions of this License for new releases of the Software; a specific release of the Software remains governed by the version of this License under which it was first published, unless You elect to adopt a later version."
+        ],
+        [
+          197,
+          "**15.6** Notices. Notices to Licensor under this License, including any request for approval under Section 3, must be in writing and sent to support@bodhan.ai."
+        ],
+        [
+          199,
+          "**15.7** Precedence. If You and Licensor enter into a separate written commercial agreement under Section 3 or Section 14, that agreement governs in the event of a conflict with this License, but only to the extent of the conflict and only as between the parties and subject matter of that agreement."
+        ],
+        [
+          201,
+          "## 16. Scope of This License; Third-Party and Upstream Components"
+        ],
+        [
+          203,
+          "*This Section 16 addresses matters outside Licensor's control: what license terms apply to components the Software incorporates or ships alongside.*"
+        ],
+        [
+          205,
+          "**16.1** Scope. This License applies only to the Software as released by Licensor and identified in the applicable model card. It does not extend to, and grants no rights in, any other model, dataset, or component — including any upstream model that the Software was trained on, fine-tuned from, distilled from, or otherwise derived from."
+        ],
+        [
+          207,
+          "**16.2** Upstream licenses. The Software may itself be derived from, fine-tuned on, or built using pre-trained models, datasets, code, or other components licensed by third parties (\"Upstream Components\"). Licensor may identify some Upstream Components in the model card or accompanying documentation, but does not represent or warrant that any such disclosure is complete or current. You are solely responsible for identifying any Upstream Components incorporated into or used to produce the Software, and for independently verifying and complying with the license terms that apply to them — including any attribution, field-of-use, redistribution, "
+        ],
+        [
+          209,
+          "**16.3** Additional software and tools. The Software may be accompanied by, bundled with, or reference additional software, libraries, tools, or dependencies that Licensor does not own (for example, inference runtimes, tokenization libraries, or evaluation scripts) (\"Additional Components\"). Except to the extent Licensor expressly states otherwise, Additional Components are not \"Software\" under this License and are governed solely by their own license terms. You are solely responsible for identifying the license applicable to any Additional Component You use and for complying with it."
+        ],
+        [
+          217,
+          "Placement and prominence requirements are set out in Section 2 of this License."
+        ]
+      ]
+    },
+    "f5_vocoder_source": {
+      "url": "https://raw.githubusercontent.com/SWivid/F5-TTS/600e5fdfbf319f84735557aca80a7aaf60d487e6/src/f5_tts/infer/utils_infer.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 21274,
+      "sha256": "f4cdc874c112762d7f6f8be03c787b385a1c0315f50f47b837040632a01ad54d",
+      "lines": [
+        [
+          2,
+          "# Make adjustments inside functions, and consider both gradio and cli scripts if need to change func output format"
+        ],
+        [
+          8,
+          "os.environ[\"PYTORCH_ENABLE_MPS_FALLBACK\"] = \"1\"  # for MPS device compatibility"
+        ],
+        [
+          9,
+          "sys.path.append(f\"{os.path.dirname(os.path.abspath(__file__))}/../../third_party/BigVGAN/\")"
+        ],
+        [
+          24,
+          "import torchaudio"
+        ],
+        [
+          27,
+          "from pydub import AudioSegment, silence"
+        ],
+        [
+          28,
+          "from transformers import pipeline"
+        ],
+        [
+          29,
+          "from vocos import Vocos"
+        ],
+        [
+          31,
+          "from f5_tts.device_utils import get_default_device"
+        ],
+        [
+          36,
+          "_ref_audio_cache = {}"
+        ],
+        [
+          39,
+          "device = get_default_device()"
+        ],
+        [
+          45,
+          "target_sample_rate = 24000"
+        ],
+        [
+          50,
+          "mel_spec_type = \"vocos\""
+        ],
+        [
+          99,
+          "def load_vocoder(vocoder_name=\"vocos\", is_local=False, local_path=\"\", device=device, hf_cache_dir=None):"
+        ],
+        [
+          100,
+          "    if vocoder_name == \"vocos\":"
+        ],
+        [
+          101,
+          "        # vocoder = Vocos.from_pretrained(\"charactr/vocos-mel-24khz\").to(device)"
+        ],
+        [
+          103,
+          "            print(f\"Load vocos from local path {local_path}\")"
+        ],
+        [
+          107,
+          "            print(\"Download Vocos from huggingface charactr/vocos-mel-24khz\")"
+        ],
+        [
+          108,
+          "            repo_id = \"charactr/vocos-mel-24khz\""
+        ],
+        [
+          111,
+          "        vocoder = Vocos.from_hparams(config_path)"
+        ],
+        [
+          112,
+          "        state_dict = torch.load(model_path, map_location=\"cpu\", weights_only=True)"
+        ],
+        [
+          113,
+          "        from vocos.feature_extractors import EncodecFeatures"
+        ],
+        [
+          115,
+          "        if isinstance(vocoder.feature_extractor, EncodecFeatures):"
+        ],
+        [
+          116,
+          "            encodec_parameters = {"
+        ],
+        [
+          117,
+          "                \"feature_extractor.encodec.\" + key: value"
+        ],
+        [
+          118,
+          "                for key, value in vocoder.feature_extractor.encodec.state_dict().items()"
+        ],
+        [
+          120,
+          "            state_dict.update(encodec_parameters)"
+        ],
+        [
+          122,
+          "        vocoder = vocoder.eval().to(device)"
+        ],
+        [
+          123,
+          "    elif vocoder_name == \"bigvgan\":"
+        ],
+        [
+          125,
+          "            from third_party.BigVGAN import bigvgan"
+        ],
+        [
+          127,
+          "            print(\"You need to follow the README to init submodule and change the BigVGAN source code.\")"
+        ],
+        [
+          129,
+          "            # download generator from https://huggingface.co/nvidia/bigvgan_v2_24khz_100band_256x/tree/main"
+        ],
+        [
+          130,
+          "            vocoder = bigvgan.BigVGAN.from_pretrained(local_path, use_cuda_kernel=False)"
+        ],
+        [
+          132,
+          "            vocoder = bigvgan.BigVGAN.from_pretrained("
+        ],
+        [
+          133,
+          "                \"nvidia/bigvgan_v2_24khz_100band_256x\", use_cuda_kernel=False, cache_dir=hf_cache_dir"
+        ],
+        [
+          137,
+          "        vocoder = vocoder.eval().to(device)"
+        ],
+        [
+          146,
+          "def initialize_asr_pipeline(device: str = device, dtype=None):"
+        ],
+        [
+          150,
+          "            if \"cuda\" in device"
+        ],
+        [
+          151,
+          "            and torch.cuda.get_device_properties(device).major >= 7"
+        ],
+        [
+          152,
+          "            and not torch.cuda.get_device_name().endswith(\"[ZLUDA]\")"
+        ],
+        [
+          160,
+          "        device=device,"
+        ],
+        [
+          167,
+          "def transcribe(ref_audio, language=None):"
+        ],
+        [
+          170,
+          "        initialize_asr_pipeline(device=device)"
+        ],
+        [
+          172,
+          "        ref_audio,"
+        ],
+        [
+          183,
+          "def load_checkpoint(model, ckpt_path, device: str, dtype=None, use_ema=True):"
+        ],
+        [
+          187,
+          "            if \"cuda\" in device"
+        ],
+        [
+          188,
+          "            and torch.cuda.get_device_properties(device).major >= 7"
+        ],
+        [
+          189,
+          "            and not torch.cuda.get_device_name().endswith(\"[ZLUDA]\")"
+        ],
+        [
+          196,
+          "        from safetensors.torch import load_file"
+        ],
+        [
+          198,
+          "        checkpoint = load_file(ckpt_path, device=device)"
+        ],
+        [
+          200,
+          "        checkpoint = torch.load(ckpt_path, map_location=device, weights_only=True)"
+        ],
+        [
+          223,
+          "    torch.cuda.empty_cache()"
+        ],
+        [
+          225,
+          "    return model.to(device)"
+        ],
+        [
+          239,
+          "    device=device,"
+        ],
+        [
+          257,
+          "            target_sample_rate=target_sample_rate,"
+        ],
+        [
+          264,
+          "    ).to(device)"
+        ],
+        [
+          266,
+          "    dtype = torch.float32 if mel_spec_type == \"bigvgan\" else None"
+        ],
+        [
+          267,
+          "    model = load_checkpoint(model, ckpt_path, device, dtype=dtype, use_ema=use_ema)"
+        ],
+        [
+          272,
+          "def remove_silence_edges(audio, silence_threshold=-42):"
+        ],
+        [
+          274,
+          "    non_silent_start_idx = silence.detect_leading_silence(audio, silence_threshold=silence_threshold)"
+        ],
+        [
+          275,
+          "    audio = audio[non_silent_start_idx:]"
+        ],
+        [
+          278,
+          "    reversed_audio = audio.reverse()"
+        ],
+        [
+          279,
+          "    non_silent_end_idx = silence.detect_leading_silence(reversed_audio, silence_threshold=silence_threshold)"
+        ],
+        [
+          281,
+          "        trimmed_audio = audio[: len(audio) - non_silent_end_idx]"
+        ],
+        [
+          283,
+          "        trimmed_audio = audio"
+        ],
+        [
+          285,
+          "    return trimmed_audio"
+        ],
+        [
+          288,
+          "# preprocess reference audio and text"
+        ],
+        [
+          291,
+          "def preprocess_ref_audio_text(ref_audio_orig, ref_text, show_info=print):"
+        ],
+        [
+          292,
+          "    show_info(\"Converting audio...\")"
+        ],
+        [
+          294,
+          "    # Compute a hash of the reference audio file"
+        ],
+        [
+          295,
+          "    with open(ref_audio_orig, \"rb\") as audio_file:"
+        ],
+        [
+          296,
+          "        audio_data = audio_file.read()"
+        ],
+        [
+          297,
+          "        audio_hash = hashlib.md5(audio_data).hexdigest()"
+        ],
+        [
+          299,
+          "    global _ref_audio_cache"
+        ],
+        [
+          301,
+          "    if audio_hash in _ref_audio_cache:"
+        ],
+        [
+          302,
+          "        show_info(\"Using cached preprocessed reference audio...\")"
+        ],
+        [
+          303,
+          "        ref_audio = _ref_audio_cache[audio_hash]"
+        ],
+        [
+          309,
+          "        aseg = AudioSegment.from_file(ref_audio_orig)"
+        ],
+        [
+          315,
+          "        non_silent_wave = AudioSegment.silent(duration=0)"
+        ],
+        [
+          318,
+          "                show_info(\"Audio is over 12s, clipping short. (1)\")"
+        ],
+        [
+          327,
+          "            non_silent_wave = AudioSegment.silent(duration=0)"
+        ],
+        [
+          330,
+          "                    show_info(\"Audio is over 12s, clipping short. (2)\")"
+        ],
+        [
+          339,
+          "            show_info(\"Audio is over 12s, clipping short. (3)\")"
+        ],
+        [
+          341,
+          "        aseg = remove_silence_edges(aseg) + AudioSegment.silent(duration=50)"
+        ],
+        [
+          343,
+          "        ref_audio = temp_path"
+        ],
+        [
+          345,
+          "        # Cache the processed reference audio"
+        ]
+      ]
+    },
+    "f5_mel_source": {
+      "url": "https://raw.githubusercontent.com/SWivid/F5-TTS/600e5fdfbf319f84735557aca80a7aaf60d487e6/src/f5_tts/model/modules.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 29927,
+      "sha256": "92a1d97756bc7773a75c20e0e2fc913b3220f2ae2e6f042126f3ad8a57da9ce8",
+      "lines": [
+        [
+          19,
+          "import torchaudio"
+        ],
+        [
+          21,
+          "from torch import nn"
+        ],
+        [
+          22,
+          "from x_transformers.x_transformers import apply_rotary_pos_emb"
+        ],
+        [
+          32,
+          "vocos_mel_stft_cache = {}"
+        ],
+        [
+          35,
+          "def get_bigvgan_mel_spectrogram("
+        ],
+        [
+          39,
+          "    target_sample_rate=24000,"
+        ],
+        [
+          43,
+          "    fmax=None,"
+        ],
+        [
+          45,
+          "):  # Copy from https://github.com/NVIDIA/BigVGAN/tree/main"
+        ],
+        [
+          46,
+          "    device = waveform.device"
+        ],
+        [
+          47,
+          "    key = f\"{n_fft}_{n_mel_channels}_{target_sample_rate}_{hop_length}_{win_length}_{fmin}_{fmax}_{device}\""
+        ],
+        [
+          50,
+          "        mel = librosa_mel_fn(sr=target_sample_rate, n_fft=n_fft, n_mels=n_mel_channels, fmin=fmin, fmax=fmax)"
+        ],
+        [
+          51,
+          "        mel_basis_cache[key] = torch.from_numpy(mel).float().to(device)  # TODO: why they need .float()?"
+        ],
+        [
+          52,
+          "        hann_window_cache[key] = torch.hann_window(win_length).to(device)"
+        ],
+        [
+          80,
+          "def get_vocos_mel_spectrogram("
+        ],
+        [
+          84,
+          "    target_sample_rate=24000,"
+        ],
+        [
+          88,
+          "    device = waveform.device"
+        ],
+        [
+          89,
+          "    key = f\"{n_fft}_{n_mel_channels}_{target_sample_rate}_{hop_length}_{win_length}_{device}\""
+        ],
+        [
+          90,
+          "    if key not in vocos_mel_stft_cache:"
+        ],
+        [
+          91,
+          "        vocos_mel_stft_cache[key] = torchaudio.transforms.MelSpectrogram("
+        ],
+        [
+          92,
+          "            sample_rate=target_sample_rate,"
+        ],
+        [
+          101,
+          "        ).to(device)"
+        ],
+        [
+          107,
+          "    mel = vocos_mel_stft_cache[key](waveform)"
+        ],
+        [
+          113,
+          "    def __init__("
+        ],
+        [
+          119,
+          "        target_sample_rate=24_000,"
+        ],
+        [
+          120,
+          "        mel_spec_type=\"vocos\","
+        ],
+        [
+          123,
+          "        assert mel_spec_type in [\"vocos\", \"bigvgan\"], print(\"We only support two extract mel backend: vocos or bigvgan\")"
+        ],
+        [
+          129,
+          "        self.target_sample_rate = target_sample_rate"
+        ],
+        [
+          131,
+          "        if mel_spec_type == \"vocos\":"
+        ],
+        [
+          132,
+          "            self.extractor = get_vocos_mel_spectrogram"
+        ],
+        [
+          133,
+          "        elif mel_spec_type == \"bigvgan\":"
+        ],
+        [
+          134,
+          "            self.extractor = get_bigvgan_mel_spectrogram"
+        ],
+        [
+          139,
+          "        if self.dummy.device != wav.device:"
+        ],
+        [
+          140,
+          "            self.to(wav.device)"
+        ],
+        [
+          146,
+          "            target_sample_rate=self.target_sample_rate,"
+        ],
+        [
+          158,
+          "    def __init__(self, dim):"
+        ],
+        [
+          163,
+          "        device = x.device"
+        ],
+        [
+          166,
+          "        emb = torch.exp(torch.arange(half_dim, device=device).float() * -emb)"
+        ],
+        [
+          176,
+          "    def __init__(self, dim, kernel_size=31, groups=16):"
+        ],
+        [
+          214,
+          "    t = torch.arange(end, device=freqs.device)  # type: ignore"
+        ],
+        [
+          226,
+          "        + (torch.arange(length, device=start.device, dtype=torch.float32).unsqueeze(0) * scale.unsqueeze(1)).long()"
+        ],
+        [
+          237,
+          "    def __init__(self, dim):"
+        ],
+        [
+          253,
+          "    def __init__("
+        ],
+        [
+          287,
+          "    def __init__(self, dim: int, eps: float):"
+        ],
+        [
+          313,
+          "    def __init__(self, dim):"
+        ],
+        [
+          334,
+          "    def __init__(self, dim):"
+        ],
+        [
+          354,
+          "    def __init__(self, dim, dim_out=None, mult=4, dropout=0.0, approximate: str = \"none\"):"
+        ],
+        [
+          372,
+          "    def __init__("
+        ],
+        [
+          386,
+          "            raise ImportError(\"Attention equires PyTorch 2.0, to use it, please upgrade PyTorch to 2.0.\")"
+        ],
+        [
+          446,
+          "if is_package_available(\"flash_attn\"):"
+        ],
+        [
+          447,
+          "    from flash_attn import flash_attn_func, flash_attn_varlen_func"
+        ],
+        [
+          448,
+          "    from flash_attn.bert_padding import pad_input, unpad_input"
+        ],
+        [
+          452,
+          "    def __init__("
+        ],
+        [
+          455,
+          "        attn_backend: str = \"torch\",  # \"torch\" or \"flash_attn\""
+        ],
+        [
+          458,
+          "        if attn_backend == \"flash_attn\":"
+        ],
+        [
+          459,
+          "            assert is_package_available(\"flash_attn\"), \"Please install flash-attn first.\""
+        ],
+        [
+          463,
+          "                \"Please switch attn_backend to 'flash_attn'.\","
+        ],
+        [
+          522,
+          "        elif self.attn_backend == \"flash_attn\":"
+        ],
+        [
+          530,
+          "                x = flash_attn_varlen_func("
+        ],
+        [
+          542,
+          "                x = flash_attn_func(query, key, value, dropout_p=0.0, causal=False)"
+        ],
+        [
+          564,
+          "    def __init__("
+        ],
+        [
+          566,
+          "        attn_backend: str = \"torch\",  # \"torch\" or \"flash_attn\""
+        ],
+        [
+          569,
+          "        if attn_backend == \"flash_attn\":"
+        ],
+        [
+          570,
+          "            assert is_package_available(\"flash_attn\"), \"Please install flash-attn first.\""
+        ],
+        [
+          574,
+          "                \"Please switch attn_backend to 'flash_attn'.\","
+        ],
+        [
+          592,
+          "        audio_mask = mask"
+        ],
+        [
+          643,
+          "        # build combined mask for joint attention: audio mask + text mask"
+        ],
+        [
+          661,
+          "        elif self.attn_backend == \"flash_attn\":"
+        ],
+        [
+          670,
+          "                x = flash_attn_varlen_func("
+        ],
+        [
+          682,
+          "                x = flash_attn_func(query, key, value, dropout_p=0.0, causal=False)"
+        ],
+        [
+          687,
+          "        # Split the attention outputs."
+        ],
+        [
+          700,
+          "        if audio_mask is not None:"
+        ],
+        [
+          701,
+          "            x = x.masked_fill(~audio_mask.unsqueeze(-1), 0.0)"
+        ],
+        [
+          712,
+          "    def __init__("
+        ],
+        [
+          721,
+          "        attn_backend=\"torch\",  # \"torch\" or \"flash_attn\""
+        ],
+        [
+          748,
+          "        attn_output = self.attn(x=norm, mask=mask, rope=rope)"
+        ],
+        [
+          750,
+          "        # process attention output for input x"
+        ],
+        [
+          751,
+          "        x = x + gate_msa.unsqueeze(1) * attn_output"
+        ],
+        [
+          754,
+          "        ff_output = self.ff(norm)"
+        ],
+        [
+          755,
+          "        x = x + gate_mlp.unsqueeze(1) * ff_output"
+        ],
+        [
+          773,
+          "    def __init__("
+        ],
+        [
+          827,
+          "        x_attn_output, c_attn_output = self.attn(x=norm_x, c=norm_c, mask=mask, rope=rope, c_rope=c_rope, c_mask=c_mask)"
+        ],
+        [
+          829,
+          "        # process attention output for context c"
+        ],
+        [
+          833,
+          "            c = c + c_gate_msa.unsqueeze(1) * c_attn_output"
+        ],
+        [
+          836,
+          "            c_ff_output = self.ff_c(norm_c)"
+        ],
+        [
+          837,
+          "            c = c + c_gate_mlp.unsqueeze(1) * c_ff_output"
+        ]
+      ]
+    },
+    "f5_license": {
+      "url": "https://raw.githubusercontent.com/SWivid/F5-TTS/600e5fdfbf319f84735557aca80a7aaf60d487e6/LICENSE",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1068,
+      "sha256": "c70811d1402134de900e811d3eaa349eb60f4d38a8f635b27b1e378c630facd2",
+      "lines": [
+        [
+          1,
+          "MIT License"
+        ],
+        [
+          5,
+          "Permission is hereby granted, free of charge, to any person obtaining a copy"
+        ],
+        [
+          7,
+          "in the Software without restriction, including without limitation the rights"
+        ],
+        [
+          8,
+          "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell"
+        ],
+        [
+          12,
+          "The above copyright notice and this permission notice shall be included in all"
+        ]
+      ]
+    },
+    "bigvgan_config": {
+      "url": "https://huggingface.co/nvidia/bigvgan_v2_24khz_100band_256x/raw/c329ede9e9bbc100ddf5c91e2330a61921262370/config.json",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1402,
+      "sha256": "d77e2c96583ca2296ac112a56ec7cc6bd5da4bf7681ceff18448bedc4fcf6512",
+      "content": {
+        "resblock": "1",
+        "num_gpus": 0,
+        "batch_size": 32,
+        "learning_rate": 0.0001,
+        "adam_b1": 0.8,
+        "adam_b2": 0.99,
+        "lr_decay": 0.9999996,
+        "seed": 1234,
+        "upsample_rates": [
+          4,
+          4,
+          2,
+          2,
+          2,
+          2
+        ],
+        "upsample_kernel_sizes": [
+          8,
+          8,
+          4,
+          4,
+          4,
+          4
+        ],
+        "upsample_initial_channel": 1536,
+        "resblock_kernel_sizes": [
+          3,
+          7,
+          11
+        ],
+        "resblock_dilation_sizes": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ],
+        "use_tanh_at_final": false,
+        "use_bias_at_final": false,
+        "activation": "snakebeta",
+        "snake_logscale": true,
+        "use_cqtd_instead_of_mrd": true,
+        "cqtd_filters": 128,
+        "cqtd_max_filters": 1024,
+        "cqtd_filters_scale": 1,
+        "cqtd_dilations": [
+          1,
+          2,
+          4
+        ],
+        "cqtd_hop_lengths": [
+          512,
+          256,
+          256
+        ],
+        "cqtd_n_octaves": [
+          9,
+          9,
+          9
+        ],
+        "cqtd_bins_per_octaves": [
+          24,
+          36,
+          48
+        ],
+        "mpd_reshapes": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "use_spectral_norm": false,
+        "discriminator_channel_mult": 1,
+        "use_multiscale_melloss": true,
+        "lambda_melloss": 15,
+        "clip_grad_norm": 500,
+        "segment_size": 65536,
+        "num_mels": 100,
+        "num_freq": 1025,
+        "n_fft": 1024,
+        "hop_size": 256,
+        "win_size": 1024,
+        "sampling_rate": 24000,
+        "fmin": 0,
+        "fmax": null,
+        "fmax_for_loss": null,
+        "normalize_volume": true,
+        "num_workers": 4,
+        "dist_config": {
+          "dist_backend": "nccl",
+          "dist_url": "tcp://localhost:54321",
+          "world_size": 1
+        }
+      }
+    },
+    "bigvgan_license": {
+      "url": "https://raw.githubusercontent.com/NVIDIA/BigVGAN/7d2b454564a6c7d014227f635b7423881f14bdac/LICENSE",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1076,
+      "sha256": "5c7f573db5f807a9adc2a755c4901e203ea067f73c7a20fa6b703da7e77d7b35",
+      "lines": [
+        [
+          1,
+          "MIT License"
+        ],
+        [
+          5,
+          "Permission is hereby granted, free of charge, to any person obtaining a copy"
+        ],
+        [
+          7,
+          "in the Software without restriction, including without limitation the rights"
+        ],
+        [
+          8,
+          "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell"
+        ],
+        [
+          12,
+          "The above copyright notice and this permission notice shall be included in all"
+        ]
+      ]
+    },
+    "qwen_license": {
+      "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B/raw/59d61f3ce65a6d9863b86d2e96597125219dc754/LICENSE",
+      "method": "GET",
+      "status": 200,
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "lines": [
+        [
+          2,
+          "                                 Apache License"
+        ],
+        [
+          4,
+          "                        http://www.apache.org/licenses/"
+        ],
+        [
+          10,
+          "      \"License\" shall mean the terms and conditions for use, reproduction,"
+        ],
+        [
+          14,
+          "      the copyright owner that is granting the License."
+        ],
+        [
+          25,
+          "      exercising permissions granted by this License."
+        ],
+        [
+          37,
+          "      Object form, made available under the License, as indicated by a"
+        ],
+        [
+          45,
+          "      of this License, Derivative Works shall not include works that remain"
+        ],
+        [
+          67,
+          "   2. Grant of Copyright License. Subject to the terms and conditions of"
+        ],
+        [
+          68,
+          "      this License, each Contributor hereby grants to You a perpetual,"
+        ],
+        [
+          70,
+          "      copyright license to reproduce, prepare Derivative Works of,"
+        ],
+        [
+          71,
+          "      publicly display, publicly perform, sublicense, and distribute the"
+        ],
+        [
+          74,
+          "   3. Grant of Patent License. Subject to the terms and conditions of"
+        ],
+        [
+          75,
+          "      this License, each Contributor hereby grants to You a perpetual,"
+        ],
+        [
+          77,
+          "      (except as stated in this section) patent license to make, have made,"
+        ],
+        [
+          79,
+          "      where such license applies only to those patent claims licensable"
+        ],
+        [
+          86,
+          "      or contributory patent infringement, then any patent licenses"
+        ],
+        [
+          87,
+          "      granted to You under this License for that Work shall terminate"
+        ],
+        [
+          96,
+          "          Derivative Works a copy of this License; and"
+        ],
+        [
+          118,
+          "          do not modify the License. You may add Your own attribution"
+        ],
+        [
+          122,
+          "          as modifying the License."
+        ],
+        [
+          125,
+          "      may provide additional or different license terms and conditions"
+        ],
+        [
+          129,
+          "      the conditions stated in this License."
+        ],
+        [
+          134,
+          "      this License, without any additional terms or conditions."
+        ],
+        [
+          136,
+          "      the terms of any separate license agreement you may have executed"
+        ],
+        [
+          139,
+          "   6. Trademarks. This License does not grant permission to use the trade"
+        ],
+        [
+          152,
+          "      risks associated with Your exercise of permissions under this License."
+        ],
+        [
+          160,
+          "      result of this License or out of the use or inability to use the"
+        ],
+        [
+          163,
+          "      other commercial damages or losses), even if such Contributor"
+        ],
+        [
+          170,
+          "      License. However, in accepting such obligations, You may act only"
+        ],
+        [
+          179,
+          "   APPENDIX: How to apply the Apache License to your work."
+        ],
+        [
+          181,
+          "      To apply the Apache License to your work, attach the following"
+        ],
+        [
+          192,
+          "   Licensed under the Apache License, Version 2.0 (the \"License\");"
+        ],
+        [
+          193,
+          "   you may not use this file except in compliance with the License."
+        ],
+        [
+          194,
+          "   You may obtain a copy of the License at"
+        ],
+        [
+          196,
+          "       http://www.apache.org/licenses/LICENSE-2.0"
+        ],
+        [
+          199,
+          "   distributed under the License is distributed on an \"AS IS\" BASIS,"
+        ],
+        [
+          201,
+          "   See the License for the specific language governing permissions and"
+        ],
+        [
+          202,
+          "   limitations under the License."
+        ]
+      ]
+    },
+    "qwen_fp8_index": {
+      "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B-FP8/raw/9d1823d2dee688a6b25e77009dc727688c44936e/model.safetensors.index.json",
+      "method": "GET",
+      "status": 200,
+      "bytes": 8088168,
+      "sha256": "b009f7a49c442fce959a2ff6fee41c69248879b90d7ff5636ec6d2068ac4876d",
+      "tensor_count": 64196,
+      "expert_sample": [
+        "model.language_model.layers.0.mlp.experts.0.down_proj.weight",
+        "model.language_model.layers.0.mlp.experts.0.down_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.0.gate_proj.weight",
+        "model.language_model.layers.0.mlp.experts.0.gate_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.0.up_proj.weight",
+        "model.language_model.layers.0.mlp.experts.0.up_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.1.down_proj.weight",
+        "model.language_model.layers.0.mlp.experts.1.down_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.1.gate_proj.weight",
+        "model.language_model.layers.0.mlp.experts.1.gate_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.1.up_proj.weight",
+        "model.language_model.layers.0.mlp.experts.1.up_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.10.down_proj.weight",
+        "model.language_model.layers.0.mlp.experts.10.down_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.10.gate_proj.weight",
+        "model.language_model.layers.0.mlp.experts.10.gate_proj.weight_scale_inv"
+      ],
+      "expert_scale_sample": [
+        "model.language_model.layers.0.mlp.experts.0.down_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.0.gate_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.0.up_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.1.down_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.1.gate_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.1.up_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.10.down_proj.weight_scale_inv",
+        "model.language_model.layers.0.mlp.experts.10.gate_proj.weight_scale_inv"
+      ],
+      "shard_count": 14
+    },
+    "qwen_kernel_meta": {
+      "url": "https://huggingface.co/api/models/kernels-community/finegrained-fp8",
+      "method": "GET",
+      "status": 200,
+      "bytes": 1934,
+      "sha256": "3a65fdeba5b7b9e0c675cd4ec3d32a24d56b141aa2366bca9f45034119b291e7",
+      "metadata": {
+        "id": "kernels-community/finegrained-fp8",
+        "sha": "0fc209e04af4db8fb02cc9416d44a9a28d4b2c71",
+        "gated": false,
+        "private": false,
+        "cardData": {
+          "library_name": "kernels",
+          "license": "apache-2.0"
+        },
+        "config": {},
+        "usedStorage": 0
+      },
+      "text_assets": [
+        "README.md",
+        "build/torch-cuda/__init__.py",
+        "build/torch-cuda/_ops.py",
+        "build/torch-cuda/act_quant.py",
+        "build/torch-cuda/batched.py",
+        "build/torch-cuda/finegrained_fp8/__init__.py",
+        "build/torch-cuda/grouped.py",
+        "build/torch-cuda/matmul.py",
+        "build/torch-cuda/metadata.json",
+        "build/torch-cuda/utils.py",
+        "build/torch-rocm/__init__.py",
+        "build/torch-rocm/_ops.py",
+        "build/torch-rocm/act_quant.py",
+        "build/torch-rocm/batched.py",
+        "build/torch-rocm/finegrained_fp8/__init__.py",
+        "build/torch-rocm/grouped.py",
+        "build/torch-rocm/matmul.py",
+        "build/torch-rocm/metadata.json",
+        "build/torch-rocm/utils.py",
+        "build/torch-xpu/__init__.py",
+        "build/torch-xpu/_ops.py",
+        "build/torch-xpu/act_quant.py",
+        "build/torch-xpu/batched.py",
+        "build/torch-xpu/finegrained_fp8/__init__.py",
+        "build/torch-xpu/grouped.py",
+        "build/torch-xpu/matmul.py",
+        "build/torch-xpu/metadata.json",
+        "build/torch-xpu/utils.py"
+      ]
+    },
+    "qwen_fp8_integration": {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.22.2/src/transformers/integrations/finegrained_fp8.py",
+      "method": "GET",
+      "status": 200,
+      "bytes": 56395,
+      "sha256": "cad898137be9c473b92987aa21f57d43cc6987cb7293c2a0085c014b1a1e8499",
+      "lines": [
+        [
+          3,
+          "# Licensed under the Apache License, Version 2.0 (the \"License\");"
+        ],
+        [
+          4,
+          "# you may not use this file except in compliance with the License."
+        ],
+        [
+          5,
+          "# You may obtain a copy of the License at"
+        ],
+        [
+          7,
+          "#     http://www.apache.org/licenses/LICENSE-2.0"
+        ],
+        [
+          10,
+          "# distributed under the License is distributed on an \"AS IS\" BASIS,"
+        ],
+        [
+          12,
+          "# See the License for the specific language governing permissions and"
+        ],
+        [
+          13,
+          "# limitations under the License."
+        ],
+        [
+          25,
+          "from ..activations import ACT2FN"
+        ],
+        [
+          26,
+          "from ..core_model_loading import ConversionOps"
+        ],
+        [
+          27,
+          "from ..quantizers.quantizers_utils import get_module_from_name, should_convert_module"
+        ],
+        [
+          28,
+          "from ..utils import logging"
+        ],
+        [
+          29,
+          "from ..utils.import_utils import is_kernels_available"
+        ],
+        [
+          30,
+          "from .deepgemm import ("
+        ],
+        [
+          31,
+          "    deepgemm_fp8_fp4_experts_forward,"
+        ],
+        [
+          32,
+          "    deepgemm_fp8_fp4_linear,"
+        ],
+        [
+          33,
+          "    deepgemm_fp8_fp4_megamoe_experts_forward,"
+        ],
+        [
+          37,
+          "from .hub_kernels import _MISSING_KERNELS_MESSAGE, lazy_load_kernel"
+        ],
+        [
+          38,
+          "from .moe import ExpertsInterface, _grouped_mm, use_experts_implementation"
+        ],
+        [
+          44,
+          "_FP8_DTYPE = torch.float8_e4m3fn"
+        ],
+        [
+          45,
+          "_FP8_MIN = torch.finfo(_FP8_DTYPE).min"
+        ],
+        [
+          46,
+          "_FP8_MAX = torch.finfo(_FP8_DTYPE).max"
+        ],
+        [
+          51,
+          "    \"\"\"Return ``torch.float8_e8m0fnu`` or raise a clear error on torch without FP8 support."
+        ],
+        [
+          59,
+          "            f\"PyTorch >= 2.7 (found {torch.__version__}). Upgrade torch to use UE8M0 FP8 checkpoints.\""
+        ],
+        [
+          72,
+          "class FineGrainedFP8:"
+        ],
+        [
+          73,
+          "    \"\"\"Entry points exposed by the `kernels-community/finegrained-fp8` Triton kernel.\"\"\""
+        ],
+        [
+          83,
+          "_FINEGRAINED_FP8: FineGrainedFP8 | None = None"
+        ],
+        [
+          87,
+          "def _load_finegrained_fp8_kernel() -> None:"
+        ],
+        [
+          89,
+          "    Load the finegrained-fp8 Triton kernel once into the `_FINEGRAINED_FP8` module global."
+        ],
+        [
+          93,
+          "    global, which `load_finegrained_fp8_kernel` then returns."
+        ],
+        [
+          102,
+          "    global _FINEGRAINED_FP8"
+        ],
+        [
+          103,
+          "    if _FINEGRAINED_FP8 is not None:"
+        ],
+        [
+          107,
+          "        raise ImportError(f\"finegrained-fp8 kernel unavailable: {_MISSING_KERNELS_MESSAGE}\")"
+        ],
+        [
+          109,
+          "    kernel = lazy_load_kernel(\"finegrained-fp8\")"
+        ],
+        [
+          112,
+          "            \"Failed to load the finegrained-fp8 kernel — check that `kernels-community/finegrained-fp8` \""
+        ],
+        [
+          113,
+          "            \"has a build matching the current torch/CUDA.\""
+        ],
+        [
+          131,
+          "            f\"finegrained-fp8 kernel is missing required symbols: {', '.join(missing)}. {_MISSING_KERNELS_MESSAGE}\""
+        ],
+        [
+          134,
+          "    _FINEGRAINED_FP8 = FineGrainedFP8("
+        ],
+        [
+          141,
+          "def load_finegrained_fp8_kernel() -> FineGrainedFP8:"
+        ],
+        [
+          142,
+          "    _load_finegrained_fp8_kernel()"
+        ],
+        [
+          143,
+          "    return _FINEGRAINED_FP8"
+        ],
+        [
+          166,
+          "    `min_sf_out` floors the SF tensor's output dim — used by the fused gate_up"
+        ],
+        [
+          179,
+          "def finegrained_fp8_linear("
+        ],
+        [
+          187,
+          "    \"\"\"Triton FP8/FP4 linear: fused act-quant + matmul, then optional bias add."
+        ],
+        [
+          191,
+          "    dispatcher routes FP4 (``int8``-packed) weights automatically. ``output_dtype``"
+        ],
+        [
+          194,
+          "    finegrained_fp8 = load_finegrained_fp8_kernel()"
+        ],
+        [
+          195,
+          "    output = finegrained_fp8.matmul("
+        ],
+        [
+          204,
+          "        output.add_(bias)"
+        ],
+        [
+          205,
+          "    return output"
+        ],
+        [
+          208,
+          "def fp8_linear("
+        ],
+        [
+          217,
+          "    \"\"\"End-to-end FP8/FP4 linear used by `FP8Linear` and the eager `FP8Experts` loop."
+        ],
+        [
+          219,
+          "    Dispatch order — both backends handle FP8 and FP4 weights with fp32 or UE8M0 scales:"
+        ],
+        [
+          220,
+          "      1. DeepGEMM (`deepgemm_fp8_fp4_linear`) — 3-6× faster on the shapes it supports."
+        ],
+        [
+          221,
+          "         Preferred for FP4, UE8M0 SFs, and 128×128 block FP8."
+        ],
+        [
+          222,
+          "      2. Triton finegrained-fp8 fallback — used when DeepGEMM is unavailable, when the"
+        ],
+        [
+          231,
+          "        block_size: [block_n, block_k] for FP8 block-wise quant, or None/[N, K] for per-tensor."
+        ],
+        [
+          233,
+          "        bias: optional bias added to the matmul output."
+        ],
+        [
+          237,
+          "            model spans multiple CUDA devices in one process — DeepGEMM's cached kernels are bound"
+        ],
+        [
+          238,
+          "            to a single CUDA context and produce garbage across devices (see the multi-device guard"
+        ],
+        [
+          239,
+          "            in ``quantizer_finegrained_fp8.py``)."
+        ],
+        [
+          241,
+          "    # DeepGEMM is CUDA-only, dynamic-only, SM90+ only, FP4/FP8-block-128-only. On SM100 its FP8 GEMM only"
+        ],
+        [
+          243,
+          "    # silently corrupt the output (#47030), so we skip DeepGEMM up front for that combo rather than"
+        ],
+        [
+          247,
+          "    # FP8 MoE batched_mm / grouped_mm paths to avoid a still-unexplained DeepGEMM-vs-Triton interaction that"
+        ],
+        [
+          248,
+          "    # degrades end-to-end generation on B200 (per-row kernel outputs still measure bit-perfect, but final"
+        ],
+        [
+          261,
+          "            return deepgemm_fp8_fp4_linear("
+        ],
+        [
+          271,
+          "            # permissive (handles FP8/FP4 with float32 or UE8M0 scales on any arch, plus input dtypes"
+        ],
+        [
+          279,
+          "                \"Set `TRANSFORMERS_DISABLE_DEEPGEMM_LINEAR=1` to skip DeepGEMM for FP8 linear entirely.\""
+        ],
+        [
+          282,
+          "    return finegrained_fp8_linear(input, weight, weight_scale_inv, block_size, bias, activation_scale)"
+        ],
+        [
+          285,
+          "def _dequantize_fp8_weight("
+        ],
+        [
+          288,
+          "    \"\"\"Dequantize `(..., N, K)` FP8 weights with their per-block (or per-tensor) scales, for the backward pass.\"\"\""
+        ],
+        [
+          306,
+          "class FP8LinearFunction(torch.autograd.Function):"
+        ],
+        [
+          308,
+          "    `fp8_linear` with a backward for the input, so adapters (e.g. LoRA) can train on top of FP8 layers. The FP8 weights"
+        ],
+        [
+          309,
+          "    are frozen: the input gradient goes through the dequantized weight, and the weight, scales and bias get none."
+        ],
+        [
+          316,
+          "        return fp8_linear(input, weight, weight_scale_inv, block_size, bias, activation_scale, allow_deepgemm)"
+        ],
+        [
+          319,
+          "    def backward(ctx, grad_output):"
+        ],
+        [
+          321,
+          "        weight = _dequantize_fp8_weight(weight, weight_scale_inv, ctx.block_size, grad_output.dtype)"
+        ],
+        [
+          322,
+          "        return grad_output @ weight, None, None, None, None, None, None"
+        ],
+        [
+          325,
+          "def fp8_grouped_matmul(input, weight, weight_scale_inv, offsets, tokens_per_expert, block_size):"
+        ],
+        [
+          326,
+          "    return load_finegrained_fp8_kernel().grouped_matmul("
+        ],
+        [
+          336,
+          "class FP8GroupedMatmulFunction(torch.autograd.Function):"
+        ],
+        [
+          337,
+          "    \"\"\"The finegrained-fp8 grouped matmul with a backward for the input, like `FP8LinearFunction`.\"\"\""
+        ],
+        [
+          339,
+          "    # Max bytes of experts dequantized at once in backward. Stacks under it (e.g. Qwen3-30B-A3B: 0.8 GB) go in one shot"
+        ],
+        [
+          347,
+          "        return fp8_grouped_matmul(input, weight, weight_scale_inv, offsets, tokens_per_expert, block_size)"
+        ],
+        [
+          350,
+          "    def backward(ctx, grad_output):"
+        ],
+        [
+          352,
+          "        grad_output = grad_output.contiguous()"
+        ],
+        [
+          354,
+          "        expert_bytes = weight[0].numel() * grad_output.element_size()"
+        ]
+      ]
+    },
+    "ltx_repo_meta": {
+      "url": "https://huggingface.co/api/models/Lightricks/LTX-2.5/revision/49b093a39c19169a8a81721dcc541e07e945232f",
+      "method": "GET",
+      "status": 200,
+      "bytes": 5875,
+      "sha256": "79e9508a6e9fd215669ced6f72752a99356b4310368351f2f2a30c04541cb2d4",
+      "metadata": {
+        "id": "Lightricks/LTX-2.5",
+        "sha": "49b093a39c19169a8a81721dcc541e07e945232f",
+        "gated": "auto",
+        "private": false,
+        "cardData": {
+          "language": [
+            "en",
+            "de",
+            "es",
+            "fr",
+            "ja",
+            "ko",
+            "zh",
+            "it",
+            "pt"
+          ],
+          "license": "other",
+          "license_name": "ltx-2.x-community-license-agreement",
+          "license_link": "https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x",
+          "pipeline_tag": "image-to-video",
+          "arxiv": 2601.03233,
+          "tags": [
+            "image-to-video",
+            "text-to-video",
+            "video-to-video",
+            "image-text-to-video",
+            "audio-to-video",
+            "text-to-audio",
+            "video-to-audio",
+            "audio-to-audio",
+            "text-to-audio-video",
+            "image-to-audio-video",
+            "image-text-to-audio-video",
+            "ltx-video",
+            "lightricks",
+            "comfyui",
+            "ltx-2.5",
+            "diffusion-single-file",
+            "ltx"
+          ],
+          "pinned": true,
+          "demo": "https://app.ltx.studio/ltx-2-playground/i2v",
+          "extra_gated_description": "By clicking \"Agree and Access\" you acknowledge the [Privacy Policy](https://static.lightricks.com/legal/Privacy%20Policy%20-%20LTX%20Platform.pdf)  and consent to receive offers and updates including targeted and personalized advertisements. You can unsubscribe at any time.",
+          "extra_gated_button_content": "Agree and Access"
+        },
+        "config": {},
+        "usedStorage": 298670920475
+      },
+      "text_assets": [
+        "README.md"
+      ]
+    }
+  }
+}
