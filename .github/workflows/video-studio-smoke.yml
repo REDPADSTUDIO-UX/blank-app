@@ -13,13 +13,17 @@ on:
         description: Run only the synthetic Linux kernel isolation verification
         type: boolean
         default: false
+      runtime_phase2:
+        description: Run model-free CPU runtime and offline ABI verification
+        type: boolean
+        default: false
 
 permissions:
   contents: read
 
 jobs:
   video-smoke-test:
-    if: ${{ !inputs.kernel_phase1 }}
+    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -124,7 +128,7 @@ jobs:
           retention-days: 7
 
   browser-smoke-test:
-    if: ${{ !inputs.kernel_phase1 }}
+    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 }}
     # Match the pinned browser runtime to a supported OS, rather than moving latest.
     runs-on: ubuntu-24.04
     timeout-minutes: 15
@@ -149,7 +153,7 @@ jobs:
           retention-days: 7
 
   kernel-phase1:
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.kernel_phase1 }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.kernel_phase1 && !inputs.runtime_phase2 }}
     runs-on: ubuntu-22.04
     timeout-minutes: 5
     steps:
@@ -181,3 +185,33 @@ jobs:
           result=$?
           printf 'Phase 1 probe exit code: %s\n' "$result"
           exit "$result"
+
+  runtime-phase2:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.runtime_phase2 }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        family: [media, speech, modern]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Install host sandbox and locked CPU packages
+        env:
+          FAMILY: ${{ matrix.family }}
+        run: |
+          set -eux
+          uname -srmo
+          sudo -n apt-get update
+          sudo -n apt-get install -y --no-install-recommends bubblewrap
+          bwrap --version
+          bash verification/runtime_phase2_20261121/install-prefix.sh "$FAMILY" "$RUNNER_TEMP/phase2-$FAMILY"
+      - name: Verify real runtime startup inside the production sandbox
+        env:
+          FAMILY: ${{ matrix.family }}
+        run: |
+          set -eux
+          python -B verification/runtime_phase2_20261121/sandbox_probe.py "$FAMILY" "$RUNNER_TEMP/phase2-$FAMILY"

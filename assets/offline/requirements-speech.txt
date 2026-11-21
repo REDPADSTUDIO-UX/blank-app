@@ -3,6 +3,7 @@
 parler-tts==0.2.3
 transformers==4.46.1
 torch==2.5.1
+torchaudio==2.5.1
 numpy==1.26.4
 sentencepiece==0.2.0
 safetensors==0.6.2

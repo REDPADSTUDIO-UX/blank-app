@@ -40,10 +40,10 @@ def digest_file(path):
     return h.hexdigest()
 
 
-def verify_tree(root,files):
+def verify_tree(root,files,*,allow_empty=False):
     if not isinstance(files,dict) or not files:raise AgentError('Complete approved file manifest required.')
     for name,row in files.items():
-        if set(row)!={'bytes','sha256'} or type(row['bytes']) is not int or row['bytes']<1 or not re.fullmatch('[0-9a-f]{64}',row['sha256']):raise AgentError('Exact component size/SHA256 required; unknown metadata cannot authorize loading.')
+        if set(row)!={'bytes','sha256'} or type(row['bytes']) is not int or row['bytes']<(0 if allow_empty else 1) or not re.fullmatch('[0-9a-f]{64}',row['sha256']):raise AgentError('Exact component size/SHA256 required; unknown metadata cannot authorize loading.')
         p=local_path(root,name)
         if p.stat().st_size!=row['bytes'] or digest_file(p)!=row['sha256']:raise AgentError('Approved component changed: '+name)
     # Complete file coverage prevents unmanifested Python/config/weight injection.

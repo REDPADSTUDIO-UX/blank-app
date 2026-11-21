@@ -1,0 +1,1 @@
+There was a problem when trying to write in your cache folder (/home/agent/.cache/huggingface/hub). You should set the environment variable TRANSFORMERS_CACHE to a writable directory.

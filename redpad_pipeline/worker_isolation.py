@@ -153,7 +153,7 @@ class RuntimeBindings:
         if 'pyvenv.cfg' in receipt['files'] or not any(re.fullmatch(r'lib/python3\.\d+/encodings/__init__\.py', name) for name in receipt['files']):
             raise IsolationBlocked('A self-contained Python prefix with its own standard library is required.')
         try:
-            verify_tree(root, receipt['files'])
+            verify_tree(root, receipt['files'], allow_empty=True)
         except (AgentError, OSError) as exc:
             raise IsolationBlocked('Runtime file manifest failed validation.') from exc
         # Runtime trees are mounted as a unit. Deny the .git exception used by source bundles.
