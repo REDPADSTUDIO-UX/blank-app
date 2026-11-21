@@ -1,0 +1,147 @@
+{
+  "status": "PENDING",
+  "scope": "Partial Foundation/Act1 only; no full-story or professional acceptance",
+  "reviewer": null,
+  "samples": [
+    "A",
+    "B"
+  ],
+  "criteria": [
+    {
+      "id": "story.creative.1",
+      "criterion": "originality",
+      "question": "Distinct choices and situations; no originality guarantee without comparative review",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.2",
+      "criterion": "causal_logic",
+      "question": "Each turn follows an established action and consequence",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.3",
+      "criterion": "character_agency",
+      "question": "Protagonist chooses between costly alternatives",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.4",
+      "criterion": "psychological_depth",
+      "question": "Wants conflict with fears and observable behavior",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.5",
+      "criterion": "relationship_credibility",
+      "question": "Both father and daughter have defensible competing needs",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.6",
+      "criterion": "emotional_authenticity",
+      "question": "Earlier investment and restrained action earn emotional moments",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.7",
+      "criterion": "organic_humor",
+      "question": "Humor grows from a specific personality or situation",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.8",
+      "criterion": "bangladesh_authenticity",
+      "question": "Social details are specific, attributed where factual, and avoid stereotypes",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.9",
+      "criterion": "hook_suspense",
+      "question": "Fairly controlled information motivates curiosity",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.10",
+      "criterion": "escalation",
+      "question": "Choices narrow or costs increase instead of repetitive conflict",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.11",
+      "criterion": "setup_payoff",
+      "question": "Earlier visible plants motivate later consequences",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.12",
+      "criterion": "ending_quality",
+      "question": "Ending follows choices and changes both characters without a formulaic rescue",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.13",
+      "criterion": "filmability",
+      "question": "Action, location or sound communicates each major beat",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.14",
+      "criterion": "consistency",
+      "question": "Knowledge, timeline, possessions and locked facts remain coherent",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    },
+    {
+      "id": "story.creative.15",
+      "criterion": "audience_engagement",
+      "question": "Engagement is a reviewer hypothesis, not invented audience analytics",
+      "sample_A_score": null,
+      "sample_B_score": null,
+      "evidence": null,
+      "applicability": null
+    }
+  ],
+  "owner_acceptance": "PENDING"
+}

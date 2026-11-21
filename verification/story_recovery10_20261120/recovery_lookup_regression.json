@@ -1,0 +1,6 @@
+{
+  "scope": "CPU-only preparation regression; captured case, no dispatch",
+  "new_v2_predecessor_lookup": "PASS",
+  "prompt_matches_actual_submitted_act1": "PASS",
+  "new_model_calls": 0
+}

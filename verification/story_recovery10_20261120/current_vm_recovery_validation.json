@@ -1,0 +1,113 @@
+{
+  "source_base_commit": "d9ab67c72d050e09a4f05d78071ee58cd3c59476",
+  "calls_consumed_before": 5,
+  "new_calls": 2,
+  "total_consumed": 7,
+  "ceiling": 10,
+  "remaining": 3,
+  "historical_five_calls_unchanged": true,
+  "checks": [
+    {
+      "section": "foundation",
+      "raw_http_content_and_hash": "PASS",
+      "reserved_payload_hash": "PASS",
+      "original_schema": "PASS",
+      "state": "completed",
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 815,
+        "prompt_tokens": 1481,
+        "total_tokens": 2296,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "section": "act_1",
+      "raw_http_content_and_hash": "PASS",
+      "reserved_payload_hash": "PASS",
+      "original_schema": "PASS",
+      "state": "stopped_with_evidence",
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 1015,
+        "prompt_tokens": 2221,
+        "total_tokens": 3236,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    }
+  ],
+  "foundation_symbolic_ticket_lock": "PASS; N lacks TICKET_HIDDEN",
+  "act1_handoff": "FAIL",
+  "act1_structural_findings": [
+    {
+      "path": "act_1[0].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[0].after",
+      "code": "tracked_state_change_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[1].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[1].after",
+      "code": "tracked_state_change_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[2].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[2].before",
+      "code": "predecessor_state_mismatch",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[2].after",
+      "code": "tracked_state_change_invalid",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[2].emotion_setups",
+      "code": "earlier_emotional_reference_required",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[3].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[3].before",
+      "code": "predecessor_state_mismatch",
+      "repair_applied": false
+    },
+    {
+      "path": "act_1[3].after",
+      "code": "tracked_state_change_invalid",
+      "repair_applied": false
+    }
+  ],
+  "full_story_generated": false,
+  "full_story_15_criterion_qc": "NOT RUN",
+  "human_review": "PENDING",
+  "postflight": {
+    "gpu": "Tesla T4, 15360, 14913, 580.82.07",
+    "gpu_processes": ""
+  },
+  "runtime_source_sha256": "589c605f60de40d64823cc6639fba3e8e3a632e5a952c545e3fea9a466ff672f",
+  "full_story_packet": "NOT READY",
+  "partial_section_review_packet": "Prepared separately; not professional acceptance",
+  "production_changed": false
+}

@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-21",
+  "verified_remote_head_before_completion": "da3fa36419196301dc43ece5bb12b17a107cd992",
+  "fresh_observation": {
+    "observed_at_utc": "2026-11-21T06:40:27.464151+00:00",
+    "gpu": "Tesla T4, 15360, 14913, 580.82.07",
+    "gpu_error": null,
+    "host_ram": {
+      "MemTotal": 13605810176,
+      "MemAvailable": 12244893696
+    },
+    "inventory": [
+      {
+        "path": "/content/redpad_story_t4_20261114/Qwen3.5-9B-Q4_K_M.gguf",
+        "present": false,
+        "bytes": null,
+        "symlink_rejected": false
+      },
+      {
+        "path": "/root/.cache/huggingface/hub/models--unsloth--Qwen3.5-9B-GGUF/snapshots/3885219b6810b007914f3a7950a8d1b469d598a5/Qwen3.5-9B-Q4_K_M.gguf",
+        "present": false,
+        "bytes": null,
+        "symlink_rejected": false
+      },
+      {
+        "path": "/content/redpad_story_t4_20261114/option_c_approved/bundle_ready.json",
+        "present": false,
+        "bytes": null,
+        "symlink_rejected": false
+      },
+      {
+        "path": "/content/redpad_story_t4_20261114/option_c_approved/driver_binding_verified.json",
+        "present": false,
+        "bytes": null,
+        "symlink_rejected": false
+      },
+      {
+        "path": "/content/redpad_story_t4_20261114/option_c_approved/call_ledger.json",
+        "present": false,
+        "bytes": null,
+        "symlink_rejected": false
+      },
+      {
+        "path": "/content/redpad_story_t4_20261114/option_c_approved/outputs/driverbound_canary_v1.json",
+        "present": false,
+        "bytes": null,
+        "symlink_rejected": false
+      },
+      {
+        "path": "/content/redpad_story_t4_20261114/option_c_approved/runtime/llama-b12318/llama-server",
+        "present": false,
+        "bytes": null,
+        "symlink_rejected": false
+      },
+      {
+        "path": "/content/redpad_story_t4_20261114/runtime/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "present": false,
+        "bytes": null,
+        "symlink_rejected": false
+      },
+      {
+        "path": "/content/redpad_story_t4_20261114/runtime/llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "present": false,
+        "bytes": null,
+        "symlink_rejected": false
+      }
+    ],
+    "drive_mount_detected": false,
+    "saved_github_call_budget": {
+      "consumed": 3,
+      "authorized_ceiling": 8,
+      "remaining": 5
+    },
+    "runtime_ledger_restored": false,
+    "weight_bytes_read": false,
+    "model_downloads": 0,
+    "model_inferences": 0,
+    "cuda_diagnostics_repeated": false,
+    "successful_canary_repeated": false,
+    "scope": "Current metadata only. Historical successful CUDA/canary evidence is retained in GitHub; saved notebook output is not evidence of current cache availability."
+  },
+  "canonical_budget": {
+    "consumed": 7,
+    "ceiling": 10,
+    "remaining": 3,
+    "new_calls_this_resume": 0,
+    "authority": "Saved recovery_v2_final_actual.json raw responses/reservations and notebook Cell 41 confirm the two actual recovery calls; metadata cell's static 3/8 label is stale."
+  },
+  "status": "BLOCKED_FAILED_ACT1_V2_AND_MISSING_CURRENT_CACHE",
+  "restore_requirements": [
+    "Qwen3.5-9B-Q4_K_M.gguf pinned revision3885219b6810b007914f3a7950a8d1b469d598a5 SHA25603b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+    "cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+    "Verified historical receipts, immutable 7-consumed-call ledger and pinned corrected runner"
+  ],
+  "current_hash_verification": "NOT POSSIBLE — files absent",
+  "downloads_this_resume": 0,
+  "restore_decision": "No download: failed mandatory Act1_v2 stop remains in effect; restoring a bundle would not authorize a retry, skip or new call allocation.",
+  "generation_calls_this_resume": 0,
+  "human_review": "PENDING",
+  "full_story": "INCOMPLETE"
+}

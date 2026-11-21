@@ -1,0 +1,10 @@
+{
+  "scope": "New recovery-budget specialization checks only; no runtime, mock generation or GPU execution",
+  "ordered_five_calls_and_ten_ceiling": "PASS",
+  "no_retry_failed_predecessor_or_section_skip": "PASS",
+  "unchanged_limits_enforced": "PASS",
+  "historical_mutation_rejected": "PASS",
+  "guard_BUNDLE_and_server_launch_unchanged": "PASS",
+  "no_generation_invocation_in_cell": true,
+  "runner_sha256": "589c605f60de40d64823cc6639fba3e8e3a632e5a952c545e3fea9a466ff672f"
+}

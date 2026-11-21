@@ -1,0 +1,10 @@
+{
+  "base_commit": "d9ab67c72d050e09a4f05d78071ee58cd3c59476",
+  "protected_files_byte_identical": 67,
+  "actual_total_calls": 7,
+  "remaining": 3,
+  "new_calls_20261121": 0,
+  "source_historical_outputs_unchanged": true,
+  "full_story_qc": "NOT RUN",
+  "human_review": "PENDING"
+}
