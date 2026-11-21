@@ -150,7 +150,7 @@ jobs:
 
   kernel-phase1:
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.kernel_phase1 }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v6
@@ -164,6 +164,10 @@ jobs:
           cat /etc/os-release
           findmnt -n -o TARGET,OPTIONS -T /proc/self/uid_map
           sysctl user.max_user_namespaces user.max_mnt_namespaces user.max_net_namespaces user.max_pid_namespaces
+          grep -E '^(Cap(Inh|Prm|Eff|Bnd|Amb)|NoNewPrivs|Seccomp):' /proc/self/status
+          for policy in /proc/sys/kernel/apparmor_restrict_unprivileged_userns /proc/sys/kernel/unprivileged_userns_clone; do
+            if test -r "$policy"; then printf '%s: ' "$policy"; cat "$policy"; fi
+          done
           sudo -n apt-get update
           apt-cache policy bubblewrap
           sudo -n apt-get install -y --no-install-recommends bubblewrap
