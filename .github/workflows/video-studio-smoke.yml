@@ -157,5 +157,23 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.14'
-      - name: Run synthetic kernel canaries
-        run: python verification/kernel_phase1_20261121/probe.py
+      - name: Inspect runner and install Bubblewrap from Ubuntu packages
+        run: |
+          set -eux
+          uname -srmo
+          cat /etc/os-release
+          findmnt -n -o TARGET,OPTIONS -T /proc/self/uid_map
+          sysctl user.max_user_namespaces user.max_mnt_namespaces user.max_net_namespaces user.max_pid_namespaces
+          sudo -n apt-get update
+          apt-cache policy bubblewrap
+          sudo -n apt-get install -y --no-install-recommends bubblewrap
+          dpkg-query -W bubblewrap
+          /usr/bin/bwrap --version
+      - name: Run synthetic kernel canaries as the runner user
+        run: |
+          id
+          set +e
+          python verification/kernel_phase1_20261121/probe.py
+          result=$?
+          printf 'Phase 1 probe exit code: %s\n' "$result"
+          exit "$result"
