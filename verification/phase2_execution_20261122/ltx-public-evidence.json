@@ -1,0 +1,11 @@
+{
+  "tree_url": "https://huggingface.co/api/models/Lightricks/LTX-2.5/tree/49b093a39c19169a8a81721dcc541e07e945232f/latent_upscale_models?expand=true",
+  "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+  "path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+  "public_size": 995778752,
+  "authoritative_sha256": null,
+  "public_lfs_oid_masked": true,
+  "authorized_local_credential_available": false,
+  "authenticated_metadata_request": false,
+  "installation_gate": "CLOSED"
+}

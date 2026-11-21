@@ -1,0 +1,8 @@
+test_preflight_rejects_faults (__main__.FailClosed.test_preflight_rejects_faults) ... ok
+test_revision_drift (__main__.FailClosed.test_revision_drift) ... ok
+test_tampered_same_size_dependency (__main__.FailClosed.test_tampered_same_size_dependency) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+OK
