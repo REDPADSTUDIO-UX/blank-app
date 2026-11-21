@@ -1,0 +1,9 @@
+Modular Diffusers is currently an experimental feature under active development. The API is subject to breaking changes in future releases.
+Traceback (most recent call last):
+  File "/diagnostic/wan_modular_fixture.py", line 20, in <module>
+    base = diffusers.WanAnimate2ModularPipeline
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/source/src/diffusers/utils/import_utils.py", line 1029, in __getattr__
+PASS modular index omits processor and uses two mutable component refs
+    raise AttributeError(f"module {self.__name__} has no attribute {name}")
+AttributeError: module diffusers has no attribute WanAnimate2ModularPipeline. Did you mean: 'AnimaModularPipeline'?

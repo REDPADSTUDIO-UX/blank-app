@@ -1,0 +1,59 @@
+Installed 44 packages in 109ms
+Traceback (most recent call last):
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/agent/.local/share/sigstore-python/tuf/https%3A%2F%2Ftuf-repo-cdn.sigstore.dev/root_history'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/agent/.local/share/sigstore-python/tuf/https%3A%2F%2Ftuf-repo-cdn.sigstore.dev'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/agent/.local/share/sigstore-python/tuf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/redpad-uv-cache/archive-v0/ZNVRmDFK0ARlgv0o/lib/python3.11/site-packages/sigstore/_internal/tuf.py", line 117, in __init__
+    self._updater = Updater(
+                    ^^^^^^^^
+  File "/tmp/redpad-uv-cache/archive-v0/ZNVRmDFK0ARlgv0o/lib/python3.11/site-packages/tuf/ngclient/updater.py", line 147, in __init__
+    self._persist_root(self._trusted_set.root.version, bootstrap)
+  File "/tmp/redpad-uv-cache/archive-v0/ZNVRmDFK0ARlgv0o/lib/python3.11/site-packages/tuf/ngclient/updater.py", line 343, in _persist_root
+    rootdir.mkdir(exist_ok=True, parents=True)
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/home/agent/.local/share/sigstore-python'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/tmp/redpad-uv-cache/archive-v0/ZNVRmDFK0ARlgv0o/lib/python3.11/site-packages/kernels/verify.py", line 192, in verify_variant
+    verifier = Verifier.production()
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-uv-cache/archive-v0/ZNVRmDFK0ARlgv0o/lib/python3.11/site-packages/sigstore/verify/verifier.py", line 112, in production
+    config = ClientTrustConfig.production(offline=offline)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-uv-cache/archive-v0/ZNVRmDFK0ARlgv0o/lib/python3.11/site-packages/sigstore/models.py", line 937, in production
+    return cls.from_tuf(DEFAULT_TUF_URL, offline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-uv-cache/archive-v0/ZNVRmDFK0ARlgv0o/lib/python3.11/site-packages/sigstore/models.py", line 963, in from_tuf
+    updater = TrustUpdater(url, offline, bootstrap_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-uv-cache/archive-v0/ZNVRmDFK0ARlgv0o/lib/python3.11/site-packages/sigstore/_internal/tuf.py", line 129, in __init__
+    raise TUFError("Failed to refresh TUF metadata") from e
+sigstore.errors.TUFError: Failed to refresh TUF metadata

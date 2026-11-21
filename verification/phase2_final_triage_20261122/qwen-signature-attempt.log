@@ -1,0 +1,44 @@
+Downloading cryptography (4.5MiB)
+Downloading rfc3161-client (2.3MiB)
+Downloading kernels (1.8MiB)
+ Downloaded kernels
+ Downloaded rfc3161-client
+ Downloaded cryptography
+Installed 46 packages in 108ms
+Traceback (most recent call last):
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/agent/.cache/sigstore-python/tuf/https%3A%2F%2Ftuf-repo-cdn.sigstore.dev'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/agent/.cache/sigstore-python/tuf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/tmp/redpad-uv-cache/archive-v0/NXtwYCKvPy-wCwu4/lib/python3.11/site-packages/kernels/verify.py", line 192, in verify_variant
+    verifier = Verifier.production()
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-uv-cache/archive-v0/NXtwYCKvPy-wCwu4/lib/python3.11/site-packages/sigstore/verify/verifier.py", line 103, in production
+    config = ClientTrustConfig.production(offline=offline)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-uv-cache/archive-v0/NXtwYCKvPy-wCwu4/lib/python3.11/site-packages/sigstore/models.py", line 937, in production
+    return cls.from_tuf(DEFAULT_TUF_URL, offline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-uv-cache/archive-v0/NXtwYCKvPy-wCwu4/lib/python3.11/site-packages/sigstore/models.py", line 963, in from_tuf
+    updater = TrustUpdater(url, offline, bootstrap_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-uv-cache/archive-v0/NXtwYCKvPy-wCwu4/lib/python3.11/site-packages/sigstore/_internal/tuf.py", line 87, in __init__
+    self._targets_dir.mkdir(parents=True, exist_ok=True)
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1120, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/tmp/redpad-phase2/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/home/agent/.cache/sigstore-python'

@@ -1,0 +1,4 @@
+Modular Diffusers is currently an experimental feature under active development. The API is subject to breaking changes in future releases.
+PASS modular index omits processor and uses two mutable component refs
+PASS pinned PR exports generic Wan classes but lacks both named Distilled modular exports
+PASS exact local modular load reproduced missing pipeline class: module diffusers has no attribute WanAnimate2DistilledModularPipeline

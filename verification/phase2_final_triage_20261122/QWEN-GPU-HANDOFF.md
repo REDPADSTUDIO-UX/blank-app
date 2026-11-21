@@ -1,0 +1,21 @@
+# Qwen FP8 dependency and device handoff
+
+This is a future acceptance specification. The alternative profile remains disabled. Its FP8 model candidate is `Qwen/Qwen3.5-35B-A3B-FP8@9d1823d2dee688a6b25e77009dc727688c44936e`. Exact derivation from the Studio's pinned base SHA is unconfirmed. Owner acceptance of the alternative model and any artifact acquisition is a separate decision.
+
+## CPU-verifiable before accelerator acceptance
+
+- Use CPython 3.11 on Linux x86-64 with glibc 2.28 or newer. Use the 79-version lock and the one selected platform wheel per package. Verify the lock digest, selected filenames and each wheel's byte count and SHA-256 during a future authorized wheelhouse build. Install in a dedicated prefix using only the staged wheels, `--no-index --only-binary=:all: --require-hashes`, and run `pip check`. Record interpreter, platform, ABI, package and wheelhouse attestations. Bind the finalized prefix read-only. This triage performed metadata and source verification. The staged offline install is still unverified.
+- Record Torch 2.10.0, TorchVision 0.25.0, Triton 3.6.0, Transformers 5.22.2, Accelerate 1.13.0, kernels 0.17.2, and the full lock, including CUDA runtime 12.8.90. `cuda-bindings==12.9.4` is a separate Python distribution. Validate the eventual PyTorch CUDA and C++ ABI against the host receipt.
+- Require the immutable CUDA bundle `kernels-community/finegrained-fp8@3c8fcc86c0e42b7abe5bcf666d3a3afdce93a0e8` selected by Transformers' v4 lookup. Keep a read-only cache whose v4 resolution is bound to the exact commit and reject an alternate variant or mutable resolution. Verify `metadata.json.sigstore`, the publisher identity policy and file digests before execution. The public bundle passed `kernels.verify.verify_variant` with kernels 0.17.2 and Sigstore 4.5.1 on CPU. Record the verified bundle, runtime-lock hash, manifest hash and offline source paths in the same launcher receipt.
+- Verify the exact artifact index, intended config and all 14 shard identities before accepting any later separately authorized artifact load. Deny network access, automatic downloads and unaudited remote code. Scope production supervisor integration and activation separately from this research.
+
+[Hashed package lock](../phase2_cpu_gaps_20261122/qwen-candidate.lock) · [Selected platform wheels](../phase2_cpu_gaps_20261122/qwen-platform-wheels.json) · [Kernel hashes](../phase2_cpu_gaps_20261122/qwen-kernel-v4.json) · [Artifact manifest](../phase2_approved_20261122/qwen-public-manifest.json) · [Signature result](qwen-signature.log)
+
+## CUDA-dependent preflight and acceptance
+
+1. In the same isolated process and device map intended for load, verify local driver/runtime ABI, enumerate only authorized CUDA devices and record visible indices, reported capability and CUDA build. Require compute capability at least 8.9 on **every assigned device**. Verify the driver against the selected Torch CUDA build and any required Triton compilation features.
+2. Load the authenticated offline v4 bundle and require callable `matmul_2d`, `matmul_batched` and `matmul_grouped`. Record the executable kernel provider and run model-free synthetic expert dispatch on each applicable device or distinct assigned topology. Verify finite outputs and compare a seeded small grouped FP8 result with an independent reference within a reviewed tolerance. A symbol-only pass is insufficient.
+3. Check that the exact Transformers fine-grained FP8 guard and active route report `dequantize is False` before and after validation. Deny unexpected CPU/disk placement and device-map changes. Abort on missing or unsupported device, unavailable or different kernel, unknown guard state, or BF16 dequantization. Preserve legitimate higher-precision exclusions from the publisher config. Verify actual expert kernel dispatch independently of the configured dtype.
+4. Only after separate approval for actual assets and runtime execution, capture cold load, peak memory, kernel precision path, minimal approved execution, cancellation and cleanup receipts. A successful model-free kernel test does not establish load or output acceptance.
+
+[Existing fail-closed fixture](../phase2_approved_20261122/qwen-backend.log) · [Transformers guard](https://github.com/huggingface/transformers/blob/v5.22.2/src/transformers/quantizers/quantizer_finegrained_fp8.py)
