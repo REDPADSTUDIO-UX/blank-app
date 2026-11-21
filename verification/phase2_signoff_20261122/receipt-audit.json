@@ -1,0 +1,105 @@
+{
+  "kernel": {
+    "commit": "8eedb6b1666683d705f2298b6ac2e318430e005d",
+    "job": "kernel-phase1",
+    "live_confirmed": true,
+    "log_sha256": "459bc662cf40c4253a74959607ac8e3aa6b1887acf70df89677528e90c5aeba0",
+    "run": 44921166025
+  },
+  "new_runtime_runs": 0,
+  "total": 13,
+  "total_profiles": 18,
+  "verified_profiles": {
+    "ace15": {
+      "commit": "d5795b3d7da028d3c4dee45a17a6188385f08920",
+      "job": "runtime-phase2-ltx",
+      "live_confirmed": true,
+      "log_sha256": "c95676fc4b6114f3814cb3b7f931d68e8b98cab5cb7af210f23e2269b6db0eb9",
+      "run": 44933003941
+    },
+    "flux2_klein4": {
+      "commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+      "job": "runtime-phase2 (modern)",
+      "live_confirmed": true,
+      "log_sha256": "4cdee1a01c267f9fff795c58276f7a08369412e9e9f344d3d69ce265e5dae831",
+      "run": 44922713868
+    },
+    "gemma3_12": {
+      "commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+      "job": "runtime-phase2 (modern)",
+      "live_confirmed": true,
+      "log_sha256": "4cdee1a01c267f9fff795c58276f7a08369412e9e9f344d3d69ce265e5dae831",
+      "run": 44922713868
+    },
+    "gemma3_27": {
+      "commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+      "job": "runtime-phase2 (modern)",
+      "live_confirmed": true,
+      "log_sha256": "4cdee1a01c267f9fff795c58276f7a08369412e9e9f344d3d69ce265e5dae831",
+      "run": 44922713868
+    },
+    "indic_parler": {
+      "commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+      "job": "runtime-phase2 (speech)",
+      "live_confirmed": true,
+      "log_sha256": "4cdee1a01c267f9fff795c58276f7a08369412e9e9f344d3d69ce265e5dae831",
+      "run": 44922713868
+    },
+    "ltx25": {
+      "commit": "d5795b3d7da028d3c4dee45a17a6188385f08920",
+      "job": "runtime-phase2-ltx",
+      "live_confirmed": true,
+      "log_sha256": "c3fbc9dac88e4f3f380747329e5e325214e2f66c2700e6d2caa51a192f51333c",
+      "run": 44932910851
+    },
+    "qwen35_27": {
+      "commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+      "job": "runtime-phase2 (modern)",
+      "live_confirmed": true,
+      "log_sha256": "4cdee1a01c267f9fff795c58276f7a08369412e9e9f344d3d69ce265e5dae831",
+      "run": 44922713868
+    },
+    "qwen35_9": {
+      "commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+      "job": "runtime-phase2 (modern)",
+      "live_confirmed": true,
+      "log_sha256": "4cdee1a01c267f9fff795c58276f7a08369412e9e9f344d3d69ce265e5dae831",
+      "run": 44922713868
+    },
+    "qwen36_27": {
+      "commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+      "job": "runtime-phase2 (modern)",
+      "live_confirmed": true,
+      "log_sha256": "4cdee1a01c267f9fff795c58276f7a08369412e9e9f344d3d69ce265e5dae831",
+      "run": 44922713868
+    },
+    "stable_audio_small": {
+      "commit": "0b6719d8da3aaa122a736dc53282f64d79fa4e72",
+      "job": "runtime-phase2 (stable)",
+      "live_confirmed": true,
+      "log_sha256": "7010192d43ccb19047c2cb28bdefa09d7e04b29854a64693847f5a21c00fdc2a",
+      "run": 44924150354
+    },
+    "svd_xt": {
+      "commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+      "job": "runtime-phase2 (media)",
+      "live_confirmed": true,
+      "log_sha256": "4cdee1a01c267f9fff795c58276f7a08369412e9e9f344d3d69ce265e5dae831",
+      "run": 44922713868
+    },
+    "wan22_5": {
+      "commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+      "job": "runtime-phase2 (media)",
+      "live_confirmed": true,
+      "log_sha256": "4cdee1a01c267f9fff795c58276f7a08369412e9e9f344d3d69ce265e5dae831",
+      "run": 44922713868
+    },
+    "z_image_turbo": {
+      "commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+      "job": "runtime-phase2 (modern)",
+      "live_confirmed": true,
+      "log_sha256": "4cdee1a01c267f9fff795c58276f7a08369412e9e9f344d3d69ce265e5dae831",
+      "run": 44922713868
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "scope": "host CPU only; bounded persistent process and clean exit",
+  "executable": "/tmp/redpad-exact/ltx-env/bin/python",
+  "cases": [
+    {
+      "case": "torch-oiio",
+      "samples": [
+        {
+          "operations": 16,
+          "pid": 33486,
+          "rss_kib": 258336,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 32,
+          "pid": 33486,
+          "rss_kib": 258336,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 48,
+          "pid": 33486,
+          "rss_kib": 258380,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 64,
+          "pid": 33486,
+          "rss_kib": 258380,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 80,
+          "pid": 33486,
+          "rss_kib": 258380,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 96,
+          "pid": 33486,
+          "rss_kib": 258380,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 112,
+          "pid": 33486,
+          "rss_kib": 258380,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 128,
+          "pid": 33486,
+          "rss_kib": 258380,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 144,
+          "pid": 33486,
+          "rss_kib": 258380,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 160,
+          "pid": 33486,
+          "rss_kib": 258380,
+          "file_descriptors": 4
+        }
+      ],
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "versions": {
+        "torch": "2.10.0+cpu",
+        "openimageio": "3.2.2.0",
+        "colour-science": "0.4.7"
+      },
+      "weights_loaded": false,
+      "gpu_inference": false,
+      "exit_code": 0,
+      "elapsed_seconds": 3.807,
+      "stderr": "",
+      "nanobind_warning": false,
+      "rss_first_to_last_kib": 44
+    },
+    {
+      "case": "torch-oiio-colour",
+      "samples": [
+        {
+          "operations": 16,
+          "pid": 33494,
+          "rss_kib": 320900,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 32,
+          "pid": 33494,
+          "rss_kib": 320900,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 48,
+          "pid": 33494,
+          "rss_kib": 320900,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 64,
+          "pid": 33494,
+          "rss_kib": 320900,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 80,
+          "pid": 33494,
+          "rss_kib": 320900,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 96,
+          "pid": 33494,
+          "rss_kib": 320900,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 112,
+          "pid": 33494,
+          "rss_kib": 320900,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 128,
+          "pid": 33494,
+          "rss_kib": 320900,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 144,
+          "pid": 33494,
+          "rss_kib": 320900,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 160,
+          "pid": 33494,
+          "rss_kib": 320900,
+          "file_descriptors": 4
+        }
+      ],
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "versions": {
+        "torch": "2.10.0+cpu",
+        "openimageio": "3.2.2.0",
+        "colour-science": "0.4.7"
+      },
+      "weights_loaded": false,
+      "gpu_inference": false,
+      "exit_code": 0,
+      "elapsed_seconds": 5.364,
+      "stderr": "/tmp/redpad-exact/ltx-env/lib/python3.11/site-packages/colour/utilities/verbose.py:340: ColourUsageWarning: \"Matplotlib\" related API features are not available: \"No module named 'matplotlib'\".\nSee the installation guide for more information: https://www.colour-science.org/installation-guide/\n  warn(*args, **kwargs)\nnanobind: leaked 2 instances!\n - leaked instance 0x7fcfa34503c8 of type \"OpenImageIO.OpenImageIO.TypeDesc\"\n - leaked instance 0x7fcfa34503a8 of type \"OpenImageIO.OpenImageIO.TypeDesc\"\nnanobind: leaked 3 types!\n - leaked type \"OpenImageIO.OpenImageIO.TypeDesc\"\n - leaked type \"OpenImageIO.OpenImageIO.ImageSpec\"\n - leaked type \"BASETYPE\"\nnanobind: leaked 114 functions!\n - leaked function \"\"\n - leaked function \"get_string_attribute\"\n - leaked function \"\"\n - leaked function \"\"\n - leaked function \"elementsize\"\n - leaked function \"__eq__\"\n - leaked function \"\"\n - leaked function \"__delitem__\"\n - leaked function \"\"\n - leaked function \"fromstring\"\n - ... skipped remainder\nnanobind: this is likely caused by a reference counting issue in the binding code.\nSee https://nanobind.readthedocs.io/en/latest/refleaks.html",
+      "nanobind_warning": true,
+      "rss_first_to_last_kib": 0
+    },
+    {
+      "case": "torch-oiio",
+      "samples": [
+        {
+          "operations": 16,
+          "pid": 33502,
+          "rss_kib": 258692,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 32,
+          "pid": 33502,
+          "rss_kib": 258732,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 48,
+          "pid": 33502,
+          "rss_kib": 258732,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 64,
+          "pid": 33502,
+          "rss_kib": 258732,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 80,
+          "pid": 33502,
+          "rss_kib": 258732,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 96,
+          "pid": 33502,
+          "rss_kib": 258732,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 112,
+          "pid": 33502,
+          "rss_kib": 258732,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 128,
+          "pid": 33502,
+          "rss_kib": 258732,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 144,
+          "pid": 33502,
+          "rss_kib": 258744,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 160,
+          "pid": 33502,
+          "rss_kib": 258744,
+          "file_descriptors": 4
+        }
+      ],
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "versions": {
+        "torch": "2.10.0+cpu",
+        "openimageio": "3.2.2.0",
+        "colour-science": "0.4.7"
+      },
+      "weights_loaded": false,
+      "gpu_inference": false,
+      "exit_code": 0,
+      "elapsed_seconds": 3.349,
+      "stderr": "",
+      "nanobind_warning": false,
+      "rss_first_to_last_kib": 52
+    },
+    {
+      "case": "torch-oiio-colour",
+      "samples": [
+        {
+          "operations": 16,
+          "pid": 33508,
+          "rss_kib": 321056,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 32,
+          "pid": 33508,
+          "rss_kib": 321056,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 48,
+          "pid": 33508,
+          "rss_kib": 321056,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 64,
+          "pid": 33508,
+          "rss_kib": 321056,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 80,
+          "pid": 33508,
+          "rss_kib": 321056,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 96,
+          "pid": 33508,
+          "rss_kib": 321056,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 112,
+          "pid": 33508,
+          "rss_kib": 321056,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 128,
+          "pid": 33508,
+          "rss_kib": 321056,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 144,
+          "pid": 33508,
+          "rss_kib": 321056,
+          "file_descriptors": 4
+        },
+        {
+          "operations": 160,
+          "pid": 33508,
+          "rss_kib": 321056,
+          "file_descriptors": 4
+        }
+      ],
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "versions": {
+        "torch": "2.10.0+cpu",
+        "openimageio": "3.2.2.0",
+        "colour-science": "0.4.7"
+      },
+      "weights_loaded": false,
+      "gpu_inference": false,
+      "exit_code": 0,
+      "elapsed_seconds": 5.279,
+      "stderr": "/tmp/redpad-exact/ltx-env/lib/python3.11/site-packages/colour/utilities/verbose.py:340: ColourUsageWarning: \"Matplotlib\" related API features are not available: \"No module named 'matplotlib'\".\nSee the installation guide for more information: https://www.colour-science.org/installation-guide/\n  warn(*args, **kwargs)\nnanobind: leaked 2 instances!\n - leaked instance 0x7fa9894503c8 of type \"OpenImageIO.OpenImageIO.TypeDesc\"\n - leaked instance 0x7fa9894503a8 of type \"OpenImageIO.OpenImageIO.TypeDesc\"\nnanobind: leaked 3 types!\n - leaked type \"OpenImageIO.OpenImageIO.TypeDesc\"\n - leaked type \"OpenImageIO.OpenImageIO.ImageSpec\"\n - leaked type \"BASETYPE\"\nnanobind: leaked 114 functions!\n - leaked function \"__ne__\"\n - leaked function \"\"\n - leaked function \"tile_bytes\"\n - leaked function \"\"\n - leaked function \"\"\n - leaked function \"elementsize\"\n - leaked function \"\"\n - leaked function \"size_t_safe\"\n - leaked function \"c_str\"\n - leaked function \"\"\n - ... skipped remainder\nnanobind: this is likely caused by a reference counting issue in the binding code.\nSee https://nanobind.readthedocs.io/en/latest/refleaks.html",
+      "nanobind_warning": true,
+      "rss_first_to_last_kib": 0
+    }
+  ]
+}
