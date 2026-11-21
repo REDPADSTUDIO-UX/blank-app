@@ -4,7 +4,7 @@ from pathlib import Path
 from uuid import uuid4
 from .agents import AgentError,encode
 from .offline_media import digest,sha
-from .shared_model_services import SharedServices,profile,catalog,resource_preflight,ROOT
+from .shared_model_services import read_shared_text,SharedServices,profile,catalog,resource_preflight,ROOT
 from .kaggle_runtime import probe
 from .screenwriter import model_json
 
@@ -105,13 +105,14 @@ class KaggleLab:
         context=json.loads(context[0]);elapsed=(time.time()-context['observed_at'])/3600
         if elapsed>0.5 or (min(context['remaining_gpu_quota_hours'],context['session_remaining_hours'])-elapsed)*3600<360:raise AgentError('Insufficient/fresh quota for bounded model canary and preservation.')
         with self.store.tx() as db:db.execute('INSERT INTO kaggle_canaries VALUES (?,?)',(token,encode({'profile':id,'state':'Running','genuine_inference':False})))
-        try:folder,evidence=self.services.execute(id,request,timeout=240)
+        try:
+            folder,evidence=self.services.execute(id,request,timeout=240)
+            raw=read_shared_text(folder,evidence)
         except Exception as exc:
             failure={'profile':id,'state':'Failed or interrupted','genuine_inference':False,'error_type':type(exc).__name__,'artifact_folder':str(getattr(self.services,'last_folder',''))}
             with self.store.tx() as db:db.execute('UPDATE kaggle_canaries SET payload=? WHERE id=?',(encode(failure),token))
             raise
-        raw=(folder/'raw_response.txt').read_text()
-        result={'profile':id,'manifest_sha256':installed['manifest']['sha256'],'runtime':runtime,'raw':raw,'raw_sha256':sha(folder/'raw_response.txt'),'evidence':evidence,'captured_at':time.time(),'genuine_inference':evidence.get('actual_inference_verified') is True,'creative_acceptance':False}
+        result={'profile':id,'manifest_sha256':installed['manifest']['sha256'],'runtime':runtime,'raw':raw,'raw_sha256':evidence['artifact_sha256'],'evidence':evidence,'captured_at':time.time(),'genuine_inference':evidence.get('actual_inference_verified') is True,'creative_acceptance':False}
         with self.store.tx() as db:db.execute('UPDATE kaggle_canaries SET payload=? WHERE id=?',(encode(result),token))
         return result
 
@@ -154,8 +155,8 @@ class KaggleLab:
             db.execute("UPDATE kaggle_trial_jobs SET state='Running' WHERE id=?",(id,))
         try:
             folder,evidence=self.services.execute(j['profile'],request,timeout=j['timeout_seconds'])
-            raw=(folder/'raw_response.txt').read_text();validation=technical_validation(c,raw,evidence['worker'])
-            output={'profile':j['profile'],'repo':j['repo'],'revision':j['revision'],'case_id':c['id'],'raw':raw,'raw_sha256':sha(folder/'raw_response.txt'),'evidence':evidence,'runtime':runtime,'validation':validation,'provenance':'local_inference','artifact_folder':str(folder),'human_review_completed':False,'professional_accepted':False}
+            raw=read_shared_text(folder,evidence);validation=technical_validation(c,raw,evidence['worker'])
+            output={'profile':j['profile'],'repo':j['repo'],'revision':j['revision'],'case_id':c['id'],'raw':raw,'raw_sha256':evidence['artifact_sha256'],'evidence':evidence,'runtime':runtime,'validation':validation,'provenance':'local_inference','artifact_folder':str(folder),'human_review_completed':False,'professional_accepted':False}
             with self.store.tx() as db:db.execute("UPDATE kaggle_trial_jobs SET state='Completed',output=? WHERE id=?",(encode(output),id))
             return output
         except Exception as exc:

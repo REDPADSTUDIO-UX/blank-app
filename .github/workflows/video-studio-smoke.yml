@@ -38,6 +38,9 @@ jobs:
           python -m experiments.export_agent_matrix --check
           python -m unittest tests.test_agent_reporting -v
 
+      - name: Test isolated worker lifecycle and pre-GPU fixtures (CPU only)
+        run: python -m unittest -v tests.test_worker_isolation tests.test_native_local_execution tests.test_pre_gpu_completion
+
       - name: Compile app and video module
         run: python -m compileall -q streamlit_app.py redpad_video_studio.py redpad_pipeline
 

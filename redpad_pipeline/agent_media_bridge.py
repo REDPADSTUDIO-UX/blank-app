@@ -27,13 +27,15 @@ def execute_media(key,data,sidecar):
         from .professional_readiness import file_sha
         image=folder/'image.png'
         if image.is_symlink() or not image.resolve().is_relative_to(root):raise MediaBlocked('Unsafe generated image path.')
+        image_sha256=file_sha(image)
+        if image_sha256!=evidence.get('artifact_sha256'):raise MediaBlocked('Shared image differs from the sealed worker receipt.')
         with Image.open(image) as decoded:
             decoded.load();size=decoded.size
         if size!=(data['request']['width'],data['request']['height']):raise MediaBlocked('Generated image dimensions differ from bound request.')
         verified=evidence.get('actual_inference_verified') is True and evidence.get('worker',{}).get('inference_completed') is True
         if not verified:raise MediaBlocked('Shared image lacks completed worker evidence.')
         metadata={**evidence,'model_identity_verified':True,'worker_inference':evidence['worker'],
-            'output_sha256':file_sha(image),'technical_output_validated':True,
+            'output_sha256':image_sha256,'technical_output_validated':True,
             'inspection':{'width':size[0],'height':size[1]},'visual_review_completed':False}
         return {'path':str(image.relative_to(root)),'model':p['repo']+'@'+p['revision'],'actual_generation':True,'metadata':metadata}
     if operation=='offline_vision' and key in ('director','qc','continuity','character','art','location','costume','storyboard','performance','cinematographer','motion'):

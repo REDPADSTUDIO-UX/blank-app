@@ -1,0 +1,33 @@
+{
+  "repository": "Lightricks/LTX-2.5",
+  "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+  "path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+  "official_tree_url": "https://huggingface.co/api/models/Lightricks/LTX-2.5/tree/49b093a39c19169a8a81721dcc541e07e945232f/latent_upscale_models?expand=true",
+  "tree_http_status": 200,
+  "tree_entry": {
+    "path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+    "size": 995778752,
+    "oid": "cec7bee6186295d8120b8006785564c95027e526",
+    "lfs": {
+      "oid": "****************************************************************",
+      "size": 995778752,
+      "pointerSize": 134
+    }
+  },
+  "confirmed_bytes": 995778752,
+  "verified_lfs_sha256": null,
+  "resolve_head_url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/49b093a39c19169a8a81721dcc541e07e945232f/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+  "resolve_head_http_status": 401,
+  "paths_info_url": "https://huggingface.co/api/models/Lightricks/LTX-2.5/paths-info/49b093a39c19169a8a81721dcc541e07e945232f",
+  "paths_info_request_body": {
+    "paths": [
+      "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors"
+    ],
+    "expand": true
+  },
+  "paths_info_http_status": 401,
+  "paths_info_response": {
+    "error": "Access to model Lightricks/LTX-2.5 is restricted. You must have access to it and be authenticated to access it. Please log in."
+  },
+  "scope": "Public metadata and HTTP headers only. No weights fetched, gated access requested, license accepted or authorization granted."
+}

@@ -85,7 +85,7 @@ def validate_install(record,*,verify=True):
             expected_repo='hubertsiuzdak/snac_24khz' if n.startswith('snac/') else p['repo']
             if origin['repo']!=expected_repo or (expected_repo==p['repo'] and origin['revision']!=p['revision']):raise AgentError('Wrong selected voice component origin; no substitution.')
         if pid=='ltx25' and (origin['repo'],origin['revision'])!=(p['repo'],p['revision']):raise AgentError('LTX components must stay in exact pinned split repository.')
-    if pid=='ltx25' and LTX_AUXILIARY['sha256'] is None:raise AgentError('Official spatial upsampler SHA/size unverified; exact weight verification gate remains blocked.')
+    if pid=='ltx25' and LTX_AUXILIARY['sha256'] is None:raise AgentError('Official spatial upsampler LFS SHA256 unverified; exact weight verification gate remains blocked.')
     if verify:
         verify_tree(record['model_root'],record['model_files'])
         if pid in PINS or pid in ('indic_speak','indicf5'):verify_tree(record['source_root'],record['source_files'])

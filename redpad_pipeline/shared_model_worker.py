@@ -1,9 +1,15 @@
 """Fixed prospective offline workers. No trust_remote_code, downloads, or servers."""
-import json,sys,time
+import json,os,sys,time
 from pathlib import Path
 
 def run(path):
     job=json.loads(Path(path).read_text());p=job['profile'];r=job['request'];root=Path(job['output_dir'])
+    if not job.get('parent_network_namespace') or job['parent_network_namespace']==os.readlink('/proc/self/ns/net'):
+        raise PermissionError('Kernel-isolated network namespace required before model import.')
+    from .worker_isolation import verify_running_runtime
+    verify_running_runtime(job.get('runtime'))
+    from .native_local_worker import audit_event
+    sys.addaudithook(audit_event)
     import torch
     if not torch.cuda.is_available():raise ValueError('CUDA unavailable')
     from .worker_telemetry import start,finish

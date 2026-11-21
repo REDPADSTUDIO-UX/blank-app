@@ -128,6 +128,8 @@ def main(path):
     job=json.loads(Path(path).read_text());out=Path(job['output_dir'])
     if job.get('research_execution_authorized') is not True or job.get('network_namespace_required') is not True:raise PermissionError('Explicit isolated research authorization required')
     if not job.get('parent_network_namespace') or job['parent_network_namespace']==os.readlink('/proc/self/ns/net'):raise PermissionError('Kernel-isolated network namespace required before any model import')
+    from .worker_isolation import verify_running_runtime
+    verify_running_runtime(job.get('runtime'))
     from .native_local_bundle import validate_install,digest_file
     validate_install(job['install'])
     sys.addaudithook(audit_event)

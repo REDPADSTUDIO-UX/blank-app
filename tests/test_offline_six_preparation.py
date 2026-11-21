@@ -252,6 +252,7 @@ class OfflineSixTests(unittest.TestCase):
         self.assertEqual(LTX_AUXILIARY['repo'],'Lightricks/LTX-2.5')
         self.assertEqual(LTX_AUXILIARY['revision'],'49b093a39c19169a8a81721dcc541e07e945232f')
         self.assertIn('spatial',LTX_AUXILIARY['path']);self.assertIsNone(LTX_AUXILIARY['sha256'])
+        self.assertEqual(LTX_AUXILIARY['bytes'],995778752)
         self.assertFalse(LTX_AUXILIARY['download_approved']);self.assertFalse(LTX_AUXILIARY['license_approved'])
 
     def test_inventory_unsupported_candidate_uses_deterministic_error_not_fallback(self):

@@ -138,7 +138,7 @@ class ProfessionalTests(unittest.TestCase):
       'Verify exact pinned identity and retain the original synthetic wire output.',max_calls=1)
   folder=Path(self.tmp.name)/'fixture-worker';folder.mkdir()
   raw=json.dumps(data,ensure_ascii=False);(folder/'raw_response.txt').write_text(raw)
-  evidence={'actual_inference_verified':True,'model_manifest_sha256':'synthetic-manifest',
+  evidence={'actual_inference_verified':True,'model_manifest_sha256':'synthetic-manifest','artifact_sha256':file_sha(folder/'raw_response.txt'),
             'worker':{'inference_completed':True,'truncated':False}}
   with patch.object(SharedServices,'installed',return_value=installed),patch.object(SharedServices,'execute',return_value=(folder,evidence)) as worker:
    services.configure('story','qwen35_27')
@@ -162,7 +162,7 @@ class ProfessionalTests(unittest.TestCase):
   installed={'repo':p['repo'],'revision':p['revision'],'manifest':{'sha256':'synthetic-image-manifest'}}
   folder=Path(self.tmp.name)/'agent_media'/'shared_model_services'/'fixture';folder.mkdir(parents=True)
   image=folder/'image.png';Image.new('RGB',(512,512),'gray').save(image)
-  evidence={'actual_inference_verified':True,'model_manifest_sha256':'synthetic-image-manifest',
+  evidence={'actual_inference_verified':True,'model_manifest_sha256':'synthetic-image-manifest','artifact_sha256':file_sha(image),
             'worker':{'inference_completed':True}}
   request=dict(prompt='Authored CPU image fixture',width=512,height=512,steps=4,seed=117,references=[])
   with patch.object(SharedServices,'installed',return_value=installed),patch.object(SharedServices,'execute',return_value=(folder,evidence)):

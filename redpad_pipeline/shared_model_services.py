@@ -1,12 +1,10 @@
 """Explicit development-only model services shared across all 21 agents.
 No downloads, public endpoints, implicit substitutions, or production promotion.
 """
-import hashlib,json,os,re,subprocess,sys,time
+import hashlib,json,re
 from pathlib import Path
-from uuid import uuid4
 from .agents import AGENTS,AgentError,encode
-from .offline_media import checkpoint_manifest,sha,digest
-from .resource_guard import serialized
+from .offline_media import checkpoint_manifest
 from .screenwriter import WritingError,LocalUnavailable
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -153,42 +151,32 @@ class SharedServices:
             p=self.policy(role)
             if p:db.execute('INSERT INTO shared_service_snapshots VALUES (?,?)',(run,encode(p)))
             return p
-    @serialized
     def execute(self,id,request,*,timeout=240):
         if type(timeout) is not int or not 30<=timeout<=600:raise AgentError('Bounded 30–600s worker timeout required.')
-        p=profile(id);installed=self.installed(id,True)
+        p=profile(id);validate_request(p,request)
+        installed=self.installed(id,True)
+        from .worker_isolation import RuntimeBindings, IsolationBlocked, DEVICES
+        try:
+            _,runtime_sha256=RuntimeBindings(self.store).get(id)
+        except IsolationBlocked as exc:
+            raise LocalUnavailable(str(exc)) from exc
         from .kaggle_runtime import probe
         preflight=resource_preflight(p,probe())
         if not preflight['eligible_for_canary_only']:raise LocalUnavailable('; '.join(preflight['blockers']))
-        validate_request(p,request)
-        from .producer_references import References
-        references=References(self.store);pins=[];reference_paths=[]
-        for ref in request.get('references',[]):
-            row=references.get(ref['id'])
-            if row['version']!=ref['version'] or row['archived'] or row['rights'] not in ('fictional_ai','authorized_person') or not row['source'].strip() or row['extension'] not in ('.png','.jpg','.jpeg','.webp'):raise AgentError('Current rights-authorized exact image reference version required.')
-            reference_paths.append(str(references.path(row)));pins.append(row)
-        root=self.store.path.parent/'agent_media'/'shared_model_services'
-        if any(x.is_symlink() for x in (root,*root.parents)):raise AgentError('Unsafe shared worker output path.')
-        root=root.resolve();folder=root/uuid4().hex;folder.mkdir(parents=True);self.last_folder=folder
-        job={'profile':p,'checkpoint':installed['folder'],'request':request,'output_dir':str(folder.resolve()),'timeout_seconds':timeout,'reference_paths':reference_paths}
-        (folder/'request.json').write_text(encode(job))
-        evidence={'state':'running','profile':id,'model':p['repo'],'revision':p['revision'],'request_sha256':digest(request),'model_manifest_sha256':installed['manifest']['sha256'],'actual_inference_verified':False,'human_review_completed':False,'production_approved':False}
-        env=os.environ.copy();env.update(HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',HF_DATASETS_OFFLINE='1',HF_HUB_DISABLE_TELEMETRY='1')
-        start=time.monotonic()
-        try:
-            with (folder/'worker.log').open('w') as log:subprocess.run([sys.executable,'-m','redpad_pipeline.shared_model_worker',str(folder/'request.json')],cwd=ROOT,env=env,stdout=log,stderr=log,timeout=timeout,check=True)
-            result=json.loads((folder/'result.json').read_text())
-            for pin in pins:
-                if references.get(pin['id'])!=pin:raise WritingError('Image reference changed during generation; output is stale.')
-                references.path(pin)
-            if result.get('inference_completed') is not True:raise WritingError('No completed model inference evidence.')
-            if self.installed(id,True)['manifest']!=installed['manifest']:raise WritingError('Checkpoint changed during inference.')
-            evidence.update(state='inference_completed',actual_inference_verified=True,worker=result,runtime_seconds=time.monotonic()-start)
-        except (subprocess.SubprocessError,OSError,ValueError,WritingError) as exc:
-            evidence.update(state='failed_or_interrupted',error_type=type(exc).__name__,runtime_seconds=time.monotonic()-start)
-            raise WritingError('Shared local worker failed/interrupted; raw files retained at '+str(folder)+'. No fallback or automatic retry.') from None
-        finally:(folder/'evidence.json').write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+'\n')
-        return folder,evidence
+        pins,_=authorized_image_references(self.store,request)
+        runtime=self.native_research_workers()
+        run_id=runtime.queue_shared(id,request,installed,pins,runtime_sha256)
+        self.last_run_id=run_id
+        self.last_folder=runtime.root/run_id
+        devices=sorted(device for device in DEVICES if Path(device).exists())
+        status=runtime.run(run_id,authorized=True,timeout=timeout,devices=devices)
+        if status['state']!='RETURNED FOR TECHNICAL REVIEW':
+            raise WritingError(f"Shared isolated worker {status['state']}; run {run_id}.")
+        result=status['result']
+        evidence={**result,'run_id':run_id,'state':'inference_completed','profile':id,
+                  'model':p['repo'],'revision':p['revision'],'actual_inference_verified':True,
+                  'human_review_completed':False,'production_approved':False}
+        return self.last_folder/'output',evidence
 
 def validate_request(p,r):
     if not isinstance(r,dict):raise AgentError('Inference request must be a bounded object.')
@@ -203,6 +191,31 @@ def validate_request(p,r):
         if any(not isinstance(x,dict) or set(x)!={'id','version'} or not isinstance(x['id'],str) or type(x['version']) is not int for x in r['references']):raise AgentError('Exact image reference IDs/versions required.')
         if p['adapter']=='z_image' and r['references']:raise AgentError('This Z-Image text-to-image adapter does not implement reference editing.')
     else:raise AgentError('Exact candidate execution adapter is blocked; no legacy substitution.')
+
+def authorized_image_references(store,request):
+    from .producer_references import References
+
+    references=References(store)
+    pins=[]
+    paths=[]
+    for ref in request.get('references',[]):
+        row=references.get(ref['id'])
+        if (row['version']!=ref['version'] or row['archived']
+                or row['rights'] not in ('fictional_ai','authorized_person') or not row['source'].strip()
+                or row['extension'] not in ('.png','.jpg','.jpeg','.webp')):
+            raise AgentError('Current rights-authorized exact image reference version required.')
+        paths.append(references.path(row))
+        pins.append(row)
+    return pins,paths
+
+
+def read_shared_text(folder,evidence):
+    from .native_local_bundle import local_path
+    raw=local_path(folder,'raw_response.txt').read_bytes()
+    if hashlib.sha256(raw).hexdigest()!=evidence.get('artifact_sha256'):
+        raise WritingError('Shared text output differs from the sealed worker receipt.')
+    return raw.decode('utf-8')
+
 
 class SharedWriter:
     def __init__(self,services,run,role,settings):
@@ -219,7 +232,7 @@ class SharedWriter:
         except WritingError:
             # Worker folders retain raw partial/failure evidence; Engine preserves structured failure.
             raise
-        self.last_raw_output=(folder/'raw_response.txt').read_text();self.last_evidence={**evidence,'raw_sha256':sha(folder/'raw_response.txt'),
+        self.last_raw_output=read_shared_text(folder,evidence);self.last_evidence={**evidence,'raw_sha256':evidence['artifact_sha256'],
             'model_digest':evidence['model_manifest_sha256'],
             'inference_completed':evidence.get('actual_inference_verified') is True and evidence['worker'].get('inference_completed') is True}
         if evidence['worker'].get('truncated'):raise WritingError('Model output reached its generation limit; raw response preserved, not repaired.')

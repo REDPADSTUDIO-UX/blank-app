@@ -3,7 +3,7 @@ import ast,copy,hashlib,io,json,os,sys,tempfile,threading,time,types,unittest
 from pathlib import Path
 from unittest.mock import patch
 from redpad_pipeline.agents import AgentStore,AgentError
-from redpad_pipeline.native_execution import NativeExecution,compile_job,process_identity,isolated_command,validate_video_metadata
+from redpad_pipeline.native_execution import NativeExecution,compile_job,process_identity,validate_video_metadata
 from redpad_pipeline.native_local_bundle import NativeInstalls,verify_tree,local_path,validate_install
 from redpad_pipeline.native_local_worker import audit_event,safe_latent,make_ace_handler,ltx,wan
 
@@ -125,14 +125,6 @@ class NativeLocalTests(unittest.TestCase):
     def test_fixed_worker_network_denial_checked_without_real_network_attempt(self):
         id=self.runtime.queue_fixture('network');out=self.runtime.run(id,authorized=True,timeout=2)
         self.assertEqual(out['state'],'CPU MOCK COMPLETE')
-
-    def test_kernel_isolation_argv_is_local_ro_networkless_and_no_shell(self):
-        with patch('shutil.which',return_value='/usr/bin/bwrap'):
-            args=isolated_command('/tmp/manual/request.json','/tmp/manual',[])
-            self.assertIn('--unshare-net',args);self.assertIn('--ro-bind',args);self.assertNotIn('--dev-bind',args)
-            with self.assertRaises(AgentError):isolated_command('/tmp/job','/tmp/out',['/dev/mem'])
-        with patch('shutil.which',return_value=None):
-            with self.assertRaises(AgentError):isolated_command('/tmp/job','/tmp/out',[])
 
     def test_audit_rejects_internet_shell_and_unknown_child_without_calls(self):
         for event,args in [('socket.connect',(None,('remote.invalid',443))),('os.system',('echo BAD',)),('subprocess.Popen',('/bin/sh',['sh','-c','bad']))]:

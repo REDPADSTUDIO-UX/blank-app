@@ -20,7 +20,7 @@ LTX_SLOTS={'transformer':'diffusion_models/ltx-2.5-22b-distilled-transformer-bf1
  'duration_head':'model_patches/ltx-2.5-duration-head-bf16.safetensors'}
 LTX_AUXILIARY={'repo':'Lightricks/LTX-2.5','revision':'49b093a39c19169a8a81721dcc541e07e945232f',
  'path':'latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors',
- 'sha256':None,'bytes':None,'download_approved':False,'license_approved':False,
+ 'sha256':None,'bytes':995778752,'download_approved':False,'license_approved':False,
  'purpose':'Official two-stage distilled spatial upsampler; not the optional temporal upsampler or DFR detailing LoRA'}
 
 
