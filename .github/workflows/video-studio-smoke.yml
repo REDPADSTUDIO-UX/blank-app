@@ -18,12 +18,17 @@ on:
         type: boolean
         default: false
 
+      runtime_phase2_stable:
+        description: Verify only the new Stable Audio CPU stack
+        type: boolean
+        default: false
+
 permissions:
   contents: read
 
 jobs:
   video-smoke-test:
-    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 }}
+    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -128,7 +133,7 @@ jobs:
           retention-days: 7
 
   browser-smoke-test:
-    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 }}
+    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable }}
     # Match the pinned browser runtime to a supported OS, rather than moving latest.
     runs-on: ubuntu-24.04
     timeout-minutes: 15
@@ -153,7 +158,7 @@ jobs:
           retention-days: 7
 
   kernel-phase1:
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.kernel_phase1 && !inputs.runtime_phase2 }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable }}
     runs-on: ubuntu-22.04
     timeout-minutes: 5
     steps:
@@ -187,13 +192,13 @@ jobs:
           exit "$result"
 
   runtime-phase2:
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.runtime_phase2 }}
+    if: ${{ github.event_name == 'workflow_dispatch' && (inputs.runtime_phase2 || inputs.runtime_phase2_stable) }}
     runs-on: ubuntu-22.04
     timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
-        family: [media, speech, modern]
+        family: ${{ fromJSON(inputs.runtime_phase2_stable && '["stable"]' || '["media","speech","modern"]') }}
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6

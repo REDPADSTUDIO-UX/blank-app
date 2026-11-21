@@ -212,6 +212,14 @@ class NativeLocalTests(unittest.TestCase):
         torch=types.SimpleNamespace(Tensor=Tensor,isfinite=lambda t:types.SimpleNamespace(all=lambda:True))
         return t,torch
 
+    def test_stable_audio_native_dispatch_uses_the_existing_audio_entrypoint(self):
+        from redpad_pipeline.native_local_worker import legacy
+        payload={'engine':'stable-audio-small','output':str(self.root/'synthetic.wav')}
+        with patch('redpad_pipeline.audio_worker.main') as audio:
+            self.assertEqual(legacy({'profile':'stable_audio_small','output_dir':str(self.root),
+                                     'legacy_payload':payload}),payload['output'])
+        audio.assert_called_once_with(payload)
+
     def test_safe_auxiliary_tensor_checks_use_fake_loader_only_no_actual_pt_loading(self):
         path=self.root/'manual.pt';path.write_bytes(b'MANUAL NON-PICKLE UNIT FIXTURE');tensor,torch=self.tensor();calls=[]
         def fake(*a,**kw):calls.append(kw);return tensor

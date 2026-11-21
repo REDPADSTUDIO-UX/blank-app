@@ -35,4 +35,8 @@ def main(payload):
         sf.write(str(output),data,rate,subtype='PCM_16')
     output.with_name('worker_state.json').write_text(json.dumps({'inference_completed':True,'resources':finish(torch)}))
 
-if __name__=='__main__':main(json.loads(Path(sys.argv[1]).read_text()))
+def run(path):
+    main(json.loads(Path(path).read_text()))
+
+
+if __name__=='__main__':run(sys.argv[1])

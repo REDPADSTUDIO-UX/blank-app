@@ -21,11 +21,11 @@ RUNTIME_PACKAGES = MappingProxyType({
     'svd_xt': {'torch', 'diffusers', 'transformers'},
     'ltx25': {'torch', 'transformers', 'safetensors'},
     'wan_animate2': {'torch', 'omegaconf', 'transformers'},
-    'ace15': {'torch', 'torchaudio', 'transformers'},
+    'ace15': {'torch', 'torchaudio', 'transformers', 'diffusers'},
     'indic_parler': {'torch', 'transformers', 'parler-tts'},
-    'indic_speak': {'torch', 'transformers', 'snac', 'vocos'},
-    'indicf5': {'torch', 'torchaudio', 'transformers'},
-    'stable_audio_small': {'torch', 'stable-audio-tools'},
+    'indic_speak': {'torch', 'transformers', 'snac', 'vocos', 'soundfile', 'numpy'},
+    'indicf5': {'torch', 'torchaudio', 'transformers', 'vocos', 'soundfile', 'numpy', 'safetensors'},
+    'stable_audio_small': {'torch', 'torchaudio', 'stable-audio-tools', 'soundfile', 'safetensors'},
 })
 DEVICES = frozenset('/dev/' + name for name in ('nvidia0', 'nvidiactl', 'nvidia-uvm', 'nvidia-uvm-tools'))
 SYSTEM_LIBRARY = re.compile(

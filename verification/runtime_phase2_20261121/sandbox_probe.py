@@ -19,6 +19,7 @@ from redpad_pipeline.worker_isolation import (
 GROUPS = {
     'media': ('wan22_5', 'svd_xt'),
     'speech': ('indic_parler',),
+    'stable': ('stable_audio_small',),
     'modern': ('qwen35_27', 'qwen36_27', 'qwen35_9', 'gemma3_27', 'gemma3_12',
                'flux2_klein4', 'z_image_turbo'),
 }
@@ -68,8 +69,11 @@ def main():
         raise SystemExit("Unknown argument")
     prefix = Path(raw_prefix).resolve(strict=True)
     interpreter = prefix/'bin/python3.11'
+    evidence_dir=Path(__file__).resolve().parent
+    if family=='stable':
+        evidence_dir=evidence_dir.with_name('runtime_phase2_remaining_20261121')
     lock = dict(line.split('==', 1) for line in
-                (Path(__file__).with_name(f'{family}.lock.txt')).read_text().splitlines())
+                (evidence_dir/f'{family}.lock.txt').read_text().splitlines())
     files = {p.relative_to(prefix).as_posix():record(p) for p in sorted(prefix.rglob('*')) if p.is_file()}
     system, unresolved = dependencies(prefix, interpreter)
     base = {'prefix':str(prefix),'interpreter':str(interpreter),'dependency_lock':lock,
@@ -88,7 +92,7 @@ def main():
     with tempfile.TemporaryDirectory() as directory:
         output=Path(directory)/'output'
         output.mkdir()
-        command=isolation_command(Path(__file__).with_name('probe.py').resolve(), output, [],
+        command=isolation_command(evidence_dir/'probe.py', output, [],
                                   runtime=base, worker='shared_model_worker' if family=='modern' else 'native_local_worker')
         return subprocess.run([*command[:-3],'-c',BOOTSTRAP,json.dumps(identity),family,
                                Path('/proc/self/ns/net').readlink().as_posix()],
