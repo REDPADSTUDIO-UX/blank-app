@@ -58,10 +58,11 @@ class WorkerIsolationTests(unittest.TestCase):
             args = self.command(runtime, model=model, model_files={'config.json': {}})
         self.assertIn('--unshare-all', args)
         self.assertIn('--die-with-parent', args)
+        self.assertEqual(args[args.index('--remount-ro') + 1], '/')
         self.assertEqual(args.count('--bind'), 1)
         self.assertIn(str(component), args)
         self.assertIn(str(self.job), args)
-        for denied in ('/', str(self.root), str(self.private), str(model / 'unapproved.txt')):
+        for denied in (str(self.root), str(self.private), str(model / 'unapproved.txt')):
             self.assertNotIn(denied, args)
         with self.assertRaises(IsolationBlocked):
             isolation_command(self.job,self.output,['/dev/mem'],runtime=runtime,worker='shared_model_worker')

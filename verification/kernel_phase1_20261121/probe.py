@@ -22,7 +22,7 @@ def denied(action, *additional):
     except OSError as error:
         assert error.errno in (errno.ENOENT, errno.EACCES, errno.EPERM, errno.EROFS, *additional), error
     else:
-        raise AssertionError('operation unexpectedly succeeded')
+        raise AssertionError('operation unexpectedly succeeded: '+str(action))
 private,parent,port=sys.argv[1:]
 host=json.loads(parent)
 for name in ('user','mnt','net','pid'):
@@ -50,8 +50,13 @@ assert job.read_text()=='synthetic authorized input'
 print('PASS B read-only input',flush=True)
 Path('/redpad/output/result.txt').write_text('canary')
 Path('/tmp/allowed').write_text('canary')
-for folder in ('/','/redpad','/redpad/input','/redpad/studio','/redpad/runtime'):
-    denied(lambda: (Path(folder)/'unauthorized-phase1').write_text('canary'))
+assert Path('/redpad/model/component.txt').read_text()=='synthetic component'
+assert Path('/redpad/source/component.txt').read_text()=='synthetic component'
+for folder in ('/','/redpad','/redpad/input','/redpad/studio','/redpad/runtime','/redpad/model','/redpad/source'):
+    try:
+        denied(lambda: (Path(folder)/'unauthorized-phase1').write_text('canary'))
+    except AssertionError as exc:
+        raise AssertionError('unexpected write result at '+folder) from exc
 print('PASS C writable output boundary',flush=True)
 assert not Path('/proc/net/route').read_text().splitlines()[1:]
 try:
@@ -65,10 +70,9 @@ print('PASS D network namespace and host loopback denied',flush=True)
 
 DUMMY = r"""
 import subprocess,sys,time
-grandchild = 'import time; time.sleep(30)'
+grandchild = 'import time; print("ready",flush=True); time.sleep(30)'
 child = 'import subprocess,sys,time; subprocess.Popen([sys.executable,"-c",sys.argv[1]],start_new_session=True); time.sleep(30)'
 subprocess.Popen([sys.executable,'-c',child,grandchild],start_new_session=True)
-print('ready',flush=True)
 time.sleep(30)
 """
 
@@ -140,12 +144,19 @@ def main():
         fixture.job.write_text('synthetic authorized input')
         runtime = {'prefix': str(prefix), 'interpreter': str(interpreter),
                    'system_files': fixture.system_files()}
+        model=fixture.root/'model'
+        source=fixture.root/'source'
+        manifest={'component.txt': {}}
+        for folder in (model,source):
+            folder.mkdir()
+            (folder/'component.txt').write_text('synthetic component')
         namespaces = {name: os.readlink('/proc/self/ns/'+name) for name in ('user','mnt','net','pid')}
         with socket.socket() as listener:
             listener.bind(('127.0.0.1', 0))
             listener.listen()
             for worker in ('native_local_worker', 'shared_model_worker'):
-                cmd = isolation_command(fixture.job, fixture.output, [], runtime=runtime, worker=worker)
+                cmd = isolation_command(fixture.job, fixture.output, [], runtime=runtime, worker=worker,
+                                        model=model, model_files=manifest, source=(source, manifest))
                 print('Worker mount command:', json.dumps(cmd), flush=True)
                 base = cmd[:-3]
                 subprocess.run([*base, '-c', BOUNDARIES, str(fixture.private), json.dumps(namespaces),

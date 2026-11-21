@@ -247,7 +247,7 @@ def isolation_command(job_path, output, devices, *, runtime, worker, model=None,
     for device in devices:
         args += ['--dev-bind', device, device]
     interpreter = Path(runtime['interpreter']).relative_to(prefix)
-    args += ['--bind', str(output), '/redpad/output', '--chdir', '/redpad/output',
+    args += ['--bind', str(output), '/redpad/output', '--remount-ro', '/', '--chdir', '/redpad/output',
              '--', '/redpad/runtime/' + interpreter.as_posix(), '-m',
              'redpad_pipeline.' + worker, '/redpad/input/' + job_path.name]
     return args
