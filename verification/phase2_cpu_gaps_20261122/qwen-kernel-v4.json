@@ -1,0 +1,102 @@
+{
+  "repo": "kernels-community/finegrained-fp8",
+  "revision": "3c8fcc86c0e42b7abe5bcf666d3a3afdce93a0e8",
+  "refs_url": "https://huggingface.co/api/models/kernels-community/finegrained-fp8/refs",
+  "refs_response_sha256": "cb5c4ffe66158b210726408fe4a0d2e04bc685f99ac58ff65cd3872a7183b31e",
+  "raw_build_root": "https://huggingface.co/kernels-community/finegrained-fp8/raw/3c8fcc86c0e42b7abe5bcf666d3a3afdce93a0e8/build/torch-cuda/",
+  "metadata_sha256": "19d0e7fdba2a06b5fe6f40a0755f1a63651439e22e4d0e0703465837134f1b46",
+  "metadata": {
+    "name": "finegrained-fp8",
+    "id": "_finegrained_fp8_cuda_28e468b",
+    "version": 4,
+    "license": "Apache-2.0",
+    "python-depends": [],
+    "backend": {
+      "type": "cuda"
+    }
+  },
+  "digests_match_publisher_metadata": true,
+  "sigstore_bundle_sha256": "887eb9908098d140b6970b7f35a2eb0075b30931d1bb76905ca6e18d0c930a56",
+  "sigstore_signature_verified": false,
+  "files": {
+    "__init__.py": {
+      "sha256": "ce17d7a851e967594fbf4854c1a3a1247c66703ab641c13d47ef5c8157cb4c8e",
+      "imports": []
+    },
+    "_ops.py": {
+      "sha256": "c61651f9c58bd8686c1001ad1dbc230dec58a3d36d55963f4a5882ad8f556bcd",
+      "imports": [
+        "torch"
+      ]
+    },
+    "batched.py": {
+      "sha256": "a280e970fb43b7c266bb4eb02f5fada637f4a1e27ddb26b8bd6bba0e52243006",
+      "imports": [
+        "torch",
+        "triton"
+      ]
+    },
+    "bayesian_autotuner.py": {
+      "sha256": "8c1518bf27e9107b13060165a6dd93b397a6cfe092332be37354f151f64a56b8",
+      "imports": [
+        "__future__",
+        "collections",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "random",
+        "time",
+        "triton",
+        "typing"
+      ]
+    },
+    "finegrained_fp8/__init__.py": {
+      "sha256": "0c560f96b857c188c4a8297ff27d1299619957c3459a5e433e132329fbfdf066",
+      "imports": [
+        "ctypes",
+        "importlib",
+        "pathlib",
+        "sys",
+        "types"
+      ]
+    },
+    "fused_batched.py": {
+      "sha256": "edc122f12b573b452a4e1df47739623bc5f6694a69398e1fbd8ce2f37a6bea1f",
+      "imports": [
+        "torch",
+        "triton"
+      ]
+    },
+    "fused_grouped.py": {
+      "sha256": "fb1e3ca6efc086dfa83a5c12c53dff353f0d907c8ab78be076393943e6837dba",
+      "imports": [
+        "torch",
+        "triton"
+      ]
+    },
+    "grouped.py": {
+      "sha256": "6dfefda1caee440c02b708836784b21223693af23e48360dc6582940737ba6d4",
+      "imports": [
+        "torch",
+        "triton"
+      ]
+    },
+    "matmul.py": {
+      "sha256": "0f668b5d9e0e7db0675ea4518052b9320830f64f2468f2ecbcae7d0876336807",
+      "imports": [
+        "torch",
+        "triton"
+      ]
+    },
+    "utils.py": {
+      "sha256": "0e2ba04de7434dfbcf324fb1843fa64d7fe42300fb65e5ede87df546c6f00e56",
+      "imports": [
+        "contextlib",
+        "functools",
+        "torch",
+        "triton"
+      ]
+    }
+  }
+}
