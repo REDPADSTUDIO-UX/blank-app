@@ -100,6 +100,8 @@ Path('/redpad/output/canary').write_text('passed')
     def test_runtime_receipt_binds_exact_interpreter_dependencies_and_source(self):
         prefix = self.root / 'runtime'
         files = {'bin/python3': b'test interpreter fixture', 'lib/python3.14/encodings/__init__.py': b'# fixture'}
+        empty_runtime_file = 'lib/python3.14/site-packages/runtime_empty/__init__.py'
+        files[empty_runtime_file] = b''
         lock = dict.fromkeys(('torch', 'transformers', 'bitsandbytes', 'accelerate'), '1.2.3')
         for package, version in lock.items():
             files[f'lib/python3.14/site-packages/{package}-1.2.3.dist-info/METADATA'] = f'Name: {package}\nVersion: {version}\n'.encode()
@@ -127,6 +129,11 @@ Path('/redpad/output/canary').write_text('passed')
             service.validate('qwen35_27', {**receipt,'interpreter':sys.executable})
         with self.assertRaises(IsolationBlocked):
             service.validate('qwen35_27', {**receipt,'system_files':{str(self.private):{}}})
+        empty = prefix / empty_runtime_file
+        empty.write_bytes(b'tampered')
+        with self.assertRaises(IsolationBlocked):
+            service.get('qwen35_27')
+        empty.write_bytes(b'')
         interpreter.write_bytes(b'changed')
         with self.assertRaises(ValueError):
             service.get('qwen35_27')

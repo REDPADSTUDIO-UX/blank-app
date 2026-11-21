@@ -144,6 +144,12 @@ class NativeLocalTests(unittest.TestCase):
         file.unlink();file.symlink_to(self.root/'missing')
         with self.assertRaises(AgentError):verify_tree(folder,files)
 
+    def test_native_bundle_still_rejects_empty_model_component(self):
+        target=self.root/'empty.safetensors'
+        target.touch()
+        with self.assertRaises(AgentError):
+            verify_tree(self.root,{target.name:{'bytes':0,'sha256':hashlib.sha256(b'').hexdigest()}})
+
     def test_install_cannot_create_owner_license_approval_implicitly(self):
         with self.assertRaises(AgentError):NativeInstalls(self.store).approve({})
         with self.assertRaises(AgentError):NativeInstalls(self.store).get('missing')

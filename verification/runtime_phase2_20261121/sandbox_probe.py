@@ -1,6 +1,7 @@
 """Bind an exact standalone CPU prefix to registry profiles and run an offline probe."""
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -41,9 +42,10 @@ def dependencies(prefix, interpreter):
                                    if p.is_file() and '.so' in p.name)]
     for path in objects:
         result = subprocess.run(['/usr/bin/ldd', str(path)], capture_output=True, text=True,
-                                timeout=10, env={'PATH':'/usr/bin:/bin','LC_ALL':'C'})
+                                timeout=10, env={'PATH':'/usr/bin:/bin','LC_ALL':'C',
+                                                 'LD_LIBRARY_PATH':str(prefix/'lib')})
         for match in re.findall(r'(/[^\s]+) \(0x', result.stdout):
-            target=Path(match)
+            target=Path(os.path.normpath(match))
             if not target.resolve().is_relative_to(prefix):
                 found.add(target)
         for name in re.findall(r'^\s*(\S+) => not found',result.stdout,re.MULTILINE):
@@ -51,7 +53,10 @@ def dependencies(prefix, interpreter):
     system = {}
     for path in sorted(found):
         metadata = record(path)
-        system_component(str(path), metadata)
+        try:
+            system_component(str(path), metadata)
+        except ValueError as error:
+            raise RuntimeError(f'Host ELF dependency {path} resolves to {path.resolve()} outside the binding contract') from error
         system[str(path)] = metadata
     return system, sorted(unresolved)
 
