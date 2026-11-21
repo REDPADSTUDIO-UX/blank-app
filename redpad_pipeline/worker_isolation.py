@@ -210,9 +210,16 @@ def environment(*, fixture_root=None, gpu=False):
     return env
 
 
+def validate_worker_devices(devices):
+    if not isinstance(devices, list) or any(type(device) is not str or device not in DEVICES for device in devices):
+        raise IsolationBlocked('GPU devices must be a list of authorized local device paths.')
+    return devices.copy()
+
+
 def isolation_command(job_path, output, devices, *, runtime, worker, model=None, model_files=None, source=None, inputs=()):
-    if worker not in WORKERS or not isinstance(devices, list) or any(d not in DEVICES for d in devices):
-        raise IsolationBlocked('Only fixed worker modules and authorized local GPU devices may be bound.')
+    if worker not in WORKERS:
+        raise IsolationBlocked('Only fixed worker modules may be launched.')
+    devices = validate_worker_devices(devices)
     binary = Path('/usr/bin/bwrap')
     if not binary.is_file():
         raise IsolationBlocked('Bubblewrap is unavailable; isolated worker launch blocked.')

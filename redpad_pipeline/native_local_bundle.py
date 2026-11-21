@@ -54,6 +54,16 @@ def verify_tree(root,files,*,allow_empty=False):
         if p.is_file() and p.relative_to(root).as_posix() not in files:raise AgentError('Unmanifested file in local bundle: '+p.name)
 
 
+def verify_ltx_auxiliary(files):
+    """Require the exact publisher pin before trusting an installation receipt."""
+    pin=LTX_AUXILIARY
+    if not re.fullmatch(r'[0-9a-f]{64}',pin.get('sha256') or ''):
+        raise AgentError('Official spatial upsampler LFS SHA256 unverified; exact weight verification gate remains blocked.')
+    expected={'bytes':pin['bytes'],'sha256':pin['sha256']}
+    if files.get(pin['path'])!=expected:
+        raise AgentError('LTX spatial upsampler differs from the exact publisher size or SHA256.')
+
+
 def validate_install(record,*,verify=True):
     required={'profile','repo','revision','profile_sha256','model_root','model_files','source_root','source_files','source_revision','owner','license_note','component_origins','code_reviewed','approved_for_research'}
     if not isinstance(record,dict) or set(record)!=required:raise AgentError('Exact offline installation receipt required.')
@@ -85,7 +95,7 @@ def validate_install(record,*,verify=True):
             expected_repo='hubertsiuzdak/snac_24khz' if n.startswith('snac/') else p['repo']
             if origin['repo']!=expected_repo or (expected_repo==p['repo'] and origin['revision']!=p['revision']):raise AgentError('Wrong selected voice component origin; no substitution.')
         if pid=='ltx25' and (origin['repo'],origin['revision'])!=(p['repo'],p['revision']):raise AgentError('LTX components must stay in exact pinned split repository.')
-    if pid=='ltx25' and LTX_AUXILIARY['sha256'] is None:raise AgentError('Official spatial upsampler LFS SHA256 unverified; exact weight verification gate remains blocked.')
+    if pid=='ltx25':verify_ltx_auxiliary(record['model_files'])
     if verify:
         verify_tree(record['model_root'],record['model_files'])
         if pid in PINS or pid in ('indic_speak','indicf5'):verify_tree(record['source_root'],record['source_files'])

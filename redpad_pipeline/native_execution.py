@@ -12,7 +12,7 @@ from .agents import AgentError,encode
 from .no_gpu_staging import fingerprint
 from .native_local_bundle import NativeInstalls,local_path,digest_file
 from .resource_guard import serialized
-from .worker_isolation import IsolationBlocked, RuntimeBindings, environment, isolation_command, runtime_identity, source_digest
+from .worker_isolation import IsolationBlocked, RuntimeBindings, environment, isolation_command, runtime_identity, source_digest, validate_worker_devices
 
 ROOT=Path(__file__).resolve().parents[1]
 WORKER=ROOT/'redpad_pipeline/native_local_worker.py'
@@ -273,20 +273,24 @@ class NativeExecution:
         if row['state']!='QUEUED':raise AgentError('Run not queued; no automatic duplicate/retry.')
         if (hashlib.sha256(worker.read_bytes()).hexdigest()!=data['worker_sha256'] or data.get('controller_sha256')!=controller_fingerprint()
                 or (shared and data['studio_sha256']!=source_digest())):return self._finish(id,'STALE',{'software_fixture':fixture,'error':'worker_or_controller_source_changed'},expected_state='QUEUED')
+        try:
+            devices=validate_worker_devices([] if devices is None else devices)
+        except IsolationBlocked:
+            return self._finish(id,'FAILED',{'software_fixture':fixture,'error':'invalid_device_list'},expected_state='QUEUED')
         folder=self.root/id
         if folder.exists():raise AgentError('Worker output directory already exists; no overwrite or symlink reuse.')
-        folder.mkdir(mode=0o700)
         with self.store.tx() as db:
             cursor=db.execute("UPDATE native_research_runs SET state='RUNNING',controller_pid=?,controller_ticks=? WHERE id=? AND state='QUEUED' AND cancel=0",(os.getpid(),process_identity(os.getpid()),id))
             if cursor.rowcount!=1:raise AgentError('Run concurrently cancelled/claimed.')
-        begin=time.monotonic();process=None
+        begin=time.monotonic();process=None;cleaned=False
         output=folder if fixture else folder/'output'
         try:
+            folder.mkdir(mode=0o700)
             if not fixture:output.mkdir(mode=0o700)
             if fixture:
                 command=[sys.executable,'-m','redpad_pipeline.native_fixture_worker',data['case'],str(folder)]
             elif shared:
-                command,runtime_sha256=self._shared_job(data,folder,devices or [])
+                command,runtime_sha256=self._shared_job(data,folder,devices)
             else:
                 from .offline_preparation import PreparedRequests
                 from .no_gpu_staging import StagingLedger
@@ -316,7 +320,7 @@ class NativeExecution:
                 job['parent_network_namespace']=os.readlink('/proc/self/ns/net')
                 job['runtime']=runtime_identity(runtime,runtime_sha256)
                 request_path=folder/'request.json';request_path.write_text(encode(job))
-                command=isolation_command(request_path,output,devices or [],runtime=runtime,worker='native_local_worker',
+                command=isolation_command(request_path,output,devices,runtime=runtime,worker='native_local_worker',
                                           model=install['model_root'],model_files=install['model_files'],source=(install['source_root'],install['source_files']) if install['source_files'] else None,
                                           inputs=inputs)
             env=environment(fixture_root=ROOT if fixture else None,gpu=not fixture and bool(devices))
@@ -335,6 +339,7 @@ class NativeExecution:
                     if sum(p.stat().st_size for p in folder.rglob('*') if p.is_file() and not p.is_symlink())>600*1024*1024:state='FAILED';break
                     time.sleep(.015)
                 terminate_group(process)  # Also reaps leaked descendants after normal completion.
+                cleaned=True
             if self._row(id)['cancel']:state='CANCELLED'
             if state:return self._finish(id,state,{'software_fixture':fixture,'error':state,'elapsed_seconds':time.monotonic()-begin})
             if process.returncode!=0:
@@ -368,9 +373,15 @@ class NativeExecution:
                     result['raw_float_artifact']['path']='output/'+result['raw_float_artifact']['path']
             result['elapsed_seconds']=time.monotonic()-begin
             return self._finish(id,'CPU MOCK COMPLETE' if fixture else 'RETURNED FOR TECHNICAL REVIEW',result)
-        except (AgentError,ValueError,KeyError,OSError,subprocess.SubprocessError) as exc:
-            if process and process.poll() is None:terminate_group(process)
+        except Exception as exc:
+            # After claiming a run, unexpected adapter/OS errors must also
+            # release its process group and write a terminal receipt.
             failure={'software_fixture':fixture,'error_type':type(exc).__name__,'elapsed_seconds':time.monotonic()-begin}
+            if process is not None and not cleaned:
+                try:
+                    terminate_group(process)
+                except (OSError,subprocess.SubprocessError) as cleanup_error:
+                    failure['cleanup_error_type']=type(cleanup_error).__name__
             if isinstance(exc,IsolationBlocked):
                 failure['error']=str(exc)
             return self._finish(id,'ISOLATION BLOCKED' if isinstance(exc,IsolationBlocked) else 'FAILED',failure)

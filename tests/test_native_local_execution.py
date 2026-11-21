@@ -25,6 +25,69 @@ class NativeLocalTests(unittest.TestCase):
         p=patch('subprocess.Popen',side_effect=allowed);p.start();self.addCleanup(p.stop)
         self.addCleanup(lambda:self.assertEqual(self.blocked,[]))
 
+    def test_malformed_device_requests_fail_before_claim_or_spawn(self):
+        for devices in ([[]], [{}], [None], ["/dev/mem"], "", {}, ()):
+            with self.subTest(devices=devices):
+                run_id=self.runtime.queue_shared('qwen35_27',{}, {}, [],'test-receipt')
+                with patch.object(self.runtime,'_shared_job') as prepare,patch('subprocess.Popen') as launch:
+                    result=self.runtime.run(run_id,authorized=True,devices=devices)
+                prepare.assert_not_called()
+                launch.assert_not_called()
+                self.assertEqual((result['state'],result['result']['error']),('FAILED','invalid_device_list'))
+                self.assertFalse((self.runtime.root/run_id).exists())
+                self.assertEqual(NativeExecution(self.store).recover(run_id),result)
+
+    def test_concurrent_cancel_wins_over_invalid_device_receipt(self):
+        from concurrent.futures import ThreadPoolExecutor
+        from redpad_pipeline.worker_isolation import validate_worker_devices
+        entered,released=threading.Event(),threading.Event()
+        run_id=self.runtime.queue_shared('qwen35_27',{}, {}, [],'test-receipt')
+
+        def delayed_validation(devices):
+            entered.set()
+            if not released.wait(3):
+                raise RuntimeError('Validation test synchronization timed out')
+            return validate_worker_devices(devices)
+
+        with patch('redpad_pipeline.native_execution.validate_worker_devices',side_effect=delayed_validation),patch('subprocess.Popen') as launch:
+            with ThreadPoolExecutor(max_workers=1) as pool:
+                attempt=pool.submit(self.runtime.run,run_id,authorized=True,devices=[[]])
+                try:
+                    self.assertTrue(entered.wait(3))
+                    self.assertEqual(NativeExecution(self.store).cancel(run_id)['state'],'CANCELLED')
+                finally:
+                    released.set()
+                self.assertEqual(attempt.result(timeout=3)['state'],'CANCELLED')
+        launch.assert_not_called()
+
+    def test_startup_exception_creates_terminal_receipt_without_retry(self):
+        run_id=self.runtime.queue_fixture()
+        with patch('subprocess.Popen',side_effect=TypeError('synthetic startup error')):
+            result=self.runtime.run(run_id,authorized=True)
+        self.assertEqual((result['state'],result['result']['error_type']),('FAILED','TypeError'))
+        reopened=NativeExecution(self.store)
+        self.assertIsNone(reopened._row(run_id)['pid'])
+        self.assertEqual(reopened.recover(run_id),result)
+        with self.assertRaises(AgentError):
+            reopened.run(run_id,authorized=True)
+
+    def test_exception_after_spawn_terminates_fixture_and_recovers_receipt(self):
+        run_id=self.runtime.queue_fixture('timeout')
+        started=[]
+
+        def identity(pid):
+            if pid==os.getpid():
+                return process_identity(pid)
+            started.append(pid)
+            raise RuntimeError('synthetic PID registration error')
+
+        with patch('redpad_pipeline.native_execution.process_identity',side_effect=identity):
+            result=self.runtime.run(run_id,authorized=True)
+        self.assertEqual((result['state'],result['result']['error_type']),('FAILED','RuntimeError'))
+        self.assertEqual(len(started),1)
+        self.assertIsNone(process_identity(started[0]))
+        self.assertEqual(NativeExecution(self.store).recover(run_id),result)
+
     def test_real_dummy_process_returns_software_receipt_never_inference_or_approval(self):
         id=self.runtime.queue_fixture();out=self.runtime.run(id,authorized=True,timeout=2)
         self.assertEqual(out['state'],'CPU MOCK COMPLETE');self.assertFalse(out['result']['inference_completed']);self.assertFalse(out['production_ready'])
@@ -211,6 +274,18 @@ class NativeLocalTests(unittest.TestCase):
         for k,v in changes.items():setattr(t,k,v)
         torch=types.SimpleNamespace(Tensor=Tensor,isfinite=lambda t:types.SimpleNamespace(all=lambda:True))
         return t,torch
+
+    def test_ltx_auxiliary_requires_publisher_pin_and_exact_receipt(self):
+        from redpad_pipeline.native_local_bundle import LTX_AUXILIARY,verify_ltx_auxiliary
+        name=LTX_AUXILIARY['path']
+        synthetic={'bytes':LTX_AUXILIARY['bytes'],'sha256':'a'*64}
+        with self.assertRaisesRegex(AgentError,'SHA256 unverified'):
+            verify_ltx_auxiliary({name:synthetic})
+        with patch('redpad_pipeline.native_local_bundle.LTX_AUXILIARY',{**LTX_AUXILIARY,'sha256':'a'*64}):
+            verify_ltx_auxiliary({name:synthetic})
+            for mismatched in ({**synthetic,'sha256':'b'*64},{**synthetic,'bytes':synthetic['bytes']-1},None):
+                with self.subTest(mismatched=mismatched),self.assertRaisesRegex(AgentError,'differs'):
+                    verify_ltx_auxiliary({name:mismatched})
 
     def test_stable_audio_native_dispatch_uses_the_existing_audio_entrypoint(self):
         from redpad_pipeline.native_local_worker import legacy
