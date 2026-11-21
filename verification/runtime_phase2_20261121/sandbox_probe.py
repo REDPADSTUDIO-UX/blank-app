@@ -68,7 +68,7 @@ def main():
     if sys.argv[3:] and not validate_only:
         raise SystemExit("Unknown argument")
     prefix = Path(raw_prefix).resolve(strict=True)
-    interpreter = prefix/'bin/python3.11'
+    interpreter = prefix/'bin'/('python3.10' if family=='stable' else 'python3.11')
     evidence_dir=Path(__file__).resolve().parent
     if family=='stable':
         evidence_dir=evidence_dir.with_name('runtime_phase2_remaining_20261121')

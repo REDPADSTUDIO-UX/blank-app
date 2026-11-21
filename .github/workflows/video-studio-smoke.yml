@@ -203,7 +203,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version: ${{ inputs.runtime_phase2_stable && '3.10' || '3.11' }}
       - name: Install host sandbox and locked CPU packages
         env:
           FAMILY: ${{ matrix.family }}
