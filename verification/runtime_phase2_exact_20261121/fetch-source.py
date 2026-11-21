@@ -14,7 +14,10 @@ def fetch(profile,destination):
     record=json.loads(INVENTORY.read_text())[profile]
     if record['tree_truncated'] is not False:
         raise ValueError('Incomplete publisher tree')
-    entries={name:row for name,row in record['source_inventory'].items()
+    inventory=record['source_inventory']
+    if profile=='wan_animate2':
+        inventory.update(json.loads((HERE/'wan-additional-tree.json').read_text()))
+    entries={name:row for name,row in inventory.items()
              if PurePosixPath(name).suffix in ('.py','.yaml','.yml') and row['mode'] in ('100644','100755')}
     base=f"https://raw.githubusercontent.com/{record['repo']}/{record['revision']}/"
     def materialize(item):
@@ -22,8 +25,12 @@ def fetch(profile,destination):
         rel=PurePosixPath(name)
         if rel.is_absolute() or '..' in rel.parts or row['bytes']>2_000_000:
             raise ValueError(f'Invalid source entry: {name}')
-        with urllib.request.urlopen(base+name,timeout=25) as reply:
-            data=reply.read(row['bytes']+1)
+        target=destination/name
+        if target.is_file():
+            data=target.read_bytes()
+        else:
+            with urllib.request.urlopen(base+name,timeout=25) as reply:
+                data=reply.read(row['bytes']+1)
         blob=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
         if len(data)!=row['bytes'] or blob!=row['git_blob_sha1']:
             raise ValueError(f'Publisher byte pin mismatch: {name}')

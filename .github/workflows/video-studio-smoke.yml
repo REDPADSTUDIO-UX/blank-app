@@ -28,12 +28,21 @@ on:
         type: boolean
         default: false
 
+      runtime_phase2_ace:
+        description: Verify only the exact ACE-Step CPU source imports
+        type: boolean
+        default: false
+      runtime_phase2_wan:
+        description: Verify only the exact Wan Animate CPU source import
+        type: boolean
+        default: false
+
 permissions:
   contents: read
 
 jobs:
   video-smoke-test:
-    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx }}
+    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -138,7 +147,7 @@ jobs:
           retention-days: 7
 
   browser-smoke-test:
-    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx }}
+    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
     # Match the pinned browser runtime to a supported OS, rather than moving latest.
     runs-on: ubuntu-24.04
     timeout-minutes: 15
@@ -163,7 +172,7 @@ jobs:
           retention-days: 7
 
   kernel-phase1:
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
     runs-on: ubuntu-22.04
     timeout-minutes: 5
     steps:
@@ -197,7 +206,7 @@ jobs:
           exit "$result"
 
   runtime-phase2:
-    if: ${{ github.event_name == 'workflow_dispatch' && (inputs.runtime_phase2 || inputs.runtime_phase2_stable) && !inputs.runtime_phase2_ltx }}
+    if: ${{ github.event_name == 'workflow_dispatch' && (inputs.runtime_phase2 || inputs.runtime_phase2_stable) && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
     runs-on: ubuntu-22.04
     timeout-minutes: 15
     strategy:
@@ -227,7 +236,9 @@ jobs:
           python -B verification/runtime_phase2_20261121/sandbox_probe.py "$FAMILY" "$RUNNER_TEMP/phase2-$FAMILY"
 
   runtime-phase2-ltx:
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.runtime_phase2_ltx }}
+    if: ${{ github.event_name == 'workflow_dispatch' && (inputs.runtime_phase2_ltx || inputs.runtime_phase2_ace || inputs.runtime_phase2_wan) }}
+    env:
+      EXACT_PROFILE: ${{ inputs.runtime_phase2_ace && 'ace15' || inputs.runtime_phase2_wan && 'wan_animate2' || 'ltx25' }}
     runs-on: ubuntu-22.04
     timeout-minutes: 12
     steps:
@@ -240,10 +251,10 @@ jobs:
           set -eux
           sudo -n apt-get update
           sudo -n apt-get install -y --no-install-recommends bubblewrap
-          bash verification/runtime_phase2_20261121/install-prefix.sh ltx25 "$RUNNER_TEMP/ltx25-runtime"
-          python verification/runtime_phase2_exact_20261121/fetch-source.py ltx25 "$RUNNER_TEMP/ltx25-source" > "$RUNNER_TEMP/source-lock.json"
-          cmp "$RUNNER_TEMP/source-lock.json" verification/runtime_phase2_exact_20261121/ltx25-source-lock.json
-      - name: Import pinned LTX entrypoints in the production sandbox
+          bash verification/runtime_phase2_20261121/install-prefix.sh "$EXACT_PROFILE" "$RUNNER_TEMP/exact-runtime"
+          python verification/runtime_phase2_exact_20261121/fetch-source.py "$EXACT_PROFILE" "$RUNNER_TEMP/exact-source" > "$RUNNER_TEMP/source-lock.json"
+          cmp "$RUNNER_TEMP/source-lock.json" "verification/runtime_phase2_exact_20261121/$EXACT_PROFILE-source-lock.json"
+      - name: Import pinned entrypoints in the production sandbox
         run: |
           set -eux
-          python -B verification/runtime_phase2_exact_20261121/sandbox.py ltx25 "$RUNNER_TEMP/ltx25-runtime" "$RUNNER_TEMP/ltx25-source"
+          python -B verification/runtime_phase2_exact_20261121/sandbox.py "$EXACT_PROFILE" "$RUNNER_TEMP/exact-runtime" "$RUNNER_TEMP/exact-source"

@@ -98,7 +98,10 @@ def validate_install(record,*,verify=True):
     if pid=='ltx25':verify_ltx_auxiliary(record['model_files'])
     if verify:
         verify_tree(record['model_root'],record['model_files'])
-        if pid in PINS or pid in ('indic_speak','indicf5'):verify_tree(record['source_root'],record['source_files'])
+        if pid in PINS or pid in ('indic_speak','indicf5'):
+            # Publisher namespaces may have empty __init__.py files. The
+            # approved source manifest still pins their exact bytes.
+            verify_tree(record['source_root'],record['source_files'],allow_empty=True)
     return record
 
 

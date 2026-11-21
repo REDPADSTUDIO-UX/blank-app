@@ -345,6 +345,33 @@ class NativeLocalTests(unittest.TestCase):
         self.assertEqual(len(ids),4);self.assertEqual(len(set(ids)),1)
         self.assertEqual(ids[0],NativeExecution(self.store)._insert(data,dedup=True))
 
+    def test_native_publisher_source_can_include_hash_pinned_empty_initializers(self):
+        from redpad_pipeline.no_gpu_staging import load,fingerprint
+        from redpad_pipeline.native_local_bundle import REQUIRED
+        model=load()[0]['profiles']['ace15']
+        source_lock=json.loads((Path(__file__).resolve().parents[1]/'assets/professional/phase3_native_source_lock.json').read_text())
+        files={entry['path']:{key:entry[key] for key in ('bytes','sha256')} for entry in model['selected_weight_files']}
+        for name in REQUIRED['ace15']:
+            files.setdefault(name,{'bytes':1,'sha256':'0'*64})
+        source_files={name:{'bytes':1,'sha256':sha} for name,sha in source_lock['files']['ace15'].items()}
+        source_files['acestep/__init__.py']={'bytes':0,'sha256':hashlib.sha256(b'').hexdigest()}
+        record=dict(profile='ace15',repo=model['repo'],revision=model['revision'],profile_sha256=fingerprint(model),
+                    model_root=str(self.root/'model'),model_files=files,source_root=str(self.root/'source'),
+                    source_files=source_files,source_revision=source_lock['revisions']['ace15'],
+                    owner='synthetic',license_note='synthetic',code_reviewed=True,approved_for_research=True,
+                    component_origins={name:{'repo':model['repo'],'revision':model['revision']} for name in REQUIRED['ace15']})
+        with patch('redpad_pipeline.native_local_bundle.verify_tree') as verify:
+            validate_install(record)
+        self.assertEqual(verify.call_args_list[0].kwargs,{})
+        self.assertEqual(verify.call_args_list[1].kwargs,{'allow_empty':True})
+        source=self.root/'empty-source';source.mkdir()
+        initializer=source/'__init__.py';initializer.touch()
+        manifest={initializer.name:source_files['acestep/__init__.py']}
+        verify_tree(source,manifest,allow_empty=True)
+        initializer.write_text('source tampered')
+        with self.assertRaises(AgentError):
+            verify_tree(source,manifest,allow_empty=True)
+
     def test_native_install_rejects_unreviewed_cached_bytecode(self):
         folder=self.root/'source';folder.mkdir();(folder/'__pycache__').mkdir();(folder/'__pycache__/bad.pyc').write_bytes(b'MANUAL FIXTURE')
         (folder/'known.py').write_text('# fixture');data=(folder/'known.py').read_bytes()
