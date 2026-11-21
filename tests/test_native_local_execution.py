@@ -71,6 +71,38 @@ class NativeLocalTests(unittest.TestCase):
         with patch.object(Path,'read_bytes',changed):out=self.runtime.run(id,authorized=True)
         self.assertEqual(out['state'],'STALE')
 
+    def test_source_change_cannot_overwrite_concurrent_cancellation(self):
+        run_id=self.runtime.queue_fixture()
+
+        def cancel_during_source_check():
+            self.runtime.cancel(run_id)
+            return 'changed controller digest'
+
+        with patch('redpad_pipeline.native_execution.controller_fingerprint', side_effect=cancel_during_source_check):
+            self.assertEqual(self.runtime.run(run_id,authorized=True)['state'],'CANCELLED')
+        self.assertFalse((self.runtime.root/run_id).exists())
+
+    def test_cancellation_before_final_write_discards_success_receipt(self):
+        run_id=self.runtime.queue_fixture()
+        finish=self.runtime._finish
+
+        def cancel_before_finish(run_id,state,result,**kwargs):
+            self.runtime.cancel(run_id)
+            return finish(run_id,state,result,**kwargs)
+
+        with patch.object(self.runtime,'_finish',side_effect=cancel_before_finish):
+            out=self.runtime.run(run_id,authorized=True,timeout=2)
+        self.assertEqual(out['state'],'CANCELLED')
+        self.assertNotIn('inference_completed',out['result'])
+
+    def test_completed_receipt_survives_controller_source_changes(self):
+        run_id=self.runtime.queue_fixture()
+        original=self.runtime.run(run_id,authorized=True,timeout=2)
+        with patch('redpad_pipeline.native_execution.controller_fingerprint',return_value='changed'):
+            with self.assertRaises(AgentError):
+                self.runtime.run(run_id,authorized=True)
+        self.assertEqual(self.runtime.status(run_id),original)
+
     def test_mock_cannot_report_model_inference_success(self):
         id=self.runtime.queue_fixture('invalid_output');out=self.runtime.run(id,authorized=True,timeout=2)
         self.assertEqual(out['state'],'FAILED');self.assertFalse(out['production_ready'])

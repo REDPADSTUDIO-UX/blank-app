@@ -122,6 +122,31 @@ class PreGpuCompletion(unittest.TestCase):
   cast_and_lock(True)
   with self.assertRaises(AgentError):self.ops.packet(packet['id'])
 
+  # Continue the same isolated project through a failed worker, restart and
+  # independent rejection of one replacement design before owner approval.
+  from redpad_pipeline.native_execution import NativeExecution
+  worker=NativeExecution(self.p.store)
+  failed=worker.queue_fixture('failure')
+  self.assertEqual(worker.run(failed,authorized=True,timeout=5)['state'],'FAILED')
+  reopened=StudioProgram('fixture')
+  restarted=NativeExecution(reopened.store)
+  self.assertEqual(restarted.recover(failed)['state'],'FAILED')
+  with self.assertRaises(AgentError):restarted.run(failed,authorized=True)
+
+  design=example('art')
+  run=reopened.engine.enqueue('art',design,idempotency_key='fixture-pilot-design')
+  self.assertEqual(StudioProgram('fixture').engine.enqueue('art',design,idempotency_key='fixture-pilot-design'),run)
+  self.assertEqual(reopened.engine.execute(run),'Awaiting QC')
+  task=next(r['task'] for r in reopened.engine.runs() if r['id']==run)
+  reopened.store.review(task,1,'Reject','Synthetic fixture: revise the set dressing','qc')
+  with self.assertRaises(AgentError):reopened.store.review(task,1,'Approve','Fixture premature approval','owner')
+  target=design['records'][0]['id']
+  revised=Producer(reopened).revise(task,[target],'Revise only this design record.',True)
+  self.assertEqual(reopened.engine.execute(revised,complete=lambda *_:{'records':design['records'][:1]}),'Awaiting QC')
+  reopened.store.review(task,2,'Recommend','Synthetic fixture recheck','qc')
+  reopened.store.review(task,2,'Approve','Synthetic fixture owner approval','owner')
+  self.assertFalse(reopened.summary()['production_ready'])
+
  def test_shot_rejects_unsupported_conditioning_and_wrong_native_timing(self):
   r={'mode':'text_to_video','prompt':'Original fictional action','width':832,'height':480,'frames':17,'fps':24,'steps':50,'seed':42}
   with self.assertRaises(AgentError):self.ops.queue_video(self.e['shot_packet']['id'],'wan-local',r,['identity_lock'])

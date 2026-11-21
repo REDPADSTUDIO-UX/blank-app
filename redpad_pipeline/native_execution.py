@@ -169,10 +169,13 @@ class NativeExecution:
         r=self._row(id);return {'id':id,'state':r['state'],'cancel_requested':bool(r['cancel']),
                               'software_fixture':json.loads(r['payload'])['software_fixture'],'result':json.loads(r['result']) if r['result'] else None,'production_ready':False}
     def cancel(self,id):
-        r=self._row(id)
+        self._row(id)
         with self.store.tx() as db:
-            if r['state']=='QUEUED':db.execute("UPDATE native_research_runs SET cancel=1,state='CANCELLED' WHERE id=? AND state='QUEUED'",(id,))
-            elif r['state']=='RUNNING':db.execute('UPDATE native_research_runs SET cancel=1 WHERE id=?',(id,))
+            r=db.execute("""UPDATE native_research_runs
+                SET cancel=1,state=CASE WHEN state='QUEUED' THEN 'CANCELLED' ELSE state END
+                WHERE id=? AND state IN ('QUEUED','RUNNING') RETURNING *""",(id,)).fetchone()
+        if r is None:
+            return self.status(id)
         if r['state']=='RUNNING' and r['pid'] and process_identity(r['pid'])==r['start_ticks']:
             cancel_owned_process(r['pid'],r['start_ticks'],self.root/id)
         if r['state']=='RUNNING' and (not r['controller_pid'] or process_identity(r['controller_pid'])!=r['controller_ticks']):
@@ -182,11 +185,17 @@ class NativeExecution:
         r=self._row(id)
         controller_alive=r['controller_pid'] and process_identity(r['controller_pid'])==r['controller_ticks']
         if r['state']=='RUNNING' and not controller_alive and (not r['pid'] or process_identity(r['pid'])!=r['start_ticks']):
-            with self.store.tx() as db:db.execute("UPDATE native_research_runs SET state='INTERRUPTED' WHERE id=? AND state='RUNNING'",(id,))
+            return self._finish(id,'INTERRUPTED',{'software_fixture':json.loads(r['payload'])['software_fixture'],'error':'controller_and_worker_lost'})
         return self.status(id)  # Never automatically retries an interrupted generation.
-    def _finish(self,id,state,result):
+    def _finish(self,id,state,result,*,expected_state='RUNNING'):
         result.update(production_ready=False,human_reviewed=False,independent_qc_required=True,owner_acceptance_required=True)
-        with self.store.tx() as db:db.execute('UPDATE native_research_runs SET state=?,result=? WHERE id=?',(state,encode(result),id))
+        cancelled={key:result[key] for key in ('production_ready','human_reviewed','independent_qc_required','owner_acceptance_required')}
+        cancelled.update(software_fixture=self.status(id)['software_fixture'],error='owner_cancel')
+        with self.store.tx() as db:
+            db.execute("""UPDATE native_research_runs
+                SET state=CASE WHEN cancel=1 THEN 'CANCELLED' ELSE ? END,
+                    result=CASE WHEN cancel=1 AND ?!='CANCELLED' THEN ? ELSE ? END
+                WHERE id=? AND state=?""",(state,state,encode(cancelled),encode(result),id,expected_state))
         return self.status(id)
     @serialized
     def run(self,id,*,authorized=False,timeout=120,devices=None):
@@ -194,8 +203,8 @@ class NativeExecution:
         if type(timeout) not in (float,int) or not .02<=timeout<=7200:raise AgentError('Bounded timeout required.')
         row=self._row(id);data=json.loads(row['payload']);fixture=data['software_fixture']
         worker=FIXTURE if fixture else WORKER
-        if hashlib.sha256(worker.read_bytes()).hexdigest()!=data['worker_sha256'] or data.get('controller_sha256')!=controller_fingerprint():return self._finish(id,'STALE',{'error':'worker_or_controller_source_changed'})
         if row['state']!='QUEUED':raise AgentError('Run not queued; no automatic duplicate/retry.')
+        if hashlib.sha256(worker.read_bytes()).hexdigest()!=data['worker_sha256'] or data.get('controller_sha256')!=controller_fingerprint():return self._finish(id,'STALE',{'software_fixture':fixture,'error':'worker_or_controller_source_changed'},expected_state='QUEUED')
         folder=self.root/id
         if folder.exists():raise AgentError('Worker output directory already exists; no overwrite or symlink reuse.')
         folder.mkdir(mode=0o700)
