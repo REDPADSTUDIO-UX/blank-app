@@ -1,0 +1,412 @@
+{
+  "title": "ঘর ১:১৭ — পর্ব ১: না-বলা কথা",
+  "series": "ঘর ১:১৭",
+  "episode": 1,
+  "seconds": 300,
+  "language": "bn-BD",
+  "channel_id": "UCtbHkj0GwJxjXZWbItDAyuQ",
+  "rights": "Original REDPAD fictional story; no Humayun Ahmed adaptation rights established or used.",
+  "output_kind": "Procedural 2D puppet animation with neural Bengali dialogue; not photorealistic generative video",
+  "shots": [
+    {
+      "id": "001",
+      "start": 0.0,
+      "seconds": 7.5,
+      "view": "tape",
+      "speaker": "rafi",
+      "text": "এই টেপে আমার গলা কেন? আমি তো কথাটা এখনো বলিনি।",
+      "action": "reach",
+      "sfx": "hook"
+    },
+    {
+      "id": "002",
+      "start": 7.5,
+      "seconds": 7.5,
+      "view": "door",
+      "speaker": "echo",
+      "text": "দরজাটা খুলিস না, রাফি।",
+      "action": "listen",
+      "sfx": "breath"
+    },
+    {
+      "id": "003",
+      "start": 15.0,
+      "seconds": 7.5,
+      "view": "rafi_close",
+      "speaker": "rafi",
+      "text": "কে? কে কথা বলছে ওখানে?",
+      "action": "fear",
+      "sfx": "knocks"
+    },
+    {
+      "id": "004",
+      "start": 22.5,
+      "seconds": 7.5,
+      "view": "title",
+      "speaker": "",
+      "text": "",
+      "action": "hold",
+      "sfx": "title"
+    },
+    {
+      "id": "005",
+      "start": 30.0,
+      "seconds": 7.5,
+      "view": "arrival",
+      "speaker": "hazera",
+      "text": "এই বৃষ্টির মধ্যে আসতে হলো? কাল সকালে আসতি।",
+      "action": "talk",
+      "sfx": "rain"
+    },
+    {
+      "id": "006",
+      "start": 37.5,
+      "seconds": 7.5,
+      "view": "two",
+      "speaker": "rafi",
+      "text": "কাল অফিস, খালা। বাবার কাগজগুলো নিয়েই চলে যাব।",
+      "action": "bag",
+      "sfx": "rain"
+    },
+    {
+      "id": "007",
+      "start": 45.0,
+      "seconds": 7.5,
+      "view": "hazera_close",
+      "speaker": "hazera",
+      "text": "তিন মাসে একটা বারও আসলি না। আজ আবার রাত করে।",
+      "action": "sad",
+      "sfx": "rain"
+    },
+    {
+      "id": "008",
+      "start": 52.5,
+      "seconds": 7.5,
+      "view": "rafi_close",
+      "speaker": "rafi",
+      "text": "এই বাড়িতে ঢুকলেই মনে হয়, বাবা এখনো চেয়ারটায় বসে আছে।",
+      "action": "sad",
+      "sfx": "rain"
+    },
+    {
+      "id": "009",
+      "start": 60.0,
+      "seconds": 7.5,
+      "view": "two",
+      "speaker": "hazera",
+      "text": "মনে হলে একটু বসিস। মানুষ চলে গেলেই তার ঘর ফাঁকা হয় না।",
+      "action": "touch",
+      "sfx": "rain"
+    },
+    {
+      "id": "010",
+      "start": 67.5,
+      "seconds": 7.5,
+      "view": "desk",
+      "speaker": "rafi",
+      "text": "চা খাবেন? বানাতে পারি। চিনিটা কোথায় আছে জানি না, এই যা।",
+      "action": "smile",
+      "sfx": "cup"
+    },
+    {
+      "id": "011",
+      "start": 75.0,
+      "seconds": 7.5,
+      "view": "hazera_close",
+      "speaker": "hazera",
+      "text": "চিনি ছাড়াই খাব। তোর বাবাও শেষে চিনি ছেড়ে দিয়েছিল।",
+      "action": "smile",
+      "sfx": "cup"
+    },
+    {
+      "id": "012",
+      "start": 82.5,
+      "seconds": 7.5,
+      "view": "two",
+      "speaker": "rafi",
+      "text": "আমাকে তো বলেনি। আমার সাথে সব কথাই কম বলত।",
+      "action": "sad",
+      "sfx": "room"
+    },
+    {
+      "id": "013",
+      "start": 90.0,
+      "seconds": 7.5,
+      "view": "hazera_close",
+      "speaker": "hazera",
+      "text": "তুই ফোন ধরতি কবে? যাক। রাত বাড়ছে। আমি উঠি।",
+      "action": "leave",
+      "sfx": "room"
+    },
+    {
+      "id": "014",
+      "start": 97.5,
+      "seconds": 7.5,
+      "view": "hall",
+      "speaker": "rafi",
+      "text": "খালা, ওই ঘরটার চাবি? দোতলার শেষেরটা।",
+      "action": "point",
+      "sfx": "metal"
+    },
+    {
+      "id": "015",
+      "start": 105.0,
+      "seconds": 7.5,
+      "view": "door",
+      "speaker": "hazera",
+      "text": "তোর বাবা বলেছিল, ওটা যেন না খুলি। তুইও আজ খুলিস না।",
+      "action": "warn",
+      "sfx": "room"
+    },
+    {
+      "id": "016",
+      "start": 112.5,
+      "seconds": 7.5,
+      "view": "desk",
+      "speaker": "rafi",
+      "text": "আজ খুলিস না মানে? কাল খুললে সমস্যা নাই?",
+      "action": "shrug",
+      "sfx": "room"
+    },
+    {
+      "id": "017",
+      "start": 120.0,
+      "seconds": 7.5,
+      "view": "hazera_close",
+      "speaker": "hazera",
+      "text": "সব কথার জবাব আমার কাছে নেই, বাবা। দরজাটা লাগিয়ে দিস।",
+      "action": "sad",
+      "sfx": "door"
+    },
+    {
+      "id": "018",
+      "start": 127.5,
+      "seconds": 7.5,
+      "view": "desk",
+      "speaker": "rafi",
+      "text": "মীনা, পৌঁছেছি। নেটওয়ার্ক বাজে। ফোনটা রাখিস কাছে।",
+      "action": "phone",
+      "sfx": "phone"
+    },
+    {
+      "id": "019",
+      "start": 135.0,
+      "seconds": 7.5,
+      "view": "mina",
+      "speaker": "mina",
+      "text": "খেয়েছিস? দুপুরেও তো শুধু চা খেয়ে ছিলি।",
+      "action": "phone",
+      "sfx": "room"
+    },
+    {
+      "id": "020",
+      "start": 142.5,
+      "seconds": 7.5,
+      "view": "rafi_close",
+      "speaker": "rafi",
+      "text": "তুই অডিও নিয়ে কাজ করিস, না আমার খাবারের হিসাব রাখিস?",
+      "action": "smile",
+      "sfx": "room"
+    },
+    {
+      "id": "021",
+      "start": 150.0,
+      "seconds": 7.5,
+      "view": "mina",
+      "speaker": "mina",
+      "text": "দুইটাই। কেউ তো রাখবে। কাগজপত্র পেলে ছবি পাঠাস।",
+      "action": "smile",
+      "sfx": "room"
+    },
+    {
+      "id": "022",
+      "start": 157.5,
+      "seconds": 7.5,
+      "view": "desk",
+      "speaker": "rafi",
+      "text": "এই দেখ, বাবার পুরোনো টেপ। লেবেলে আমার নাম।",
+      "action": "reach",
+      "sfx": "metal"
+    },
+    {
+      "id": "023",
+      "start": 165.0,
+      "seconds": 7.5,
+      "view": "mina",
+      "speaker": "mina",
+      "text": "শুনে দেখ। আঙ্কেলের গলা থাকলে আমাকে পাঠাবি।",
+      "action": "soft",
+      "sfx": "room"
+    },
+    {
+      "id": "024",
+      "start": 172.5,
+      "seconds": 7.5,
+      "view": "tape",
+      "speaker": "",
+      "text": "",
+      "action": "play",
+      "sfx": "tape"
+    },
+    {
+      "id": "025",
+      "start": 180.0,
+      "seconds": 7.5,
+      "view": "desk",
+      "speaker": "rafi",
+      "text": "এখানে কে রেকর্ড করেছে? মীনা, তুই শুনতে পাচ্ছিস?",
+      "action": "listen",
+      "sfx": "tape"
+    },
+    {
+      "id": "026",
+      "start": 187.5,
+      "seconds": 7.5,
+      "view": "door",
+      "speaker": "echo",
+      "text": "ওটা বন্ধ কোরো না।",
+      "action": "hold",
+      "sfx": "breath"
+    },
+    {
+      "id": "027",
+      "start": 195.0,
+      "seconds": 7.5,
+      "view": "rafi_close",
+      "speaker": "rafi",
+      "text": "মীনা? তুই এখানে? একটু আগে তো ফোনে ছিলি!",
+      "action": "fear",
+      "sfx": "room"
+    },
+    {
+      "id": "028",
+      "start": 202.5,
+      "seconds": 7.5,
+      "view": "hall",
+      "speaker": "rafi",
+      "text": "খালা? আপনি এখনো যাননি?",
+      "action": "walk",
+      "sfx": "steps"
+    },
+    {
+      "id": "029",
+      "start": 210.0,
+      "seconds": 7.5,
+      "view": "door",
+      "speaker": "rafi",
+      "text": "ভেতরে কেউ থাকলে কথা বলেন। তালা লাগানো কেন?",
+      "action": "reach",
+      "sfx": "knocks"
+    },
+    {
+      "id": "030",
+      "start": 217.5,
+      "seconds": 7.5,
+      "view": "tape",
+      "speaker": "echo",
+      "text": "আমি তো আজই এলাম।",
+      "action": "spin",
+      "sfx": "tape"
+    },
+    {
+      "id": "031",
+      "start": 225.0,
+      "seconds": 7.5,
+      "view": "rafi_close",
+      "speaker": "rafi",
+      "text": "এটা আমার গলা। না, এটা কোনো পুরোনো রেকর্ডিং।",
+      "action": "fear",
+      "sfx": "breath"
+    },
+    {
+      "id": "032",
+      "start": 232.5,
+      "seconds": 7.5,
+      "view": "desk",
+      "speaker": "rafi",
+      "text": "এখানে রেকর্ড বোতামটাই ভাঙা। তাহলে শব্দটা আসছে কোথা থেকে?",
+      "action": "inspect",
+      "sfx": "metal"
+    },
+    {
+      "id": "033",
+      "start": 240.0,
+      "seconds": 7.5,
+      "view": "mina",
+      "speaker": "mina",
+      "text": "হ্যালো? লাইন কেটে গেল কেন? তুই এত হাঁপাচ্ছিস কেন?",
+      "action": "concern",
+      "sfx": "phone"
+    },
+    {
+      "id": "034",
+      "start": 247.5,
+      "seconds": 7.5,
+      "view": "rafi_close",
+      "speaker": "rafi",
+      "text": "মীনা, তুই কোথায়? সত্যি করে বল। এই বাড়িতে আসিসনি তো?",
+      "action": "phone",
+      "sfx": "room"
+    },
+    {
+      "id": "035",
+      "start": 255.0,
+      "seconds": 7.5,
+      "view": "mina",
+      "speaker": "mina",
+      "text": "আমি বাসায়। তোর কী হয়েছে? তুই চাইলে এখনই আসব।",
+      "action": "concern",
+      "sfx": "room"
+    },
+    {
+      "id": "036",
+      "start": 262.5,
+      "seconds": 7.5,
+      "view": "desk",
+      "speaker": "rafi",
+      "text": "না। একটা টেপে আমার গলা শুনছি। যে কথা আমি বলিনি।",
+      "action": "fear",
+      "sfx": "tape"
+    },
+    {
+      "id": "037",
+      "start": 270.0,
+      "seconds": 7.5,
+      "view": "mina",
+      "speaker": "mina",
+      "text": "ফোনটা স্পিকারে দে। আর টেপটা একটু পেছনে নে। আমি শুনি।",
+      "action": "listen",
+      "sfx": "room"
+    },
+    {
+      "id": "038",
+      "start": 277.5,
+      "seconds": 7.5,
+      "view": "tape",
+      "speaker": "echo",
+      "text": "মীনা, নিচে পানি। আমি দরজাটা খুলছি।",
+      "action": "spin",
+      "sfx": "drip"
+    },
+    {
+      "id": "039",
+      "start": 285.0,
+      "seconds": 7.5,
+      "view": "door",
+      "speaker": "rafi",
+      "text": "মীনা... সত্যিই পানি আসছে। কিন্তু বৃষ্টি তো থেমে গেছে।",
+      "action": "back",
+      "sfx": "drip"
+    },
+    {
+      "id": "040",
+      "start": 292.5,
+      "seconds": 7.5,
+      "view": "rafi_close",
+      "speaker": "mina",
+      "text": "রাফি, ওটা খুলিস না। আমি তোকে কথাটা এখনো বলিনি!",
+      "action": "fear",
+      "sfx": "knocks"
+    }
+  ]
+}

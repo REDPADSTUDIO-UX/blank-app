@@ -1,0 +1,907 @@
+{
+  "qwen35_27": {
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "pipeline": "image-text-to-text",
+    "library": "transformers",
+    "weight_inventory": [
+      {
+        "path": "model.safetensors-00001-of-00011.safetensors",
+        "bytes": 5263851872,
+        "sha256": "9019228d172c87d5603266c2d56672d119e838facffa164de803a1ebf0d716d2"
+      },
+      {
+        "path": "model.safetensors-00002-of-00011.safetensors",
+        "bytes": 5347741440,
+        "sha256": "890ef00c920b01c1c02755088c8d8ca5cdd6a1faa2a9a729eecd00857648b411"
+      },
+      {
+        "path": "model.safetensors-00003-of-00011.safetensors",
+        "bytes": 5347741504,
+        "sha256": "8aca03689ad0717fb91455809a6670eecca818bea8c0b6bd3a591a8807cc3223"
+      },
+      {
+        "path": "model.safetensors-00004-of-00011.safetensors",
+        "bytes": 5347741504,
+        "sha256": "20f539430c60fa611b3522b8408749a080b63f1fe034e551a6539ef864ca079a"
+      },
+      {
+        "path": "model.safetensors-00005-of-00011.safetensors",
+        "bytes": 5347741504,
+        "sha256": "57a0c074c654f05fc2d6b5112eeec387ac04986e928e42f502993e69aa03a49d"
+      },
+      {
+        "path": "model.safetensors-00006-of-00011.safetensors",
+        "bytes": 5347741504,
+        "sha256": "cfa4e6fbfc600854ef6c8e5465d0a1e43832a64b5e539f1e880333e3b1086703"
+      },
+      {
+        "path": "model.safetensors-00007-of-00011.safetensors",
+        "bytes": 5347741496,
+        "sha256": "d426963325b2319cb9e1442bc8b89b9a7748a8f7a907aa4041c11531cda6b014"
+      },
+      {
+        "path": "model.safetensors-00008-of-00011.safetensors",
+        "bytes": 5368714128,
+        "sha256": "fe60dbb9d25354c4eb2a9a59d9b1afd07741c8bebab5870f5eea6eadb4cf9a06"
+      },
+      {
+        "path": "model.safetensors-00009-of-00011.safetensors",
+        "bytes": 5347745520,
+        "sha256": "71a153d882242734a1fc7e000734727f00f6ec8ca70b044f5e44fcf97736ef8f"
+      },
+      {
+        "path": "model.safetensors-00010-of-00011.safetensors",
+        "bytes": 5347749200,
+        "sha256": "146745698b9f21940e2982beb1816a0eef3b80d77ab9cd884695b9a08c2697eb"
+      },
+      {
+        "path": "model.safetensors-00011-of-00011.safetensors",
+        "bytes": 2148512760,
+        "sha256": "d947ce7483c4109b55039f1359f4494d22390cf123568100abd89816802f097d"
+      }
+    ],
+    "repository_weight_bytes": 55563022432,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/Qwen/Qwen3.5-27B",
+    "api_source": "https://huggingface.co/api/models/Qwen/Qwen3.5-27B?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "qwen35_moe": {
+    "repo": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "pipeline": "image-text-to-text",
+    "library": "transformers",
+    "weight_inventory": [
+      {
+        "path": "model.safetensors-00001-of-00014.safetensors",
+        "bytes": 5368709816,
+        "sha256": "1b9f16fdae2411c0c50dbc7a5dacaebd033b28f3fd083e708f53cda3420e7247"
+      },
+      {
+        "path": "model.safetensors-00002-of-00014.safetensors",
+        "bytes": 5368709808,
+        "sha256": "79f06bc069d273b37ae7e1ef21eb24d8641ac74227b6139b00af55addf27e9ee"
+      },
+      {
+        "path": "model.safetensors-00003-of-00014.safetensors",
+        "bytes": 5368709808,
+        "sha256": "2cb56343806fd845eb2ca3ff5c46b1de409e05dc09d03edb86f7fb2d752b4f3d"
+      },
+      {
+        "path": "model.safetensors-00004-of-00014.safetensors",
+        "bytes": 5368709816,
+        "sha256": "39a39c799e52db2ca3d6123dad077b7dbfff3dbad4bcc9cbf66502db7be650a3"
+      },
+      {
+        "path": "model.safetensors-00005-of-00014.safetensors",
+        "bytes": 5368709816,
+        "sha256": "1a3b31ebb04bffa60d0ad5d9f2973d476d88959bb842ce003f068a6a9c5d4776"
+      },
+      {
+        "path": "model.safetensors-00006-of-00014.safetensors",
+        "bytes": 5368709816,
+        "sha256": "af5f17d292df6b200ee928d7dac30a66eab3e8f6d5d88a84fe1d27859d4a64fe"
+      },
+      {
+        "path": "model.safetensors-00007-of-00014.safetensors",
+        "bytes": 5368709808,
+        "sha256": "52885dbecd4e8e2e52e6cd50a1693a640ce622f219c35bf317aad89f72d956fc"
+      },
+      {
+        "path": "model.safetensors-00008-of-00014.safetensors",
+        "bytes": 5368709808,
+        "sha256": "43f232ba029dc4ca5ad994e38913c6ff74f110198e005ee2f35e42f9ce438cb3"
+      },
+      {
+        "path": "model.safetensors-00009-of-00014.safetensors",
+        "bytes": 5255463936,
+        "sha256": "8fa6a375dd539822b19ad18ad002f8acedd4920ff770bc284cfb428a213c9f17"
+      },
+      {
+        "path": "model.safetensors-00010-of-00014.safetensors",
+        "bytes": 5368710456,
+        "sha256": "d89e80aaf84c0b8a442162fc97c38fe7ce85d11ae728f67aa449350da86f8212"
+      },
+      {
+        "path": "model.safetensors-00011-of-00014.safetensors",
+        "bytes": 5368710464,
+        "sha256": "5b774025e5ed974256ce40498bfe4e1ad9ae8a4f13f9e9145666d24ea7404cae"
+      },
+      {
+        "path": "model.safetensors-00012-of-00014.safetensors",
+        "bytes": 5368710456,
+        "sha256": "d0f0bd7a5f09e6e05aee9a6ef5ba97fe678b0e19b891a81969682b0bdc9bb5c7"
+      },
+      {
+        "path": "model.safetensors-00013-of-00014.safetensors",
+        "bytes": 5367839544,
+        "sha256": "da8cc27a2a99eeba5674bfef03c80b3c4f08edfd839ad319a7702fcaedfd874f"
+      },
+      {
+        "path": "model.safetensors-00014-of-00014.safetensors",
+        "bytes": 2224764664,
+        "sha256": "d5e08a7dd670d7ef8da38e7af29cb8cdf42ecded5dfb2d9fcaf06cae79dfaa41"
+      }
+    ],
+    "repository_weight_bytes": 71903878016,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+    "api_source": "https://huggingface.co/api/models/Qwen/Qwen3.5-35B-A3B?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "qwen36_27": {
+    "repo": "Qwen/Qwen3.6-27B",
+    "revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "pipeline": "image-text-to-text",
+    "library": "transformers",
+    "weight_inventory": [
+      {
+        "path": "model-00001-of-00015.safetensors",
+        "bytes": 3968861352,
+        "sha256": "5f21d4e349aef6c74bedef7b3835dc8c11a16dd5ce72f4437e2284f1e83736e9"
+      },
+      {
+        "path": "model-00002-of-00015.safetensors",
+        "bytes": 3921677136,
+        "sha256": "03de44dc7e933025498d72f8d7ea32d5cde16eb7a85b35ff1fa49a737f4b2242"
+      },
+      {
+        "path": "model-00003-of-00015.safetensors",
+        "bytes": 3921677128,
+        "sha256": "5c3a68304dabeaa5a0eb70a5e383d2b8134997ef6d5c1e8afdcd236091c847f2"
+      },
+      {
+        "path": "model-00004-of-00015.safetensors",
+        "bytes": 3921677128,
+        "sha256": "ba8b0849cb4c4c97e674709bfe56a9c008d7563a68ac57120ceb2855a73a9944"
+      },
+      {
+        "path": "model-00005-of-00015.safetensors",
+        "bytes": 3921677112,
+        "sha256": "a5abc1d5e9583409193e2cd58a671a4ed98467a6eaf883cd4377e3cc02021c22"
+      },
+      {
+        "path": "model-00006-of-00015.safetensors",
+        "bytes": 3900710888,
+        "sha256": "160d914e2e4704a401a3eab9e9eec3380e5723a35981c9169bedfb82ea32e6d6"
+      },
+      {
+        "path": "model-00007-of-00015.safetensors",
+        "bytes": 3994391976,
+        "sha256": "0bcd0ce28c7d2cc6f5ab2c21902cd032fec0cc5f29e0897e3bb0967add388e47"
+      },
+      {
+        "path": "model-00008-of-00015.safetensors",
+        "bytes": 3879219776,
+        "sha256": "584a0ed8018d3b19ce8e533d08a460454650027901be6323b50b591da143dca6"
+      },
+      {
+        "path": "model-00009-of-00015.safetensors",
+        "bytes": 3921677136,
+        "sha256": "e7e3e1a17a2673340eb6bba95c3c6f07b12e7746ee738dde56551cbde27656f5"
+      },
+      {
+        "path": "model-00010-of-00015.safetensors",
+        "bytes": 3921677128,
+        "sha256": "e8934789f4742c11da88f937da84bdbb8764c8a7f7ebe9e7b056bcbd41b14285"
+      },
+      {
+        "path": "model-00011-of-00015.safetensors",
+        "bytes": 3921677136,
+        "sha256": "44e8fe06d2d609bf20b16b1d2f42348ca2dc99179721f76035ff50db678f9a8a"
+      },
+      {
+        "path": "model-00012-of-00015.safetensors",
+        "bytes": 3921677136,
+        "sha256": "33c5d7d18e1b3f661334dff736fc7d00561f1f1bb9d2970c669b40d2e582974e"
+      },
+      {
+        "path": "model-00013-of-00015.safetensors",
+        "bytes": 3995081848,
+        "sha256": "68db2ebb03231238c2a114f3642df967a970a1d96b029adc427838cb5cf7f27a"
+      },
+      {
+        "path": "model-00014-of-00015.safetensors",
+        "bytes": 3942652952,
+        "sha256": "26c114fb6d5d4131ab227552d489d7a97c8c958a9ed94f6d3d1584f6cfe4b9fb"
+      },
+      {
+        "path": "model-00015-of-00015.safetensors",
+        "bytes": 508670568,
+        "sha256": "b84b5b1315e865c9a19a444045d422a73e3e2e31ce3766797cffd3507c68c9c9"
+      }
+    ],
+    "repository_weight_bytes": 55563006400,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/Qwen/Qwen3.6-27B",
+    "api_source": "https://huggingface.co/api/models/Qwen/Qwen3.6-27B?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "qwen35_9": {
+    "repo": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "pipeline": "image-text-to-text",
+    "library": "transformers",
+    "weight_inventory": [
+      {
+        "path": "model.safetensors-00001-of-00004.safetensors",
+        "bytes": 5276436216,
+        "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e"
+      },
+      {
+        "path": "model.safetensors-00002-of-00004.safetensors",
+        "bytes": 5335161512,
+        "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330"
+      },
+      {
+        "path": "model.safetensors-00003-of-00004.safetensors",
+        "bytes": 5368717440,
+        "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec"
+      },
+      {
+        "path": "model.safetensors-00004-of-00004.safetensors",
+        "bytes": 3325995712,
+        "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+      }
+    ],
+    "repository_weight_bytes": 19306310880,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/Qwen/Qwen3.5-9B",
+    "api_source": "https://huggingface.co/api/models/Qwen/Qwen3.5-9B?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "gemma3_27": {
+    "repo": "google/gemma-3-27b-it",
+    "revision": "005ad3404e59d6023443cb575daa05336842228a",
+    "license_metadata": "gemma",
+    "gated": "manual",
+    "pipeline": "image-text-to-text",
+    "library": "transformers",
+    "weight_inventory": [
+      {
+        "path": "model-00001-of-00012.safetensors",
+        "bytes": 4854573696,
+        "sha256": "4da0290139f018bdea488b556c136d0f0ca4506fe5f5555cd97c0f6f2e886add"
+      },
+      {
+        "path": "model-00002-of-00012.safetensors",
+        "bytes": 4954792944,
+        "sha256": "bf17dbadf9c7cd696e4768639601c3300ea659e49f018000956078cefd475cdf"
+      },
+      {
+        "path": "model-00003-of-00012.safetensors",
+        "bytes": 4954792976,
+        "sha256": "c12b9d629d07b4583e19a467713f92b5c1ae8c9d7ef11faf1bdb91c4c7b59efc"
+      },
+      {
+        "path": "model-00004-of-00012.safetensors",
+        "bytes": 4954793016,
+        "sha256": "7171ed512e46c90cb579a58f66851bad09b028220422ceb1ae85080ab4ffb958"
+      },
+      {
+        "path": "model-00005-of-00012.safetensors",
+        "bytes": 4954793016,
+        "sha256": "9fb9667695749e55d808f407d78f18f80bd8ff999175c2c480cad7075ff5b2cf"
+      },
+      {
+        "path": "model-00006-of-00012.safetensors",
+        "bytes": 4954793016,
+        "sha256": "91ae339063266e0c12da89af8aa0cfdb3f9dc9bb1b4b2678863793a28026dbe7"
+      },
+      {
+        "path": "model-00007-of-00012.safetensors",
+        "bytes": 4954793016,
+        "sha256": "0497dda2b32df5d583caaffae35a96f3524a1e4305b850f4b1ce2e60fc354fe4"
+      },
+      {
+        "path": "model-00008-of-00012.safetensors",
+        "bytes": 4954793016,
+        "sha256": "9061b71b9cc82e187bd72c8f4594c5c1d900b0bc98c416d72902209514cf8ac4"
+      },
+      {
+        "path": "model-00009-of-00012.safetensors",
+        "bytes": 4954793016,
+        "sha256": "ebf2e19c3385d4b342e1517639293fe093ad793f41895862713e38603635c769"
+      },
+      {
+        "path": "model-00010-of-00012.safetensors",
+        "bytes": 4954793016,
+        "sha256": "d651ceb24678d80796a36f9a026f7178631b44e9d86f6f87e52093d915f702ad"
+      },
+      {
+        "path": "model-00011-of-00012.safetensors",
+        "bytes": 4954793016,
+        "sha256": "4a2de7fa772158381c7569a5699cadb9da3b06d92b802f54ac1c09f4a2c2e594"
+      },
+      {
+        "path": "model-00012-of-00012.safetensors",
+        "bytes": 462476696,
+        "sha256": "61f4d0c537a889d474396c6fb21ebb90946a64d70345403d47627ecb559e8e91"
+      }
+    ],
+    "repository_weight_bytes": 54864980440,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/google/gemma-3-27b-it",
+    "api_source": "https://huggingface.co/api/models/google/gemma-3-27b-it?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "gemma3_12": {
+    "repo": "google/gemma-3-12b-it",
+    "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+    "license_metadata": "gemma",
+    "gated": "manual",
+    "pipeline": "image-text-to-text",
+    "library": "transformers",
+    "weight_inventory": [
+      {
+        "path": "model-00001-of-00005.safetensors",
+        "bytes": 4979902192,
+        "sha256": "4847447e92599833e8dbaa3067cd201c3bb5c052efa91f11ba891e43234f7832"
+      },
+      {
+        "path": "model-00002-of-00005.safetensors",
+        "bytes": 4931296592,
+        "sha256": "891bd54eed03cba9ee1e705533a02a8217fcc29f356e4a1f53e5fd0d178883ad"
+      },
+      {
+        "path": "model-00003-of-00005.safetensors",
+        "bytes": 4931296656,
+        "sha256": "7cee411d9d57324e50ce064a192cc5a858276d508611b12fc599e0c9767112e0"
+      },
+      {
+        "path": "model-00004-of-00005.safetensors",
+        "bytes": 4931296656,
+        "sha256": "8bc75a29a730c9e743cad013feda3b0991a913fafe787c58a1c6e20afad97723"
+      },
+      {
+        "path": "model-00005-of-00005.safetensors",
+        "bytes": 4601000928,
+        "sha256": "ed14bd4908c98fed9f61e8cd410167e0846de9abd78e0452ab092072e5d9252d"
+      }
+    ],
+    "repository_weight_bytes": 24374793024,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/google/gemma-3-12b-it",
+    "api_source": "https://huggingface.co/api/models/google/gemma-3-12b-it?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "flux2_klein4": {
+    "repo": "black-forest-labs/FLUX.2-klein-4B",
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "pipeline": "image-to-image",
+    "library": "diffusers",
+    "weight_inventory": [
+      {
+        "path": "flux-2-klein-4b.safetensors",
+        "bytes": 7751105712,
+        "sha256": "ec3d4e733a771f61c052fb4856c48b336c55eaf2c65487c2a1faeb9bbda7a343"
+      },
+      {
+        "path": "text_encoder/model-00001-of-00002.safetensors",
+        "bytes": 4967215360,
+        "sha256": "8c0506e7f4936fa7e26183a4fd8da4e2bdbc5990ba64ae441f965d51228f36ea"
+      },
+      {
+        "path": "text_encoder/model-00002-of-00002.safetensors",
+        "bytes": 3077766632,
+        "sha256": "82f2bd839378541b0557bfabaf37c7d3d637071fdcb73302dedd7cf61162ce07"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model.safetensors",
+        "bytes": 7751109744,
+        "sha256": "9f29f9edcfdae452a653ffb51a534ca4decd389952c225724ff3b94042612a6e"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 168120878,
+        "sha256": "ca70d2202afe6415bdbcb8793ba8cd99fd159cfe6192381504d6c4d3036e0f04"
+      }
+    ],
+    "repository_weight_bytes": 23715318326,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
+    "api_source": "https://huggingface.co/api/models/black-forest-labs/FLUX.2-klein-4B?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "z_image_turbo": {
+    "repo": "Tongyi-MAI/Z-Image-Turbo",
+    "revision": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "pipeline": "text-to-image",
+    "library": "diffusers",
+    "weight_inventory": [
+      {
+        "path": "text_encoder/model-00001-of-00003.safetensors",
+        "bytes": 3957900840,
+        "sha256": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223"
+      },
+      {
+        "path": "text_encoder/model-00002-of-00003.safetensors",
+        "bytes": 3987450520,
+        "sha256": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5"
+      },
+      {
+        "path": "text_encoder/model-00003-of-00003.safetensors",
+        "bytes": 99630640,
+        "sha256": "7ca841ee75b9c61267c0c6148fd8d096d3d21b6d3e161256a9b878154f91fc52"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+        "bytes": 9973693184,
+        "sha256": "95facd593e2549e8252acb571c653d57f7ddb7f1060d4e81712f152555a88804"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+        "bytes": 9973714824,
+        "sha256": "a4bbe43ee184a1fb5af4b412d27555f532893bdc3165b1149e304ed82b5d7015"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+        "bytes": 4672282880,
+        "sha256": "aba4e37a590e63210878160a718d916d80398f4e1f78ab6c9b2b2a00d92769fa"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 167666902,
+        "sha256": "f5b59a26851551b67ae1fe58d32e76486e1e812def4696a4bea97f16604d40a3"
+      }
+    ],
+    "repository_weight_bytes": 32832339790,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+    "api_source": "https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "wan_animate2": {
+    "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+    "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "pipeline": null,
+    "library": null,
+    "weight_inventory": [
+      {
+        "path": "wan_animate_2/wan_animate_2_bf16.safetensors",
+        "bytes": 32789901704,
+        "sha256": "48abc389b8d9bba17a7f54a1cd7f1286fd3e3e0e292ddf756721aee324aede09"
+      },
+      {
+        "path": "wan_animate_2/wan_animate_2_bf16_distillation.safetensors",
+        "bytes": 32789901704,
+        "sha256": "66161359fc58a1d6c46e14fe2d81c881ccaca440757b1905e01a91902bff29d2"
+      }
+    ],
+    "repository_weight_bytes": 65579803408,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B",
+    "api_source": "https://huggingface.co/api/models/Wan-AI/Wan2.2-Animate-2-14B?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "wan_animate2_distilled": {
+    "repo": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+    "revision": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "pipeline": null,
+    "library": "diffusers",
+    "weight_inventory": [
+      {
+        "path": "image_encoder/model.safetensors",
+        "bytes": 1261596224,
+        "sha256": "e672f7dcb7f46458f8edc218669bc25d7ab1fc48bec53e8bd5b957bc1386a5e4"
+      },
+      {
+        "path": "text_encoder/model-00001-of-00003.safetensors",
+        "bytes": 4935812536,
+        "sha256": "a8e861969c7433e707cc5a74065d795d36cca07ec96eb6763eb4083df7248f58"
+      },
+      {
+        "path": "text_encoder/model-00002-of-00003.safetensors",
+        "bytes": 4983103192,
+        "sha256": "d57d948ece4837d850b7a859a4415121d57cacf8b9ee1d4db200c67f592902d7"
+      },
+      {
+        "path": "text_encoder/model-00003-of-00003.safetensors",
+        "bytes": 1442935480,
+        "sha256": "0da9ee284e21d1406df708788db1d502d95d75f69faa25cd26151bf8829b7c5f"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00001-of-00004.safetensors",
+        "bytes": 9874593104,
+        "sha256": "ebc182727d948cb61cac929af3b2887e0a4b7c8b683b7356628cf0350d332c0a"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00002-of-00004.safetensors",
+        "bytes": 9975379320,
+        "sha256": "e808cf7a7e7aaf358478a2198152f9e3ec8609c66712be397c21b4b7ec7ef501"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00003-of-00004.safetensors",
+        "bytes": 9954401600,
+        "sha256": "444eeea631fe6d2df80780f521f6c7716bd079fc177279ba09d2d20479f2dfaf"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00004-of-00004.safetensors",
+        "bytes": 2985521520,
+        "sha256": "130fd0a278a06096e483f08b2492ddd86b89fef8676b3d7b30556b3230a9b005"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 507591892,
+        "sha256": "d6e524b3fffede1787a74e81b30976dce5400c4439ba64222168e607ed19e793"
+      }
+    ],
+    "repository_weight_bytes": 45920934868,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+    "api_source": "https://huggingface.co/api/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "wan22_5": {
+    "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "revision": "b8fff7315c768468a5333511427288870b2e9635",
+    "license_metadata": "apache-2.0",
+    "gated": false,
+    "pipeline": "text-to-video",
+    "library": "diffusers",
+    "weight_inventory": [
+      {
+        "path": "text_encoder/model-00001-of-00003.safetensors",
+        "bytes": 4935812536,
+        "sha256": "a8e861969c7433e707cc5a74065d795d36cca07ec96eb6763eb4083df7248f58"
+      },
+      {
+        "path": "text_encoder/model-00002-of-00003.safetensors",
+        "bytes": 4983103192,
+        "sha256": "d57d948ece4837d850b7a859a4415121d57cacf8b9ee1d4db200c67f592902d7"
+      },
+      {
+        "path": "text_encoder/model-00003-of-00003.safetensors",
+        "bytes": 1442935480,
+        "sha256": "0da9ee284e21d1406df708788db1d502d95d75f69faa25cd26151bf8829b7c5f"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00001-of-00005.safetensors",
+        "bytes": 4978254344,
+        "sha256": "511bec832a201caa410d09c5ce7dbbf8ad2708c345d82038f684fc74cce982be"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00002-of-00005.safetensors",
+        "bytes": 4846784976,
+        "sha256": "7c42724912b1911429125dc50c0e9a49ccbada5a601b657d4ed2e15e7597c193"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00003-of-00005.safetensors",
+        "bytes": 4972658392,
+        "sha256": "e9c3d0c76de786566382f8258101fea973ae37681c6e9fe0e5fe1fb93b806424"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00004-of-00005.safetensors",
+        "bytes": 4846785080,
+        "sha256": "a331121771790939678db6f585553fd5184609f7d02593c699a4d241b0d834c5"
+      },
+      {
+        "path": "transformer/diffusion_pytorch_model-00005-of-00005.safetensors",
+        "bytes": 354751840,
+        "sha256": "78b655685c47efdb2349f36826bb101264e9f212a16325d584aeb5f53c88e719"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 2818777808,
+        "sha256": "62cd18f19438e35b32ac63020e2852f566e9b02f46b6cdbd87972a356e3c6f4b"
+      }
+    ],
+    "repository_weight_bytes": 34179863648,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "api_source": "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B-Diffusers?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "ltx25": {
+    "repo": "Lightricks/LTX-2.5",
+    "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+    "license_metadata": "other",
+    "gated": "auto",
+    "pipeline": "image-to-video",
+    "library": "diffusion-single-file",
+    "weight_inventory": [
+      {
+        "path": "diffusion_models/ltx-2.5-22b-dev-transformer-bf16.safetensors",
+        "bytes": 42018190584,
+        "sha256": "792a2bad501ca03262c0bc2ce7a2949e85b142ce18e30894aad5bc849c8e7584"
+      },
+      {
+        "path": "diffusion_models/ltx-2.5-22b-dev-transformer-comfy-int8-convrot.safetensors",
+        "bytes": 21504034224,
+        "sha256": "2edbdb4465cd6c3b532cd67a31ddb38a63e97dcad20be3729675e2a4e8caf92b"
+      },
+      {
+        "path": "diffusion_models/ltx-2.5-22b-distilled-transformer-bf16.safetensors",
+        "bytes": 42018190584,
+        "sha256": "31eb3cad89b9e54e99dd3baf286f70825ac4f6c660a70d9184d895be76d7bff4"
+      },
+      {
+        "path": "diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+        "bytes": 21504034224,
+        "sha256": "c4279eeff115cbeaca494bd2183e7d768c38fe85a184dc6afbb7159157c44334"
+      },
+      {
+        "path": "diffusion_models/ltx-2.5-22b-distilled-transformer-nvfp4.safetensors",
+        "bytes": 18721548408,
+        "sha256": "4b94231e734c1950f8f6826cb8bd8715d94be5b3e04f8256ee060c5bc3886c30"
+      },
+      {
+        "path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+        "bytes": 995778752,
+        "sha256": "eb5a71fe4068ee87ccdb1c3aa635e547ca76bd2d30ae20ae889f2c325c0677e8"
+      },
+      {
+        "path": "latent_upscale_models/ltx-2.5-latent-temporal-upscaler-x2-bf16-1.0.safetensors",
+        "bytes": 261944000,
+        "sha256": "2bc3300f2b3c3c1834d72164fbf13a3b9fd73e5a741e8a2c3f4035f89a75c3fe"
+      },
+      {
+        "path": "loras/ltx-2.5-22b-distilled-lora-450-bf16.safetensors",
+        "bytes": 8899889568,
+        "sha256": "86370bbf79a9eb4edaa158907e2b48a5188fe4c5dc8ce30c7eb8f2f131a9bbf5"
+      },
+      {
+        "path": "model_patches/ltx-2.5-duration-head-bf16.safetensors",
+        "bytes": 3843690,
+        "sha256": "2ec71e4206ed365d015f00c05a48caccfb0ee862986809d06ae376c09f5d9190"
+      },
+      {
+        "path": "text_encoders/gemma4-12b-with-proj-ltx-2.5-bf16.safetensors",
+        "bytes": 26263858182,
+        "sha256": "ef7243612fdae7a75cb4d5cee9433e81380675fb6c213bd98ae74a9cd16561d1"
+      },
+      {
+        "path": "text_encoders/gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+        "bytes": 15372969374,
+        "sha256": "6ce688a0aa98a5fa36a9f1e6c3f42152a498cc2b53ee8c15674c64244f91487f"
+      },
+      {
+        "path": "vae/ltx-2.5-audio-vae-bf16.safetensors",
+        "bytes": 364866540,
+        "sha256": "c52733d37f6a7fb7949c3dc0fb468c6cb2169e4d836983a73babb9f0d54837a5"
+      },
+      {
+        "path": "vae/ltx-2.5-video-vae-bf16.safetensors",
+        "bytes": 1472223346,
+        "sha256": "847e14ca7f3355debca0cea4eaa24ac0fbcdf0061da054ac89ca638a869ddba3"
+      },
+      {
+        "path": "vae/ltx-2.5-video-vae-conv-bf16.safetensors",
+        "bytes": 1452269922,
+        "sha256": "685b06ee3d9b2039647698fc4ea33175112462fc374e2777312c907897dfce8d"
+      }
+    ],
+    "repository_weight_bytes": 200853641398,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/Lightricks/LTX-2.5",
+    "api_source": "https://huggingface.co/api/models/Lightricks/LTX-2.5?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "svd_xt": {
+    "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+    "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+    "license_metadata": "other",
+    "gated": false,
+    "pipeline": "image-to-video",
+    "library": "diffusers",
+    "weight_inventory": [
+      {
+        "path": "image_encoder/model.fp16.safetensors",
+        "bytes": 1264217240,
+        "sha256": "ae616c24393dd1854372b0639e5541666f7521cbe219669255e865cb7f89466a"
+      },
+      {
+        "path": "image_encoder/model.safetensors",
+        "bytes": 2528371296,
+        "sha256": "ed1e5af7b4042ca30ec29999a4a5cfcac90b7fb610fd05ace834f2dcbb763eab"
+      },
+      {
+        "path": "svd_xt.safetensors",
+        "bytes": 9559625980,
+        "sha256": "b2652c23d64a1da5f14d55011b9b6dce55f2e72e395719f1cd1f8a079b00a451"
+      },
+      {
+        "path": "svd_xt_image_decoder.safetensors",
+        "bytes": 9503252964,
+        "sha256": "99aa889bf6d1ca28e026755b83ba37e3072ad79b45dd4c94fae14bee7482263b"
+      },
+      {
+        "path": "unet/diffusion_pytorch_model.fp16.safetensors",
+        "bytes": 3049435868,
+        "sha256": "9fbc02e90f37d422f5e3a4aeaee95f6629dc8c45ca211b951626e930daf2bddf"
+      },
+      {
+        "path": "unet/diffusion_pytorch_model.safetensors",
+        "bytes": 6098682464,
+        "sha256": "7783d82729af04f26ded4641a5952617fe331fc46add332fb9e47674fecc6ad7"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.fp16.safetensors",
+        "bytes": 195531910,
+        "sha256": "af602cd0eb4ad6086ec94fbf1438dfb1be5ec9ac03fd0215640854e90d6463a3"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 391017740,
+        "sha256": "5d92aa595a53d9da9faf594f09910ee869d5d567c8bb0362d5095673c69997d6"
+      }
+    ],
+    "repository_weight_bytes": 32590135462,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt",
+    "api_source": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid-xt?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "indic_speak": {
+    "repo": "bodhan-ai/indic-speak",
+    "revision": "76e0814f189321efe550011850cd288dae366aad",
+    "license_metadata": "other",
+    "gated": "auto",
+    "pipeline": "text-to-speech",
+    "library": "transformers",
+    "weight_inventory": [
+      {
+        "path": "model.safetensors",
+        "bytes": 6601886504,
+        "sha256": "da52519cbce2351e853f9a2ef6793f7972aea9cd6cd1f085f935f382e05197ab"
+      },
+      {
+        "path": "vocos/best.pt",
+        "bytes": 466966065,
+        "sha256": "867426748123693b8ca5b26d9b407af158ac0bbae3f140901bc004b7ebc5738d"
+      }
+    ],
+    "repository_weight_bytes": 7068852569,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/bodhan-ai/indic-speak",
+    "api_source": "https://huggingface.co/api/models/bodhan-ai/indic-speak?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "indicf5": {
+    "repo": "ai4bharat/IndicF5",
+    "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+    "license_metadata": "mit",
+    "gated": "auto",
+    "pipeline": "text-to-speech",
+    "library": null,
+    "weight_inventory": [
+      {
+        "path": "model.safetensors",
+        "bytes": 1402789408,
+        "sha256": "ba7f3671180fb7784e24bd1dafc96e729a38ce02e7f6d3877cdef32525a1865c"
+      }
+    ],
+    "repository_weight_bytes": 1402789408,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/ai4bharat/IndicF5",
+    "api_source": "https://huggingface.co/api/models/ai4bharat/IndicF5?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "indic_parler": {
+    "repo": "ai4bharat/indic-parler-tts",
+    "revision": "660bc53c64ae83150613264111708a0465211237",
+    "license_metadata": "apache-2.0",
+    "gated": "auto",
+    "pipeline": "text-to-speech",
+    "library": "transformers",
+    "weight_inventory": [
+      {
+        "path": "model.safetensors",
+        "bytes": 3751321772,
+        "sha256": "c68daecb60f80c8f1faf0a6d2e6ddd6de8e224fb19750f3e9a33bca43c552c90"
+      }
+    ],
+    "repository_weight_bytes": 3751321772,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/ai4bharat/indic-parler-tts",
+    "api_source": "https://huggingface.co/api/models/ai4bharat/indic-parler-tts?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "ace15": {
+    "repo": "ACE-Step/Ace-Step1.5",
+    "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+    "license_metadata": "mit",
+    "gated": false,
+    "pipeline": "text-to-audio",
+    "library": "transformers",
+    "weight_inventory": [
+      {
+        "path": "Qwen3-Embedding-0.6B/model.safetensors",
+        "bytes": 1191586416,
+        "sha256": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd"
+      },
+      {
+        "path": "acestep-5Hz-lm-1.7B/model.safetensors",
+        "bytes": 3708521528,
+        "sha256": "f161689da73e5ecefa28ff780d51c2d92a00f056d021d7933c779ed5c6cd7db8"
+      },
+      {
+        "path": "acestep-v15-turbo/model.safetensors",
+        "bytes": 4787825604,
+        "sha256": "3f6e0797fad420a39bd33979eb6e840e30989e34a3794e843d23b60ec6e422d7"
+      },
+      {
+        "path": "acestep-v15-turbo/silence_latent.pt",
+        "bytes": 3841215,
+        "sha256": "a778e9dd942f5e8b2c09c55370782d318834432b03dabbcdf70e6ed49ad6358b"
+      },
+      {
+        "path": "vae/diffusion_pytorch_model.safetensors",
+        "bytes": 337431388,
+        "sha256": "da17edb604c40deaf09e9b24974e590d1ca83a374070e5d0884cfa4bed9a99b0"
+      }
+    ],
+    "repository_weight_bytes": 10029206151,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+    "api_source": "https://huggingface.co/api/models/ACE-Step/Ace-Step1.5?blobs=true",
+    "checked_date": "2026-11-12"
+  },
+  "stable_audio_small": {
+    "repo": "stabilityai/stable-audio-open-small",
+    "revision": "ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3",
+    "license_metadata": "other",
+    "gated": "auto",
+    "pipeline": "text-to-audio",
+    "library": "stable-audio-tools",
+    "weight_inventory": [
+      {
+        "path": "base_model.ckpt",
+        "bytes": 1677045748,
+        "sha256": "f60355a8c8198f94b646bdecf3b04b5dc1fa736f7038a80d9dd6ae8f39ac45b3"
+      },
+      {
+        "path": "model.ckpt",
+        "bytes": 1677045748,
+        "sha256": "54ccf4ac08a3c0c535a1a7cb6e53a4f0fbda91dc76cdc130c45ea3d24ef690e4"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 1676829212,
+        "sha256": "0ee8b9edbe3104cb079dd163b62589d67d9c321ea8942cbbd81e6f7d3f390be2"
+      }
+    ],
+    "repository_weight_bytes": 5030920708,
+    "scope": "Metadata only. Inventory may contain mutually exclusive formats/variants; NOT a download recipe or measured VRAM. No weights downloaded.",
+    "source": "https://huggingface.co/stabilityai/stable-audio-open-small",
+    "api_source": "https://huggingface.co/api/models/stabilityai/stable-audio-open-small?blobs=true",
+    "checked_date": "2026-11-12"
+  }
+}

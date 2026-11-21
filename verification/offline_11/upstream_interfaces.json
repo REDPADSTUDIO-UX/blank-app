@@ -1,0 +1,46 @@
+{
+  "kind": "Public official source/interface inspection, not model invocation or source-code execution",
+  "date": "2026-11-13",
+  "sources": {
+    "vision7": {
+      "url": "https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct",
+      "interface": "Qwen2_5_VLForConditionalGeneration + AutoProcessor, bounded image inputs",
+      "scope": "Existing local worker schema reused; exact installed dependency/API compatibility and calibration not measured"
+    },
+    "wan_animate2": {
+      "url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B",
+      "pinned_card_attempt": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B/blob/6e8f1973bf0abc2aafd517992e8b6d88c3c46e69/README.md",
+      "pinned_card_access": "tool inaccessible",
+      "finding": "Current native example uses reference image, driving video, prompt and YAML. Diffusers example names a separate -Diffusers pack, so it cannot be substituted for the selected native checkpoint. Code revision/YAML not reviewed."
+    },
+    "ltx25": {
+      "url": "https://huggingface.co/Lightricks/LTX-2.5/blob/49b093a39c19169a8a81721dcc541e07e945232f/README.md",
+      "finding": "Pinned card documents local ltx_pipelines.distilled with separate BF16 components and spatial upsampler. Selected weight list lacks that upsampler. No switch to older LTX or the separate Diffusers pack."
+    },
+    "indic_speak": {
+      "url": "https://huggingface.co/bodhan-ai/indic-speak",
+      "pinned_card_access": "tool inaccessible at selected revision",
+      "finding": "Current card local TTS example names preview-v2. Exact selected checkpoint/code/component/speaker compatibility remains unverified; gated Indic Open Model and upstream licenses require review."
+    },
+    "indicf5": {
+      "url": "https://huggingface.co/ai4bharat/IndicF5",
+      "finding": "Published custom AutoModel invocation needs target text, reference audio and matching reference transcript. Custom-code execution, gated access and specific consent are not authorized by this task."
+    },
+    "indic_parler": {
+      "url": "https://huggingface.co/ai4bharat/indic-parler-tts",
+      "finding": "Local Parler model and separate description tokenizer; description/prompt conditioning. Existing offline materialization retained, no reference cloning inferred."
+    },
+    "ace15": {
+      "url": "https://huggingface.co/ACE-Step/Ace-Step1.5/blob/19671f406d603126926c1b7e2adc169acbcade22/README.md",
+      "finding": "Selected 1.5 component bundle cannot use existing 3.5B pipeline. Code revision/component loader and silence_latent.pt safety policy not verified."
+    },
+    "stable_audio_small": {
+      "url": "https://huggingface.co/stabilityai/stable-audio-open-small",
+      "finding": "Published Small example uses 8 steps, cfg_scale=1.0, pingpong sampler and at most 11 seconds. Staged Small recipe/worker guidance aligned; local constructor/components still require actual runtime verification. Gated community terms not accepted."
+    }
+  },
+  "gpu_used": false,
+  "model_inference": false,
+  "weights_downloaded": false,
+  "licenses_accepted": false
+}

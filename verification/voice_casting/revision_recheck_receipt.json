@@ -1,0 +1,16 @@
+{
+  "selected": [
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_casting_source_revision_changes_invalidate_voice_handoff"
+  ],
+  "tests": 1,
+  "errors": 0,
+  "failures": 0,
+  "requests_import_only_shim": true,
+  "gpu": false,
+  "model_inference": false,
+  "weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "actual_human_voice_or_artistic_review": false,
+  "scope": "manual software fixtures and injected classes only; any process recheck is the existing fixed CPU dummy, not native model inference"
+}

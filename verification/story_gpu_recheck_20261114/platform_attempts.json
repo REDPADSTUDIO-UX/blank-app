@@ -1,0 +1,77 @@
+{
+  "recorded_utc": "2026-11-14T08:48:33.318033+00:00",
+  "timing_scope": "Fresh sequential browser observations during this session, recorded after completion; individual browser event timestamps unavailable. Exact shell timestamps in http_checks.json.",
+  "attempts": [
+    {
+      "order": 1,
+      "provider": "Colab",
+      "url": "https://colab.research.google.com/",
+      "statuses": [
+        "REACHABLE",
+        "LOGIN_REQUIRED"
+      ],
+      "observed": "Opened homepage, clicked New notebook. At /notebook#create=true modal said: Google sign-in required; You must be logged in with a Google Account to continue. No notebook kernel started.",
+      "gpu_runtime_started": false,
+      "gpu_specifications": null,
+      "account_quota": null,
+      "model_loaded": false
+    },
+    {
+      "order": 2,
+      "provider": "Kaggle",
+      "url": "https://www.kaggle.com/code",
+      "statuses": [
+        "REACHABLE",
+        "LOGIN_REQUIRED"
+      ],
+      "observed": "Opened Code page and clicked New Notebook. Guest scratchpad editor appeared at /code/scratchpad/notebook2712c01919/edit; banner said Sign In or Register to continue editing; run controls disabled. A guest editor shell is not an authenticated saved notebook or runtime.",
+      "gpu_runtime_started": false,
+      "gpu_specifications": null,
+      "account_quota": null,
+      "model_loaded": false
+    },
+    {
+      "order": 3,
+      "provider": "Lightning",
+      "url": "https://lightning.ai/",
+      "statuses": [
+        "REACHABLE",
+        "BLOCKED"
+      ],
+      "observed": "Browser rendered Coming soon: Apologies, but Lightning hasn’t expanded to your area yet. Shell independently returned HTTP 403. Region/service restriction observed; not classified as bot detection or inherited allowlist failure.",
+      "gpu_runtime_started": false,
+      "gpu_specifications": null,
+      "account_quota": null,
+      "model_loaded": false
+    },
+    {
+      "order": 4,
+      "provider": "Hugging Face",
+      "url": "https://huggingface.co/",
+      "statuses": [
+        "REACHABLE",
+        "NOT_VERIFIED"
+      ],
+      "observed": "Homepage showed Log In and Sign Up. No signed-in account, personal eligibility, private Space or GPU session verified. Public ZeroGPU documentation was fetched separately; no Space created and no third-party hosted model queried.",
+      "gpu_runtime_started": false,
+      "gpu_specifications": null,
+      "account_quota": null,
+      "model_loaded": false
+    },
+    {
+      "order": 5,
+      "provider": "Other free runtimes",
+      "url": null,
+      "statuses": [
+        "NOT_VERIFIED"
+      ],
+      "observed": "One current tool inventory found no GPU/notebook allocation connector or configured usable free runtime. Attached host has no exposed NVIDIA device. No additional eligible no-cost provider established; this is not an exhaustive claim about all free GPU services.",
+      "gpu_runtime_started": false,
+      "gpu_specifications": null,
+      "account_quota": null,
+      "model_loaded": false
+    }
+  ],
+  "browser_evidence": "Direct screenshot observations in conversation tool results; repository entries are faithful transcriptions, not saved screenshot binaries.",
+  "owner_action": "Owner explicitly replied: এখন পারব না—অগ্রগতি সংরক্ষণ করুন. No login pursued."
+}

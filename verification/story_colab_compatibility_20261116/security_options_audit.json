@@ -1,0 +1,123 @@
+{
+  "status": "COLAB ACCESS OR SECURITY BLOCKED; NO REAL INFERENCE.",
+  "baseline_commit": "2dac998dd2786e684136ca80b77bbea748876a25",
+  "current_browser_access": "VERIFIED Chrome extension -> owner existing signed-in Colab; free T4 connected; notebook All changes saved",
+  "historical_isolation_evidence": "verification/story_isolation_20261115/execution_requirement.json",
+  "historical_evidence_sha256": "05deb112fbfb4a03d3371503dad9193336fb0ff558ef769c50edd440509606d0",
+  "root_cause": {
+    "A_bwrap_dependency": {
+      "historical": "Official Ubuntu bubblewrap 0.9.0-1ubuntu0.3 installed successfully",
+      "current": null,
+      "conclusion": "Current dependency missing; reinstall alone does not establish fresh-proc mount support."
+    },
+    "B_user_pid_namespaces": {
+      "historical": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "current": "NOT RETESTED; current sysctl/capability metadata is not proof of launch support"
+    },
+    "C_mount_and_proc": {
+      "historical": {
+        "code": "# Verify architecture-required bubblewrap namespaces and mount isolation.\nimport os, sys, subprocess, json, shutil\nstory_parent_net = os.readlink('/proc/self/ns/net')\nstory_bwrap_command = [shutil.which('bwrap'),'--unshare-user','--unshare-pid','--unshare-net','--die-with-parent','--new-session','--ro-bind','/','/','--dev','/dev','--proc','/proc','--tmpfs','/tmp','--',sys.executable,'-c',\"import os,json; print(json.dumps({'network_namespace':os.readlink('/proc/self/ns/net'),'interfaces':os.listdir('/sys/class/net')}))\"]\nstory_bwrap_result = subprocess.run(story_bwrap_command,capture_output=True,text=True,timeout=15,env={'PATH':'/usr/bin:/bin'})\nprint('STORY_BWRAP_RESULT='+json.dumps({'returncode':story_bwrap_result.returncode,'stdout':story_bwrap_result.stdout,'stderr':story_bwrap_result.stderr,'parent_network_namespace':story_parent_net}))\n",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "bwrap: Can't mount proc on /newroot/proc: Permission denied\n",
+        "parent_network_namespace": "net:[4026532274]"
+      },
+      "current": "NOT RETESTED — no demonstrated material provider policy change",
+      "conclusion": "Exact observed failure is fresh /proc mount permission denial, not generic failure of every namespace/mount operation."
+    },
+    "D_seccomp_filesystem": {
+      "current": {
+        "status": {
+          "CapEff": "00000000a82c25fb",
+          "NoNewPrivs": "0",
+          "Seccomp": "2",
+          "Seccomp_filters": "1"
+        },
+        "cap_sys_admin_effective": true,
+        "lsm_profile": "kernel (enforce)",
+        "max_user_namespaces": "51718",
+        "apparmor_restrict_unprivileged_userns": null
+      },
+      "conclusion": "Effective CAP_SYS_ADMIN bit is present but namespace scope, Seccomp mode 2/filter 1 and enforced LSM can restrict operations. Exact denying rule is not identified. Existing native supervisor has no separate dedicated --seccomp policy; do not claim one. --ro-bind / / prevents writes to most host paths but is not confidentiality isolation from all readable host files."
+    },
+    "E_network": {
+      "historical_unshare_net": {
+        "returncode": 0,
+        "stderr": ""
+      },
+      "current_verified_isolated_worker": false,
+      "conclusion": "Network namespace creation alone did not establish the complete worker. Python hooks/offline flags/loopback are not equivalent kernel egress isolation."
+    },
+    "F_model_source": {
+      "primary": {
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "adapter": "hf_text_nf4"
+      },
+      "approved_fallback": {
+        "repo": "unsloth/Qwen3.5-9B-GGUF",
+        "revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+        "file": "Qwen3.5-9B-Q4_K_M.gguf",
+        "bytes": 5680522464,
+        "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8"
+      },
+      "current_cache": [
+        {
+          "root": "/content/redpad_story_t4_20261114",
+          "symlink_rejected": false,
+          "root_present": false,
+          "exact_filename_present": false,
+          "bytes": null,
+          "installation_receipt_present": false,
+          "weight_hash_verified": false,
+          "receipt_contents_inspected": false
+        },
+        {
+          "root": "/root/.cache/huggingface/hub/models--unsloth--Qwen3.5-9B-GGUF/snapshots/3885219b6810b007914f3a7950a8d1b469d598a5",
+          "symlink_rejected": false,
+          "root_present": false,
+          "exact_filename_present": false,
+          "bytes": null,
+          "installation_receipt_present": false,
+          "weight_hash_verified": false,
+          "receipt_contents_inspected": false
+        }
+      ],
+      "approval": "Prior exact model authorization retained; fresh installed bytes/hash/dependency compatibility NOT VERIFIED; no downloads/weight reads."
+    },
+    "G_lifecycle": {
+      "source": "redpad_pipeline/native_execution.py",
+      "state": "Existing timeout/process-group cancellation/PID reuse/recovery/source fingerprints preserved. Historical CPU checks reused; no new native launch."
+    },
+    "H_story_scope": {
+      "source": "redpad_pipeline/story_quality.py:require_runtime",
+      "state": "Still unconditional fail-closed; generic shared execution or six-agent native supervisor cannot be claimed a verified Story GGUF binding. Existing scoped owner/task/source locks unchanged."
+    },
+    "I_evidence": {
+      "state": "Prior raw canary/foundation, hashes and two actual calls preserved; new output absent. Lossless assembly requires complete actual sections; no authored repair or import promotion."
+    },
+    "J_platform": {
+      "current_kernel": "6.6.159+",
+      "current_model_runtime_verified": false,
+      "conclusion": "Supported provider configuration granting the required mounts is not exposed/verified here. New VM and executable absence are not evidence the old mount denial was resolved."
+    }
+  },
+  "options": {
+    "A": "BLOCKED / NOT VERIFIED: unchanged secure worker lacks current bwrap and demonstrated required mounts plus Story-specific binding.",
+    "B": "NO VERIFIED EQUIVALENT: unshare-only still needs the restricted mount; host-proc bind/removing PID or proc isolation violates existing requirement. Language-level hooks/offline settings do not prove equivalent boundaries. No provider-supported alternate sandbox was demonstrated.",
+    "C": "PREPARED REVIEW PACKET ONLY — new explicit changed-security-boundary owner authorization pending; no alternate launcher enabled, no production import approval.",
+    "D": "SAFE STOP at new approval boundary; preserve current metadata and all prior evidence."
+  },
+  "new_inference_calls": 0,
+  "model_downloads": 0,
+  "kernel_probe_retries": 0,
+  "complete_new_story": null,
+  "fifteen_criterion_new_evaluation": "NOT PERFORMED — no complete actual story",
+  "measured_creative_improvement": null,
+  "independent_human_review": "PENDING",
+  "owner_acceptance": "PENDING",
+  "research_boundary_authorized": false
+}

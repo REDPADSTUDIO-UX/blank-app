@@ -1,0 +1,15 @@
+{
+  "tests": 1,
+  "errors": 0,
+  "failures": 0,
+  "forbidden_execution_attempts": {
+    "socket.socket": 0,
+    "subprocess.run": 0,
+    "subprocess.Popen": 0,
+    "urllib.request.OpenerDirector.open": 0,
+    "redpad_pipeline.kaggle_runtime.probe": 0
+  },
+  "model_inference": false,
+  "gpu_usage": false,
+  "scope": "software fixtures only; import-time stdlib/library capability detection is outside the execution guard"
+}

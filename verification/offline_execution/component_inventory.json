@@ -1,0 +1,81 @@
+{
+  "kind": "requirements only; NOT installed, downloaded or approved",
+  "required_paths": {
+    "ltx25": [
+      "diffusion_models/ltx-2.5-22b-distilled-transformer-bf16.safetensors",
+      "text_encoders/gemma4-12b-with-proj-ltx-2.5-bf16.safetensors",
+      "vae/ltx-2.5-video-vae-bf16.safetensors",
+      "vae/ltx-2.5-audio-vae-bf16.safetensors",
+      "model_patches/ltx-2.5-duration-head-bf16.safetensors",
+      "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors"
+    ],
+    "wan_animate2": [
+      "wan_animate_2/wan_animate_2_bf16.safetensors",
+      "videomodel/Wan-AI/models_t5_umt5-xxl-enc-bf16.pth",
+      "videomodel/Wan-AI/vae.pth",
+      "videomodel/Wan-AI/models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth"
+    ],
+    "ace15": [
+      "acestep-v15-turbo/model.safetensors",
+      "acestep-v15-turbo/config.json",
+      "acestep-v15-turbo/silence_latent.pt",
+      "Qwen3-Embedding-0.6B/model.safetensors",
+      "Qwen3-Embedding-0.6B/config.json",
+      "Qwen3-Embedding-0.6B/tokenizer.json",
+      "vae/config.json",
+      "vae/diffusion_pytorch_model.safetensors"
+    ],
+    "indic_parler": [
+      "config.json",
+      "tokenizer_config.json",
+      "description_tokenizer/tokenizer_config.json"
+    ],
+    "wan22_5": [
+      "model_index.json"
+    ],
+    "svd_xt": [
+      "model_index.json"
+    ],
+    "stable_audio_small": [
+      "model_config.json"
+    ]
+  },
+  "required_source_paths": {
+    "ltx25": [
+      "packages/ltx-pipelines/src/ltx_pipelines/distilled.py",
+      "packages/ltx-pipelines/src/ltx_pipelines/utils/model_paths.py",
+      "packages/ltx-core/src/ltx_core/text_encoders/gemma/gemma_assets.py"
+    ],
+    "wan_animate2": [
+      "infer/wan_animate_2.yaml",
+      "pipelines/wan_animate_2_pipeline.py",
+      "wanxiang/eval_i2v.py"
+    ],
+    "ace15": [
+      "acestep/handler.py",
+      "acestep/inference.py",
+      "acestep/models/turbo/modeling_acestep_v15_turbo.py",
+      "acestep/models/turbo/configuration_acestep_v15.py",
+      "acestep/models/common/configuration_acestep_v15.py"
+    ]
+  },
+  "source_revisions": {
+    "wan_animate2": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+    "ltx25": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+    "ace15": "ca1e85fe9430179831e6bc6be790c332190a3866"
+  },
+  "ltx_missing_auxiliary": {
+    "repo": "Lightricks/LTX-2.5",
+    "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+    "path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+    "sha256": null,
+    "bytes": null,
+    "download_approved": false,
+    "license_approved": false,
+    "purpose": "Official two-stage distilled spatial upsampler; not the optional temporal upsampler or DFR detailing LoRA"
+  },
+  "ltx_packed_text_assets": "tokenizer_json + gemma_config + embedded HF assets per pinned gemma_assets.py; actual weight metadata validation pending",
+  "wan_auxiliary_origins": "Must be exact owner-approved compatible repository/revisions; no filename-based origin claim",
+  "ace_auxiliary_policy": "Authenticated bounded .pt file, weights_only=True/map_location=cpu, tensor type/shape/size/finite checks; fixed reviewed local model class, no model-side Python execution",
+  "runtime_packages": "No package/model installation in this task. Wan official requirements.txt pinned with source; LTX package 1.6.2 plus its source dependencies; ACE pinned native package/local model classes. Full installed dependency/code receipt required before launch."
+}

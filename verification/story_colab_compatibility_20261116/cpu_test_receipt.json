@@ -1,0 +1,17 @@
+{
+  "source": "Observed tool stdout: six new tests passed in one run, then one newly added notebook-pause test passed alone. No repeat regression run.",
+  "successful_ids": [
+    "tests.test_story_colab_readonly.StoryColabReadonlyTests.test_cache_inventory_never_opens_or_hashes_checkpoint_or_receipt",
+    "tests.test_story_colab_readonly.StoryColabReadonlyTests.test_missing_metadata_is_unknown_not_a_kernel_failure_or_runtime_grant",
+    "tests.test_story_colab_readonly.StoryColabReadonlyTests.test_only_readonly_gpu_query_no_mount_namespace_install_or_generation",
+    "tests.test_story_colab_readonly.StoryColabReadonlyTests.test_probe_imports_no_model_runtime_or_network_and_never_launches_on_import",
+    "tests.test_story_colab_readonly.StoryColabReadonlyTests.test_reproducible_notebook_pauses_even_if_a_flag_is_edited_without_authorized_launcher",
+    "tests.test_story_colab_readonly.StoryColabReadonlyTests.test_research_boundary_is_pending_existing_approval_not_re_requested",
+    "tests.test_story_colab_readonly.StoryColabReadonlyTests.test_symlink_cache_is_rejected_without_following_private_contents"
+  ],
+  "distinct_successful_checks": 7,
+  "errors": 0,
+  "failures": 0,
+  "gpu_or_model_calls_in_unit_tests": 0,
+  "fixtures": "Manual proc/cache files and injected fake nvidia-smi result only; no actual model or weight data"
+}

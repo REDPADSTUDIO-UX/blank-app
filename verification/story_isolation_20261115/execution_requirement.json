@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-15",
+  "branch": "feature/video-music-editing-studio",
+  "baseline_commit": "acbd8fc233509e112e5a5fac542fa0e1df31c352",
+  "scope": "Story AI Qwen3.5-9B GGUF secure worker integration only",
+  "owner_authorization": "Existing exact model authorization retained; no repeat approval requested.",
+  "capability_checks": {
+    "unshare_user_pid_net": {
+      "returncode": 0,
+      "stderr": ""
+    },
+    "unshare_net": {
+      "returncode": 0,
+      "stderr": ""
+    }
+  },
+  "official_package_install": {
+    "package": "bubblewrap",
+    "version": "0.9.0-1ubuntu0.3",
+    "source": "Ubuntu noble-updates official distribution repository",
+    "returncode": 0,
+    "binary": "/usr/bin/bwrap"
+  },
+  "architecture_required_probe": {
+    "code": "# Verify architecture-required bubblewrap namespaces and mount isolation.\nimport os, sys, subprocess, json, shutil\nstory_parent_net = os.readlink('/proc/self/ns/net')\nstory_bwrap_command = [shutil.which('bwrap'),'--unshare-user','--unshare-pid','--unshare-net','--die-with-parent','--new-session','--ro-bind','/','/','--dev','/dev','--proc','/proc','--tmpfs','/tmp','--',sys.executable,'-c',\"import os,json; print(json.dumps({'network_namespace':os.readlink('/proc/self/ns/net'),'interfaces':os.listdir('/sys/class/net')}))\"]\nstory_bwrap_result = subprocess.run(story_bwrap_command,capture_output=True,text=True,timeout=15,env={'PATH':'/usr/bin:/bin'})\nprint('STORY_BWRAP_RESULT='+json.dumps({'returncode':story_bwrap_result.returncode,'stdout':story_bwrap_result.stdout,'stderr':story_bwrap_result.stderr,'parent_network_namespace':story_parent_net}))\n",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "bwrap: Can't mount proc on /newroot/proc: Permission denied\n",
+    "parent_network_namespace": "net:[4026532274]"
+  },
+  "status": "BLOCKED_REQUIRED_PROC_MOUNT_DENIED",
+  "integration_completed": false,
+  "model_downloads": 0,
+  "new_inference_calls": 0,
+  "prior_story_calls_preserved": 2,
+  "existing_story_runtime_gate": "unchanged",
+  "smallest_requirement": "A runtime permitting the existing bwrap user/PID/network/mount isolation including a fresh /proc mount. Current kernel/container permission denial must be resolved through supported provider configuration or an already-authorized free runtime. Do not bind host /proc or remove --proc/--unshare-pid as a workaround.",
+  "no_gpu_or_ram_probes": true,
+  "no_unrelated_tests": true,
+  "no_main_changes": true,
+  "no_paid_resources": true
+}

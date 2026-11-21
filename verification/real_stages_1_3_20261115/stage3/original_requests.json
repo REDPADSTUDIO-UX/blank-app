@@ -1,0 +1,98 @@
+[
+  {
+    "label": "A",
+    "request": {
+      "text": "বাবা, ব্যাগটা দরজার পাশে রাখলাম।",
+      "language": "bn",
+      "speaker_id": "Ishita",
+      "seed": 117
+    },
+    "spec": {
+      "style_notes": "neutral everyday — annotation only, not a supported emotion control",
+      "pronunciation_notes": "Original Bangladeshi dialogue; pauses and pronunciation require actual listening.",
+      "reference_metadata": null,
+      "permission": null
+    },
+    "provenance": "manually_authored_input_NOT_model_output"
+  },
+  {
+    "label": "B",
+    "request": {
+      "text": "বাসে উঠে একটা খবর দিস। ফোনটা কাছে রাখব।",
+      "language": "bn",
+      "speaker_id": "Sourav",
+      "seed": 118
+    },
+    "spec": {
+      "style_notes": "warm conversation — annotation only, not a supported emotion control",
+      "pronunciation_notes": "Original Bangladeshi dialogue; pauses and pronunciation require actual listening.",
+      "reference_metadata": null,
+      "permission": null
+    },
+    "provenance": "manually_authored_input_NOT_model_output"
+  },
+  {
+    "label": "C",
+    "request": {
+      "text": "হিসাবের খাতায় আমার বাসভাড়াও লিখে রেখেছ?",
+      "language": "bn",
+      "speaker_id": "Ishita",
+      "seed": 119
+    },
+    "spec": {
+      "style_notes": "gentle humor — annotation only, not a supported emotion control",
+      "pronunciation_notes": "Original Bangladeshi dialogue; pauses and pronunciation require actual listening.",
+      "reference_metadata": null,
+      "permission": null
+    },
+    "provenance": "manually_authored_input_NOT_model_output"
+  },
+  {
+    "label": "D",
+    "request": {
+      "text": "না রে। আজ খাতাটা একটু বেশিই খুলছি।",
+      "language": "bn",
+      "speaker_id": "Sourav",
+      "seed": 120
+    },
+    "spec": {
+      "style_notes": "restrained disappointment — annotation only, not a supported emotion control",
+      "pronunciation_notes": "Original Bangladeshi dialogue; pauses and pronunciation require actual listening.",
+      "reference_metadata": null,
+      "permission": null
+    },
+    "provenance": "manually_authored_input_NOT_model_output"
+  },
+  {
+    "label": "E",
+    "request": {
+      "text": "কাজটা হোক আগে। তারপর একসঙ্গে হিসাব করব।",
+      "language": "bn",
+      "speaker_id": "Ishita",
+      "seed": 121
+    },
+    "spec": {
+      "style_notes": "soft reassurance — annotation only, not a supported emotion control",
+      "pronunciation_notes": "Original Bangladeshi dialogue; pauses and pronunciation require actual listening.",
+      "reference_metadata": null,
+      "permission": null
+    },
+    "provenance": "manually_authored_input_NOT_model_output"
+  },
+  {
+    "label": "F",
+    "request": {
+      "text": "ঠিক আছে। ... তুই গেলে ঘরটা বড় চুপচাপ লাগে।",
+      "language": "bn",
+      "speaker_id": "Sourav",
+      "seed": 122
+    },
+    "spec": {
+      "style_notes": "quiet vulnerability — annotation only, not a supported emotion control",
+      "pronunciation_notes": "Original Bangladeshi dialogue; pauses and pronunciation require actual listening.",
+      "reference_metadata": null,
+      "permission": null
+    },
+    "provenance": "manually_authored_input_NOT_model_output"
+  }
+]

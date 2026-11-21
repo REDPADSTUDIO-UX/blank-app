@@ -1,0 +1,28 @@
+{
+  "selected": [
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_missing_or_wrong_source_review_manifest_cannot_report_a_verified_binding",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_public_source_and_exact_selected_gated_sources_are_separate",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_missing_source_casting_draft_abstains_without_hidden_fallback"
+  ],
+  "attempted": [
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_missing_or_wrong_source_review_manifest_cannot_report_a_verified_binding",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_public_source_and_exact_selected_gated_sources_are_separate",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_missing_source_casting_draft_abstains_without_hidden_fallback"
+  ],
+  "successful": [
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_missing_or_wrong_source_review_manifest_cannot_report_a_verified_binding",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_public_source_and_exact_selected_gated_sources_are_separate",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_missing_source_casting_draft_abstains_without_hidden_fallback"
+  ],
+  "errors": [],
+  "failures": [],
+  "gpu": false,
+  "inference": false,
+  "real_weights_read_loaded_downloaded": false,
+  "custom_upstream_executed": false,
+  "human_review": false,
+  "fixture_scope": "Manual fixtures and injected classes only; no native model process launched."
+}

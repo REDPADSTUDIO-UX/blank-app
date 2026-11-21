@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "id": "qc.story_budget11.genuine_partial.v1",
+  "benchmark_id": "intelligence.qc.v1",
+  "scope": "New source-local TEXT diagnostic extension; not a full professional_qc_v1 trial, not a balanced clean/defect benchmark, not an inference result",
+  "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+  "required_medium": "text",
+  "unavailable_media": [
+    "image",
+    "video",
+    "audio"
+  ],
+  "rubric": [
+    {
+      "id": "qc.1",
+      "criterion": "independent evidence grading",
+      "anchors": {
+        "1": "Evidence identifies a specific failure",
+        "3": "Relevant evidence with unresolved weaknesses",
+        "5": "Independent expert supports the criterion with cited examples"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "qc.2",
+      "criterion": "false positives and negatives",
+      "anchors": {
+        "1": "Evidence identifies a specific failure",
+        "3": "Relevant evidence with unresolved weaknesses",
+        "5": "Independent expert supports the criterion with cited examples"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "qc.3",
+      "criterion": "abstention and stale evidence",
+      "anchors": {
+        "1": "Evidence identifies a specific failure",
+        "3": "Relevant evidence with unresolved weaknesses",
+        "5": "Independent expert supports the criterion with cited examples"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "qc.4",
+      "criterion": "precise actionable criticism",
+      "anchors": {
+        "1": "Evidence identifies a specific failure",
+        "3": "Relevant evidence with unresolved weaknesses",
+        "5": "Independent expert supports the criterion with cited examples"
+      },
+      "required_medium": "text"
+    }
+  ],
+  "professional_case_requirements": {
+    "case_id": "professional_qc_v1",
+    "capability_required": "Calibrated multimodal defect detection with uncertainty",
+    "required_output_kinds": [
+      "text",
+      "video",
+      "audio"
+    ],
+    "review_modes": [
+      "text",
+      "visual",
+      "listening"
+    ],
+    "minimum_samples": 10,
+    "expertise_required": "Independent script and audiovisual QC specialists",
+    "real_world_task": "Blindly inspect balanced clean/defect script, image, motion, subtitle and audio samples. Measure false positives and misses against an authored hidden answer key and expert adjudication.",
+    "criteria": [
+      "defect_precision",
+      "defect_recall",
+      "grounded_evidence",
+      "uncertainty",
+      "cross_media_consistency"
+    ],
+    "specialist_development_needed": "A line-ID match alone is insufficient; requires actual media and specialist adjudication.",
+    "software_evidence_is_not_capability": true,
+    "minimum_counts": {
+      "text": 10,
+      "video": 3,
+      "audio": 3
+    }
+  },
+  "samples": [
+    {
+      "id": "Q1",
+      "artifact_kind": "story_prefix",
+      "sections": [
+        {
+          "name": "foundation",
+          "original_raw": "{\"assumptions\":[\"বাস ভাঙ্গতে পারে (যেকোনো সময়)\"],\"characters\":[{\"id\":\"N\",\"want\":\"চাকরি পেয়ে স্বাবলম্বী হওয়া\",\"need\":\"বাবার আশীর্বাদ ও সম্মান\",\"fear\":\"অনাদৃত হয়ে ফিরে আসা\",\"contradiction\":\"স্বাধীনতা চায় কিন্তু বাবার একাকিত্ব ভয় করে\",\"relationship\":\"পিতা-কন্যা, যত্নের বন্ধনে আবদ্ধ\",\"internal_conflict\":\"আগামী কামনা করে তবুও বাস্তবতার ভয়\",\"behavior\":\"চোখ উঁচুতে রেখে বাবা দেখে না\",\"emotional_change\":\"নির্ভরশীলতা থেকে স্বাধীনতার দিকে ধীরে ধীরে এগোচ্ছে\",\"name\":\"নীরা\",\"biography\":\"২৭ বছর বয়সী, ঢাকার কাঁঠালবাগানের বাসিন্দা, রাজশাহীতে চাকরি খুঁজছে\"},{\"id\":\"H\",\"want\":\"মেয়ের সুখ ও উন্নতি\",\"need\":\"পরিবারের যত্ন ও সাহায্য\",\"fear\":\"একা থাকা ও মেয়ে ভুলে যাওয়া\",\"contradiction\":\"চাকরি দিতে চায় কিন্তু একা থাকার গভীর ভয় লুকিয়ে রাখে\",\"relationship\":\"কন্যা এবং কৃত্রিম ত্যাগ নয়, প্রকৃত যত্নের বন্ধনে আবদ্ধ\",\"internal_conflict\":\"মেয়ের স্বপ্ন পূরণ করতে চান কিন্তু নিজের একাকিত্ব ভয়ে দীর্ঘস্থায়ী সংশয়ে আটকে থাকেন\",\"behavior\":\"ব্যাগের হাতল সারিয়ে বাসের টিকিট লাল টিনের বাক্সে রাখেন\",\"emotional_change\":\"আত্মবিশ্বাস থেকে ক্রমশ দুর্বল হয়ে পড়ছেন, একা থাকা ভয় করে\",\"name\":\"হাসান\",\"biography\":\"৫৮ বছর বয়সী দর্জি, মেয়ের চাকরি সমর্থন করেন কিন্তু একা থাকার ভয়ে সংকেত লুকিয়ে রাখেন\"}],\"conflict_stakes\":\"নীরা চাকরি পাবে কি না এবং হাসান একা থাকা ভয় ও মেয়ের স্বপ্নের মধ্যে কীভাবে ভারসাম্য বজায় রাখবেন\",\"dramatic_question\":\"হাসানের এই গোপন ভয়ে নীরা কি কখনো সত্যিকারের স্বাধীনতা পাবে, নাকি বাবার আশঙ্কাই তার পথ চাপিয়ে দেবে?\",\"initial_knowledge\":{\"N\":[\"JOB_RAJ\",\"ROOM_EAST_WINDOW\",\"ROOM_WEST_DOOR\",\"ROOM_NORTH_KITCHEN\"],\"H\":[\"JOB_RAJ\",\"TICKET_HIDDEN\",\"ROOM_EAST_WINDOW\",\"ROOM_WEST_DOOR\",\"ROOM_NORTH_KITCHEN\"]},\"logline\":\"ঢাকায় বাবা মেয়ের স্বপ্ন পূরণ করতে চান, কিন্তু একা থাকার ভয় লুকিয়ে রাখেন; নীরা জানে না বাবার গোপন সিদ্ধান্তটি।\",\"relationship_dynamics\":\"পিতা-কন্যার সম্পর্কে ভালোবাসা ও আত্মনির্ভরশীলতার মিশ্রণ, যত্নের বন্ধনে আবদ্ধ কিন্তু স্বাধীনতার দিকে এগিয়ে যাচ্ছেন\",\"schema_version\":1,\"theme\":\"স্বাধীনতা এবং একাকিত্বের সংঘাত\",\"unresolved_questions\":[\"হাসান কি সত্যিকারভাবে নীরাকে একা রাখতে পারবেন?\",\"নীরা কি বাবার ভয় বুঝবে?\"]}"
+        },
+        {
+          "name": "act_1",
+          "original_raw": "[{\"id\":\"B1\",\"act\":1,\"actor\":\"H\",\"goal\":\"মেয়ের ব্যাগ ঠিক করা\",\"choice\":\"হাতল বঁধে টান দিলেন\",\"cause\":\"brief\",\"consequence\":\"ব্যাগের আকৃতি ঠিক হলো\",\"action\":\"ঝরে সারলেন হাতলটি\",\"location\":\"রুম_পশ্চিম_দরজা\",\"sound\":\"তোরায়_জোঁক\",\"emotion\":\"সম্মানিত\",\"before\":{\"progress\":\"ব্যাগ_হাতল_লাগে_নাই\"},\"after\":{\"progress\":\"ব্যাগ_হাতল_ঠিক_হয়েছে\"},\"requires\":{},\"learns\":{},\"plants\":[],\"payoffs\":[],\"emotion_setups\":[],\"subtle_emotion\":false,\"humor\":\"\",\"humor_motivation\":\"\"},{\"id\":\"B2\",\"act\":1,\"actor\":\"H\",\"goal\":\"টিকিট লুকানো\",\"choice\":\"লাল_টিবুতে_রাজনীতি_করে_লেন\",\"cause\":\"B1\",\"consequence\":\"সকালের_প্ল্যান_গোপন\",\"action\":\"হাতে_হাতে_লাল_টিবু_ধরলেন\",\"location\":\"রুম_উত্তর_রান্নাঘর\",\"sound\":\"কাঁচের_ফিস-ফাস\",\"emotion\":\"অস্থির\",\"before\":{\"progress\":\"ব্যাগ_হাতল_ঠিক_হয়েছে\"},\"after\":{\"progress\":\"টিকিট_লাল_টিবুতে_দেখালেন_না\"},\"requires\":{},\"learns\":{},\"plants\":[\"TICKET_BOX_HIDDEN\"],\"payoffs\":[],\"emotion_setups\":[],\"subtle_emotion\":false,\"humor\":\"\",\"humor_motivation\":\"\"},{\"id\":\"B3\",\"act\":1,\"actor\":\"N\",\"goal\":\"সকালের_প্রস্তুতি\",\"choice\":\"ব্যাগের_হাতল_বাঁধা_দিলে_ও_টিকিট_নয়\",\"cause\":\"B2\",\"consequence\":\"চোখ_উঁচুতে_রইলেন\",\"action\":\"ব্যাগের_কানে_কাটা_সম্পন্ন_করে_নতুন_হাতল_বাঁধল\",\"location\":\"রুম_পশ্চিম_দরজা\",\"sound\":\"সূঁড়ির_হুঁক\",\"emotion\":\"নির্ভরশীল\",\"before\":{\"progress\":\"টিকিট_লাল_টিবুতে_দেখালেন_না\"},\"after\":{\"progress\":\"ব্যাগ_তৈরি,_টিকিট_অজানা\"},\"requires\":{},\"learns\":{},\"plants\":[],\"payoffs\":[],\"emotion_setups\":[],\"subtle_emotion\":false,\"humor\":\"\",\"humor_motivation\":\"\"},{\"id\":\"B4\",\"act\":1,\"actor\":\"H\",\"goal\":\"বাসের_সময়\",\"choice\":\"লাল_টিবু_হাতে_ধরে_খাবার_দিলেন\",\"cause\":\"B2\",\"consequence\":\"মেয়েকে_জানালেন_না_কেন_দিলেন\",\"action\":\"বিশ্লেষিত_ভাষায়_টিনের_খাবার_দিলেন\",\"location\":\"রুম_পশ্চিম_দরজা\",\"sound\":\"মোবাইল_বাজছে\",\"emotion\":\"উদ্বেগ\",\"before\":{\"progress\":\"ব্যাগ_তৈরি,_টিকিট_অজানা\"},\"after\":{\"progress\":\"খাবার_হাতে,_মেয়ে_স্বপ্নে_আছে\"},\"requires\":{},\"learns\":{},\"plants\":[],\"payoffs\":[],\"emotion_setups\":[\"B1\"],\"subtle_emotion\":true,\"humor\":\"বাবা_টিবু_ধরে_কেন?_নীরা_হেসে_লইল_‘সংকেত’_দিলেন_না\",\"humor_motivation\":\"বাবার_গোপন_ভয়_মেয়ের_জিজ্ঞাসায়_ঝুলে_আছে\"}]"
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "artifact_kind": "story_prefix_continuation",
+      "sections": [
+        {
+          "name": "foundation",
+          "original_raw": "{\"assumptions\":[\"বাস ভাঙ্গতে পারে (যেকোনো সময়)\"],\"characters\":[{\"id\":\"N\",\"want\":\"চাকরি পেয়ে স্বাবলম্বী হওয়া\",\"need\":\"বাবার আশীর্বাদ ও সম্মান\",\"fear\":\"অনাদৃত হয়ে ফিরে আসা\",\"contradiction\":\"স্বাধীনতা চায় কিন্তু বাবার একাকিত্ব ভয় করে\",\"relationship\":\"পিতা-কন্যা, যত্নের বন্ধনে আবদ্ধ\",\"internal_conflict\":\"আগামী কামনা করে তবুও বাস্তবতার ভয়\",\"behavior\":\"চোখ উঁচুতে রেখে বাবা দেখে না\",\"emotional_change\":\"নির্ভরশীলতা থেকে স্বাধীনতার দিকে ধীরে ধীরে এগোচ্ছে\",\"name\":\"নীরা\",\"biography\":\"২৭ বছর বয়সী, ঢাকার কাঁঠালবাগানের বাসিন্দা, রাজশাহীতে চাকরি খুঁজছে\"},{\"id\":\"H\",\"want\":\"মেয়ের সুখ ও উন্নতি\",\"need\":\"পরিবারের যত্ন ও সাহায্য\",\"fear\":\"একা থাকা ও মেয়ে ভুলে যাওয়া\",\"contradiction\":\"চাকরি দিতে চায় কিন্তু একা থাকার গভীর ভয় লুকিয়ে রাখে\",\"relationship\":\"কন্যা এবং কৃত্রিম ত্যাগ নয়, প্রকৃত যত্নের বন্ধনে আবদ্ধ\",\"internal_conflict\":\"মেয়ের স্বপ্ন পূরণ করতে চান কিন্তু নিজের একাকিত্ব ভয়ে দীর্ঘস্থায়ী সংশয়ে আটকে থাকেন\",\"behavior\":\"ব্যাগের হাতল সারিয়ে বাসের টিকিট লাল টিনের বাক্সে রাখেন\",\"emotional_change\":\"আত্মবিশ্বাস থেকে ক্রমশ দুর্বল হয়ে পড়ছেন, একা থাকা ভয় করে\",\"name\":\"হাসান\",\"biography\":\"৫৮ বছর বয়সী দর্জি, মেয়ের চাকরি সমর্থন করেন কিন্তু একা থাকার ভয়ে সংকেত লুকিয়ে রাখেন\"}],\"conflict_stakes\":\"নীরা চাকরি পাবে কি না এবং হাসান একা থাকা ভয় ও মেয়ের স্বপ্নের মধ্যে কীভাবে ভারসাম্য বজায় রাখবেন\",\"dramatic_question\":\"হাসানের এই গোপন ভয়ে নীরা কি কখনো সত্যিকারের স্বাধীনতা পাবে, নাকি বাবার আশঙ্কাই তার পথ চাপিয়ে দেবে?\",\"initial_knowledge\":{\"N\":[\"JOB_RAJ\",\"ROOM_EAST_WINDOW\",\"ROOM_WEST_DOOR\",\"ROOM_NORTH_KITCHEN\"],\"H\":[\"JOB_RAJ\",\"TICKET_HIDDEN\",\"ROOM_EAST_WINDOW\",\"ROOM_WEST_DOOR\",\"ROOM_NORTH_KITCHEN\"]},\"logline\":\"ঢাকায় বাবা মেয়ের স্বপ্ন পূরণ করতে চান, কিন্তু একা থাকার ভয় লুকিয়ে রাখেন; নীরা জানে না বাবার গোপন সিদ্ধান্তটি।\",\"relationship_dynamics\":\"পিতা-কন্যার সম্পর্কে ভালোবাসা ও আত্মনির্ভরশীলতার মিশ্রণ, যত্নের বন্ধনে আবদ্ধ কিন্তু স্বাধীনতার দিকে এগিয়ে যাচ্ছেন\",\"schema_version\":1,\"theme\":\"স্বাধীনতা এবং একাকিত্বের সংঘাত\",\"unresolved_questions\":[\"হাসান কি সত্যিকারভাবে নীরাকে একা রাখতে পারবেন?\",\"নীরা কি বাবার ভয় বুঝবে?\"]}"
+        },
+        {
+          "name": "act_1",
+          "original_raw": "[{\"id\":\"B1\",\"act\":1,\"actor\":\"H\",\"goal\":\"মেয়ের ব্যাগ ঠিক করা\",\"choice\":\"হাতল বঁধে টান দিলেন\",\"cause\":\"brief\",\"consequence\":\"ব্যাগের আকৃতি ঠিক হলো\",\"action\":\"ঝরে সারলেন হাতলটি\",\"location\":\"রুম_পশ্চিম_দরজা\",\"sound\":\"তোরায়_জোঁক\",\"emotion\":\"সম্মানিত\",\"before\":{\"progress\":\"ব্যাগ_হাতল_লাগে_নাই\"},\"after\":{\"progress\":\"ব্যাগ_হাতল_ঠিক_হয়েছে\"},\"requires\":{},\"learns\":{},\"plants\":[],\"payoffs\":[],\"emotion_setups\":[],\"subtle_emotion\":false,\"humor\":\"\",\"humor_motivation\":\"\"},{\"id\":\"B2\",\"act\":1,\"actor\":\"H\",\"goal\":\"টিকিট লুকানো\",\"choice\":\"লাল_টিবুতে_রাজনীতি_করে_লেন\",\"cause\":\"B1\",\"consequence\":\"সকালের_প্ল্যান_গোপন\",\"action\":\"হাতে_হাতে_লাল_টিবু_ধরলেন\",\"location\":\"রুম_উত্তর_রান্নাঘর\",\"sound\":\"কাঁচের_ফিস-ফাস\",\"emotion\":\"অস্থির\",\"before\":{\"progress\":\"ব্যাগ_হাতল_ঠিক_হয়েছে\"},\"after\":{\"progress\":\"টিকিট_লাল_টিবুতে_দেখালেন_না\"},\"requires\":{},\"learns\":{},\"plants\":[\"TICKET_BOX_HIDDEN\"],\"payoffs\":[],\"emotion_setups\":[],\"subtle_emotion\":false,\"humor\":\"\",\"humor_motivation\":\"\"},{\"id\":\"B3\",\"act\":1,\"actor\":\"N\",\"goal\":\"সকালের_প্রস্তুতি\",\"choice\":\"ব্যাগের_হাতল_বাঁধা_দিলে_ও_টিকিট_নয়\",\"cause\":\"B2\",\"consequence\":\"চোখ_উঁচুতে_রইলেন\",\"action\":\"ব্যাগের_কানে_কাটা_সম্পন্ন_করে_নতুন_হাতল_বাঁধল\",\"location\":\"রুম_পশ্চিম_দরজা\",\"sound\":\"সূঁড়ির_হুঁক\",\"emotion\":\"নির্ভরশীল\",\"before\":{\"progress\":\"টিকিট_লাল_টিবুতে_দেখালেন_না\"},\"after\":{\"progress\":\"ব্যাগ_তৈরি,_টিকিট_অজানা\"},\"requires\":{},\"learns\":{},\"plants\":[],\"payoffs\":[],\"emotion_setups\":[],\"subtle_emotion\":false,\"humor\":\"\",\"humor_motivation\":\"\"},{\"id\":\"B4\",\"act\":1,\"actor\":\"H\",\"goal\":\"বাসের_সময়\",\"choice\":\"লাল_টিবু_হাতে_ধরে_খাবার_দিলেন\",\"cause\":\"B2\",\"consequence\":\"মেয়েকে_জানালেন_না_কেন_দিলেন\",\"action\":\"বিশ্লেষিত_ভাষায়_টিনের_খাবার_দিলেন\",\"location\":\"রুম_পশ্চিম_দরজা\",\"sound\":\"মোবাইল_বাজছে\",\"emotion\":\"উদ্বেগ\",\"before\":{\"progress\":\"ব্যাগ_তৈরি,_টিকিট_অজানা\"},\"after\":{\"progress\":\"খাবার_হাতে,_মেয়ে_স্বপ্নে_আছে\"},\"requires\":{},\"learns\":{},\"plants\":[],\"payoffs\":[],\"emotion_setups\":[\"B1\"],\"subtle_emotion\":true,\"humor\":\"বাবা_টিবু_ধরে_কেন?_নীরা_হেসে_লইল_‘সংকেত’_দিলেন_না\",\"humor_motivation\":\"বাবার_গোপন_ভয়_মেয়ের_জিজ্ঞাসায়_ঝুলে_আছে\"}]"
+        },
+        {
+          "name": "act_2",
+          "original_raw": "[{\"id\":\"B5\",\"act\":2,\"actor\":\"H\",\"goal\":\"খাবার_সাজানো\",\"choice\":\"দুই_হাত_ব্যাপিয়ে_খাবার_থাকেননি\",\"cause\":\"লাল_টিবু_হাতে_ধরে_খাবার_দিলেন\",\"consequence\":\"প্লেটের_ঘর_কাঁচা_বেশেছে\",\"action\":\"মৃদু_স্পর্শে_প্লেট_ভরা_করা_আলনাতে_হেলানো\", \"location\":\"খাবারের_আলনা\",\"sound\":\"চামড়া_ঘষানোর_ধ্বনি\",\"emotion\":\"অস্থিরতা\",\"before\":{\"progress\":\"খাবার_হাতে,_মেয়ে_স্বপ্নে_আছে\"},\"after\":{\"progress\":\"প্লেট_ভরা,_হাসানের_চোখে_অস্থিরতা\"}, \"requires\": {\"H\": [\"TICKET_BOX_HIDDEN\"]}, \"learns\": {}, \"plants\": [], \"payoffs\": [], \"emotion_setups\": [], \"subtle_emotion\": true, \"humor\": \"\", \"humor_motivation\": \"\"},{\"id\":\"B6\",\"act\":2,\"actor\":\"N\",\"goal\":\"খাবার_ভরা_করুন\",\"choice\":\"বাতাসের_ধারে_প্লেট_হয়নি\",\"cause\":\"লাল_টিবু_হাতে_ধরে_খাবার_দিলেন\",\"consequence\":\"মেয়েকে_জানালেন_না_কেন_দিলেন\",\"action\":\"চোখ_উঁচুতে_প্লেট_হয়নি\", \"location\":\"খাবারের_আলনা\",\"sound\":\"স্নিগ্ধ_শব্দ\",\"emotion\":\"বিবেকান্বিত\",\"before\":{\"progress\":\"প্লেট_ভরা,_হাসানের_চোখে_অস্থিরতা\"},\"after\":{\"progress\":\"প্লেট_খালি,_নীরা_চুপ\"}, \"requires\": {\"N\": [\"JOB_RAJ\", \"ROOM_EAST_WINDOW\"]}, \"learns\": {}, \"plants\": [], \"payoffs\": [], \"emotion_setups\": [], \"subtle_emotion\": true, \"humor\": \"\", \"humor_motivation\": \"\"},{\"id\":\"B7\",\"act\":2,\"actor\":\"H\",\"goal\":\"তথ্য_দেওয়া\",\"choice\":\"বাকি_ধরা_হয়নি\",\"cause\":\"প্লেট_ভরা,_হাসানের_চোখে_অস্থিরতা\",\"consequence\":\"ব্যাগের_হাতল_সারানো_করেননি\",\"action\":\"ব্যাগের_হাতল_সারানো_করেননি\", \"location\":\"খাবারের_আলনা\",\"sound\":\"কাপড়ের_ধ্বনি\",\"emotion\":\"ভয়\",\"before\":{\"progress\":\"প্লেট_ভরা,_হাসানের_চোখে_অস্থিরতা\"},\"after\":{\"progress\":\"ব্যাগ_সাজানো,_মেয়ে_স্বপ্নে_আছে\"}, \"requires\": {\"H\": [\"TICKET_BOX_HIDDEN\"]}, \"learns\": {}, \"plants\": [], \"payoffs\": [], \"emotion_setups\": [], \"subtle_emotion\": false, \"humor\": \"\", \"humor_motivation\": \"\"},{\"id\":\"B8\",\"act\":2,\"actor\":\"N\",\"goal\":\"ব্যাগ_দেওয়া\",\"choice\":\"হাত_সোজা_করেননি\",\"cause\":\"ব্যাগ_সাজানো,_মেয়ে_স্বপ্নে_আছে\",\"consequence\":\"চাবি_ঘরে_থাকল\",\"action\":\"চাবি_ঘরে_থাকল\", \"location\":\"খাবারের_আলনা\",\"sound\":\"ঘড়ির_ধ্বনি\",\"emotion\":\"শান্তি\",\"before\":{\"progress\":\"ব্যাগ_সাজানো,_মেয়ে_স্বপ্নে_আছে\"},\"after\":{\"progress\":\"চাবি_ঘরে_থাকল,_নীরা_প্রস্তুত\"}, \"requires\": {\"N\": [\"JOB_RAJ\", \"ROOM_EAST_WINDOW\"]}, \"learns\": {}, \"plants\": [], \"payoffs\": [], \"emotion_setups\": [], \"subtle_emotion\": false, \"humor\": \"\", \"humor_motivation\": \"\"}]"
+        }
+      ]
+    }
+  ],
+  "review_form": {
+    "reviewer_type": null,
+    "reviewer": null,
+    "expertise": null,
+    "independent": null,
+    "qualified_for_role": null,
+    "modes": [],
+    "examined_samples": [],
+    "criteria": {
+      "defect_precision": {
+        "passed": null,
+        "finding": null,
+        "evidence": []
+      },
+      "defect_recall": {
+        "passed": null,
+        "finding": null,
+        "evidence": []
+      },
+      "grounded_evidence": {
+        "passed": null,
+        "finding": null,
+        "evidence": []
+      },
+      "uncertainty": {
+        "passed": null,
+        "finding": null,
+        "evidence": []
+      },
+      "cross_media_consistency": {
+        "passed": null,
+        "finding": null,
+        "evidence": []
+      }
+    }
+  },
+  "human_review_completed": false,
+  "model_review_completed": false,
+  "limitations": [
+    "Metadata-blind only; prose or public repository lookup may identify a sample. Do not provide owner key to reviewer.",
+    "Do not approve quality merely because an automated guard accepts a source.",
+    "No complete story or ending: abstain from whole-story/ending judgment.",
+    "No audiovisual media: abstain from visual/listening claims.",
+    "No numeric creative ratings, expert identity, precision/recall rate or acceptance has been supplied."
+  ],
+  "review_task": "Inspect exact raw field content. For each supported finding name sample, beat/path, exact quote, error class, preceding source evidence, uncertainty and minimal targeted requirement. Do not rewrite passages or edit owner locks."
+}

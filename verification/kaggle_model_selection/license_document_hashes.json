@@ -1,0 +1,201 @@
+{
+  "qwen35_27": {
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [
+      {
+        "path": "LICENSE",
+        "source": "https://huggingface.co/Qwen/Qwen3.5-27B/raw/fc05daec18b0a78c049392ed2e771dde82bdf654/LICENSE",
+        "bytes_read": 11343,
+        "sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32",
+        "status": "public_license_text_retrieved_no_terms_accepted"
+      }
+    ],
+    "license_url_in_card": "https://huggingface.co/Qwen/Qwen3.5-27B/blob/main/LICENSE"
+  },
+  "qwen35_moe": {
+    "repo": "Qwen/Qwen3.5-35B-A3B",
+    "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [
+      {
+        "path": "LICENSE",
+        "source": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B/raw/59d61f3ce65a6d9863b86d2e96597125219dc754/LICENSE",
+        "bytes_read": 11544,
+        "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+        "status": "public_license_text_retrieved_no_terms_accepted"
+      }
+    ],
+    "license_url_in_card": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B/blob/main/LICENSE"
+  },
+  "qwen36_27": {
+    "repo": "Qwen/Qwen3.6-27B",
+    "revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [
+      {
+        "path": "LICENSE",
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B/raw/8f33b98937c6031bb49e713dee3e8e185aafd26f/LICENSE",
+        "bytes_read": 11343,
+        "sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32",
+        "status": "public_license_text_retrieved_no_terms_accepted"
+      }
+    ],
+    "license_url_in_card": "https://huggingface.co/Qwen/Qwen3.6-27B/blob/main/LICENSE"
+  },
+  "qwen35_9": {
+    "repo": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [
+      {
+        "path": "LICENSE",
+        "source": "https://huggingface.co/Qwen/Qwen3.5-9B/raw/c202236235762e1c871ad0ccb60c8ee5ba337b9a/LICENSE",
+        "bytes_read": 11544,
+        "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+        "status": "public_license_text_retrieved_no_terms_accepted"
+      }
+    ],
+    "license_url_in_card": "https://huggingface.co/Qwen/Qwen3.5-9B/blob/main/LICENSE"
+  },
+  "gemma3_27": {
+    "repo": "google/gemma-3-27b-it",
+    "revision": "005ad3404e59d6023443cb575daa05336842228a",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": null
+  },
+  "gemma3_12": {
+    "repo": "google/gemma-3-12b-it",
+    "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": null
+  },
+  "flux2_klein4": {
+    "repo": "black-forest-labs/FLUX.2-klein-4B",
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [
+      {
+        "path": "LICENSE.md",
+        "source": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/raw/e7b7dc27f91deacad38e78976d1f2b499d76a294/LICENSE.md",
+        "bytes_read": 9584,
+        "sha256": "ca02bc51900ab07789d1b70283329e7137f5af98f5161c23a1c81fc38a4af1fe",
+        "status": "public_license_text_retrieved_no_terms_accepted"
+      }
+    ],
+    "license_url_in_card": null
+  },
+  "z_image_turbo": {
+    "repo": "Tongyi-MAI/Z-Image-Turbo",
+    "revision": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": null
+  },
+  "wan_animate2": {
+    "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+    "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": null
+  },
+  "wan_animate2_distilled": {
+    "repo": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+    "revision": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": null
+  },
+  "wan22_5": {
+    "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "revision": "b8fff7315c768468a5333511427288870b2e9635",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": null
+  },
+  "ltx25": {
+    "repo": "Lightricks/LTX-2.5",
+    "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": "https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x"
+  },
+  "svd_xt": {
+    "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+    "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [
+      {
+        "path": "LICENSE.md",
+        "source": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/9e43909513c6714f1bc78bcb44d96e733cd242aa/LICENSE.md",
+        "bytes_read": 11852,
+        "sha256": "d6f6b1a4dce5c852bd6d7d9482d002baf0ccdb71e662250b73be9eec8764ee8d",
+        "status": "public_license_text_retrieved_no_terms_accepted"
+      }
+    ],
+    "license_url_in_card": "LICENSE.md"
+  },
+  "indic_speak": {
+    "repo": "bodhan-ai/indic-speak",
+    "revision": "76e0814f189321efe550011850cd288dae366aad",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": null
+  },
+  "indicf5": {
+    "repo": "ai4bharat/IndicF5",
+    "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": null
+  },
+  "indic_parler": {
+    "repo": "ai4bharat/indic-parler-tts",
+    "revision": "660bc53c64ae83150613264111708a0465211237",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": null
+  },
+  "ace15": {
+    "repo": "ACE-Step/Ace-Step1.5",
+    "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [],
+    "license_url_in_card": null
+  },
+  "stable_audio_small": {
+    "repo": "stabilityai/stable-audio-open-small",
+    "revision": "ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3",
+    "owner_acceptance": false,
+    "access_requested": false,
+    "documents": [
+      {
+        "path": "LICENSE",
+        "source": "https://huggingface.co/stabilityai/stable-audio-open-small/raw/ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3/LICENSE",
+        "status": "unavailable_no_access_acceptance_attempted",
+        "error_type": "HTTPError"
+      }
+    ],
+    "license_url_in_card": "LICENSE"
+  }
+}

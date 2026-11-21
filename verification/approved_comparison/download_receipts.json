@@ -1,0 +1,16 @@
+[
+  {
+    "file": "qwen3.5-download.log",
+    "bytes": 297328,
+    "sha256": "0ec7066fb201488d50bce82ecd56f92e7a040814aafb21fe2dcbfdfa2c12ecde",
+    "local_full_log": "phase3_runs/approved_comparison/download_logs/qwen3.5-download.log",
+    "result": "Pull completed; exact manifest and every blob verified separately in installation JSON."
+  },
+  {
+    "file": "gemma3-download.log",
+    "bytes": 251891,
+    "sha256": "cbf93e10a766042df02d9b56dcbd797191f5d9d2f5ea05a06fc289583b1ef7b4",
+    "local_full_log": "phase3_runs/approved_comparison/download_logs/gemma3-download.log",
+    "result": "Pull completed; exact manifest and every blob verified separately in installation JSON."
+  }
+]

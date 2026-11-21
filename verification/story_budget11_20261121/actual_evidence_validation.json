@@ -1,0 +1,46 @@
+{
+  "scope": "New actual evidence CPU replay only; no model/runtime/GPU/network execution",
+  "checks": {
+    "historical_seven_records_and_amendments_unchanged": "PASS",
+    "budget11_amendment_binds_exact_baseline": "PASS",
+    "exactly_two_new_calls_no_dependent_calls": "PASS",
+    "foundation_v2_entire_receipt_unchanged": "PASS",
+    "runtime_source_hash_matches_executed_export": "PASS",
+    "all_three_authorized_artifact_receipts_match": "PASS",
+    "existing_handoff_guard_unchanged": "PASS",
+    "act_1_raw_http_response_content_hash_identity": "PASS",
+    "act_1_request_and_reservation_provenance": "PASS",
+    "act_1_unchanged_generation_limits_and_nontruncation": "PASS",
+    "act_1_original_case_schema_valid": "PASS",
+    "act_1_completed_handoff_reproduced": "PASS",
+    "act_2_raw_http_response_content_hash_identity": "PASS",
+    "act_2_request_and_reservation_provenance": "PASS",
+    "act_2_unchanged_generation_limits_and_nontruncation": "PASS",
+    "act_2_original_case_schema_valid": "PASS",
+    "act_2_exact_failed_handoff_reproduced": "PASS",
+    "workers_stopped_and_no_compute_process_left": "PASS",
+    "failed_act2_blocks_act3_reservation_without_call": "PASS"
+  },
+  "check_groups_passed": 19,
+  "previous_model_calls": 7,
+  "new_model_calls": 2,
+  "consumed": 9,
+  "ceiling": 11,
+  "remaining_arithmetic": 2,
+  "remaining_allocation": [
+    "act_3",
+    "reflection"
+  ],
+  "remaining_calls_eligible_now": 0,
+  "act2_retry_authorized": false,
+  "act2_finding_counts": {
+    "earlier_causal_reference_required": 4,
+    "knowledge_not_established": 2,
+    "predecessor_state_mismatch": 1
+  },
+  "full_story_generated": false,
+  "complete_story_15_criterion_qc": "NOT RUN",
+  "independent_human_review": "PENDING",
+  "producer_owner_acceptance": "PENDING",
+  "production_ready": false
+}

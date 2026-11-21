@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-02",
+  "project_id": "82369edeb80d45d1a840a864437e3206",
+  "shot_id": "Q006",
+  "asset_id": "21a4444b84d944a68a0ee4a9567421c1",
+  "native_media": {
+    "seconds": 5.0625,
+    "streams": [
+      {
+        "codec_type": "video",
+        "codec_name": "h264",
+        "width": 832,
+        "height": 480
+      }
+    ]
+  },
+  "full_decode": "passed",
+  "file_sha256": "c8800d1aa9ac5c180bdc7a0f527c8b9f386e4d2f7b29a1b6784ab17e2a34598b",
+  "engine": "zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+  "cost_usd": 0,
+  "paid_api": false,
+  "audio_present": false,
+  "visual_review": "Agent inspected five 1-second-spaced frames: photographic human/environment retained, small gaze/head movement and camera reframing. Requested tight close-up not achieved; stays medium-wide. This is not a paired dramatic performance pass.",
+  "voice_test": "Not submitted: Indic Parler discovery returned HTTP 500. Config reachability does not establish usable inference.",
+  "representative_scene_passed": false,
+  "publication_authorized": false,
+  "recovery": "Actual downloaded file existed; old post-download duration check imported Streamlit via legacy media helper, unavailable in this isolated worker. Recovered without another GPU submission. Adapter now uses independent FFprobe and preserves download path/hash before validation.",
+  "software_checks": "6 remote-GPU unit tests passed, including new download-preservation regression.",
+  "asset_metadata": {
+    "cost_usd": 0,
+    "engine": "Wan2.2 FP8 AOTI on existing anonymous ZeroGPU Space",
+    "output_kind": "photorealistic_neural_video",
+    "paid_api": false,
+    "probe": {
+      "seconds": 5.0625,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "height": 480,
+          "width": 832
+        }
+      ]
+    },
+    "recovered_download": true,
+    "rights_note": "Internal authorized sample only; wrapper/adapter rights need review before publication.",
+    "rights_scope": "internal_test",
+    "rights_url": "https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B",
+    "sample_only": true,
+    "source_reference_sha256": "ee45eb8d77397cea57c0cade8a6e3d16fd85e12d07ea86e90da7cf67e246d374"
+  },
+  "library_mp4_url": "https://chatgpt.com/library?file_id=libfile_9eea459982e081918504b77dc4c326d0&account_id=personal",
+  "black_frame_detection": "No intervals detected at pix_th=0.10, d=0.2s",
+  "freeze_detection": "No intervals detected at -50dB, d=1s"
+}

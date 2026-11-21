@@ -1,0 +1,160 @@
+{
+  "name": "trial_director_compact",
+  "agent": "director",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "device": "CPU",
+  "request": {
+    "agent": "director",
+    "instructions": "Review the ACTUAL source screenplay critically. Return {\"strengths\":[str],\"findings\":[{\"criterion\":str,\"quote\":str,\"issue\":str,\"instruction\":str}]}. Up to THREE issues. Criteria: logic, natural Bengali dialogue, emotion, humor, hook/cliffhanger, pacing. Quote COPY EXACTLY from source. Prefer concrete problems to praise. If wording is unnatural, explain a specific colloquial alternative. This is model criticism, not human approval.",
+    "brief": {
+      "title": "একটা ছাতা",
+      "premise": "ঢাকার বৃষ্টির সকাল। রাশেদ (৩২) ও তানিয়া (২৯) বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নয়।",
+      "genre": "family drama",
+      "tone": "natural Bangladeshi Bengali, restrained emotion, gentle character wit"
+    },
+    "experimental_source": {
+      "title": "একটা ছাতা",
+      "hook": {
+        "image": "তানিiflowerা বাসভাড়া থেকে বাইরে যাচ্ছে, রাশেদের ছাতা হাতে দেখা যাচ্ছে কিন্তু তার মুখে না",
+        "question": "তানিiflowerা কেন ছাতা দেখে বিস্ময় করে?",
+        "payoff": "রাশেদ তার ছাতা দেখেছে কিন্তু তানিiflowerা জানে না"
+      },
+      "characters": [
+        {
+          "name": "রাশেদ",
+          "want": "অফিসে জরুরি উপস্থিতি করতে পারে",
+          "voice": "স্থায়ী, সামান্য ক্ষুদ্র হাসি"
+        },
+        {
+          "name": "তানিiflowerা",
+          "want": "চাকরির সাক্ষাৎকার পাওয়া",
+          "voice": "সামান্য বিস্ময়, স্বাভাবিক হাসি"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "s1",
+          "heading": "INT. বাসভাড়া - সকাল",
+          "seconds": 30,
+          "objective": "রাশেদ ছাতা নিয়ে বাইরে যায়",
+          "obstacle": "তানিiflowerা বাইরে যাচ্ছে না",
+          "turn": "তানিiflowerা ছাতা দেখে মুখে হাসি দেয়",
+          "consequence": "তানিiflowerা বাইরে যায় না",
+          "beats": [
+            {
+              "type": "action",
+              "text": "রাশেদ ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "তানিiflowerা",
+              "text": "ওই ছাতা আগে কখন দেখেছিলি?"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "রাশেদ",
+              "text": "কাল রাতে হাতে ছিল না, আজ পরে হাতে আসল।"
+            }
+          ],
+          "sound": {
+            "music": "সাদা সামান্য বাজনা",
+            "sfx": "বৃষ্টির শব্দ, ছাতা বাজানোর শব্দ"
+          }
+        },
+        {
+          "id": "s2",
+          "heading": "EXT. বাসভাড়া দরজা - সকাল",
+          "seconds": 30,
+          "objective": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়",
+          "obstacle": "স্ক্রিনে রাশেদের ছাতা দেখা যায়",
+          "turn": "তানিiflowerা স্ক্রিন বন্ধ করে দেয়",
+          "consequence": "রাশেদ ফেরত আসে, ছাতা হাতে না দেখা যায়",
+          "beats": [
+            {
+              "type": "action",
+              "text": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়, স্ক্রিনে রাশেদের ছাতা দেখা যায়।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "তানিiflowerা",
+              "text": "আমি কি কোনো ছাতা দেখেছি?"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "রাশেদ",
+              "text": "তুমি ছাতা দেখে না, আমি তো দেখেছি।"
+            }
+          ],
+          "sound": {
+            "music": "সাদা সামান্য বাজনা",
+            "sfx": "স্ক্রিনে ছাতা দেখা, তানিiflowerা হাত বন্ধ করে দেয়"
+          }
+        }
+      ]
+    },
+    "targets": null
+  },
+  "prompt_sha256": "b2f93f01d423049f64ce5a3f3958e33709946e308639de2e881a32858119c974",
+  "raw": "{\n  \"strengths\": [\n    \"Natural Bangladeshi Bengali dialogue in everyday speech patterns\",\n    \"Clear emotional subtext through character actions without exposition\",\n    \"Consistent use of domestic setting to ground family dynamics\"\n  ],\n  \"findings\": [\n    {\n      \"criterion\": \"natural Bengali dialogue\",\n      \"quote\": \"ওই ছাতা আগে কখন দেখেছিলি?\",\n      \"issue\": \"The phrase 'কখন দেখেছিলি' is grammatically correct but lacks the colloquial rhythm of natural Bangladeshi speech. In daily conversation, people would more likely say 'কখন দেখেছিলি আমি?' or 'কখন দেখেছিলি তুমি?' to show ownership and personal inquiry.\",\n      \"instruction\": \"Replace with 'কখন দেখেছিলি তুমি?' to reflect authentic, conversational Bengali tone and avoid impersonal phrasing.\"\n    },\n    {\n      \"criterion\": \"emotion\",\n      \"quote\": \"তানিiflowerা ছাতা দেখে মুখে হাসি দেয়\",\n      \"issue\": \"The emotional response is stated directly and lacks subtlety. In real-life family interactions, such reactions are not expressed through a single, explicit action like 'হাসি দেয়'. A more natural reaction would be a slight pause, a frown, or a quiet look of confusion before any smile, especially when the object is not personally significant.\",\n      \"instruction\": \"Rewrite to: 'তানিiflowerা ছাতা দেখে মুখে হাসি দেয় না, তার চোখে একটা সামান্য অদৃশ্য মুহূর্ত থাকে' to preserve emotional ambiguity and realism.\"\n    },\n    {\n      \"criterion\": \"logic\",\n      \"quote\": \"রাশেদ তুমি ছাতা দেখে না, আমি তো দেখেছি।\",\n      \"issue\": \"The statement contradicts the earlier scene where রাশেদ says 'আজ পরে হাতে আসল' — implying the hat appeared only after a specific time. Yet in the second scene, রাশেদ claims তানিiflowerা didn’t see it, while the screen shows it. This creates a logical inconsistency: if the hat appeared after midnight, and তানিiflowerা saw it in the morning, then the claim that she didn’t see it is false. The timeline is not internally consistent.\",\n      \"instruction\": \"Adjust the dialogue to: 'তুমি ছাতা দেখে না, আমি তো দেখেছি' — but only if the hat is shown in the morning. Otherwise, revise the timeline: রাশেদ should say 'আমি দেখেছি, তুমি দেখেছিলে না' to align with the scene's reality and avoid contradiction.\"\n    }\n  ]\n}",
+  "result": {
+    "strengths": [
+      "Natural Bangladeshi Bengali dialogue in everyday speech patterns",
+      "Clear emotional subtext through character actions without exposition",
+      "Consistent use of domestic setting to ground family dynamics"
+    ],
+    "findings": [
+      {
+        "criterion": "natural Bengali dialogue",
+        "quote": "ওই ছাতা আগে কখন দেখেছিলি?",
+        "issue": "The phrase 'কখন দেখেছিলি' is grammatically correct but lacks the colloquial rhythm of natural Bangladeshi speech. In daily conversation, people would more likely say 'কখন দেখেছিলি আমি?' or 'কখন দেখেছিলি তুমি?' to show ownership and personal inquiry.",
+        "instruction": "Replace with 'কখন দেখেছিলি তুমি?' to reflect authentic, conversational Bengali tone and avoid impersonal phrasing."
+      },
+      {
+        "criterion": "emotion",
+        "quote": "তানিiflowerা ছাতা দেখে মুখে হাসি দেয়",
+        "issue": "The emotional response is stated directly and lacks subtlety. In real-life family interactions, such reactions are not expressed through a single, explicit action like 'হাসি দেয়'. A more natural reaction would be a slight pause, a frown, or a quiet look of confusion before any smile, especially when the object is not personally significant.",
+        "instruction": "Rewrite to: 'তানিiflowerা ছাতা দেখে মুখে হাসি দেয় না, তার চোখে একটা সামান্য অদৃশ্য মুহূর্ত থাকে' to preserve emotional ambiguity and realism."
+      },
+      {
+        "criterion": "logic",
+        "quote": "রাশেদ তুমি ছাতা দেখে না, আমি তো দেখেছি।",
+        "issue": "The statement contradicts the earlier scene where রাশেদ says 'আজ পরে হাতে আসল' — implying the hat appeared only after a specific time. Yet in the second scene, রাশেদ claims তানিiflowerা didn’t see it, while the screen shows it. This creates a logical inconsistency: if the hat appeared after midnight, and তানিiflowerা saw it in the morning, then the claim that she didn’t see it is false. The timeline is not internally consistent.",
+        "instruction": "Adjust the dialogue to: 'তুমি ছাতা দেখে না, আমি তো দেখেছি' — but only if the hat is shown in the morning. Otherwise, revise the timeline: রাশেদ should say 'আমি দেখেছি, তুমি দেখেছিলে না' to align with the scene's reality and avoid contradiction."
+      }
+    ]
+  },
+  "error": "Director quote absent from actual source.",
+  "state": "Failed",
+  "validation": {},
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.4,
+      "num_predict": 1200,
+      "num_ctx": 4096,
+      "seed": 42
+    },
+    "inference_completed": true,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 772,
+    "eval_duration_ns": 94743804000,
+    "prompt_eval_count": 1780,
+    "prompt_eval_duration_ns": 33341423000,
+    "load_duration_ns": 1349867,
+    "total_duration_ns": 128245916785,
+    "finish_reason": "stop",
+    "wall_seconds": 128.25,
+    "raw_sha256": "3c32b1b916850b83cd027cd99fc37076c166a01dcab69adb09f4a461adc6c09a"
+  },
+  "wall_seconds": 128.25,
+  "aggregate_process_peak_rss_bytes": 4024209408,
+  "memory_note": "Sampled aggregate RSS of caller and descendant server/runner, not unique model allocation",
+  "provenance": "local_inference",
+  "source_approval": "Unapproved research candidate only",
+  "production_approved": false,
+  "independent_human_review": false
+}

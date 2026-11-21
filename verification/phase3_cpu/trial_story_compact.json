@@ -1,0 +1,93 @@
+{
+  "name": "trial_story_compact",
+  "agent": "story",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "device": "CPU",
+  "request": {
+    "agent": "story",
+    "instructions": "তিনটি causal beat-এ মূল গল্প তৈরি করুন। প্রতিটি text field সর্বোচ্চ এক ছোট বাক্য। একই বিবাহিত দম্পতি, স্পষ্ট সকাল ও ছাতার অবস্থান বজায় রাখুন। Return {\"title\":str,\"premise\":str,\"characters\":[{\"name\":str,\"want\":str},{\"name\":str,\"want\":str}],\"beats\":[{\"id\":\"b1\",\"action\":str,\"cause\":str,\"consequence\":str},{\"id\":\"b2\",\"action\":str,\"cause\":str,\"consequence\":str},{\"id\":\"b3\",\"action\":str,\"cause\":str,\"consequence\":str}],\"hook\":str,\"cliffhanger\":str}. একটি যৌক্তিক ছোট পরিবর্তন; অনর্থক রহস্য নয়।",
+    "brief": {
+      "title": "একটা ছাতা",
+      "premise": "ঢাকার বৃষ্টির সকাল। রাশেদ (৩২) ও তানিয়া (২৯) বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নয়।",
+      "genre": "family drama",
+      "tone": "natural Bangladeshi Bengali, restrained emotion, gentle character wit"
+    },
+    "experimental_source": null,
+    "targets": null
+  },
+  "prompt_sha256": "d0f7820331cb15be4d7720d3efa165b7da1bc85a9af947413fc2778b1e5cbe4f",
+  "raw": "{\n  \"title\": \"একটা ছাতা\",\n  \"premise\": \"ঢাকার বৃষ্টির সকাল। রাশে ও তানিiflowerা বিবাহিত। তানিiflowerার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নঔ।\",\n  \"characters\": [\n    {\n      \"name\": \"রাশেদ\",\n      \"want\": \"অফিসে জরুরি উপস্থিতি করতে পারে।\"\n    },\n    {\n      \"name\": \"তানিiflowerা\",\n      \"want\": \"চাকরির সাক্ষাৎকার পাওয়া।\"\n    }\n  ],\n  \"beats\": [\n    {\n      \"id\": \"b1\",\n      \"action\": \"রাশেদ ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।\",\n      \"cause\": \"তার অফিসে জরুরি উপস্থিতি।\",\n      \"consequence\": \"তানিiflowerা বাসভাড়া থেকে বাইরে যায় না, তার ছাতা দেখে বিস্ময় করে।\"\n    },\n    {\n      \"id\": \"b2\",\n      \"action\": \"তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়, কিন্তু স্ক্রিনে স্ক্রিন দেখে বন্ধ করে দেয়।\",\n      \"cause\": \"স্ক্রিনে রাশেদের ছাতা দেখা যায়।\",\n      \"consequence\": \"তানিiflowerা বুঝে যায় রাশেদ তার ছাতা দেখেছে।\"\n    },\n    {\n      \"id\": \"b3\",\n      \"action\": \"রাশেদ ফেরত আসে, ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।\",\n      \"cause\": \"তানিiflowerা বলে যায় সাক্ষাৎকার সময় সময় না হয়ে যায়।\",\n      \"consequence\": \"রাশেদ বুঝে যায় তানিiflowerা ছাতা দেখেছে।\"\n    }\n  ],\n  \"hook\": \"তানিiflowerা ছাতা দেখে বিস্ময় করে, কিন্তু রাশেদ তাকে দেখে না।\",\n  \"cliffhanger\": \"ছাতা হাতে রাশেদের মুখে না দেখা যায়, কিন্তু তার সামনে কোনো ছাতা নেই।\"\n}",
+  "result": {
+    "title": "একটা ছাতা",
+    "premise": "ঢাকার বৃষ্টির সকাল। রাশে ও তানিiflowerা বিবাহিত। তানিiflowerার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নঔ।",
+    "characters": [
+      {
+        "name": "রাশেদ",
+        "want": "অফিসে জরুরি উপস্থিতি করতে পারে।"
+      },
+      {
+        "name": "তানিiflowerা",
+        "want": "চাকরির সাক্ষাৎকার পাওয়া।"
+      }
+    ],
+    "beats": [
+      {
+        "id": "b1",
+        "action": "রাশেদ ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।",
+        "cause": "তার অফিসে জরুরি উপস্থিতি।",
+        "consequence": "তানিiflowerা বাসভাড়া থেকে বাইরে যায় না, তার ছাতা দেখে বিস্ময় করে।"
+      },
+      {
+        "id": "b2",
+        "action": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়, কিন্তু স্ক্রিনে স্ক্রিন দেখে বন্ধ করে দেয়।",
+        "cause": "স্ক্রিনে রাশেদের ছাতা দেখা যায়।",
+        "consequence": "তানিiflowerা বুঝে যায় রাশেদ তার ছাতা দেখেছে।"
+      },
+      {
+        "id": "b3",
+        "action": "রাশেদ ফেরত আসে, ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।",
+        "cause": "তানিiflowerা বলে যায় সাক্ষাৎকার সময় সময় না হয়ে যায়।",
+        "consequence": "রাশেদ বুঝে যায় তানিiflowerা ছাতা দেখেছে।"
+      }
+    ],
+    "hook": "তানিiflowerা ছাতা দেখে বিস্ময় করে, কিন্তু রাশেদ তাকে দেখে না।",
+    "cliffhanger": "ছাতা হাতে রাশেদের মুখে না দেখা যায়, কিন্তু তার সামনে কোনো ছাতা নেই।"
+  },
+  "error": "",
+  "state": "Micro-contract valid; experimental candidate, not production contract approval",
+  "validation": {
+    "scope": "CPU micro-benchmark only; artistic merit unverified",
+    "production_approved": false
+  },
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.4,
+      "num_predict": 1200,
+      "num_ctx": 4096,
+      "seed": 42
+    },
+    "inference_completed": true,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 1067,
+    "eval_duration_ns": 116167209000,
+    "prompt_eval_count": 731,
+    "prompt_eval_duration_ns": 16871078000,
+    "load_duration_ns": 3311698301,
+    "total_duration_ns": 136361637760,
+    "finish_reason": "stop",
+    "wall_seconds": 136.408,
+    "raw_sha256": "48b47375ff94ce500f1004496c9b7726ffc9c0ef2a81121ecba0d2579f4ecbb2"
+  },
+  "wall_seconds": 136.41,
+  "aggregate_process_peak_rss_bytes": 3308851200,
+  "memory_note": "Sampled aggregate RSS of caller and descendant server/runner, not unique model allocation",
+  "provenance": "local_inference",
+  "source_approval": "Unapproved research candidate only",
+  "production_approved": false,
+  "independent_human_review": false
+}

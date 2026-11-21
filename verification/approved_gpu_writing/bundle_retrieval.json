@@ -1,0 +1,10 @@
+{
+  "library_file_id": "libfile_159e7a84212c8191b1a64e7ba235082f",
+  "url": "https://chatgpt.com/library?file_id=libfile_159e7a84212c8191b1a64e7ba235082f&account_id=personal",
+  "filename": "REDPAD_Approved_Writing_Trials_Evidence.zip",
+  "bytes": 118957,
+  "sha256": "21b5a7395dded123331dcd252d5abd0af818bd1822f06156cdaa5abed2b9c024",
+  "includes": "Original successful/failed inference receipts, raw HTTP/content, logs, settings and blind reviewer folder; owner identity key separate from reviewer folder",
+  "human_review_completed": false,
+  "professional_accepted": false
+}

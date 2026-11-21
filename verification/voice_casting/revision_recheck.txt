@@ -1,0 +1,6 @@
+test_casting_source_revision_changes_invalidate_voice_handoff (tests.test_voice_casting_integration.VoiceCastingTests.test_casting_source_revision_changes_invalidate_voice_handoff) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.159s
+
+OK

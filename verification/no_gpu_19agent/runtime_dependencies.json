@@ -1,0 +1,312 @@
+{
+  "qwen35_27": {
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "profile_sha256": "50a429c7a44f9e9ddfb48a3c7384bcd97040b9156187730b55c5cbcc175ec0c1",
+    "adapter": "hf_text_nf4",
+    "supported_draft_operations": [
+      "text"
+    ],
+    "precision": "NF4-on-load, FP16 compute, text only",
+    "weight_bytes": 55563022432,
+    "planning_gpu_gib": 24,
+    "planning_ram_gib": 32,
+    "license_metadata": "apache-2.0",
+    "license_conditions": "Apache-2.0 obligations; no terms accepted here.",
+    "gated": false,
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "qwen35_9": {
+    "repo": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "profile_sha256": "22fb1fbde1575c86c0dd3f73ad20f800367ab0909b45ae2354435e2e0e11fbe9",
+    "adapter": "hf_text_nf4",
+    "supported_draft_operations": [
+      "text"
+    ],
+    "precision": "NF4-on-load, FP16 compute, text only",
+    "weight_bytes": 19306310880,
+    "planning_gpu_gib": 12,
+    "planning_ram_gib": 16,
+    "license_metadata": "apache-2.0",
+    "license_conditions": "Apache-2.0; native BF16 source quantized to NF4 only in memory.",
+    "gated": false,
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "vision7": {
+    "repo": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "profile_sha256": "0bbd446a21ecdc055e0e83f2c78f739684aacf75d10007a447444a1976c08755",
+    "adapter": "existing_vision_adapter",
+    "supported_draft_operations": [
+      "image_inspection"
+    ],
+    "precision": "BF16 short-image/short-clip analysis; bounded resolution, not full-film ingestion",
+    "weight_bytes": 16584414560,
+    "planning_gpu_gib": 24,
+    "planning_ram_gib": 32,
+    "license_metadata": "Apache-2.0",
+    "license_conditions": "Subject to Apache conditions",
+    "gated": "not recorded; approval still required",
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "gemma3_27": {
+    "repo": "google/gemma-3-27b-it",
+    "revision": "005ad3404e59d6023443cb575daa05336842228a",
+    "profile_sha256": "f0f9f5ce3958ca48c9b6efa0892cb5bade939de0a7508fb13558656930ac3ef0",
+    "adapter": "hf_text_nf4",
+    "supported_draft_operations": [
+      "text"
+    ],
+    "precision": "NF4-on-load, FP16 compute, text only",
+    "weight_bytes": 54864980440,
+    "planning_gpu_gib": 24,
+    "planning_ram_gib": 48,
+    "license_metadata": "gemma",
+    "license_conditions": "Gemma custom terms, use restrictions and explicit gated access acceptance required.",
+    "gated": "manual",
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "gemma3_12": {
+    "repo": "google/gemma-3-12b-it",
+    "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+    "profile_sha256": "36cb2c7319e896604a408025224e9ba0c56a9b24d9b7c6a68a0d8060d3503eb8",
+    "adapter": "hf_text_nf4",
+    "supported_draft_operations": [
+      "text"
+    ],
+    "precision": "NF4-on-load, FP16 compute, text only",
+    "weight_bytes": 24374793024,
+    "planning_gpu_gib": 16,
+    "planning_ram_gib": 24,
+    "license_metadata": "gemma",
+    "license_conditions": "Gemma custom terms and gated access acceptance required; not Apache-2.0.",
+    "gated": "manual",
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "flux2_klein4": {
+    "repo": "black-forest-labs/FLUX.2-klein-4B",
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+    "profile_sha256": "b71880fe0c2e99cc8990500b326aaefef4bc82629cb05da05a3bf65cfa9cda12",
+    "adapter": "flux2_klein",
+    "supported_draft_operations": [
+      "reference_edit",
+      "text_to_image"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 15964212614,
+    "planning_gpu_gib": 16,
+    "planning_ram_gib": 24,
+    "license_metadata": "apache-2.0",
+    "license_conditions": "Apache-2.0; 4B distinguished from noncommercial 9B variants. Publisher mentions ~13GB VRAM; 16GiB is conservative unmeasured gate.",
+    "gated": false,
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "z_image_turbo": {
+    "repo": "Tongyi-MAI/Z-Image-Turbo",
+    "revision": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+    "profile_sha256": "aa42cdc1f4b208892d558fec58c3888e5b7659fab0f3bec0ce84cca9a1726363",
+    "adapter": "z_image",
+    "supported_draft_operations": [
+      "text_to_image"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 32832339790,
+    "planning_gpu_gib": 24,
+    "planning_ram_gib": 48,
+    "license_metadata": "apache-2.0",
+    "license_conditions": "Apache-2.0; text-to-image does not implement reference identity editing.",
+    "gated": false,
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "wan_animate2": {
+    "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+    "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+    "profile_sha256": "e05c686497ae1b9874609104cc9340656ae39d6092f57dff50f67d0205780564",
+    "adapter": "contract_only",
+    "supported_draft_operations": [
+      "reference_video"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 32789901704,
+    "planning_gpu_gib": 80,
+    "planning_ram_gib": 128,
+    "license_metadata": "apache-2.0",
+    "license_conditions": "Apache-2.0 base/distilled native checkpoints plus auxiliary components need exact audit. No old Animate substitution.",
+    "gated": false,
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "wan22_5": {
+    "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "revision": "b8fff7315c768468a5333511427288870b2e9635",
+    "profile_sha256": "7c940d60f458843c6d4153495640617af4706707d4d0321b4cbc98922821f8a2",
+    "adapter": "existing_wan_adapter",
+    "supported_draft_operations": [
+      "image_to_video",
+      "text_to_video"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 34179863648,
+    "planning_gpu_gib": 24,
+    "planning_ram_gib": 64,
+    "license_metadata": "apache-2.0",
+    "license_conditions": "Apache-2.0; existing Wan Diffusers recipe fit unmeasured; current BF16 worker requires capable GPU.",
+    "gated": false,
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "ltx25": {
+    "repo": "Lightricks/LTX-2.5",
+    "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+    "profile_sha256": "68fb6605455186f69c34afb33ebffac43aedea728e29d4610d6709005b99330d",
+    "adapter": "contract_only",
+    "supported_draft_operations": [
+      "audio_video",
+      "image_to_video",
+      "text_to_video"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 70122982342,
+    "planning_gpu_gib": 80,
+    "planning_ram_gib": 128,
+    "license_metadata": "other",
+    "license_conditions": "LTX-2.x community terms: conditional free commercial use below entity/affiliate USD10m annual revenue; fine-tune transfer and components require review. Gated. NVFP4 needs Blackwell; Comfy int8 files are not PyTorch pipeline weights.",
+    "gated": "auto",
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "svd_xt": {
+    "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+    "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+    "profile_sha256": "b50b7e19c58d474f42d8c72d6339374b435470c2517a5696dded0a9334c9db45",
+    "adapter": "existing_svd_adapter",
+    "supported_draft_operations": [
+      "image_to_video"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 4509185018,
+    "planning_gpu_gib": 12,
+    "planning_ram_gib": 32,
+    "license_metadata": "other",
+    "license_conditions": "Stability Community terms, owner eligibility/registration/attribution and revenue conditions require review; no text prompt or acting control.",
+    "gated": false,
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "indic_speak": {
+    "repo": "bodhan-ai/indic-speak",
+    "revision": "76e0814f189321efe550011850cd288dae366aad",
+    "profile_sha256": "e337e3a53a6e44e3b6a7847e8e504b52c72f056bbd12ccb7d0eb18d078d857d5",
+    "adapter": "contract_only",
+    "supported_draft_operations": [
+      "text_to_audio"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 7068852569,
+    "planning_gpu_gib": 12,
+    "planning_ram_gib": 24,
+    "license_metadata": "other",
+    "license_conditions": "Indic Open Model License v1.0 plus Llama/SNAC/Vocos upstream audit. Self-hosting differs from serving others through an API; written permission/exceptions and scale thresholds apply. No cloning; style control preview quality.",
+    "gated": "auto",
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "indicf5": {
+    "repo": "ai4bharat/IndicF5",
+    "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+    "profile_sha256": "6e162e5f704d9b15bc6bac87fde3002cfafd8c55436caa68484cb2c9690e55e9",
+    "adapter": "contract_only",
+    "supported_draft_operations": [
+      "reference_voice"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 1402789408,
+    "planning_gpu_gib": 8,
+    "planning_ram_gib": 16,
+    "license_metadata": "mit",
+    "license_conditions": "MIT model metadata plus gated access, authorized voice reference/transcript and reviewed custom code required.",
+    "gated": "auto",
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "indic_parler": {
+    "repo": "ai4bharat/indic-parler-tts",
+    "revision": "660bc53c64ae83150613264111708a0465211237",
+    "profile_sha256": "6fbbb15d080fd7eccb62942792bb458315ecb0df89311353adc1231e1524f04a",
+    "adapter": "existing_parler_adapter",
+    "supported_draft_operations": [
+      "text_to_audio"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 3751321772,
+    "planning_gpu_gib": 8,
+    "planning_ram_gib": 16,
+    "license_metadata": "apache-2.0",
+    "license_conditions": "Apache-2.0 model metadata plus gated access. Existing preset worker; Bengali accent/emotion unverified.",
+    "gated": "auto",
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "ace15": {
+    "repo": "ACE-Step/Ace-Step1.5",
+    "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+    "profile_sha256": "d7c977effd71c53524e48bdc52a21a6d9657ca29b8cf599bd5d024d01c15fc1e",
+    "adapter": "contract_only",
+    "supported_draft_operations": [
+      "music"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 10029206151,
+    "planning_gpu_gib": 8,
+    "planning_ram_gib": 24,
+    "license_metadata": "mit",
+    "license_conditions": "MIT; ACE-Step 1.5 API/checkpoints differ from existing 3.5B worker. Component and generated-rights review required.",
+    "gated": false,
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "stable_audio_small": {
+    "repo": "stabilityai/stable-audio-open-small",
+    "revision": "ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3",
+    "profile_sha256": "00f9090e46002aa8f956138c0a500b51b5f7c752a66f03c6b808760cc7482cbd",
+    "adapter": "existing_sfx_adapter",
+    "supported_draft_operations": [
+      "sound_effect"
+    ],
+    "precision": "Exact pipeline/precision recipe must pass runtime preflight",
+    "weight_bytes": 1676829212,
+    "planning_gpu_gib": 8,
+    "planning_ram_gib": 16,
+    "license_metadata": "other",
+    "license_conditions": "Stability Community license and gated access; entity eligibility and exact component terms require owner approval.",
+    "gated": "auto",
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  },
+  "qwen36_27": {
+    "repo": "Qwen/Qwen3.6-27B",
+    "revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+    "profile_sha256": "adece40e160fe4d72029fd8ebdd1ca08b28f0e7a8ffddb4ab313e4c22de2015e",
+    "adapter": "hf_text_nf4",
+    "supported_draft_operations": [
+      "text"
+    ],
+    "precision": "NF4-on-load, FP16 compute, text only",
+    "weight_bytes": 55563006400,
+    "planning_gpu_gib": 24,
+    "planning_ram_gib": 32,
+    "license_metadata": "apache-2.0",
+    "license_conditions": "Apache-2.0; no Bengali superiority established.",
+    "gated": false,
+    "exact_download_approval_required": true,
+    "runtime_api_verified": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "resumed_commit": "0220a69787883b0c60b178571995f0019a4a9541",
+  "new_unique_tests_passed": 21,
+  "existing_affected_unique_checks_passed": 8,
+  "total_unique_passed": 29,
+  "initial_compatibility_errors": 1,
+  "failed_check_retried_alone": true,
+  "new_native_recipe_and_frame_followups": "audio_recipe_recheck.txt, audio_native_validation_recheck.txt, motion_frame_recheck.txt",
+  "no_gpu_engineering_complete": 13,
+  "target_scope": 11,
+  "newly_complete": 5,
+  "remaining_partial": 6,
+  "production_ready": 0,
+  "gpu_calls": 0,
+  "model_inferences": 0,
+  "actual_model_weight_reads_or_downloads": 0,
+  "hosted_or_paid_model_calls": 0,
+  "license_acceptance": 0,
+  "software_fixtures_not_real_outputs": true
+}

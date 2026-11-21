@@ -1,0 +1,19 @@
+test_all_agents_integrated_without_network_or_inference (tests.test_intelligence.IntelligenceTests.test_all_agents_integrated_without_network_or_inference) ... ok
+test_context_reuses_bible_and_exact_revision (tests.test_intelligence.IntelligenceTests.test_context_reuses_bible_and_exact_revision) ... ok
+test_every_role_benchmark_evidence_revision_and_handoff_controls (tests.test_intelligence.IntelligenceTests.test_every_role_benchmark_evidence_revision_and_handoff_controls) ... ok
+test_exact_21_profiles_and_bound_future_cases (tests.test_intelligence.IntelligenceTests.test_exact_21_profiles_and_bound_future_cases) ... ok
+test_fact_attribution_and_interpretation_are_separate (tests.test_intelligence.IntelligenceTests.test_fact_attribution_and_interpretation_are_separate) ... ok
+test_persisted_review_and_owner_requested_revision_use_existing_engine (tests.test_intelligence.IntelligenceTests.test_persisted_review_and_owner_requested_revision_use_existing_engine) ... ok
+test_professional_trial_snapshots_role_rubric_without_execution (tests.test_intelligence.IntelligenceTests.test_professional_trial_snapshots_role_rubric_without_execution) ... ok
+test_prompt_consumes_profile_but_provider_is_simulation (tests.test_intelligence.IntelligenceTests.test_prompt_consumes_profile_but_provider_is_simulation) ... ok
+test_review_independence_staleness_and_invalid_values (tests.test_intelligence.IntelligenceTests.test_review_independence_staleness_and_invalid_values) ... ok
+test_schema_rejects_missing_role_and_faked_acceptance (tests.test_intelligence.IntelligenceTests.test_schema_rejects_missing_role_and_faked_acceptance) ... ok
+test_snapshot_resume_idempotency_and_tamper (tests.test_intelligence.IntelligenceTests.test_snapshot_resume_idempotency_and_tamper) ... ok
+test_stale_downstream_handoff_and_approval_preservation (tests.test_intelligence.IntelligenceTests.test_stale_downstream_handoff_and_approval_preservation) ... ok
+test_targeted_revision_preserves_untouched_records_and_owner_lock (tests.test_intelligence.IntelligenceTests.test_targeted_revision_preserves_untouched_records_and_owner_lock) ... ok
+test_unseen_medium_abstains_and_score_rejected (tests.test_intelligence.IntelligenceTests.test_unseen_medium_abstains_and_score_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.566s
+
+OK

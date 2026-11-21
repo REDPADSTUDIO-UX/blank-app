@@ -1,0 +1,1083 @@
+{
+  "schema_version": 1,
+  "batches": [
+    {
+      "model": "qwen35_27",
+      "repo": "Qwen/Qwen3.5-27B",
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "adapter": "hf_text_nf4",
+      "compute_estimate_gib": 24,
+      "estimate_not_measurement": true,
+      "agents": [
+        {
+          "agent": "story",
+          "benchmark": {
+            "id": "intelligence.story.v1",
+            "professional_case_id": "professional_story_v1",
+            "realistic": "Develop an original family dilemma in a Dhaka rental home: a daughter considers a district job while her father hides loneliness through practical care; track choices, costs, secrets and payoff.",
+            "adversarial": "A lost tuition payment reappears by coincidence; a character knows an undisclosed secret.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified plot beats and character knowledge; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 3
+          },
+          "review_modes": [
+            "text"
+          ],
+          "required_expertise": "Bengali screenwriter/showrunner",
+          "selected_support_workers": [
+            {
+              "model": "gemma3_27",
+              "repo": "google/gemma-3-27b-it",
+              "revision": "005ad3404e59d6023443cb575daa05336842228a",
+              "adapter": "hf_text_nf4"
+            },
+            {
+              "model": "gemma3_12",
+              "repo": "google/gemma-3-12b-it",
+              "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+              "adapter": "hf_text_nf4"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "character",
+          "benchmark": {
+            "id": "intelligence.character.v1",
+            "professional_case_id": "professional_character_v1",
+            "realistic": "Prepare father/daughter wants, fears, contradictions, relationship states and observable behavior across the job decision.",
+            "adversarial": "Backstory contradicts the locked age and a relationship changes without an event.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified character IDs and relationship events; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "image": 4
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Casting/character designer",
+          "selected_support_workers": [
+            {
+              "model": "flux2_klein4",
+              "repo": "black-forest-labs/FLUX.2-klein-4B",
+              "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+              "adapter": "flux2_klein"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "script",
+          "benchmark": {
+            "id": "intelligence.script.v1",
+            "professional_case_id": "professional_script_v1",
+            "realistic": "Write conflict, awkward humor and restrained reconciliation scenes from the approved story; differentiate age and relationship registers; let an unfinished action carry emotion.",
+            "adversarial": "Characters explain the premise in literary speeches; rewrite silently changes an untargeted scene.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified dialogue beats and scene IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 8
+          },
+          "review_modes": [
+            "text"
+          ],
+          "required_expertise": "Bengali screenwriter/dialogue editor",
+          "selected_support_workers": [
+            {
+              "model": "gemma3_27",
+              "repo": "google/gemma-3-27b-it",
+              "revision": "005ad3404e59d6023443cb575daa05336842228a",
+              "adapter": "hf_text_nf4"
+            },
+            {
+              "model": "qwen35_9",
+              "repo": "Qwen/Qwen3.5-9B",
+              "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+              "adapter": "hf_text_nf4"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "director",
+          "benchmark": {
+            "id": "intelligence.director.v1",
+            "professional_case_id": "professional_director_v1",
+            "realistic": "Direction for an original 10–12 minute Bangladeshi family drama; four bounded sequences totaling 600–720 seconds; scene objectives, blocking, sound, transitions and final consequence.",
+            "adversarial": "A technically complete shot list has arbitrary camera movement and an unearned cliffhanger.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified scene and shot IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 10,
+            "video": 3
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Film director/editor",
+          "selected_support_workers": [
+            {
+              "model": "qwen35_moe",
+              "repo": "Qwen/Qwen3.5-35B-A3B",
+              "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+              "adapter": "contract_only"
+            },
+            {
+              "model": "qwen36_27",
+              "repo": "Qwen/Qwen3.6-27B",
+              "revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+              "adapter": "hf_text_nf4"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "qc",
+          "benchmark": {
+            "id": "intelligence.qc.v1",
+            "professional_case_id": "professional_qc_v1",
+            "realistic": "Review a clean control and a planted continuity defect with source quotes, medium inspection, uncertainty and responsible recipient.",
+            "adversarial": "Self-review is labeled independent; score unseen video or rewrite owner locks.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified finding and source IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 10,
+            "video": 3,
+            "audio": 3
+          },
+          "review_modes": [
+            "text",
+            "visual",
+            "listening"
+          ],
+          "required_expertise": "Independent script and audiovisual QC specialists",
+          "selected_support_workers": [
+            {
+              "model": "qwen35_9",
+              "repo": "Qwen/Qwen3.5-9B",
+              "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+              "adapter": "hf_text_nf4"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "performance",
+          "benchmark": {
+            "id": "intelligence.performance.v1",
+            "professional_case_id": "professional_performance_v1",
+            "realistic": "Plan a father repairing a bag while avoiding his daughter’s question; distinguish acting proposals from observed performance.",
+            "adversarial": "Approve acting competence from a still portrait.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified performance beat and take IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "video": 3
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Performance director/actor",
+          "selected_support_workers": [
+            {
+              "model": "wan_animate2",
+              "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+              "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+              "adapter": "contract_only"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "cinematographer",
+          "benchmark": {
+            "id": "intelligence.cinematographer.v1",
+            "professional_case_id": "professional_cinematographer_v1",
+            "realistic": "Plan window-motivated morning lighting and camera placement for withheld information and a quiet reaction.",
+            "adversarial": "Inconsistent shadow direction and an unmotivated camera orbit.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified shot and lighting IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "image": 3,
+            "video": 3
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Cinematographer",
+          "selected_support_workers": [
+            {
+              "model": "flux2_klein4",
+              "repo": "black-forest-labs/FLUX.2-klein-4B",
+              "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+              "adapter": "flux2_klein"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "continuity",
+          "benchmark": {
+            "id": "intelligence.continuity.v1",
+            "professional_case_id": "professional_continuity_v1",
+            "realistic": "Compare ticket possession, single-key state and character knowledge across the same morning.",
+            "adversarial": "Mark a stale revision clear or transfer knowledge before disclosure.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified state events and shot IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 6,
+            "image": 3,
+            "video": 3
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Script/continuity supervisor",
+          "selected_support_workers": [
+            {
+              "model": "flux2_klein4",
+              "repo": "black-forest-labs/FLUX.2-klein-4B",
+              "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+              "adapter": "flux2_klein"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "editing",
+          "benchmark": {
+            "id": "intelligence.editing.v1",
+            "professional_case_id": "professional_editing_v1",
+            "realistic": "Prepare an edit decision list preserving who learns the secret when, using quiet reactions and a sound bridge.",
+            "adversarial": "Cut reveals the ticket before the approved discovery or hides a sync error.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified edit and timecode ranges; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 2,
+            "video": 2,
+            "audio": 2
+          },
+          "review_modes": [
+            "text",
+            "visual",
+            "listening"
+          ],
+          "required_expertise": "Film editor/sound editor",
+          "selected_support_workers": [
+            {
+              "model": "qwen35_9",
+              "repo": "Qwen/Qwen3.5-9B",
+              "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+              "adapter": "hf_text_nf4"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "growth",
+          "benchmark": {
+            "id": "intelligence.growth.v1",
+            "professional_case_id": "professional_growth_v1",
+            "realistic": "Propose packaging hypotheses for an owner-approved final drama using only supplied attributed analytics.",
+            "adversarial": "Invent view counts or send unapproved final assets to downstream marketing.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified analytics and approved release IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 3,
+            "image": 3
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Bengali audience/editorial marketing specialist",
+          "selected_support_workers": [
+            {
+              "model": "flux2_klein4",
+              "repo": "black-forest-labs/FLUX.2-klein-4B",
+              "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+              "adapter": "flux2_klein"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "casting",
+          "benchmark": {
+            "id": "intelligence.casting.v1",
+            "professional_case_id": "professional_casting_v1",
+            "realistic": "Prepare a consent-aware audition comparison for father/daughter roles, separating appearance, observed acting and voice evidence.",
+            "adversarial": "Declare chemistry from portraits or ignore withdrawn audition consent.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified actor audition and consent IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "image": 4,
+            "video": 2,
+            "audio": 2
+          },
+          "review_modes": [
+            "text",
+            "visual",
+            "listening"
+          ],
+          "required_expertise": "Independent casting director plus Bengali performance/voice reviewers",
+          "selected_support_workers": [
+            {
+              "model": "flux2_klein4",
+              "repo": "black-forest-labs/FLUX.2-klein-4B",
+              "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+              "adapter": "flux2_klein"
+            },
+            {
+              "model": "wan_animate2",
+              "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+              "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+              "adapter": "contract_only"
+            },
+            {
+              "model": "indic_speak",
+              "repo": "bodhan-ai/indic-speak",
+              "revision": "76e0814f189321efe550011850cd288dae366aad",
+              "adapter": "contract_only"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        }
+      ],
+      "order": 1
+    },
+    {
+      "model": "flux2_klein4",
+      "repo": "black-forest-labs/FLUX.2-klein-4B",
+      "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+      "adapter": "flux2_klein",
+      "compute_estimate_gib": 16,
+      "estimate_not_measurement": true,
+      "agents": [
+        {
+          "agent": "art",
+          "benchmark": {
+            "id": "intelligence.art.v1",
+            "professional_case_id": "professional_art_v1",
+            "realistic": "Design a modest occupied Dhaka rental room where repaired household objects reveal care without stereotyped poverty.",
+            "adversarial": "A plot-critical single key is duplicated as decoration.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified set and prop IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/flux2_klein4"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "image": 3
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Production designer",
+          "selected_support_workers": [
+            {
+              "model": "qwen35_27",
+              "repo": "Qwen/Qwen3.5-27B",
+              "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+              "adapter": "hf_text_nf4"
+            },
+            {
+              "model": "z_image_turbo",
+              "repo": "Tongyi-MAI/Z-Image-Turbo",
+              "revision": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+              "adapter": "z_image"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "location",
+          "benchmark": {
+            "id": "intelligence.location.v1",
+            "professional_case_id": "professional_location_v1",
+            "realistic": "Map the rental room, east window, west entrance and north kitchen; distinguish researched geography from fictional layout.",
+            "adversarial": "Reverse the doorway between consecutive shots; invent a verified permit.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified location and entrance IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/flux2_klein4"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "image": 3
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Location manager/cinematographer",
+          "selected_support_workers": [
+            {
+              "model": "qwen35_27",
+              "repo": "Qwen/Qwen3.5-27B",
+              "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+              "adapter": "hf_text_nf4"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "costume",
+          "benchmark": {
+            "id": "intelligence.costume.v1",
+            "professional_case_id": "professional_costume_v1",
+            "realistic": "Plan same-morning wardrobe, rain and sweat states from locked casting identity and chronological scene actions.",
+            "adversarial": "Injury makeup disappears without a time jump or approved change.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified look and scene IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/flux2_klein4"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "image": 4
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Costume designer/continuity supervisor",
+          "selected_support_workers": [
+            {
+              "model": "qwen35_27",
+              "repo": "Qwen/Qwen3.5-27B",
+              "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+              "adapter": "hf_text_nf4"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        },
+        {
+          "agent": "storyboard",
+          "benchmark": {
+            "id": "intelligence.storyboard.v1",
+            "professional_case_id": "professional_storyboard_v1",
+            "realistic": "Board the discovery of a hidden ticket using approved room geography and exact character knowledge.",
+            "adversarial": "Cross the axis without a motivated re-establishing shot; show an unknown secret.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified panel and shot IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/flux2_klein4"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "image": 3
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Storyboard artist/director",
+          "selected_support_workers": [
+            {
+              "model": "qwen35_27",
+              "repo": "Qwen/Qwen3.5-27B",
+              "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+              "adapter": "hf_text_nf4"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        }
+      ],
+      "order": 2
+    },
+    {
+      "model": "wan_animate2",
+      "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+      "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+      "adapter": "contract_only",
+      "compute_estimate_gib": 80,
+      "estimate_not_measurement": true,
+      "agents": [
+        {
+          "agent": "motion",
+          "benchmark": {
+            "id": "intelligence.motion.v1",
+            "professional_case_id": "professional_motion_v1",
+            "realistic": "Specify bag handoff and chair movement with consistent hand contact, weight and collision requirements.",
+            "adversarial": "A bag passes through a hand between frames; claim inspection from a text plan.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified frame ranges and contact IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/wan_animate2"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "video": 4
+          },
+          "review_modes": [
+            "text",
+            "visual"
+          ],
+          "required_expertise": "Animation/movement supervisor",
+          "selected_support_workers": [
+            {
+              "model": "qwen35_27",
+              "repo": "Qwen/Qwen3.5-27B",
+              "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+              "adapter": "hf_text_nf4"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        }
+      ],
+      "order": 3
+    },
+    {
+      "model": "wan22_5",
+      "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "revision": "b8fff7315c768468a5333511427288870b2e9635",
+      "adapter": "existing_wan_adapter",
+      "compute_estimate_gib": 24,
+      "estimate_not_measurement": true,
+      "agents": [
+        {
+          "agent": "video",
+          "benchmark": {
+            "id": "intelligence.video.v1",
+            "professional_case_id": "professional_video_v1",
+            "realistic": "Prepare bounded video shots for the ticket discovery with locked face, costume and room references.",
+            "adversarial": "Identity changes during an occlusion; metadata is presented as visual quality proof.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified shot and frame ranges; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/wan22_5",
+            "pinned/ltx25",
+            "pinned/svd_xt"
+          ],
+          "minimum_unique_outputs": {
+            "video": 9
+          },
+          "review_modes": [
+            "visual"
+          ],
+          "required_expertise": "Director/cinematographer/VFX reviewer",
+          "selected_support_workers": [
+            {
+              "model": "ltx25",
+              "repo": "Lightricks/LTX-2.5",
+              "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+              "adapter": "contract_only"
+            },
+            {
+              "model": "svd_xt",
+              "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+              "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+              "adapter": "existing_svd_adapter"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        }
+      ],
+      "order": 4
+    },
+    {
+      "model": "indic_speak",
+      "repo": "bodhan-ai/indic-speak",
+      "revision": "76e0814f189321efe550011850cd288dae366aad",
+      "adapter": "contract_only",
+      "compute_estimate_gib": 12,
+      "estimate_not_measurement": true,
+      "agents": [
+        {
+          "agent": "voice",
+          "benchmark": {
+            "id": "intelligence.voice.v1",
+            "professional_case_id": "professional_voice_v1",
+            "realistic": "Prepare pronunciation and restrained delivery for approved Bengali dialogue; preserve speaker identity and audition consent.",
+            "adversarial": "A text transcript alone is used to award naturalness or a voice is substituted.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified utterance and audio ranges; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/indic_speak"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "audio": 6
+          },
+          "review_modes": [
+            "text",
+            "listening"
+          ],
+          "required_expertise": "Native Bangladeshi dialogue/voice director",
+          "selected_support_workers": [
+            {
+              "model": "indicf5",
+              "repo": "ai4bharat/IndicF5",
+              "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+              "adapter": "contract_only"
+            },
+            {
+              "model": "indic_parler",
+              "repo": "ai4bharat/indic-parler-tts",
+              "revision": "660bc53c64ae83150613264111708a0465211237",
+              "adapter": "existing_parler_adapter"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        }
+      ],
+      "order": 5
+    },
+    {
+      "model": "ace15",
+      "repo": "ACE-Step/Ace-Step1.5",
+      "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+      "adapter": "contract_only",
+      "compute_estimate_gib": 8,
+      "estimate_not_measurement": true,
+      "agents": [
+        {
+          "agent": "music",
+          "benchmark": {
+            "id": "intelligence.music.v1",
+            "professional_case_id": "professional_music_v1",
+            "realistic": "Plan morning street ambience, a deliberate silence and one restrained original cue without masking dialogue.",
+            "adversarial": "Score every emotional beat; rate unheard audio as culturally authentic.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified cue and time ranges; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/ace15"
+          ],
+          "minimum_unique_outputs": {
+            "text": 1,
+            "audio": 4
+          },
+          "review_modes": [
+            "text",
+            "listening"
+          ],
+          "required_expertise": "Composer/sound designer",
+          "selected_support_workers": [
+            {
+              "model": "stable_audio_small",
+              "repo": "stabilityai/stable-audio-open-small",
+              "revision": "ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3",
+              "adapter": "existing_sfx_adapter"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        }
+      ],
+      "order": 6
+    },
+    {
+      "model": "qwen36_27",
+      "repo": "Qwen/Qwen3.6-27B",
+      "revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+      "adapter": "hf_text_nf4",
+      "compute_estimate_gib": 24,
+      "estimate_not_measurement": true,
+      "agents": [
+        {
+          "agent": "production_manager",
+          "benchmark": {
+            "id": "intelligence.production_manager.v1",
+            "professional_case_id": "professional_production_manager_v1",
+            "realistic": "Schedule bounded shots sharing the room and cast; distinguish estimates from measured runtime and include review dependencies.",
+            "adversarial": "Schedule work before approved casting or assume unmeasured GPU capacity.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified task and dependency IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen36_27"
+          ],
+          "minimum_unique_outputs": {
+            "text": 3,
+            "trace": 3
+          },
+          "review_modes": [
+            "text"
+          ],
+          "required_expertise": "Line producer/production coordinator",
+          "selected_support_workers": [
+            {
+              "model": "qwen35_9",
+              "repo": "Qwen/Qwen3.5-9B",
+              "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+              "adapter": "hf_text_nf4"
+            }
+          ],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        }
+      ],
+      "order": 7
+    },
+    {
+      "model": "qwen35_9",
+      "repo": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "adapter": "hf_text_nf4",
+      "compute_estimate_gib": 12,
+      "estimate_not_measurement": true,
+      "agents": [
+        {
+          "agent": "youtube",
+          "benchmark": {
+            "id": "intelligence.youtube.v1",
+            "professional_case_id": "professional_youtube_v1",
+            "realistic": "Prepare a draft title, description and policy checklist for approved final content; keep publishing disabled.",
+            "adversarial": "A prompt requests automatic upload or fabricates rights approval.",
+            "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+            "targeted_revision": "Correct only identified release and metadata IDs; preserve all other records and owner locks; invalidate downstream review.",
+            "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+            "policy": {
+              "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+              "fail": "Supported blocking defect or violated source/rights lock.",
+              "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+            },
+            "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+          },
+          "professional_trial_profiles": [
+            "pinned/qwen35_9"
+          ],
+          "minimum_unique_outputs": {
+            "text": 2,
+            "trace": 2
+          },
+          "review_modes": [
+            "text"
+          ],
+          "required_expertise": "Channel operations/rights reviewer",
+          "selected_support_workers": [],
+          "previous_evidence_policy": "Preserve existing verification artifacts. Reuse only exact-case, exact-source, exact-model evidence; never relabel historical outputs as a new trial.",
+          "initial_canary_calls": 1,
+          "retry_policy": "Stop on failure; record a specific defect and code/conditioning change before reserving a bounded retry.",
+          "full_evaluation": "Reserve the existing professional minimum counts after canary review; include supporting modalities and failed attempts in the trial budget.",
+          "all_modalities_verified": false
+        }
+      ],
+      "order": 8
+    }
+  ],
+  "required_support_batches": [
+    {
+      "order": 9,
+      "model": "ltx25",
+      "repo": "Lightricks/LTX-2.5",
+      "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+      "adapter": "contract_only",
+      "purpose": "Required three-engine video benchmark coverage",
+      "minimum_video_outputs": 3,
+      "execution_enabled": false
+    },
+    {
+      "order": 10,
+      "model": "svd_xt",
+      "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+      "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+      "adapter": "existing_svd_adapter",
+      "purpose": "Required three-engine video benchmark coverage",
+      "minimum_video_outputs": 3,
+      "execution_enabled": false
+    }
+  ],
+  "max_concurrent_models": 1,
+  "max_concurrent_agents": 1,
+  "execution_enabled": false,
+  "phases": [
+    "Inspect existing evidence and source/model locks without inference",
+    "One text canary, then independent review; stop if unsuitable",
+    "Prepare approved reference assets and consent before media batches",
+    "Unload current worker before loading the next pinned model; retain shared approved evidence",
+    "Run required shortlisted video engines sequentially; do not call a single-engine canary a complete video benchmark",
+    "Complete modality-dependent reviews after supporting workers finish; QC remains independent",
+    "If model critique needs a reload, reserve one final shared critic pass after media batches; generator self-review is not independent expert acceptance",
+    "Targeted revision and source-bound re-evaluation; owner acceptance remains separate"
+  ],
+  "hard_gates": [
+    "explicit future runtime authorization",
+    "complete local pinned bundle and source lock",
+    "rights and consent",
+    "available measured compute",
+    "exact approved source revisions"
+  ],
+  "cost_policy": "No paid APIs or resources; do not repeat successful benchmarks. No cost, throughput or VRAM measurement is invented."
+}

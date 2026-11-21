@@ -1,0 +1,8 @@
+test_attached_mock_native_id_cannot_turn_into_persistent_real_voice_evidence (tests.test_voice_casting_integration.VoiceCastingTests.test_attached_mock_native_id_cannot_turn_into_persistent_real_voice_evidence) ... ok
+test_persistent_idempotent_casting_handoff_uses_existing_store (tests.test_voice_casting_integration.VoiceCastingTests.test_persistent_idempotent_casting_handoff_uses_existing_store) ... ok
+test_director_inspection_contains_explicit_voice_blocker_without_approval (tests.test_voice_casting_integration.VoiceCastingTests.test_director_inspection_contains_explicit_voice_blocker_without_approval) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.366s
+
+OK

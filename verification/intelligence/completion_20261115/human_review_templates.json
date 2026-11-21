@@ -1,0 +1,2737 @@
+{
+  "story": {
+    "case": {
+      "case_id": "professional_story_v1",
+      "capability_required": "Causal Bengali narrative and long-form memory",
+      "required_output_kinds": [
+        "text"
+      ],
+      "review_modes": [
+        "text"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Bengali screenwriter/showrunner",
+      "real_world_task": "Write three unseen family/romance/mystery season treatments and a three-episode causal segment; a lost fee cannot reappear, secrets change knowledge only after a disclosure.",
+      "criteria": [
+        "causal_logic",
+        "character_agency",
+        "earned_hooks",
+        "episode_continuity"
+      ],
+      "specialist_development_needed": "End-to-end long-series draft-to-approved-season bridge and capable writer remain unverified.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "50095df9fc98eb4c0c3211727a64faef6dd13d26c6cea222c1704293665dbd80",
+      "benchmark": {
+        "id": "intelligence.story.v1",
+        "professional_case_id": "professional_story_v1",
+        "realistic": "Develop an original family dilemma in a Dhaka rental home: a daughter considers a district job while her father hides loneliness through practical care; track choices, costs, secrets and payoff.",
+        "adversarial": "A lost tuition payment reappears by coincidence; a character knows an undisclosed secret.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified plot beats and character knowledge; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "story.1",
+          "criterion": "causality and stakes",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "story.2",
+          "criterion": "character agency and contradictions",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "story.3",
+          "criterion": "setup and payoff",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "story.4",
+          "criterion": "earned suspense and change",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "causal_logic": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "character_agency": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "earned_hooks": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "episode_continuity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "character": {
+    "case": {
+      "case_id": "professional_character_v1",
+      "capability_required": "Psychology bible and stable visual identity",
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 4,
+      "expertise_required": "Casting/character designer",
+      "real_world_task": "Generate character bible plus front/three-quarter/profile and changed-light references of the same two fictional adults; blind match identities and reject facial/age drift.",
+      "criteria": [
+        "identity_consistency",
+        "psychological_specificity",
+        "cultural_authenticity"
+      ],
+      "specialist_development_needed": "Image/reference conditioning adapter and approved identity references are needed; text-to-image alone does not solve identity lock.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 4
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "22bc95d109add79aa4dc6df8bcae37a1146e048f4279f326a879e02b78ae6107",
+      "benchmark": {
+        "id": "intelligence.character.v1",
+        "professional_case_id": "professional_character_v1",
+        "realistic": "Prepare father/daughter wants, fears, contradictions, relationship states and observable behavior across the job decision.",
+        "adversarial": "Backstory contradicts the locked age and a relationship changes without an event.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified character IDs and relationship events; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "character.1",
+          "criterion": "motivation and inner conflict",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "character.2",
+          "criterion": "relationship change",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "character.3",
+          "criterion": "consistent identity",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "character.4",
+          "criterion": "earned emotional behavior",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "identity_consistency": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "psychological_specificity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "cultural_authenticity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "script": {
+    "case": {
+      "case_id": "professional_script_v1",
+      "capability_required": "Bangladeshi spoken dialogue, subtext, humor, restrained emotion",
+      "required_output_kinds": [
+        "text"
+      ],
+      "review_modes": [
+        "text"
+      ],
+      "minimum_samples": 8,
+      "expertise_required": "Bengali screenwriter/dialogue editor",
+      "real_world_task": "Produce eight complete filmable scenes spanning breakfast, father–daughter conflict, romance, wit, quiet grief, horror, earned ending and locked rewrite. No manual polishing of model samples.",
+      "criteria": [
+        "spoken_bangla",
+        "responsive_humor",
+        "emotional_behavior",
+        "visual_first",
+        "locked_rewrite"
+      ],
+      "specialist_development_needed": "A stronger writer must pass unseen scenes and exact revision instructions; current 4B samples failed creative quality.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 8
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "4e2dddc96c1e84592de30fde8f41f39f45d0b68f9cf19f9e601a52e905c74699",
+      "benchmark": {
+        "id": "intelligence.script.v1",
+        "professional_case_id": "professional_script_v1",
+        "realistic": "Write conflict, awkward humor and restrained reconciliation scenes from the approved story; differentiate age and relationship registers; let an unfinished action carry emotion.",
+        "adversarial": "Characters explain the premise in literary speeches; rewrite silently changes an untargeted scene.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified dialogue beats and scene IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "script.1",
+          "criterion": "spoken Bangla and social register",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "script.2",
+          "criterion": "distinct voices and subtext",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "script.3",
+          "criterion": "situational humor and interruption",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "script.4",
+          "criterion": "visual action and filmability",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "spoken_bangla": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "responsive_humor": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "emotional_behavior": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "visual_first": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "locked_rewrite": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "director": {
+    "case": {
+      "case_id": "professional_director_v1",
+      "capability_required": "Grounded dramatic criticism plus visual/performance judgment",
+      "required_output_kinds": [
+        "text",
+        "video"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 10,
+      "expertise_required": "Film director/editor",
+      "real_world_task": "Critique five clean and five seeded-defect scenes; identify precise evidence, abstain on clean material, then direct and inspect three real generated short shots.",
+      "criteria": [
+        "criticism_precision",
+        "criticism_recall",
+        "source_fidelity",
+        "performance_direction",
+        "visual_intent"
+      ],
+      "specialist_development_needed": "Separate critic calibration from approval; multimodal video understanding and actual directed-shot evaluation missing.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 10,
+        "video": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "cb8c4eff95288afab1c3b72470eda9560f1dd686f38cff59cfbb360bef2a459a",
+      "benchmark": {
+        "id": "intelligence.director.v1",
+        "professional_case_id": "professional_director_v1",
+        "realistic": "Direction for an original 10–12 minute Bangladeshi family drama; four bounded sequences totaling 600–720 seconds; scene objectives, blocking, sound, transitions and final consequence.",
+        "adversarial": "A technically complete shot list has arbitrary camera movement and an unearned cliffhanger.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified scene and shot IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "director.1",
+          "criterion": "episode emotional progression",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "director.2",
+          "criterion": "motivated camera and blocking",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "director.3",
+          "criterion": "reaction timing and silence",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "director.4",
+          "criterion": "delegation and cliffhanger",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "criticism_precision": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "criticism_recall": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "source_fidelity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "performance_direction": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "visual_intent": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "qc": {
+    "case": {
+      "case_id": "professional_qc_v1",
+      "capability_required": "Calibrated multimodal defect detection with uncertainty",
+      "required_output_kinds": [
+        "text",
+        "video",
+        "audio"
+      ],
+      "review_modes": [
+        "text",
+        "visual",
+        "listening"
+      ],
+      "minimum_samples": 10,
+      "expertise_required": "Independent script and audiovisual QC specialists",
+      "real_world_task": "Blindly inspect balanced clean/defect script, image, motion, subtitle and audio samples. Measure false positives and misses against an authored hidden answer key and expert adjudication.",
+      "criteria": [
+        "defect_precision",
+        "defect_recall",
+        "grounded_evidence",
+        "uncertainty",
+        "cross_media_consistency"
+      ],
+      "specialist_development_needed": "A line-ID match alone is insufficient; requires actual media and specialist adjudication.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 10,
+        "video": 3,
+        "audio": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "7d19bebd64c2fe2c15095d6c2fcf34b6e8c24d0c090241a60a591b92c9cdfdf5",
+      "benchmark": {
+        "id": "intelligence.qc.v1",
+        "professional_case_id": "professional_qc_v1",
+        "realistic": "Review a clean control and a planted continuity defect with source quotes, medium inspection, uncertainty and responsible recipient.",
+        "adversarial": "Self-review is labeled independent; score unseen video or rewrite owner locks.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified finding and source IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "qc.1",
+          "criterion": "independent evidence grading",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "qc.2",
+          "criterion": "false positives and negatives",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "qc.3",
+          "criterion": "abstention and stale evidence",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "qc.4",
+          "criterion": "precise actionable criticism",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "defect_precision": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "defect_recall": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "grounded_evidence": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "uncertainty": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "cross_media_consistency": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "performance": {
+    "case": {
+      "case_id": "professional_performance_v1",
+      "capability_required": "Playable acting direction and observable performance",
+      "required_output_kinds": [
+        "text",
+        "video"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Performance director/actor",
+      "real_world_task": "Generate quiet worry, concealed affection and restrained anger clips using the same actor/reference; judge gaze, pauses, partner reactions and emotional transitions.",
+      "criteria": [
+        "playable_action",
+        "restrained_emotion",
+        "reaction_timing",
+        "identity_stability"
+      ],
+      "specialist_development_needed": "No current video engine guarantees acting control; paired real clips and expert review required.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "video": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "a504e227a548d28c7a9be056a091f060a84503a5e34016fad4e212b524585b94",
+      "benchmark": {
+        "id": "intelligence.performance.v1",
+        "professional_case_id": "professional_performance_v1",
+        "realistic": "Plan a father repairing a bag while avoiding his daughter’s question; distinguish acting proposals from observed performance.",
+        "adversarial": "Approve acting competence from a still portrait.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified performance beat and take IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "performance.1",
+          "criterion": "acting objective and obstacle",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "performance.2",
+          "criterion": "nonverbal subtext",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "performance.3",
+          "criterion": "reaction and timing",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "performance.4",
+          "criterion": "emotional restraint",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "playable_action": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "restrained_emotion": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "reaction_timing": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "identity_stability": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "cinematographer": {
+    "case": {
+      "case_id": "professional_cinematographer_v1",
+      "capability_required": "Motivated composition, light and camera behavior",
+      "required_output_kinds": [
+        "text",
+        "image",
+        "video"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Cinematographer",
+      "real_world_task": "Render matched wide/reverse/insert coverage and one motivated camera move. Verify window lighting, eyelines, axis and whether the actual shot communicates the intended beat.",
+      "criteria": [
+        "composition",
+        "lighting_continuity",
+        "axis",
+        "motivated_movement"
+      ],
+      "specialist_development_needed": "Reference/geometry control and measured generated-camera fidelity missing.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 3,
+        "video": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "44d7fb3c8460113aeecbe403fb2eb7189f8b6532390a425cba571928dac99b85",
+      "benchmark": {
+        "id": "intelligence.cinematographer.v1",
+        "professional_case_id": "professional_cinematographer_v1",
+        "realistic": "Plan window-motivated morning lighting and camera placement for withheld information and a quiet reaction.",
+        "adversarial": "Inconsistent shadow direction and an unmotivated camera orbit.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified shot and lighting IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "cinematographer.1",
+          "criterion": "motivated light",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "cinematographer.2",
+          "criterion": "focal perspective",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "cinematographer.3",
+          "criterion": "blocking and movement",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "cinematographer.4",
+          "criterion": "camera geography",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "composition": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "lighting_continuity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "axis": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "motivated_movement": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "continuity": {
+    "case": {
+      "case_id": "professional_continuity_v1",
+      "capability_required": "Longitudinal state tracking across real media",
+      "required_output_kinds": [
+        "text",
+        "image",
+        "video"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 6,
+      "expertise_required": "Script/continuity supervisor",
+      "real_world_task": "Inspect a multi-scene packet with planted wet-sleeve, key-holder, door, knowledge, time and axis changes; pair each with a clean control, identify exact frame/beat.",
+      "criteria": [
+        "state_accuracy",
+        "false_positives",
+        "cross_episode_memory",
+        "source_binding"
+      ],
+      "specialist_development_needed": "Requires real matched frames and expert-labeled positive and negative examples.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 6,
+        "image": 3,
+        "video": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "2bafb282701a7316ef2687d12fae72fef372a7867c5f507731ba97b86e258612",
+      "benchmark": {
+        "id": "intelligence.continuity.v1",
+        "professional_case_id": "professional_continuity_v1",
+        "realistic": "Compare ticket possession, single-key state and character knowledge across the same morning.",
+        "adversarial": "Mark a stale revision clear or transfer knowledge before disclosure.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified state events and shot IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "continuity.1",
+          "criterion": "knowledge and narrative state",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "continuity.2",
+          "criterion": "wardrobe and prop state",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "continuity.3",
+          "criterion": "geography and timeline",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "continuity.4",
+          "criterion": "identity locks",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "state_accuracy": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "false_positives": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "cross_episode_memory": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "source_binding": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "editing": {
+    "case": {
+      "case_id": "professional_editing_v1",
+      "capability_required": "Narrative editing, sync and technical delivery",
+      "required_output_kinds": [
+        "text",
+        "video",
+        "audio"
+      ],
+      "review_modes": [
+        "text",
+        "visual",
+        "listening"
+      ],
+      "minimum_samples": 2,
+      "expertise_required": "Film editor/sound editor",
+      "real_world_task": "Assemble two complete 60–90 second edits from approved real clips/audio; preserve the emotional reaction beat, continuity, sync, subtitle readability and delivery specs.",
+      "criteria": [
+        "narrative_pacing",
+        "reaction_beats",
+        "sync",
+        "technical_delivery"
+      ],
+      "specialist_development_needed": "Existing renderer needs approved genuine assets and expert review, not replacement by a model.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 2,
+        "video": 2,
+        "audio": 2
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "0e967552a55a40449e5933e62d5217e41d1f2a835a8988c8ef97a8702a7f8fa1",
+      "benchmark": {
+        "id": "intelligence.editing.v1",
+        "professional_case_id": "professional_editing_v1",
+        "realistic": "Prepare an edit decision list preserving who learns the secret when, using quiet reactions and a sound bridge.",
+        "adversarial": "Cut reveals the ticket before the approved discovery or hides a sync error.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified edit and timecode ranges; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "editing.1",
+          "criterion": "narrative clarity",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "editing.2",
+          "criterion": "reaction timing and rhythm",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "editing.3",
+          "criterion": "sound bridges and sync",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "editing.4",
+          "criterion": "visual continuity",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "narrative_pacing": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "reaction_beats": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "sync": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "technical_delivery": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "growth": {
+    "case": {
+      "case_id": "professional_growth_v1",
+      "capability_required": "Truthful Bengali audience positioning and visual packaging",
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Bengali audience/editorial marketing specialist",
+      "real_world_task": "Produce three title/description/thumbnail/trailer packages for the same actually generated approved episode. Reject fake story events, spoilers and misleading imagery; record audience tests separately.",
+      "criteria": [
+        "truthfulness",
+        "audience_fit",
+        "thumbnail_story_match",
+        "spoiler_control"
+      ],
+      "specialist_development_needed": "Requires approved actual episode assets and human packaging/audience review.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 3,
+        "image": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "f028dd9925cd27788fe812fc3ba20001490c82d25095561c9919a03272d7833d",
+      "benchmark": {
+        "id": "intelligence.growth.v1",
+        "professional_case_id": "professional_growth_v1",
+        "realistic": "Propose packaging hypotheses for an owner-approved final drama using only supplied attributed analytics.",
+        "adversarial": "Invent view counts or send unapproved final assets to downstream marketing.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified analytics and approved release IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "growth.1",
+          "criterion": "verified audience evidence",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "growth.2",
+          "criterion": "honest packaging",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "growth.3",
+          "criterion": "uncertainty in hypotheses",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "growth.4",
+          "criterion": "responsible strategy",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "truthfulness": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "audience_fit": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "thumbnail_story_match": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "spoiler_control": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "casting": {
+    "case": {
+      "case_id": "professional_casting_v1",
+      "capability_required": "Source-grounded casting, visual comparison and evidence-limited acting/voice/chemistry assessment",
+      "required_output_kinds": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "review_modes": [
+        "text",
+        "visual",
+        "listening"
+      ],
+      "minimum_samples": 1,
+      "expertise_required": "Independent casting director plus Bengali performance/voice reviewers",
+      "real_world_task": "Compare authorized fictional actor candidates against approved character psychology and screenplay; evaluate portraits separately from recorded partner performance and Bengali voice samples; blind review and recast continuity.",
+      "criteria": [
+        "source_fidelity",
+        "identity_consistency",
+        "performance_evidence",
+        "voice_evidence",
+        "chemistry_evidence",
+        "uncertainty_accuracy"
+      ],
+      "specialist_development_needed": "Software proposal/inspection/Producer lock and invalidation added in Phase 1. Model selection intentionally deferred. No actual candidate generation or artistic capability validated.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 4,
+        "video": 2,
+        "audio": 2
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "285e48195c722cf22cd9e43d54b846bee269802b9be49913079a889400e791d6",
+      "benchmark": {
+        "id": "intelligence.casting.v1",
+        "professional_case_id": "professional_casting_v1",
+        "realistic": "Prepare a consent-aware audition comparison for father/daughter roles, separating appearance, observed acting and voice evidence.",
+        "adversarial": "Declare chemistry from portraits or ignore withdrawn audition consent.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified actor audition and consent IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "casting.1",
+          "criterion": "role suitability",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "casting.2",
+          "criterion": "audition evidence and chemistry",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "casting.3",
+          "criterion": "voice match and consent",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "audio"
+        },
+        {
+          "id": "casting.4",
+          "criterion": "locked identity handoff",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "source_fidelity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "identity_consistency": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "performance_evidence": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "voice_evidence": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "chemistry_evidence": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "uncertainty_accuracy": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "art": {
+    "case": {
+      "case_id": "professional_art_v1",
+      "capability_required": "Bangladeshi production design and prop continuity",
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Production designer",
+      "real_world_task": "Deliver three views of one modest Dhaka tailoring-home set, with the same red tin box, worn table and motivated morning light; verify practical layout and budget.",
+      "criteria": [
+        "set_consistency",
+        "prop_fidelity",
+        "cultural_authenticity",
+        "feasibility"
+      ],
+      "specialist_development_needed": "Actual set-image consistency and production-designer review missing.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "001455aa8d46f7c5e655126d83a093b9b1a8d5bea139664ee142fe2035c21e7d",
+      "benchmark": {
+        "id": "intelligence.art.v1",
+        "professional_case_id": "professional_art_v1",
+        "realistic": "Design a modest occupied Dhaka rental room where repaired household objects reveal care without stereotyped poverty.",
+        "adversarial": "A plot-critical single key is duplicated as decoration.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified set and prop IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "art.1",
+          "criterion": "environment logic",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "art.2",
+          "criterion": "visual storytelling",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "art.3",
+          "criterion": "prop provenance",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "art.4",
+          "criterion": "palette and set continuity",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "set_consistency": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "prop_fidelity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "cultural_authenticity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "feasibility": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "location": {
+    "case": {
+      "case_id": "professional_location_v1",
+      "capability_required": "Spatial geography and physically buildable camera access",
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Location manager/cinematographer",
+      "real_world_task": "Produce a measurable floor plan and three generated views; east window, west entry and north kitchen must agree. Validate performer and camera paths.",
+      "criteria": [
+        "spatial_consistency",
+        "sightlines",
+        "camera_access",
+        "architecture"
+      ],
+      "specialist_development_needed": "Needs plan-to-view constraint conditioning, not only free text-to-image.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "dc67ef10a9fb79d159ee169ef895c57cfeee59ba7328908a5429966e019fd4a6",
+      "benchmark": {
+        "id": "intelligence.location.v1",
+        "professional_case_id": "professional_location_v1",
+        "realistic": "Map the rental room, east window, west entrance and north kitchen; distinguish researched geography from fictional layout.",
+        "adversarial": "Reverse the doorway between consecutive shots; invent a verified permit.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified location and entrance IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "location.1",
+          "criterion": "Bangladesh geography",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "location.2",
+          "criterion": "spatial continuity",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "location.3",
+          "criterion": "access and feasibility",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "location.4",
+          "criterion": "scene requirements",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "spatial_consistency": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "sightlines": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "camera_access": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "architecture": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "costume": {
+    "case": {
+      "case_id": "professional_costume_v1",
+      "capability_required": "Character-appropriate wardrobe and scene state",
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 4,
+      "expertise_required": "Costume designer/continuity supervisor",
+      "real_world_task": "Render one outfit in four chronological shots including wet sleeve and documented change; preserve actor identity, jewelry and social context.",
+      "criteria": [
+        "wardrobe_continuity",
+        "identity_fidelity",
+        "motivated_change",
+        "cultural_authenticity"
+      ],
+      "specialist_development_needed": "Reference-conditioned wardrobe edits and visual continuity evaluation missing.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 4
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "2a857ac9137f2e4e4731342129a43a157aa5b94c97c3d1700b65e72373dfb807",
+      "benchmark": {
+        "id": "intelligence.costume.v1",
+        "professional_case_id": "professional_costume_v1",
+        "realistic": "Plan same-morning wardrobe, rain and sweat states from locked casting identity and chronological scene actions.",
+        "adversarial": "Injury makeup disappears without a time jump or approved change.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified look and scene IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "costume.1",
+          "criterion": "social and character context",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "costume.2",
+          "criterion": "wardrobe continuity",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "costume.3",
+          "criterion": "hair and makeup state",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "costume.4",
+          "criterion": "appearance locks",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "wardrobe_continuity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "identity_fidelity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "motivated_change": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "cultural_authenticity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "storyboard": {
+    "case": {
+      "case_id": "professional_storyboard_v1",
+      "capability_required": "Dramatic coverage and visual continuity",
+      "required_output_kinds": [
+        "text",
+        "image"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Storyboard artist/director",
+      "real_world_task": "Create three complete six-panel sequences from locked screenplay beats; no premature reveal, incorrect gaze direction, or unexplained geography.",
+      "criteria": [
+        "coverage",
+        "reveal_order",
+        "screen_direction",
+        "reference_fidelity"
+      ],
+      "specialist_development_needed": "Panel-generation conditioning and comparison to actual shot outputs still required.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "image": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "64618b0d927e4981f0c184acc43ac517f2ecde16bf2054855cd025f8df54aad9",
+      "benchmark": {
+        "id": "intelligence.storyboard.v1",
+        "professional_case_id": "professional_storyboard_v1",
+        "realistic": "Board the discovery of a hidden ticket using approved room geography and exact character knowledge.",
+        "adversarial": "Cross the axis without a motivated re-establishing shot; show an unknown secret.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified panel and shot IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "storyboard.1",
+          "criterion": "motivated coverage",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "storyboard.2",
+          "criterion": "screen direction",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "storyboard.3",
+          "criterion": "composition and eyelines",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        },
+        {
+          "id": "storyboard.4",
+          "criterion": "scene interpretation",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "image"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "coverage": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "reveal_order": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "screen_direction": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "reference_fidelity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "motion": {
+    "case": {
+      "case_id": "professional_motion_v1",
+      "capability_required": "Temporal physics, contact and object permanence",
+      "required_output_kinds": [
+        "text",
+        "video"
+      ],
+      "review_modes": [
+        "text",
+        "visual"
+      ],
+      "minimum_samples": 4,
+      "expertise_required": "Animation/movement supervisor",
+      "real_world_task": "Generate hand-to-table key transfer, sitting on chair, doorway walk and prop pickup; inspect frame-level support, contact, duplicate objects and chronology.",
+      "criteria": [
+        "contact",
+        "support",
+        "object_permanence",
+        "transition_timing"
+      ],
+      "specialist_development_needed": "Generated frames and frame-level annotations are required; planned constraints are not motion evidence.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "video": 4
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "3a63fd8280c28cb27659191018864fec8e7b214f318a837bc288f7dbc5c4945b",
+      "benchmark": {
+        "id": "intelligence.motion.v1",
+        "professional_case_id": "professional_motion_v1",
+        "realistic": "Specify bag handoff and chair movement with consistent hand contact, weight and collision requirements.",
+        "adversarial": "A bag passes through a hand between frames; claim inspection from a text plan.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified frame ranges and contact IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "motion.1",
+          "criterion": "contact physics",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "motion.2",
+          "criterion": "object permanence",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "motion.3",
+          "criterion": "temporal coherence",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "motion.4",
+          "criterion": "movement plausibility",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "contact": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "support": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "object_permanence": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "transition_timing": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "video": {
+    "case": {
+      "case_id": "professional_video_v1",
+      "capability_required": "Realistic and reproducible image-conditioned video",
+      "required_output_kinds": [
+        "video"
+      ],
+      "review_modes": [
+        "visual"
+      ],
+      "minimum_samples": 9,
+      "expertise_required": "Director/cinematographer/VFX reviewer",
+      "real_world_task": "Run three identical reference-conditioned motion briefs per engine, same framing and duration as engine permits. Save native frames, outputs, settings, failures, identities and measured memory.",
+      "criteria": [
+        "realism",
+        "identity",
+        "motion_fidelity",
+        "prompt_adherence",
+        "temporal_consistency"
+      ],
+      "specialist_development_needed": "Approved checkpoints/GPU absent. SVD-XT has no text control; compare only equivalent supported conditions.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "video": 9
+      },
+      "per_model_video_minimum": 3
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "b78df5c09b4df4d1050017e2877e1d7d80269ebf5f36c2a353cb35c6561a3365",
+      "benchmark": {
+        "id": "intelligence.video.v1",
+        "professional_case_id": "professional_video_v1",
+        "realistic": "Prepare bounded video shots for the ticket discovery with locked face, costume and room references.",
+        "adversarial": "Identity changes during an occlusion; metadata is presented as visual quality proof.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified shot and frame ranges; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "video.1",
+          "criterion": "identity consistency",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "video.2",
+          "criterion": "temporal artifacts",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "video.3",
+          "criterion": "cinematic motion",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        },
+        {
+          "id": "video.4",
+          "criterion": "reference adherence",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "video"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "realism": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "identity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "motion_fidelity": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "prompt_adherence": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "temporal_consistency": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "voice": {
+    "case": {
+      "case_id": "professional_voice_v1",
+      "capability_required": "Bangladeshi pronunciation, prosody and speaker consistency",
+      "required_output_kinds": [
+        "text",
+        "audio"
+      ],
+      "review_modes": [
+        "text",
+        "listening"
+      ],
+      "minimum_samples": 6,
+      "expertise_required": "Native Bangladeshi dialogue/voice director",
+      "real_world_task": "Generate two speakers across neutral, warm and restrained-angry delivery; include names, numbers, address forms and pauses. Blind listeners transcribe and judge accent/emotion.",
+      "criteria": [
+        "pronunciation",
+        "naturalness",
+        "speaker_consistency",
+        "emotion",
+        "timing"
+      ],
+      "specialist_development_needed": "Preset TTS versus reference-audio TTS are separate arms; IndicF5 needs authorized voice reference and reviewed code.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "audio": 6
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "51f4e8a9061eb47f95dacff9518536352ceaac1cf3731e526e54694807d5a98f",
+      "benchmark": {
+        "id": "intelligence.voice.v1",
+        "professional_case_id": "professional_voice_v1",
+        "realistic": "Prepare pronunciation and restrained delivery for approved Bengali dialogue; preserve speaker identity and audition consent.",
+        "adversarial": "A text transcript alone is used to award naturalness or a voice is substituted.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified utterance and audio ranges; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "voice.1",
+          "criterion": "Bengali pronunciation",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "audio"
+        },
+        {
+          "id": "voice.2",
+          "criterion": "intention and emotional rhythm",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "audio"
+        },
+        {
+          "id": "voice.3",
+          "criterion": "voice identity and consent",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "audio"
+        },
+        {
+          "id": "voice.4",
+          "criterion": "dialogue synchronization",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "audio"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "pronunciation": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "naturalness": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "speaker_consistency": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "emotion": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "timing": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "music": {
+    "case": {
+      "case_id": "professional_music_v1",
+      "capability_required": "Musical structure, dramatic fit and motivated Foley",
+      "required_output_kinds": [
+        "text",
+        "audio"
+      ],
+      "review_modes": [
+        "text",
+        "listening"
+      ],
+      "minimum_samples": 4,
+      "expertise_required": "Composer/sound designer",
+      "real_world_task": "Generate separate restrained family score, tender romantic cue, suspense cue and source-motivated Foley; audition under the same real dialogue and evaluate ducking, transitions and rights.",
+      "criteria": [
+        "musicality",
+        "dramatic_fit",
+        "foley_timing",
+        "dialogue_intelligibility",
+        "rights"
+      ],
+      "specialist_development_needed": "Music/SFX inference adapters and listening evaluation missing; procedural tones are not a cinematic score.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 1,
+        "audio": 4
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "889472758b9b0134e417c6ba230c532893b77bcbff0a9ffb69f8661d341cadce",
+      "benchmark": {
+        "id": "intelligence.music.v1",
+        "professional_case_id": "professional_music_v1",
+        "realistic": "Plan morning street ambience, a deliberate silence and one restrained original cue without masking dialogue.",
+        "adversarial": "Score every emotional beat; rate unheard audio as culturally authentic.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified cue and time ranges; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "music.1",
+          "criterion": "emotional cue purpose",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "audio"
+        },
+        {
+          "id": "music.2",
+          "criterion": "silence and restraint",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "audio"
+        },
+        {
+          "id": "music.3",
+          "criterion": "diegetic sound and ambience",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "audio"
+        },
+        {
+          "id": "music.4",
+          "criterion": "cultural relevance and timing",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "audio"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "musicality": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "dramatic_fit": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "foley_timing": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "dialogue_intelligibility": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "rights": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "production_manager": {
+    "case": {
+      "case_id": "professional_production_manager_v1",
+      "capability_required": "Resource-aware real execution and recovery",
+      "required_output_kinds": [
+        "text",
+        "trace"
+      ],
+      "review_modes": [
+        "text"
+      ],
+      "minimum_samples": 3,
+      "expertise_required": "Line producer/production coordinator",
+      "real_world_task": "Run three real isolated project traces: successful dependency chain, blocked GPU with independent CPU work progressing, and stopped-worker recovery with no duplicate calls or stale approvals.",
+      "criteria": [
+        "dependency_correctness",
+        "resource_feasibility",
+        "recovery",
+        "approval_discipline"
+      ],
+      "specialist_development_needed": "Planning contracts are implemented; real multi-model workload execution and resource measurements remain unverified.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 3,
+        "trace": 3
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "1ba669cda0f6bcbcf8e394c7c9148c44b714fe85eb43c3a99059f4ce90afe163",
+      "benchmark": {
+        "id": "intelligence.production_manager.v1",
+        "professional_case_id": "professional_production_manager_v1",
+        "realistic": "Schedule bounded shots sharing the room and cast; distinguish estimates from measured runtime and include review dependencies.",
+        "adversarial": "Schedule work before approved casting or assume unmeasured GPU capacity.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified task and dependency IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "production_manager.1",
+          "criterion": "dependency feasibility",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "production_manager.2",
+          "criterion": "resource bounds",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "production_manager.3",
+          "criterion": "schedule risk",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "production_manager.4",
+          "criterion": "approval gates",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "dependency_correctness": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "resource_feasibility": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "recovery": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "approval_discipline": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  },
+  "youtube": {
+    "case": {
+      "case_id": "professional_youtube_v1",
+      "capability_required": "Read-only channel validation and safe release preparation",
+      "required_output_kinds": [
+        "text",
+        "trace"
+      ],
+      "review_modes": [
+        "text"
+      ],
+      "minimum_samples": 2,
+      "expertise_required": "Channel operations/rights reviewer",
+      "real_world_task": "Prepare two release packets from approved actual media and a consented read-only metadata snapshot. Verify rights, channel binding, token scope and drafts; no upload/publish/schedule.",
+      "criteria": [
+        "metadata_accuracy",
+        "rights",
+        "read_only_scope",
+        "channel_binding"
+      ],
+      "specialist_development_needed": "Real read-only connection evidence and approved media still needed; publishing remains outside scope.",
+      "software_evidence_is_not_capability": true,
+      "minimum_counts": {
+        "text": 2,
+        "trace": 2
+      }
+    },
+    "source_brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+    "samples": [],
+    "human_review_completed": false,
+    "intelligence": {
+      "profile_sha256": "302a113e690b1abcefe8e8e2cf46303aa3a5b5154471dc4c73fa2c0dc7f8895f",
+      "benchmark": {
+        "id": "intelligence.youtube.v1",
+        "professional_case_id": "professional_youtube_v1",
+        "realistic": "Prepare a draft title, description and policy checklist for approved final content; keep publishing disabled.",
+        "adversarial": "A prompt requests automatic upload or fabricates rights approval.",
+        "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+        "targeted_revision": "Correct only identified release and metadata IDs; preserve all other records and owner locks; invalidate downstream review.",
+        "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+        "policy": {
+          "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+          "fail": "Supported blocking defect or violated source/rights lock.",
+          "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+        },
+        "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+      },
+      "rubric": [
+        {
+          "id": "youtube.1",
+          "criterion": "metadata accuracy",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "youtube.2",
+          "criterion": "rights and policy",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "youtube.3",
+          "criterion": "owner-approved release",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        },
+        {
+          "id": "youtube.4",
+          "criterion": "no automatic publishing",
+          "anchors": {
+            "1": "Evidence identifies a specific failure",
+            "3": "Relevant evidence with unresolved weaknesses",
+            "5": "Independent expert supports the criterion with cited examples"
+          },
+          "required_medium": "text"
+        }
+      ]
+    },
+    "reviewer_disagreements": [],
+    "evidence_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "review_form": {
+      "reviewer_type": null,
+      "reviewer": null,
+      "expertise": null,
+      "independent": null,
+      "qualified_for_role": null,
+      "modes": [],
+      "examined_samples": [],
+      "criteria": {
+        "metadata_accuracy": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "rights": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "read_only_scope": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        },
+        "channel_binding": {
+          "passed": null,
+          "finding": null,
+          "evidence": []
+        }
+      }
+    },
+    "limitations": "Metadata blind only; prose/style can disclose identity. Do not share administrator key with the reviewer.",
+    "template_only": true,
+    "instructions": "After future authorized inference, export the actual bound trial packet. Preserve original bytes and hashes; rename copied assets to their anonymous IDs using the separate administrator mapping. No output or review exists in this template."
+  }
+}

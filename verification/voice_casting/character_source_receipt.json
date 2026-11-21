@@ -1,0 +1,19 @@
+{
+  "selected": [
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_casting_handoff_cannot_drop_approved_character_source",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_persistent_idempotent_casting_handoff_uses_existing_store",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_explicit_parler_department_choice_stages_existing_worker_without_generation",
+    "tests.test_voice_casting_integration.VoiceCastingTests.test_readiness_casting_complete_with_explicit_voice_blocker_not_false_readiness"
+  ],
+  "tests": 4,
+  "errors": 0,
+  "failures": 0,
+  "requests_import_only_shim": true,
+  "gpu": false,
+  "model_inference": false,
+  "weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "actual_human_voice_or_artistic_review": false,
+  "scope": "manual software fixtures and injected classes only; any process recheck is the existing fixed CPU dummy, not native model inference"
+}

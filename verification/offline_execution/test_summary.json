@@ -1,0 +1,21 @@
+{
+  "resumed_commit": "391ca986b08b15ba5080a4c36fcc586e623e3568",
+  "new_unique_tests": 38,
+  "existing_affected_unique_checks": 14,
+  "total_unique_successfully_verified": 52,
+  "initial_new_test_setup_errors": 24,
+  "initial_existing_passed": 7,
+  "all_setup_errors_fixed_and_retested": true,
+  "native_model_processes_launched": 0,
+  "actual_cpu_dummy_processes_exercised": true,
+  "actual_mpi_tested": false,
+  "isolation_probe_passed": false,
+  "isolation_blocker": "bwrap NETLINK_ROUTE socket Operation not permitted; no bypass",
+  "requests_import_only_shim": true,
+  "gpu_inference_weights_hosted_paid_license_acceptance": 0,
+  "engineering_complete": 17,
+  "partial": 2,
+  "production_ready": 0,
+  "professionally_validated_of_21": 0,
+  "human_artistic_reviews": 0
+}

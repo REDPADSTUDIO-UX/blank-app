@@ -1,0 +1,8 @@
+test_ace15_exact_native_params_and_deny_auto_download_sync_policy (tests.test_offline_six_preparation.OfflineSixTests.test_ace15_exact_native_params_and_deny_auto_download_sync_policy) ... ok
+test_indicf5_reference_transcript_consent_and_original_bengali_preserved (tests.test_offline_six_preparation.OfflineSixTests.test_indicf5_reference_transcript_consent_and_original_bengali_preserved) ... ok
+test_indicf5_cannot_substitute_consent_or_enable_remote_custom_code (tests.test_offline_six_preparation.OfflineSixTests.test_indicf5_cannot_substitute_consent_or_enable_remote_custom_code) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.047s
+
+OK

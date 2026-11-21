@@ -1,0 +1,3 @@
+Review status: PENDING; no reviewer contacted or approval obtained.
+
+Three anonymized outputs from one reported model, NOT a controlled multi-model comparison. Assess source knowledge vs inference; exact quotations; natural Bangladesh Bengali; motivation/subtext; whether camera instructions are filmable; performance vs camera confusion; schema and completeness. Mark uncertainty separately from errors. Record reviewer expertise and independence. Do not approve unseen generated footage. The leading diagnostic is deliberately excluded. Do not infer production readiness from these tiny samples. Identity key is outside this packet; style may reveal provenance.

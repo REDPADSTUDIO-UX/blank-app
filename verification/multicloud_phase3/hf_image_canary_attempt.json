@@ -1,0 +1,36 @@
+{
+  "provider": "hugging_face_public_space",
+  "space": "prithivMLmods/Flux.2-Klein-Edit-Ultra-Fast",
+  "space_revision": "2225fd5fab9790c7e393c14f08d23fa182a7b71c",
+  "reported_models": [
+    "black-forest-labs/FLUX.2-klein-4B",
+    "black-forest-labs/FLUX.2-small-decoder"
+  ],
+  "checkpoint_revisions": null,
+  "classification": "hosted_demo_canary_NOT_reproducible_local_benchmark",
+  "request": {
+    "images_b64_json": "[]",
+    "prompt": "Photorealistic cinematic casting portrait of Ruba, an entirely fictional 29-year-old Bangladeshi woman, dark hair tied in a simple loose bun, modest faded blue cotton salwar kameez, no makeup glamour, quietly determined expression with restrained warmth, naturally lit small Kallyanpur Dhaka kitchen at morning, stainless cooking pots in soft background, eye-level 50mm framing, realistic skin texture, no text, no logos, no real person likeness.",
+    "seed": 117,
+    "randomize_seed": false,
+    "width": 512,
+    "height": 512,
+    "steps": 4,
+    "guidance_scale": 1.0
+  },
+  "authentication": "anonymous_no_token",
+  "paid_fallback": false,
+  "state": "hosted_output_received_unverified_checkpoint",
+  "actual_output_received": true,
+  "actual_gpu_model": null,
+  "peak_gpu_memory_bytes": null,
+  "human_review_completed": false,
+  "professional_accepted": false,
+  "event_id": "800b90421aea438bbaef3814dc2b66af",
+  "submission_http_status": 200,
+  "output_sha256": "943b00e32a922cc51321d3b29f73932f2dd8e4c4136cf3790a1dcda15ab2e592",
+  "output_bytes": 393884,
+  "output_path": "verification/multicloud_phase3/hf_hosted_ruba_canary.png",
+  "returned_seed": 117,
+  "elapsed_wall_seconds": 13.887781429999905
+}

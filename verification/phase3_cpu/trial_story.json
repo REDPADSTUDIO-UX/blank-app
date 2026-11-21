@@ -1,0 +1,48 @@
+{
+  "name": "trial_story",
+  "agent": "story",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "device": "CPU",
+  "request": {
+    "agent": "story",
+    "instructions": "Create a complete original THREE-episode compact architecture using the supplied schema. Each text field ONE short Bengali sentence. Two adult characters only; honor the brief. Hook types: curiosity/conflict/character/emotional/mystery/reversal/visual. Ending types: suspense/emotional/relationship/reveal/moral_dilemma/decision/resolution. Distinct choices cause each next episode. No copied generic emotional slogans. Research status original/unverified, never invent citations. Schema: {\"logline\": \"<original generated text; preserve approved IDs when referenced>\", \"premise\": \"<original generated text; preserve approved IDs when referenced>\", \"conflict\": \"<original generated text; preserve approved IDs when referenced>\", \"season_arc\": \"<original generated text; preserve approved IDs when referenced>\", \"ending_strategy\": \"<original generated text; preserve approved IDs when referenced>\", \"feasibility\": \"<original generated text; preserve approved IDs when referenced>\", \"characters\": [{\"id\": \"<original generated text; preserve approved IDs when referenced>\", \"name\": \"<original generated text; preserve approved IDs when referenced>\", \"biography\": \"<original generated text; preserve approved IDs when referenced>\", \"want\": \"<original generated text; preserve approved IDs when referenced>\", \"need\": \"<original generated text; preserve approved IDs when referenced>\", \"internal_conflict\": \"<original generated text; preserve approved IDs when referenced>\", \"relationship_arc\": \"<original generated text; preserve approved IDs when referenced>\"}, {\"id\": \"<original generated text; preserve approved IDs when referenced>\", \"name\": \"<original generated text; preserve approved IDs when referenced>\", \"biography\": \"<original generated text; preserve approved IDs when referenced>\", \"want\": \"<original generated text; preserve approved IDs when referenced>\", \"need\": \"<original generated text; preserve approved IDs when referenced>\", \"internal_conflict\": \"<original generated text; preserve approved IDs when referenced>\", \"relationship_arc\": \"<original generated text; preserve approved IDs when referenced>\"}], \"episodes\": [{\"number\": 1, \"objective\": \"<original generated text; preserve approved IDs when referenced>\", \"cause\": \"<original generated text; preserve approved IDs when referenced>\", \"development\": \"<original generated text; preserve approved IDs when referenced>\", \"escalation\": \"<original generated text; preserve approved IDs when referenced>\", \"payoff\": \"<original generated text; preserve approved IDs when referenced>\", \"character_change\": \"<original generated text; preserve approved IDs when referenced>\", \"hook\": {\"type\": \"character\", \"image\": \"<original generated text; preserve approved IDs when referenced>\", \"question\": \"<original generated text; preserve approved IDs when referenced>\", \"promise\": \"<original generated text; preserve approved IDs when referenced>\"}, \"ending\": {\"type\": \"relationship\", \"payoff\": \"<original generated text; preserve approved IDs when referenced>\", \"question\": \"<original generated text; preserve approved IDs when referenced>\", \"next_connection\": \"<original generated text; preserve approved IDs when referenced>\", \"earned_by\": \"<original generated text; preserve approved IDs when referenced>\"}, \"reveals\": []}, {\"number\": 2, \"objective\": \"<original generated text; preserve approved IDs when referenced>\", \"cause\": \"<original generated text; preserve approved IDs when referenced>\", \"development\": \"<original generated text; preserve approved IDs when referenced>\", \"escalation\": \"<original generated text; preserve approved IDs when referenced>\", \"payoff\": \"<original generated text; preserve approved IDs when referenced>\", \"character_change\": \"<original generated text; preserve approved IDs when referenced>\", \"hook\": {\"type\": \"character\", \"image\": \"<original generated text; preserve approved IDs when referenced>\", \"question\": \"<original generated text; preserve approved IDs when referenced>\", \"promise\": \"<original generated text; preserve approved IDs when referenced>\"}, \"ending\": {\"type\": \"relationship\", \"payoff\": \"<original generated text; preserve approved IDs when referenced>\", \"question\": \"<original generated text; preserve approved IDs when referenced>\", \"next_connection\": \"<original generated text; preserve approved IDs when referenced>\", \"earned_by\": \"<original generated text; preserve approved IDs when referenced>\"}, \"reveals\": []}, {\"number\": 3, \"objective\": \"<original generated text; preserve approved IDs when referenced>\", \"cause\": \"<original generated text; preserve approved IDs when referenced>\", \"development\": \"<original generated text; preserve approved IDs when referenced>\", \"escalation\": \"<original generated text; preserve approved IDs when referenced>\", \"payoff\": \"<original generated text; preserve approved IDs when referenced>\", \"character_change\": \"<original generated text; preserve approved IDs when referenced>\", \"hook\": {\"type\": \"character\", \"image\": \"<original generated text; preserve approved IDs when referenced>\", \"question\": \"<original generated text; preserve approved IDs when referenced>\", \"promise\": \"<original generated text; preserve approved IDs when referenced>\"}, \"ending\": {\"type\": \"relationship\", \"payoff\": \"<original generated text; preserve approved IDs when referenced>\", \"question\": \"<original generated text; preserve approved IDs when referenced>\", \"next_connection\": \"<original generated text; preserve approved IDs when referenced>\", \"earned_by\": \"<original generated text; preserve approved IDs when referenced>\"}, \"reveals\": []}], \"setups\": [], \"continuity\": [], \"research\": [{\"source_id\": \"<original generated text; preserve approved IDs when referenced>\", \"license\": \"<original generated text; preserve approved IDs when referenced>\", \"note\": \"<original generated text; preserve approved IDs when referenced>\", \"status\": \"<original generated text; preserve approved IDs when referenced>\"}]}",
+    "brief": {
+      "title": "একটা ছাতা",
+      "premise": "ঢাকার ভাড়া বাসায় রাশেদ (৩২) ও তানিয়া (২৯), বিবাহিত দম্পতি। বৃষ্টির সকালে দুজনের জরুরি কাজ, একটি ছাতা, হাতে সীমিত বাসভাড়া। তানিয়ার চাকরির ইন্টারভিউ, রাশেদের কাজে উপস্থিত থাকা জরুরি। তাদের ছোট অভ্যাসে রসিকতা আছে; অর্থের চাপ মুখে স্বীকার করতে পারে না। বাস্তবসম্মত যৌথ সিদ্ধান্তে সম্পর্ক বদলাবে।",
+      "genre": "family romance",
+      "tone": "সংযত আবেগ, স্বাভাবিক দাম্পত্য উষ্ণতা ও চরিত্রভিত্তিক রসিকতা; coincidence নয়",
+      "episodes": 3,
+      "episode": 1,
+      "seconds": 300
+    },
+    "experimental_source": null,
+    "targets": null
+  },
+  "prompt_sha256": "cb690dedec7060c10a082a26553e70088b4d73b3a99df45bd32204b7f094b4af",
+  "raw": "",
+  "result": null,
+  "error": "Local writer unavailable or returned invalid JSON; no fallback or model download occurred.",
+  "state": "Failed",
+  "validation": {},
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.4,
+      "num_predict": 3072,
+      "num_ctx": 8192,
+      "seed": 42
+    },
+    "inference_completed": false,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M"
+  },
+  "wall_seconds": 420.146,
+  "aggregate_process_peak_rss_bytes": 4021768192,
+  "memory_note": "Sampled aggregate RSS of caller and descendant server/runner, not unique model allocation",
+  "provenance": "incomplete_or_failed_local_attempt",
+  "source_approval": "Unapproved research candidate only",
+  "production_approved": false,
+  "independent_human_review": false
+}

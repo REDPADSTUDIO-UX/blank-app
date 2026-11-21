@@ -1,0 +1,1035 @@
+{
+  "schema_version": 1,
+  "registered_agents": 21,
+  "registry_sha256": "bf81744022229662c8ec56ca3a17ebdc64dfadcaacf676072b86a73cce7b345f",
+  "registry_source": "redpad_pipeline/agent_catalog.json",
+  "historical_matrix": "verification/agent_implementation_matrix.json",
+  "scope": "Current engineering/evidence index, not real-model or artistic acceptance; project runtime state is computed separately.",
+  "agents": [
+    {
+      "id": "redpad.agent.director",
+      "key": "director",
+      "name": "Director AI",
+      "department": "Creative leadership",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/ui.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "direction",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "IN PROGRESS",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": "verification/director_recovery_20261113/results.json",
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.qc",
+      "key": "qc",
+      "name": "Quality Control AI",
+      "department": "Creative leadership",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/drama_quality.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "quality_review",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.story",
+      "key": "story",
+      "name": "Story AI",
+      "department": "Pre-production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/screenwriter.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "story",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.script",
+      "key": "script",
+      "name": "Script AI",
+      "department": "Pre-production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/screenwriter.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "screenplay",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.character",
+      "key": "character",
+      "name": "Character AI",
+      "department": "Pre-production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/drama_quality.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "character_bible",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.art",
+      "key": "art",
+      "name": "Art Director AI",
+      "department": "Pre-production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/drama_quality.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "art_plan",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "flux2_klein4",
+        "repo": "black-forest-labs/FLUX.2-klein-4B",
+        "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.location",
+      "key": "location",
+      "name": "Location AI",
+      "department": "Pre-production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/drama_quality.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "location_bible",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "flux2_klein4",
+        "repo": "black-forest-labs/FLUX.2-klein-4B",
+        "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.costume",
+      "key": "costume",
+      "name": "Costume Designer AI",
+      "department": "Pre-production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/drama_quality.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "costume_bible",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "flux2_klein4",
+        "repo": "black-forest-labs/FLUX.2-klein-4B",
+        "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.storyboard",
+      "key": "storyboard",
+      "name": "Storyboard AI",
+      "department": "Pre-production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/storyboard.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "storyboard",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "flux2_klein4",
+        "repo": "black-forest-labs/FLUX.2-klein-4B",
+        "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.performance",
+      "key": "performance",
+      "name": "Performance Director AI",
+      "department": "Production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/drama_quality.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "performance_plan",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.cinematographer",
+      "key": "cinematographer",
+      "name": "Cinematographer AI",
+      "department": "Production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/storyboard.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "camera_plan",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.motion",
+      "key": "motion",
+      "name": "Motion & Physics AI",
+      "department": "Production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/local_animation.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "motion_plan",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "wan_animate2",
+        "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+        "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.video",
+      "key": "video",
+      "name": "Video Generation AI",
+      "department": "Production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/local_animation.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "video_manifest",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "wan22_5",
+        "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+        "revision": "b8fff7315c768468a5333511427288870b2e9635",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.voice",
+      "key": "voice",
+      "name": "Voice & Dialogue AI",
+      "department": "Production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/free_voice.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "voice_manifest",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "indic_speak",
+        "repo": "bodhan-ai/indic-speak",
+        "revision": "76e0814f189321efe550011850cd288dae366aad",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.continuity",
+      "key": "continuity",
+      "name": "Continuity Supervisor AI",
+      "department": "Production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/drama_quality.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "continuity_review",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.music",
+      "key": "music",
+      "name": "Music & SFX AI",
+      "department": "Post-production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/drama_free.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "sound_plan",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "ace15",
+        "repo": "ACE-Step/Ace-Step1.5",
+        "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.editing",
+      "key": "editing",
+      "name": "Editing & VFX AI",
+      "department": "Post-production",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/drama_finish.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "edit_manifest",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.production_manager",
+      "key": "production_manager",
+      "name": "Production Manager AI",
+      "department": "Operations & distribution",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/engine.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "production_plan",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen36_27",
+        "repo": "Qwen/Qwen3.6-27B",
+        "revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.growth",
+      "key": "growth",
+      "name": "Growth AI",
+      "department": "Operations & distribution",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/marketing.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "growth_plan",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.youtube",
+      "key": "youtube",
+      "name": "YouTube AI",
+      "department": "Operations & distribution",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/youtube.py",
+          "redpad_pipeline/specialists.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "youtube_package",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_9",
+        "repo": "Qwen/Qwen3.5-9B",
+        "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    },
+    {
+      "id": "redpad.agent.casting",
+      "key": "casting",
+      "name": "Casting Director AI",
+      "department": "Casting and actor identity",
+      "engineering": {
+        "status": "cpu_fixture_workflow_verified",
+        "existing_modules": [
+          "redpad_pipeline/casting.py"
+        ],
+        "input_contract": {
+          "schema_version": 1,
+          "brief": "non-empty string",
+          "references": "list of approved task IDs"
+        },
+        "output_contract": {
+          "schema_version": 1,
+          "kind": "casting",
+          "summary": "non-empty string",
+          "artifacts": "list of strings; references only",
+          "provenance": "manual or simulation; not verified inference"
+        },
+        "verification": "verification/agent_registry_sync_20261120/cpu_tests.json"
+      },
+      "model": {
+        "profile": "qwen35_27",
+        "repo": "Qwen/Qwen3.5-27B",
+        "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+        "registry_status": "Blocked — With Exact Reason",
+        "validated_selection": null,
+        "installation_and_connection": "not_probed_by_this_export"
+      },
+      "inference": {
+        "selected_model_validation": "not_verified_by_this_audit",
+        "historical_evidence": [],
+        "scope": "Historical research and fallback experiments do not verify the current selected model or current project route."
+      },
+      "qc": {
+        "workflow": "cpu_fixture_coverage_verified",
+        "independent_creative_review": "not_attested_by_this_audit",
+        "owner_gate": "QC recommendation then owner approval; Casting additionally requires Director inspection and Producer identity lock; QC itself is owner-reviewed"
+      },
+      "production": {
+        "status": "not_verified",
+        "ready": false,
+        "reason": "Neither registry presence nor software tests establish artistic acceptance or production readiness."
+      }
+    }
+  ]
+}

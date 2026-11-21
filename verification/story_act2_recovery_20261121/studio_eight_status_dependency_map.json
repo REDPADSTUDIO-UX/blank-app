@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "source_commit": "a3d6252d2886827d7028ef328eff3fbf967901e4",
+  "recovery_result": "Original master source contains eight readiness statuses, not a separately enumerated eight-development-phase roadmap. Recovered them exactly; do not invent missing stage names or reclassify call counts.",
+  "original_source": {
+    "path": "assets/phase3/master_scope.md",
+    "blob_sha": "cb126f0eee7c148c4ee7f861efea7366fabfe5fc",
+    "section": "SECTION 18 — evidence statuses",
+    "line_start": 1133,
+    "line_end": 1140
+  },
+  "separately_named_numbering": {
+    "readiness_statuses": 8,
+    "sequential_model_batches": 8,
+    "sequential_execution_phases": 8,
+    "stages_1_3": "YouTube / ACE music / Indic-Speak bounded benchmark; not full Studio phases",
+    "story_budget": "9/11 consumed; 2 remaining; independent of all project numbering"
+  },
+  "search_scope": {
+    "feature_tree_entries": 1220,
+    "tree_truncated": false,
+    "root_markdown_files": 61,
+    "feature_commit_messages": 162,
+    "issues": [
+      1,
+      2,
+      3
+    ],
+    "master_sources": [
+      "assets/phase3/master_scope.md",
+      "assets/pre_gpu/owner_scope.md",
+      "assets/phase3/professional_scope.md",
+      "MASTER_STUDIO_CHECKPOINT.md",
+      "AGENT_DEVELOPMENT_ROADMAP.md"
+    ],
+    "limitation": "Not a proof that an earlier conversation-only eight-development-phase plan never existed. Such a different original mapping remains UNVERIFIED; do not request guesses or start a new Phase4."
+  },
+  "stages": [
+    {
+      "number": 1,
+      "label": "Software Implemented",
+      "status": "VERIFIED COMPLETE within recorded no-GPU engineering scope",
+      "evidence": [
+        "PHASE3_FINAL_VOICE_INTEGRATION_REPORT_BN.md",
+        "verification/voice_casting/readiness_19.json"
+      ],
+      "actual": "19/19 remaining-agent no-GPU engineering recorded complete; 21 agents retained; Director/Script separate workstreams. This is not complete professional software/runtime coverage.",
+      "remaining": "Runtime-specific mismatches must be fixed only when demonstrated; do not repeat completed mock/CPU engineering.",
+      "independent_of_failed_story": true
+    },
+    {
+      "number": 2,
+      "label": "Model Configured",
+      "status": "PARTIAL — pinned candidates configured, no professional winners",
+      "evidence": [
+        "verification/intelligence/completion_20261115/sequential_evaluation_plan.json",
+        "PHASE3_INTELLIGENCE_COMPLETION_REPORT_BN.md"
+      ],
+      "actual": "Central pinned profile/routing preparation exists; a candidate is not an accepted selected model.",
+      "remaining": "Role-specific actual comparison, approved exact recipes and professional acceptance.",
+      "independent_of_failed_story": true
+    },
+    {
+      "number": 3,
+      "label": "Model Installed",
+      "status": "PARTIAL — historical research bundle only",
+      "evidence": [
+        "verification/story_budget11_20261121/resume_current_vm_verification.json"
+      ],
+      "actual": "Qwen9B GGUF/runtime full hashes verified at 2026-11-21T07:35:10Z. Current VM not probed in this no-inference task. No claim of all-agent installation.",
+      "remaining": "Exact approved model/components/licenses/isolated compatible runtime; future fresh cache checks.",
+      "independent_of_failed_story": true
+    },
+    {
+      "number": 4,
+      "label": "Actual Inference Verified",
+      "status": "PARTIAL — genuine research outputs, not all roles",
+      "evidence": [
+        "verification/story_budget11_20261121/final_actual.json",
+        "verification/director_recovery_20261113/results.json"
+      ],
+      "actual": "Story genuine prefix/failure plus preserved older writing/Director research evidence. ACE/Indic stage results contain zero calls. GGUF Story is not YouTube NF4 evidence.",
+      "remaining": "Unrun role-specific outputs under separately scoped authorization; no inference this task.",
+      "independent_of_failed_story": true
+    },
+    {
+      "number": 5,
+      "label": "Technical Output Validated",
+      "status": "PARTIAL / STORY BLOCKED",
+      "evidence": [
+        "verification/story_budget11_20261121/actual_evidence_validation.json"
+      ],
+      "actual": "Foundation v2 and Act1 v3 schema/handoff pass; Act2 schema pass but seven handoff failures. Act3/reflection not run.",
+      "remaining": "New authorized Act2 recovery; then remaining sections and full-story checks. Other departments can validate their own independent evidence.",
+      "independent_of_failed_story": "Per-department evidence can proceed; full Story assembly cannot"
+    },
+    {
+      "number": 6,
+      "label": "Creative Quality Reviewed",
+      "status": "OWNER REVIEW PENDING / independent review NOT PERFORMED",
+      "evidence": [
+        "verification/story_budget11_20261121/partial_blind_review_bn.md",
+        "PHASE3_INTELLIGENCE_COMPLETION_REPORT_BN.md"
+      ],
+      "actual": "Existing review packets prepared; no independent professional acceptance recorded. New QC text-only diagnostic handoff prepared this task.",
+      "remaining": "Qualified Bengali script review and actual visual/listening evaluation; no invented scores.",
+      "independent_of_failed_story": "Partial/source-local reviews can proceed; full Story artistic review needs complete evidence"
+    },
+    {
+      "number": 7,
+      "label": "Owner Approved",
+      "status": "PENDING for professional creative output",
+      "evidence": [
+        "PHASE3_STORY_BUDGET11_ACTUAL_RESULTS_REPORT_BN.md"
+      ],
+      "actual": "Owner has approved resources/structural prefixes; these are not whole-story/model artistic acceptance.",
+      "remaining": "Source-bound Director/QC review then actual owner artistic approval; no promotion by this checkpoint.",
+      "independent_of_failed_story": "Unrelated completed artifacts can be reviewed independently; full production approval remains dependent"
+    },
+    {
+      "number": 8,
+      "label": "Production Ready",
+      "status": "BLOCKED — professionally accepted 0/21",
+      "evidence": [
+        "verification/voice_casting/readiness_19.json",
+        "PHASE3_INTELLIGENCE_COMPLETION_REPORT_BN.md"
+      ],
+      "actual": "No 21-agent professional production completion. Research Option C does not repair production Secure Worker isolation.",
+      "remaining": "All role/runtime/media/rights/QC/independent artistic/owner gates and genuine end-to-end evidence; deployment remains prohibited.",
+      "independent_of_failed_story": false
+    }
+  ],
+  "actual_development_phases": [
+    {
+      "phase": 1,
+      "status": "Historical software foundation/Director/Casting reports retained; not professional runtime completion"
+    },
+    {
+      "phase": 2,
+      "status": "Specialist StageA-D software delivered; do not repeat"
+    },
+    {
+      "phase": 3,
+      "status": "IN PROGRESS: 19/19 no-GPU engineering recorded; real model, media and human acceptance incomplete"
+    },
+    {
+      "phase": 4,
+      "status": "NOT STARTED — optimization later; current authorization does not start it"
+    },
+    {
+      "phase": "5–8",
+      "status": "UNVERIFIED as named development phases in recovered source; no names or completion invented"
+    }
+  ],
+  "existing_eight_execution_phases": [
+    {
+      "number": 1,
+      "original_text": "Inspect existing evidence and source/model locks without inference",
+      "status": "IN PROGRESS — prior general audit retained; targeted Act2 diagnosis and source crosswalk now saved"
+    },
+    {
+      "number": 2,
+      "original_text": "One text canary, then independent review; stop if unsuitable",
+      "status": "BLOCKED for accepted writing model — genuine canary/prefix exist, quality and independent review pending"
+    },
+    {
+      "number": 3,
+      "original_text": "Prepare approved reference assets and consent before media batches",
+      "status": "PARTIAL — consent/reference contracts prepared; approved real media and exact model bundles remain required"
+    },
+    {
+      "number": 4,
+      "original_text": "Unload current worker before loading the next pinned model; retain shared approved evidence",
+      "status": "PARTIAL — previous Story workers stopped; full approved multi-model sequence unrun"
+    },
+    {
+      "number": 5,
+      "original_text": "Run required shortlisted video engines sequentially; do not call a single-engine canary a complete video benchmark",
+      "status": "NOT TESTED as complete controlled three-engine benchmark — historical isolated Wan samples preserved"
+    },
+    {
+      "number": 6,
+      "original_text": "Complete modality-dependent reviews after supporting workers finish; QC remains independent",
+      "status": "PENDING — actual independent modality-specific review not performed"
+    },
+    {
+      "number": 7,
+      "original_text": "If model critique needs a reload, reserve one final shared critic pass after media batches; generator self-review is not independent expert acceptance",
+      "status": "NOT TESTED as a final multimodal critic pass — new text QC case preparation only"
+    },
+    {
+      "number": 8,
+      "original_text": "Targeted revision and source-bound re-evaluation; owner acceptance remains separate",
+      "status": "IN PROGRESS — prior failures preserved; Act2 prompt prepared, no retry authorized or submitted"
+    }
+  ],
+  "existing_eight_model_batches": [
+    {
+      "order": 1,
+      "model": "qwen35_27",
+      "repo": "Qwen/Qwen3.5-27B",
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "adapter": "hf_text_nf4",
+      "agents": [
+        "story",
+        "character",
+        "script",
+        "director",
+        "qc",
+        "performance",
+        "cinematographer",
+        "continuity",
+        "editing",
+        "growth",
+        "casting"
+      ],
+      "status": "Primary27B complete batch unverified; separate approved9B GGUF Story research is partial, not primary-model acceptance",
+      "execution_enabled": false
+    },
+    {
+      "order": 2,
+      "model": "flux2_klein4",
+      "repo": "black-forest-labs/FLUX.2-klein-4B",
+      "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+      "adapter": "flux2_klein",
+      "agents": [
+        "art",
+        "location",
+        "costume",
+        "storyboard"
+      ],
+      "status": "No full accepted batch evidence found in reviewed checkpoints; exact runtime/media/human gates remain",
+      "execution_enabled": false
+    },
+    {
+      "order": 3,
+      "model": "wan_animate2",
+      "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+      "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+      "adapter": "contract_only",
+      "agents": [
+        "motion"
+      ],
+      "status": "No full accepted batch evidence found in reviewed checkpoints; exact runtime/media/human gates remain",
+      "execution_enabled": false
+    },
+    {
+      "order": 4,
+      "model": "wan22_5",
+      "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "revision": "b8fff7315c768468a5333511427288870b2e9635",
+      "adapter": "existing_wan_adapter",
+      "agents": [
+        "video"
+      ],
+      "status": "No full accepted batch evidence found in reviewed checkpoints; exact runtime/media/human gates remain",
+      "execution_enabled": false
+    },
+    {
+      "order": 5,
+      "model": "indic_speak",
+      "repo": "bodhan-ai/indic-speak",
+      "revision": "76e0814f189321efe550011850cd288dae366aad",
+      "adapter": "contract_only",
+      "agents": [
+        "voice"
+      ],
+      "status": "No full accepted batch evidence found in reviewed checkpoints; exact runtime/media/human gates remain",
+      "execution_enabled": false
+    },
+    {
+      "order": 6,
+      "model": "ace15",
+      "repo": "ACE-Step/Ace-Step1.5",
+      "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+      "adapter": "contract_only",
+      "agents": [
+        "music"
+      ],
+      "status": "No full accepted batch evidence found in reviewed checkpoints; exact runtime/media/human gates remain",
+      "execution_enabled": false
+    },
+    {
+      "order": 7,
+      "model": "qwen36_27",
+      "repo": "Qwen/Qwen3.6-27B",
+      "revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+      "adapter": "hf_text_nf4",
+      "agents": [
+        "production_manager"
+      ],
+      "status": "No full accepted batch evidence found in reviewed checkpoints; exact runtime/media/human gates remain",
+      "execution_enabled": false
+    },
+    {
+      "order": 8,
+      "model": "qwen35_9",
+      "repo": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "adapter": "hf_text_nf4",
+      "agents": [
+        "youtube"
+      ],
+      "status": "Separate YouTube NF4 Stage1 blocked/zero calls; Story GGUF must not be substituted as evidence",
+      "execution_enabled": false
+    }
+  ],
+  "required_video_support_batches": [
+    {
+      "order": 9,
+      "model": "ltx25",
+      "repo": "Lightricks/LTX-2.5",
+      "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+      "adapter": "contract_only",
+      "purpose": "Required three-engine video benchmark coverage",
+      "minimum_video_outputs": 3,
+      "execution_enabled": false
+    },
+    {
+      "order": 10,
+      "model": "svd_xt",
+      "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+      "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+      "adapter": "existing_svd_adapter",
+      "purpose": "Required three-engine video benchmark coverage",
+      "minimum_video_outputs": 3,
+      "execution_enabled": false
+    }
+  ],
+  "independent_work_performed": {
+    "task": "Prepare source-bound QC diagnostic extension for actual Story defects using the existing intelligence.qc.v1 template/rubric",
+    "depends_on_complete_story": false,
+    "model_calls": 0,
+    "human_review": "PENDING",
+    "not_clean_control": "Act1 structural pass is NOT an artistically clean sample",
+    "production_promotion": false
+  },
+  "engineering_counts": {
+    "remaining_agent_no_gpu": 19,
+    "of": 19,
+    "professional": 0,
+    "of_registered_agents": 21
+  },
+  "execution_environment": "UNAVAILABLE — no Python/app tests executed; connector-based source/evidence inspection and JavaScript static checks only",
+  "runtime_authorization_required": true
+}

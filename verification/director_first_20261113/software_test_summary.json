@@ -1,0 +1,35 @@
+{
+  "scope": "Software fixtures and captured-output validation, not creative intelligence",
+  "full_regression_initial": {
+    "run": 438,
+    "passed": 431,
+    "dependency_errors": 7,
+    "evidence": "full_regression.txt"
+  },
+  "dependency_resolution": {
+    "streamlit": "1.67.0",
+    "gTTS": "installed per requirements",
+    "gradio_client": "1.14.0",
+    "huggingface_hub": "installed constrained below 1",
+    "requirements_changed": false,
+    "initial_director_ui_dependency_failure": "director_regression_initial_dependency_failure.txt"
+  },
+  "failed_tests_rechecked": {
+    "count": 7,
+    "all_passed": true,
+    "evidence": "dependency_and_registry_recheck.txt"
+  },
+  "additional_registry_recheck": {
+    "count": 1,
+    "passed": true,
+    "reason": "central candidate metadata changed; still 21 agents, 18 pinned profiles, no selected winner"
+  },
+  "new_latest_owner_scope_test": {
+    "count": 1,
+    "passed": true,
+    "evidence": "director_latest_scope_regression.txt"
+  },
+  "unique_tests_verified_after_dependency_resolution": 439,
+  "entire_successful_suite_repeated": false,
+  "model_inference_calls_by_software_tests": 0
+}

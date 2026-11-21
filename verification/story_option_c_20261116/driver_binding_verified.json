@@ -1,0 +1,26 @@
+{
+  "status": "VERIFIED_NO_MODEL_LOAD",
+  "driver_directory": "/usr/lib64-nvidia",
+  "driver_resolved": "/usr/lib64-nvidia/libcuda.so.580.82.07",
+  "dependency_stdout": "\tlinux-vdso.so.1 (0x00007ffee7f07000)\n\tlibggml-base.so.0 => /content/redpad_story_t4_20261114/option_c_approved/runtime/llama-b12318/libggml-base.so.0 (0x00007f72b8bc1000)\n\tlibcudart.so.12 => /content/redpad_story_t4_20261114/option_c_approved/runtime/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64/libcudart.so.12 (0x00007f72b8800000)\n\tlibcublas.so.12 => /content/redpad_story_t4_20261114/option_c_approved/runtime/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64/libcublas.so.12 (0x00007f72b1600000)\n\tlibcublasLt.so.12 => /content/redpad_story_t4_20261114/option_c_approved/runtime/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64/libcublasLt.so.12 (0x00007f727f200000)\n\tlibcuda.so.1 => /usr/lib64-nvidia/libcuda.so.1 (0x00007f7279400000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007f7279182000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f72b8ac6000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f72b87d2000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f7278f6f000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007f72c484e000)\n\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x00007f72b877c000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f72b8abf000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f72b8aba000)\n\tlibrt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007f72b8ab5000)\n",
+  "dependency_stderr": "",
+  "device_stdout": "Available devices:\n CUDA0: Tesla T4 (14912 MiB, 14807 MiB free)\n",
+  "device_stderr": "",
+  "selected_device": "CUDA0",
+  "worker_env": {
+    "PATH": "/usr/local/bin:/usr/bin:/bin",
+    "HOME": "/content/redpad_story_t4_20261114/option_c_approved",
+    "LD_LIBRARY_PATH": "/content/redpad_story_t4_20261114/option_c_approved/runtime/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64:/content/redpad_story_t4_20261114/option_c_approved/runtime/llama-b12318:/usr/lib64-nvidia",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_HUB_DISABLE_TELEMETRY": "1",
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "previous_failed_launch_sha256": "624eb565dd41c2f734af35a86dd1d5b37a279019c619c1aac0395bb5d67d51f0",
+  "model_loaded": false,
+  "model_generation_submitted": false,
+  "downloads": 0,
+  "system_driver_changes": false,
+  "production_worker_changed": false,
+  "studio_kernel_isolation_equivalent": false
+}

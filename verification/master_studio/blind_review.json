@@ -1,0 +1,164 @@
+{
+  "status": "unreviewed",
+  "human_review_completed": false,
+  "candidates": [
+    {
+      "id": "84ec7425407d",
+      "text": {
+        "case": "humor",
+        "output": {
+          "closing_action": "মা ব্যাগের কোনো খাবার না দেয়, বাড়ির দরজা বন্ধ করে দেয়।",
+          "first_reply": "মা, আজ বাড়ি খাবার নেই, আমার ওজন কমাচ্ছি।",
+          "heading": "INT. CHATTGRAAM HOUSE - KITCHEN",
+          "opening_action": "মা ব্যাগে চাল, চালার কাগজ দেয় ছেলের পাশে।",
+          "second_reply": "অসামান্য খাবার দেয় না, আমি কখনো কালো চাল না খাই।"
+        },
+        "status": "validated_stage"
+      },
+      "sha256": "13aa2689ec628fa0078729fe97f3d52c78361936b83c518431c58e0d9a9ce6ed"
+    },
+    {
+      "id": "0c256aaa48e3",
+      "text": {
+        "case": "criticism",
+        "output": {
+          "findings": [
+            {
+              "category": "logic",
+              "line_id": "L3",
+              "problem": "রাশেদ ছাতা খুলে ফেলে কেউ ফেরত দেয়নি বলে লেখা হলে তার কাছে ছাতা থাকা উচিত হত, কিন্তু তানিয়া পূর্বেই",
+              "suggestion": "রাশেদের ছাতা খুলে ফেলার আগে তানিয়া ব্যাগে রাখে বলে উল্লেখ করা উচিত"
+            }
+          ]
+        },
+        "status": "validated_stage"
+      },
+      "sha256": "78c2682b74b6ffd4dc212e521b23222d00e7b8f4d634aa56bfe684e25c8f77ce"
+    },
+    {
+      "id": "0b44b50d7d05",
+      "text": {
+        "case": "romance",
+        "output": {
+          "closing_action": "পাখা ঠিক হয়ে গেল, দুজন হাত ধরে দেখল সোনার পাত্র দিয়ে বাড়ির মাথায় আলো লাগল।",
+          "first_reply": "শহর ছাড়া না যাব, কাজ হবে না।",
+          "heading": "INT. ঢাকা বাড়ি - রাত",
+          "opening_action": "নীলা পাখা নিয়ে আসল, বাড়ির কাছে দাঁড়াল।",
+          "second_reply": "তুমি যদি চায়, আমি চাই না।"
+        },
+        "status": "validated_stage"
+      },
+      "sha256": "bdfa5d5355512277939c3dbd5f1c7a3c5b24339fb1bfd5fa844b86123d5f4e98"
+    },
+    {
+      "id": "c433065c576e",
+      "text": {
+        "case": "qc",
+        "output": {
+          "findings": [
+            {
+              "category": "logic",
+              "line_id": "L3",
+              "problem": "রাশেদ ছাতা খুলে ফেলে কেউ ফেরত দেয়নি বলে বিবাদ তৈরি করছে; তানিয়া ছাতা ব্যাগে রাখে বলে তার আগে একটির",
+              "suggestion": "রাশেদের কাছে ছাতা ফেরত দেয়নি বলে তার প্রতিক্রিয়া স্পষ্ট করা উচিত"
+            }
+          ]
+        },
+        "status": "validated_stage"
+      },
+      "sha256": "b44960638e76b94d1c3c0c0782a2281891c1d9e24a2b2c95ea233a94cab21b52"
+    },
+    {
+      "id": "772a0434a341",
+      "text": {
+        "case": "revision",
+        "output": {
+          "action": "রুমি বিল দেখে হাসি মারে, বাবা বলে, তুমি কখনো না না কাজ করে দেখি না।",
+          "father": "তুমি কখনো না না কাজ করে দেখি না।",
+          "rumi": "হ্যাঁ, আমি কখনো না না করি না, কিন্তু আজ বিল দেখে হাসি মারলাম।",
+          "scene_id": "s2"
+        },
+        "status": "validated_stage"
+      },
+      "sha256": "0e734aa590b8e61103881d2f83d449624bb76e2e42f303100324c9024efc06ad"
+    },
+    {
+      "id": "7301b86a3276",
+      "text": {
+        "case": "story",
+        "output": {
+          "consequence": "মেয়ে কলেজের ভর্তি পড়ে যায় না।",
+          "costly_choice": "মা মেয়ের কলেজের শেষ কিস্তি খরচ করে দেয়।",
+          "earned_cliffhanger": "মেয়ে বলে, 'মা, আমি ভর্তি হয়েছি, কিন্তু আমি কাজ করছি না।'",
+          "emotional_change": "মা আসলে ভাবে, আমি আমার মেয়েকে আর দেখব না।",
+          "opening_image": "মা দর্জির কাজ করছে, মেয়ে কলেজের প্রতি নজর দেয়।",
+          "want": "মা মেয়ের চিকিৎসার টাকা পাবে।"
+        },
+        "status": "validated_stage"
+      },
+      "sha256": "f711bc4b41aaaa679dd75692581db7ad69dee4c04a8fde4d232c970ae1bb7551"
+    }
+  ],
+  "instructions": "Read independently. Cite candidate ID and exact line. Judge causal logic, motivation, emotion, hook, spoken Bangladeshi Bengali, character humor and visual action. A schema pass is not a quality pass. Leave scores blank until actual review.",
+  "reviewer": null,
+  "ratings": null,
+  "tasks": [
+    {
+      "id": "story",
+      "data": "কুষ্টিয়ার এক দর্জি মায়ের চিকিৎসার টাকার জন্য মেয়ের কলেজের শেষ কিস্তি খরচ করে ফেলে। মেয়ে জানে না; আজ ভর্তি নিশ্চিত করার শেষ দিন। মা নিজে সিদ্ধান্ত নিতে সক্ষম। কোনো আকস্মিক ধনী উদ্ধারকারী নয়।",
+      "task": "মৌলিক সংক্ষিপ্ত পর্বের কাঠামো দিন: কার চাওয়া, তার দামি সিদ্ধান্ত, তার ফল, আচরণে আবেগের পরিবর্তন, প্রথম দৃশ্যের হুক ও সিদ্ধান্ত থেকে জন্মানো cliffhanger। প্রতি field-এ একটি ছোট বাংলা বাক্য।"
+    },
+    {
+      "id": "romance",
+      "data": "ঢাকার বাসায় নীলা ও সাব্বির, বিবাহের কথা চলছে। নীলা নিজের বদলির চাকরিটা নিতে চায়, সাব্বির শহর ছাড়তে ভয় পায়। কাউকে খলনায়ক বানাবেন না। বিদ্যুৎ নেই, দুজন মিলে পাখা ঠিক করছে।",
+      "task": "একটি visual-first ক্ষুদ্র দৃশ্য। opening_action, সাব্বিরের first_reply, নীলার second_reply, closing_action ও INT. heading দিন। কথাগুলো সরাসরি speech, নাম বা বলে যোগ করবেন না। প্রতি কথায় ৬–১০টি শব্দ। রোমান্টিক টান, না-বলা ভয় ও একটি ছোট যত্নের কাজ।"
+    },
+    {
+      "id": "humor",
+      "data": "চট্টগ্রামের বাসায় মা রেহানা ছেলের অফিসের ব্যাগে অতিরিক্ত খাবার দেন; ছেলে ইমরান ওজন কমানোর চেষ্টা করছে। দুজনের স্নেহ আছে, কাউকে অপমান নয়।",
+      "task": "একটি ছোট visual-first দৃশ্য। opening_action, ইমরানের first_reply, রেহানার responsive second_reply, closing_action, INT. heading। শুধু সরাসরি speech; নাম বা বলে নয়। অভ্যাসের সংঘাত থেকে মৃদু witty exchange, বক্তৃতা নয়। প্রতি কথায় ৬–১০টি শব্দ।"
+    },
+    {
+      "id": "revision",
+      "data": {
+        "source": {
+          "s1": "রুমি খামের ভেতর কলেজের বিল রাখে।",
+          "s2": "বাবা: আমি তোমার জন্য সব করেছি। রুমি: আমি সব বুঝি।"
+        },
+        "locked": [
+          "s1"
+        ],
+        "target": "s2"
+      },
+      "task": "শুধু s2 বদলান। আগে ছোট দৃশ্যমান কাজ, তারপর বাবা ও রুমির দুইটি সংক্ষিপ্ত সরাসরি কথা। বিল/চরিত্র/সম্পর্ক বদলাবেন না। অভিযোগের বদলে না-বলা সংকোচ দেখান। s1 ফেরত দেবেন না।"
+    },
+    {
+      "id": "criticism",
+      "data": {
+        "heading": "INT. বাসা — সকাল",
+        "lines": {
+          "L1": "তানিয়া নিজের চাকরির সাক্ষাৎকারে যাবে; রাশেদ নিজের অফিসে যাবে।",
+          "L2": "টেবিলে তাদের একমাত্র ছাতা। তানিয়া সেটি ব্যাগে রাখে।",
+          "L3": "রাশেদ একই ছাতাটি টেবিল থেকে তুলে খুলে ফেলে; কেউ ফেরত দেয়নি।",
+          "L4": "দুজনই বেরোনোর আগে বাসভাড়া গুনে রাখে।"
+        }
+      },
+      "task": "এই নির্দিষ্ট উৎসে বাস্তব ভুল থাকলে line_id ও category দিয়ে সংক্ষিপ্ত সমালোচনা করুন। উদ্ধৃতি বানাবেন না। নেই এমন আবেগ/ঘটনা/ভুল কল্পনা করবেন না। নিশ্চিত না হলে findings খালি রাখুন।"
+    },
+    {
+      "id": "qc",
+      "data": {
+        "heading": "INT. বাসা — সকাল",
+        "lines": {
+          "L1": "তানিয়া নিজের চাকরির সাক্ষাৎকারে যাবে; রাশেদ নিজের অফিসে যাবে।",
+          "L2": "টেবিলে তাদের একমাত্র ছাতা। তানিয়া সেটি ব্যাগে রাখে।",
+          "L3": "রাশেদ একই ছাতাটি টেবিল থেকে তুলে খুলে ফেলে; কেউ ফেরত দেয়নি।",
+          "L4": "দুজনই বেরোনোর আগে বাসভাড়া গুনে রাখে।"
+        }
+      },
+      "task": "একটি independent QC observation লিখুন। শুধু প্রমাণিত ভুল, বিদ্যমান line_id ও category। আংশিক বা সুন্দর লেখাকে অনুমোদন দেবেন না; নির্ভুল দৃশ্যপটকে খারাপ বলবেন না। উদ্ধৃতি লিখবেন না।"
+    }
+  ],
+  "limitations": "Metadata-blind comparison only; model self-identification inside raw creative prose may reveal identity. Seeded criticism accuracy is a narrow mechanical check, not human editorial approval.",
+  "comparison_limit": "Single-model baseline, six different tasks; no comparative winner and no independent human review. Model identity hidden only in metadata."
+}

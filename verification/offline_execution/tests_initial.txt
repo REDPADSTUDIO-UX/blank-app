@@ -1,0 +1,300 @@
+test_ace_init_bridge_denies_download_sync_and_remote_custom_model_loading (tests.test_native_local_execution.NativeLocalTests.test_ace_init_bridge_denies_download_sync_and_remote_custom_model_loading) ... ERROR
+test_actual_dummy_failure_classification_preserves_raw_logs (tests.test_native_local_execution.NativeLocalTests.test_actual_dummy_failure_classification_preserves_raw_logs) ... ERROR
+test_actual_running_dummy_is_cancelled_from_restarted_service (tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service) ... ERROR
+test_actual_timeout_terminates_fixture_worker (tests.test_native_local_execution.NativeLocalTests.test_actual_timeout_terminates_fixture_worker) ... ERROR
+test_audit_rejects_internet_shell_and_unknown_child_without_calls (tests.test_native_local_execution.NativeLocalTests.test_audit_rejects_internet_shell_and_unknown_child_without_calls) ... ERROR
+test_bundle_missing_unmanifested_changed_or_symlink_files_fail_closed (tests.test_native_local_execution.NativeLocalTests.test_bundle_missing_unmanifested_changed_or_symlink_files_fail_closed) ... ERROR
+test_cancellation_before_launch_and_no_implicit_retry (tests.test_native_local_execution.NativeLocalTests.test_cancellation_before_launch_and_no_implicit_retry) ... ERROR
+test_fixed_worker_network_denial_checked_without_real_network_attempt (tests.test_native_local_execution.NativeLocalTests.test_fixed_worker_network_denial_checked_without_real_network_attempt) ... ERROR
+test_fixture_command_not_arbitrary_user_script_model_or_hosted_endpoint (tests.test_native_local_execution.NativeLocalTests.test_fixture_command_not_arbitrary_user_script_model_or_hosted_endpoint) ... ERROR
+test_install_cannot_create_owner_license_approval_implicitly (tests.test_native_local_execution.NativeLocalTests.test_install_cannot_create_owner_license_approval_implicitly) ... ERROR
+test_kernel_isolation_argv_is_local_ro_networkless_and_no_shell (tests.test_native_local_execution.NativeLocalTests.test_kernel_isolation_argv_is_local_ro_networkless_and_no_shell) ... ERROR
+test_ltx_worker_calls_verified_split_api_with_no_quantization_and_local_image (tests.test_native_local_execution.NativeLocalTests.test_ltx_worker_calls_verified_split_api_with_no_quantization_and_local_image) ... ERROR
+test_mock_cannot_report_model_inference_success (tests.test_native_local_execution.NativeLocalTests.test_mock_cannot_report_model_inference_success) ... ERROR
+test_no_model_loading_import_at_worker_module_top_level (tests.test_native_local_execution.NativeLocalTests.test_no_model_loading_import_at_worker_module_top_level) ... ERROR
+test_output_root_and_run_id_cannot_escape_or_reuse_existing_directory (tests.test_native_local_execution.NativeLocalTests.test_output_root_and_run_id_cannot_escape_or_reuse_existing_directory) ... ERROR
+test_prepared_stage_binding_rejects_hidden_fallback_and_wrong_role (tests.test_native_local_execution.NativeLocalTests.test_prepared_stage_binding_rejects_hidden_fallback_and_wrong_role) ... ERROR
+test_previous_thirteen_and_director_script_profiles_unchanged (tests.test_native_local_execution.NativeLocalTests.test_previous_thirteen_and_director_script_profiles_unchanged) ... ERROR
+test_process_group_timeout_cleans_spawned_dummy_descendant (tests.test_native_local_execution.NativeLocalTests.test_process_group_timeout_cleans_spawned_dummy_descendant) ... ERROR
+test_real_dummy_process_returns_software_receipt_never_inference_or_approval (tests.test_native_local_execution.NativeLocalTests.test_real_dummy_process_returns_software_receipt_never_inference_or_approval) ... ERROR
+test_restart_recovery_does_not_restart_abandoned_process_or_kill_reused_pid (tests.test_native_local_execution.NativeLocalTests.test_restart_recovery_does_not_restart_abandoned_process_or_kill_reused_pid) ... ERROR
+test_safe_auxiliary_tensor_checks_use_fake_loader_only_no_actual_pt_loading (tests.test_native_local_execution.NativeLocalTests.test_safe_auxiliary_tensor_checks_use_fake_loader_only_no_actual_pt_loading) ... ERROR
+test_shared_wan_worker_uses_fixed_native_class_local_components_and_distinct_refs (tests.test_native_local_execution.NativeLocalTests.test_shared_wan_worker_uses_fixed_native_class_local_components_and_distinct_refs) ... ERROR
+test_worker_does_not_launch_without_explicit_authorization (tests.test_native_local_execution.NativeLocalTests.test_worker_does_not_launch_without_explicit_authorization) ... ERROR
+test_worker_source_change_is_stale_before_launch (tests.test_native_local_execution.NativeLocalTests.test_worker_source_change_is_stale_before_launch) ... ERROR
+test_native_wan_and_svd_keep_supported_worker_controls (tests.test_offline_11_preparation.OfflineElevenTests.test_native_wan_and_svd_keep_supported_worker_controls) ... ok
+test_parler_and_stable_audio_prepare_only_their_existing_local_payloads (tests.test_offline_11_preparation.OfflineElevenTests.test_parler_and_stable_audio_prepare_only_their_existing_local_payloads) ... ok
+test_casting_assessment_task_handoff_persists_but_never_creates_approval (tests.test_offline_six_preparation.OfflineSixTests.test_casting_assessment_task_handoff_persists_but_never_creates_approval) ... ok
+test_extra_consent_evidence_change_stales_existing_preparation (tests.test_offline_six_preparation.OfflineSixTests.test_extra_consent_evidence_change_stales_existing_preparation) ... ok
+test_real_portrait_cannot_be_declared_fictional_for_wan_or_casting (tests.test_offline_six_preparation.OfflineSixTests.test_real_portrait_cannot_be_declared_fictional_for_wan_or_casting) ... ok
+test_casting_cannot_bypass_director_qc_or_identity_rights (tests.test_producer_control.ProducerTests.test_casting_cannot_bypass_director_qc_or_identity_rights) ... ok
+test_all_19_roles_all_declared_supported_contracts_without_resources (tests.test_no_gpu_staging.NoGPUStagingTests.test_all_19_roles_all_declared_supported_contracts_without_resources) ... ok
+
+======================================================================
+ERROR: test_ace_init_bridge_denies_download_sync_and_remote_custom_model_loading (tests.test_native_local_execution.NativeLocalTests.test_ace_init_bridge_denies_download_sync_and_remote_custom_model_loading)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_actual_dummy_failure_classification_preserves_raw_logs (tests.test_native_local_execution.NativeLocalTests.test_actual_dummy_failure_classification_preserves_raw_logs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_actual_running_dummy_is_cancelled_from_restarted_service (tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_actual_timeout_terminates_fixture_worker (tests.test_native_local_execution.NativeLocalTests.test_actual_timeout_terminates_fixture_worker)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_audit_rejects_internet_shell_and_unknown_child_without_calls (tests.test_native_local_execution.NativeLocalTests.test_audit_rejects_internet_shell_and_unknown_child_without_calls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_bundle_missing_unmanifested_changed_or_symlink_files_fail_closed (tests.test_native_local_execution.NativeLocalTests.test_bundle_missing_unmanifested_changed_or_symlink_files_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_cancellation_before_launch_and_no_implicit_retry (tests.test_native_local_execution.NativeLocalTests.test_cancellation_before_launch_and_no_implicit_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_fixed_worker_network_denial_checked_without_real_network_attempt (tests.test_native_local_execution.NativeLocalTests.test_fixed_worker_network_denial_checked_without_real_network_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_fixture_command_not_arbitrary_user_script_model_or_hosted_endpoint (tests.test_native_local_execution.NativeLocalTests.test_fixture_command_not_arbitrary_user_script_model_or_hosted_endpoint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_install_cannot_create_owner_license_approval_implicitly (tests.test_native_local_execution.NativeLocalTests.test_install_cannot_create_owner_license_approval_implicitly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_kernel_isolation_argv_is_local_ro_networkless_and_no_shell (tests.test_native_local_execution.NativeLocalTests.test_kernel_isolation_argv_is_local_ro_networkless_and_no_shell)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_ltx_worker_calls_verified_split_api_with_no_quantization_and_local_image (tests.test_native_local_execution.NativeLocalTests.test_ltx_worker_calls_verified_split_api_with_no_quantization_and_local_image)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_mock_cannot_report_model_inference_success (tests.test_native_local_execution.NativeLocalTests.test_mock_cannot_report_model_inference_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_no_model_loading_import_at_worker_module_top_level (tests.test_native_local_execution.NativeLocalTests.test_no_model_loading_import_at_worker_module_top_level)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_output_root_and_run_id_cannot_escape_or_reuse_existing_directory (tests.test_native_local_execution.NativeLocalTests.test_output_root_and_run_id_cannot_escape_or_reuse_existing_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_prepared_stage_binding_rejects_hidden_fallback_and_wrong_role (tests.test_native_local_execution.NativeLocalTests.test_prepared_stage_binding_rejects_hidden_fallback_and_wrong_role)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_previous_thirteen_and_director_script_profiles_unchanged (tests.test_native_local_execution.NativeLocalTests.test_previous_thirteen_and_director_script_profiles_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_process_group_timeout_cleans_spawned_dummy_descendant (tests.test_native_local_execution.NativeLocalTests.test_process_group_timeout_cleans_spawned_dummy_descendant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_real_dummy_process_returns_software_receipt_never_inference_or_approval (tests.test_native_local_execution.NativeLocalTests.test_real_dummy_process_returns_software_receipt_never_inference_or_approval)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_restart_recovery_does_not_restart_abandoned_process_or_kill_reused_pid (tests.test_native_local_execution.NativeLocalTests.test_restart_recovery_does_not_restart_abandoned_process_or_kill_reused_pid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_safe_auxiliary_tensor_checks_use_fake_loader_only_no_actual_pt_loading (tests.test_native_local_execution.NativeLocalTests.test_safe_auxiliary_tensor_checks_use_fake_loader_only_no_actual_pt_loading)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_shared_wan_worker_uses_fixed_native_class_local_components_and_distinct_refs (tests.test_native_local_execution.NativeLocalTests.test_shared_wan_worker_uses_fixed_native_class_local_components_and_distinct_refs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_worker_does_not_launch_without_explicit_authorization (tests.test_native_local_execution.NativeLocalTests.test_worker_does_not_launch_without_explicit_authorization)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+======================================================================
+ERROR: test_worker_source_change_is_stale_before_launch (tests.test_native_local_execution.NativeLocalTests.test_worker_source_change_is_stale_before_launch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_native_local_execution.py", line 14, in setUp
+    self.store=AgentStore(self.root/'control.sqlite3');self.runtime=NativeExecution(self.store)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agents.py", line 50, in __init__
+    raise AgentError('Use the dedicated agent_control.sqlite3 sidecar.')
+redpad_pipeline.agents.AgentError: Use the dedicated agent_control.sqlite3 sidecar.
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.311s
+
+FAILED (errors=24)

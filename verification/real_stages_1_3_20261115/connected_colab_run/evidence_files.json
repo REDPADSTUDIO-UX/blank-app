@@ -1,0 +1,57 @@
+{
+  "files": {
+    "cache_inspection.json": {
+      "bytes": 408,
+      "sha256": "fc2dd7b34fcb39a9833347727c1bf04bacb4b2d255560ec7344e4032f1fe719a"
+    },
+    "source_setup.txt": {
+      "bytes": 93,
+      "sha256": "8edac385477797ce45ce0704b721b2c0061ffa10a3f101ba58cfad1ccc6625e1"
+    },
+    "hardware_preflight.txt": {
+      "bytes": 2087,
+      "sha256": "10b169b32bafbd132d550289163932f23e3cd6f3c1ad2d8973939040e5a02a47"
+    },
+    "cache_inspection.txt": {
+      "bytes": 408,
+      "sha256": "fc2dd7b34fcb39a9833347727c1bf04bacb4b2d255560ec7344e4032f1fe719a"
+    },
+    "colab_result.png": {
+      "bytes": 116277,
+      "sha256": "1a9cccdb29a5e18788da7ed5e057bf02407e3b216d21d23d4c30f535c2bc7444"
+    },
+    "execution_manifest.json": {
+      "bytes": 6707,
+      "sha256": "9d5c9ceea7b7a58438e7ed65263bd06896f01827cfd5c23a7e9e5524b50b73ed"
+    },
+    "hardware_preflight.json": {
+      "bytes": 1827,
+      "sha256": "c6e04bae67c54e75f06c06b94ebc69ba374df31cd9827e153858cb1b86539818"
+    },
+    "stage2/STAGE2_MUSIC_HUMAN_REVIEW_BN.md": {
+      "bytes": 4028,
+      "sha256": "7cad6b2c7adcb242d65d216f0fb3db84bca5af7d8a0c0cc61ee9b0ee7600f2e8"
+    },
+    "stage2/state.json": {
+      "bytes": 6875,
+      "sha256": "4c179a6317ec9f735e2195995b737db0211dc8a45e572e57e9acc8ff2290182d"
+    },
+    "stage3/STAGE3_VOICE_HUMAN_REVIEW_BN.md": {
+      "bytes": 5000,
+      "sha256": "06503d615cedd87484117f4456e11ce06cd8296311558784e7349dfaceb9d6de"
+    },
+    "stage3/state.json": {
+      "bytes": 6992,
+      "sha256": "2fbd9b0df58b0a0368018960be0ec9428ccabace8c4051689b024048a4c00e99"
+    },
+    "stage1/state.json": {
+      "bytes": 7200,
+      "sha256": "ee3559c919cc5d4d56e59dfebfc91be102f446380c871969370390f2da398d55"
+    },
+    "stage1/STAGE1_YOUTUBE_HUMAN_REVIEW_BN.md": {
+      "bytes": 2705,
+      "sha256": "4ef07c8dd8821eb0f7ce72e7c2df54e44abdaf0475eb8e1ac7c1a7db89e65562"
+    }
+  },
+  "verification": "Read existing captured evidence only; no model inference or regression rerun"
+}

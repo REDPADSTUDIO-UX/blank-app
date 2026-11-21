@@ -1,0 +1,149 @@
+{
+  "reason": "Exact source-lock compatibility bug: artifact writer appended a display newline; authoritative Git blob SHA1 verifies canonical source bytes without changing repository/revision. Historical retrieved-text receipts untouched.",
+  "files": [
+    {
+      "profile": "ltx25",
+      "path": "packages/ltx-pipelines/src/ltx_pipelines/distilled.py",
+      "revision": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+      "git_blob_sha1": "a3095f2ddb75d8866c5efcf1c874ccac347e3853",
+      "previous_retrieved_text_sha256": "de78ebbf4d4b38568eb7c531122e3754ee7eb0db003c65bf9e0bdcec5b01fe33",
+      "canonical_source_sha256": "77f4cbd16186278abbdf62cdce4b10037b8681cce3d3c5a285cd0b0e83aa4add",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ltx25",
+      "path": "packages/ltx-pipelines/src/ltx_pipelines/utils/model_paths.py",
+      "revision": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+      "git_blob_sha1": "1fe7541a8cf28e5ad1e6e869ca6c1728f61c8993",
+      "previous_retrieved_text_sha256": "6ee003ccfa4b045f3b796f1146eb56d7fd75f8533de3e8c5ecbc5d387ef1bd4a",
+      "canonical_source_sha256": "29a2617e54b0ac19b5239b9c88c0423ea9ada4592e01db99436bcd14821a6acf",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ltx25",
+      "path": "packages/ltx-pipelines/src/ltx_pipelines/utils/types.py",
+      "revision": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+      "git_blob_sha1": "c197bd955da76fe626426d4ae947772871a31fde",
+      "previous_retrieved_text_sha256": "9d1258cc77c9cc1bcfc5510c178098e11286b7dd72645def328eb5a1c906ce75",
+      "canonical_source_sha256": "d918bb143622cbc092fe990602dabc7e16a0ad96bf2872d24934334803c48ce6",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ltx25",
+      "path": "packages/ltx-pipelines/src/ltx_pipelines/utils/media_io/encode.py",
+      "revision": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+      "git_blob_sha1": "969dba0f38324f036393b7d59d7003911cb5446c",
+      "previous_retrieved_text_sha256": "812e194b52e18c92439a3331432e5d418c8a9b3c52a13517dbcbb3d06ba5048f",
+      "canonical_source_sha256": "ce5d57bbfaa3d117eac037de5ef3ad4c781ef64d127145eccedc944063e38b88",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ltx25",
+      "path": "packages/ltx-core/src/ltx_core/text_encoders/gemma/gemma_assets.py",
+      "revision": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+      "git_blob_sha1": "f8ba224663b26defaf27e04e5611cf3fb74a497a",
+      "previous_retrieved_text_sha256": "c12168a669b58c378241395d2cf70c2456ffe0f6079962abeebf907a3324c950",
+      "canonical_source_sha256": "b9ffd8657610d3b37882bbe366edc455eb0ddcd2254577e7a9a7eb14926eb704",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "wan_animate2",
+      "path": "infer/wan_animate_2.yaml",
+      "revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+      "git_blob_sha1": "063ca8c9c7bcfe7eb46d40c3e38bc7b840b67c2d",
+      "previous_retrieved_text_sha256": "a701e0f769058734c8cab208a40a128bbffb0602dbdb41ad5f57c1f2a6da5b27",
+      "canonical_source_sha256": "746e96f463f72bf46e998a8b94b4208dd122b8b768c3b0daf5c0957791499849",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "wan_animate2",
+      "path": "pipelines/wan_animate_2_pipeline.py",
+      "revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+      "git_blob_sha1": "c5bc59e2150ace67a508cfb284c545e5ba83385e",
+      "previous_retrieved_text_sha256": "948a87a33241d6930d3461213b45f29942dc21f3f7c314ea92326addc082d0a9",
+      "canonical_source_sha256": "cfd5862c192a1fdff725a108d004250487f9c489767bdcf563f4ee3b4c39be43",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "wan_animate2",
+      "path": "wanxiang/eval_i2v.py",
+      "revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+      "git_blob_sha1": "f923e27cdaa9bee643bcfb9b7ea8709be795e125",
+      "previous_retrieved_text_sha256": "6ba47cab5c170dd2cd7006a12d8ff99ae72552e0297fc342b60bc4bd75b12adb",
+      "canonical_source_sha256": "9c984ab7f830ff6a9a543073272a387d9fe4af95197c035fb3c4fc52d4ef985d",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "wan_animate2",
+      "path": "pipelines/utils/utils.py",
+      "revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+      "git_blob_sha1": "192ea5fa04b9fcb343d2ffab1e6729ab61e705f0",
+      "previous_retrieved_text_sha256": "3a966f49abd603a4211d76fe4655a1dadec325c2d9b549d85ee4de02d20237d1",
+      "canonical_source_sha256": "6ad0b233e6447c480dc0b738ab81aa32a94758657250b49a311ae6ea68053941",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ace15",
+      "path": "acestep/handler.py",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "git_blob_sha1": "ff32ed9a86842bb9cc71d3affee025ccbc380778",
+      "previous_retrieved_text_sha256": "1481dcb4724c65e0b4802e6fb736e8f4740fd47447f4671cf2f856e51aa1bef7",
+      "canonical_source_sha256": "0a215d92aff3a85ea50be8cfa88e819175a0b8a4254f8024893c157a4dec6875",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ace15",
+      "path": "acestep/inference.py",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "git_blob_sha1": "dc11604c94b2751baaa1650ff28975ce706240c9",
+      "previous_retrieved_text_sha256": "12911ea4464cb785cc16d3f9a3388abc10918c7a819877926d0bfdc26b9d976e",
+      "canonical_source_sha256": "f43827def02a1122e2de483961b04f16544e4da9108eed9e42fd529175c15df5",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ace15",
+      "path": "acestep/models/turbo/modeling_acestep_v15_turbo.py",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "git_blob_sha1": "013217ac1978b8a44c160df682997dc15f78238c",
+      "previous_retrieved_text_sha256": "51193e66c878d92cb6c4c579abf3b7c45f39cc4e3b95d44c76a9d3dd3b54a4d2",
+      "canonical_source_sha256": "71b22e01b490bd9e149e4c0c5da2e1f512126f3ab3316e0ae97779af84d19512",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ace15",
+      "path": "acestep/models/turbo/configuration_acestep_v15.py",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "git_blob_sha1": "cd2085249ec3a632a90bfc36c7c2ad716d53c0e5",
+      "previous_retrieved_text_sha256": "81ac75d9dc843f6dc8020bf366a475b7e71a58206f4f0f148841d74049631c8c",
+      "canonical_source_sha256": "5f15aa79fe793bba3c00b6992dd193a269954950603d5031ecd7703b0fa69da1",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ace15",
+      "path": "acestep/models/common/configuration_acestep_v15.py",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "git_blob_sha1": "e54e1c82f004851d356a0589c8ea94227ed61274",
+      "previous_retrieved_text_sha256": "f3aed60149ad9ca1d5723eba089c5c1a706abf1ebac324904a2cbe371dafcb40",
+      "canonical_source_sha256": "0d66f38eba6a3d1665c9449a1a52724d68354477bc88dcf02389640e3602a0c7",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ace15",
+      "path": "acestep/core/generation/handler/init_service_orchestrator.py",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "git_blob_sha1": "4b0322470185cbc13f54d9d63c0fcd96cf7f6d1d",
+      "previous_retrieved_text_sha256": "c735016888c3068f0d94fa8ac0623009ca25131be90b23e786325f7b44cb55ae",
+      "canonical_source_sha256": "df1e3ac43db9018793adae343760b43c56e7e81648cfcd057730162352c49d72",
+      "presentation_newline_corrected": true
+    },
+    {
+      "profile": "ace15",
+      "path": "acestep/core/generation/handler/init_service_downloads.py",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "git_blob_sha1": "c158c1d0f04ea72c6fd020701bb1b06ef526116e",
+      "previous_retrieved_text_sha256": "2a2dfb5e5cf54ec1cc1cd7a185f2da61c0af213368d89574795c4dbea4cf6f13",
+      "canonical_source_sha256": "02a95f2293dc0cd82ff5046816503668f8339157ba0b18715e061f3142999f8f",
+      "presentation_newline_corrected": true
+    }
+  ]
+}

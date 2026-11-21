@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "model": "Qwen/Qwen3.5-27B",
+  "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+  "gpus": [],
+  "gpu_query_error": null,
+  "cgroup_memory_limit_bytes": 8589934592,
+  "cgroup_memory_current_bytes": 210046976,
+  "dependency_metadata_only": {
+    "torch": null,
+    "transformers": null,
+    "bitsandbytes": null,
+    "accelerate": null,
+    "safetensors": null
+  },
+  "cache_inventory": [
+    {
+      "path": "/workspace/blank-app/phase3_models",
+      "exists": false,
+      "qwen35_27_snapshot_present": false
+    },
+    {
+      "path": "/workspace/.cache/huggingface",
+      "exists": false,
+      "qwen35_27_snapshot_present": false
+    },
+    {
+      "path": "/workspace/shared/downloads",
+      "exists": true,
+      "qwen35_27_snapshot_present": false
+    }
+  ],
+  "approved_install_receipt_present": null,
+  "approval_scope": "No agent store supplied; install/rights receipt not inspected",
+  "cache_scope": "Known workspace paths only; no global/private-account search or weight reads. Presence is not manifest/license approval.",
+  "session_quota": "not exposed",
+  "network_namespace": "net:[4026531833]",
+  "kernel_isolation_verified": false,
+  "adapter_compatibility_verified": false,
+  "gpu_allocated": false,
+  "inference_authorized": false,
+  "blockers": [
+    "No exposed queryable NVIDIA GPU; no GPU resource was activated.",
+    "Container RAM below existing unmeasured 32 GiB planning gate.",
+    "No approved exact installed bundle/rights receipt demonstrated in the supplied isolated agent store.",
+    "Exact owner approval of resource, selected model and bounded scope is required before inference.",
+    "Kernel network isolation and adapter/dependency/precision compatibility must be verified before launch.",
+    "Primary story uses five bounded sections: foundation, three acts, final reflection. Exact tokenizer feasibility for each 1536-output/4096-context request is unmeasured. Proposed seven-call ceiling is not owner authorization; stop on truncation."
+  ]
+}

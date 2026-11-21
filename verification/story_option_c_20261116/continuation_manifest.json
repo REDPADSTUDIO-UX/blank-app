@@ -1,0 +1,73 @@
+{
+  "base_commit": "ed1362f44df708ab19a103412f422a2cd2b5e160",
+  "status": "BLOCKED_MISSING_LOCAL_BUNDLE_DOWNLOAD_DECISION",
+  "owner_option_c_authorization": {
+    "granted": true,
+    "source": "Current user-authored OPTION C AUTHORIZATION & EXECUTION prompt",
+    "scope": "Separate research-only fictional Story benchmark; no Studio security-equivalence claim"
+  },
+  "download_authorization_for_missing_bundle": false,
+  "download_stop_source": "Current owner instruction 8: missing approved model requires necessary download authorization; no automatic download",
+  "model": {
+    "repo": "unsloth/Qwen3.5-9B-GGUF",
+    "revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+    "file": "Qwen3.5-9B-Q4_K_M.gguf",
+    "bytes": 5680522464,
+    "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8"
+  },
+  "model_url": "https://huggingface.co/unsloth/Qwen3.5-9B-GGUF/resolve/3885219b6810b007914f3a7950a8d1b469d598a5/Qwen3.5-9B-Q4_K_M.gguf",
+  "model_license": "Apache-2.0 per preserved pinned source; current source not re-fetched",
+  "runtime": {
+    "repo": "ggml-org/llama.cpp",
+    "release": "b12318",
+    "commit": "7021f7e09",
+    "license": "MIT",
+    "binary_sha256": "0ec391741c38d09eb4074db407c162686e310799c0dc36ebb734775688384ff5",
+    "archives": [
+      {
+        "file": "cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "bytes": 594371580,
+        "sha256": "caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz"
+      },
+      {
+        "file": "llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "bytes": 197999267,
+        "sha256": "e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz"
+      }
+    ]
+  },
+  "necessary_transfer_bytes": 6472893311,
+  "current_local_hash_verification": "NOT POSSIBLE: exact files absent in checked approved paths",
+  "runtime_compatibility": "NOT TESTED: runtime absent; historical successful same binary/model evidence retained",
+  "browser": {
+    "family": "Chrome",
+    "owner_existing_notebook_access": "VERIFIED",
+    "notebook_all_changes_saved": true,
+    "session": "Disconnected on arrival; one successful normal reconnect; no quota bypass",
+    "free_tier": "You are not subscribed; zero compute units; free resources not guaranteed",
+    "ui_session_estimate": "Up to 3 hours 40 minutes; not guaranteed remaining GPU quota",
+    "remaining_gpu_quota_hours": null
+  },
+  "boundary": {
+    "drive_mount_detected": false,
+    "drive_mount_performed": false,
+    "secrets_values_inspected": false,
+    "production_database_or_private_media_accessed": false,
+    "hosted_inference_used": false,
+    "production_security_equivalence": false,
+    "complete_host_confidentiality_certified": false
+  },
+  "production_worker_changed": false,
+  "bubblewrap_or_unshare_retest": false,
+  "new_calls": 0,
+  "new_downloads": 0,
+  "new_canary": "NOT RUN",
+  "new_complete_story": "ABSENT",
+  "human_review": "PENDING",
+  "artistic_acceptance": false,
+  "production_ready": false,
+  "next_action": "Obtain exact missing-bundle download authorization; then verify pinned source/artifact hashes, clean research workspace, dependency compatibility, and budget before any generation",
+  "cache_scope": "Only named approved roots and exact runtime paths; no claim that every private/global cache was searched"
+}

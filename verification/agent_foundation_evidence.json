@@ -1,0 +1,1654 @@
+{
+  "provenance": "software test with supplied Bengali fixture and simulated human approvals",
+  "real_inference_completed": 0,
+  "scene_media_generated": 0,
+  "department_count": 20,
+  "tasks": [
+    {
+      "id": "22c64940a32e40aea0a6c328b2216a9b",
+      "agent": "editing",
+      "brief": "Department execution",
+      "refs": "[]",
+      "revision": 0,
+      "state": "Assigned"
+    },
+    {
+      "id": "e3b50aa09821493cab7986a6c50f061e",
+      "agent": "music",
+      "brief": "Department execution",
+      "refs": "[]",
+      "revision": 0,
+      "state": "Assigned"
+    },
+    {
+      "id": "2a20b7c6f7d1460fb8afcbe0535d7291",
+      "agent": "voice",
+      "brief": "Department execution",
+      "refs": "[]",
+      "revision": 0,
+      "state": "Assigned"
+    },
+    {
+      "id": "8dfce16e45794264b052fccd3358f24d",
+      "agent": "video",
+      "brief": "Department execution",
+      "refs": "[]",
+      "revision": 0,
+      "state": "Assigned"
+    },
+    {
+      "id": "3d1be05a6cad45b8b40e54596ee777ee",
+      "agent": "youtube",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"ae658bc56fa34c9cbcb67187178aa575\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "ae658bc56fa34c9cbcb67187178aa575",
+      "agent": "growth",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"230f882d09434037a68b07b9140fe2df\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "230f882d09434037a68b07b9140fe2df",
+      "agent": "production_manager",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"a8207cb4d49e4ae5b27545df53c0b845\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "a8207cb4d49e4ae5b27545df53c0b845",
+      "agent": "qc",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"677444d882324cbc9f3ac1471ebe967e\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "677444d882324cbc9f3ac1471ebe967e",
+      "agent": "editing",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"33e17b05e3c845bfad386f34b15dd80b\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "33e17b05e3c845bfad386f34b15dd80b",
+      "agent": "music",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"cf4f70d5657340b7bfed8ba82cb2f298\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "cf4f70d5657340b7bfed8ba82cb2f298",
+      "agent": "voice",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"e588beb2a65042b18313deb246485143\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "e588beb2a65042b18313deb246485143",
+      "agent": "continuity",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"befbb80e3d9c49fb91a38d8bc5fe82ee\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "befbb80e3d9c49fb91a38d8bc5fe82ee",
+      "agent": "video",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"499ad57f839843ab8d71c54971cf8738\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "499ad57f839843ab8d71c54971cf8738",
+      "agent": "motion",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"e06f99250cfd4859975f480c934a4289\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "e06f99250cfd4859975f480c934a4289",
+      "agent": "cinematographer",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"419fd0c8c72a485281e2a072cc0f03dc\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "419fd0c8c72a485281e2a072cc0f03dc",
+      "agent": "performance",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"596518dfcc74422dad6bc8b78e48b9f0\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "596518dfcc74422dad6bc8b78e48b9f0",
+      "agent": "storyboard",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"4232a0a167724014a270902af90dc282\", \"revision\": 1}, {\"id\": \"aa0723b0759d40e5a7acc6d7225fbcf6\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "4232a0a167724014a270902af90dc282",
+      "agent": "costume",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"19e2b8027ea3484b84152f5363b6e995\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "19e2b8027ea3484b84152f5363b6e995",
+      "agent": "location",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"d78fb3bbbd184cad95164ca7b2fa5105\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "d78fb3bbbd184cad95164ca7b2fa5105",
+      "agent": "art",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"5b4bca0a23af48f79ad567026fd92376\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "5b4bca0a23af48f79ad567026fd92376",
+      "agent": "character",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"ce1d1d82e5974ed2a369d31f2aa5729b\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "ce1d1d82e5974ed2a369d31f2aa5729b",
+      "agent": "director",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"aa0723b0759d40e5a7acc6d7225fbcf6\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "aa0723b0759d40e5a7acc6d7225fbcf6",
+      "agent": "script",
+      "brief": "Department execution",
+      "refs": "[{\"id\": \"93b4275d261642999711dae6f77104b0\", \"revision\": 1}]",
+      "revision": 1,
+      "state": "Approved"
+    },
+    {
+      "id": "93b4275d261642999711dae6f77104b0",
+      "agent": "story",
+      "brief": "Department execution",
+      "refs": "[]",
+      "revision": 1,
+      "state": "Approved"
+    }
+  ],
+  "runs": [
+    {
+      "id": "d30852ba523541e8899d9c16aa0fd215",
+      "task": "22c64940a32e40aea0a6c328b2216a9b",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"clips\": [{\"id\": \"r1\", \"shot\": \"রাফি — supplied test shot\", \"start\": 1, \"seconds\": 1, \"video\": \"রাফি — supplied test video\", \"audio\": \"রাফি — supplied test audio\", \"subtitle\": \"রাফি — supplied test subtitle\", \"transition\": \"রাফি — supplied test transition\"}]}",
+      "dependencies": "[]",
+      "mode": "media",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "Select a supported local media operation with isolated approved assets. No media generated.",
+      "blocker": "Environment/model",
+      "started": 1793888174.5385134,
+      "finished": 1793888174.540582,
+      "model": "",
+      "task_state": "Assigned"
+    },
+    {
+      "id": "11d92dae43c14d79927097ffe1560a21",
+      "task": "e3b50aa09821493cab7986a6c50f061e",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"cues\": [{\"id\": \"r1\", \"scene\": \"রাফি — supplied test scene\", \"kind\": \"ambience\", \"start\": 1, \"seconds\": 1, \"purpose\": \"রাফি — supplied test purpose\", \"asset\": \"রাফি — supplied test asset\", \"review_criterion\": \"রাফি — supplied test review_criterion\"}]}",
+      "dependencies": "[]",
+      "mode": "media",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "Select a supported local media operation with isolated approved assets. No media generated.",
+      "blocker": "Environment/model",
+      "started": 1793888174.5337164,
+      "finished": 1793888174.5352077,
+      "model": "",
+      "task_state": "Assigned"
+    },
+    {
+      "id": "21b56803824944bca6b368c8a9120cbf",
+      "task": "2a20b7c6f7d1460fb8afcbe0535d7291",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"lines\": [{\"id\": \"r1\", \"scene\": \"রাফি — supplied test scene\", \"speaker\": \"রাফি — supplied test speaker\", \"text\": \"রাফি — supplied test text\", \"pronunciation\": \"রাফি — supplied test pronunciation\", \"emotion\": \"রাফি — supplied test emotion\", \"start\": 1, \"seconds\": 1}]}",
+      "dependencies": "[]",
+      "mode": "media",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "No approved local Bengali voice synthesis backend installed; remote gTTS is not called automatically.",
+      "blocker": "Environment/model",
+      "started": 1793888174.5283606,
+      "finished": 1793888174.5305874,
+      "model": "",
+      "task_state": "Assigned"
+    },
+    {
+      "id": "988a2676e36e4789adfb875f67258008",
+      "task": "8dfce16e45794264b052fccd3358f24d",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"requests\": [{\"id\": \"r1\", \"shot\": \"রাফি — supplied test shot\", \"prompt\": \"রাফি — supplied test prompt\", \"reference\": \"রাফি — supplied test reference\", \"seconds\": 3, \"fps\": 8, \"width\": 256, \"height\": 256}]}",
+      "dependencies": "[]",
+      "mode": "media",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "Select a supported local media operation with isolated approved assets. No media generated.",
+      "blocker": "Environment/model",
+      "started": 1793888174.5229125,
+      "finished": 1793888174.5250487,
+      "model": "",
+      "task_state": "Assigned"
+    },
+    {
+      "id": "cb4d0a7da9cf4ffc9b932071fca287df",
+      "task": "3d1be05a6cad45b8b40e54596ee777ee",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"releases\": [{\"id\": \"r1\", \"channel_id\": \"UCaaaaaaaaaaaaaaaaaaaaaa\", \"title\": \"রাফি — supplied test title\", \"description\": \"রাফি — supplied test description\", \"video_reference\": \"রাফি — supplied test video_reference\", \"approval_note\": \"রাফি — supplied test approval_note\"}]}",
+      "dependencies": "[\"ae658bc56fa34c9cbcb67187178aa575\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.5125005,
+      "finished": 1793888174.5148318,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "b6208a450e5d4d1b875f0a28bb338e64",
+      "task": "ae658bc56fa34c9cbcb67187178aa575",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"packages\": [{\"id\": \"r1\", \"title\": \"রাফি — supplied test title\", \"description\": \"রাফি — supplied test description\", \"keywords\": \"রাফি — supplied test keywords\", \"thumbnail_brief\": \"রাফি — supplied test thumbnail_brief\", \"campaign\": \"রাফি — supplied test campaign\"}]}",
+      "dependencies": "[\"230f882d09434037a68b07b9140fe2df\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.4994817,
+      "finished": 1793888174.5025496,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "496d30c7a3c5453f8197619040d5f4ab",
+      "task": "230f882d09434037a68b07b9140fe2df",
+      "inputs": "{\"project\": \"দরজা\", \"jobs\": []}",
+      "dependencies": "[\"a8207cb4d49e4ae5b27545df53c0b845\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.4899554,
+      "finished": 1793888174.4928489,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "f3b94a9d2c924254a816d564bf7f259e",
+      "task": "a8207cb4d49e4ae5b27545df53c0b845",
+      "inputs": "{\"subject_agent\": \"script\", \"checks\": [{\"criterion\": \"Visual action first\", \"result\": \"unverified\", \"evidence\": \"Needs screenplay review\", \"revision\": \"Inspect opening beat\"}]}",
+      "dependencies": "[\"677444d882324cbc9f3ac1471ebe967e\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.4802015,
+      "finished": 1793888174.4834764,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "4cabd064c9614ed182c2affd707bdad9",
+      "task": "677444d882324cbc9f3ac1471ebe967e",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"clips\": [{\"id\": \"r1\", \"shot\": \"রাফি — supplied test shot\", \"start\": 1, \"seconds\": 1, \"video\": \"রাফি — supplied test video\", \"audio\": \"রাফি — supplied test audio\", \"subtitle\": \"রাফি — supplied test subtitle\", \"transition\": \"রাফি — supplied test transition\"}]}",
+      "dependencies": "[\"33e17b05e3c845bfad386f34b15dd80b\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.4662817,
+      "finished": 1793888174.469272,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "f69e2c20b21544b785dbab64f3047407",
+      "task": "33e17b05e3c845bfad386f34b15dd80b",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"cues\": [{\"id\": \"r1\", \"scene\": \"রাফি — supplied test scene\", \"kind\": \"ambience\", \"start\": 1, \"seconds\": 1, \"purpose\": \"রাফি — supplied test purpose\", \"asset\": \"রাফি — supplied test asset\", \"review_criterion\": \"রাফি — supplied test review_criterion\"}]}",
+      "dependencies": "[\"cf4f70d5657340b7bfed8ba82cb2f298\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.4551673,
+      "finished": 1793888174.4575748,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "37359460f8aa4dbdbcc1874bd5decfb9",
+      "task": "cf4f70d5657340b7bfed8ba82cb2f298",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"lines\": [{\"id\": \"r1\", \"scene\": \"রাফি — supplied test scene\", \"speaker\": \"রাফি — supplied test speaker\", \"text\": \"রাফি — supplied test text\", \"pronunciation\": \"রাফি — supplied test pronunciation\", \"emotion\": \"রাফি — supplied test emotion\", \"start\": 1, \"seconds\": 1}]}",
+      "dependencies": "[\"e588beb2a65042b18313deb246485143\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.443763,
+      "finished": 1793888174.4467316,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "8aa4a99d58ca4560aefc3597a66d552c",
+      "task": "e588beb2a65042b18313deb246485143",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"observations\": [{\"id\": \"r1\", \"scene\": \"রাফি — supplied test scene\", \"entity\": \"রাফি — supplied test entity\", \"attribute\": \"রাফি — supplied test attribute\", \"value\": \"রাফি — supplied test value\", \"change_reason\": \"রাফি — supplied test change_reason\"}]}",
+      "dependencies": "[\"befbb80e3d9c49fb91a38d8bc5fe82ee\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.4344106,
+      "finished": 1793888174.436736,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "0df11a1678ec432fa8f2f29bd8d8734b",
+      "task": "befbb80e3d9c49fb91a38d8bc5fe82ee",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"requests\": [{\"id\": \"r1\", \"shot\": \"রাফি — supplied test shot\", \"prompt\": \"রাফি — supplied test prompt\", \"reference\": \"রাফি — supplied test reference\", \"seconds\": 3, \"fps\": 8, \"width\": 256, \"height\": 256}]}",
+      "dependencies": "[\"499ad57f839843ab8d71c54971cf8738\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.42532,
+      "finished": 1793888174.4283285,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "1247928754f94c09a85e0bddc9f2fd4c",
+      "task": "499ad57f839843ab8d71c54971cf8738",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"actions\": [{\"id\": \"r1\", \"shot\": \"রাফি — supplied test shot\", \"body_motion\": \"রাফি — supplied test body_motion\", \"object_interaction\": \"রাফি — supplied test object_interaction\", \"constraints\": \"রাফি — supplied test constraints\", \"qa_criterion\": \"রাফি — supplied test qa_criterion\"}]}",
+      "dependencies": "[\"e06f99250cfd4859975f480c934a4289\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.4158652,
+      "finished": 1793888174.419026,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "41b2321e590d4641925f370fe1183e21",
+      "task": "e06f99250cfd4859975f480c934a4289",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"shots\": [{\"id\": \"r1\", \"scene\": \"রাফি — supplied test scene\", \"lens_mm\": 1, \"framing\": \"রাফি — supplied test framing\", \"movement\": \"রাফি — supplied test movement\", \"lighting\": \"রাফি — supplied test lighting\", \"axis\": \"রাফি — supplied test axis\"}]}",
+      "dependencies": "[\"419fd0c8c72a485281e2a072cc0f03dc\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.4073682,
+      "finished": 1793888174.4093351,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "5076fc58ea494eff957251f192123d02",
+      "task": "419fd0c8c72a485281e2a072cc0f03dc",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"beats\": [{\"id\": \"r1\", \"scene\": \"রাফি — supplied test scene\", \"character\": \"রাফি — supplied test character\", \"emotion\": \"রাফি — supplied test emotion\", \"intensity\": 3, \"blocking\": \"রাফি — supplied test blocking\", \"micro_expression\": \"রাফি — supplied test micro_expression\"}]}",
+      "dependencies": "[\"596518dfcc74422dad6bc8b78e48b9f0\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.3953438,
+      "finished": 1793888174.3979762,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "1e35f9dea02f4e05bc72e252782eea11",
+      "task": "596518dfcc74422dad6bc8b78e48b9f0",
+      "inputs": "{\"content_id\": 1, \"title\": \"দরজা\", \"script\": {\"$from\": \"aa0723b0759d40e5a7acc6d7225fbcf6\", \"path\": [\"artifact\", \"formatted\"]}, \"ratio\": \"16:9\"}",
+      "dependencies": "[\"4232a0a167724014a270902af90dc282\", \"aa0723b0759d40e5a7acc6d7225fbcf6\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.3795857,
+      "finished": 1793888174.3843865,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "21907c9bdb544a0c96795c06fad65eb3",
+      "task": "4232a0a167724014a270902af90dc282",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"wardrobe\": [{\"id\": \"r1\", \"scene\": \"রাফি — supplied test scene\", \"character\": \"রাফি — supplied test character\", \"outfit\": \"রাফি — supplied test outfit\", \"reference\": \"রাফি — supplied test reference\", \"change_reason\": \"রাফি — supplied test change_reason\"}]}",
+      "dependencies": "[\"19e2b8027ea3484b84152f5363b6e995\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.3688953,
+      "finished": 1793888174.3713708,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "00104859005c41c19b709066f0a61673",
+      "task": "19e2b8027ea3484b84152f5363b6e995",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"locations\": [{\"id\": \"r1\", \"architecture\": \"রাফি — supplied test architecture\", \"geography\": \"রাফি — supplied test geography\", \"layout\": \"রাফি — supplied test layout\", \"reference\": \"রাফি — supplied test reference\"}]}",
+      "dependencies": "[\"d78fb3bbbd184cad95164ca7b2fa5105\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.357912,
+      "finished": 1793888174.3603234,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "28368e39d2d34b5d927033c16ff394ec",
+      "task": "d78fb3bbbd184cad95164ca7b2fa5105",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"designs\": [{\"id\": \"r1\", \"palette\": \"রাফি — supplied test palette\", \"set\": \"রাফি — supplied test set\", \"props\": \"রাফি — supplied test props\", \"style\": \"রাফি — supplied test style\"}]}",
+      "dependencies": "[\"5b4bca0a23af48f79ad567026fd92376\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.3384714,
+      "finished": 1793888174.34271,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "f9f58b96971a498cbd102a88dc90d8e7",
+      "task": "5b4bca0a23af48f79ad567026fd92376",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"characters\": [{\"id\": \"r1\", \"name\": \"রাফি — supplied test name\", \"appearance\": \"রাফি — supplied test appearance\", \"identity\": \"রাফি — supplied test identity\", \"reference\": \"রাফি — supplied test reference\", \"continuity\": \"রাফি — supplied test continuity\"}]}",
+      "dependencies": "[\"ce1d1d82e5974ed2a369d31f2aa5729b\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.3288977,
+      "finished": 1793888174.3310184,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "1361902425164c28b62f840c05c659a7",
+      "task": "ce1d1d82e5974ed2a369d31f2aa5729b",
+      "inputs": "{\"plan\": {\"vision\": \"ঢাকার পুরোনো বাড়ির বাস্তবধর্মী রহস্য\", \"tone\": \"সংযত ভয়\", \"scenes\": [{\"id\": \"s1\", \"seconds\": 30, \"visual\": \"রাফি দরজার নিচে আলো দেখে।\", \"performance\": \"স্থির শরীর, চোখে দ্বিধা\", \"camera\": \"স্থির মিডিয়াম শট\", \"sound\": \"বৃষ্টির শব্দ\", \"continuity\": \"নেভি শার্ট; দরজা বন্ধ\"}], \"assignments\": [{\"agent\": \"script\", \"brief\": \"প্রথমে দৃশ্যমান action, তারপর স্বাভাবিক বাংলা সংলাপ\", \"scene_ids\": [\"s1\"]}], \"risks\": [\"অভিনয় ও মুখের consistency বাস্তব footage দিয়ে পরীক্ষা প্রয়োজন\"]}, \"seconds\": 30}",
+      "dependencies": "[\"aa0723b0759d40e5a7acc6d7225fbcf6\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.317802,
+      "finished": 1793888174.32001,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "47c66e70419a496a8e93a4384c1e57bf",
+      "task": "aa0723b0759d40e5a7acc6d7225fbcf6",
+      "inputs": "{\"screenplay\": {\"title\": \"চাবি\", \"hook\": {\"image\": \"খালি চেয়ার\", \"question\": \"কে বসে?\", \"payoff\": \"চেয়ার সরবে\"}, \"characters\": [{\"name\": \"রাফি\", \"want\": \"ঘর খোলা\", \"voice\": \"সংযত\"}], \"scenes\": [{\"id\": \"s1\", \"heading\": \"INT. ঘর — রাত\", \"seconds\": 30, \"objective\": \"চাবি খোঁজা\", \"obstacle\": \"তালা বন্ধ\", \"turn\": \"চাবি পাওয়া\", \"consequence\": \"দরজা খুলবে\", \"beats\": [{\"type\": \"action\", \"text\": \"রাফি টেবিলের নিচে হাত বাড়ায়।\"}, {\"type\": \"dialogue\", \"speaker\": \"রাফি\", \"text\": \"এটা কার?\"}], \"sound\": {\"music\": \"নেই\", \"sfx\": \"চাবির ঝনঝন\"}}]}, \"seconds\": 30}",
+      "dependencies": "[\"93b4275d261642999711dae6f77104b0\"]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.307476,
+      "finished": 1793888174.3101377,
+      "model": "",
+      "task_state": "Approved"
+    },
+    {
+      "id": "3c1c46f56e04433998d49e8592c45aba",
+      "task": "93b4275d261642999711dae6f77104b0",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"beats\": [{\"id\": \"r1\", \"premise\": \"রাফি — supplied test premise\", \"cause\": \"রাফি — supplied test cause\", \"consequence\": \"রাফি — supplied test consequence\", \"character_arc\": \"রাফি — supplied test character_arc\", \"episode\": \"রাফি — supplied test episode\"}]}",
+      "dependencies": "[]",
+      "mode": "software",
+      "state": "Awaiting QC",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "",
+      "blocker": "",
+      "started": 1793888174.296675,
+      "finished": 1793888174.2992632,
+      "model": "",
+      "task_state": "Approved"
+    }
+  ],
+  "outputs": [
+    {
+      "task": "19e2b8027ea3484b84152f5363b6e995",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"location_bible\", \"summary\": \"{\\\"agent\\\": \\\"location\\\", \\\"artifact_type\\\": \\\"location_bible\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"d78fb3bbbd184cad95164ca7b2fa5105\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"locations\\\": [{\\\"id\\\": \\\"r1\\\", \\\"architecture\\\": \\\"রাফি — supplied test architecture\\\", \\\"geography\\\": \\\"রাফি — supplied test geography\\\", \\\"layout\\\": \\\"রাফি — supplied test layout\\\", \\\"reference\\\": \\\"রাফি — supplied test reference\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"d835931bf148da2b8a333f831056d6bb27769140a05bda051a03c525ac8be587\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "230f882d09434037a68b07b9140fe2df",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"production_plan\", \"summary\": \"{\\\"agent\\\": \\\"production_manager\\\", \\\"artifact_type\\\": \\\"production_plan\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"a8207cb4d49e4ae5b27545df53c0b845\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজা\\\", \\\"job_counts\\\": {}, \\\"resources\\\": {\\\"cuda_device\\\": false, \\\"torch_installed\\\": false, \\\"ollama_executable\\\": false, \\\"local_models\\\": [], \\\"local_probe\\\": \\\"Not requested\\\", \\\"inference_verified\\\": false, \\\"large_downloads\\\": false, \\\"paid_fallback\\\": false}}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"f82a024581442af3b436796a96bad321c9b17907a4de2bd4d1ed1265bae1de6f\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "33e17b05e3c845bfad386f34b15dd80b",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"sound_plan\", \"summary\": \"{\\\"agent\\\": \\\"music\\\", \\\"artifact_type\\\": \\\"sound_plan\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"cf4f70d5657340b7bfed8ba82cb2f298\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"cues\\\": [{\\\"id\\\": \\\"r1\\\", \\\"scene\\\": \\\"রাফি — supplied test scene\\\", \\\"kind\\\": \\\"ambience\\\", \\\"start\\\": 1, \\\"seconds\\\": 1, \\\"purpose\\\": \\\"রাফি — supplied test purpose\\\", \\\"asset\\\": \\\"রাফি — supplied test asset\\\", \\\"review_criterion\\\": \\\"রাফি — supplied test review_criterion\\\"}], \\\"duration_seconds\\\": 2}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"84edd8291cb85f5aa57dd70631b8474980711874a31fad8c9605dded8108b436\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "3d1be05a6cad45b8b40e54596ee777ee",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"youtube_package\", \"summary\": \"{\\\"agent\\\": \\\"youtube\\\", \\\"artifact_type\\\": \\\"youtube_package\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"ae658bc56fa34c9cbcb67187178aa575\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"releases\\\": [{\\\"id\\\": \\\"r1\\\", \\\"channel_id\\\": \\\"UCaaaaaaaaaaaaaaaaaaaaaa\\\", \\\"title\\\": \\\"রাফি — supplied test title\\\", \\\"description\\\": \\\"রাফি — supplied test description\\\", \\\"video_reference\\\": \\\"রাফি — supplied test video_reference\\\", \\\"approval_note\\\": \\\"রাফি — supplied test approval_note\\\"}], \\\"release_status\\\": \\\"Preparation only — no upload, scheduling, publishing or channel mutation.\\\", \\\"oauth_scope\\\": \\\"https://www.googleapis.com/auth/youtube.readonly\\\"}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"3a3fd7ce34636cfc1d54fe0585eb03119abc3fee270b65bb457a24b9e93c31db\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "419fd0c8c72a485281e2a072cc0f03dc",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"performance_plan\", \"summary\": \"{\\\"agent\\\": \\\"performance\\\", \\\"artifact_type\\\": \\\"performance_plan\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"596518dfcc74422dad6bc8b78e48b9f0\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"beats\\\": [{\\\"id\\\": \\\"r1\\\", \\\"scene\\\": \\\"রাফি — supplied test scene\\\", \\\"character\\\": \\\"রাফি — supplied test character\\\", \\\"emotion\\\": \\\"রাফি — supplied test emotion\\\", \\\"intensity\\\": 3, \\\"blocking\\\": \\\"রাফি — supplied test blocking\\\", \\\"micro_expression\\\": \\\"রাফি — supplied test micro_expression\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"c5075f9212413fc437c45ceb4f987beebde39135624c401e3673a8af61b5ab27\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "4232a0a167724014a270902af90dc282",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"costume_bible\", \"summary\": \"{\\\"agent\\\": \\\"costume\\\", \\\"artifact_type\\\": \\\"costume_bible\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"19e2b8027ea3484b84152f5363b6e995\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"wardrobe\\\": [{\\\"id\\\": \\\"r1\\\", \\\"scene\\\": \\\"রাফি — supplied test scene\\\", \\\"character\\\": \\\"রাফি — supplied test character\\\", \\\"outfit\\\": \\\"রাফি — supplied test outfit\\\", \\\"reference\\\": \\\"রাফি — supplied test reference\\\", \\\"change_reason\\\": \\\"রাফি — supplied test change_reason\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"1f04c0e646df24aa9892596fff0bedf5dc159070bb1a5a835363a631da79959d\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "499ad57f839843ab8d71c54971cf8738",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"motion_plan\", \"summary\": \"{\\\"agent\\\": \\\"motion\\\", \\\"artifact_type\\\": \\\"motion_plan\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"e06f99250cfd4859975f480c934a4289\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"actions\\\": [{\\\"id\\\": \\\"r1\\\", \\\"shot\\\": \\\"রাফি — supplied test shot\\\", \\\"body_motion\\\": \\\"রাফি — supplied test body_motion\\\", \\\"object_interaction\\\": \\\"রাফি — supplied test object_interaction\\\", \\\"constraints\\\": \\\"রাফি — supplied test constraints\\\", \\\"qa_criterion\\\": \\\"রাফি — supplied test qa_criterion\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"2dad359fc5ce74a6c70afd277d6421a208dc730d9f9fb591f629f6cc84e2210a\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "596518dfcc74422dad6bc8b78e48b9f0",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"storyboard\", \"summary\": \"{\\\"agent\\\": \\\"storyboard\\\", \\\"artifact_type\\\": \\\"storyboard\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [\\\"Deterministic shot draft; Director must review composition and pacing.\\\"], \\\"upstream\\\": [{\\\"task\\\": \\\"4232a0a167724014a270902af90dc282\\\", \\\"revision\\\": 1}, {\\\"task\\\": \\\"aa0723b0759d40e5a7acc6d7225fbcf6\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"content_id\\\": 1, \\\"title\\\": \\\"দরজা\\\", \\\"script_hash\\\": \\\"10d7497cf3d3173295001b2b4ccc075903512d2c53943f33f7c4951cd9a8da91\\\", \\\"ratio\\\": \\\"16:9\\\", \\\"character_bible\\\": \\\"\\\", \\\"location_bible\\\": \\\"\\\", \\\"look_bible\\\": \\\"Cinematic Bangladeshi realism\\\", \\\"shots\\\": [{\\\"number\\\": 1, \\\"narration\\\": \\\"# চাবি\\\", \\\"visual\\\": \\\"# চাবি\\\", \\\"shot_type\\\": \\\"Wide\\\", \\\"camera\\\": \\\"Static\\\", \\\"seconds\\\": 4, \\\"notes\\\": \\\"\\\", \\\"reference_path\\\": \\\"\\\", \\\"english\\\": \\\"\\\", \\\"sfx\\\": \\\"none\\\"}, {\\\"number\\\": 2, \\\"narration\\\": \\\"## s1 · INT.\\\", \\\"visual\\\": \\\"## s1 · INT.\\\", \\\"shot_type\\\": \\\"Medium\\\", \\\"camera\\\": \\\"Static\\\", \\\"seconds\\\": 4, \\\"notes\\\": \\\"\\\", \\\"reference_path\\\": \\\"\\\", \\\"english\\\": \\\"\\\", \\\"sfx\\\": \\\"none\\\"}, {\\\"number\\\": 3, \\\"narration\\\": \\\"ঘর — রাত · 30s\\\", \\\"visual\\\": \\\"ঘর — রাত · 30s\\\", \\\"shot_type\\\": \\\"Close-up\\\", \\\"camera\\\": \\\"Slow push-in\\\", \\\"seconds\\\": 4, \\\"notes\\\": \\\"\\\", \\\"reference_path\\\": \\\"\\\", \\\"english\\\": \\\"\\\", \\\"sfx\\\": \\\"none\\\"}, {\\\"number\\\": 4, \\\"narration\\\": \\\"রাফি টেবিলের নিচে হাত বাড়ায়।\\\", \\\"visual\\\": \\\"রাফি টেবিলের নিচে হাত বাড়ায়।\\\", \\\"shot_type\\\": \\\"Insert\\\", \\\"camera\\\": \\\"Static\\\", \\\"seconds\\\": 4, \\\"notes\\\": \\\"\\\", \\\"reference_path\\\": \\\"\\\", \\\"english\\\": \\\"\\\", \\\"sfx\\\": \\\"none\\\"}, {\\\"number\\\": 5, \\\"narration\\\": \\\"**রাফি**\\\", \\\"visual\\\": \\\"**রাফি**\\\", \\\"shot_type\\\": \\\"Wide\\\", \\\"camera\\\": \\\"Static\\\", \\\"seconds\\\": 4, \\\"notes\\\": \\\"\\\", \\\"reference_path\\\": \\\"\\\", \\\"english\\\": \\\"\\\", \\\"sfx\\\": \\\"none\\\"}, {\\\"number\\\": 6, \\\"narration\\\": \\\"এটা কার?\\\", \\\"visual\\\": \\\"এটা কার?\\\", \\\"shot_type\\\": \\\"Medium\\\", \\\"camera\\\": \\\"Static\\\", \\\"seconds\\\": 4, \\\"notes\\\": \\\"\\\", \\\"reference_path\\\": \\\"\\\", \\\"english\\\": \\\"\\\", \\\"sfx\\\": \\\"none\\\"}, {\\\"number\\\": 7, \\\"narration\\\": \\\"সংগীত: নেই\\\", \\\"visual\\\": \\\"সংগীত: নেই\\\", \\\"shot_type\\\": \\\"Close-up\\\", \\\"camera\\\": \\\"Slow push-in\\\", \\\"seconds\\\": 4, \\\"notes\\\": \\\"\\\", \\\"reference_path\\\": \\\"\\\", \\\"english\\\": \\\"\\\", \\\"sfx\\\": \\\"none\\\"}, {\\\"number\\\": 8, \\\"narration\\\": \\\"শব্দ: চাবির ঝনঝন\\\", \\\"visual\\\": \\\"শব্দ: চাবির ঝনঝন\\\", \\\"shot_type\\\": \\\"Insert\\\", \\\"camera\\\": \\\"Static\\\", \\\"seconds\\\": 4, \\\"notes\\\": \\\"\\\", \\\"reference_path\\\": \\\"\\\", \\\"english\\\": \\\"\\\", \\\"sfx\\\": \\\"none\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 4, \\\"input_sha256\\\": \\\"cc26b723ed88bd5010e3c823f1ffa25c726bd1dafb2db56a1ee6958d6ee691a8\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "5b4bca0a23af48f79ad567026fd92376",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"character_bible\", \"summary\": \"{\\\"agent\\\": \\\"character\\\", \\\"artifact_type\\\": \\\"character_bible\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"ce1d1d82e5974ed2a369d31f2aa5729b\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"characters\\\": [{\\\"id\\\": \\\"r1\\\", \\\"name\\\": \\\"রাফি — supplied test name\\\", \\\"appearance\\\": \\\"রাফি — supplied test appearance\\\", \\\"identity\\\": \\\"রাফি — supplied test identity\\\", \\\"reference\\\": \\\"রাফি — supplied test reference\\\", \\\"continuity\\\": \\\"রাফি — supplied test continuity\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"a7b5998624bc4cb93526ec28d1f9961da5cf167ecb3672f6f1732e0a0140ab95\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "677444d882324cbc9f3ac1471ebe967e",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"edit_manifest\", \"summary\": \"{\\\"agent\\\": \\\"editing\\\", \\\"artifact_type\\\": \\\"edit_manifest\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"33e17b05e3c845bfad386f34b15dd80b\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"clips\\\": [{\\\"id\\\": \\\"r1\\\", \\\"shot\\\": \\\"রাফি — supplied test shot\\\", \\\"start\\\": 1, \\\"seconds\\\": 1, \\\"video\\\": \\\"রাফি — supplied test video\\\", \\\"audio\\\": \\\"রাফি — supplied test audio\\\", \\\"subtitle\\\": \\\"রাফি — supplied test subtitle\\\", \\\"transition\\\": \\\"রাফি — supplied test transition\\\"}], \\\"duration_seconds\\\": 2, \\\"render_status\\\": \\\"Not rendered; validated asset ingestion and existing drama_finish required.\\\"}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"ca2a14e1c29cb6b7313fd65e14ef3cfdeeb04bbaf178e171cd4e40df168b28c0\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "93b4275d261642999711dae6f77104b0",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"story\", \"summary\": \"{\\\"agent\\\": \\\"story\\\", \\\"artifact_type\\\": \\\"story\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"beats\\\": [{\\\"id\\\": \\\"r1\\\", \\\"premise\\\": \\\"রাফি — supplied test premise\\\", \\\"cause\\\": \\\"রাফি — supplied test cause\\\", \\\"consequence\\\": \\\"রাফি — supplied test consequence\\\", \\\"character_arc\\\": \\\"রাফি — supplied test character_arc\\\", \\\"episode\\\": \\\"রাফি — supplied test episode\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"638d339afc874e6808284b4e48c20a7ed8ce64099fcf6b148ad260e3810c8bff\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "a8207cb4d49e4ae5b27545df53c0b845",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"quality_review\", \"summary\": \"{\\\"agent\\\": \\\"qc\\\", \\\"artifact_type\\\": \\\"quality_review\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [{\\\"criterion\\\": \\\"Visual action first\\\", \\\"result\\\": \\\"unverified\\\", \\\"evidence\\\": \\\"Needs screenplay review\\\", \\\"revision\\\": \\\"Inspect opening beat\\\"}], \\\"upstream\\\": [{\\\"task\\\": \\\"677444d882324cbc9f3ac1471ebe967e\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"checks\\\": [{\\\"criterion\\\": \\\"Visual action first\\\", \\\"result\\\": \\\"unverified\\\", \\\"evidence\\\": \\\"Needs screenplay review\\\", \\\"revision\\\": \\\"Inspect opening beat\\\"}], \\\"recommendation\\\": \\\"Revision Required\\\", \\\"creative_quality_verified\\\": false}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"ac958732057f40c89fc2aa069bfc0a5ed91d28c54572d805998022652350cc64\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "aa0723b0759d40e5a7acc6d7225fbcf6",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"screenplay\", \"summary\": \"{\\\"agent\\\": \\\"script\\\", \\\"artifact_type\\\": \\\"screenplay\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"93b4275d261642999711dae6f77104b0\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"screenplay\\\": {\\\"title\\\": \\\"চাবি\\\", \\\"hook\\\": {\\\"image\\\": \\\"খালি চেয়ার\\\", \\\"question\\\": \\\"কে বসে?\\\", \\\"payoff\\\": \\\"চেয়ার সরবে\\\"}, \\\"characters\\\": [{\\\"name\\\": \\\"রাফি\\\", \\\"want\\\": \\\"ঘর খোলা\\\", \\\"voice\\\": \\\"সংযত\\\"}], \\\"scenes\\\": [{\\\"id\\\": \\\"s1\\\", \\\"heading\\\": \\\"INT. ঘর — রাত\\\", \\\"seconds\\\": 30, \\\"objective\\\": \\\"চাবি খোঁজা\\\", \\\"obstacle\\\": \\\"তালা বন্ধ\\\", \\\"turn\\\": \\\"চাবি পাওয়া\\\", \\\"consequence\\\": \\\"দরজা খুলবে\\\", \\\"beats\\\": [{\\\"type\\\": \\\"action\\\", \\\"text\\\": \\\"রাফি টেবিলের নিচে হাত বাড়ায়।\\\"}, {\\\"type\\\": \\\"dialogue\\\", \\\"speaker\\\": \\\"রাফি\\\", \\\"text\\\": \\\"এটা কার?\\\"}], \\\"sound\\\": {\\\"music\\\": \\\"নেই\\\", \\\"sfx\\\": \\\"চাবির ঝনঝন\\\"}}]}, \\\"formatted\\\": \\\"# চাবি\\\\n\\\\n## s1 · INT. ঘর — রাত · 30s\\\\n\\\\nরাফি টেবিলের নিচে হাত বাড়ায়।\\\\n\\\\n**রাফি**\\\\n\\\\nএটা কার?\\\\n\\\\nসংগীত: নেই\\\\n\\\\nশব্দ: চাবির ঝনঝন\\\"}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"8d1d4e9cc24d1ce402d809bbdbcf44c80aa50f935ed68f8bdd38d1311135ac4a\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "ae658bc56fa34c9cbcb67187178aa575",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"growth_plan\", \"summary\": \"{\\\"agent\\\": \\\"growth\\\", \\\"artifact_type\\\": \\\"growth_plan\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"230f882d09434037a68b07b9140fe2df\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"packages\\\": [{\\\"id\\\": \\\"r1\\\", \\\"title\\\": \\\"রাফি — supplied test title\\\", \\\"description\\\": \\\"রাফি — supplied test description\\\", \\\"keywords\\\": \\\"রাফি — supplied test keywords\\\", \\\"thumbnail_brief\\\": \\\"রাফি — supplied test thumbnail_brief\\\", \\\"campaign\\\": \\\"রাফি — supplied test campaign\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"79268398a9563eca1aa06378bcf9e00b60515261b7cac4aa2c150a09e75b3bed\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "befbb80e3d9c49fb91a38d8bc5fe82ee",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"video_manifest\", \"summary\": \"{\\\"agent\\\": \\\"video\\\", \\\"artifact_type\\\": \\\"video_manifest\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"499ad57f839843ab8d71c54971cf8738\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"requests\\\": [{\\\"id\\\": \\\"r1\\\", \\\"shot\\\": \\\"রাফি — supplied test shot\\\", \\\"prompt\\\": \\\"রাফি — supplied test prompt\\\", \\\"reference\\\": \\\"রাফি — supplied test reference\\\", \\\"seconds\\\": 3, \\\"fps\\\": 8, \\\"width\\\": 256, \\\"height\\\": 256}], \\\"generation_status\\\": \\\"Request prepared only; no media generated.\\\"}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 3, \\\"input_sha256\\\": \\\"712682a8864894e7a9fab9e2d5bc4ba9f95a1ab949a785961cd2eaa6574c16bf\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "ce1d1d82e5974ed2a369d31f2aa5729b",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"direction\", \"summary\": \"{\\\"agent\\\": \\\"director\\\", \\\"artifact_type\\\": \\\"direction\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"aa0723b0759d40e5a7acc6d7225fbcf6\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"vision\\\": \\\"ঢাকার পুরোনো বাড়ির বাস্তবধর্মী রহস্য\\\", \\\"tone\\\": \\\"সংযত ভয়\\\", \\\"scenes\\\": [{\\\"id\\\": \\\"s1\\\", \\\"seconds\\\": 30, \\\"visual\\\": \\\"রাফি দরজার নিচে আলো দেখে।\\\", \\\"performance\\\": \\\"স্থির শরীর, চোখে দ্বিধা\\\", \\\"camera\\\": \\\"স্থির মিডিয়াম শট\\\", \\\"sound\\\": \\\"বৃষ্টির শব্দ\\\", \\\"continuity\\\": \\\"নেভি শার্ট; দরজা বন্ধ\\\"}], \\\"assignments\\\": [{\\\"agent\\\": \\\"script\\\", \\\"brief\\\": \\\"প্রথমে দৃশ্যমান action, তারপর স্বাভাবিক বাংলা সংলাপ\\\", \\\"scene_ids\\\": [\\\"s1\\\"]}], \\\"risks\\\": [\\\"অভিনয় ও মুখের consistency বাস্তব footage দিয়ে পরীক্ষা প্রয়োজন\\\"]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"860b0c91d6a77405f8e39a2519ee694335163de198ae574eefe8d06260b8edb8\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "cf4f70d5657340b7bfed8ba82cb2f298",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"voice_manifest\", \"summary\": \"{\\\"agent\\\": \\\"voice\\\", \\\"artifact_type\\\": \\\"voice_manifest\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"e588beb2a65042b18313deb246485143\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"lines\\\": [{\\\"id\\\": \\\"r1\\\", \\\"scene\\\": \\\"রাফি — supplied test scene\\\", \\\"speaker\\\": \\\"রাফি — supplied test speaker\\\", \\\"text\\\": \\\"রাফি — supplied test text\\\", \\\"pronunciation\\\": \\\"রাফি — supplied test pronunciation\\\", \\\"emotion\\\": \\\"রাফি — supplied test emotion\\\", \\\"start\\\": 1, \\\"seconds\\\": 1}], \\\"duration_seconds\\\": 2, \\\"generation_status\\\": \\\"Request prepared only; no media generated.\\\"}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"851737ed6d124c508645f933b1180ec45b6fc756c0e698dd40bc77d5d414e675\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "d78fb3bbbd184cad95164ca7b2fa5105",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"art_plan\", \"summary\": \"{\\\"agent\\\": \\\"art\\\", \\\"artifact_type\\\": \\\"art_plan\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"5b4bca0a23af48f79ad567026fd92376\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"designs\\\": [{\\\"id\\\": \\\"r1\\\", \\\"palette\\\": \\\"রাফি — supplied test palette\\\", \\\"set\\\": \\\"রাফি — supplied test set\\\", \\\"props\\\": \\\"রাফি — supplied test props\\\", \\\"style\\\": \\\"রাফি — supplied test style\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 4, \\\"input_sha256\\\": \\\"c7a1ca4c2bb6aaebce9fb855138c97f940704b277098874af728aa522905eee5\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "e06f99250cfd4859975f480c934a4289",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"camera_plan\", \"summary\": \"{\\\"agent\\\": \\\"cinematographer\\\", \\\"artifact_type\\\": \\\"camera_plan\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"419fd0c8c72a485281e2a072cc0f03dc\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"shots\\\": [{\\\"id\\\": \\\"r1\\\", \\\"scene\\\": \\\"রাফি — supplied test scene\\\", \\\"lens_mm\\\": 1, \\\"framing\\\": \\\"রাফি — supplied test framing\\\", \\\"movement\\\": \\\"রাফি — supplied test movement\\\", \\\"lighting\\\": \\\"রাফি — supplied test lighting\\\", \\\"axis\\\": \\\"রাফি — supplied test axis\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 1, \\\"input_sha256\\\": \\\"190f8cc4e7fcc52e1885a9ce5378c3f38a99caa8cd7a6f2c8992bac2a9c763d0\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    },
+    {
+      "task": "e588beb2a65042b18313deb246485143",
+      "revision": 1,
+      "payload": "{\"schema_version\": 1, \"kind\": \"continuity_review\", \"summary\": \"{\\\"agent\\\": \\\"continuity\\\", \\\"artifact_type\\\": \\\"continuity_review\\\", \\\"provenance\\\": \\\"software\\\", \\\"model_inference\\\": false, \\\"media_generated\\\": false, \\\"human_review_required\\\": true, \\\"findings\\\": [], \\\"upstream\\\": [{\\\"task\\\": \\\"befbb80e3d9c49fb91a38d8bc5fe82ee\\\", \\\"revision\\\": 1}], \\\"artifact\\\": {\\\"project\\\": \\\"দরজার ওপাশে — fictional test\\\", \\\"observations\\\": [{\\\"id\\\": \\\"r1\\\", \\\"scene\\\": \\\"রাফি — supplied test scene\\\", \\\"entity\\\": \\\"রাফি — supplied test entity\\\", \\\"attribute\\\": \\\"রাফি — supplied test attribute\\\", \\\"value\\\": \\\"রাফি — supplied test value\\\", \\\"change_reason\\\": \\\"রাফি — supplied test change_reason\\\"}]}, \\\"model\\\": \\\"\\\", \\\"duration_ms\\\": 2, \\\"input_sha256\\\": \\\"437eefadb51884455e709ba5d003d7c1799682ba57816087e4891ed61432acef\\\"}\", \"artifacts\": [], \"provenance\": \"software\"}"
+    }
+  ],
+  "audit": [
+    {
+      "id": 111,
+      "task": "22c64940a32e40aea0a6c328b2216a9b",
+      "actor": "engine",
+      "action": "Blocked",
+      "detail": "{\"run\": \"d30852ba523541e8899d9c16aa0fd215\", \"blocker\": \"Environment/model\", \"error\": \"Select a supported local media operation with isolated approved assets. No media generated.\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 110,
+      "task": "22c64940a32e40aea0a6c328b2216a9b",
+      "actor": "editing",
+      "action": "running",
+      "detail": "{\"run\": \"d30852ba523541e8899d9c16aa0fd215\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 109,
+      "task": "22c64940a32e40aea0a6c328b2216a9b",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"d30852ba523541e8899d9c16aa0fd215\", \"mode\": \"media\", \"dependencies\": []}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 108,
+      "task": "e3b50aa09821493cab7986a6c50f061e",
+      "actor": "engine",
+      "action": "Blocked",
+      "detail": "{\"run\": \"11d92dae43c14d79927097ffe1560a21\", \"blocker\": \"Environment/model\", \"error\": \"Select a supported local media operation with isolated approved assets. No media generated.\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 107,
+      "task": "e3b50aa09821493cab7986a6c50f061e",
+      "actor": "music",
+      "action": "running",
+      "detail": "{\"run\": \"11d92dae43c14d79927097ffe1560a21\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 106,
+      "task": "e3b50aa09821493cab7986a6c50f061e",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"11d92dae43c14d79927097ffe1560a21\", \"mode\": \"media\", \"dependencies\": []}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 105,
+      "task": "2a20b7c6f7d1460fb8afcbe0535d7291",
+      "actor": "engine",
+      "action": "Blocked",
+      "detail": "{\"run\": \"21b56803824944bca6b368c8a9120cbf\", \"blocker\": \"Environment/model\", \"error\": \"No approved local Bengali voice synthesis backend installed; remote gTTS is not called automatically.\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 104,
+      "task": "2a20b7c6f7d1460fb8afcbe0535d7291",
+      "actor": "voice",
+      "action": "running",
+      "detail": "{\"run\": \"21b56803824944bca6b368c8a9120cbf\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 103,
+      "task": "2a20b7c6f7d1460fb8afcbe0535d7291",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"21b56803824944bca6b368c8a9120cbf\", \"mode\": \"media\", \"dependencies\": []}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 102,
+      "task": "8dfce16e45794264b052fccd3358f24d",
+      "actor": "engine",
+      "action": "Blocked",
+      "detail": "{\"run\": \"988a2676e36e4789adfb875f67258008\", \"blocker\": \"Environment/model\", \"error\": \"Select a supported local media operation with isolated approved assets. No media generated.\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 101,
+      "task": "8dfce16e45794264b052fccd3358f24d",
+      "actor": "video",
+      "action": "running",
+      "detail": "{\"run\": \"988a2676e36e4789adfb875f67258008\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 100,
+      "task": "8dfce16e45794264b052fccd3358f24d",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"988a2676e36e4789adfb875f67258008\", \"mode\": \"media\", \"dependencies\": []}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 99,
+      "task": "3d1be05a6cad45b8b40e54596ee777ee",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 98,
+      "task": "3d1be05a6cad45b8b40e54596ee777ee",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 97,
+      "task": "3d1be05a6cad45b8b40e54596ee777ee",
+      "actor": "youtube",
+      "action": "execution_output",
+      "detail": "{\"run\": \"cb4d0a7da9cf4ffc9b932071fca287df\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 96,
+      "task": "3d1be05a6cad45b8b40e54596ee777ee",
+      "actor": "youtube",
+      "action": "running",
+      "detail": "{\"run\": \"cb4d0a7da9cf4ffc9b932071fca287df\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 95,
+      "task": "3d1be05a6cad45b8b40e54596ee777ee",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"cb4d0a7da9cf4ffc9b932071fca287df\", \"mode\": \"software\", \"dependencies\": [\"ae658bc56fa34c9cbcb67187178aa575\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 94,
+      "task": "ae658bc56fa34c9cbcb67187178aa575",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 93,
+      "task": "ae658bc56fa34c9cbcb67187178aa575",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 92,
+      "task": "ae658bc56fa34c9cbcb67187178aa575",
+      "actor": "growth",
+      "action": "execution_output",
+      "detail": "{\"run\": \"b6208a450e5d4d1b875f0a28bb338e64\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 91,
+      "task": "ae658bc56fa34c9cbcb67187178aa575",
+      "actor": "growth",
+      "action": "running",
+      "detail": "{\"run\": \"b6208a450e5d4d1b875f0a28bb338e64\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 90,
+      "task": "ae658bc56fa34c9cbcb67187178aa575",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"b6208a450e5d4d1b875f0a28bb338e64\", \"mode\": \"software\", \"dependencies\": [\"230f882d09434037a68b07b9140fe2df\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 89,
+      "task": "230f882d09434037a68b07b9140fe2df",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 88,
+      "task": "230f882d09434037a68b07b9140fe2df",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 87,
+      "task": "230f882d09434037a68b07b9140fe2df",
+      "actor": "production_manager",
+      "action": "execution_output",
+      "detail": "{\"run\": \"496d30c7a3c5453f8197619040d5f4ab\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 86,
+      "task": "230f882d09434037a68b07b9140fe2df",
+      "actor": "production_manager",
+      "action": "running",
+      "detail": "{\"run\": \"496d30c7a3c5453f8197619040d5f4ab\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 85,
+      "task": "230f882d09434037a68b07b9140fe2df",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"496d30c7a3c5453f8197619040d5f4ab\", \"mode\": \"software\", \"dependencies\": [\"a8207cb4d49e4ae5b27545df53c0b845\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 84,
+      "task": "a8207cb4d49e4ae5b27545df53c0b845",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 83,
+      "task": "a8207cb4d49e4ae5b27545df53c0b845",
+      "actor": "qc",
+      "action": "execution_output",
+      "detail": "{\"run\": \"f3b94a9d2c924254a816d564bf7f259e\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 82,
+      "task": "a8207cb4d49e4ae5b27545df53c0b845",
+      "actor": "qc",
+      "action": "running",
+      "detail": "{\"run\": \"f3b94a9d2c924254a816d564bf7f259e\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 81,
+      "task": "a8207cb4d49e4ae5b27545df53c0b845",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"f3b94a9d2c924254a816d564bf7f259e\", \"mode\": \"software\", \"dependencies\": [\"677444d882324cbc9f3ac1471ebe967e\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 80,
+      "task": "677444d882324cbc9f3ac1471ebe967e",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 79,
+      "task": "677444d882324cbc9f3ac1471ebe967e",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 78,
+      "task": "677444d882324cbc9f3ac1471ebe967e",
+      "actor": "editing",
+      "action": "execution_output",
+      "detail": "{\"run\": \"4cabd064c9614ed182c2affd707bdad9\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 77,
+      "task": "677444d882324cbc9f3ac1471ebe967e",
+      "actor": "editing",
+      "action": "running",
+      "detail": "{\"run\": \"4cabd064c9614ed182c2affd707bdad9\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 76,
+      "task": "677444d882324cbc9f3ac1471ebe967e",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"4cabd064c9614ed182c2affd707bdad9\", \"mode\": \"software\", \"dependencies\": [\"33e17b05e3c845bfad386f34b15dd80b\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 75,
+      "task": "33e17b05e3c845bfad386f34b15dd80b",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 74,
+      "task": "33e17b05e3c845bfad386f34b15dd80b",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 73,
+      "task": "33e17b05e3c845bfad386f34b15dd80b",
+      "actor": "music",
+      "action": "execution_output",
+      "detail": "{\"run\": \"f69e2c20b21544b785dbab64f3047407\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 72,
+      "task": "33e17b05e3c845bfad386f34b15dd80b",
+      "actor": "music",
+      "action": "running",
+      "detail": "{\"run\": \"f69e2c20b21544b785dbab64f3047407\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 71,
+      "task": "33e17b05e3c845bfad386f34b15dd80b",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"f69e2c20b21544b785dbab64f3047407\", \"mode\": \"software\", \"dependencies\": [\"cf4f70d5657340b7bfed8ba82cb2f298\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 70,
+      "task": "cf4f70d5657340b7bfed8ba82cb2f298",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 69,
+      "task": "cf4f70d5657340b7bfed8ba82cb2f298",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 68,
+      "task": "cf4f70d5657340b7bfed8ba82cb2f298",
+      "actor": "voice",
+      "action": "execution_output",
+      "detail": "{\"run\": \"37359460f8aa4dbdbcc1874bd5decfb9\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 67,
+      "task": "cf4f70d5657340b7bfed8ba82cb2f298",
+      "actor": "voice",
+      "action": "running",
+      "detail": "{\"run\": \"37359460f8aa4dbdbcc1874bd5decfb9\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 66,
+      "task": "cf4f70d5657340b7bfed8ba82cb2f298",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"37359460f8aa4dbdbcc1874bd5decfb9\", \"mode\": \"software\", \"dependencies\": [\"e588beb2a65042b18313deb246485143\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 65,
+      "task": "e588beb2a65042b18313deb246485143",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 64,
+      "task": "e588beb2a65042b18313deb246485143",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 63,
+      "task": "e588beb2a65042b18313deb246485143",
+      "actor": "continuity",
+      "action": "execution_output",
+      "detail": "{\"run\": \"8aa4a99d58ca4560aefc3597a66d552c\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 62,
+      "task": "e588beb2a65042b18313deb246485143",
+      "actor": "continuity",
+      "action": "running",
+      "detail": "{\"run\": \"8aa4a99d58ca4560aefc3597a66d552c\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 61,
+      "task": "e588beb2a65042b18313deb246485143",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"8aa4a99d58ca4560aefc3597a66d552c\", \"mode\": \"software\", \"dependencies\": [\"befbb80e3d9c49fb91a38d8bc5fe82ee\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 60,
+      "task": "befbb80e3d9c49fb91a38d8bc5fe82ee",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 59,
+      "task": "befbb80e3d9c49fb91a38d8bc5fe82ee",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 58,
+      "task": "befbb80e3d9c49fb91a38d8bc5fe82ee",
+      "actor": "video",
+      "action": "execution_output",
+      "detail": "{\"run\": \"0df11a1678ec432fa8f2f29bd8d8734b\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 57,
+      "task": "befbb80e3d9c49fb91a38d8bc5fe82ee",
+      "actor": "video",
+      "action": "running",
+      "detail": "{\"run\": \"0df11a1678ec432fa8f2f29bd8d8734b\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 56,
+      "task": "befbb80e3d9c49fb91a38d8bc5fe82ee",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"0df11a1678ec432fa8f2f29bd8d8734b\", \"mode\": \"software\", \"dependencies\": [\"499ad57f839843ab8d71c54971cf8738\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 55,
+      "task": "499ad57f839843ab8d71c54971cf8738",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 54,
+      "task": "499ad57f839843ab8d71c54971cf8738",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 53,
+      "task": "499ad57f839843ab8d71c54971cf8738",
+      "actor": "motion",
+      "action": "execution_output",
+      "detail": "{\"run\": \"1247928754f94c09a85e0bddc9f2fd4c\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 52,
+      "task": "499ad57f839843ab8d71c54971cf8738",
+      "actor": "motion",
+      "action": "running",
+      "detail": "{\"run\": \"1247928754f94c09a85e0bddc9f2fd4c\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 51,
+      "task": "499ad57f839843ab8d71c54971cf8738",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"1247928754f94c09a85e0bddc9f2fd4c\", \"mode\": \"software\", \"dependencies\": [\"e06f99250cfd4859975f480c934a4289\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 50,
+      "task": "e06f99250cfd4859975f480c934a4289",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 49,
+      "task": "e06f99250cfd4859975f480c934a4289",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 48,
+      "task": "e06f99250cfd4859975f480c934a4289",
+      "actor": "cinematographer",
+      "action": "execution_output",
+      "detail": "{\"run\": \"41b2321e590d4641925f370fe1183e21\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 47,
+      "task": "e06f99250cfd4859975f480c934a4289",
+      "actor": "cinematographer",
+      "action": "running",
+      "detail": "{\"run\": \"41b2321e590d4641925f370fe1183e21\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 46,
+      "task": "e06f99250cfd4859975f480c934a4289",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"41b2321e590d4641925f370fe1183e21\", \"mode\": \"software\", \"dependencies\": [\"419fd0c8c72a485281e2a072cc0f03dc\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 45,
+      "task": "419fd0c8c72a485281e2a072cc0f03dc",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 44,
+      "task": "419fd0c8c72a485281e2a072cc0f03dc",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 43,
+      "task": "419fd0c8c72a485281e2a072cc0f03dc",
+      "actor": "performance",
+      "action": "execution_output",
+      "detail": "{\"run\": \"5076fc58ea494eff957251f192123d02\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 42,
+      "task": "419fd0c8c72a485281e2a072cc0f03dc",
+      "actor": "performance",
+      "action": "running",
+      "detail": "{\"run\": \"5076fc58ea494eff957251f192123d02\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 41,
+      "task": "419fd0c8c72a485281e2a072cc0f03dc",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"5076fc58ea494eff957251f192123d02\", \"mode\": \"software\", \"dependencies\": [\"596518dfcc74422dad6bc8b78e48b9f0\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 40,
+      "task": "596518dfcc74422dad6bc8b78e48b9f0",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 39,
+      "task": "596518dfcc74422dad6bc8b78e48b9f0",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 38,
+      "task": "596518dfcc74422dad6bc8b78e48b9f0",
+      "actor": "storyboard",
+      "action": "execution_output",
+      "detail": "{\"run\": \"1e35f9dea02f4e05bc72e252782eea11\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 37,
+      "task": "596518dfcc74422dad6bc8b78e48b9f0",
+      "actor": "storyboard",
+      "action": "running",
+      "detail": "{\"run\": \"1e35f9dea02f4e05bc72e252782eea11\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 36,
+      "task": "596518dfcc74422dad6bc8b78e48b9f0",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"1e35f9dea02f4e05bc72e252782eea11\", \"mode\": \"software\", \"dependencies\": [\"4232a0a167724014a270902af90dc282\", \"aa0723b0759d40e5a7acc6d7225fbcf6\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 35,
+      "task": "4232a0a167724014a270902af90dc282",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 34,
+      "task": "4232a0a167724014a270902af90dc282",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 33,
+      "task": "4232a0a167724014a270902af90dc282",
+      "actor": "costume",
+      "action": "execution_output",
+      "detail": "{\"run\": \"21907c9bdb544a0c96795c06fad65eb3\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 32,
+      "task": "4232a0a167724014a270902af90dc282",
+      "actor": "costume",
+      "action": "running",
+      "detail": "{\"run\": \"21907c9bdb544a0c96795c06fad65eb3\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 31,
+      "task": "4232a0a167724014a270902af90dc282",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"21907c9bdb544a0c96795c06fad65eb3\", \"mode\": \"software\", \"dependencies\": [\"19e2b8027ea3484b84152f5363b6e995\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 30,
+      "task": "19e2b8027ea3484b84152f5363b6e995",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 29,
+      "task": "19e2b8027ea3484b84152f5363b6e995",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 28,
+      "task": "19e2b8027ea3484b84152f5363b6e995",
+      "actor": "location",
+      "action": "execution_output",
+      "detail": "{\"run\": \"00104859005c41c19b709066f0a61673\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 27,
+      "task": "19e2b8027ea3484b84152f5363b6e995",
+      "actor": "location",
+      "action": "running",
+      "detail": "{\"run\": \"00104859005c41c19b709066f0a61673\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 26,
+      "task": "19e2b8027ea3484b84152f5363b6e995",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"00104859005c41c19b709066f0a61673\", \"mode\": \"software\", \"dependencies\": [\"d78fb3bbbd184cad95164ca7b2fa5105\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 25,
+      "task": "d78fb3bbbd184cad95164ca7b2fa5105",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 24,
+      "task": "d78fb3bbbd184cad95164ca7b2fa5105",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 23,
+      "task": "d78fb3bbbd184cad95164ca7b2fa5105",
+      "actor": "art",
+      "action": "execution_output",
+      "detail": "{\"run\": \"28368e39d2d34b5d927033c16ff394ec\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 22,
+      "task": "d78fb3bbbd184cad95164ca7b2fa5105",
+      "actor": "art",
+      "action": "running",
+      "detail": "{\"run\": \"28368e39d2d34b5d927033c16ff394ec\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 21,
+      "task": "d78fb3bbbd184cad95164ca7b2fa5105",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"28368e39d2d34b5d927033c16ff394ec\", \"mode\": \"software\", \"dependencies\": [\"5b4bca0a23af48f79ad567026fd92376\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 20,
+      "task": "5b4bca0a23af48f79ad567026fd92376",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 19,
+      "task": "5b4bca0a23af48f79ad567026fd92376",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 18,
+      "task": "5b4bca0a23af48f79ad567026fd92376",
+      "actor": "character",
+      "action": "execution_output",
+      "detail": "{\"run\": \"f9f58b96971a498cbd102a88dc90d8e7\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 17,
+      "task": "5b4bca0a23af48f79ad567026fd92376",
+      "actor": "character",
+      "action": "running",
+      "detail": "{\"run\": \"f9f58b96971a498cbd102a88dc90d8e7\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 16,
+      "task": "5b4bca0a23af48f79ad567026fd92376",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"f9f58b96971a498cbd102a88dc90d8e7\", \"mode\": \"software\", \"dependencies\": [\"ce1d1d82e5974ed2a369d31f2aa5729b\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 15,
+      "task": "ce1d1d82e5974ed2a369d31f2aa5729b",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 14,
+      "task": "ce1d1d82e5974ed2a369d31f2aa5729b",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 13,
+      "task": "ce1d1d82e5974ed2a369d31f2aa5729b",
+      "actor": "director",
+      "action": "execution_output",
+      "detail": "{\"run\": \"1361902425164c28b62f840c05c659a7\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 12,
+      "task": "ce1d1d82e5974ed2a369d31f2aa5729b",
+      "actor": "director",
+      "action": "running",
+      "detail": "{\"run\": \"1361902425164c28b62f840c05c659a7\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 11,
+      "task": "ce1d1d82e5974ed2a369d31f2aa5729b",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"1361902425164c28b62f840c05c659a7\", \"mode\": \"software\", \"dependencies\": [\"aa0723b0759d40e5a7acc6d7225fbcf6\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 10,
+      "task": "aa0723b0759d40e5a7acc6d7225fbcf6",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 9,
+      "task": "aa0723b0759d40e5a7acc6d7225fbcf6",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 8,
+      "task": "aa0723b0759d40e5a7acc6d7225fbcf6",
+      "actor": "script",
+      "action": "execution_output",
+      "detail": "{\"run\": \"47c66e70419a496a8e93a4384c1e57bf\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 7,
+      "task": "aa0723b0759d40e5a7acc6d7225fbcf6",
+      "actor": "script",
+      "action": "running",
+      "detail": "{\"run\": \"47c66e70419a496a8e93a4384c1e57bf\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 6,
+      "task": "aa0723b0759d40e5a7acc6d7225fbcf6",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"47c66e70419a496a8e93a4384c1e57bf\", \"mode\": \"software\", \"dependencies\": [\"93b4275d261642999711dae6f77104b0\"]}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 5,
+      "task": "93b4275d261642999711dae6f77104b0",
+      "actor": "owner",
+      "action": "Approve",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic owner action performed only in test workspace\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 4,
+      "task": "93b4275d261642999711dae6f77104b0",
+      "actor": "qc",
+      "action": "Recommend",
+      "detail": "{\"revision\": 1, \"evidence\": \"Synthetic test review; not a real creative verdict\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 3,
+      "task": "93b4275d261642999711dae6f77104b0",
+      "actor": "story",
+      "action": "execution_output",
+      "detail": "{\"run\": \"3c1c46f56e04433998d49e8592c45aba\", \"revision\": 1, \"provenance\": \"software\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 2,
+      "task": "93b4275d261642999711dae6f77104b0",
+      "actor": "story",
+      "action": "running",
+      "detail": "{\"run\": \"3c1c46f56e04433998d49e8592c45aba\"}",
+      "created": "2026-11-05 14:16:14"
+    },
+    {
+      "id": 1,
+      "task": "93b4275d261642999711dae6f77104b0",
+      "actor": "owner",
+      "action": "enqueue",
+      "detail": "{\"run\": \"3c1c46f56e04433998d49e8592c45aba\", \"mode\": \"software\", \"dependencies\": []}",
+      "created": "2026-11-05 14:16:14"
+    }
+  ],
+  "blocked_media_attempts": [
+    {
+      "id": "988a2676e36e4789adfb875f67258008",
+      "task": "8dfce16e45794264b052fccd3358f24d",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"requests\": [{\"id\": \"r1\", \"shot\": \"রাফি — supplied test shot\", \"prompt\": \"রাফি — supplied test prompt\", \"reference\": \"রাফি — supplied test reference\", \"seconds\": 3, \"fps\": 8, \"width\": 256, \"height\": 256}]}",
+      "dependencies": "[]",
+      "mode": "media",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "Select a supported local media operation with isolated approved assets. No media generated.",
+      "blocker": "Environment/model",
+      "started": 1793888174.5229125,
+      "finished": 1793888174.5250487,
+      "model": "",
+      "task_state": "Assigned"
+    },
+    {
+      "id": "21b56803824944bca6b368c8a9120cbf",
+      "task": "2a20b7c6f7d1460fb8afcbe0535d7291",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"lines\": [{\"id\": \"r1\", \"scene\": \"রাফি — supplied test scene\", \"speaker\": \"রাফি — supplied test speaker\", \"text\": \"রাফি — supplied test text\", \"pronunciation\": \"রাফি — supplied test pronunciation\", \"emotion\": \"রাফি — supplied test emotion\", \"start\": 1, \"seconds\": 1}]}",
+      "dependencies": "[]",
+      "mode": "media",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "No approved local Bengali voice synthesis backend installed; remote gTTS is not called automatically.",
+      "blocker": "Environment/model",
+      "started": 1793888174.5283606,
+      "finished": 1793888174.5305874,
+      "model": "",
+      "task_state": "Assigned"
+    },
+    {
+      "id": "11d92dae43c14d79927097ffe1560a21",
+      "task": "e3b50aa09821493cab7986a6c50f061e",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"cues\": [{\"id\": \"r1\", \"scene\": \"রাফি — supplied test scene\", \"kind\": \"ambience\", \"start\": 1, \"seconds\": 1, \"purpose\": \"রাফি — supplied test purpose\", \"asset\": \"রাফি — supplied test asset\", \"review_criterion\": \"রাফি — supplied test review_criterion\"}]}",
+      "dependencies": "[]",
+      "mode": "media",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "Select a supported local media operation with isolated approved assets. No media generated.",
+      "blocker": "Environment/model",
+      "started": 1793888174.5337164,
+      "finished": 1793888174.5352077,
+      "model": "",
+      "task_state": "Assigned"
+    },
+    {
+      "id": "d30852ba523541e8899d9c16aa0fd215",
+      "task": "22c64940a32e40aea0a6c328b2216a9b",
+      "inputs": "{\"project\": \"দরজার ওপাশে — fictional test\", \"clips\": [{\"id\": \"r1\", \"shot\": \"রাফি — supplied test shot\", \"start\": 1, \"seconds\": 1, \"video\": \"রাফি — supplied test video\", \"audio\": \"রাফি — supplied test audio\", \"subtitle\": \"রাফি — supplied test subtitle\", \"transition\": \"রাফি — supplied test transition\"}]}",
+      "dependencies": "[]",
+      "mode": "media",
+      "state": "Blocked",
+      "expected_revision": 0,
+      "attempt": 1,
+      "error": "Select a supported local media operation with isolated approved assets. No media generated.",
+      "blocker": "Environment/model",
+      "started": 1793888174.5385134,
+      "finished": 1793888174.540582,
+      "model": "",
+      "task_state": "Assigned"
+    }
+  ],
+  "readiness": {
+    "cuda_device": false,
+    "torch_installed": false,
+    "ollama_executable": false,
+    "local_models": [],
+    "local_probe": "Blocked — local runtime unavailable or invalid response",
+    "inference_verified": false,
+    "large_downloads": false,
+    "paid_fallback": false
+  }
+}

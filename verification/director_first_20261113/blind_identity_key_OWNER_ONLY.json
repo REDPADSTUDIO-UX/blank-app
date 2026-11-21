@@ -1,0 +1,26 @@
+{
+  "R1": {
+    "model": "gemma",
+    "case": "director_criticism",
+    "source": "verification/director_first_20261113/gemma_director_criticism_raw.txt",
+    "sha256": "b7074065d7f33bf03caca6a86085d338cbe53a33a908e6db861a787227da6645"
+  },
+  "R2": {
+    "model": "qwen",
+    "case": "clean_abstention",
+    "source": "verification/approved_gpu_writing/qwen_clean_abstention_raw.txt",
+    "sha256": "d4c6163938803ee2dc0932cdef5f40ba86481f7795cb65570ad5efff30fe658a"
+  },
+  "R3": {
+    "model": "qwen",
+    "case": "director_criticism",
+    "source": "verification/approved_gpu_writing/qwen_director_criticism_raw.txt",
+    "sha256": "d82b7c817e8aaeb4940a516b613aac6f10548832df13c5b50022d767008c45a1"
+  },
+  "R4": {
+    "model": "gemma",
+    "case": "clean_abstention",
+    "source": "verification/director_first_20261113/gemma_clean_abstention_raw.txt",
+    "sha256": "c417f8f878bb4cf9bbdff39504da433a3b9e1bff7123d67751eaa47549a355f8"
+  }
+}

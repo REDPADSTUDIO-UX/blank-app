@@ -1,0 +1,18 @@
+{
+  "reviewed_on": "2026-11-06",
+  "method": "Official model cards/license/runtime registry review only; no creative benchmark completed",
+  "selected_model": null,
+  "comparison_status": "Blocked — Real Model Prerequisite",
+  "provisional_first_trial": "qwen3:4b-instruct-2507-q4_K_M",
+  "reason": "Existing Ollama adapter compatibility and explicit Apache-2.0 card; manageable documented 2.5 GB weight download. This is not a Bengali quality winner.",
+  "candidates": [
+    {"model":"Qwen3-4B-Instruct-2507", "license":"Apache-2.0", "quantization":"Ollama Q4_K_M; Q8_0 also listed", "weights":"2.5 GB Q4_K_M / 4.3 GB Q8_0 (registry)", "context":"262144 model maximum; initial integration bounded at 8192", "hardware":"CPU trial estimate 6–8 GB available RAM at modest context; unmeasured, not guaranteed", "bengali":"Multilingual capabilities documented; this study has no Bengali creative benchmark", "source":"https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507", "runtime_source":"https://registry.ollama.com/library/qwen3/tags", "status":"Not installed or tested"},
+    {"model":"Qwen3.5-2B", "license":"Apache-2.0", "quantization":"Evaluate compatible local quantization/runtime before use", "weights":"Raw FP16 parameter-only estimate about 4 GB; quantization and runtime change footprint", "context":"Use a bounded context during the first CPU benchmark", "hardware":"Small-model CPU candidate; actual RAM and current Ollama compatibility unverified", "bengali":"Multilingual candidate; no Bengali fluency/creative-quality claim", "source":"https://huggingface.co/Qwen/Qwen3.5-2B", "status":"Not installed or tested"},
+    {"model":"Gemma 4 E2B", "license":"Apache-2.0 per official Gemma 4 card", "quantization":"Q4_0, 8-bit and BF16 profiles documented", "weights":"Official overview estimates 2.9 GB GPU/TPU loading memory for Q4_0 with overhead; not a CPU runtime guarantee", "context":"128K model maximum; bounded local context recommended for testing", "hardware":"2.3B effective / 5.1B with embeddings: effective count alone is not memory sizing", "bengali":"140+ language family support; Bengali dramatic writing remains untested", "source":"https://ai.google.dev/gemma/docs/core/model_card_4", "hardware_source":"https://ai.google.dev/gemma/docs/core.md", "status":"Not installed or tested"},
+    {"model":"Gemma 3 4B IT", "license":"Gemma Terms of Use, not Apache-2.0; restricted-use and redistribution terms must be followed", "quantization":"Ollama Q4_K_M, Q8_0, QAT options", "weights":"About 3.4 GB Q4_K_M registry snapshot; tags can change", "context":"128K model maximum; not a claim that this host can run full context", "hardware":"CPU trial estimate 7–9 GB available RAM with small context; unmeasured", "bengali":"140+ languages documented; no actual Bengali creative test", "source":"https://ai.google.dev/gemma/docs/core/model_card_3", "license_source":"https://ai.google.dev/gemma/terms", "runtime_source":"https://ollama.com/library/gemma3/tags", "status":"Not installed or tested; no license acceptance performed"}
+  ],
+  "fair_comparison": "Use identical A–E briefs and rubric, record exact model/version metadata hash, seed/context/options/timing/raw outputs, anonymize drafts for an independent reviewer, and compare evidence rather than model self-scores.",
+  "training": "No weight training, fine-tuning, dataset expansion or perfect-training claim. Existing licensed curriculum is retrieved as context.",
+  "blockers": ["Ollama executable/server absent", "No installed compatible model", "No GPU", "No independent human creative review collected"],
+  "cost": "No paid API, model purchase, GPU rental or cloud resource created"
+}

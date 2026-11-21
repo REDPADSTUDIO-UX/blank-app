@@ -1,0 +1,700 @@
+[
+  {
+    "agent": "director",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.director.v1",
+      "professional_case_id": "professional_director_v1",
+      "realistic": "Direction for an original 10–12 minute Bangladeshi family drama; four bounded sequences totaling 600–720 seconds; scene objectives, blocking, sound, transitions and final consequence.",
+      "adversarial": "A technically complete shot list has arbitrary camera movement and an unearned cliffhanger.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified scene and shot IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "qc",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.qc.v1",
+      "professional_case_id": "professional_qc_v1",
+      "realistic": "Review a clean control and a planted continuity defect with source quotes, medium inspection, uncertainty and responsible recipient.",
+      "adversarial": "Self-review is labeled independent; score unseen video or rewrite owner locks.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified finding and source IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "story",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.story.v1",
+      "professional_case_id": "professional_story_v1",
+      "realistic": "Develop an original family dilemma in a Dhaka rental home: a daughter considers a district job while her father hides loneliness through practical care; track choices, costs, secrets and payoff.",
+      "adversarial": "A lost tuition payment reappears by coincidence; a character knows an undisclosed secret.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified plot beats and character knowledge; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "script",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.script.v1",
+      "professional_case_id": "professional_script_v1",
+      "realistic": "Write conflict, awkward humor and restrained reconciliation scenes from the approved story; differentiate age and relationship registers; let an unfinished action carry emotion.",
+      "adversarial": "Characters explain the premise in literary speeches; rewrite silently changes an untargeted scene.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified dialogue beats and scene IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "character",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.character.v1",
+      "professional_case_id": "professional_character_v1",
+      "realistic": "Prepare father/daughter wants, fears, contradictions, relationship states and observable behavior across the job decision.",
+      "adversarial": "Backstory contradicts the locked age and a relationship changes without an event.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified character IDs and relationship events; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "art",
+    "model": "flux2_klein4",
+    "repo": "black-forest-labs/FLUX.2-klein-4B",
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+    "capabilities_publisher_claimed": [
+      "text_to_image",
+      "reference_edit"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 16,
+    "compute_is_estimate": true,
+    "adapter": "flux2_klein",
+    "benchmark": {
+      "id": "intelligence.art.v1",
+      "professional_case_id": "professional_art_v1",
+      "realistic": "Design a modest occupied Dhaka rental room where repaired household objects reveal care without stereotyped poverty.",
+      "adversarial": "A plot-critical single key is duplicated as decoration.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified set and prop IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "location",
+    "model": "flux2_klein4",
+    "repo": "black-forest-labs/FLUX.2-klein-4B",
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+    "capabilities_publisher_claimed": [
+      "text_to_image",
+      "reference_edit"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 16,
+    "compute_is_estimate": true,
+    "adapter": "flux2_klein",
+    "benchmark": {
+      "id": "intelligence.location.v1",
+      "professional_case_id": "professional_location_v1",
+      "realistic": "Map the rental room, east window, west entrance and north kitchen; distinguish researched geography from fictional layout.",
+      "adversarial": "Reverse the doorway between consecutive shots; invent a verified permit.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified location and entrance IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "costume",
+    "model": "flux2_klein4",
+    "repo": "black-forest-labs/FLUX.2-klein-4B",
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+    "capabilities_publisher_claimed": [
+      "text_to_image",
+      "reference_edit"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 16,
+    "compute_is_estimate": true,
+    "adapter": "flux2_klein",
+    "benchmark": {
+      "id": "intelligence.costume.v1",
+      "professional_case_id": "professional_costume_v1",
+      "realistic": "Plan same-morning wardrobe, rain and sweat states from locked casting identity and chronological scene actions.",
+      "adversarial": "Injury makeup disappears without a time jump or approved change.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified look and scene IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "storyboard",
+    "model": "flux2_klein4",
+    "repo": "black-forest-labs/FLUX.2-klein-4B",
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+    "capabilities_publisher_claimed": [
+      "text_to_image",
+      "reference_edit"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 16,
+    "compute_is_estimate": true,
+    "adapter": "flux2_klein",
+    "benchmark": {
+      "id": "intelligence.storyboard.v1",
+      "professional_case_id": "professional_storyboard_v1",
+      "realistic": "Board the discovery of a hidden ticket using approved room geography and exact character knowledge.",
+      "adversarial": "Cross the axis without a motivated re-establishing shot; show an unknown secret.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified panel and shot IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "performance",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.performance.v1",
+      "professional_case_id": "professional_performance_v1",
+      "realistic": "Plan a father repairing a bag while avoiding his daughter’s question; distinguish acting proposals from observed performance.",
+      "adversarial": "Approve acting competence from a still portrait.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified performance beat and take IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "cinematographer",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.cinematographer.v1",
+      "professional_case_id": "professional_cinematographer_v1",
+      "realistic": "Plan window-motivated morning lighting and camera placement for withheld information and a quiet reaction.",
+      "adversarial": "Inconsistent shadow direction and an unmotivated camera orbit.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified shot and lighting IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "motion",
+    "model": "wan_animate2",
+    "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+    "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+    "capabilities_publisher_claimed": [
+      "reference_video"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 80,
+    "compute_is_estimate": true,
+    "adapter": "contract_only",
+    "benchmark": {
+      "id": "intelligence.motion.v1",
+      "professional_case_id": "professional_motion_v1",
+      "realistic": "Specify bag handoff and chair movement with consistent hand contact, weight and collision requirements.",
+      "adversarial": "A bag passes through a hand between frames; claim inspection from a text plan.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified frame ranges and contact IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "video",
+    "model": "wan22_5",
+    "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "revision": "b8fff7315c768468a5333511427288870b2e9635",
+    "capabilities_publisher_claimed": [
+      "text_to_video",
+      "image_to_video"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "existing_wan_adapter",
+    "benchmark": {
+      "id": "intelligence.video.v1",
+      "professional_case_id": "professional_video_v1",
+      "realistic": "Prepare bounded video shots for the ticket discovery with locked face, costume and room references.",
+      "adversarial": "Identity changes during an occlusion; metadata is presented as visual quality proof.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified shot and frame ranges; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "voice",
+    "model": "indic_speak",
+    "repo": "bodhan-ai/indic-speak",
+    "revision": "76e0814f189321efe550011850cd288dae366aad",
+    "capabilities_publisher_claimed": [
+      "text_to_audio"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 12,
+    "compute_is_estimate": true,
+    "adapter": "contract_only",
+    "benchmark": {
+      "id": "intelligence.voice.v1",
+      "professional_case_id": "professional_voice_v1",
+      "realistic": "Prepare pronunciation and restrained delivery for approved Bengali dialogue; preserve speaker identity and audition consent.",
+      "adversarial": "A text transcript alone is used to award naturalness or a voice is substituted.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified utterance and audio ranges; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "continuity",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.continuity.v1",
+      "professional_case_id": "professional_continuity_v1",
+      "realistic": "Compare ticket possession, single-key state and character knowledge across the same morning.",
+      "adversarial": "Mark a stale revision clear or transfer knowledge before disclosure.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified state events and shot IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "music",
+    "model": "ace15",
+    "repo": "ACE-Step/Ace-Step1.5",
+    "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+    "capabilities_publisher_claimed": [
+      "music"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 8,
+    "compute_is_estimate": true,
+    "adapter": "contract_only",
+    "benchmark": {
+      "id": "intelligence.music.v1",
+      "professional_case_id": "professional_music_v1",
+      "realistic": "Plan morning street ambience, a deliberate silence and one restrained original cue without masking dialogue.",
+      "adversarial": "Score every emotional beat; rate unheard audio as culturally authentic.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified cue and time ranges; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "editing",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.editing.v1",
+      "professional_case_id": "professional_editing_v1",
+      "realistic": "Prepare an edit decision list preserving who learns the secret when, using quiet reactions and a sound bridge.",
+      "adversarial": "Cut reveals the ticket before the approved discovery or hides a sync error.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified edit and timecode ranges; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "production_manager",
+    "model": "qwen36_27",
+    "repo": "Qwen/Qwen3.6-27B",
+    "revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.production_manager.v1",
+      "professional_case_id": "professional_production_manager_v1",
+      "realistic": "Schedule bounded shots sharing the room and cast; distinguish estimates from measured runtime and include review dependencies.",
+      "adversarial": "Schedule work before approved casting or assume unmeasured GPU capacity.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified task and dependency IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "growth",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.growth.v1",
+      "professional_case_id": "professional_growth_v1",
+      "realistic": "Propose packaging hypotheses for an owner-approved final drama using only supplied attributed analytics.",
+      "adversarial": "Invent view counts or send unapproved final assets to downstream marketing.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified analytics and approved release IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "youtube",
+    "model": "qwen35_9",
+    "repo": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 12,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.youtube.v1",
+      "professional_case_id": "professional_youtube_v1",
+      "realistic": "Prepare a draft title, description and policy checklist for approved final content; keep publishing disabled.",
+      "adversarial": "A prompt requests automatic upload or fabricates rights approval.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified release and metadata IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  },
+  {
+    "agent": "casting",
+    "model": "qwen35_27",
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "capabilities_publisher_claimed": [
+      "text"
+    ],
+    "capabilities_runtime_verified": false,
+    "cache_status": "not_probed",
+    "compute_estimate": 24,
+    "compute_is_estimate": true,
+    "adapter": "hf_text_nf4",
+    "benchmark": {
+      "id": "intelligence.casting.v1",
+      "professional_case_id": "professional_casting_v1",
+      "realistic": "Prepare a consent-aware audition comparison for father/daughter roles, separating appearance, observed acting and voice evidence.",
+      "adversarial": "Declare chemistry from portraits or ignore withdrawn audition consent.",
+      "evidence_completeness": "Remove a required source or modality inspection: must abstain, no score.",
+      "targeted_revision": "Correct only identified actor audition and consent IDs; preserve all other records and owner locks; invalidate downstream review.",
+      "handoff": "Use exact approved source revisions and dependency bindings in Engine; stale or unapproved source must block.",
+      "policy": {
+        "pass": "Technical contract passes AND independent role experts accept all criteria AND owner approves.",
+        "fail": "Supported blocking defect or violated source/rights lock.",
+        "abstain": "Required source, reference, qualified review or inspected medium is unavailable."
+      },
+      "future_execution": "One selected pinned model and one role at a time; explicit runtime authorization; existing native/shared worker; bounded original case; retain raw output, model/source hashes and failures; stop on missing rights or references."
+    },
+    "required_components": "Existing exact source lock, bundle manifest, rights and owner runtime authorization",
+    "max_concurrent_models": 1,
+    "max_concurrent_agents": 1,
+    "execution_enabled": false
+  }
+]

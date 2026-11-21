@@ -1,0 +1,50 @@
+test_ace15_exact_native_params_and_deny_auto_download_sync_policy (tests.test_offline_six_preparation.OfflineSixTests.test_ace15_exact_native_params_and_deny_auto_download_sync_policy) ... ok
+test_ace_rejects_cover_vocals_sfx_substitution_and_cue_duration_mismatch (tests.test_offline_six_preparation.OfflineSixTests.test_ace_rejects_cover_vocals_sfx_substitution_and_cue_duration_mismatch) ... ok
+test_all_five_candidate_inventories_missing_files_fail_closed_without_download (tests.test_offline_six_preparation.OfflineSixTests.test_all_five_candidate_inventories_missing_files_fail_closed_without_download) ... ok
+test_casting_assessment_task_handoff_persists_but_never_creates_approval (tests.test_offline_six_preparation.OfflineSixTests.test_casting_assessment_task_handoff_persists_but_never_creates_approval) ... ERROR
+test_casting_pair_performance_and_voice_need_real_reference_bindings (tests.test_offline_six_preparation.OfflineSixTests.test_casting_pair_performance_and_voice_need_real_reference_bindings) ... ok
+test_casting_portrait_cannot_prove_acting_voice_or_chemistry (tests.test_offline_six_preparation.OfflineSixTests.test_casting_portrait_cannot_prove_acting_voice_or_chemistry) ... ok
+test_component_inventory_rejects_symlink_and_path_traversal (tests.test_offline_six_preparation.OfflineSixTests.test_component_inventory_rejects_symlink_and_path_traversal) ... ok
+test_consent_permission_cannot_reuse_different_media_or_use (tests.test_offline_six_preparation.OfflineSixTests.test_consent_permission_cannot_reuse_different_media_or_use) ... ok
+test_extra_consent_evidence_change_stales_existing_preparation (tests.test_offline_six_preparation.OfflineSixTests.test_extra_consent_evidence_change_stales_existing_preparation) ... ok
+test_indic_speak_keeps_native_entry_unbound_until_exact_revision_verified (tests.test_offline_six_preparation.OfflineSixTests.test_indic_speak_keeps_native_entry_unbound_until_exact_revision_verified) ... ok
+test_indicf5_cannot_substitute_consent_or_enable_remote_custom_code (tests.test_offline_six_preparation.OfflineSixTests.test_indicf5_cannot_substitute_consent_or_enable_remote_custom_code) ... ok
+test_indicf5_reference_transcript_consent_and_original_bengali_preserved (tests.test_offline_six_preparation.OfflineSixTests.test_indicf5_reference_transcript_consent_and_original_bengali_preserved) ... ok
+test_ltx_component_inventory_uses_stat_only_never_reads_weight_bytes (tests.test_offline_six_preparation.OfflineSixTests.test_ltx_component_inventory_uses_stat_only_never_reads_weight_bytes) ... ok
+test_ltx_exact_split_preparation_has_no_guessed_upsampler_or_executable_argv (tests.test_offline_six_preparation.OfflineSixTests.test_ltx_exact_split_preparation_has_no_guessed_upsampler_or_executable_argv) ... ok
+test_ltx_rejects_motion_transfer_quantization_and_hidden_endpoint_controls (tests.test_offline_six_preparation.OfflineSixTests.test_ltx_rejects_motion_transfer_quantization_and_hidden_endpoint_controls) ... ok
+test_object_interaction_outside_clip_or_unrequested_score_rejected (tests.test_offline_six_preparation.OfflineSixTests.test_object_interaction_outside_clip_or_unrequested_score_rejected) ... ok
+test_prepared_six_requests_restart_and_spec_change_keep_separate_ids (tests.test_offline_six_preparation.OfflineSixTests.test_prepared_six_requests_restart_and_spec_change_keep_separate_ids) ... ok
+test_real_person_requires_specific_scoped_consent_document (tests.test_offline_six_preparation.OfflineSixTests.test_real_person_requires_specific_scoped_consent_document) ... ok
+test_registry_profiles_and_other_thirteen_agents_preserved (tests.test_offline_six_preparation.OfflineSixTests.test_registry_profiles_and_other_thirteen_agents_preserved) ... ok
+test_shared_native_wan_preparation_for_all_three_roles_is_not_acting_critic (tests.test_offline_six_preparation.OfflineSixTests.test_shared_native_wan_preparation_for_all_three_roles_is_not_acting_critic) ... ok
+test_source_bridge_change_stales_prepared_requests (tests.test_offline_six_preparation.OfflineSixTests.test_source_bridge_change_stales_prepared_requests) ... ok
+test_temporal_sequence_requires_distinct_source_bound_ordered_frames (tests.test_offline_six_preparation.OfflineSixTests.test_temporal_sequence_requires_distinct_source_bound_ordered_frames) ... ok
+test_unknown_native_family_bundle_verification_must_not_be_silently_ignored (tests.test_offline_six_preparation.OfflineSixTests.test_unknown_native_family_bundle_verification_must_not_be_silently_ignored) ... ok
+test_wan_rejects_mismatched_fps_duration_and_short_motion_source (tests.test_offline_six_preparation.OfflineSixTests.test_wan_rejects_mismatched_fps_duration_and_short_motion_source) ... ok
+test_scope_and_readiness_separate_engineering_from_inference (tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference) ... ok
+test_native_wan_and_svd_keep_supported_worker_controls (tests.test_offline_11_preparation.OfflineElevenTests.test_native_wan_and_svd_keep_supported_worker_controls) ... ok
+test_parler_and_stable_audio_prepare_only_their_existing_local_payloads (tests.test_offline_11_preparation.OfflineElevenTests.test_parler_and_stable_audio_prepare_only_their_existing_local_payloads) ... ok
+test_casting_cannot_bypass_director_qc_or_identity_rights (tests.test_producer_control.ProducerTests.test_casting_cannot_bypass_director_qc_or_identity_rights) ... ok
+test_wrong_actor_unexplained_hair_change_and_portrait_acting_rejected (tests.test_producer_control.ProducerTests.test_wrong_actor_unexplained_hair_change_and_portrait_acting_rejected) ... ok
+test_all_19_roles_all_declared_supported_contracts_without_resources (tests.test_no_gpu_staging.NoGPUStagingTests.test_all_19_roles_all_declared_supported_contracts_without_resources) ... ok
+test_staging_is_restart_safe_idempotent_and_never_changes_routes_or_task_state (tests.test_no_gpu_staging.NoGPUStagingTests.test_staging_is_restart_safe_idempotent_and_never_changes_routes_or_task_state) ... ok
+
+======================================================================
+ERROR: test_casting_assessment_task_handoff_persists_but_never_creates_approval (tests.test_offline_six_preparation.OfflineSixTests.test_casting_assessment_task_handoff_persists_but_never_creates_approval)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_offline_six_preparation.py", line 193, in test_casting_assessment_task_handoff_persists_but_never_creates_approval
+    self.assertEqual(stage,self.services.staged_request(stage['id']))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/shared_model_services.py", line 106, in staged_request
+    return StagingLedger(self.store).get(id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/no_gpu_staging.py", line 331, in get
+    raise AgentError('Profile/reference changed; staged draft is stale.')
+redpad_pipeline.agents.AgentError: Profile/reference changed; staged draft is stale.
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.282s
+
+FAILED (errors=1)

@@ -1,0 +1,37 @@
+{
+  "checkpoint": "391ca986b08b15ba5080a4c36fcc586e623e3568",
+  "profiles_sha256": "f5e93d4a0640f57615416889b30dcc49f80cfc6c60c1824c837456ae82a66870",
+  "models_sha256": "66aea06431593317c4821120c1a78cdbe3902733afa4b662e4b4d1586c14c300",
+  "untouched_agents": {
+    "director": "65ad67525a4dfb6a93fc298e10b77a2e2a8e8154ba6ede6f0a472abe1dfcbfec",
+    "qc": "388cb3df41eb868ab6925f5758062f06d1158b2d2f79c56eb2592b83ebfde88c",
+    "story": "c92d529c1b301c3e957bb65aab156612bdd6b265361e1ed02c765b1b895a72a3",
+    "script": "8550d60977f1e35f7a0e2f6a7f112bce14bbd71bc90efac47a843a1c978f4885",
+    "character": "ef294db26ee595851635cc65be35d14cb52aad7a1e36048d4c605b1928f53f15",
+    "art": "5c74876fa686e433bcd57200c4a41b3256f771ba1a04afc40a9dfa7a4e9dcc3c",
+    "location": "d91bfca7fccd97e36dd916c5d90587042c0cad0a3b1666929082bb6ef71489b9",
+    "costume": "f3e046473ad0452ab1e5e7b8aa4b50ebe97e6a15f9a3593eb64f85f713689ec9",
+    "storyboard": "a25356cce0738f5c68df6faa8acf5062c6cc485f44009c413f98534198b2e8fd",
+    "cinematographer": "c9ba04572d9639449618a300fb1cd15bf703a2bd2a02ac582581b40e35f13cac",
+    "continuity": "64b07f480ddaf408bb16103751bfec552f83c52e08f38487ffee5ff3bddc7c5e",
+    "editing": "e6341934fe5fe795a8143a0046e42e7647f65f9894c1026974d13495eeeba686",
+    "production_manager": "6860c2ff3b02192c588f202008aa888fc21f295e8e33c385b5833aec80bddae0",
+    "growth": "102fff44514861571298267e1394865d2907c843038593a79ae0388e82aee57d",
+    "youtube": "de596e2fa4b2644114c31fddab219c95a75bf043a5359dbd10ca3769f3ae0b84"
+  },
+  "untouched_rows": {
+    "qc": "b1ad3dc2e16dbfd7aebd44ecbc1a26f266abce6503dcc058590487230ebc273f",
+    "story": "91b41cd9e68d2906ebb8c76a13d623f5e2006ddf5aaceeac77a4f37ce3fa36ca",
+    "character": "47086a246d04d843834f415343cd7c1b736a71e5e5d00afc8ec0e42be1728802",
+    "art": "e0ab1c1c1bbd5b18e6eedd0845e14e7bd57a9d7f1b3fab51066ddada2cb6b99a",
+    "location": "901d9e60f20ebdcb1e3c3ea372c64764592b4081c9373ed1c0acbed5a0af2bcb",
+    "costume": "8d5715ace2f2747d232fb25d888729a8d24cb46db784c0a53dbcfe6ac32d0caf",
+    "storyboard": "193e75f924bbac175337bb624517f9efc47ffec6394396edd468e84e2a119abf",
+    "cinematographer": "0313f64a2ac4255a55a216e12a348bc81e4a06582c67e81e30155ba32a741cc6",
+    "continuity": "7b2f1fc8d58f8e0bc2ac191cca58353fd93621d97adb1c43f84edd1dff5a93cb",
+    "editing": "b8de1ee097a38ec6277a291715ff8d8b1d26ab55a7d8ec32789675c48c5913ad",
+    "production_manager": "15ae0560bb32869cea7d86d76533e4ae6c766dde6972167a9680d69620be7d7f",
+    "growth": "40aff3edf4efcdd5715fddfd726bb8a0c2ac05b182d055e5309db164d376cdd9",
+    "youtube": "1b91a6d0322a19d314a8e06fc44434b62bfe439cfb7457a7494059737d2cc25e"
+  }
+}

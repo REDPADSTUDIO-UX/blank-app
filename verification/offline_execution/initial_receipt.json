@@ -1,0 +1,25 @@
+{
+  "selected": [
+    "tests.test_native_local_execution.NativeLocalTests",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_native_wan_and_svd_keep_supported_worker_controls",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_parler_and_stable_audio_prepare_only_their_existing_local_payloads",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_casting_assessment_task_handoff_persists_but_never_creates_approval",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_extra_consent_evidence_change_stales_existing_preparation",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_real_portrait_cannot_be_declared_fictional_for_wan_or_casting",
+    "tests.test_producer_control.ProducerTests.test_casting_cannot_bypass_director_qc_or_identity_rights",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_all_19_roles_all_declared_supported_contracts_without_resources"
+  ],
+  "tests": 31,
+  "errors": 24,
+  "failures": 0,
+  "gpu_used": false,
+  "model_inference": false,
+  "real_weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "authorized_processes": "fixed CPU fixture only; source-pinned native process launch blocked by test filter",
+  "requests_import_only_shim": true,
+  "http_transport_verified": false,
+  "model_class_calls": "injected fake classes only, no model libraries imported",
+  "scope": "software engineering only; no model intelligence/artistic acceptance"
+}

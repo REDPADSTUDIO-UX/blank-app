@@ -1,0 +1,78 @@
+{
+  "classification": "hosted research evidence; no production integration",
+  "new_submissions": 5,
+  "preserved_responses": 4,
+  "excluded_leading_diagnostics": 1,
+  "delegation": "one submitted attempt displayed Error and no assistant response; stop requested, completion unknown; do not blind retry",
+  "selected_model": null,
+  "professionally_complete_agents": 0,
+  "cases": [
+    {
+      "case": "director_plan",
+      "raw_sha256": "2e5cd43e59c4f2ec03b9325988efece081f2d0c5b030649189ab041a53aa197e",
+      "strict_json": false,
+      "derived_json": false,
+      "professional_accepted": false,
+      "independent_review": "pending",
+      "finish_reason": null,
+      "truncation": "unknown",
+      "strict_error": "Expecting value: line 1 column 1 (char 0)",
+      "derivation": "none; no repair or partial extraction",
+      "derived_error": "Expecting value: line 1 column 1 (char 0)",
+      "plan_contract_pass": false,
+      "visible_response_ends_mid_string": true
+    },
+    {
+      "case": "source_understanding",
+      "raw_sha256": "58219f25be35d79c7b4a48390258d16038ccc7e7d331230ee7223a35312d378c",
+      "strict_json": false,
+      "derived_json": true,
+      "professional_accepted": false,
+      "independent_review": "pending",
+      "finish_reason": null,
+      "truncation": "unknown",
+      "strict_error": "Expecting value: line 1 column 1 (char 0)",
+      "derivation": "outer Markdown fence removed only",
+      "excluded_from_factual_accuracy": true,
+      "reason": "Input supplied answer values and ambiguously assumed salma_has_job=false; interview does not establish her employment status. Preserve as a leading diagnostic, not comprehension evidence."
+    },
+    {
+      "case": "locked_camera_revision",
+      "raw_sha256": "8355a44983bc3e722eb9cf087d298ce84a544ecae8ae2ae2de2422c6f53fc7c1",
+      "strict_json": true,
+      "derived_json": true,
+      "professional_accepted": false,
+      "independent_review": "pending",
+      "finish_reason": null,
+      "truncation": "unknown",
+      "derivation": "none; no repair or partial extraction",
+      "target_contract_pass": true,
+      "editorial_observation": "Scope is correct. Replacement describes gesture and speculative memory weight; camera framing/movement is unspecified. Independent artistic review still required.",
+      "research_gate_check": {
+        "scope_check_executed": true,
+        "state": "Awaiting QC",
+        "provenance": "manual",
+        "unapproved_dispatch_blocked": true,
+        "research_fixture_only": true,
+        "qc_recommendation": false,
+        "owner_artistic_approval": false,
+        "production_sidecar_accessed": false
+      }
+    },
+    {
+      "case": "source_questions",
+      "raw_sha256": "664739e0c60fc2cdf197ba82917f032667d33488bc405ff2dbc8eaa2cffff2db",
+      "strict_json": false,
+      "derived_json": true,
+      "professional_accepted": false,
+      "independent_review": "pending",
+      "finish_reason": null,
+      "truncation": "unknown",
+      "strict_error": "Expecting value: line 1 column 1 (char 0)",
+      "derivation": "outer Markdown fence removed only",
+      "four_distinct_ids": true,
+      "quotes_grounded": true,
+      "editorial_observation": "Four answers match source facts; no job-loss invention. Operator assessment only, not independent expertise or creative approval."
+    }
+  ]
+}

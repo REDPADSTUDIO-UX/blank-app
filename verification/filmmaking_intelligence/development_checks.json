@@ -1,0 +1,30 @@
+[
+  {
+    "check": "Initial restored-checkout audit",
+    "outcome": "Old studio checkout was dirty and old; preserved. Separate clean feature checkout created at f71e282."
+  },
+  {
+    "check": "Initial authored asset builder",
+    "outcome": "Temporary script syntax error from apostrophe; corrected before any generated asset was committed."
+  },
+  {
+    "check": "First knowledge-source rejection unit test",
+    "outcome": "Mock attempted to replace a read-only Path method; corrected to a temporary catalog path. Application source-policy rejection then passed."
+  },
+  {
+    "check": "Targeted test command",
+    "outcome": "Referenced nonexistent tests.test_master_studio; corrected to existing tests.test_studio_program."
+  },
+  {
+    "check": "Initial full regression after first integration",
+    "outcome": "319 existing tests passed."
+  },
+  {
+    "check": "Final full regression",
+    "outcome": "334 passed, no failures or skips; 31.118 seconds."
+  },
+  {
+    "check": "Final UI refinement after full suite",
+    "outcome": "2 focused UI tests passed; archived episode attempts visible without active model authorization."
+  }
+]

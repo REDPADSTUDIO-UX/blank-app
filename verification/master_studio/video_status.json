@@ -1,0 +1,65 @@
+{
+  "wan-local": {
+    "engine": "wan-local",
+    "model": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "adapter_implemented": true,
+    "installation_configuration_ready": true,
+    "installed": false,
+    "runtime_available": false,
+    "actual_inference_verified": false,
+    "technical_output_validated": false,
+    "cinematic_quality_reviewed": false,
+    "owner_approved_output": false,
+    "ready": false,
+    "blockers": [
+      "Approved local checkpoint/license record unavailable; no download attempted.",
+      "Missing local dependency: torch",
+      "Missing local dependency: diffusers",
+      "Missing local dependency: transformers",
+      "Missing local dependency: accelerate",
+      "CUDA runtime cannot be verified."
+    ]
+  },
+  "ltx-local": {
+    "engine": "ltx-local",
+    "model": "Lightricks/LTX-Video-0.9.5",
+    "adapter_implemented": true,
+    "installation_configuration_ready": true,
+    "installed": false,
+    "runtime_available": false,
+    "actual_inference_verified": false,
+    "technical_output_validated": false,
+    "cinematic_quality_reviewed": false,
+    "owner_approved_output": false,
+    "ready": false,
+    "blockers": [
+      "Approved local checkpoint/license record unavailable; no download attempted.",
+      "Missing local dependency: torch",
+      "Missing local dependency: diffusers",
+      "Missing local dependency: transformers",
+      "Missing local dependency: accelerate",
+      "CUDA runtime cannot be verified."
+    ]
+  },
+  "local-svd": {
+    "engine": "local-svd",
+    "model": "stabilityai/stable-video-diffusion-img2vid-xt",
+    "adapter_implemented": true,
+    "installation_configuration_ready": true,
+    "installed": false,
+    "runtime_available": false,
+    "actual_inference_verified": false,
+    "technical_output_validated": false,
+    "cinematic_quality_reviewed": false,
+    "owner_approved_output": false,
+    "ready": false,
+    "blockers": [
+      "Approved local checkpoint/license record unavailable; no download attempted.",
+      "Missing local dependency: torch",
+      "Missing local dependency: diffusers",
+      "Missing local dependency: transformers",
+      "Missing local dependency: accelerate",
+      "CUDA runtime cannot be verified."
+    ]
+  }
+}

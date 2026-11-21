@@ -1,0 +1,218 @@
+{
+  "version": "bengali-unseen-2026-11-12-v1",
+  "original_brief": "ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।",
+  "scope": "Original unseen test specifications, not model output or expert-approved art. Identical task text/settings across candidates; native chat templates recorded. Different modalities are separate comparison arms.",
+  "settings": {
+    "max_new_tokens": 1024,
+    "context_tokens": 4096,
+    "seed": 117,
+    "temperature": 0.7,
+    "thinking": false
+  },
+  "cases": [
+    {
+      "id": "premise",
+      "roles": [
+        "story",
+        "director"
+      ],
+      "prompt": "মূল brief থেকে তিনটি স্বতন্ত্র family-drama premise লিখুন। প্রতিটিতে চরিত্রের সিদ্ধান্ত কীভাবে সংঘাত বাড়ায় বলুন। JSON: {\"premises\":[{\"logline\":\"...\",\"decision\":\"...\",\"consequence\":\"...\"}]}",
+      "source": "ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।",
+      "dimensions": [
+        "originality",
+        "causality"
+      ],
+      "expected_objective_defects": null,
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "premises"
+      ]
+    },
+    {
+      "id": "causal_outline",
+      "roles": [
+        "story"
+      ],
+      "prompt": "Brief থেকে ৬টি সংযুক্ত beat লিখুন। প্রতি beat-এ cause, choice, consequence, emotion, knowledge_change রাখুন। JSON: {\"beats\":[...]}. টাকা, ব্যাগ ও জানা-অজানা তথ্যের continuity অক্ষত রাখুন।",
+      "source": "ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।",
+      "dimensions": [
+        "causality",
+        "psychology",
+        "continuity"
+      ],
+      "expected_objective_defects": null,
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "beats"
+      ]
+    },
+    {
+      "id": "natural_dialogue",
+      "roles": [
+        "script"
+      ],
+      "prompt": "রুবা ও আদনানের ১২টি সংক্ষিপ্ত line/action লিখুন; সম্পর্কের উষ্ণতা ও চাপ বোঝান। চরিত্রভিত্তিক ২টি witty exchange থাকুক, জোক শোনানো নয়। JSON: {\"scene\":\"...\"}",
+      "source": "ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।",
+      "dimensions": [
+        "bengali_naturalness",
+        "humor",
+        "subtext"
+      ],
+      "expected_objective_defects": null,
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "scene"
+      ]
+    },
+    {
+      "id": "emotional_confrontation",
+      "roles": [
+        "script",
+        "director"
+      ],
+      "prompt": "সনদ দেখে রুবা মাকে জিজ্ঞেস করে। মা অপমানিত না হয়ে নিজের কাজের অধিকার বোঝাবেন। ১৮০ শব্দের মধ্যে visual-first scene, restrained emotion; JSON: {\"scene\":\"...\"}.",
+      "source": "ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।",
+      "dimensions": [
+        "emotion",
+        "psychology",
+        "visual_writing"
+      ],
+      "expected_objective_defects": null,
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "scene"
+      ]
+    },
+    {
+      "id": "romantic_chemistry",
+      "roles": [
+        "script",
+        "story"
+      ],
+      "prompt": "পৃথক fictional subplot: রুবা ও প্রতিবেশী তানভীর (৩০) পরস্পরকে পছন্দ করে; তানভীরকে অর্থের উদ্ধারকারী করবেন না। ধার নেওয়া হাঁড়ি ফেরত দেওয়ার ১৫০ শব্দের awkward warm scene লিখুন। JSON: {\"scene\":\"...\"}.",
+      "source": "ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।",
+      "dimensions": [
+        "romantic_tension",
+        "subtext",
+        "humor"
+      ],
+      "expected_objective_defects": null,
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "scene"
+      ]
+    },
+    {
+      "id": "hook_cliffhanger",
+      "roles": [
+        "story",
+        "director"
+      ],
+      "prompt": "একই মূল brief-এর প্রথম ২০ সেকেন্ডের opening image ও episode-ending decision/cliffhanger লিখুন। Earned setup কোথায়, বলুন। নতুন চরিত্র বা গোপন ধন নয়। JSON: {\"opening\":\"...\",\"ending\":\"...\",\"earned_by\":\"...\"}.",
+      "source": "ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।",
+      "dimensions": [
+        "hook",
+        "earned_cliffhanger"
+      ],
+      "expected_objective_defects": null,
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "opening",
+        "ending",
+        "earned_by"
+      ]
+    },
+    {
+      "id": "director_criticism",
+      "roles": [
+        "director"
+      ],
+      "prompt": "শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}.",
+      "source": "C2 — একই রান্নাঘর, একই সকাল, কোনো সময়ের বিরতি নেই। সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।",
+      "dimensions": [
+        "grounded_criticism"
+      ],
+      "expected_objective_defects": [
+        "prop_state"
+      ],
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "findings"
+      ]
+    },
+    {
+      "id": "clean_abstention",
+      "roles": [
+        "director",
+        "qc"
+      ],
+      "prompt": "শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}.",
+      "source": "C1 — রান্নাঘর, সকাল। সালমা নীল ব্যাগটি নিজের চেয়ারের পাশে রাখেন। রুবা হাঁড়ির ঢাকনা তুলে আবার নামিয়ে রাখে। আদনান ফোনের অর্ডার তালিকা দেখায়। রুবা: \"তুই সময়টা একটু কিনে আন।\" আদনান খালি কাপ এগিয়ে দেয়: \"বাকিতে দেবে?\" সালমা চুলার নিভে থাকা শিখার দিকে তাকিয়ে নীরবে জানালাটি খোলেন। ব্যাগ চেয়ারের পাশেই থাকে।",
+      "dimensions": [
+        "abstention",
+        "quotation_accuracy"
+      ],
+      "expected_objective_defects": [],
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "findings"
+      ]
+    },
+    {
+      "id": "qc_defect_detection",
+      "roles": [
+        "qc"
+      ],
+      "prompt": "শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}.",
+      "source": "C2 — একই রান্নাঘর, একই সকাল, কোনো সময়ের বিরতি নেই। সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।",
+      "dimensions": [
+        "objective_detection",
+        "quotation_accuracy"
+      ],
+      "expected_objective_defects": [
+        "prop_state"
+      ],
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "findings"
+      ]
+    },
+    {
+      "id": "targeted_rewrite",
+      "roles": [
+        "script"
+      ],
+      "prompt": "শুধু C1-এর শেষ action beat-এর বিকল্প দিন: সালমা দ্বিধা প্রকাশ করবেন কাজ দিয়ে, নতুন dialogue নয়। অন্য action/dialogue পরিবর্তন করবেন না। JSON: {\"target\":\"C1.final_action\",\"replacement\":\"...\"}.",
+      "source": "C1 — রান্নাঘর, সকাল। সালমা নীল ব্যাগটি নিজের চেয়ারের পাশে রাখেন। রুবা হাঁড়ির ঢাকনা তুলে আবার নামিয়ে রাখে। আদনান ফোনের অর্ডার তালিকা দেখায়। রুবা: \"তুই সময়টা একটু কিনে আন।\" আদনান খালি কাপ এগিয়ে দেয়: \"বাকিতে দেবে?\" সালমা চুলার নিভে থাকা শিখার দিকে তাকিয়ে নীরবে জানালাটি খোলেন। ব্যাগ চেয়ারের পাশেই থাকে।",
+      "dimensions": [
+        "rewrite_scope",
+        "visual_subtext"
+      ],
+      "expected_objective_defects": null,
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "target",
+        "replacement"
+      ]
+    },
+    {
+      "id": "multi_agent_delegation",
+      "roles": [
+        "director",
+        "production_manager"
+      ],
+      "prompt": "Brief-এর development plan দিন: Story, Script, Character, Casting, Costume/Hair/Makeup, Performance, Camera ও QC-তে exact handoff কী হবে? Producer approval ও independent QC কোথায় লাগবে? JSON: {\"plan\":[{\"agent\":\"...\",\"input\":\"...\",\"deliverable\":\"...\",\"gate\":\"...\"}]}. কোনো কাজ বাস্তবে শেষ হয়েছে বলবেন না।",
+      "source": "ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।",
+      "dimensions": [
+        "delegation",
+        "approval_integrity",
+        "source_version_safety"
+      ],
+      "expected_objective_defects": null,
+      "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+      "required_keys": [
+        "plan"
+      ]
+    }
+  ]
+}

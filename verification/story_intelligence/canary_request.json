@@ -1,0 +1,9 @@
+{
+  "system": "Return a JSON object only with cause, choice, consequence, knowledge. Each value is a short original Bengali sentence. No approval or quality score.",
+  "prompt": "মানব-প্রণীত canary brief: নীরা এখনও টিকিটের কথা জানে না। হাসান টিকিট বাক্সে রেখেছেন। একটি ছোট বিশ্বাসযোগ্য সিদ্ধান্ত ও তার ফল লিখুন; আগে না জেনে নীরা টিকিটের প্রতিক্রিয়া দেখাবে না।",
+  "max_new_tokens": 384,
+  "seed": 117,
+  "temperature": 0.2,
+  "context_tokens": 4096,
+  "thinking": false
+}

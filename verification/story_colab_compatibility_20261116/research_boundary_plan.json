@@ -1,0 +1,39 @@
+{
+  "scope": "Story only; one fictional existing brief; quarantined research outputs",
+  "exact_fallback": {
+    "repo": "unsloth/Qwen3.5-9B-GGUF",
+    "revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+    "file": "Qwen3.5-9B-Q4_K_M.gguf",
+    "bytes": 5680522464,
+    "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8"
+  },
+  "fallback_model_authorization": "already granted; no identical model approval requested",
+  "primary": {
+    "repo": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "adapter": "hf_text_nf4"
+  },
+  "primary_status": "NOT TESTED; no T4 fit claim",
+  "execution_authorized": false,
+  "security_boundary_authorized": false,
+  "launch_enabled": false,
+  "security_equivalent_to_studio": false,
+  "kernel_network_egress_guarantee": false,
+  "fresh_proc_pid_mount_guarantee": false,
+  "new_owner_decision": "Whether to allow explicitly separate research-only Colab execution without the Studio worker kernel mount/PID/network guarantees. Approval must be given explicitly outside this file; editing a flag is not itself owner authorization.",
+  "required_conditions": [
+    "Fresh research-only runtime; no Drive mount, Studio secrets, production database or private media",
+    "Exact previously approved GGUF and reviewed llama runtime; full local source/artifact hashes and installed dependencies verified before launch",
+    "No hosted model APIs/public endpoint, model substitution or automatic dependency/model downloads",
+    "Kernel egress isolation remains unverified; loopback/offline library settings are mitigations, not equivalent isolation",
+    "Existing seven-call ceiling includes failures/reservations; two historical calls retained, never reset or relabeled",
+    "Do not repeat successful canary; inspect failed foundation and obtain a concrete changed-test hypothesis before any retry",
+    "Original prompt/raw response/finish reason/runtime/hash receipts retained; no automatic retry or prose repair",
+    "Raw research results quarantined; StoryBridge/QC/Director/owner gates remain unchanged"
+  ],
+  "prior_calls": 2,
+  "existing_total_ceiling": 7,
+  "conservative_unspent_slots": 5,
+  "budget_feasibility": "A fresh canary + five new sections needs six calls and exceeds five unspent slots. Do not silently reset budget; reuse valid evidence or obtain a separately scoped budget decision before promising a complete story.",
+  "notebook_scope": "Reproducible read-only preflight and explicit research-boundary pause. No alternate inference launcher implemented or enabled."
+}

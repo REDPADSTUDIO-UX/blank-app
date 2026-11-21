@@ -1,0 +1,21 @@
+{
+  "selected": [
+    "tests.test_native_local_execution.NativeLocalTests.test_task_staging_native_worker_queue_binding_is_idempotent_and_not_launch_permission",
+    "tests.test_native_local_execution.NativeLocalTests.test_readiness_separates_seventeen_engineered_agents_from_two_gated_sources",
+    "tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service",
+    "tests.test_native_local_execution.NativeLocalTests.test_concurrent_native_request_dedup_is_atomic_and_restart_safe"
+  ],
+  "tests": 4,
+  "errors": 0,
+  "failures": 0,
+  "gpu_used": false,
+  "model_inference": false,
+  "real_weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "authorized_processes": "fixed CPU fixture only; source-pinned native process launch blocked by test filter",
+  "requests_import_only_shim": true,
+  "http_transport_verified": false,
+  "model_class_calls": "injected fake classes only, no model libraries imported",
+  "scope": "software engineering only; no model intelligence/artistic acceptance"
+}

@@ -1,0 +1,7 @@
+test_eighth_total_call_reaches_eligibility_without_launch (__main__.AdapterBudgetTests.test_eighth_total_call_reaches_eligibility_without_launch) ... ok
+test_ninth_total_call_stops_before_eligibility (__main__.AdapterBudgetTests.test_ninth_total_call_stops_before_eligibility) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.012s
+
+OK

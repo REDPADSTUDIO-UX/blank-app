@@ -1,0 +1,144 @@
+{
+  "date": "2026-11-13",
+  "kind": "static public code review only; no upstream code imported/executed",
+  "sources": [
+    {
+      "repo": "Wan-Video/Wan-Animate-2",
+      "revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+      "path": "infer/wan_animate_2_demo.py",
+      "url": "https://github.com/Wan-Video/Wan-Animate-2/blob/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/infer/wan_animate_2_demo.py",
+      "retrieved_text_sha256": "f68eca295597dd7c96630f04a4d33b462a47b56bce0ebcdbae0f8b6a38685100",
+      "retrieved_text_bytes": 5174,
+      "executed": false
+    },
+    {
+      "repo": "Wan-Video/Wan-Animate-2",
+      "revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+      "path": "infer/wan_animate_2.yaml",
+      "url": "https://github.com/Wan-Video/Wan-Animate-2/blob/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/infer/wan_animate_2.yaml",
+      "retrieved_text_sha256": "a701e0f769058734c8cab208a40a128bbffb0602dbdb41ad5f57c1f2a6da5b27",
+      "retrieved_text_bytes": 2419,
+      "executed": false
+    },
+    {
+      "repo": "Wan-Video/Wan-Animate-2",
+      "revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+      "path": "pipelines/wan_animate_2_pipeline.py",
+      "url": "https://github.com/Wan-Video/Wan-Animate-2/blob/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/pipelines/wan_animate_2_pipeline.py",
+      "retrieved_text_sha256": "948a87a33241d6930d3461213b45f29942dc21f3f7c314ea92326addc082d0a9",
+      "retrieved_text_bytes": 31958,
+      "executed": false
+    },
+    {
+      "repo": "Wan-Video/Wan-Animate-2",
+      "revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+      "path": "requirements.txt",
+      "url": "https://github.com/Wan-Video/Wan-Animate-2/blob/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/requirements.txt",
+      "retrieved_text_sha256": "8616ac8f8922c7dca389876b9fd4876390e5c80ea0ce7672e4c4558405d95a15",
+      "retrieved_text_bytes": 1597,
+      "executed": false
+    },
+    {
+      "repo": "Wan-Video/Wan-Animate-2",
+      "revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+      "path": "core/__init__.py",
+      "url": "https://github.com/Wan-Video/Wan-Animate-2/blob/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/core/__init__.py",
+      "retrieved_text_sha256": "e120b4cadbcde9de44a946b90a51f1aa911cf2b2e0952b15e7e0be53c0e3336c",
+      "retrieved_text_bytes": 678,
+      "executed": false
+    },
+    {
+      "repo": "Lightricks/LTX-2",
+      "revision": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+      "path": "packages/ltx-pipelines/src/ltx_pipelines/distilled.py",
+      "url": "https://github.com/Lightricks/LTX-2/blob/f0f2f8607189c78a72420b2b63cb1975b5eca179/packages/ltx-pipelines/src/ltx_pipelines/distilled.py",
+      "retrieved_text_sha256": "de78ebbf4d4b38568eb7c531122e3754ee7eb0db003c65bf9e0bdcec5b01fe33",
+      "retrieved_text_bytes": 21555,
+      "executed": false
+    },
+    {
+      "repo": "Lightricks/LTX-2",
+      "revision": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+      "path": "packages/ltx-pipelines/src/ltx_pipelines/utils/args.py",
+      "url": "https://github.com/Lightricks/LTX-2/blob/f0f2f8607189c78a72420b2b63cb1975b5eca179/packages/ltx-pipelines/src/ltx_pipelines/utils/args.py",
+      "retrieved_text_sha256": "1fac8ca9624bba3c4ffea37d1f4c68c1f436745694dd700a84a74298623e0158",
+      "retrieved_text_bytes": 67270,
+      "executed": false
+    },
+    {
+      "repo": "Lightricks/LTX-2",
+      "revision": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+      "path": "packages/ltx-pipelines/src/ltx_pipelines/utils/model_paths.py",
+      "url": "https://github.com/Lightricks/LTX-2/blob/f0f2f8607189c78a72420b2b63cb1975b5eca179/packages/ltx-pipelines/src/ltx_pipelines/utils/model_paths.py",
+      "retrieved_text_sha256": "6ee003ccfa4b045f3b796f1146eb56d7fd75f8533de3e8c5ecbc5d387ef1bd4a",
+      "retrieved_text_bytes": 8196,
+      "executed": false
+    },
+    {
+      "repo": "Lightricks/LTX-2",
+      "revision": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+      "path": "packages/ltx-pipelines/pyproject.toml",
+      "url": "https://github.com/Lightricks/LTX-2/blob/f0f2f8607189c78a72420b2b63cb1975b5eca179/packages/ltx-pipelines/pyproject.toml",
+      "retrieved_text_sha256": "ac89bcaacc85205d916e91514198877da0fd7562ebca06fb3841a8c34853972b",
+      "retrieved_text_bytes": 654,
+      "executed": false
+    },
+    {
+      "repo": "ace-step/ACE-Step-1.5",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "path": "acestep/inference.py",
+      "url": "https://github.com/ace-step/ACE-Step-1.5/blob/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/inference.py",
+      "retrieved_text_sha256": "12911ea4464cb785cc16d3f9a3388abc10918c7a819877926d0bfdc26b9d976e",
+      "retrieved_text_bytes": 71075,
+      "executed": false
+    },
+    {
+      "repo": "ace-step/ACE-Step-1.5",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "path": "acestep/handler.py",
+      "url": "https://github.com/ace-step/ACE-Step-1.5/blob/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/handler.py",
+      "retrieved_text_sha256": "1481dcb4724c65e0b4802e6fb736e8f4740fd47447f4671cf2f856e51aa1bef7",
+      "retrieved_text_bytes": 5590,
+      "executed": false
+    },
+    {
+      "repo": "ace-step/ACE-Step-1.5",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "path": "acestep/core/generation/handler/init_service_downloads.py",
+      "url": "https://github.com/ace-step/ACE-Step-1.5/blob/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/core/generation/handler/init_service_downloads.py",
+      "retrieved_text_sha256": "2a2dfb5e5cf54ec1cc1cd7a185f2da61c0af213368d89574795c4dbea4cf6f13",
+      "retrieved_text_bytes": 3185,
+      "executed": false
+    },
+    {
+      "repo": "ace-step/ACE-Step-1.5",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "path": "acestep/core/generation/handler/init_service_loader.py",
+      "url": "https://github.com/ace-step/ACE-Step-1.5/blob/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/core/generation/handler/init_service_loader.py",
+      "retrieved_text_sha256": "ff9e45a862a639b414c5e0ce0fe26a7e1f46b0a8fff9373db3d4e39476eb9a24",
+      "retrieved_text_bytes": 9464,
+      "executed": false
+    },
+    {
+      "repo": "ace-step/ACE-Step-1.5",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "path": "acestep/core/generation/handler/init_service_loader_components.py",
+      "url": "https://github.com/ace-step/ACE-Step-1.5/blob/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/core/generation/handler/init_service_loader_components.py",
+      "retrieved_text_sha256": "c67f52429c34c1318afa1dc58bd95166fd24853f6309a856821a788cc27b005e",
+      "retrieved_text_bytes": 4228,
+      "executed": false
+    },
+    {
+      "repo": "ace-step/ACE-Step-1.5",
+      "revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+      "path": "acestep/core/generation/handler/init_service_orchestrator.py",
+      "url": "https://github.com/ace-step/ACE-Step-1.5/blob/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/core/generation/handler/init_service_orchestrator.py",
+      "retrieved_text_sha256": "c735016888c3068f0d94fa8ac0623009ca25131be90b23e786325f7b44cb55ae",
+      "retrieved_text_bytes": 8569,
+      "executed": false
+    }
+  ],
+  "model_profile_changes": false,
+  "gated_code_accessed": false,
+  "license_acceptance": false
+}

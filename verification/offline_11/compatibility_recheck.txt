@@ -1,0 +1,6 @@
+test_task_bound_tools_keep_same_approval_and_no_publishing_boundary (tests.test_no_gpu_staging.NoGPUStagingTests.test_task_bound_tools_keep_same_approval_and_no_publishing_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.012s
+
+OK

@@ -1,0 +1,97 @@
+- banner:
+  - heading "Spaces Hugging Face's logo huggingface-projects / gemma-3-12b-it Like 165 Agents Running on Zero Get PRO" [level=1]:
+    - link "Spaces":
+      - /url: /spaces
+    - link "Hugging Face's logo":
+      - /url: /
+      - img "Hugging Face's logo"
+    - separator
+    - link:
+      - /url: /huggingface-projects
+    - link "huggingface-projects":
+      - /url: /huggingface-projects
+    - generic: /
+    - link "gemma-3-12b-it":
+      - /url: /spaces/huggingface-projects/gemma-3-12b-it
+    - button "Copy space name to clipboard":
+    - button "Like":
+      - generic: Like
+    - button "165"
+    - text: Agents
+    - text: Running
+    - generic: "on"
+    - generic: Zero
+    - link "Get PRO":
+      - /url: /pro
+      - text: Get PRO
+  - link "App":
+    - /url: /spaces/huggingface-projects/gemma-3-12b-it
+    - text: App
+  - link "Files":
+    - /url: /spaces/huggingface-projects/gemma-3-12b-it/tree/main
+    - generic: Files
+  - link "Community 12":
+    - /url: /spaces/huggingface-projects/gemma-3-12b-it/discussions
+    - text: Community
+    - generic: "12"
+  - button:
+  - separator
+  - button
+- text: Hugging Face is way more fun with friends and colleagues! 🤗
+- link "Join an organization":
+  - /url: /organizations/suggestions
+- button "Dismiss this message"
+- main:
+  - iframe [active] [id="iFrameResizer0"]:
+    - main:
+      - heading "Gemma 3 12B IT" [level=1]
+      - paragraph: This is a demo of Gemma 3 12B it, a vision language model with outstanding performance on a wide range of tasks. You can upload images, interleaved images and videos. Note that video input only supports single-turn conversation and mp4 input.
+      - text: Chatbot
+      - button:
+      - button "Clear":
+      - button "Copy conversation":
+      - log "chatbot conversation":
+        - 'generic "user''s message: শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}. SOURCE MATERIAL: C2 — একই রান্নাঘর, একই সকাল, কোনো সময়ের বিরতি নেই। সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।"':
+          - paragraph: "শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}."
+          - paragraph:
+            - text: "SOURCE MATERIAL:"
+            - text: "C2 — একই রান্নাঘর, একই সকাল, কোনো সময়ের বিরতি নেই। সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।"
+        - button "Copy message":
+        - 'generic "bot''s message: ```json {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন।\",\"observation\":\"প্রথম দৃশ্যে নীল ব্যাগটি আলমারিতে তালাবদ্ধ ছিল এবং সালমা চাবি নিয়েছেন। কিন্তু পরবর্তী দৃশ্যে রুবার হাতে ব্যাগটি দেখা যাচ্ছে, যেখানে ব্যাগের তালা থাকার কথা নয়।\",\"category\":\"continuity\",\"decision\":\"revise\"}]} ```"':
+          - button "copy":
+          - code: "{\"findings\":[{\"code\":\"prop_state\",\"quote\":\"সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন।\",\"observation\":\"প্রথম দৃশ্যে নীল ব্যাগটি আলমারিতে তালাবদ্ধ ছিল এবং সালমা চাবি নিয়েছেন। কিন্তু পরবর্তী দৃশ্যে রুবার হাতে ব্যাগটি দেখা যাচ্ছে, যেখানে ব্যাগের তালা থাকার কথা নয়।\",\"category\":\"continuity\",\"decision\":\"revise\"}]}"
+        - button "Copy message":
+        - button "Retry":
+        - button "Undo":
+          - img "undo"
+      - group "Multimedia input field":
+        - generic: MultimodalTextbox
+        - button "Upload a file":
+        - textbox [active]
+        - button "Submit":
+      - button "Additional inputs ▼":
+        - generic: Additional inputs
+        - generic: ▼
+      - generic: System Prompt
+      - textbox "System Prompt":
+        - /placeholder: ""
+        - text: আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।
+      - generic: Max New Tokens
+      - spinbutton "number input for Max New Tokens": "1024"
+      - button "Reset to default value": ↺
+      - generic: "100"
+      - slider "range slider for Max New Tokens": "1020"
+      - generic: "2000"
+    - contentinfo "Gradio footer navigation":
+      - button "Use via API logo":
+        - text: Use via API
+        - img "logo"
+      - generic: ·
+      - link "Built with Gradio logo":
+        - /url: https://gradio.app
+        - text: Built with Gradio
+        - img "logo"
+      - generic: ·
+      - button "Settings Settings":
+        - text: Settings
+        - img "Settings"

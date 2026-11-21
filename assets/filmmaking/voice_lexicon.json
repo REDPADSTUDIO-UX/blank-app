@@ -1,0 +1,14 @@
+{
+  "version": "bengali-pronunciation-2026-11-07.1",
+  "provenance": "Original REDPAD text guidance; not audio, phonetic training or listening approval",
+  "entries": [
+    {"term": "নিশিকথা", "guidance": "নিশি-কথা; নামের দুই অংশ স্পষ্ট, কৃত্রিম অতিরিক্ত টান নয়।"},
+    {"term": "হাজেরা", "guidance": "হা-জে-রা; চরিত্রের অনুমোদিত নাম ও কণ্ঠ অক্ষত রাখুন।"},
+    {"term": "কুষ্টিয়া", "guidance": "কুষ্-টি-য়া; স্থানীয় উচ্চারণ মানব শ্রোতার সঙ্গে যাচাই বাকি।"},
+    {"term": "চট্টগ্রাম", "guidance": "চট্-ট-গ্রাম; অননুমোদিত আঞ্চলিক accent চাপিয়ে দেবেন না।"},
+    {"term": "117", "guidance": "ঘর নম্বর হলে একশো সতেরো; ফোন/কোড হলে পৃথক digit হতে পারে। প্রসঙ্গ অস্পষ্ট হলে জিজ্ঞাস্য হিসেবে রাখুন।"},
+    {"term": "বাবা", "guidance": "সম্বোধন ও বাক্যের কাজ দেখে pause দিন; প্রতিটি বাবা শব্দের পরে একই বিরতি বাধ্যতামূলক নয়।"}
+  ],
+  "rights": "Original text guidance only; an actual synthetic preset or separately authorized voice is still required.",
+  "listening_review_completed": false
+}

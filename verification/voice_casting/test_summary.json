@@ -1,0 +1,21 @@
+{
+  "resumed_commit": "c649d5f5f3f4c4de2e98722d70ad7821b2d7eb49",
+  "new_unique_tests": 37,
+  "existing_affected_unique_checks": 9,
+  "total_successful_distinct_checks": 46,
+  "initial_tests": 30,
+  "initial_passed": 29,
+  "initial_errors": 1,
+  "initial_failure": "Casting current revision output absent raised TypeError; fixed to deterministic AgentError and failed check alone passed",
+  "engineering_complete": 18,
+  "partial": 1,
+  "production_ready": 0,
+  "professionally_accepted_of_21": 0,
+  "actual_human_reviews": 0,
+  "gpu_inference_weights_hosted_paid_license_acceptance": 0,
+  "chrome_connected": true,
+  "gated_source_access_granted": false,
+  "public_source_files_verified": 14,
+  "canonical_source_lock_hashes_corrected": 16,
+  "fixtures_are_not_actual_model_outputs": true
+}

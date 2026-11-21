@@ -1,0 +1,9 @@
+test_available_preset_voice_cannot_fall_back_to_generic_text_model (tests.test_voice_casting_integration.VoiceCastingTests.test_available_preset_voice_cannot_fall_back_to_generic_text_model) ... ok
+test_voice_source_profile_revision_cannot_drift_to_an_unreviewed_checkpoint (tests.test_voice_casting_integration.VoiceCastingTests.test_voice_source_profile_revision_cannot_drift_to_an_unreviewed_checkpoint) ... ok
+test_missing_source_casting_draft_abstains_without_hidden_fallback (tests.test_voice_casting_integration.VoiceCastingTests.test_missing_source_casting_draft_abstains_without_hidden_fallback) ... ok
+test_explicit_parler_department_choice_stages_existing_worker_without_generation (tests.test_voice_casting_integration.VoiceCastingTests.test_explicit_parler_department_choice_stages_existing_worker_without_generation) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.343s
+
+OK

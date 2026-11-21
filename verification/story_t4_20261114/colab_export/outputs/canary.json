@@ -1,0 +1,140 @@
+{
+  "case": {
+    "system": "Return a JSON object only with cause, choice, consequence, knowledge. Each value is a short original Bengali sentence. No approval or quality score.",
+    "prompt": "মানব-প্রণীত canary brief: নীরা এখনও টিকিটের কথা জানে না। হাসান টিকিট বাক্সে রেখেছেন। একটি ছোট বিশ্বাসযোগ্য সিদ্ধান্ত ও তার ফল লিখুন; আগে না জেনে নীরা টিকিটের প্রতিক্রিয়া দেখাবে না।",
+    "max_new_tokens": 384,
+    "seed": 117,
+    "temperature": 0.2,
+    "context_tokens": 4096,
+    "thinking": false,
+    "id": "canary",
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cause",
+        "choice",
+        "consequence",
+        "knowledge"
+      ],
+      "properties": {
+        "cause": {
+          "type": "string",
+          "minLength": 1
+        },
+        "choice": {
+          "type": "string",
+          "minLength": 1
+        },
+        "consequence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "knowledge": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "installation": {
+    "repo": "unsloth/Qwen3.5-9B-GGUF",
+    "revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+    "file": "Qwen3.5-9B-Q4_K_M.gguf",
+    "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "bytes": 5680522464,
+    "binary": "/content/redpad_story_t4_20261114/runtime/llama-b12318/llama-server",
+    "binary_sha256": "0ec391741c38d09eb4074db407c162686e310799c0dc36ebb734775688384ff5",
+    "runtime_version": "version: 0.9.0-dev (build 12318, commit 7021f7e09)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+    "license": "Apache-2.0 model; MIT runtime",
+    "variant": "qwen35_9_approved_gguf; standalone fallback; NOT qwen35_27 NF4",
+    "production_approved": false,
+    "model_inferences": 0
+  },
+  "state": "completed",
+  "human_review": "pending",
+  "production_approved": false,
+  "automatic_retries": 0,
+  "load_seconds": 71.12815384999999,
+  "owned_gpu_process": "4416, 5204\n",
+  "offload_lines": [
+    "0.24.336.465 I load_tensors: offloaded 33/33 layers to GPU",
+    "0.24.336.476 I load_tensors:        CUDA0 model buffer size =  4861.28 MiB"
+  ],
+  "exact_prompt_tokens": 127,
+  "context_tokens": 4096,
+  "output_ceiling": 384,
+  "template_sha256": "051a136079635359b9a55cc2fac4dacf3e3be05127ce7be999a6f73b86058306",
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "Return a JSON object only with cause, choice, consequence, knowledge. Each value is a short original Bengali sentence. No approval or quality score."
+      },
+      {
+        "role": "user",
+        "content": "মানব-প্রণীত canary brief: নীরা এখনও টিকিটের কথা জানে না। হাসান টিকিট বাক্সে রেখেছেন। একটি ছোট বিশ্বাসযোগ্য সিদ্ধান্ত ও তার ফল লিখুন; আগে না জেনে নীরা টিকিটের প্রতিক্রিয়া দেখাবে না।"
+      }
+    ],
+    "max_tokens": 384,
+    "temperature": 0.2,
+    "seed": 117,
+    "stream": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "cache_prompt": false
+  },
+  "raw_http_base64": "eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1xuICBcImNhdXNlXCI6IFwi4Ka54Ka+4Ka44Ka+4KaoIOCmqOCngOCmsOCmvuCmleCnhyDgpp/gpr/gppXgpr/gpp/gp4fgprAg4Kas4Ka/4Ka34Kav4Ka84Kaf4Ka/IOCml+Cni+CmquCmqCDgprDgp4fgppbgp4fgppvgp4fgpqjgpaRcIixcbiAgXCJjaG9pY2VcIjogXCLgpqjgp4DgprDgpr4g4Kas4Ka+4KaV4KeN4Ka44Kaf4Ka/IOCmluCngeCmsuCnhyDgpqbgp4fgppbgpr7gprAg4KaG4KaX4KeHIOCmleCni+CmqOCniyDgpqrgp43gprDgpqTgpr/gppXgp43gprDgpr/gpq/gprzgpr4g4Kam4KeH4KaW4Ka+4Kas4KeHIOCmqOCmvuClpFwiLFxuICBcImNvbnNlcXVlbmNlXCI6IFwi4Ka44KeB4Kak4Kaw4Ka+4KaCLCDgprngpr7gprjgpr7gpqjgp4fgprAg4Kaa4KeL4KaW4KeH4KawIOCmpuCmv+CmleCnhyDgpqTgpr7gppXgpr/gpq/gprzgp4cg4Ka44KeHIOCmquCnjeCmsOCmtuCnjeCmqCDgppXgprDgpqzgp4cg4Kao4Ka+4KWkXCIsXG4gIFwia25vd2xlZGdlXCI6IFwi4Kau4Ka+4Kao4KeB4Ka3IOCmr+CmluCmqCDgppXgp4vgpqjgp4sg4Kak4Kal4KeN4KavIOCmnOCmvuCmqOCnhyDgpqjgpr4sIOCmpOCmluCmqCDgprjgp4cg4Ka44KeH4KaHIOCmrOCmv+Cmt+Cmr+CmvOCnhyDgppXgpqXgpr4g4Kas4Kay4Kak4KeHIOCmquCmvuCmsOCnhyDgpqjgpr7gpaRcIlxufSJ9fV0sImNyZWF0ZWQiOjE3OTQ2NDgzMDgsIm1vZGVsIjoiL2NvbnRlbnQvcmVkcGFkX3N0b3J5X3Q0XzIwMjYxMTE0L1F3ZW4zLjUtOUItUTRfS19NLmdndWYiLCJzeXN0ZW1fZmluZ2VycHJpbnQiOiJiMTIzMTgtNzAyMWY3ZTA5Iiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwidXNhZ2UiOnsiY29tcGxldGlvbl90b2tlbnMiOjEyNCwicHJvbXB0X3Rva2VucyI6MTI3LCJ0b3RhbF90b2tlbnMiOjI1MSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjB9fSwiaWQiOiJjaGF0Y21wbC1HZFhUT0JoV0xFaGQyZ0tKMXlsbks4TzdjUFlTaGNRUCIsInRpbWluZ3MiOnsiY2FjaGVfbiI6MCwicHJvbXB0X24iOjEyNywicHJvbXB0X21zIjo2NTkzNy4zNDMsInByb21wdF9wZXJfdG9rZW5fbXMiOjUxOS4xOTE2NzcxNjUzNTQyLCJwcm9tcHRfcGVyX3NlY29uZCI6MS45MjYwNzA5MzY3Njc5NTU4LCJwcmVkaWN0ZWRfbiI6MTI0LCJwcmVkaWN0ZWRfbXMiOjQ0MTMuMjI2LCJwcmVkaWN0ZWRfcGVyX3Rva2VuX21zIjozNS44Nzk4ODYxNzg4NjE3OSwicHJlZGljdGVkX3Blcl9zZWNvbmQiOjI3Ljg3MDc2ODQ1ODI2NjEzNH19",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"cause\": \"হাসান নীরাকে টিকিটের বিষয়টি গোপন রেখেছেন।\",\n  \"choice\": \"নীরা বাক্সটি খুলে দেখার আগে কোনো প্রতিক্রিয়া দেখাবে না।\",\n  \"consequence\": \"সুতরাং, হাসানের চোখের দিকে তাকিয়ে সে প্রশ্ন করবে না।\",\n  \"knowledge\": \"মানুষ যখন কোনো তথ্য জানে না, তখন সে সেই বিষয়ে কথা বলতে পারে না।\"\n}"
+        }
+      }
+    ],
+    "created": 1794648308,
+    "model": "/content/redpad_story_t4_20261114/Qwen3.5-9B-Q4_K_M.gguf",
+    "system_fingerprint": "b12318-7021f7e09",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 127,
+      "total_tokens": 251,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-GdXTOBhWLEhd2gKJ1ylnK8O7cPYShcQP",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 127,
+      "prompt_ms": 65937.343,
+      "prompt_per_token_ms": 519.1916771653542,
+      "prompt_per_second": 1.9260709367679558,
+      "predicted_n": 124,
+      "predicted_ms": 4413.226,
+      "predicted_per_token_ms": 35.87988617886179,
+      "predicted_per_second": 27.870768458266134
+    }
+  },
+  "raw_content": "{\n  \"cause\": \"হাসান নীরাকে টিকিটের বিষয়টি গোপন রেখেছেন।\",\n  \"choice\": \"নীরা বাক্সটি খুলে দেখার আগে কোনো প্রতিক্রিয়া দেখাবে না।\",\n  \"consequence\": \"সুতরাং, হাসানের চোখের দিকে তাকিয়ে সে প্রশ্ন করবে না।\",\n  \"knowledge\": \"মানুষ যখন কোনো তথ্য জানে না, তখন সে সেই বিষয়ে কথা বলতে পারে না।\"\n}",
+  "raw_content_sha256": "a9dd98d39e91e1eb4b794e6b5626878a5af19408aa294b762d26422f49541d5d",
+  "finish_reason": "stop",
+  "generation_seconds": 70.35668729099984,
+  "peak_sampled_server_rss_bytes": 1621516288,
+  "peak_sampled_device_used_mib": 5231,
+  "memory_scope": "1s whole device sampling, includes baseline; not allocator peak",
+  "parsed": {
+    "cause": "হাসান নীরাকে টিকিটের বিষয়টি গোপন রেখেছেন।",
+    "choice": "নীরা বাক্সটি খুলে দেখার আগে কোনো প্রতিক্রিয়া দেখাবে না।",
+    "consequence": "সুতরাং, হাসানের চোখের দিকে তাকিয়ে সে প্রশ্ন করবে না।",
+    "knowledge": "মানুষ যখন কোনো তথ্য জানে না, তখন সে সেই বিষয়ে কথা বলতে পারে না।"
+  },
+  "total_seconds": 144.57331105899993,
+  "server_stopped": true
+}

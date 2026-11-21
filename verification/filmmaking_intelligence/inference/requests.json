@@ -1,0 +1,669 @@
+[
+  {
+    "id": "breakfast-control",
+    "role": "script",
+    "data": "ঢাকার বাসায় সকালের নাশতা। মাহী অফিসের বাস ধরতে চায়; মা মাকসুদা চান সে ভাঙা চেয়ারটি ঠিক করে যাক। স্নেহ ও সময়ের টান, বক্তৃতা নয়।",
+    "task": "বাংলা visual-first ছোট দৃশ্য দিন। opening_action, মাহী-এর first_reply, মাকসুদা-এর second_reply, closing_action, INT. heading। শুধু সরাসরি কথাগুলো reply-তে, নাম/বলে/quoted narration নয়। action-এ সংলাপ নয়। প্রতি সংলাপে ৬–১০টি শব্দ।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^INT\\."
+        },
+        "opening_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "first_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "second_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "closing_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        }
+      },
+      "required": [
+        "heading",
+        "opening_action",
+        "first_reply",
+        "second_reply",
+        "closing_action"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": false
+  },
+  {
+    "id": "breakfast",
+    "role": "script",
+    "data": "ঢাকার বাসায় সকালের নাশতা। মাহী অফিসের বাস ধরতে চায়; মা মাকসুদা চান সে ভাঙা চেয়ারটি ঠিক করে যাক। স্নেহ ও সময়ের টান, বক্তৃতা নয়।",
+    "task": "বাংলা visual-first ছোট দৃশ্য দিন। opening_action, মাহী-এর first_reply, মাকসুদা-এর second_reply, closing_action, INT. heading। শুধু সরাসরি কথাগুলো reply-তে, নাম/বলে/quoted narration নয়। action-এ সংলাপ নয়। প্রতি সংলাপে ৬–১০টি শব্দ।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^INT\\."
+        },
+        "opening_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "first_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "second_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "closing_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        }
+      },
+      "required": [
+        "heading",
+        "opening_action",
+        "first_reply",
+        "second_reply",
+        "closing_action"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "father_son",
+    "role": "script",
+    "data": "আবির চাকরি ছাড়ার কথা বাবা কামালকে বলতে চায়; বাবা পুরোনো জুতোয় আঠা লাগাচ্ছেন। বাবা ভয় পান ছেলে নিজের মতো কষ্ট পাবে, কিন্তু বাধা দিতে চান না। সংযত আবেগ।",
+    "task": "বাংলা visual-first ছোট দৃশ্য দিন। opening_action, আবির-এর first_reply, কামাল-এর second_reply, closing_action, INT. heading। শুধু সরাসরি কথাগুলো reply-তে, নাম/বলে/quoted narration নয়। action-এ সংলাপ নয়। প্রতি সংলাপে ৬–১০টি শব্দ।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^INT\\."
+        },
+        "opening_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "first_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "second_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "closing_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        }
+      },
+      "required": [
+        "heading",
+        "opening_action",
+        "first_reply",
+        "second_reply",
+        "closing_action"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "first_encounter",
+    "role": "script",
+    "data": "বইয়ের দোকানে কর্মী মিতুর ফেরত-টাকার হিসাব মেলেনি; ক্রেতা রনি বেশি টাকা ফেরত পেয়ে নিজে ফিরে এসেছেন। দুজনের ছোট যত্নে প্রথম আকর্ষণ, ফোন নম্বর বা প্রেম ঘোষণা নয়।",
+    "task": "বাংলা visual-first ছোট দৃশ্য দিন। opening_action, মিতু-এর first_reply, রনি-এর second_reply, closing_action, INT. heading। শুধু সরাসরি কথাগুলো reply-তে, নাম/বলে/quoted narration নয়। action-এ সংলাপ নয়। প্রতি সংলাপে ৬–১০টি শব্দ।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^INT\\."
+        },
+        "opening_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "first_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "second_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "closing_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        }
+      },
+      "required": [
+        "heading",
+        "opening_action",
+        "first_reply",
+        "second_reply",
+        "closing_action"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "wit-control",
+    "role": "script",
+    "data": "শুভ ঘরে বিদ্যুৎ বাঁচাতে বাতি নেভায়, মা রেবা জানেন সে ফোনের চার্জার সারাদিন লাগিয়ে রাখে। অভ্যাসের দ্বন্দ্বে স্নেহপূর্ণ responsive witty exchange; অপমান নয়।",
+    "task": "বাংলা visual-first ছোট দৃশ্য দিন। opening_action, রেবা-এর first_reply, শুভ-এর second_reply, closing_action, INT. heading। শুধু সরাসরি কথাগুলো reply-তে, নাম/বলে/quoted narration নয়। action-এ সংলাপ নয়। প্রতি সংলাপে ৬–১০টি শব্দ।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^INT\\."
+        },
+        "opening_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "first_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "second_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "closing_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        }
+      },
+      "required": [
+        "heading",
+        "opening_action",
+        "first_reply",
+        "second_reply",
+        "closing_action"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": false
+  },
+  {
+    "id": "wit",
+    "role": "script",
+    "data": "শুভ ঘরে বিদ্যুৎ বাঁচাতে বাতি নেভায়, মা রেবা জানেন সে ফোনের চার্জার সারাদিন লাগিয়ে রাখে। অভ্যাসের দ্বন্দ্বে স্নেহপূর্ণ responsive witty exchange; অপমান নয়।",
+    "task": "বাংলা visual-first ছোট দৃশ্য দিন। opening_action, রেবা-এর first_reply, শুভ-এর second_reply, closing_action, INT. heading। শুধু সরাসরি কথাগুলো reply-তে, নাম/বলে/quoted narration নয়। action-এ সংলাপ নয়। প্রতি সংলাপে ৬–১০টি শব্দ।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^INT\\."
+        },
+        "opening_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "first_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "second_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "closing_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        }
+      },
+      "required": [
+        "heading",
+        "opening_action",
+        "first_reply",
+        "second_reply",
+        "closing_action"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "confrontation",
+    "role": "script",
+    "data": "শীলা জানতে পেরেছে বাবা কামাল তার নিজের চিকিৎসা পিছিয়ে ভর্তি-ফি রেখেছেন। সে সাহায্য চায়, বাবা করুণা চান না। দোষারোপ বা কান্নার বক্তৃতা ছাড়া একটি কঠিন সিদ্ধান্ত।",
+    "task": "বাংলা visual-first ছোট দৃশ্য দিন। opening_action, শীলা-এর first_reply, কামাল-এর second_reply, closing_action, INT. heading। শুধু সরাসরি কথাগুলো reply-তে, নাম/বলে/quoted narration নয়। action-এ সংলাপ নয়। প্রতি সংলাপে ৬–১০টি শব্দ।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^INT\\."
+        },
+        "opening_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "first_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "second_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "closing_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        }
+      },
+      "required": [
+        "heading",
+        "opening_action",
+        "first_reply",
+        "second_reply",
+        "closing_action"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "horror",
+    "role": "script",
+    "data": "রুনা মেঝেতে সরু চালের দাগ টেনেছে: পাশের বন্ধ ঘরে কেউ হাঁটলে দাগ ভাঙবে। খালা হালিমা বলেন জানলার বাতাসে শব্দ হচ্ছে। জানলা বন্ধ, দরজার নিচে দাগের এক জায়গা সরছে। শব্দে চমক নয়, একটি যৌক্তিক ছোট পরীক্ষা।",
+    "task": "বাংলা visual-first ছোট দৃশ্য দিন। opening_action, রুনা-এর first_reply, হালিমা-এর second_reply, closing_action, INT. heading। শুধু সরাসরি কথাগুলো reply-তে, নাম/বলে/quoted narration নয়। action-এ সংলাপ নয়। প্রতি সংলাপে ৬–১০টি শব্দ।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^INT\\."
+        },
+        "opening_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "first_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "second_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "closing_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        }
+      },
+      "required": [
+        "heading",
+        "opening_action",
+        "first_reply",
+        "second_reply",
+        "closing_action"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "cliffhanger",
+    "role": "script",
+    "data": "আবিরের চাকরির আবেদন কাল জমা দিতে হবে। বাবা কামাল নিজের বন্ধ কারখানার পুরোনো ঠিকানা লিখে পরিচিতকে সুপারিশ করতে গিয়েছিলেন; আবির সেই বন্ধ গেটের নতুন ছবি টেবিলে রাখে। বাবার ভুল তথ্য প্রকাশের পর সিদ্ধান্তজনিত hook; অচেনা ফোন নয়।",
+    "task": "বাংলা visual-first ছোট দৃশ্য দিন। opening_action, আবির-এর first_reply, কামাল-এর second_reply, closing_action, INT. heading। শুধু সরাসরি কথাগুলো reply-তে, নাম/বলে/quoted narration নয়। action-এ সংলাপ নয়। প্রতি সংলাপে ৬–১০টি শব্দ।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^INT\\."
+        },
+        "opening_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "first_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "second_reply": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "closing_action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        }
+      },
+      "required": [
+        "heading",
+        "opening_action",
+        "first_reply",
+        "second_reply",
+        "closing_action"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "locked-rewrite",
+    "role": "script",
+    "data": {
+      "locked_scene": "s1: বাবা ছেলের জুতো মেরামত করেন।",
+      "target": "s2",
+      "source": {
+        "action": "বাবা বিলটি হাতে নিয়ে চুপ।",
+        "father": "আমি তোমার জন্য সব করেছি।",
+        "son": "আমি সব বুঝি।"
+      }
+    },
+    "task": "শুধু s2-র action/father/son fields দিন। বাবার পুরোনো কথা ও ছেলের পুরোনো কথা দুটিই বদলাবেন, একই বাক্য ফিরিয়ে দেবেন না। সংক্ষিপ্ত দৃশ্যমান কাজ আগে, সংযত সরাসরি কথায় টাকার কথা এড়ানোর চেষ্টা। নতুন scene বা locked s1 নয়।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "father": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "son": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        }
+      },
+      "required": [
+        "action",
+        "father",
+        "son"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "director-clean",
+    "role": "director",
+    "data": {
+      "L1": "মিতা ঘরে, কামাল বারান্দায়।",
+      "L2": "মিতা টেবিলের একমাত্র চাবি নিজের ব্যাগে রাখেন।",
+      "L3": "মিতা ব্যাগ থেকে চাবি বের করে কামালকে দেন; কামাল দরজা খোলেন।"
+    },
+    "task": "শুধু বাস্তব source continuity defect থাকলে findings দিন। clean source হলে খালি findings বৈধ। line_id সঠিক হতে হবে। উদ্ধৃতি বানাবেন না, আলাদা পছন্দকে ভুল বলবেন না।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "findings": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "properties": {
+              "line_id": {
+                "type": "string",
+                "enum": [
+                  "L1",
+                  "L2",
+                  "L3"
+                ]
+              },
+              "issue": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "repair": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              }
+            },
+            "required": [
+              "line_id",
+              "issue",
+              "repair"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "findings"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "qc-clean",
+    "role": "qc",
+    "data": {
+      "L1": "মিতা ঘরে, কামাল বারান্দায়।",
+      "L2": "মিতা টেবিলের একমাত্র চাবি নিজের ব্যাগে রাখেন।",
+      "L3": "মিতা ব্যাগ থেকে চাবি বের করে কামালকে দেন; কামাল দরজা খোলেন।"
+    },
+    "task": "শুধু বাস্তব source continuity defect থাকলে findings দিন। clean source হলে খালি findings বৈধ। line_id সঠিক হতে হবে। উদ্ধৃতি বানাবেন না, আলাদা পছন্দকে ভুল বলবেন না।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "findings": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "properties": {
+              "line_id": {
+                "type": "string",
+                "enum": [
+                  "L1",
+                  "L2",
+                  "L3"
+                ]
+              },
+              "issue": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "repair": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              }
+            },
+            "required": [
+              "line_id",
+              "issue",
+              "repair"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "findings"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "director-defect",
+    "role": "director",
+    "data": {
+      "L1": "মিতা ঘরে, কামাল বারান্দায়।",
+      "L2": "মিতা টেবিলের একমাত্র চাবি নিজের ব্যাগে রাখেন।",
+      "L3": "চাবি কেউ ফেরত দেননি; কামাল টেবিল থেকে সেই একমাত্র চাবি তুলে দরজা খোলেন।"
+    },
+    "task": "শুধু বাস্তব source continuity defect থাকলে findings দিন। clean source হলে খালি findings বৈধ। line_id সঠিক হতে হবে। উদ্ধৃতি বানাবেন না, আলাদা পছন্দকে ভুল বলবেন না।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "findings": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "properties": {
+              "line_id": {
+                "type": "string",
+                "enum": [
+                  "L1",
+                  "L2",
+                  "L3"
+                ]
+              },
+              "issue": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "repair": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              }
+            },
+            "required": [
+              "line_id",
+              "issue",
+              "repair"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "findings"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  },
+  {
+    "id": "qc-defect",
+    "role": "qc",
+    "data": {
+      "L1": "মিতা ঘরে, কামাল বারান্দায়।",
+      "L2": "মিতা টেবিলের একমাত্র চাবি নিজের ব্যাগে রাখেন।",
+      "L3": "চাবি কেউ ফেরত দেননি; কামাল টেবিল থেকে সেই একমাত্র চাবি তুলে দরজা খোলেন।"
+    },
+    "task": "শুধু বাস্তব source continuity defect থাকলে findings দিন। clean source হলে খালি findings বৈধ। line_id সঠিক হতে হবে। উদ্ধৃতি বানাবেন না, আলাদা পছন্দকে ভুল বলবেন না।",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "findings": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "properties": {
+              "line_id": {
+                "type": "string",
+                "enum": [
+                  "L1",
+                  "L2",
+                  "L3"
+                ]
+              },
+              "issue": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "repair": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              }
+            },
+            "required": [
+              "line_id",
+              "issue",
+              "repair"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "findings"
+      ],
+      "additionalProperties": false
+    },
+    "knowledge_conditioned": true
+  }
+]

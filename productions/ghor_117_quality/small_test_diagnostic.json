@@ -1,0 +1,45 @@
+{
+  "inference_submitted": false,
+  "checked_at": 1793609587.390308,
+  "destination": "https://zerogpu-aoti-wan2-2-fp8da-aoti-faster.hf.space",
+  "api_status": 200,
+  "parameters": [
+    {
+      "name": "input_image",
+      "type": "dict(path: str | None (Path to a local file), url: str | None (Publicly available url or base64 encoded image), size: int | None (Size of image in bytes), orig_name: str | None (Original filename), mime_type: str | None (mime type of image), is_stream: bool (Can always be set to False), meta: dict(str, Any))"
+    },
+    {
+      "name": "prompt",
+      "type": "str"
+    },
+    {
+      "name": "steps",
+      "type": "float"
+    },
+    {
+      "name": "negative_prompt",
+      "type": "str"
+    },
+    {
+      "name": "duration_seconds",
+      "type": "float"
+    },
+    {
+      "name": "guidance_scale",
+      "type": "float"
+    },
+    {
+      "name": "guidance_scale_2",
+      "type": "float"
+    },
+    {
+      "name": "seed",
+      "type": "float"
+    },
+    {
+      "name": "randomize_seed",
+      "type": "bool"
+    }
+  ],
+  "client_initialization": "passed"
+}

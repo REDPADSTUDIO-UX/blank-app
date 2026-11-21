@@ -1,0 +1,9 @@
+test_reference_voice_actor_spoof_rejected_and_document_only_draft_cannot_clone (tests.test_voice_casting_integration.VoiceCastingTests.test_reference_voice_actor_spoof_rejected_and_document_only_draft_cannot_clone) ... ok
+test_model_delegation_cannot_confirm_voice_consent_or_select_unknown_engine (tests.test_voice_casting_integration.VoiceCastingTests.test_model_delegation_cannot_confirm_voice_consent_or_select_unknown_engine) ... ok
+test_director_review_rejects_changed_voice_reference_metadata (tests.test_voice_casting_integration.VoiceCastingTests.test_director_review_rejects_changed_voice_reference_metadata) ... ok
+test_mock_or_unrelated_native_voice_output_cannot_be_attached_as_real (tests.test_voice_casting_integration.VoiceCastingTests.test_mock_or_unrelated_native_voice_output_cannot_be_attached_as_real) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.628s
+
+OK

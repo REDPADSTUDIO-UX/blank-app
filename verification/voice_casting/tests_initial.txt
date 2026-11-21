@@ -1,0 +1,56 @@
+test_bengali_original_text_kept_separate_from_normalized_worker_payload (tests.test_voice_casting_integration.VoiceCastingTests.test_bengali_original_text_kept_separate_from_normalized_worker_payload) ... ok
+test_candidate_identity_and_unknown_model_fail_closed (tests.test_voice_casting_integration.VoiceCastingTests.test_candidate_identity_and_unknown_model_fail_closed) ... ok
+test_casting_reference_bytes_change_stales_prepared_native_request (tests.test_voice_casting_integration.VoiceCastingTests.test_casting_reference_bytes_change_stales_prepared_native_request) ... ok
+test_casting_reference_metadata_change_stales_audition (tests.test_voice_casting_integration.VoiceCastingTests.test_casting_reference_metadata_change_stales_audition) ... ok
+test_casting_source_revision_changes_invalidate_voice_handoff (tests.test_voice_casting_integration.VoiceCastingTests.test_casting_source_revision_changes_invalidate_voice_handoff) ... ERROR
+test_consent_actor_transcript_audio_and_task_cannot_be_reused (tests.test_voice_casting_integration.VoiceCastingTests.test_consent_actor_transcript_audio_and_task_cannot_be_reused) ... ok
+test_consent_scope_revision_change_is_not_silently_reused (tests.test_voice_casting_integration.VoiceCastingTests.test_consent_scope_revision_change_is_not_silently_reused) ... ok
+test_director_inspection_contains_explicit_voice_blocker_without_approval (tests.test_voice_casting_integration.VoiceCastingTests.test_director_inspection_contains_explicit_voice_blocker_without_approval) ... ok
+test_director_qc_producer_lock_still_required (tests.test_voice_casting_integration.VoiceCastingTests.test_director_qc_producer_lock_still_required) ... ok
+test_explicit_parler_department_choice_stages_existing_worker_without_generation (tests.test_voice_casting_integration.VoiceCastingTests.test_explicit_parler_department_choice_stages_existing_worker_without_generation) ... ok
+test_missing_source_casting_draft_abstains_without_hidden_fallback (tests.test_voice_casting_integration.VoiceCastingTests.test_missing_source_casting_draft_abstains_without_hidden_fallback) ... ok
+test_mock_or_unrelated_native_voice_output_cannot_be_attached_as_real (tests.test_voice_casting_integration.VoiceCastingTests.test_mock_or_unrelated_native_voice_output_cannot_be_attached_as_real) ... ok
+test_other_seventeen_profiles_and_director_script_records_preserved (tests.test_voice_casting_integration.VoiceCastingTests.test_other_seventeen_profiles_and_director_script_records_preserved) ... ok
+test_persistent_idempotent_casting_handoff_uses_existing_store (tests.test_voice_casting_integration.VoiceCastingTests.test_persistent_idempotent_casting_handoff_uses_existing_store) ... ok
+test_public_engine_uses_local_only_explicit_codec_and_no_model_fallback (tests.test_voice_casting_integration.VoiceCastingTests.test_public_engine_uses_local_only_explicit_codec_and_no_model_fallback) ... ok
+test_public_source_and_exact_selected_gated_sources_are_separate (tests.test_voice_casting_integration.VoiceCastingTests.test_public_source_and_exact_selected_gated_sources_are_separate) ... ok
+test_public_worker_imports_no_heavy_model_library_at_module_scope (tests.test_voice_casting_integration.VoiceCastingTests.test_public_worker_imports_no_heavy_model_library_at_module_scope) ... ok
+test_revoked_or_changed_consent_evidence_invalidates_review (tests.test_voice_casting_integration.VoiceCastingTests.test_revoked_or_changed_consent_evidence_invalidates_review) ... ok
+test_unreviewed_selected_voice_fails_before_any_model_import (tests.test_voice_casting_integration.VoiceCastingTests.test_unreviewed_selected_voice_fails_before_any_model_import) ... ok
+test_unsafe_vocos_pickle_or_custom_config_is_rejected_without_loading_weights (tests.test_voice_casting_integration.VoiceCastingTests.test_unsafe_vocos_pickle_or_custom_config_is_rejected_without_loading_weights) ... ok
+test_uploaded_consent_document_does_not_create_review (tests.test_voice_casting_integration.VoiceCastingTests.test_uploaded_consent_document_does_not_create_review) ... ok
+test_voice_and_casting_logs_do_not_capture_raw_upstream_diagnostics (tests.test_voice_casting_integration.VoiceCastingTests.test_voice_and_casting_logs_do_not_capture_raw_upstream_diagnostics) ... ok
+test_voice_plan_change_stales_prior_director_inspection (tests.test_voice_casting_integration.VoiceCastingTests.test_voice_plan_change_stales_prior_director_inspection) ... ok
+test_wav_format_rate_channels_and_truncation_checked_without_listening (tests.test_voice_casting_integration.VoiceCastingTests.test_wav_format_rate_channels_and_truncation_checked_without_listening) ... ok
+test_casting_cannot_bypass_director_qc_or_identity_rights (tests.test_producer_control.ProducerTests.test_casting_cannot_bypass_director_qc_or_identity_rights) ... ok
+test_casting_lock_costume_consumption_and_reference_replacement_stales (tests.test_producer_control.ProducerTests.test_casting_lock_costume_consumption_and_reference_replacement_stales) ... ok
+test_wrong_actor_unexplained_hair_change_and_portrait_acting_rejected (tests.test_producer_control.ProducerTests.test_wrong_actor_unexplained_hair_change_and_portrait_acting_rejected) ... ok
+test_parler_and_stable_audio_prepare_only_their_existing_local_payloads (tests.test_offline_11_preparation.OfflineElevenTests.test_parler_and_stable_audio_prepare_only_their_existing_local_payloads) ... ok
+test_actual_running_dummy_is_cancelled_from_restarted_service (tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service) ... ok
+test_isolated_child_environment_does_not_inherit_provider_tokens_or_proxies (tests.test_native_local_execution.NativeLocalTests.test_isolated_child_environment_does_not_inherit_provider_tokens_or_proxies) ... ok
+
+======================================================================
+ERROR: test_casting_source_revision_changes_invalidate_voice_handoff (tests.test_voice_casting_integration.VoiceCastingTests.test_casting_source_revision_changes_invalidate_voice_handoff)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_voice_casting_integration.py", line 80, in test_casting_source_revision_changes_invalidate_voice_handoff
+    with self.assertRaises(AgentError):self.w.get(d['id'])
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/casting_voice.py", line 55, in get
+    if fingerprint(d)!=id or self._snapshot(s['task'],s['candidate_id'])!=s:raise AgentError('Casting identity, source, revision or references changed.')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/casting_voice.py", line 18, in _snapshot
+    t,body=self.casting.proposal(task);rows=body['artifact']['records']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/casting.py", line 43, in proposal
+    with self.store.tx() as tx:return self.proposal(task,tx)
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/casting.py", line 48, in proposal
+    body=json.loads(json.loads(row[0])['summary'])
+                               ~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------------------------------------
+Ran 30 tests in 1.899s
+
+FAILED (errors=1)

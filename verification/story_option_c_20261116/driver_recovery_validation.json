@@ -1,0 +1,17 @@
+{
+  "raw_http_matches_output": true,
+  "raw_sha256": "1ff2f6a5c4173cdd1841c1ac043f48ca3ac3eb8586ebe1bf45a9aa418e76b7ff",
+  "schema_valid": true,
+  "finish_reason": "stop",
+  "reservation_payload_sha256_matches_request": true,
+  "consumed_calls": 3,
+  "remaining_calls": 4,
+  "model_load": "33/33 GPU layers",
+  "new_calls": 1,
+  "all_servers_stopped": true,
+  "independent_human_review": "PENDING",
+  "creative_quality_passed": false,
+  "complete_story": false,
+  "full_story_qc": "NOT RUN: no complete story",
+  "scope": "Actual new canary validation only; no successful prior tests or benchmark cases repeated"
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "module": "tests.smoke_streamlit_ui",
+    "passed": true
+  },
+  {
+    "module": "tests.test_production_ui",
+    "passed": true
+  },
+  {
+    "module": "tests.test_drama_quality_ui",
+    "passed": true
+  },
+  {
+    "module": "tests.test_marketing_ui",
+    "passed": true
+  },
+  {
+    "module": "tests.test_youtube_ui",
+    "passed": true
+  },
+  {
+    "module": "tests.test_private_preview",
+    "passed": true
+  },
+  {
+    "module": "tests.test_storyboard",
+    "passed": true
+  },
+  {
+    "module": "tests.test_production_pipeline",
+    "passed": true
+  }
+]

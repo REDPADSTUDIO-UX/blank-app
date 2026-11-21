@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "baseline": "092655e572a566d64e086ba8998049e1865750cf",
+  "branch": "feature/video-music-editing-studio",
+  "historical_matrix_count": 20,
+  "current_registry_count": 21,
+  "current_matrix_count": 21,
+  "casting_in_current_matrix": true,
+  "dashboard_and_qc_source": "redpad_pipeline.agent_reporting; shared UI integrated into Dashboard Home, Agent Control Center, Studio overview, Director Studio and Approval Desk",
+  "engineering_evidence": "cpu_tests.json; authored CPU fixture workflows only, not actual model competence",
+  "model_and_production_status": "Selected-model validation and production readiness are not promoted by these tests. Live project runtime evidence is labeled separately.",
+  "checks": [
+    "All registered agents present, exact identity matching",
+    "Missing/extra/duplicate/malformed IDs and stale counts/hash rejected",
+    "Registry duplicate IDs/keys rejected before AGENTS dict construction",
+    "All 21 software execution contracts and QC coverage exercised",
+    "Casting typed and legacy QC revision routing requires owner-approved exact-version QC",
+    "Casting Director/Producer lock and QC independence retained",
+    "Historical legacy QC recipient resolved read-only from original inputs",
+    "Stale findings/handoffs labeled rather than treated as current approval",
+    "New registry/matrix/QC checks added to existing CI workflow",
+    "Compatibility exporter now writes/checks only the current matrix; historical records retained"
+  ],
+  "test_count": 109,
+  "distinct_test_ids": 109,
+  "failures": 0,
+  "errors": 0,
+  "compile_passed": true,
+  "diff_check_passed": true,
+  "protected_files": [
+    {
+      "path": "verification/agent_implementation_matrix.json",
+      "sha256": "8915731a4a98786cf3c1f3ab5e5b9d091854562759b4860fab155bc445d2738d",
+      "unchanged": true
+    },
+    {
+      "path": "verification/agent_foundation_evidence.json",
+      "sha256": "a3be134e9f6a31a5f6be681b371c31458265b32fedd856b711cb65bde6402470",
+      "unchanged": true
+    },
+    {
+      "path": "verification/specialists/matrix.json",
+      "sha256": "b2d5df6906aec3e942f423c1a3cb802e77249b038226435020e618d1476baa0f",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/agent_catalog.json",
+      "sha256": "4c30b21812fa36784a8e363552655eb18df392fc7b13157381dd46896df16865",
+      "unchanged": true
+    },
+    {
+      "path": "assets/professional/models.json",
+      "sha256": "66aea06431593317c4821120c1a78cdbe3902733afa4b662e4b4d1586c14c300",
+      "unchanged": true
+    },
+    {
+      "path": "assets/professional/phase3_candidates.json",
+      "sha256": "f157f9113a7db1616acc9b2473cfc669099b6bd9423cd4017b7d660765ed0c1f",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/producer_control.py",
+      "sha256": "9ecf944b97989c6f4524f91f617674ae65d4c38efdd86ef9fe1e26411e5d0219",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/casting.py",
+      "sha256": "8322fa0e2081bc55bb73f5bf5710f90e4d62fafc8844bd9578aa62930ba7cae0",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/specialist_review.py",
+      "sha256": "ea05c89e87bb45cb00621e2dfd327e8edc9ffcb8b46edd8d8d96e237641922ee",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/shared_model_worker.py",
+      "sha256": "5b953bfbba3fc02b11d60ca18dd2922f112a4a11d3a5157ea3bd0bfaf2c92d2e",
+      "unchanged": true
+    }
+  ],
+  "gpu_inference": false,
+  "model_downloads": false,
+  "paid_api_calls": false,
+  "production_database_or_media_changed": false,
+  "deployment": false,
+  "youtube_publishing": false,
+  "remaining_issues": [
+    "No remaining registry/matrix/Dashboard/QC mismatch detected by this scope.",
+    "Actual selected-model capability, independent artistic review and production acceptance remain separate and are not established by software fixtures."
+  ]
+}

@@ -1,0 +1,7 @@
+# Optional isolated no-paid-API animated-drama production tools.
+# Existing CPU host and installed FFmpeg/ffprobe required; no cloud provisioning.
+pillow>=10
+numpy>=1.24,<3
+edge-tts>=7,<8
+# Only needed for proxy-enabled hosts' optional anonymous Gradio probe.
+socksio>=1,<2

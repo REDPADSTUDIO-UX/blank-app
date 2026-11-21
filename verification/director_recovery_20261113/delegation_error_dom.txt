@@ -1,0 +1,91 @@
+- banner:
+  - heading "Spaces Hugging Face's logo huggingface-projects / gemma-3-12b-it Like 165 Agents Running on Zero Get PRO" [level=1]:
+    - link "Spaces":
+      - /url: /spaces
+    - link "Hugging Face's logo":
+      - /url: /
+      - img "Hugging Face's logo"
+    - separator
+    - link:
+      - /url: /huggingface-projects
+    - link "huggingface-projects":
+      - /url: /huggingface-projects
+    - generic: /
+    - link "gemma-3-12b-it":
+      - /url: /spaces/huggingface-projects/gemma-3-12b-it
+    - button "Copy space name to clipboard":
+    - button "Like":
+      - generic: Like
+    - button "165"
+    - text: Agents
+    - text: Running
+    - generic: "on"
+    - generic: Zero
+    - link "Get PRO":
+      - /url: /pro
+      - text: Get PRO
+  - link "App":
+    - /url: /spaces/huggingface-projects/gemma-3-12b-it
+    - text: App
+  - link "Files":
+    - /url: /spaces/huggingface-projects/gemma-3-12b-it/tree/main
+    - generic: Files
+  - link "Community 12":
+    - /url: /spaces/huggingface-projects/gemma-3-12b-it/discussions
+    - text: Community
+    - generic: "12"
+  - button:
+  - separator
+  - button
+- text: Hugging Face is way more fun with friends and colleagues! 🤗
+- link "Join an organization":
+  - /url: /organizations/suggestions
+- button "Dismiss this message"
+- main:
+  - iframe [active] [id="iFrameResizer0"]:
+    - main:
+      - heading "Gemma 3 12B IT" [level=1]
+      - paragraph: This is a demo of Gemma 3 12B it, a vision language model with outstanding performance on a wide range of tasks. You can upload images, interleaved images and videos. Note that video input only supports single-turn conversation and mp4 input.
+      - button "Clear":
+      - generic: Error
+      - text: Chatbot
+      - button:
+      - button "Clear":
+      - button "Copy conversation":
+      - log "chatbot conversation":
+        - 'generic "user''s message: ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়। শুধু চারটি handoff: story, script, performance, cinematographer। প্রতি brief সর্বোচ্চ ১০ বাংলা শব্দ। JSON: {\"handoffs\":[{\"agent\":\"...\",\"brief\":\"...\",\"lock\":\"...\"}],\"qc_gate\":\"স্বাধীন QC কী যাচাই করবে\",\"owner_gate\":\"কোন কাজের আগে owner অনুমোদন লাগবে\"}। QC-কে Director-এর নিজের approval হিসেবে ব্যবহার নয়।"':
+          - paragraph:
+            - text: ঢাকার কল্যাণপুর। রুবা (২৯), বাসা থেকে খাবার বিক্রি করে; ছোট ভাই আদনান (২৪), ডেলিভারি দেয়। মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন। রুবা মায়ের ব্যাগে পুরোনো সনদ দেখে; ইন্টারভিউর কথা এখনো জানে না। রান্নার গ্যাস বন্ধ, আজকের অর্ডারের অগ্রিম টাকা মাত্র একবার এসেছে এবং ফেরত দিতে হবে যদি খাবার না পৌঁছায়। মা টাকা আনতে পারেন না; সমাধান আসবে চরিত্রের সিদ্ধান্ত থেকে। একই সকাল, একটিমাত্র নীল ব্যাগ। নতুন বাইরের উদ্ধারকারী বা হঠাৎ পাওয়া টাকা নয়।
+            - text: "শুধু চারটি handoff: story, script, performance, cinematographer। প্রতি brief সর্বোচ্চ ১০ বাংলা শব্দ। JSON: {\"handoffs\":[{\"agent\":\"...\",\"brief\":\"...\",\"lock\":\"...\"}],\"qc_gate\":\"স্বাধীন QC কী যাচাই করবে\",\"owner_gate\":\"কোন কাজের আগে owner অনুমোদন লাগবে\"}। QC-কে Director-এর নিজের approval হিসেবে ব্যবহার নয়।"
+        - button "Copy message":
+      - group "Multimedia input field":
+        - generic: MultimodalTextbox
+        - button "Upload a file" [disabled]:
+        - textbox [disabled]
+        - button "Stop":
+      - button "Additional inputs ▼":
+        - generic: Additional inputs
+        - generic: ▼
+      - generic: System Prompt
+      - textbox "System Prompt":
+        - /placeholder: ""
+        - text: আপনি Director AI। শুধু JSON object লিখুন, Markdown নয়। বাংলা সংক্ষিপ্ত নির্দেশ দিন। Source অপরিবর্তিত। Approval বা কাজ শেষ হওয়ার দাবি নয়।
+      - generic: Max New Tokens
+      - spinbutton "number input for Max New Tokens": "1024"
+      - button "Reset to default value": ↺
+      - generic: "100"
+      - slider "range slider for Max New Tokens": "1020"
+      - generic: "2000"
+    - contentinfo "Gradio footer navigation":
+      - button "Use via API logo":
+        - text: Use via API
+        - img "logo"
+      - generic: ·
+      - link "Built with Gradio logo":
+        - /url: https://gradio.app
+        - text: Built with Gradio
+        - img "logo"
+      - generic: ·
+      - button "Settings Settings":
+        - text: Settings
+        - img "Settings"

@@ -1,0 +1,6 @@
+{
+  "no_new_inference": true,
+  "input_echo": true,
+  "source": "engine_roundtrip.json",
+  "note": "The real task-engine call verified local inference, storage and Awaiting QC state, but returned the input instructions rather than an original story. New echo warning flags this limitation; it never grants quality or owner approval."
+}

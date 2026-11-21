@@ -1,0 +1,25 @@
+{
+  "kind": "software_fixture_not_model_output",
+  "trigger": "Actual recovered Director response repeats performance and continuity fields; no auto-repair of that malformed response.",
+  "fixture_raw": "{\"findings\":[{\"code\":\"invented\"}],\"findings\":[]}",
+  "old_validation": {
+    "json_valid": true,
+    "technical_pass": true,
+    "generation_complete": true,
+    "quote_findings": [],
+    "artistic_scores": null,
+    "human_review": "pending",
+    "professional_accepted": false,
+    "contract_fields_valid": true,
+    "contract_field_types_valid": true,
+    "critic_control_pass": true,
+    "true_positive_defects": 0,
+    "false_positive_findings": 0,
+    "missed_expected_defects": 0,
+    "unsupported_quotes": 0
+  },
+  "old_decoded": {
+    "findings": []
+  },
+  "fix": "Model output JSON now rejects duplicate keys recursively; original raw retained."
+}

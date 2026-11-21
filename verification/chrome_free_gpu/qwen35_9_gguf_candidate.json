@@ -1,0 +1,51 @@
+{
+  "source": "https://huggingface.co/api/models/unsloth/Qwen3.5-9B-GGUF?blobs=true",
+  "repo": "unsloth/Qwen3.5-9B-GGUF",
+  "revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+  "license_metadata": "apache-2.0",
+  "gated": false,
+  "selected_file": {
+    "rfilename": "Qwen3.5-9B-Q4_K_M.gguf",
+    "blobId": "111d9180ac190fcfea6f515887e3c1716ba1bba8",
+    "size": 5680522464,
+    "lfs": {
+      "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+      "size": 5680522464,
+      "pointerSize": 135
+    }
+  },
+  "download_approved": false,
+  "download_performed": false,
+  "purpose": "New low-memory quantization candidate because actual free Colab host RAM is below existing source-to-NF4 profiles; not a verified winner or equivalent NF4 benchmark.",
+  "intended_tests": [
+    "one minimal GPU GGUF load/generation canary",
+    "existing causal_outline and natural_dialogue cases",
+    "existing evidence-grounded Director/QC controls after canary passes"
+  ],
+  "runtime_proposal": {
+    "provider": "owner free Colab T4",
+    "context_tokens": 2048,
+    "max_new_tokens": 512,
+    "concurrency": 1,
+    "first_generation_timeout_seconds": 180,
+    "precision": "Q4_K_M GGUF, not existing NF4 profile",
+    "estimated_vram_gib": [
+      8,
+      10
+    ],
+    "estimated_host_ram_gib": [
+      4,
+      8
+    ],
+    "memory_estimates_measured": false,
+    "runtime_implementation": "llama.cpp CUDA support must be pinned, compiled/installed and validated after approval; no compatible GGUF GPU worker verified yet",
+    "scope": "text-only; no mmproj/vision weights, no additional model downloads, no paid fallback"
+  },
+  "limitations": [
+    "Ephemeral free T4 availability and quota not guaranteed",
+    "GPU GGUF runtime support and exact memory fit not verified",
+    "Changed quantization/settings create a distinct experimental variant, never relabel an NF4 result",
+    "Human Bengali editorial review still required",
+    "Package/build artifacts extra; no permission to download other model files"
+  ]
+}

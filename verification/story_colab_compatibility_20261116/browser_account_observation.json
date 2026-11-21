@@ -1,0 +1,15 @@
+{
+  "date_bangladesh": "2026-11-16",
+  "browser": "Chrome extension, existing owner-authenticated Colab",
+  "runtime_connected": true,
+  "ui_subscription": "You are not subscribed.",
+  "compute_units": 0,
+  "free_resources_guaranteed": false,
+  "ui_session_estimate": "up to 4 hours 10 minutes",
+  "remaining_gpu_quota_hours": null,
+  "quota_note": "UI session estimate is not guaranteed allocation or remaining account GPU hours.",
+  "notebook_saved": "All changes saved observed",
+  "gpu_launches": 0,
+  "prior_failed_proc_mount_probe_repeated": false,
+  "private_account_identifiers_retained": false
+}

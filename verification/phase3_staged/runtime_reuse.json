@@ -1,0 +1,13 @@
+{
+  "existing_installation_reused": true,
+  "new_model_downloads": 0,
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "runtime_log_cpu_lines": [
+    "load_tensors:          CPU model buffer size =   692.63 MiB",
+    "load_tensors:   CPU_REPACK model buffer size =  1683.28 MiB",
+    "llama_kv_cache:        CPU KV buffer size =   576.00 MiB",
+    "sched_reserve:        CPU compute buffer size =    86.02 MiB"
+  ],
+  "memory_measurement": "Buffer allocation lines only; not a new peak aggregate RSS measurement",
+  "note": "Owned local server shut down by context manager; no system service created"
+}

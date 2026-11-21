@@ -1,0 +1,74 @@
+{
+  "scope": "Revalidation of ORIGINAL replies using strengthened guards, no model rerun; semantic quality still unverified",
+  "plan_goal_schema_pass": false,
+  "beats": [
+    {
+      "id": "beat1",
+      "state_check_pass": true,
+      "error": ""
+    },
+    {
+      "id": "beat2",
+      "state_check_pass": false,
+      "error": "Unstaged travel skips an established location; split the beat."
+    },
+    {
+      "id": "beat3",
+      "state_check_pass": false,
+      "error": "Unstaged travel skips an established location; split the beat."
+    }
+  ],
+  "scene_schema_errors": [
+    "'বৃষ্টির সকালে বাড়িতে ছাতা' does not match '^(INT\\\\.|EXT\\\\.|INT\\\\./EXT\\\\.)'",
+    "[{'text': 'রাশেদ ছাতা নিয়ে বাড়ির দরজা খুলে দেয়', 'type': 'action'}, {'text': 'তানিয়া চায়ের গোলাপি পাত্র ধরে বলে, \"আজ ছাতা নিয়ে আসলে কি করবি রাশেদ? বৃষ্টি তো আমার চাক', 'type': 'action'}, {'text': 'রাশেদ হাসি মানে বলে, \"তুমি যদি চাকরি দেখবে না, তাহলে আমি কাজ করব না তোমার পাশে বসে থাকবো।\"', 'type': 'action'}, {'text': 'তানিয়া হাসি মানে বলে, \"তাহলে আমি চাকরি দেখব না, আমি তোমার পাশে বসে থাকবো আর চায়ের গোলাপি', 'type': 'action'}, {'text': 'রাশেদ ছাতা তার পাশে রাখে আর বলে, \"তুমি যদি বাড়িতে থাকো, তাহলে আমি অফিসে যাব না।\"', 'type': 'action'}, {'text': 'তানিয়া বলে, \"তাহলে আমি চাকরি হারাবো, কিন্তু তুমি আমার পাশে থাকবে না তোমার ছাতা দেখে বসে থ', 'type': 'action'}] does not contain items matching the given schema"
+  ],
+  "director_grounded": {
+    "source_sha256": "4806799dd286c0080febefbc22f31bb9d2d54dafe295a9021dd88a1c569d67c6",
+    "status": "needs_human_editorial_review",
+    "automatic_revision_allowed": false,
+    "findings": [
+      {
+        "criterion": "logic",
+        "line_id": "L6",
+        "problem": "তানিয়া চাকরি হারাবো বলে যখন রাশেদ তার ছাতা দেখে বসে থাকার প্রস্তাব দেয়, তখন তা",
+        "suggestion": "চাকরি হারানোর ক্ষতি বুঝে তানিয়া প্রতিক্রিয়া দেয় না, তার প্রতিক্রিয়া অপেক্ষা",
+        "evidence": "তানিয়া বলে, \"তাহলে আমি চাকরি হারাবো, কিন্তু তুমি আমার পাশে থাকবে না তোমার ছাতা দেখে বসে থ",
+        "source_beat": {
+          "text": "তানিয়া বলে, \"তাহলে আমি চাকরি হারাবো, কিন্তু তুমি আমার পাশে থাকবে না তোমার ছাতা দেখে বসে থ",
+          "type": "action"
+        }
+      },
+      {
+        "criterion": "visual",
+        "line_id": "L1",
+        "problem": "রাশেদ ছাতা নিয়ে দরজা খুলে দেয় কিন্তু ছাতা দেখা যায় না কারণ তা পরে তার পাশে রে",
+        "suggestion": "ছাতা খুলে দেয় এবং তার পাশে রাখা হয় যাতে দৃশ্য স্থায়ী হয়",
+        "evidence": "রাশেদ ছাতা নিয়ে বাড়ির দরজা খুলে দেয়",
+        "source_beat": {
+          "text": "রাশেদ ছাতা নিয়ে বাড়ির দরজা খুলে দেয়",
+          "type": "action"
+        }
+      }
+    ]
+  },
+  "compact_slot_check_pass": false,
+  "compact_slot_error": "Dialogue slot contains a narrated speaker attribution; direct speech required.",
+  "fixed_brief_director_grounded": {
+    "source_sha256": "65b46b03174f5f7432a3dbb393d0ae625a1d0d52d067293c0d607cc7794bdce6",
+    "status": "needs_human_editorial_review",
+    "automatic_revision_allowed": false,
+    "findings": [
+      {
+        "criterion": "visual",
+        "line_id": "L1",
+        "problem": "বৃষ্টি শুরু হচ্ছে বলে ছাতা দেখা যাচ্ছে, কিন্তু কোনো প্রতিক্রিয়া নেই যা সেটি প্র",
+        "suggestion": "বৃষ্টির শুরুর মুহূর্তে কারো চোখে দেখা হয় না, তারপর এগিয়ে যায়",
+        "evidence": "বৃষ্টি শুরু হচ্ছে, টেবিলে একটি ছাতা দেখা যাচ্ছে।",
+        "source_beat": {
+          "type": "action",
+          "text": "বৃষ্টি শুরু হচ্ছে, টেবিলে একটি ছাতা দেখা যাচ্ছে।"
+        }
+      }
+    ]
+  }
+}

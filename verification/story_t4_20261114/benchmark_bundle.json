@@ -1,0 +1,904 @@
+{
+  "instructions": [
+    "Write original natural Bengali story prose from the supplied existing professional brief. Do not copy another drama or imitate a living writer.",
+    "Ask a central dramatic question requiring a costly protagonist decision. Father supports the job but fears solitude; daughter’s independence is not selfishness.",
+    "Give each major character want, need, fear, contradiction, relationship, internal conflict, observable behavior and emotional change.",
+    "Every beat changes information, relationships, emotion, stakes, goals or options through a credible cause. Track character knowledge and possessions.",
+    "Earn at least two subtle emotional moments through earlier setup, small human actions and consequences; tragedy or speeches are not automatic emotion.",
+    "Include one motivated humorous moment from personality, irony, awkwardness or relationship; avoid unrelated jokes.",
+    "Use fair clues and information control for one earned reveal; escalate choices and consequences rather than repeat scenes.",
+    "Use visible action, location or sound for filmability. Flag cultural and economic specifics as hypotheses unless supplied verified sources establish them.",
+    "Return only the artifact contract. Self-critique is a proposal, never an independent professional score. Preserve exact owner locks and untargeted records."
+  ],
+  "contracts": {
+    "foundation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assumptions",
+        "characters",
+        "conflict_stakes",
+        "dramatic_question",
+        "initial_knowledge",
+        "logline",
+        "relationship_dynamics",
+        "schema_version",
+        "theme",
+        "unresolved_questions"
+      ],
+      "properties": {
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 30
+        },
+        "characters": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "want",
+              "need",
+              "fear",
+              "contradiction",
+              "relationship",
+              "internal_conflict",
+              "behavior",
+              "emotional_change",
+              "name",
+              "biography"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "want": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "need": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "fear": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "contradiction": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "relationship": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "internal_conflict": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "behavior": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "emotional_change": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              },
+              "biography": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              }
+            }
+          }
+        },
+        "conflict_stakes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2500
+        },
+        "dramatic_question": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2500
+        },
+        "initial_knowledge": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          }
+        },
+        "logline": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2500
+        },
+        "relationship_dynamics": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2500
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "theme": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2500
+        },
+        "unresolved_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "maxItems": 30
+        }
+      }
+    },
+    "act_1": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "act",
+          "actor",
+          "goal",
+          "choice",
+          "cause",
+          "consequence",
+          "action",
+          "location",
+          "sound",
+          "emotion",
+          "before",
+          "after",
+          "requires",
+          "learns",
+          "plants",
+          "payoffs",
+          "emotion_setups",
+          "subtle_emotion",
+          "humor",
+          "humor_motivation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "act": {
+            "const": 1
+          },
+          "actor": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "goal": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "choice": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "cause": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "consequence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "sound": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "emotion": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "before": {
+            "type": "object",
+            "minProperties": 1,
+            "maxProperties": 30,
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            }
+          },
+          "after": {
+            "type": "object",
+            "minProperties": 1,
+            "maxProperties": 30,
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            }
+          },
+          "requires": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "maxItems": 30
+            }
+          },
+          "learns": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "maxItems": 30
+            }
+          },
+          "plants": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          },
+          "payoffs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          },
+          "emotion_setups": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          },
+          "subtle_emotion": {
+            "type": "boolean"
+          },
+          "humor": {
+            "type": "string",
+            "maxLength": 600
+          },
+          "humor_motivation": {
+            "type": "string",
+            "maxLength": 600
+          }
+        }
+      }
+    },
+    "act_2": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "act",
+          "actor",
+          "goal",
+          "choice",
+          "cause",
+          "consequence",
+          "action",
+          "location",
+          "sound",
+          "emotion",
+          "before",
+          "after",
+          "requires",
+          "learns",
+          "plants",
+          "payoffs",
+          "emotion_setups",
+          "subtle_emotion",
+          "humor",
+          "humor_motivation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "act": {
+            "const": 2
+          },
+          "actor": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "goal": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "choice": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "cause": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "consequence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "sound": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "emotion": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "before": {
+            "type": "object",
+            "minProperties": 1,
+            "maxProperties": 30,
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            }
+          },
+          "after": {
+            "type": "object",
+            "minProperties": 1,
+            "maxProperties": 30,
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            }
+          },
+          "requires": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "maxItems": 30
+            }
+          },
+          "learns": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "maxItems": 30
+            }
+          },
+          "plants": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          },
+          "payoffs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          },
+          "emotion_setups": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          },
+          "subtle_emotion": {
+            "type": "boolean"
+          },
+          "humor": {
+            "type": "string",
+            "maxLength": 600
+          },
+          "humor_motivation": {
+            "type": "string",
+            "maxLength": 600
+          }
+        }
+      }
+    },
+    "act_3": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "act",
+          "actor",
+          "goal",
+          "choice",
+          "cause",
+          "consequence",
+          "action",
+          "location",
+          "sound",
+          "emotion",
+          "before",
+          "after",
+          "requires",
+          "learns",
+          "plants",
+          "payoffs",
+          "emotion_setups",
+          "subtle_emotion",
+          "humor",
+          "humor_motivation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "act": {
+            "const": 3
+          },
+          "actor": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "goal": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "choice": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "cause": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "consequence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "sound": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "emotion": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2500
+          },
+          "before": {
+            "type": "object",
+            "minProperties": 1,
+            "maxProperties": 30,
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            }
+          },
+          "after": {
+            "type": "object",
+            "minProperties": 1,
+            "maxProperties": 30,
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2500
+            }
+          },
+          "requires": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "maxItems": 30
+            }
+          },
+          "learns": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true,
+              "maxItems": 30
+            }
+          },
+          "plants": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          },
+          "payoffs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          },
+          "emotion_setups": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          },
+          "subtle_emotion": {
+            "type": "boolean"
+          },
+          "humor": {
+            "type": "string",
+            "maxLength": 600
+          },
+          "humor_motivation": {
+            "type": "string",
+            "maxLength": 600
+          }
+        }
+      }
+    },
+    "reflection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ending_consequence",
+        "filmability",
+        "self_critique",
+        "treatment"
+      ],
+      "properties": {
+        "ending_consequence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2500
+        },
+        "filmability": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2500
+        },
+        "self_critique": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 15,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "beat",
+              "weakness",
+              "suggestion"
+            ],
+            "properties": {
+              "beat": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "weakness": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              },
+              "suggestion": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2500
+              }
+            }
+          }
+        },
+        "treatment": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2500
+        }
+      }
+    }
+  },
+  "brief": "ফিরতি টিকিট: ঢাকার কাঁঠালবাগানের ভাড়া বাসায় নীরা (২৭) রাজশাহীতে চাকরি নিতে চায়। বাবা হাসান (৫৮), দর্জি, মেয়ের যাওয়া চান কিন্তু একা থাকার ভয় লুকান। সকালে তিনি ব্যাগের হাতল সারান, বাসের টিকিট লাল টিনের বাক্সে রাখেন। নীরা টিকিট দেখার আগে তার কেনার কথা জানে না। ঘরে পূর্বে জানলা, পশ্চিমে প্রবেশদ্বার, উত্তরে রান্নাঘর। একই সকাল, একই পোশাক ও একটিমাত্র চাবি। পারিবারিক যত্ন কাজে ফুটবে, কৃত্রিম ত্যাগ বা অচেনা উদ্ধারকারী নয়।",
+  "rubric": [
+    {
+      "id": "story.creative.1",
+      "criterion": "originality",
+      "question": "Distinct choices and situations; no originality guarantee without comparative review",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.2",
+      "criterion": "causal_logic",
+      "question": "Each turn follows an established action and consequence",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.3",
+      "criterion": "character_agency",
+      "question": "Protagonist chooses between costly alternatives",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.4",
+      "criterion": "psychological_depth",
+      "question": "Wants conflict with fears and observable behavior",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.5",
+      "criterion": "relationship_credibility",
+      "question": "Both father and daughter have defensible competing needs",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.6",
+      "criterion": "emotional_authenticity",
+      "question": "Earlier investment and restrained action earn emotional moments",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.7",
+      "criterion": "organic_humor",
+      "question": "Humor grows from a specific personality or situation",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.8",
+      "criterion": "bangladesh_authenticity",
+      "question": "Social details are specific, attributed where factual, and avoid stereotypes",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.9",
+      "criterion": "hook_suspense",
+      "question": "Fairly controlled information motivates curiosity",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.10",
+      "criterion": "escalation",
+      "question": "Choices narrow or costs increase instead of repetitive conflict",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.11",
+      "criterion": "setup_payoff",
+      "question": "Earlier visible plants motivate later consequences",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.12",
+      "criterion": "ending_quality",
+      "question": "Ending follows choices and changes both characters without a formulaic rescue",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.13",
+      "criterion": "filmability",
+      "question": "Action, location or sound communicates each major beat",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.14",
+      "criterion": "consistency",
+      "question": "Knowledge, timeline, possessions and locked facts remain coherent",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    },
+    {
+      "id": "story.creative.15",
+      "criterion": "audience_engagement",
+      "question": "Engagement is a reviewer hypothesis, not invented audience analytics",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text"
+    }
+  ],
+  "checkpoint": "4d93a8c83e32ca17e9611797c10737ab9d76bed5"
+}
