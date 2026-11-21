@@ -1,3 +1,13 @@
+# Latest continuation — Story Act2 no-inference recovery / 2026-11-21
+
+Base verified feature HEAD `a3d6252d2886827d7028ef328eff3fbf967901e4`. Budget11 remains9/11 consumed,2 remaining; accepted structural Foundationv2/Act1v3 preserved, failedAct2 seven findings immutable. No new inference/GPU/download. Targeted Act2 prompt prepared ONLY, not submitted or installed; exact token-fit pending. No automatic retry or ceiling amendment.
+
+See [current recovery report](PHASE3_STORY_ACT2_NO_INFERENCE_RECOVERY_REPORT_BN.md), `verification/story_act2_recovery_20261121/` and existing-QC genuine-text diagnostic extension `verification/intelligence/qc_handoff/story_budget11_diagnostic_v1/`. Human/owner acceptance remains pending. Source master has eight readiness statuses, not a verified eight-development-phase roadmap; model-batch, benchmark-stage and call-budget numbering remain separate. Professional readiness0/21.
+
+Selected development environment unavailable: connector source review + JavaScript static checks only; no Python/app tests claimed. No existing engineering rebuilt. Original checkpoint history below retained verbatim.
+
+---
+
 # Latest continuation — approved actual Qwen/Gemma tests (2026-11-12)
 
 Continued from `edb0adcd041fce7787dfd42e0b1088456aeb834a`, feature only. Owner explicitly approved exact5.68GB Qwen GGUF download/freeColab + prior fictional payload to namedGemmaSpace. Consent barrier handled without bypass; previousunknown event remains unknown, newHF dialogue raw captured.

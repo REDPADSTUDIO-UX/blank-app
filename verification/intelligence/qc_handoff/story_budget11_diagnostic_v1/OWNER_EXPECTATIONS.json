@@ -1,0 +1,89 @@
+{
+  "packet_id": "qc.story_budget11.genuine_partial.v1",
+  "source_commit": "a3d6252d2886827d7028ef328eff3fbf967901e4",
+  "samples": {
+    "Q1": {
+      "source_file": "verification/story_budget11_20261121/final_actual.json",
+      "foundation_raw_sha256": "a69692f0183fd82623bec718176898e7c85f04529b0bc0fc586de17c09776612",
+      "act1_raw_sha256": "a3986dbcb4e6a73c0e96c9e558e13d0af706e1418e55d01be290f33ed622d8be",
+      "structural_handoff": "PASS in recorded unchanged guard",
+      "artistic_control": "NOT a clean control; no professional acceptance"
+    },
+    "Q2": {
+      "source_file": "verification/story_budget11_20261121/final_actual.json",
+      "act2_raw_sha256": "02ab4077f2814e70ca491380a1cb60cef286c1477f9d77f97b025e1bd41890fc",
+      "captured_structural_findings": [
+        {
+          "path": "act_2[0].cause",
+          "code": "earlier_causal_reference_required",
+          "repair_applied": false
+        },
+        {
+          "path": "act_2[0].requires.H",
+          "code": "knowledge_not_established",
+          "repair_applied": false
+        },
+        {
+          "path": "act_2[1].cause",
+          "code": "earlier_causal_reference_required",
+          "repair_applied": false
+        },
+        {
+          "path": "act_2[2].cause",
+          "code": "earlier_causal_reference_required",
+          "repair_applied": false
+        },
+        {
+          "path": "act_2[2].before",
+          "code": "predecessor_state_mismatch",
+          "repair_applied": false
+        },
+        {
+          "path": "act_2[2].requires.H",
+          "code": "knowledge_not_established",
+          "repair_applied": false
+        },
+        {
+          "path": "act_2[3].cause",
+          "code": "earlier_causal_reference_required",
+          "repair_applied": false
+        }
+      ]
+    }
+  },
+  "structural_truth_scope": "Seven symbolic errors were captured by unchanged Python guard; new JavaScript source inspection agrees. Semantics require qualified adjudication, not automatic truth labels.",
+  "semantic_triage": [
+    {
+      "beat": "B5",
+      "field": "consequence",
+      "quote": "প্লেটের_ঘর_কাঁচা_বেশেছে",
+      "finding": "Not coherent natural Bengali; no clear consequential action."
+    },
+    {
+      "beat": "B6",
+      "field": "choice",
+      "quote": "বাতাসের_ধারে_প্লেট_হয়নি",
+      "finding": "Not an intelligible motivated choice."
+    },
+    {
+      "beat": "B6",
+      "field": "consequence",
+      "quote": "মেয়েকে_জানালেন_না_কেন_দিলেন",
+      "finding": "Actor is N (the daughter), but wording addresses an unexplained daughter; relationship drift hypothesis requiring editorial review."
+    },
+    {
+      "beat": "B7",
+      "field": "action",
+      "quote": "ব্যাগের_হাতল_সারানো_করেননি",
+      "finding": "Further bag-repair negation contradicts or repeats the already repaired bag without a new cause."
+    }
+  ],
+  "review_record": {
+    "reviewer": null,
+    "independent": null,
+    "qualified_for_role": null,
+    "completed": false
+  },
+  "no_changes_to_existing_minimums": true,
+  "no_model_calls": true
+}

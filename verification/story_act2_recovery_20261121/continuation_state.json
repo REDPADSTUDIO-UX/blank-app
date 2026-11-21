@@ -1,0 +1,101 @@
+{
+  "source_commit": "a3d6252d2886827d7028ef328eff3fbf967901e4",
+  "source_file": "verification/story_budget11_20261121/final_actual.json",
+  "foundation_raw_sha256": "a69692f0183fd82623bec718176898e7c85f04529b0bc0fc586de17c09776612",
+  "act1_raw_sha256": "a3986dbcb4e6a73c0e96c9e558e13d0af706e1418e55d01be290f33ed622d8be",
+  "failed_act2_raw_sha256": "02ab4077f2814e70ca491380a1cb60cef286c1477f9d77f97b025e1bd41890fc",
+  "ledger_usage": {
+    "consumed": 9,
+    "ceiling": 11,
+    "remaining": 2,
+    "eligible_retry_calls": 0
+  },
+  "accepted_scope": "Structural handoff only; not independent creative or owner artistic acceptance",
+  "accepted_prefix": [
+    "foundation_v2",
+    "act_1_v3"
+  ],
+  "characters": [
+    {
+      "id": "N",
+      "name": "নীরা"
+    },
+    {
+      "id": "H",
+      "name": "হাসান"
+    }
+  ],
+  "seen_beat_ids": [
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "known_at_act2_entry": {
+    "N": [
+      "JOB_RAJ",
+      "ROOM_EAST_WINDOW",
+      "ROOM_WEST_DOOR",
+      "ROOM_NORTH_KITCHEN"
+    ],
+    "H": [
+      "JOB_RAJ",
+      "TICKET_HIDDEN",
+      "ROOM_EAST_WINDOW",
+      "ROOM_WEST_DOOR",
+      "ROOM_NORTH_KITCHEN"
+    ]
+  },
+  "last_state": {
+    "progress": "খাবার_হাতে,_মেয়ে_স্বপ্নে_আছে"
+  },
+  "plants": {
+    "TICKET_BOX_HIDDEN": {
+      "introduced_at": "B2",
+      "paid": false
+    }
+  },
+  "allowed_causes": {
+    "B5": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "B6": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5"
+    ],
+    "B7": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6"
+    ],
+    "B8": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7"
+    ]
+  },
+  "progression_contract": "B5.before = exact B4.after; then each next.before = exact immediately previous.after. Every before/after has only progress and must change through a meaningful event.",
+  "unchanged_limits": {
+    "context_tokens": 4096,
+    "output_tokens": 1536,
+    "timeout_seconds": 240,
+    "temperature": 0.7,
+    "seed": 117,
+    "repeat_penalty": 1.08,
+    "enable_thinking": false
+  },
+  "execution_authorized": false
+}

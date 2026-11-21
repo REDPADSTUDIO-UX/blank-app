@@ -1,0 +1,58 @@
+{
+  "source_commit": "a3d6252d2886827d7028ef328eff3fbf967901e4",
+  "authorized_branch": "feature/video-music-editing-studio",
+  "protected_sources": [
+    {
+      "path": "verification/story_budget11_20261121/final_call_ledger.json",
+      "blob_sha": "9ffb72b9c0f5f82f60311dafebf367bd55aa9ede"
+    },
+    {
+      "path": "verification/story_budget11_20261121/final_actual.json",
+      "blob_sha": "e465a97692f729bb110d1ee371660ebcb7735996"
+    },
+    {
+      "path": "verification/story_handoff_fix_20261120/guard_source.py",
+      "blob_sha": "495b46891df83a5eac2d466f6b1d524ecdf0aef8"
+    },
+    {
+      "path": "verification/story_budget11_20261121/runtime_cell.py",
+      "blob_sha": "7b1a59fc66d430abe52950f59bc86f00ef107053"
+    },
+    {
+      "path": "assets/filmmaking/story_benchmark.json",
+      "blob_sha": "b1801268b744dac96e95e022c249d6286c31e53a"
+    },
+    {
+      "path": "assets/filmmaking/story_benchmark.schema.json",
+      "blob_sha": "7208bc148b19430d8e960cfe7a6208753e4bbc85"
+    },
+    {
+      "path": "redpad_pipeline/story_quality.py",
+      "blob_sha": "96e3a66a7ccec85adc68a55d2fb0caba415e141e"
+    }
+  ],
+  "immutable_counts": {
+    "consumed": 9,
+    "ceiling": 11,
+    "remaining": 2
+  },
+  "new_calls": 0,
+  "new_downloads": 0,
+  "new_gpu_usage": 0,
+  "changes": "Only new preparation/diagnostic/review documents plus a prepend to the existing master checkpoint; no app/runtime/guard/schema/model registry or historical output/ledger edits.",
+  "environment": "Unavailable; no shell/Python tests. Source comparisons and JavaScript static evidence inspection executed.",
+  "old_tests_repeated": false,
+  "human_review_completed": false,
+  "owner_accepted": false,
+  "production_ready": false,
+  "remote_candidate_tree_verification": {
+    "base_commit": "a3d6252d2886827d7028ef328eff3fbf967901e4",
+    "tree_sha": "8f3e313cfdaf6e31316df31ece05470fc6635323",
+    "unchanged_existing_blobs": 1124,
+    "new_files": 11,
+    "modified": [
+      "MASTER_STUDIO_CHECKPOINT.md"
+    ],
+    "method": "Compared every existing blob SHA except prepend-only MASTER_STUDIO_CHECKPOINT.md against the created candidate tree. Only the declared new preparation documents were added."
+  }
+}
