@@ -16,11 +16,11 @@ from tests.test_worker_isolation import WorkerIsolationTests
 BOUNDARIES = r"""
 import errno,json,os,socket,sys
 from pathlib import Path
-def denied(action):
+def denied(action, *additional):
     try:
         action()
     except OSError as error:
-        assert error.errno in (errno.ENOENT, errno.EACCES, errno.EPERM, errno.EROFS), error
+        assert error.errno in (errno.ENOENT, errno.EACCES, errno.EPERM, errno.EROFS, *additional), error
     else:
         raise AssertionError('operation unexpectedly succeeded')
 private,parent,port=sys.argv[1:]
@@ -29,11 +29,15 @@ for name in ('user','mnt','net','pid'):
     assert os.readlink('/proc/self/ns/'+name)!=host[name], name
 denied(lambda:Path(private).read_bytes())
 denied(lambda:list(Path(private).parent.iterdir()))
+denied(lambda:Path('/redpad/output/../..' + private).read_bytes())
+link=Path('/tmp/private-link')
+link.symlink_to(private)
+denied(link.read_bytes)
 print('PASS A private read and enumeration',flush=True)
 job=Path('/redpad/input/request.json')
 assert job.read_text()=='synthetic authorized input'
 denied(lambda:job.write_text('changed'))
-denied(job.unlink)
+denied(job.unlink, errno.EBUSY)
 candidate=Path('/tmp/candidate')
 candidate.write_text('candidate')
 try:
@@ -61,7 +65,9 @@ print('PASS D network namespace and host loopback denied',flush=True)
 
 DUMMY = r"""
 import subprocess,sys,time
-subprocess.Popen([sys.executable,'-c','import time; time.sleep(30)'])
+grandchild = 'import time; time.sleep(30)'
+child = 'import subprocess,sys,time; subprocess.Popen([sys.executable,"-c",sys.argv[1]],start_new_session=True); time.sleep(30)'
+subprocess.Popen([sys.executable,'-c',child,grandchild],start_new_session=True)
 print('ready',flush=True)
 time.sleep(30)
 """
