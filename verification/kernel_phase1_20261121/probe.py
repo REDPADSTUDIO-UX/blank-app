@@ -118,7 +118,11 @@ def main():
         return 2
     print(subprocess.check_output(['uname', '-srmo'], text=True).strip())
     print(Path('/etc/os-release').read_text())
-    print(subprocess.check_output(['/usr/bin/bwrap', '--version'], text=True).strip())
+    bubblewrap = Path('/usr/bin/bwrap')
+    if not bubblewrap.is_file():
+        print('BLOCKED — HOST LIMITATION: /usr/bin/bwrap is unavailable')
+        return 2
+    print(subprocess.check_output([str(bubblewrap), '--version'], text=True).strip())
     print('Worker environment:', json.dumps(environment(), sort_keys=True))
     prefix = Path(sys.base_prefix).resolve()
     interpreter = Path(sys.executable).resolve()

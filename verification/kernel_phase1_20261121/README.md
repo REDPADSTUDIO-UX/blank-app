@@ -22,3 +22,24 @@ This package emits launch arguments and the allowlisted environment. Preserve
 the exit status and full log. Exit 2 means the local procfs preflight detected a
 read-only UID-map mount. A failure or unavailable host cannot establish a pass.
 The existing user/mount/net/PID namespace IDs are host observations only.
+
+## Result on 21 November 2026
+
+**BLOCKED — HOST LIMITATION.** The managed Debian 13.6 host has kernel
+6.18.57 and Bubblewrap 0.12.0. A read-only procfs backs the UID map, matching the
+prior recorded UID-map error. The current preflight exited before launch.
+The standard GitHub-hosted Ubuntu 24.04 runner reached the focused job but
+lacked `/usr/bin/bwrap`. Its failed-step log is preserved. The diagnostic now
+reports this case explicitly as blocked.
+
+GitHub commands from the repository checkout:
+
+```sh
+gh workflow run 396098651 --ref feature/video-music-editing-studio -f kernel_phase1=true
+gh run view 44918960679 --log-failed
+```
+
+Six standalone CPU fixture tests passed. The actual namespace canaries A–F
+remain pending, including the writable boundary at the sandbox root and
+lifecycle cleanup across the PID namespace. No working worker code was changed
+and no kernel-level defect could be confirmed on either host.
