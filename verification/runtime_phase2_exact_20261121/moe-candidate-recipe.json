@@ -1,0 +1,44 @@
+{
+  "profile": "qwen35_moe",
+  "base_checkpoint_revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+  "publisher_config_sha256": "a2619dc4d764affa76f420443393196d2bda5d8cfecfc7da235ff4a05a442ace",
+  "candidate_backend": "Transformers 5.22.2 FineGrainedFP8Config; E4M3FN and float32 inverse scales; dynamic activations",
+  "cpu_lock_path": "verification/runtime_phase2_20261121/modern.lock.txt",
+  "cpu_lock_sha256": "3785b03e577e087fa8ae698f92fc2ac021321239676dbd0aa2771427acdd2990",
+  "weight_block_size": [
+    128,
+    128
+  ],
+  "publisher_expert_tensor_shapes": {
+    "gate_up_proj": [
+      256,
+      1024,
+      2048
+    ],
+    "down_proj": [
+      256,
+      2048,
+      512
+    ]
+  },
+  "publisher_expert_scale_shapes": {
+    "gate_up_proj_scale_inv": [
+      256,
+      8,
+      16
+    ],
+    "down_proj_scale_inv": [
+      256,
+      16,
+      4
+    ]
+  },
+  "synthetic_cpu_tile_evidence": "moe-tile.json",
+  "owner_authorized": false,
+  "approved_runtime_binding": false,
+  "required_before_route_enable": [
+    "Owner approval for precision/backend and exact checkpoint realization",
+    "Verify pinned model loader and both expert tensors in the offline GPU environment",
+    "Verify CUDA kernel, GPU architecture, memory and routed-quality acceptance on actual artifacts"
+  ]
+}
