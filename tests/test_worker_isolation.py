@@ -105,6 +105,7 @@ Path('/redpad/output/canary').write_text('passed')
         lock = dict.fromkeys(('torch', 'transformers', 'bitsandbytes', 'accelerate'), '1.2.3')
         for package, version in lock.items():
             files[f'lib/python3.14/site-packages/{package}-1.2.3.dist-info/METADATA'] = f'Name: {package}\nVersion: {version}\n'.encode()
+        files['lib/python3.14/site-packages/example/_vendor/torch-0.0.1.dist-info/METADATA'] = b'Name: torch\nVersion: 0.0.1\n'
         manifest = {}
         for name, content in files.items():
             path = prefix / name
@@ -121,6 +122,14 @@ Path('/redpad/output/canary').write_text('passed')
             service.approve('qwen35_27', receipt, owner='fixture')
         digest = service.approve('qwen35_27', receipt, owner='fixture', confirmed=True)
         self.assertEqual(service.get('qwen35_27'), (receipt,digest))
+        duplicate = 'lib/python3.14/site-packages/torch-0.0.1.dist-info/METADATA'
+        duplicate_file = prefix / duplicate
+        duplicate_file.parent.mkdir()
+        duplicate_file.write_bytes(b'Name: torch\nVersion: 0.0.1\n')
+        with self.assertRaisesRegex(IsolationBlocked,'Ambiguous runtime distribution metadata'):
+            service.validate('qwen35_27', {**receipt,'files':{**manifest,duplicate:{
+                'bytes':duplicate_file.stat().st_size,'sha256':digest_file(duplicate_file)}}})
+        duplicate_file.unlink()
         with self.assertRaises(IsolationBlocked):
             service.get('flux2_klein4')
         with self.assertRaises(IsolationBlocked):

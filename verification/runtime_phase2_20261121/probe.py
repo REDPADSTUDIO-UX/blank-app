@@ -67,6 +67,24 @@ def import_checks(family):
             'torch_cuda_build':getattr(getattr(torch, 'version', None), 'cuda', None)}
 
 
+def bundled_codec_check():
+    # The authorized media stack carries this executable inside its sealed prefix.
+    import imageio_ffmpeg
+
+    executable = imageio_ffmpeg.get_ffmpeg_exe()
+    with tempfile.TemporaryDirectory() as folder:
+        target = str(Path(folder) / 'synthetic.mp4')
+        commands = [
+            [executable, '-v', 'error', '-f', 'lavfi', '-i', 'color=black:s=64x64:r=10:d=0.3',
+             '-c:v', 'libx264', target],
+            [executable, '-v', 'error', '-i', target, '-f', 'null', '-'],
+        ]
+        for command in commands:
+            subprocess.run(command, check=True, timeout=20)
+        assert Path(target).stat().st_size > 0
+    return {'executable':executable, 'sha256':digest(executable), 'commands':commands}
+
+
 def codec_check():
     ffmpeg, ffprobe = (shutil.which(tool) for tool in ('ffmpeg', 'ffprobe'))
     if not ffmpeg or not ffprobe:
@@ -112,6 +130,8 @@ def main():
             result['codec'] = codec_check()
         else:
             result.update(import_checks(args.family))
+            if args.family == 'media':
+                result['bundled_codec'] = bundled_codec_check()
     print(json.dumps(result, indent=2, sort_keys=True), flush=True)
     return int(any(not status['ok'] for status in result.get('imports',{}).values()))
 

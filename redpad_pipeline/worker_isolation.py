@@ -163,7 +163,9 @@ class RuntimeBindings:
             raise IsolationBlocked('Interpreter absent from approved runtime manifest.')
         packages = {}
         for name in receipt['files']:
-            if name.endswith('/METADATA') and name.split('/')[-2].endswith('.dist-info'):
+            # Vendored metadata remains file-hash pinned, but is not an
+            # installed distribution on the interpreter's normal site path.
+            if re.fullmatch(r'lib/python3\.\d+/site-packages/[^/]+\.dist-info/METADATA', name):
                 metadata = BytesParser().parsebytes((root / name).read_bytes(), headersonly=True)
                 package = re.sub(r'[-_.]+', '-', (metadata['Name'] or '').lower())
                 version = metadata['Version']

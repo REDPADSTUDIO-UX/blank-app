@@ -15,3 +15,6 @@ grep -E '^(torch|torchaudio)==' "$lock" > "$RUNNER_TEMP/torch.txt"
 grep -vE '^(torch|torchaudio)==' "$lock" > "$RUNNER_TEMP/runtime.txt"
 python -m pip install --no-deps --no-compile --target "$site" --index-url https://download.pytorch.org/whl/cpu -r "$RUNNER_TEMP/torch.txt"
 python -m pip install --no-deps --no-compile --target "$site" --index-url https://pypi.org/simple -r "$RUNNER_TEMP/runtime.txt"
+# Some wheels ship bytecode. Seal only reviewed source and native runtime files.
+find "$prefix" -type d -name __pycache__ -prune -exec rm -rf {} +
+find "$prefix" -type f -name '*.pyc' -delete

@@ -62,7 +62,10 @@ def dependencies(prefix, interpreter):
 
 
 def main():
-    family, raw_prefix = sys.argv[1:]
+    family, raw_prefix = sys.argv[1:3]
+    validate_only = sys.argv[3:] == ["--validate-only"]
+    if sys.argv[3:] and not validate_only:
+        raise SystemExit("Unknown argument")
     prefix = Path(raw_prefix).resolve(strict=True)
     interpreter = prefix/'bin/python3.11'
     lock = dict(line.split('==', 1) for line in
@@ -80,6 +83,8 @@ def main():
                       'studio_sha256':base['studio_sha256'],'manifest_files':len(files),
                       'empty_files':sum(not f['bytes'] for f in files.values()),
                       'system_files':system,'unresolved_elf_sonames':unresolved},sort_keys=True),flush=True)
+    if validate_only:
+        return 0
     with tempfile.TemporaryDirectory() as directory:
         output=Path(directory)/'output'
         output.mkdir()
