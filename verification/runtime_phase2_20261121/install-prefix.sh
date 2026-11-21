@@ -5,6 +5,7 @@ family=$1
 prefix=$2
 lock=verification/runtime_phase2_20261121/$family.lock.txt
 if [[ "$family" == stable ]]; then lock=verification/runtime_phase2_remaining_20261121/stable.lock.txt; fi
+if [[ "$family" == ltx25 ]]; then lock=verification/runtime_phase2_exact_20261121/ltx25.lock.txt; fi
 base=$(python -c 'import sys; print(sys.base_prefix)')
 mkdir -p "$prefix"
 cp -aL "$base/." "$prefix/"

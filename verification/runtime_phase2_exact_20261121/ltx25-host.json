@@ -1,0 +1,80 @@
+{
+  "imports": {
+    "ltx_core.text_encoders.gemma.gemma_assets": {
+      "file": "/tmp/redpad-exact/ltx25/packages/ltx-core/src/ltx_core/text_encoders/gemma/gemma_assets.py",
+      "ok": true
+    },
+    "ltx_pipelines.distilled:DistilledPipeline": {
+      "file": "/tmp/redpad-exact/ltx25/packages/ltx-pipelines/src/ltx_pipelines/distilled.py",
+      "ok": true,
+      "signature": "(model_paths: ltx_pipelines.utils.model_paths.ModelPaths, spatial_upsampler_path: str, loras: list[ltx_core.loader.lora_request.LoraPathStrengthAndSDOps], device: torch.device | None = None, quantization: ltx_core.quantization.policy.QuantizationPolicy | None = None, registry: ltx_core.loader.registry.ModelRegistry | None = None, compilation_config: ltx_core.model.transformer.compiling.CompilationConfig | None = None, offload_mode: ltx_pipelines.utils.types.OffloadMode = <OffloadMode.NONE: 'none'>, alloc_trim_strategy: ltx_core.allocator_trim_strategy.AllocatorTrimStrategy = <AllocatorTrimStrategy.TRIM: 'trim'>, prompt_enhancer_gemma_root: str | None = None, diffvae_optimization: ltx_core.model.video_vae.transformer.config.DiffVAEMode = <DiffVAEMode.CHUNKED_EAGER: 'chunked_eager'>)",
+      "stream_chunks": "(self, prompt: str, seed: int, height: int, width: int, frame_rate: float, images: list[ltx_pipelines.utils.types.ImageConditioningInput], num_frames: int | ltx_pipelines.utils.types.AutoDuration = AutoDuration(min_seconds=1.0, max_seconds=20.0), vae_dtype: torch.dtype | None = None, tiling_config: ltx_core.tiling.TileSizeConfig | ltx_core.tiling.TileCountConfig | ltx_core.tiling.AutoTiling | None = AUTO_TILING, enhance_prompt: bool = False, enhance_static_cache: bool = False, stage_1_sigmas: torch.Tensor = tensor([1.0000, 0.9937, 0.9875, 0.9812, 0.9750, 0.9094, 0.7250, 0.4219, 0.0000]), stage_2_sigmas: torch.Tensor = tensor([0.9094, 0.7250, 0.4219, 0.0000]), color_space: ltx_pipelines.utils.media_io.color_config.EXRColorSpace | None = None, generated_keyframes: int | collections.abc.Sequence[int] = 0, decode_with_keyframes: bool = False, chunk_config: ltx_pipelines.chunks.layout.ChunkConfig | None = None) -> tuple[collections.abc.Iterator[ltx_pipelines.utils.media_io.types.PlaybackSegment], int, ltx_core.tiling.TileSizeConfig | ltx_core.tiling.TileCountConfig]"
+    },
+    "ltx_pipelines.utils.media_io:encode_media_segments": {
+      "file": "/tmp/redpad-exact/ltx25/packages/ltx-pipelines/src/ltx_pipelines/utils/media_io/__init__.py",
+      "ok": true,
+      "signature": "(segments: 'Iterator[PlaybackSegment]', *, fps: 'float', output_path: 'str | Path', video_chunks_number: 'int | None', frame_converter: 'FrameConverter' = <FrameConverter.YUV420P_BT709: 'yuv420p_bt709'>, crf: 'int | None' = None, preset: 'str | None' = None, thread_count: 'int' = 0, color_space: 'EXRColorSpace | None' = None, device: 'torch.device | None' = None, video_marker: 'VideoMarker | None' = None, audio_marker: 'AudioMarker | None' = None, chunks_complete: 'bool' = False, codec: 'VideoCodec' = <VideoCodec.H264: 'h264'>) -> 'Path | None'"
+    },
+    "ltx_pipelines.utils.model_paths:ModelPaths": {
+      "file": "/tmp/redpad-exact/ltx25/packages/ltx-pipelines/src/ltx_pipelines/utils/model_paths.py",
+      "ok": true,
+      "signature": "(mode: \"Literal['monolith', 'split']\", transformer_path: 'str | None', text_encoder_path: 'str | None', video_vae_path: 'str | None', audio_vae_path: 'str | None', duration_head_path: 'str | None', embeddings_weight_paths: 'tuple[str, ...]') -> None"
+    }
+  },
+  "inference": false,
+  "interpreter": "/tmp/redpad-exact/ltx-env/bin/python",
+  "loaded_weights": false,
+  "prefix": "/tmp/redpad-exact/ltx-env",
+  "profile": "ltx25",
+  "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+  "versions": {
+    "Jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3",
+    "OpenImageIO": "3.2.2.0",
+    "PyYAML": "6.0.4",
+    "Pygments": "2.21.0",
+    "accelerate": "1.16.0",
+    "annotated-doc": "0.0.7",
+    "annotated-types": "0.8.0",
+    "anyio": "4.16.0",
+    "av": "18.1.1",
+    "certifi": "2026.11.20",
+    "click": "8.5.1",
+    "cloudpickle": "3.1.3",
+    "colour-science": "0.4.7",
+    "einops": "0.8.2",
+    "filelock": "4.2.4",
+    "fsspec": "2026.9.0",
+    "h11": "0.16.0",
+    "hf-xet": "1.8.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "huggingface_hub": "1.33.0",
+    "idna": "3.20",
+    "markdown-it-py": "4.3.0",
+    "mdurl": "0.1.2",
+    "mpmath": "1.3.0",
+    "networkx": "3.6.1",
+    "numpy": "2.4.6",
+    "packaging": "26.3",
+    "pillow": "13.0.0",
+    "psutil": "7.2.2",
+    "pydantic": "2.14.4",
+    "pydantic_core": "2.50.5",
+    "regex": "2026.11.19",
+    "rich": "15.0.0",
+    "safetensors": "0.8.0",
+    "scipy": "1.17.1",
+    "shellingham": "1.5.4",
+    "sympy": "1.14.0",
+    "tokenizers": "0.22.2",
+    "torch": "2.10.0+cpu",
+    "torchaudio": "2.10.0+cpu",
+    "torchvision": "0.25.0+cpu",
+    "tqdm": "4.70.1",
+    "transformers": "5.14.1",
+    "typer": "0.29.2",
+    "typing-inspection": "0.4.5",
+    "typing_extensions": "4.16.0"
+  }
+}
