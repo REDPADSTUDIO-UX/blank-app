@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+set -eu
+"${1:-python3}" -m unittest -v \
+  tests.test_worker_isolation.WorkerIsolationTests.test_only_explicit_files_are_mounted_and_environment_is_allowlisted \
+  tests.test_worker_isolation.WorkerIsolationTests.test_shared_kernel_block_preserves_terminal_evidence_and_never_launches_fallback \
+  tests.test_worker_isolation.WorkerIsolationTests.test_shared_cancellation_uses_persisted_controller_and_drops_partial_result \
+  tests.test_native_local_execution.NativeLocalTests.test_actual_timeout_terminates_fixture_worker \
+  tests.test_native_local_execution.NativeLocalTests.test_process_group_timeout_cleans_spawned_dummy_descendant \
+  tests.test_native_local_execution.NativeLocalTests.test_restart_recovery_does_not_restart_abandoned_process_or_kill_reused_pid

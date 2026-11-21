@@ -8,12 +8,18 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      kernel_phase1:
+        description: Run only the synthetic Linux kernel isolation verification
+        type: boolean
+        default: false
 
 permissions:
   contents: read
 
 jobs:
   video-smoke-test:
+    if: ${{ !inputs.kernel_phase1 }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -118,6 +124,7 @@ jobs:
           retention-days: 7
 
   browser-smoke-test:
+    if: ${{ !inputs.kernel_phase1 }}
     # Match the pinned browser runtime to a supported OS, rather than moving latest.
     runs-on: ubuntu-24.04
     timeout-minutes: 15
@@ -140,3 +147,15 @@ jobs:
           path: ci_artifacts/
           if-no-files-found: warn
           retention-days: 7
+
+  kernel-phase1:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.kernel_phase1 }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+      - name: Run synthetic kernel canaries
+        run: python verification/kernel_phase1_20261121/probe.py
