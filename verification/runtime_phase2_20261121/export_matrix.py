@@ -80,7 +80,7 @@ def main():
     legacy = json.loads((ROOT/'assets/professional/models.json').read_text())['models']
     result = {'registry_sha256':hashlib.sha256(registry_path.read_bytes()).hexdigest(),
               'profiles':rows, 'agents':agents, 'legacy_inventory':{
-                  k:{'repo':v['repo'], 'revision':v.get('revision'), 'status':'PASS — STATIC CONTRACT ONLY'}
+                  k:{'repo':v.get('repo'), 'revision':v.get('revision'), 'status':'PASS — STATIC CONTRACT ONLY'}
                   for k,v in legacy.items()}}
     (HERE/'runtime-matrix.json').write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
 

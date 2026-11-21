@@ -1,0 +1,3909 @@
+{
+  "registry_sha256": "f157f9113a7db1616acc9b2473cfc669099b6bd9423cd4017b7d660765ed0c1f",
+  "profiles": {
+    "qwen35_27": {
+      "repo": "Qwen/Qwen3.5-27B",
+      "pinned_revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "registry_adapter": "hf_text_nf4",
+      "runtime_family": "modern",
+      "required_distribution_contract": [
+        "accelerate",
+        "bitsandbytes",
+        "torch",
+        "transformers"
+      ],
+      "license": "apache-2.0",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "PASS — EXECUTED AND VERIFIED",
+      "status_scope": "Model-free CPU package startup only",
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "architecture": "x86_64",
+      "installed_host_interpreter": "/tmp/redpad-phase2/modern/bin/python",
+      "exact_lock_path": "modern.lock.txt",
+      "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+      "key_versions": {
+        "torch": "2.7.1+cpu",
+        "torchaudio": null,
+        "transformers": "5.22.2",
+        "diffusers": "0.43.0",
+        "accelerate": "1.15.0",
+        "bitsandbytes": "0.50.2",
+        "tokenizers": "0.23.3",
+        "safetensors": "0.8.0"
+      },
+      "host_import_evidence": "modern-host.json",
+      "sandbox_evidence": {
+        "binding": {
+          "empty_files": 350,
+          "identity": {
+            "dependency_lock": {
+              "accelerate": "1.15.0",
+              "annotated-doc": "0.0.7",
+              "annotated-types": "0.8.0",
+              "anyio": "4.16.0",
+              "bitsandbytes": "0.50.2",
+              "certifi": "2026.11.20",
+              "charset-normalizer": "3.5.2",
+              "click": "8.5.1",
+              "diffusers": "0.43.0",
+              "filelock": "4.2.4",
+              "fsspec": "2026.9.0",
+              "h11": "0.16.0",
+              "hf-xet": "1.8.0",
+              "httpcore2": "2.16.2",
+              "httpx2": "2.16.2",
+              "huggingface-hub": "2.4.0",
+              "idna": "3.20",
+              "importlib-metadata": "10.2.0",
+              "jinja2": "3.1.6",
+              "lazy-importer": "0.1.0",
+              "markdown-it-py": "4.3.0",
+              "markupsafe": "3.0.3",
+              "mdurl": "0.1.2",
+              "mpmath": "1.3.0",
+              "networkx": "3.6.1",
+              "numpy": "2.4.6",
+              "packaging": "26.3",
+              "pillow": "13.0.0",
+              "psutil": "7.2.2",
+              "pydantic": "2.14.4",
+              "pydantic-core": "2.50.5",
+              "pygments": "2.21.0",
+              "pyyaml": "6.0.4",
+              "regex": "2026.11.19",
+              "requests": "2.34.2",
+              "rich": "15.0.0",
+              "safetensors": "0.8.0",
+              "shellingham": "1.5.4",
+              "sympy": "1.14.0",
+              "tokenizers": "0.23.3",
+              "torch": "2.7.1+cpu",
+              "tqdm": "4.70.1",
+              "transformers": "5.22.2",
+              "truststore": "0.10.5",
+              "typer": "0.29.2",
+              "typing-extensions": "4.16.0",
+              "typing-inspection": "0.4.5",
+              "urllib3": "2.8.0",
+              "zipp": "4.1.2"
+            },
+            "interpreter": "/redpad/runtime/bin/python3.11",
+            "sha256": "1461ec4972f190f770842ea9429cff3865c72de9104b47f3db89f41248cfc7bd"
+          },
+          "manifest_files": 23081,
+          "studio_sha256": "c2e933ae04392da7d8c71c6ec98a4ec8976b475ab244ba65860aa6984bea707c",
+          "system_files": {
+            "/lib/x86_64-linux-gnu/libX11.so.6": {
+              "bytes": 1306280,
+              "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+            },
+            "/lib/x86_64-linux-gnu/libXau.so.6": {
+              "bytes": 18720,
+              "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+            },
+            "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+              "bytes": 26800,
+              "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+            },
+            "/lib/x86_64-linux-gnu/libXext.so.6": {
+              "bytes": 81640,
+              "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+            },
+            "/lib/x86_64-linux-gnu/libXft.so.2": {
+              "bytes": 97624,
+              "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+            },
+            "/lib/x86_64-linux-gnu/libXrender.so.1": {
+              "bytes": 47728,
+              "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+            },
+            "/lib/x86_64-linux-gnu/libXss.so.1": {
+              "bytes": 14680,
+              "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+              "bytes": 137560,
+              "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+              "bytes": 51512,
+              "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+            },
+            "/lib/x86_64-linux-gnu/libbsd.so.0": {
+              "bytes": 89096,
+              "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+            },
+            "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+              "bytes": 74848,
+              "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+            },
+            "/lib/x86_64-linux-gnu/libc.so.6": {
+              "bytes": 2220400,
+              "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+            },
+            "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+              "bytes": 18504,
+              "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+            },
+            "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+              "bytes": 198664,
+              "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+            },
+            "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+              "bytes": 4455728,
+              "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+            },
+            "/lib/x86_64-linux-gnu/libdl.so.2": {
+              "bytes": 14432,
+              "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+            },
+            "/lib/x86_64-linux-gnu/libexpat.so.1": {
+              "bytes": 198968,
+              "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+            },
+            "/lib/x86_64-linux-gnu/libffi.so.8": {
+              "bytes": 47688,
+              "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+            },
+            "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+              "bytes": 298120,
+              "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+            },
+            "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+              "bytes": 813128,
+              "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+            },
+            "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+              "bytes": 125488,
+              "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+              "bytes": 71848,
+              "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+              "bytes": 18344,
+              "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+            },
+            "/lib/x86_64-linux-gnu/libgomp.so.1": {
+              "bytes": 298776,
+              "sha256": "d46f9225c1883039e8a6853e6d96ca1af11d034ce186a090952e4a7c8a7c2fdc"
+            },
+            "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+              "bytes": 338648,
+              "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+            },
+            "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+              "bytes": 182864,
+              "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+            },
+            "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+              "bytes": 22600,
+              "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+              "bytes": 827936,
+              "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+              "bytes": 52016,
+              "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+            },
+            "/lib/x86_64-linux-gnu/liblzma.so.5": {
+              "bytes": 170456,
+              "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+            },
+            "/lib/x86_64-linux-gnu/libm.so.6": {
+              "bytes": 940560,
+              "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+            },
+            "/lib/x86_64-linux-gnu/libmd.so.0": {
+              "bytes": 47472,
+              "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+            },
+            "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+              "bytes": 239696,
+              "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+            },
+            "/lib/x86_64-linux-gnu/libnsl.so.2": {
+              "bytes": 93280,
+              "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+            },
+            "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+              "bytes": 22688,
+              "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+            },
+            "/lib/x86_64-linux-gnu/libpng16.so.16": {
+              "bytes": 235592,
+              "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+            },
+            "/lib/x86_64-linux-gnu/libpthread.so.0": {
+              "bytes": 21448,
+              "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+            },
+            "/lib/x86_64-linux-gnu/libreadline.so.8": {
+              "bytes": 335936,
+              "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+            },
+            "/lib/x86_64-linux-gnu/libresolv.so.2": {
+              "bytes": 64456,
+              "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+            },
+            "/lib/x86_64-linux-gnu/librt.so.1": {
+              "bytes": 14664,
+              "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+            },
+            "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+              "bytes": 1358520,
+              "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+            },
+            "/lib/x86_64-linux-gnu/libssl.so.3": {
+              "bytes": 671960,
+              "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+            },
+            "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+              "bytes": 2260296,
+              "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+            },
+            "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+              "bytes": 1762056,
+              "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+            },
+            "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+              "bytes": 200136,
+              "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+            },
+            "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+              "bytes": 182912,
+              "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+            },
+            "/lib/x86_64-linux-gnu/libtk8.6.so": {
+              "bytes": 1531896,
+              "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+            },
+            "/lib/x86_64-linux-gnu/libuuid.so.1": {
+              "bytes": 30936,
+              "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+            },
+            "/lib/x86_64-linux-gnu/libxcb.so.1": {
+              "bytes": 166504,
+              "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+            },
+            "/lib/x86_64-linux-gnu/libz.so.1": {
+              "bytes": 108936,
+              "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+            },
+            "/lib64/ld-linux-x86-64.so.2": {
+              "bytes": 240936,
+              "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+            }
+          },
+          "unresolved_elf_sonames": [
+            "libcublas.so.11",
+            "libcublas.so.12",
+            "libcublas.so.13",
+            "libcublasLt.so.11",
+            "libcublasLt.so.12",
+            "libcublasLt.so.13",
+            "libcudart.so.11.0",
+            "libcudart.so.12",
+            "libcudart.so.13",
+            "libhipblas.so.2",
+            "libhipblas.so.3",
+            "libhipblaslt.so.0",
+            "libhipblaslt.so.1",
+            "libimf.so",
+            "libintlc.so.5",
+            "libirng.so",
+            "librocrand.so.1",
+            "libsvml.so",
+            "libsycl.so.8",
+            "libsycl.so.9"
+          ],
+          "validated_profiles": [
+            "qwen35_27",
+            "qwen36_27",
+            "qwen35_9",
+            "gemma3_27",
+            "gemma3_12",
+            "flux2_klein4",
+            "z_image_turbo"
+          ]
+        },
+        "bundled_codec": null,
+        "import_count": 12,
+        "interpreter": "/redpad/runtime/bin/python3.11",
+        "isolated_imports_passed": true,
+        "job_id": 136902021612,
+        "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+        "prefix": "/redpad/runtime",
+        "python": "3.11.18 (main, Oct 26 2026, 02:48:47) [GCC 11.4.0]",
+        "tested_commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+        "workflow_run": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44922713868"
+      },
+      "ffmpeg_scope": "Synthetic H264/AAC host codec test in codec.json",
+      "outstanding": "Verify exact CUDA wheel and driver, device binding, NF4 GPU extensions for text and precision/offload for image."
+    },
+    "qwen35_moe": {
+      "repo": "Qwen/Qwen3.5-35B-A3B",
+      "pinned_revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+      "registry_adapter": "contract_only",
+      "runtime_family": null,
+      "required_distribution_contract": null,
+      "license": "apache-2.0",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "BLOCKED — EXTERNAL DEPENDENCY",
+      "blocker": "Registry contract only. Existing shared adapter has no MoE route.",
+      "exact_lock_path": null,
+      "installed_host_interpreter": null,
+      "outstanding": "Reviewed dependency closure and offline CPU startup first, then exact model/accelerator validation."
+    },
+    "qwen36_27": {
+      "repo": "Qwen/Qwen3.6-27B",
+      "pinned_revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+      "registry_adapter": "hf_text_nf4",
+      "runtime_family": "modern",
+      "required_distribution_contract": [
+        "accelerate",
+        "bitsandbytes",
+        "torch",
+        "transformers"
+      ],
+      "license": "apache-2.0",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "PASS — EXECUTED AND VERIFIED",
+      "status_scope": "Model-free CPU package startup only",
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "architecture": "x86_64",
+      "installed_host_interpreter": "/tmp/redpad-phase2/modern/bin/python",
+      "exact_lock_path": "modern.lock.txt",
+      "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+      "key_versions": {
+        "torch": "2.7.1+cpu",
+        "torchaudio": null,
+        "transformers": "5.22.2",
+        "diffusers": "0.43.0",
+        "accelerate": "1.15.0",
+        "bitsandbytes": "0.50.2",
+        "tokenizers": "0.23.3",
+        "safetensors": "0.8.0"
+      },
+      "host_import_evidence": "modern-host.json",
+      "sandbox_evidence": {
+        "binding": {
+          "empty_files": 350,
+          "identity": {
+            "dependency_lock": {
+              "accelerate": "1.15.0",
+              "annotated-doc": "0.0.7",
+              "annotated-types": "0.8.0",
+              "anyio": "4.16.0",
+              "bitsandbytes": "0.50.2",
+              "certifi": "2026.11.20",
+              "charset-normalizer": "3.5.2",
+              "click": "8.5.1",
+              "diffusers": "0.43.0",
+              "filelock": "4.2.4",
+              "fsspec": "2026.9.0",
+              "h11": "0.16.0",
+              "hf-xet": "1.8.0",
+              "httpcore2": "2.16.2",
+              "httpx2": "2.16.2",
+              "huggingface-hub": "2.4.0",
+              "idna": "3.20",
+              "importlib-metadata": "10.2.0",
+              "jinja2": "3.1.6",
+              "lazy-importer": "0.1.0",
+              "markdown-it-py": "4.3.0",
+              "markupsafe": "3.0.3",
+              "mdurl": "0.1.2",
+              "mpmath": "1.3.0",
+              "networkx": "3.6.1",
+              "numpy": "2.4.6",
+              "packaging": "26.3",
+              "pillow": "13.0.0",
+              "psutil": "7.2.2",
+              "pydantic": "2.14.4",
+              "pydantic-core": "2.50.5",
+              "pygments": "2.21.0",
+              "pyyaml": "6.0.4",
+              "regex": "2026.11.19",
+              "requests": "2.34.2",
+              "rich": "15.0.0",
+              "safetensors": "0.8.0",
+              "shellingham": "1.5.4",
+              "sympy": "1.14.0",
+              "tokenizers": "0.23.3",
+              "torch": "2.7.1+cpu",
+              "tqdm": "4.70.1",
+              "transformers": "5.22.2",
+              "truststore": "0.10.5",
+              "typer": "0.29.2",
+              "typing-extensions": "4.16.0",
+              "typing-inspection": "0.4.5",
+              "urllib3": "2.8.0",
+              "zipp": "4.1.2"
+            },
+            "interpreter": "/redpad/runtime/bin/python3.11",
+            "sha256": "1461ec4972f190f770842ea9429cff3865c72de9104b47f3db89f41248cfc7bd"
+          },
+          "manifest_files": 23081,
+          "studio_sha256": "c2e933ae04392da7d8c71c6ec98a4ec8976b475ab244ba65860aa6984bea707c",
+          "system_files": {
+            "/lib/x86_64-linux-gnu/libX11.so.6": {
+              "bytes": 1306280,
+              "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+            },
+            "/lib/x86_64-linux-gnu/libXau.so.6": {
+              "bytes": 18720,
+              "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+            },
+            "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+              "bytes": 26800,
+              "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+            },
+            "/lib/x86_64-linux-gnu/libXext.so.6": {
+              "bytes": 81640,
+              "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+            },
+            "/lib/x86_64-linux-gnu/libXft.so.2": {
+              "bytes": 97624,
+              "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+            },
+            "/lib/x86_64-linux-gnu/libXrender.so.1": {
+              "bytes": 47728,
+              "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+            },
+            "/lib/x86_64-linux-gnu/libXss.so.1": {
+              "bytes": 14680,
+              "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+              "bytes": 137560,
+              "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+              "bytes": 51512,
+              "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+            },
+            "/lib/x86_64-linux-gnu/libbsd.so.0": {
+              "bytes": 89096,
+              "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+            },
+            "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+              "bytes": 74848,
+              "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+            },
+            "/lib/x86_64-linux-gnu/libc.so.6": {
+              "bytes": 2220400,
+              "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+            },
+            "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+              "bytes": 18504,
+              "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+            },
+            "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+              "bytes": 198664,
+              "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+            },
+            "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+              "bytes": 4455728,
+              "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+            },
+            "/lib/x86_64-linux-gnu/libdl.so.2": {
+              "bytes": 14432,
+              "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+            },
+            "/lib/x86_64-linux-gnu/libexpat.so.1": {
+              "bytes": 198968,
+              "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+            },
+            "/lib/x86_64-linux-gnu/libffi.so.8": {
+              "bytes": 47688,
+              "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+            },
+            "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+              "bytes": 298120,
+              "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+            },
+            "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+              "bytes": 813128,
+              "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+            },
+            "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+              "bytes": 125488,
+              "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+              "bytes": 71848,
+              "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+              "bytes": 18344,
+              "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+            },
+            "/lib/x86_64-linux-gnu/libgomp.so.1": {
+              "bytes": 298776,
+              "sha256": "d46f9225c1883039e8a6853e6d96ca1af11d034ce186a090952e4a7c8a7c2fdc"
+            },
+            "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+              "bytes": 338648,
+              "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+            },
+            "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+              "bytes": 182864,
+              "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+            },
+            "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+              "bytes": 22600,
+              "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+              "bytes": 827936,
+              "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+              "bytes": 52016,
+              "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+            },
+            "/lib/x86_64-linux-gnu/liblzma.so.5": {
+              "bytes": 170456,
+              "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+            },
+            "/lib/x86_64-linux-gnu/libm.so.6": {
+              "bytes": 940560,
+              "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+            },
+            "/lib/x86_64-linux-gnu/libmd.so.0": {
+              "bytes": 47472,
+              "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+            },
+            "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+              "bytes": 239696,
+              "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+            },
+            "/lib/x86_64-linux-gnu/libnsl.so.2": {
+              "bytes": 93280,
+              "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+            },
+            "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+              "bytes": 22688,
+              "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+            },
+            "/lib/x86_64-linux-gnu/libpng16.so.16": {
+              "bytes": 235592,
+              "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+            },
+            "/lib/x86_64-linux-gnu/libpthread.so.0": {
+              "bytes": 21448,
+              "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+            },
+            "/lib/x86_64-linux-gnu/libreadline.so.8": {
+              "bytes": 335936,
+              "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+            },
+            "/lib/x86_64-linux-gnu/libresolv.so.2": {
+              "bytes": 64456,
+              "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+            },
+            "/lib/x86_64-linux-gnu/librt.so.1": {
+              "bytes": 14664,
+              "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+            },
+            "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+              "bytes": 1358520,
+              "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+            },
+            "/lib/x86_64-linux-gnu/libssl.so.3": {
+              "bytes": 671960,
+              "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+            },
+            "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+              "bytes": 2260296,
+              "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+            },
+            "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+              "bytes": 1762056,
+              "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+            },
+            "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+              "bytes": 200136,
+              "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+            },
+            "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+              "bytes": 182912,
+              "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+            },
+            "/lib/x86_64-linux-gnu/libtk8.6.so": {
+              "bytes": 1531896,
+              "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+            },
+            "/lib/x86_64-linux-gnu/libuuid.so.1": {
+              "bytes": 30936,
+              "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+            },
+            "/lib/x86_64-linux-gnu/libxcb.so.1": {
+              "bytes": 166504,
+              "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+            },
+            "/lib/x86_64-linux-gnu/libz.so.1": {
+              "bytes": 108936,
+              "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+            },
+            "/lib64/ld-linux-x86-64.so.2": {
+              "bytes": 240936,
+              "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+            }
+          },
+          "unresolved_elf_sonames": [
+            "libcublas.so.11",
+            "libcublas.so.12",
+            "libcublas.so.13",
+            "libcublasLt.so.11",
+            "libcublasLt.so.12",
+            "libcublasLt.so.13",
+            "libcudart.so.11.0",
+            "libcudart.so.12",
+            "libcudart.so.13",
+            "libhipblas.so.2",
+            "libhipblas.so.3",
+            "libhipblaslt.so.0",
+            "libhipblaslt.so.1",
+            "libimf.so",
+            "libintlc.so.5",
+            "libirng.so",
+            "librocrand.so.1",
+            "libsvml.so",
+            "libsycl.so.8",
+            "libsycl.so.9"
+          ],
+          "validated_profiles": [
+            "qwen35_27",
+            "qwen36_27",
+            "qwen35_9",
+            "gemma3_27",
+            "gemma3_12",
+            "flux2_klein4",
+            "z_image_turbo"
+          ]
+        },
+        "bundled_codec": null,
+        "import_count": 12,
+        "interpreter": "/redpad/runtime/bin/python3.11",
+        "isolated_imports_passed": true,
+        "job_id": 136902021612,
+        "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+        "prefix": "/redpad/runtime",
+        "python": "3.11.18 (main, Oct 26 2026, 02:48:47) [GCC 11.4.0]",
+        "tested_commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+        "workflow_run": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44922713868"
+      },
+      "ffmpeg_scope": "Synthetic H264/AAC host codec test in codec.json",
+      "outstanding": "Verify exact CUDA wheel and driver, device binding, NF4 GPU extensions for text and precision/offload for image."
+    },
+    "qwen35_9": {
+      "repo": "Qwen/Qwen3.5-9B",
+      "pinned_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "registry_adapter": "hf_text_nf4",
+      "runtime_family": "modern",
+      "required_distribution_contract": [
+        "accelerate",
+        "bitsandbytes",
+        "torch",
+        "transformers"
+      ],
+      "license": "apache-2.0",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "PASS — EXECUTED AND VERIFIED",
+      "status_scope": "Model-free CPU package startup only",
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "architecture": "x86_64",
+      "installed_host_interpreter": "/tmp/redpad-phase2/modern/bin/python",
+      "exact_lock_path": "modern.lock.txt",
+      "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+      "key_versions": {
+        "torch": "2.7.1+cpu",
+        "torchaudio": null,
+        "transformers": "5.22.2",
+        "diffusers": "0.43.0",
+        "accelerate": "1.15.0",
+        "bitsandbytes": "0.50.2",
+        "tokenizers": "0.23.3",
+        "safetensors": "0.8.0"
+      },
+      "host_import_evidence": "modern-host.json",
+      "sandbox_evidence": {
+        "binding": {
+          "empty_files": 350,
+          "identity": {
+            "dependency_lock": {
+              "accelerate": "1.15.0",
+              "annotated-doc": "0.0.7",
+              "annotated-types": "0.8.0",
+              "anyio": "4.16.0",
+              "bitsandbytes": "0.50.2",
+              "certifi": "2026.11.20",
+              "charset-normalizer": "3.5.2",
+              "click": "8.5.1",
+              "diffusers": "0.43.0",
+              "filelock": "4.2.4",
+              "fsspec": "2026.9.0",
+              "h11": "0.16.0",
+              "hf-xet": "1.8.0",
+              "httpcore2": "2.16.2",
+              "httpx2": "2.16.2",
+              "huggingface-hub": "2.4.0",
+              "idna": "3.20",
+              "importlib-metadata": "10.2.0",
+              "jinja2": "3.1.6",
+              "lazy-importer": "0.1.0",
+              "markdown-it-py": "4.3.0",
+              "markupsafe": "3.0.3",
+              "mdurl": "0.1.2",
+              "mpmath": "1.3.0",
+              "networkx": "3.6.1",
+              "numpy": "2.4.6",
+              "packaging": "26.3",
+              "pillow": "13.0.0",
+              "psutil": "7.2.2",
+              "pydantic": "2.14.4",
+              "pydantic-core": "2.50.5",
+              "pygments": "2.21.0",
+              "pyyaml": "6.0.4",
+              "regex": "2026.11.19",
+              "requests": "2.34.2",
+              "rich": "15.0.0",
+              "safetensors": "0.8.0",
+              "shellingham": "1.5.4",
+              "sympy": "1.14.0",
+              "tokenizers": "0.23.3",
+              "torch": "2.7.1+cpu",
+              "tqdm": "4.70.1",
+              "transformers": "5.22.2",
+              "truststore": "0.10.5",
+              "typer": "0.29.2",
+              "typing-extensions": "4.16.0",
+              "typing-inspection": "0.4.5",
+              "urllib3": "2.8.0",
+              "zipp": "4.1.2"
+            },
+            "interpreter": "/redpad/runtime/bin/python3.11",
+            "sha256": "1461ec4972f190f770842ea9429cff3865c72de9104b47f3db89f41248cfc7bd"
+          },
+          "manifest_files": 23081,
+          "studio_sha256": "c2e933ae04392da7d8c71c6ec98a4ec8976b475ab244ba65860aa6984bea707c",
+          "system_files": {
+            "/lib/x86_64-linux-gnu/libX11.so.6": {
+              "bytes": 1306280,
+              "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+            },
+            "/lib/x86_64-linux-gnu/libXau.so.6": {
+              "bytes": 18720,
+              "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+            },
+            "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+              "bytes": 26800,
+              "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+            },
+            "/lib/x86_64-linux-gnu/libXext.so.6": {
+              "bytes": 81640,
+              "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+            },
+            "/lib/x86_64-linux-gnu/libXft.so.2": {
+              "bytes": 97624,
+              "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+            },
+            "/lib/x86_64-linux-gnu/libXrender.so.1": {
+              "bytes": 47728,
+              "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+            },
+            "/lib/x86_64-linux-gnu/libXss.so.1": {
+              "bytes": 14680,
+              "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+              "bytes": 137560,
+              "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+              "bytes": 51512,
+              "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+            },
+            "/lib/x86_64-linux-gnu/libbsd.so.0": {
+              "bytes": 89096,
+              "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+            },
+            "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+              "bytes": 74848,
+              "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+            },
+            "/lib/x86_64-linux-gnu/libc.so.6": {
+              "bytes": 2220400,
+              "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+            },
+            "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+              "bytes": 18504,
+              "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+            },
+            "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+              "bytes": 198664,
+              "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+            },
+            "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+              "bytes": 4455728,
+              "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+            },
+            "/lib/x86_64-linux-gnu/libdl.so.2": {
+              "bytes": 14432,
+              "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+            },
+            "/lib/x86_64-linux-gnu/libexpat.so.1": {
+              "bytes": 198968,
+              "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+            },
+            "/lib/x86_64-linux-gnu/libffi.so.8": {
+              "bytes": 47688,
+              "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+            },
+            "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+              "bytes": 298120,
+              "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+            },
+            "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+              "bytes": 813128,
+              "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+            },
+            "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+              "bytes": 125488,
+              "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+              "bytes": 71848,
+              "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+              "bytes": 18344,
+              "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+            },
+            "/lib/x86_64-linux-gnu/libgomp.so.1": {
+              "bytes": 298776,
+              "sha256": "d46f9225c1883039e8a6853e6d96ca1af11d034ce186a090952e4a7c8a7c2fdc"
+            },
+            "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+              "bytes": 338648,
+              "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+            },
+            "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+              "bytes": 182864,
+              "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+            },
+            "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+              "bytes": 22600,
+              "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+              "bytes": 827936,
+              "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+              "bytes": 52016,
+              "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+            },
+            "/lib/x86_64-linux-gnu/liblzma.so.5": {
+              "bytes": 170456,
+              "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+            },
+            "/lib/x86_64-linux-gnu/libm.so.6": {
+              "bytes": 940560,
+              "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+            },
+            "/lib/x86_64-linux-gnu/libmd.so.0": {
+              "bytes": 47472,
+              "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+            },
+            "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+              "bytes": 239696,
+              "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+            },
+            "/lib/x86_64-linux-gnu/libnsl.so.2": {
+              "bytes": 93280,
+              "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+            },
+            "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+              "bytes": 22688,
+              "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+            },
+            "/lib/x86_64-linux-gnu/libpng16.so.16": {
+              "bytes": 235592,
+              "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+            },
+            "/lib/x86_64-linux-gnu/libpthread.so.0": {
+              "bytes": 21448,
+              "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+            },
+            "/lib/x86_64-linux-gnu/libreadline.so.8": {
+              "bytes": 335936,
+              "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+            },
+            "/lib/x86_64-linux-gnu/libresolv.so.2": {
+              "bytes": 64456,
+              "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+            },
+            "/lib/x86_64-linux-gnu/librt.so.1": {
+              "bytes": 14664,
+              "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+            },
+            "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+              "bytes": 1358520,
+              "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+            },
+            "/lib/x86_64-linux-gnu/libssl.so.3": {
+              "bytes": 671960,
+              "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+            },
+            "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+              "bytes": 2260296,
+              "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+            },
+            "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+              "bytes": 1762056,
+              "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+            },
+            "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+              "bytes": 200136,
+              "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+            },
+            "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+              "bytes": 182912,
+              "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+            },
+            "/lib/x86_64-linux-gnu/libtk8.6.so": {
+              "bytes": 1531896,
+              "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+            },
+            "/lib/x86_64-linux-gnu/libuuid.so.1": {
+              "bytes": 30936,
+              "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+            },
+            "/lib/x86_64-linux-gnu/libxcb.so.1": {
+              "bytes": 166504,
+              "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+            },
+            "/lib/x86_64-linux-gnu/libz.so.1": {
+              "bytes": 108936,
+              "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+            },
+            "/lib64/ld-linux-x86-64.so.2": {
+              "bytes": 240936,
+              "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+            }
+          },
+          "unresolved_elf_sonames": [
+            "libcublas.so.11",
+            "libcublas.so.12",
+            "libcublas.so.13",
+            "libcublasLt.so.11",
+            "libcublasLt.so.12",
+            "libcublasLt.so.13",
+            "libcudart.so.11.0",
+            "libcudart.so.12",
+            "libcudart.so.13",
+            "libhipblas.so.2",
+            "libhipblas.so.3",
+            "libhipblaslt.so.0",
+            "libhipblaslt.so.1",
+            "libimf.so",
+            "libintlc.so.5",
+            "libirng.so",
+            "librocrand.so.1",
+            "libsvml.so",
+            "libsycl.so.8",
+            "libsycl.so.9"
+          ],
+          "validated_profiles": [
+            "qwen35_27",
+            "qwen36_27",
+            "qwen35_9",
+            "gemma3_27",
+            "gemma3_12",
+            "flux2_klein4",
+            "z_image_turbo"
+          ]
+        },
+        "bundled_codec": null,
+        "import_count": 12,
+        "interpreter": "/redpad/runtime/bin/python3.11",
+        "isolated_imports_passed": true,
+        "job_id": 136902021612,
+        "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+        "prefix": "/redpad/runtime",
+        "python": "3.11.18 (main, Oct 26 2026, 02:48:47) [GCC 11.4.0]",
+        "tested_commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+        "workflow_run": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44922713868"
+      },
+      "ffmpeg_scope": "Synthetic H264/AAC host codec test in codec.json",
+      "outstanding": "Verify exact CUDA wheel and driver, device binding, NF4 GPU extensions for text and precision/offload for image."
+    },
+    "gemma3_27": {
+      "repo": "google/gemma-3-27b-it",
+      "pinned_revision": "005ad3404e59d6023443cb575daa05336842228a",
+      "registry_adapter": "hf_text_nf4",
+      "runtime_family": "modern",
+      "required_distribution_contract": [
+        "accelerate",
+        "bitsandbytes",
+        "torch",
+        "transformers"
+      ],
+      "license": "gemma",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "PASS — EXECUTED AND VERIFIED",
+      "status_scope": "Model-free CPU package startup only",
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "architecture": "x86_64",
+      "installed_host_interpreter": "/tmp/redpad-phase2/modern/bin/python",
+      "exact_lock_path": "modern.lock.txt",
+      "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+      "key_versions": {
+        "torch": "2.7.1+cpu",
+        "torchaudio": null,
+        "transformers": "5.22.2",
+        "diffusers": "0.43.0",
+        "accelerate": "1.15.0",
+        "bitsandbytes": "0.50.2",
+        "tokenizers": "0.23.3",
+        "safetensors": "0.8.0"
+      },
+      "host_import_evidence": "modern-host.json",
+      "sandbox_evidence": {
+        "binding": {
+          "empty_files": 350,
+          "identity": {
+            "dependency_lock": {
+              "accelerate": "1.15.0",
+              "annotated-doc": "0.0.7",
+              "annotated-types": "0.8.0",
+              "anyio": "4.16.0",
+              "bitsandbytes": "0.50.2",
+              "certifi": "2026.11.20",
+              "charset-normalizer": "3.5.2",
+              "click": "8.5.1",
+              "diffusers": "0.43.0",
+              "filelock": "4.2.4",
+              "fsspec": "2026.9.0",
+              "h11": "0.16.0",
+              "hf-xet": "1.8.0",
+              "httpcore2": "2.16.2",
+              "httpx2": "2.16.2",
+              "huggingface-hub": "2.4.0",
+              "idna": "3.20",
+              "importlib-metadata": "10.2.0",
+              "jinja2": "3.1.6",
+              "lazy-importer": "0.1.0",
+              "markdown-it-py": "4.3.0",
+              "markupsafe": "3.0.3",
+              "mdurl": "0.1.2",
+              "mpmath": "1.3.0",
+              "networkx": "3.6.1",
+              "numpy": "2.4.6",
+              "packaging": "26.3",
+              "pillow": "13.0.0",
+              "psutil": "7.2.2",
+              "pydantic": "2.14.4",
+              "pydantic-core": "2.50.5",
+              "pygments": "2.21.0",
+              "pyyaml": "6.0.4",
+              "regex": "2026.11.19",
+              "requests": "2.34.2",
+              "rich": "15.0.0",
+              "safetensors": "0.8.0",
+              "shellingham": "1.5.4",
+              "sympy": "1.14.0",
+              "tokenizers": "0.23.3",
+              "torch": "2.7.1+cpu",
+              "tqdm": "4.70.1",
+              "transformers": "5.22.2",
+              "truststore": "0.10.5",
+              "typer": "0.29.2",
+              "typing-extensions": "4.16.0",
+              "typing-inspection": "0.4.5",
+              "urllib3": "2.8.0",
+              "zipp": "4.1.2"
+            },
+            "interpreter": "/redpad/runtime/bin/python3.11",
+            "sha256": "1461ec4972f190f770842ea9429cff3865c72de9104b47f3db89f41248cfc7bd"
+          },
+          "manifest_files": 23081,
+          "studio_sha256": "c2e933ae04392da7d8c71c6ec98a4ec8976b475ab244ba65860aa6984bea707c",
+          "system_files": {
+            "/lib/x86_64-linux-gnu/libX11.so.6": {
+              "bytes": 1306280,
+              "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+            },
+            "/lib/x86_64-linux-gnu/libXau.so.6": {
+              "bytes": 18720,
+              "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+            },
+            "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+              "bytes": 26800,
+              "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+            },
+            "/lib/x86_64-linux-gnu/libXext.so.6": {
+              "bytes": 81640,
+              "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+            },
+            "/lib/x86_64-linux-gnu/libXft.so.2": {
+              "bytes": 97624,
+              "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+            },
+            "/lib/x86_64-linux-gnu/libXrender.so.1": {
+              "bytes": 47728,
+              "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+            },
+            "/lib/x86_64-linux-gnu/libXss.so.1": {
+              "bytes": 14680,
+              "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+              "bytes": 137560,
+              "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+              "bytes": 51512,
+              "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+            },
+            "/lib/x86_64-linux-gnu/libbsd.so.0": {
+              "bytes": 89096,
+              "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+            },
+            "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+              "bytes": 74848,
+              "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+            },
+            "/lib/x86_64-linux-gnu/libc.so.6": {
+              "bytes": 2220400,
+              "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+            },
+            "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+              "bytes": 18504,
+              "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+            },
+            "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+              "bytes": 198664,
+              "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+            },
+            "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+              "bytes": 4455728,
+              "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+            },
+            "/lib/x86_64-linux-gnu/libdl.so.2": {
+              "bytes": 14432,
+              "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+            },
+            "/lib/x86_64-linux-gnu/libexpat.so.1": {
+              "bytes": 198968,
+              "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+            },
+            "/lib/x86_64-linux-gnu/libffi.so.8": {
+              "bytes": 47688,
+              "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+            },
+            "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+              "bytes": 298120,
+              "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+            },
+            "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+              "bytes": 813128,
+              "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+            },
+            "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+              "bytes": 125488,
+              "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+              "bytes": 71848,
+              "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+              "bytes": 18344,
+              "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+            },
+            "/lib/x86_64-linux-gnu/libgomp.so.1": {
+              "bytes": 298776,
+              "sha256": "d46f9225c1883039e8a6853e6d96ca1af11d034ce186a090952e4a7c8a7c2fdc"
+            },
+            "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+              "bytes": 338648,
+              "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+            },
+            "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+              "bytes": 182864,
+              "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+            },
+            "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+              "bytes": 22600,
+              "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+              "bytes": 827936,
+              "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+              "bytes": 52016,
+              "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+            },
+            "/lib/x86_64-linux-gnu/liblzma.so.5": {
+              "bytes": 170456,
+              "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+            },
+            "/lib/x86_64-linux-gnu/libm.so.6": {
+              "bytes": 940560,
+              "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+            },
+            "/lib/x86_64-linux-gnu/libmd.so.0": {
+              "bytes": 47472,
+              "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+            },
+            "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+              "bytes": 239696,
+              "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+            },
+            "/lib/x86_64-linux-gnu/libnsl.so.2": {
+              "bytes": 93280,
+              "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+            },
+            "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+              "bytes": 22688,
+              "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+            },
+            "/lib/x86_64-linux-gnu/libpng16.so.16": {
+              "bytes": 235592,
+              "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+            },
+            "/lib/x86_64-linux-gnu/libpthread.so.0": {
+              "bytes": 21448,
+              "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+            },
+            "/lib/x86_64-linux-gnu/libreadline.so.8": {
+              "bytes": 335936,
+              "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+            },
+            "/lib/x86_64-linux-gnu/libresolv.so.2": {
+              "bytes": 64456,
+              "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+            },
+            "/lib/x86_64-linux-gnu/librt.so.1": {
+              "bytes": 14664,
+              "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+            },
+            "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+              "bytes": 1358520,
+              "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+            },
+            "/lib/x86_64-linux-gnu/libssl.so.3": {
+              "bytes": 671960,
+              "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+            },
+            "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+              "bytes": 2260296,
+              "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+            },
+            "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+              "bytes": 1762056,
+              "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+            },
+            "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+              "bytes": 200136,
+              "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+            },
+            "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+              "bytes": 182912,
+              "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+            },
+            "/lib/x86_64-linux-gnu/libtk8.6.so": {
+              "bytes": 1531896,
+              "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+            },
+            "/lib/x86_64-linux-gnu/libuuid.so.1": {
+              "bytes": 30936,
+              "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+            },
+            "/lib/x86_64-linux-gnu/libxcb.so.1": {
+              "bytes": 166504,
+              "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+            },
+            "/lib/x86_64-linux-gnu/libz.so.1": {
+              "bytes": 108936,
+              "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+            },
+            "/lib64/ld-linux-x86-64.so.2": {
+              "bytes": 240936,
+              "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+            }
+          },
+          "unresolved_elf_sonames": [
+            "libcublas.so.11",
+            "libcublas.so.12",
+            "libcublas.so.13",
+            "libcublasLt.so.11",
+            "libcublasLt.so.12",
+            "libcublasLt.so.13",
+            "libcudart.so.11.0",
+            "libcudart.so.12",
+            "libcudart.so.13",
+            "libhipblas.so.2",
+            "libhipblas.so.3",
+            "libhipblaslt.so.0",
+            "libhipblaslt.so.1",
+            "libimf.so",
+            "libintlc.so.5",
+            "libirng.so",
+            "librocrand.so.1",
+            "libsvml.so",
+            "libsycl.so.8",
+            "libsycl.so.9"
+          ],
+          "validated_profiles": [
+            "qwen35_27",
+            "qwen36_27",
+            "qwen35_9",
+            "gemma3_27",
+            "gemma3_12",
+            "flux2_klein4",
+            "z_image_turbo"
+          ]
+        },
+        "bundled_codec": null,
+        "import_count": 12,
+        "interpreter": "/redpad/runtime/bin/python3.11",
+        "isolated_imports_passed": true,
+        "job_id": 136902021612,
+        "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+        "prefix": "/redpad/runtime",
+        "python": "3.11.18 (main, Oct 26 2026, 02:48:47) [GCC 11.4.0]",
+        "tested_commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+        "workflow_run": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44922713868"
+      },
+      "ffmpeg_scope": "Synthetic H264/AAC host codec test in codec.json",
+      "outstanding": "Verify exact CUDA wheel and driver, device binding, NF4 GPU extensions for text and precision/offload for image."
+    },
+    "gemma3_12": {
+      "repo": "google/gemma-3-12b-it",
+      "pinned_revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "registry_adapter": "hf_text_nf4",
+      "runtime_family": "modern",
+      "required_distribution_contract": [
+        "accelerate",
+        "bitsandbytes",
+        "torch",
+        "transformers"
+      ],
+      "license": "gemma",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "PASS — EXECUTED AND VERIFIED",
+      "status_scope": "Model-free CPU package startup only",
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "architecture": "x86_64",
+      "installed_host_interpreter": "/tmp/redpad-phase2/modern/bin/python",
+      "exact_lock_path": "modern.lock.txt",
+      "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+      "key_versions": {
+        "torch": "2.7.1+cpu",
+        "torchaudio": null,
+        "transformers": "5.22.2",
+        "diffusers": "0.43.0",
+        "accelerate": "1.15.0",
+        "bitsandbytes": "0.50.2",
+        "tokenizers": "0.23.3",
+        "safetensors": "0.8.0"
+      },
+      "host_import_evidence": "modern-host.json",
+      "sandbox_evidence": {
+        "binding": {
+          "empty_files": 350,
+          "identity": {
+            "dependency_lock": {
+              "accelerate": "1.15.0",
+              "annotated-doc": "0.0.7",
+              "annotated-types": "0.8.0",
+              "anyio": "4.16.0",
+              "bitsandbytes": "0.50.2",
+              "certifi": "2026.11.20",
+              "charset-normalizer": "3.5.2",
+              "click": "8.5.1",
+              "diffusers": "0.43.0",
+              "filelock": "4.2.4",
+              "fsspec": "2026.9.0",
+              "h11": "0.16.0",
+              "hf-xet": "1.8.0",
+              "httpcore2": "2.16.2",
+              "httpx2": "2.16.2",
+              "huggingface-hub": "2.4.0",
+              "idna": "3.20",
+              "importlib-metadata": "10.2.0",
+              "jinja2": "3.1.6",
+              "lazy-importer": "0.1.0",
+              "markdown-it-py": "4.3.0",
+              "markupsafe": "3.0.3",
+              "mdurl": "0.1.2",
+              "mpmath": "1.3.0",
+              "networkx": "3.6.1",
+              "numpy": "2.4.6",
+              "packaging": "26.3",
+              "pillow": "13.0.0",
+              "psutil": "7.2.2",
+              "pydantic": "2.14.4",
+              "pydantic-core": "2.50.5",
+              "pygments": "2.21.0",
+              "pyyaml": "6.0.4",
+              "regex": "2026.11.19",
+              "requests": "2.34.2",
+              "rich": "15.0.0",
+              "safetensors": "0.8.0",
+              "shellingham": "1.5.4",
+              "sympy": "1.14.0",
+              "tokenizers": "0.23.3",
+              "torch": "2.7.1+cpu",
+              "tqdm": "4.70.1",
+              "transformers": "5.22.2",
+              "truststore": "0.10.5",
+              "typer": "0.29.2",
+              "typing-extensions": "4.16.0",
+              "typing-inspection": "0.4.5",
+              "urllib3": "2.8.0",
+              "zipp": "4.1.2"
+            },
+            "interpreter": "/redpad/runtime/bin/python3.11",
+            "sha256": "1461ec4972f190f770842ea9429cff3865c72de9104b47f3db89f41248cfc7bd"
+          },
+          "manifest_files": 23081,
+          "studio_sha256": "c2e933ae04392da7d8c71c6ec98a4ec8976b475ab244ba65860aa6984bea707c",
+          "system_files": {
+            "/lib/x86_64-linux-gnu/libX11.so.6": {
+              "bytes": 1306280,
+              "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+            },
+            "/lib/x86_64-linux-gnu/libXau.so.6": {
+              "bytes": 18720,
+              "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+            },
+            "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+              "bytes": 26800,
+              "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+            },
+            "/lib/x86_64-linux-gnu/libXext.so.6": {
+              "bytes": 81640,
+              "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+            },
+            "/lib/x86_64-linux-gnu/libXft.so.2": {
+              "bytes": 97624,
+              "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+            },
+            "/lib/x86_64-linux-gnu/libXrender.so.1": {
+              "bytes": 47728,
+              "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+            },
+            "/lib/x86_64-linux-gnu/libXss.so.1": {
+              "bytes": 14680,
+              "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+              "bytes": 137560,
+              "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+              "bytes": 51512,
+              "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+            },
+            "/lib/x86_64-linux-gnu/libbsd.so.0": {
+              "bytes": 89096,
+              "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+            },
+            "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+              "bytes": 74848,
+              "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+            },
+            "/lib/x86_64-linux-gnu/libc.so.6": {
+              "bytes": 2220400,
+              "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+            },
+            "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+              "bytes": 18504,
+              "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+            },
+            "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+              "bytes": 198664,
+              "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+            },
+            "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+              "bytes": 4455728,
+              "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+            },
+            "/lib/x86_64-linux-gnu/libdl.so.2": {
+              "bytes": 14432,
+              "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+            },
+            "/lib/x86_64-linux-gnu/libexpat.so.1": {
+              "bytes": 198968,
+              "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+            },
+            "/lib/x86_64-linux-gnu/libffi.so.8": {
+              "bytes": 47688,
+              "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+            },
+            "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+              "bytes": 298120,
+              "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+            },
+            "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+              "bytes": 813128,
+              "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+            },
+            "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+              "bytes": 125488,
+              "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+              "bytes": 71848,
+              "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+              "bytes": 18344,
+              "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+            },
+            "/lib/x86_64-linux-gnu/libgomp.so.1": {
+              "bytes": 298776,
+              "sha256": "d46f9225c1883039e8a6853e6d96ca1af11d034ce186a090952e4a7c8a7c2fdc"
+            },
+            "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+              "bytes": 338648,
+              "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+            },
+            "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+              "bytes": 182864,
+              "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+            },
+            "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+              "bytes": 22600,
+              "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+              "bytes": 827936,
+              "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+              "bytes": 52016,
+              "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+            },
+            "/lib/x86_64-linux-gnu/liblzma.so.5": {
+              "bytes": 170456,
+              "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+            },
+            "/lib/x86_64-linux-gnu/libm.so.6": {
+              "bytes": 940560,
+              "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+            },
+            "/lib/x86_64-linux-gnu/libmd.so.0": {
+              "bytes": 47472,
+              "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+            },
+            "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+              "bytes": 239696,
+              "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+            },
+            "/lib/x86_64-linux-gnu/libnsl.so.2": {
+              "bytes": 93280,
+              "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+            },
+            "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+              "bytes": 22688,
+              "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+            },
+            "/lib/x86_64-linux-gnu/libpng16.so.16": {
+              "bytes": 235592,
+              "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+            },
+            "/lib/x86_64-linux-gnu/libpthread.so.0": {
+              "bytes": 21448,
+              "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+            },
+            "/lib/x86_64-linux-gnu/libreadline.so.8": {
+              "bytes": 335936,
+              "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+            },
+            "/lib/x86_64-linux-gnu/libresolv.so.2": {
+              "bytes": 64456,
+              "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+            },
+            "/lib/x86_64-linux-gnu/librt.so.1": {
+              "bytes": 14664,
+              "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+            },
+            "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+              "bytes": 1358520,
+              "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+            },
+            "/lib/x86_64-linux-gnu/libssl.so.3": {
+              "bytes": 671960,
+              "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+            },
+            "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+              "bytes": 2260296,
+              "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+            },
+            "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+              "bytes": 1762056,
+              "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+            },
+            "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+              "bytes": 200136,
+              "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+            },
+            "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+              "bytes": 182912,
+              "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+            },
+            "/lib/x86_64-linux-gnu/libtk8.6.so": {
+              "bytes": 1531896,
+              "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+            },
+            "/lib/x86_64-linux-gnu/libuuid.so.1": {
+              "bytes": 30936,
+              "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+            },
+            "/lib/x86_64-linux-gnu/libxcb.so.1": {
+              "bytes": 166504,
+              "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+            },
+            "/lib/x86_64-linux-gnu/libz.so.1": {
+              "bytes": 108936,
+              "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+            },
+            "/lib64/ld-linux-x86-64.so.2": {
+              "bytes": 240936,
+              "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+            }
+          },
+          "unresolved_elf_sonames": [
+            "libcublas.so.11",
+            "libcublas.so.12",
+            "libcublas.so.13",
+            "libcublasLt.so.11",
+            "libcublasLt.so.12",
+            "libcublasLt.so.13",
+            "libcudart.so.11.0",
+            "libcudart.so.12",
+            "libcudart.so.13",
+            "libhipblas.so.2",
+            "libhipblas.so.3",
+            "libhipblaslt.so.0",
+            "libhipblaslt.so.1",
+            "libimf.so",
+            "libintlc.so.5",
+            "libirng.so",
+            "librocrand.so.1",
+            "libsvml.so",
+            "libsycl.so.8",
+            "libsycl.so.9"
+          ],
+          "validated_profiles": [
+            "qwen35_27",
+            "qwen36_27",
+            "qwen35_9",
+            "gemma3_27",
+            "gemma3_12",
+            "flux2_klein4",
+            "z_image_turbo"
+          ]
+        },
+        "bundled_codec": null,
+        "import_count": 12,
+        "interpreter": "/redpad/runtime/bin/python3.11",
+        "isolated_imports_passed": true,
+        "job_id": 136902021612,
+        "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+        "prefix": "/redpad/runtime",
+        "python": "3.11.18 (main, Oct 26 2026, 02:48:47) [GCC 11.4.0]",
+        "tested_commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+        "workflow_run": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44922713868"
+      },
+      "ffmpeg_scope": "Synthetic H264/AAC host codec test in codec.json",
+      "outstanding": "Verify exact CUDA wheel and driver, device binding, NF4 GPU extensions for text and precision/offload for image."
+    },
+    "flux2_klein4": {
+      "repo": "black-forest-labs/FLUX.2-klein-4B",
+      "pinned_revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+      "registry_adapter": "flux2_klein",
+      "runtime_family": "modern",
+      "required_distribution_contract": [
+        "accelerate",
+        "diffusers",
+        "pillow",
+        "torch",
+        "transformers"
+      ],
+      "license": "apache-2.0",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "PASS — EXECUTED AND VERIFIED",
+      "status_scope": "Model-free CPU package startup only",
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "architecture": "x86_64",
+      "installed_host_interpreter": "/tmp/redpad-phase2/modern/bin/python",
+      "exact_lock_path": "modern.lock.txt",
+      "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+      "key_versions": {
+        "torch": "2.7.1+cpu",
+        "torchaudio": null,
+        "transformers": "5.22.2",
+        "diffusers": "0.43.0",
+        "accelerate": "1.15.0",
+        "bitsandbytes": "0.50.2",
+        "tokenizers": "0.23.3",
+        "safetensors": "0.8.0"
+      },
+      "host_import_evidence": "modern-host.json",
+      "sandbox_evidence": {
+        "binding": {
+          "empty_files": 350,
+          "identity": {
+            "dependency_lock": {
+              "accelerate": "1.15.0",
+              "annotated-doc": "0.0.7",
+              "annotated-types": "0.8.0",
+              "anyio": "4.16.0",
+              "bitsandbytes": "0.50.2",
+              "certifi": "2026.11.20",
+              "charset-normalizer": "3.5.2",
+              "click": "8.5.1",
+              "diffusers": "0.43.0",
+              "filelock": "4.2.4",
+              "fsspec": "2026.9.0",
+              "h11": "0.16.0",
+              "hf-xet": "1.8.0",
+              "httpcore2": "2.16.2",
+              "httpx2": "2.16.2",
+              "huggingface-hub": "2.4.0",
+              "idna": "3.20",
+              "importlib-metadata": "10.2.0",
+              "jinja2": "3.1.6",
+              "lazy-importer": "0.1.0",
+              "markdown-it-py": "4.3.0",
+              "markupsafe": "3.0.3",
+              "mdurl": "0.1.2",
+              "mpmath": "1.3.0",
+              "networkx": "3.6.1",
+              "numpy": "2.4.6",
+              "packaging": "26.3",
+              "pillow": "13.0.0",
+              "psutil": "7.2.2",
+              "pydantic": "2.14.4",
+              "pydantic-core": "2.50.5",
+              "pygments": "2.21.0",
+              "pyyaml": "6.0.4",
+              "regex": "2026.11.19",
+              "requests": "2.34.2",
+              "rich": "15.0.0",
+              "safetensors": "0.8.0",
+              "shellingham": "1.5.4",
+              "sympy": "1.14.0",
+              "tokenizers": "0.23.3",
+              "torch": "2.7.1+cpu",
+              "tqdm": "4.70.1",
+              "transformers": "5.22.2",
+              "truststore": "0.10.5",
+              "typer": "0.29.2",
+              "typing-extensions": "4.16.0",
+              "typing-inspection": "0.4.5",
+              "urllib3": "2.8.0",
+              "zipp": "4.1.2"
+            },
+            "interpreter": "/redpad/runtime/bin/python3.11",
+            "sha256": "1461ec4972f190f770842ea9429cff3865c72de9104b47f3db89f41248cfc7bd"
+          },
+          "manifest_files": 23081,
+          "studio_sha256": "c2e933ae04392da7d8c71c6ec98a4ec8976b475ab244ba65860aa6984bea707c",
+          "system_files": {
+            "/lib/x86_64-linux-gnu/libX11.so.6": {
+              "bytes": 1306280,
+              "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+            },
+            "/lib/x86_64-linux-gnu/libXau.so.6": {
+              "bytes": 18720,
+              "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+            },
+            "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+              "bytes": 26800,
+              "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+            },
+            "/lib/x86_64-linux-gnu/libXext.so.6": {
+              "bytes": 81640,
+              "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+            },
+            "/lib/x86_64-linux-gnu/libXft.so.2": {
+              "bytes": 97624,
+              "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+            },
+            "/lib/x86_64-linux-gnu/libXrender.so.1": {
+              "bytes": 47728,
+              "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+            },
+            "/lib/x86_64-linux-gnu/libXss.so.1": {
+              "bytes": 14680,
+              "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+              "bytes": 137560,
+              "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+              "bytes": 51512,
+              "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+            },
+            "/lib/x86_64-linux-gnu/libbsd.so.0": {
+              "bytes": 89096,
+              "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+            },
+            "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+              "bytes": 74848,
+              "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+            },
+            "/lib/x86_64-linux-gnu/libc.so.6": {
+              "bytes": 2220400,
+              "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+            },
+            "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+              "bytes": 18504,
+              "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+            },
+            "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+              "bytes": 198664,
+              "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+            },
+            "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+              "bytes": 4455728,
+              "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+            },
+            "/lib/x86_64-linux-gnu/libdl.so.2": {
+              "bytes": 14432,
+              "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+            },
+            "/lib/x86_64-linux-gnu/libexpat.so.1": {
+              "bytes": 198968,
+              "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+            },
+            "/lib/x86_64-linux-gnu/libffi.so.8": {
+              "bytes": 47688,
+              "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+            },
+            "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+              "bytes": 298120,
+              "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+            },
+            "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+              "bytes": 813128,
+              "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+            },
+            "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+              "bytes": 125488,
+              "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+              "bytes": 71848,
+              "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+              "bytes": 18344,
+              "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+            },
+            "/lib/x86_64-linux-gnu/libgomp.so.1": {
+              "bytes": 298776,
+              "sha256": "d46f9225c1883039e8a6853e6d96ca1af11d034ce186a090952e4a7c8a7c2fdc"
+            },
+            "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+              "bytes": 338648,
+              "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+            },
+            "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+              "bytes": 182864,
+              "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+            },
+            "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+              "bytes": 22600,
+              "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+              "bytes": 827936,
+              "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+              "bytes": 52016,
+              "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+            },
+            "/lib/x86_64-linux-gnu/liblzma.so.5": {
+              "bytes": 170456,
+              "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+            },
+            "/lib/x86_64-linux-gnu/libm.so.6": {
+              "bytes": 940560,
+              "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+            },
+            "/lib/x86_64-linux-gnu/libmd.so.0": {
+              "bytes": 47472,
+              "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+            },
+            "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+              "bytes": 239696,
+              "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+            },
+            "/lib/x86_64-linux-gnu/libnsl.so.2": {
+              "bytes": 93280,
+              "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+            },
+            "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+              "bytes": 22688,
+              "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+            },
+            "/lib/x86_64-linux-gnu/libpng16.so.16": {
+              "bytes": 235592,
+              "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+            },
+            "/lib/x86_64-linux-gnu/libpthread.so.0": {
+              "bytes": 21448,
+              "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+            },
+            "/lib/x86_64-linux-gnu/libreadline.so.8": {
+              "bytes": 335936,
+              "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+            },
+            "/lib/x86_64-linux-gnu/libresolv.so.2": {
+              "bytes": 64456,
+              "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+            },
+            "/lib/x86_64-linux-gnu/librt.so.1": {
+              "bytes": 14664,
+              "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+            },
+            "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+              "bytes": 1358520,
+              "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+            },
+            "/lib/x86_64-linux-gnu/libssl.so.3": {
+              "bytes": 671960,
+              "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+            },
+            "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+              "bytes": 2260296,
+              "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+            },
+            "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+              "bytes": 1762056,
+              "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+            },
+            "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+              "bytes": 200136,
+              "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+            },
+            "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+              "bytes": 182912,
+              "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+            },
+            "/lib/x86_64-linux-gnu/libtk8.6.so": {
+              "bytes": 1531896,
+              "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+            },
+            "/lib/x86_64-linux-gnu/libuuid.so.1": {
+              "bytes": 30936,
+              "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+            },
+            "/lib/x86_64-linux-gnu/libxcb.so.1": {
+              "bytes": 166504,
+              "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+            },
+            "/lib/x86_64-linux-gnu/libz.so.1": {
+              "bytes": 108936,
+              "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+            },
+            "/lib64/ld-linux-x86-64.so.2": {
+              "bytes": 240936,
+              "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+            }
+          },
+          "unresolved_elf_sonames": [
+            "libcublas.so.11",
+            "libcublas.so.12",
+            "libcublas.so.13",
+            "libcublasLt.so.11",
+            "libcublasLt.so.12",
+            "libcublasLt.so.13",
+            "libcudart.so.11.0",
+            "libcudart.so.12",
+            "libcudart.so.13",
+            "libhipblas.so.2",
+            "libhipblas.so.3",
+            "libhipblaslt.so.0",
+            "libhipblaslt.so.1",
+            "libimf.so",
+            "libintlc.so.5",
+            "libirng.so",
+            "librocrand.so.1",
+            "libsvml.so",
+            "libsycl.so.8",
+            "libsycl.so.9"
+          ],
+          "validated_profiles": [
+            "qwen35_27",
+            "qwen36_27",
+            "qwen35_9",
+            "gemma3_27",
+            "gemma3_12",
+            "flux2_klein4",
+            "z_image_turbo"
+          ]
+        },
+        "bundled_codec": null,
+        "import_count": 12,
+        "interpreter": "/redpad/runtime/bin/python3.11",
+        "isolated_imports_passed": true,
+        "job_id": 136902021612,
+        "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+        "prefix": "/redpad/runtime",
+        "python": "3.11.18 (main, Oct 26 2026, 02:48:47) [GCC 11.4.0]",
+        "tested_commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+        "workflow_run": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44922713868"
+      },
+      "ffmpeg_scope": "Synthetic H264/AAC host codec test in codec.json",
+      "outstanding": "Verify exact CUDA wheel and driver, device binding, NF4 GPU extensions for text and precision/offload for image."
+    },
+    "z_image_turbo": {
+      "repo": "Tongyi-MAI/Z-Image-Turbo",
+      "pinned_revision": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+      "registry_adapter": "z_image",
+      "runtime_family": "modern",
+      "required_distribution_contract": [
+        "accelerate",
+        "diffusers",
+        "pillow",
+        "torch",
+        "transformers"
+      ],
+      "license": "apache-2.0",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "PASS — EXECUTED AND VERIFIED",
+      "status_scope": "Model-free CPU package startup only",
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "architecture": "x86_64",
+      "installed_host_interpreter": "/tmp/redpad-phase2/modern/bin/python",
+      "exact_lock_path": "modern.lock.txt",
+      "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+      "key_versions": {
+        "torch": "2.7.1+cpu",
+        "torchaudio": null,
+        "transformers": "5.22.2",
+        "diffusers": "0.43.0",
+        "accelerate": "1.15.0",
+        "bitsandbytes": "0.50.2",
+        "tokenizers": "0.23.3",
+        "safetensors": "0.8.0"
+      },
+      "host_import_evidence": "modern-host.json",
+      "sandbox_evidence": {
+        "binding": {
+          "empty_files": 350,
+          "identity": {
+            "dependency_lock": {
+              "accelerate": "1.15.0",
+              "annotated-doc": "0.0.7",
+              "annotated-types": "0.8.0",
+              "anyio": "4.16.0",
+              "bitsandbytes": "0.50.2",
+              "certifi": "2026.11.20",
+              "charset-normalizer": "3.5.2",
+              "click": "8.5.1",
+              "diffusers": "0.43.0",
+              "filelock": "4.2.4",
+              "fsspec": "2026.9.0",
+              "h11": "0.16.0",
+              "hf-xet": "1.8.0",
+              "httpcore2": "2.16.2",
+              "httpx2": "2.16.2",
+              "huggingface-hub": "2.4.0",
+              "idna": "3.20",
+              "importlib-metadata": "10.2.0",
+              "jinja2": "3.1.6",
+              "lazy-importer": "0.1.0",
+              "markdown-it-py": "4.3.0",
+              "markupsafe": "3.0.3",
+              "mdurl": "0.1.2",
+              "mpmath": "1.3.0",
+              "networkx": "3.6.1",
+              "numpy": "2.4.6",
+              "packaging": "26.3",
+              "pillow": "13.0.0",
+              "psutil": "7.2.2",
+              "pydantic": "2.14.4",
+              "pydantic-core": "2.50.5",
+              "pygments": "2.21.0",
+              "pyyaml": "6.0.4",
+              "regex": "2026.11.19",
+              "requests": "2.34.2",
+              "rich": "15.0.0",
+              "safetensors": "0.8.0",
+              "shellingham": "1.5.4",
+              "sympy": "1.14.0",
+              "tokenizers": "0.23.3",
+              "torch": "2.7.1+cpu",
+              "tqdm": "4.70.1",
+              "transformers": "5.22.2",
+              "truststore": "0.10.5",
+              "typer": "0.29.2",
+              "typing-extensions": "4.16.0",
+              "typing-inspection": "0.4.5",
+              "urllib3": "2.8.0",
+              "zipp": "4.1.2"
+            },
+            "interpreter": "/redpad/runtime/bin/python3.11",
+            "sha256": "1461ec4972f190f770842ea9429cff3865c72de9104b47f3db89f41248cfc7bd"
+          },
+          "manifest_files": 23081,
+          "studio_sha256": "c2e933ae04392da7d8c71c6ec98a4ec8976b475ab244ba65860aa6984bea707c",
+          "system_files": {
+            "/lib/x86_64-linux-gnu/libX11.so.6": {
+              "bytes": 1306280,
+              "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+            },
+            "/lib/x86_64-linux-gnu/libXau.so.6": {
+              "bytes": 18720,
+              "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+            },
+            "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+              "bytes": 26800,
+              "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+            },
+            "/lib/x86_64-linux-gnu/libXext.so.6": {
+              "bytes": 81640,
+              "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+            },
+            "/lib/x86_64-linux-gnu/libXft.so.2": {
+              "bytes": 97624,
+              "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+            },
+            "/lib/x86_64-linux-gnu/libXrender.so.1": {
+              "bytes": 47728,
+              "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+            },
+            "/lib/x86_64-linux-gnu/libXss.so.1": {
+              "bytes": 14680,
+              "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+              "bytes": 137560,
+              "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+              "bytes": 51512,
+              "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+            },
+            "/lib/x86_64-linux-gnu/libbsd.so.0": {
+              "bytes": 89096,
+              "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+            },
+            "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+              "bytes": 74848,
+              "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+            },
+            "/lib/x86_64-linux-gnu/libc.so.6": {
+              "bytes": 2220400,
+              "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+            },
+            "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+              "bytes": 18504,
+              "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+            },
+            "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+              "bytes": 198664,
+              "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+            },
+            "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+              "bytes": 4455728,
+              "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+            },
+            "/lib/x86_64-linux-gnu/libdl.so.2": {
+              "bytes": 14432,
+              "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+            },
+            "/lib/x86_64-linux-gnu/libexpat.so.1": {
+              "bytes": 198968,
+              "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+            },
+            "/lib/x86_64-linux-gnu/libffi.so.8": {
+              "bytes": 47688,
+              "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+            },
+            "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+              "bytes": 298120,
+              "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+            },
+            "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+              "bytes": 813128,
+              "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+            },
+            "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+              "bytes": 125488,
+              "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+              "bytes": 71848,
+              "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+              "bytes": 18344,
+              "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+            },
+            "/lib/x86_64-linux-gnu/libgomp.so.1": {
+              "bytes": 298776,
+              "sha256": "d46f9225c1883039e8a6853e6d96ca1af11d034ce186a090952e4a7c8a7c2fdc"
+            },
+            "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+              "bytes": 338648,
+              "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+            },
+            "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+              "bytes": 182864,
+              "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+            },
+            "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+              "bytes": 22600,
+              "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+              "bytes": 827936,
+              "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+              "bytes": 52016,
+              "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+            },
+            "/lib/x86_64-linux-gnu/liblzma.so.5": {
+              "bytes": 170456,
+              "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+            },
+            "/lib/x86_64-linux-gnu/libm.so.6": {
+              "bytes": 940560,
+              "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+            },
+            "/lib/x86_64-linux-gnu/libmd.so.0": {
+              "bytes": 47472,
+              "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+            },
+            "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+              "bytes": 239696,
+              "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+            },
+            "/lib/x86_64-linux-gnu/libnsl.so.2": {
+              "bytes": 93280,
+              "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+            },
+            "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+              "bytes": 22688,
+              "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+            },
+            "/lib/x86_64-linux-gnu/libpng16.so.16": {
+              "bytes": 235592,
+              "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+            },
+            "/lib/x86_64-linux-gnu/libpthread.so.0": {
+              "bytes": 21448,
+              "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+            },
+            "/lib/x86_64-linux-gnu/libreadline.so.8": {
+              "bytes": 335936,
+              "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+            },
+            "/lib/x86_64-linux-gnu/libresolv.so.2": {
+              "bytes": 64456,
+              "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+            },
+            "/lib/x86_64-linux-gnu/librt.so.1": {
+              "bytes": 14664,
+              "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+            },
+            "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+              "bytes": 1358520,
+              "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+            },
+            "/lib/x86_64-linux-gnu/libssl.so.3": {
+              "bytes": 671960,
+              "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+            },
+            "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+              "bytes": 2260296,
+              "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+            },
+            "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+              "bytes": 1762056,
+              "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+            },
+            "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+              "bytes": 200136,
+              "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+            },
+            "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+              "bytes": 182912,
+              "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+            },
+            "/lib/x86_64-linux-gnu/libtk8.6.so": {
+              "bytes": 1531896,
+              "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+            },
+            "/lib/x86_64-linux-gnu/libuuid.so.1": {
+              "bytes": 30936,
+              "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+            },
+            "/lib/x86_64-linux-gnu/libxcb.so.1": {
+              "bytes": 166504,
+              "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+            },
+            "/lib/x86_64-linux-gnu/libz.so.1": {
+              "bytes": 108936,
+              "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+            },
+            "/lib64/ld-linux-x86-64.so.2": {
+              "bytes": 240936,
+              "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+            }
+          },
+          "unresolved_elf_sonames": [
+            "libcublas.so.11",
+            "libcublas.so.12",
+            "libcublas.so.13",
+            "libcublasLt.so.11",
+            "libcublasLt.so.12",
+            "libcublasLt.so.13",
+            "libcudart.so.11.0",
+            "libcudart.so.12",
+            "libcudart.so.13",
+            "libhipblas.so.2",
+            "libhipblas.so.3",
+            "libhipblaslt.so.0",
+            "libhipblaslt.so.1",
+            "libimf.so",
+            "libintlc.so.5",
+            "libirng.so",
+            "librocrand.so.1",
+            "libsvml.so",
+            "libsycl.so.8",
+            "libsycl.so.9"
+          ],
+          "validated_profiles": [
+            "qwen35_27",
+            "qwen36_27",
+            "qwen35_9",
+            "gemma3_27",
+            "gemma3_12",
+            "flux2_klein4",
+            "z_image_turbo"
+          ]
+        },
+        "bundled_codec": null,
+        "import_count": 12,
+        "interpreter": "/redpad/runtime/bin/python3.11",
+        "isolated_imports_passed": true,
+        "job_id": 136902021612,
+        "lock_sha256": "971211a0e17e69d0bab4fa4f503d81f3dc5af9962ca8b6943210f6f1c02e8144",
+        "prefix": "/redpad/runtime",
+        "python": "3.11.18 (main, Oct 26 2026, 02:48:47) [GCC 11.4.0]",
+        "tested_commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+        "workflow_run": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44922713868"
+      },
+      "ffmpeg_scope": "Synthetic H264/AAC host codec test in codec.json",
+      "outstanding": "Verify exact CUDA wheel and driver, device binding, NF4 GPU extensions for text and precision/offload for image."
+    },
+    "wan_animate2": {
+      "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+      "pinned_revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+      "registry_adapter": "contract_only",
+      "runtime_family": null,
+      "required_distribution_contract": [
+        "omegaconf",
+        "torch",
+        "transformers"
+      ],
+      "license": "apache-2.0",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "BLOCKED — EXTERNAL DEPENDENCY",
+      "blocker": "Exact reviewed native source and complete dependency closure needed for WanAnimate2MPIPipeline.",
+      "exact_lock_path": null,
+      "installed_host_interpreter": null,
+      "outstanding": "Reviewed dependency closure and offline CPU startup first, then exact model/accelerator validation."
+    },
+    "wan_animate2_distilled": {
+      "repo": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+      "pinned_revision": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+      "registry_adapter": "contract_only",
+      "runtime_family": null,
+      "required_distribution_contract": null,
+      "license": "apache-2.0",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "BLOCKED — EXTERNAL DEPENDENCY",
+      "blocker": "Separate contract-only profile. No approved adapter or complete runtime lock.",
+      "exact_lock_path": null,
+      "installed_host_interpreter": null,
+      "outstanding": "Reviewed dependency closure and offline CPU startup first, then exact model/accelerator validation."
+    },
+    "wan22_5": {
+      "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "pinned_revision": "b8fff7315c768468a5333511427288870b2e9635",
+      "registry_adapter": "existing_wan_adapter",
+      "runtime_family": "media",
+      "required_distribution_contract": [
+        "accelerate",
+        "diffusers",
+        "torch",
+        "transformers"
+      ],
+      "license": "apache-2.0",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "PASS — EXECUTED AND VERIFIED",
+      "status_scope": "Model-free CPU package startup only",
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "architecture": "x86_64",
+      "installed_host_interpreter": "/tmp/redpad-phase2/media/bin/python",
+      "exact_lock_path": "media.lock.txt",
+      "lock_sha256": "ed09957f64506a1704f36a9b89de1f0e13c797f81d1e0ca625a4d82a8863237a",
+      "key_versions": {
+        "torch": "2.7.1+cpu",
+        "torchaudio": null,
+        "transformers": "4.57.1",
+        "diffusers": "0.36.0",
+        "accelerate": "1.11.0",
+        "bitsandbytes": null,
+        "tokenizers": "0.22.2",
+        "safetensors": "0.6.2"
+      },
+      "host_import_evidence": "media-host.json",
+      "sandbox_evidence": {
+        "binding": {
+          "empty_files": 321,
+          "identity": {
+            "dependency_lock": {
+              "accelerate": "1.11.0",
+              "anyio": "4.16.0",
+              "certifi": "2026.11.20",
+              "charset-normalizer": "3.5.2",
+              "diffusers": "0.36.0",
+              "filelock": "4.2.4",
+              "fsspec": "2026.9.0",
+              "ftfy": "6.3.1",
+              "h11": "0.16.0",
+              "hf-xet": "1.8.0",
+              "httpcore": "1.0.9",
+              "httpx": "0.28.1",
+              "huggingface-hub": "0.36.2",
+              "idna": "3.20",
+              "imageio": "2.37.0",
+              "imageio-ffmpeg": "0.6.0",
+              "importlib-metadata": "10.2.0",
+              "jinja2": "3.1.6",
+              "lazy-importer": "0.1.0",
+              "markupsafe": "3.0.3",
+              "mpmath": "1.3.0",
+              "networkx": "3.6.1",
+              "numpy": "2.4.6",
+              "packaging": "26.3",
+              "pillow": "13.0.0",
+              "psutil": "7.2.2",
+              "pyyaml": "6.0.4",
+              "regex": "2026.11.19",
+              "requests": "2.34.2",
+              "safetensors": "0.6.2",
+              "sentencepiece": "0.2.1",
+              "sympy": "1.14.0",
+              "tokenizers": "0.22.2",
+              "torch": "2.7.1+cpu",
+              "tqdm": "4.70.1",
+              "transformers": "4.57.1",
+              "typing-extensions": "4.16.0",
+              "urllib3": "2.8.0",
+              "wcwidth": "0.9.4",
+              "zipp": "4.1.2"
+            },
+            "interpreter": "/redpad/runtime/bin/python3.11",
+            "sha256": "4b202aebba3062d94cc6b79ea1b382e2603d6b5fffe76dd96ee7a05b5ba13c26"
+          },
+          "manifest_files": 21408,
+          "studio_sha256": "c2e933ae04392da7d8c71c6ec98a4ec8976b475ab244ba65860aa6984bea707c",
+          "system_files": {
+            "/lib/x86_64-linux-gnu/libX11.so.6": {
+              "bytes": 1306280,
+              "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+            },
+            "/lib/x86_64-linux-gnu/libXau.so.6": {
+              "bytes": 18720,
+              "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+            },
+            "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+              "bytes": 26800,
+              "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+            },
+            "/lib/x86_64-linux-gnu/libXext.so.6": {
+              "bytes": 81640,
+              "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+            },
+            "/lib/x86_64-linux-gnu/libXft.so.2": {
+              "bytes": 97624,
+              "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+            },
+            "/lib/x86_64-linux-gnu/libXrender.so.1": {
+              "bytes": 47728,
+              "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+            },
+            "/lib/x86_64-linux-gnu/libXss.so.1": {
+              "bytes": 14680,
+              "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+              "bytes": 137560,
+              "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+              "bytes": 51512,
+              "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+            },
+            "/lib/x86_64-linux-gnu/libbsd.so.0": {
+              "bytes": 89096,
+              "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+            },
+            "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+              "bytes": 74848,
+              "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+            },
+            "/lib/x86_64-linux-gnu/libc.so.6": {
+              "bytes": 2220400,
+              "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+            },
+            "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+              "bytes": 18504,
+              "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+            },
+            "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+              "bytes": 198664,
+              "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+            },
+            "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+              "bytes": 4455728,
+              "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+            },
+            "/lib/x86_64-linux-gnu/libdl.so.2": {
+              "bytes": 14432,
+              "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+            },
+            "/lib/x86_64-linux-gnu/libexpat.so.1": {
+              "bytes": 198968,
+              "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+            },
+            "/lib/x86_64-linux-gnu/libffi.so.8": {
+              "bytes": 47688,
+              "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+            },
+            "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+              "bytes": 298120,
+              "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+            },
+            "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+              "bytes": 813128,
+              "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+            },
+            "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+              "bytes": 125488,
+              "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+              "bytes": 71848,
+              "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+              "bytes": 18344,
+              "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+            },
+            "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+              "bytes": 338648,
+              "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+            },
+            "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+              "bytes": 182864,
+              "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+            },
+            "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+              "bytes": 22600,
+              "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+              "bytes": 827936,
+              "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+              "bytes": 52016,
+              "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+            },
+            "/lib/x86_64-linux-gnu/liblzma.so.5": {
+              "bytes": 170456,
+              "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+            },
+            "/lib/x86_64-linux-gnu/libm.so.6": {
+              "bytes": 940560,
+              "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+            },
+            "/lib/x86_64-linux-gnu/libmd.so.0": {
+              "bytes": 47472,
+              "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+            },
+            "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+              "bytes": 239696,
+              "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+            },
+            "/lib/x86_64-linux-gnu/libnsl.so.2": {
+              "bytes": 93280,
+              "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+            },
+            "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+              "bytes": 22688,
+              "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+            },
+            "/lib/x86_64-linux-gnu/libpng16.so.16": {
+              "bytes": 235592,
+              "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+            },
+            "/lib/x86_64-linux-gnu/libpthread.so.0": {
+              "bytes": 21448,
+              "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+            },
+            "/lib/x86_64-linux-gnu/libreadline.so.8": {
+              "bytes": 335936,
+              "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+            },
+            "/lib/x86_64-linux-gnu/libresolv.so.2": {
+              "bytes": 64456,
+              "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+            },
+            "/lib/x86_64-linux-gnu/librt.so.1": {
+              "bytes": 14664,
+              "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+            },
+            "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+              "bytes": 1358520,
+              "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+            },
+            "/lib/x86_64-linux-gnu/libssl.so.3": {
+              "bytes": 671960,
+              "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+            },
+            "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+              "bytes": 2260296,
+              "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+            },
+            "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+              "bytes": 1762056,
+              "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+            },
+            "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+              "bytes": 200136,
+              "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+            },
+            "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+              "bytes": 182912,
+              "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+            },
+            "/lib/x86_64-linux-gnu/libtk8.6.so": {
+              "bytes": 1531896,
+              "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+            },
+            "/lib/x86_64-linux-gnu/libuuid.so.1": {
+              "bytes": 30936,
+              "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+            },
+            "/lib/x86_64-linux-gnu/libxcb.so.1": {
+              "bytes": 166504,
+              "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+            },
+            "/lib/x86_64-linux-gnu/libz.so.1": {
+              "bytes": 108936,
+              "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+            },
+            "/lib64/ld-linux-x86-64.so.2": {
+              "bytes": 240936,
+              "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+            }
+          },
+          "unresolved_elf_sonames": [],
+          "validated_profiles": [
+            "wan22_5",
+            "svd_xt"
+          ]
+        },
+        "bundled_codec": {
+          "commands": [
+            [
+              "/redpad/runtime/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+              "-v",
+              "error",
+              "-f",
+              "lavfi",
+              "-i",
+              "color=black:s=64x64:r=10:d=0.3",
+              "-c:v",
+              "libx264",
+              "/tmp/tmpu4iv91yt/synthetic.mp4"
+            ],
+            [
+              "/redpad/runtime/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+              "-v",
+              "error",
+              "-i",
+              "/tmp/tmpu4iv91yt/synthetic.mp4",
+              "-f",
+              "null",
+              "-"
+            ]
+          ],
+          "executable": "/redpad/runtime/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+          "sha256": "e7e7fb30477f717e6f55f9180a70386c62677ef8a4d4d1a5d948f4098aa3eb99"
+        },
+        "import_count": 10,
+        "interpreter": "/redpad/runtime/bin/python3.11",
+        "isolated_imports_passed": true,
+        "job_id": 136902021618,
+        "lock_sha256": "ed09957f64506a1704f36a9b89de1f0e13c797f81d1e0ca625a4d82a8863237a",
+        "prefix": "/redpad/runtime",
+        "python": "3.11.18 (main, Oct 26 2026, 02:48:47) [GCC 11.4.0]",
+        "tested_commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+        "workflow_run": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44922713868"
+      },
+      "ffmpeg_scope": "Synthetic H264/AAC host codec test in codec.json",
+      "outstanding": "Verify selected CUDA wheel and driver, device binding, BF16/precision, video pipeline, decoder and offload memory."
+    },
+    "ltx25": {
+      "repo": "Lightricks/LTX-2.5",
+      "pinned_revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+      "registry_adapter": "contract_only",
+      "runtime_family": null,
+      "required_distribution_contract": [
+        "safetensors",
+        "torch",
+        "transformers"
+      ],
+      "license": "other",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "BLOCKED — EXTERNAL DEPENDENCY",
+      "blocker": "Pinned LTX native code and dependency lock needed. Official spatial upscaler SHA-256 remains unavailable.",
+      "exact_lock_path": null,
+      "installed_host_interpreter": null,
+      "outstanding": "Reviewed dependency closure and offline CPU startup first, then exact model/accelerator validation."
+    },
+    "svd_xt": {
+      "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+      "pinned_revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+      "registry_adapter": "existing_svd_adapter",
+      "runtime_family": "media",
+      "required_distribution_contract": [
+        "diffusers",
+        "torch",
+        "transformers"
+      ],
+      "license": "other",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "PASS — EXECUTED AND VERIFIED",
+      "status_scope": "Model-free CPU package startup only",
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "architecture": "x86_64",
+      "installed_host_interpreter": "/tmp/redpad-phase2/media/bin/python",
+      "exact_lock_path": "media.lock.txt",
+      "lock_sha256": "ed09957f64506a1704f36a9b89de1f0e13c797f81d1e0ca625a4d82a8863237a",
+      "key_versions": {
+        "torch": "2.7.1+cpu",
+        "torchaudio": null,
+        "transformers": "4.57.1",
+        "diffusers": "0.36.0",
+        "accelerate": "1.11.0",
+        "bitsandbytes": null,
+        "tokenizers": "0.22.2",
+        "safetensors": "0.6.2"
+      },
+      "host_import_evidence": "media-host.json",
+      "sandbox_evidence": {
+        "binding": {
+          "empty_files": 321,
+          "identity": {
+            "dependency_lock": {
+              "accelerate": "1.11.0",
+              "anyio": "4.16.0",
+              "certifi": "2026.11.20",
+              "charset-normalizer": "3.5.2",
+              "diffusers": "0.36.0",
+              "filelock": "4.2.4",
+              "fsspec": "2026.9.0",
+              "ftfy": "6.3.1",
+              "h11": "0.16.0",
+              "hf-xet": "1.8.0",
+              "httpcore": "1.0.9",
+              "httpx": "0.28.1",
+              "huggingface-hub": "0.36.2",
+              "idna": "3.20",
+              "imageio": "2.37.0",
+              "imageio-ffmpeg": "0.6.0",
+              "importlib-metadata": "10.2.0",
+              "jinja2": "3.1.6",
+              "lazy-importer": "0.1.0",
+              "markupsafe": "3.0.3",
+              "mpmath": "1.3.0",
+              "networkx": "3.6.1",
+              "numpy": "2.4.6",
+              "packaging": "26.3",
+              "pillow": "13.0.0",
+              "psutil": "7.2.2",
+              "pyyaml": "6.0.4",
+              "regex": "2026.11.19",
+              "requests": "2.34.2",
+              "safetensors": "0.6.2",
+              "sentencepiece": "0.2.1",
+              "sympy": "1.14.0",
+              "tokenizers": "0.22.2",
+              "torch": "2.7.1+cpu",
+              "tqdm": "4.70.1",
+              "transformers": "4.57.1",
+              "typing-extensions": "4.16.0",
+              "urllib3": "2.8.0",
+              "wcwidth": "0.9.4",
+              "zipp": "4.1.2"
+            },
+            "interpreter": "/redpad/runtime/bin/python3.11",
+            "sha256": "4b202aebba3062d94cc6b79ea1b382e2603d6b5fffe76dd96ee7a05b5ba13c26"
+          },
+          "manifest_files": 21408,
+          "studio_sha256": "c2e933ae04392da7d8c71c6ec98a4ec8976b475ab244ba65860aa6984bea707c",
+          "system_files": {
+            "/lib/x86_64-linux-gnu/libX11.so.6": {
+              "bytes": 1306280,
+              "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+            },
+            "/lib/x86_64-linux-gnu/libXau.so.6": {
+              "bytes": 18720,
+              "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+            },
+            "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+              "bytes": 26800,
+              "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+            },
+            "/lib/x86_64-linux-gnu/libXext.so.6": {
+              "bytes": 81640,
+              "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+            },
+            "/lib/x86_64-linux-gnu/libXft.so.2": {
+              "bytes": 97624,
+              "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+            },
+            "/lib/x86_64-linux-gnu/libXrender.so.1": {
+              "bytes": 47728,
+              "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+            },
+            "/lib/x86_64-linux-gnu/libXss.so.1": {
+              "bytes": 14680,
+              "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+              "bytes": 137560,
+              "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+              "bytes": 51512,
+              "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+            },
+            "/lib/x86_64-linux-gnu/libbsd.so.0": {
+              "bytes": 89096,
+              "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+            },
+            "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+              "bytes": 74848,
+              "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+            },
+            "/lib/x86_64-linux-gnu/libc.so.6": {
+              "bytes": 2220400,
+              "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+            },
+            "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+              "bytes": 18504,
+              "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+            },
+            "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+              "bytes": 198664,
+              "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+            },
+            "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+              "bytes": 4455728,
+              "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+            },
+            "/lib/x86_64-linux-gnu/libdl.so.2": {
+              "bytes": 14432,
+              "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+            },
+            "/lib/x86_64-linux-gnu/libexpat.so.1": {
+              "bytes": 198968,
+              "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+            },
+            "/lib/x86_64-linux-gnu/libffi.so.8": {
+              "bytes": 47688,
+              "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+            },
+            "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+              "bytes": 298120,
+              "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+            },
+            "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+              "bytes": 813128,
+              "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+            },
+            "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+              "bytes": 125488,
+              "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+              "bytes": 71848,
+              "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+              "bytes": 18344,
+              "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+            },
+            "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+              "bytes": 338648,
+              "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+            },
+            "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+              "bytes": 182864,
+              "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+            },
+            "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+              "bytes": 22600,
+              "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+              "bytes": 827936,
+              "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+              "bytes": 52016,
+              "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+            },
+            "/lib/x86_64-linux-gnu/liblzma.so.5": {
+              "bytes": 170456,
+              "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+            },
+            "/lib/x86_64-linux-gnu/libm.so.6": {
+              "bytes": 940560,
+              "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+            },
+            "/lib/x86_64-linux-gnu/libmd.so.0": {
+              "bytes": 47472,
+              "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+            },
+            "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+              "bytes": 239696,
+              "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+            },
+            "/lib/x86_64-linux-gnu/libnsl.so.2": {
+              "bytes": 93280,
+              "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+            },
+            "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+              "bytes": 22688,
+              "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+            },
+            "/lib/x86_64-linux-gnu/libpng16.so.16": {
+              "bytes": 235592,
+              "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+            },
+            "/lib/x86_64-linux-gnu/libpthread.so.0": {
+              "bytes": 21448,
+              "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+            },
+            "/lib/x86_64-linux-gnu/libreadline.so.8": {
+              "bytes": 335936,
+              "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+            },
+            "/lib/x86_64-linux-gnu/libresolv.so.2": {
+              "bytes": 64456,
+              "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+            },
+            "/lib/x86_64-linux-gnu/librt.so.1": {
+              "bytes": 14664,
+              "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+            },
+            "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+              "bytes": 1358520,
+              "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+            },
+            "/lib/x86_64-linux-gnu/libssl.so.3": {
+              "bytes": 671960,
+              "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+            },
+            "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+              "bytes": 2260296,
+              "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+            },
+            "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+              "bytes": 1762056,
+              "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+            },
+            "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+              "bytes": 200136,
+              "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+            },
+            "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+              "bytes": 182912,
+              "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+            },
+            "/lib/x86_64-linux-gnu/libtk8.6.so": {
+              "bytes": 1531896,
+              "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+            },
+            "/lib/x86_64-linux-gnu/libuuid.so.1": {
+              "bytes": 30936,
+              "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+            },
+            "/lib/x86_64-linux-gnu/libxcb.so.1": {
+              "bytes": 166504,
+              "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+            },
+            "/lib/x86_64-linux-gnu/libz.so.1": {
+              "bytes": 108936,
+              "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+            },
+            "/lib64/ld-linux-x86-64.so.2": {
+              "bytes": 240936,
+              "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+            }
+          },
+          "unresolved_elf_sonames": [],
+          "validated_profiles": [
+            "wan22_5",
+            "svd_xt"
+          ]
+        },
+        "bundled_codec": {
+          "commands": [
+            [
+              "/redpad/runtime/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+              "-v",
+              "error",
+              "-f",
+              "lavfi",
+              "-i",
+              "color=black:s=64x64:r=10:d=0.3",
+              "-c:v",
+              "libx264",
+              "/tmp/tmpu4iv91yt/synthetic.mp4"
+            ],
+            [
+              "/redpad/runtime/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+              "-v",
+              "error",
+              "-i",
+              "/tmp/tmpu4iv91yt/synthetic.mp4",
+              "-f",
+              "null",
+              "-"
+            ]
+          ],
+          "executable": "/redpad/runtime/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+          "sha256": "e7e7fb30477f717e6f55f9180a70386c62677ef8a4d4d1a5d948f4098aa3eb99"
+        },
+        "import_count": 10,
+        "interpreter": "/redpad/runtime/bin/python3.11",
+        "isolated_imports_passed": true,
+        "job_id": 136902021618,
+        "lock_sha256": "ed09957f64506a1704f36a9b89de1f0e13c797f81d1e0ca625a4d82a8863237a",
+        "prefix": "/redpad/runtime",
+        "python": "3.11.18 (main, Oct 26 2026, 02:48:47) [GCC 11.4.0]",
+        "tested_commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+        "workflow_run": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44922713868"
+      },
+      "ffmpeg_scope": "Synthetic H264/AAC host codec test in codec.json",
+      "outstanding": "Verify selected CUDA wheel and driver, device binding, BF16/precision, video pipeline, decoder and offload memory."
+    },
+    "indic_speak": {
+      "repo": "bodhan-ai/indic-speak",
+      "pinned_revision": "76e0814f189321efe550011850cd288dae366aad",
+      "registry_adapter": "contract_only",
+      "runtime_family": null,
+      "required_distribution_contract": [
+        "snac",
+        "torch",
+        "transformers",
+        "vocos"
+      ],
+      "license": "other",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "BLOCKED — EXTERNAL DEPENDENCY",
+      "blocker": "Exact reviewed source and SNAC, Vocos, SoundFile and Torch stack not instantiated.",
+      "exact_lock_path": null,
+      "installed_host_interpreter": null,
+      "outstanding": "Reviewed dependency closure and offline CPU startup first, then exact model/accelerator validation."
+    },
+    "indicf5": {
+      "repo": "ai4bharat/IndicF5",
+      "pinned_revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+      "registry_adapter": "contract_only",
+      "runtime_family": null,
+      "required_distribution_contract": [
+        "torch",
+        "torchaudio",
+        "transformers"
+      ],
+      "license": "mit",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "BLOCKED — EXTERNAL DEPENDENCY",
+      "blocker": "Exact reviewed F5 source and Vocos, SoundFile and matching TorchAudio stack not instantiated.",
+      "exact_lock_path": null,
+      "installed_host_interpreter": null,
+      "outstanding": "Reviewed dependency closure and offline CPU startup first, then exact model/accelerator validation."
+    },
+    "indic_parler": {
+      "repo": "ai4bharat/indic-parler-tts",
+      "pinned_revision": "660bc53c64ae83150613264111708a0465211237",
+      "registry_adapter": "existing_parler_adapter",
+      "runtime_family": "speech",
+      "required_distribution_contract": [
+        "parler-tts",
+        "torch",
+        "transformers"
+      ],
+      "license": "apache-2.0",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "PASS — EXECUTED AND VERIFIED",
+      "status_scope": "Model-free CPU package startup only",
+      "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+      "architecture": "x86_64",
+      "installed_host_interpreter": "/tmp/redpad-phase2/speech/bin/python",
+      "exact_lock_path": "speech.lock.txt",
+      "lock_sha256": "e592d21204789f61136130010a3e188292497750e3860ab9b7cda23a26d4d404",
+      "key_versions": {
+        "torch": "2.5.1+cpu",
+        "torchaudio": "2.5.1+cpu",
+        "transformers": "4.46.1",
+        "diffusers": null,
+        "accelerate": null,
+        "bitsandbytes": null,
+        "tokenizers": "0.20.3",
+        "safetensors": "0.6.2"
+      },
+      "host_import_evidence": "speech-host.json",
+      "sandbox_evidence": {
+        "binding": {
+          "empty_files": 839,
+          "identity": {
+            "dependency_lock": {
+              "absl-py": "2.5.1",
+              "argbind": "0.3.9",
+              "asttokens": "3.0.2",
+              "audioread": "3.1.0",
+              "certifi": "2026.11.20",
+              "cffi": "2.1.1",
+              "charset-normalizer": "3.5.2",
+              "cloudpickle": "3.1.3",
+              "contourpy": "1.3.3",
+              "cycler": "0.12.1",
+              "decorator": "5.3.2",
+              "descript-audio-codec-unofficial": "1.0.0",
+              "descript-audiotools-unofficial": "0.7.4",
+              "docstring-parser": "0.18.0",
+              "einops": "0.8.2",
+              "executing": "2.3.0",
+              "ffmpy": "1.0.0",
+              "filelock": "4.2.4",
+              "fire": "0.7.1",
+              "flatten-dict": "0.6.0",
+              "fonttools": "4.68.0",
+              "fsspec": "2026.9.0",
+              "grpcio": "1.85.3",
+              "hf-xet": "1.8.0",
+              "huggingface-hub": "0.36.2",
+              "idna": "3.20",
+              "importlib-resources": "7.1.0",
+              "ipython": "9.18.1",
+              "ipython-pygments-lexers": "1.1.1",
+              "jedi": "0.20.1",
+              "jinja2": "3.1.6",
+              "joblib": "1.6.0",
+              "julius": "0.2.8",
+              "kiwisolver": "1.5.1",
+              "lazy-loader": "0.6",
+              "librosa": "0.11.0",
+              "llvmlite": "0.50.0",
+              "markdown": "3.11.3",
+              "markdown-it-py": "4.3.0",
+              "markdown2": "2.5.5",
+              "markupsafe": "3.0.3",
+              "matplotlib": "3.11.2",
+              "matplotlib-inline": "0.2.2",
+              "mdurl": "0.1.2",
+              "mpmath": "1.3.0",
+              "msgpack": "1.2.4",
+              "narwhals": "2.29.0",
+              "networkx": "3.6.1",
+              "numba": "0.68.1",
+              "numpy": "1.26.4",
+              "packaging": "26.3",
+              "parler-tts": "0.2.3",
+              "parso": "0.8.7",
+              "pexpect": "4.9.0",
+              "pillow": "13.0.0",
+              "platformdirs": "4.14.8",
+              "pooch": "1.9.0",
+              "prompt-toolkit": "3.0.53",
+              "protobuf": "4.25.9",
+              "psutil": "7.2.2",
+              "ptyprocess": "0.7.0",
+              "pure-eval": "0.2.4",
+              "pycparser": "3.12",
+              "pygments": "2.21.0",
+              "pyloudnorm": "0.2.0",
+              "pyparsing": "3.3.3",
+              "pystoi": "0.4.1",
+              "python-dateutil": "4.0.0",
+              "pyyaml": "6.0.4",
+              "randomname": "0.2.1",
+              "regex": "2026.11.19",
+              "requests": "2.34.2",
+              "rich": "15.0.0",
+              "safetensors": "0.6.2",
+              "scikit-learn": "1.9.1",
+              "scipy": "1.17.1",
+              "sentencepiece": "0.2.0",
+              "setuptools": "84.2.1",
+              "soundfile": "0.14.0",
+              "soxr": "1.1.0",
+              "stack-data": "0.6.3",
+              "sympy": "1.13.1",
+              "tensorboard": "2.20.0",
+              "tensorboard-data-server": "0.7.2",
+              "termcolor": "3.3.0",
+              "threadpoolctl": "3.8.0",
+              "tokenizers": "0.20.3",
+              "torch": "2.5.1+cpu",
+              "torch-stoi": "0.2.3",
+              "torchaudio": "2.5.1+cpu",
+              "tqdm": "4.70.1",
+              "traitlets": "5.16.1",
+              "transformers": "4.46.1",
+              "typing-extensions": "4.16.0",
+              "tzdata": "2026.6",
+              "urllib3": "2.8.0",
+              "wcwidth": "0.9.4",
+              "werkzeug": "3.1.9"
+            },
+            "interpreter": "/redpad/runtime/bin/python3.11",
+            "sha256": "96ca7b957938052eecfd85bb3bf1cb689ad8c22281fe754f84753ba68b2d2b43"
+          },
+          "manifest_files": 33314,
+          "studio_sha256": "c2e933ae04392da7d8c71c6ec98a4ec8976b475ab244ba65860aa6984bea707c",
+          "system_files": {
+            "/lib/x86_64-linux-gnu/libX11.so.6": {
+              "bytes": 1306280,
+              "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+            },
+            "/lib/x86_64-linux-gnu/libXau.so.6": {
+              "bytes": 18720,
+              "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+            },
+            "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+              "bytes": 26800,
+              "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+            },
+            "/lib/x86_64-linux-gnu/libXext.so.6": {
+              "bytes": 81640,
+              "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+            },
+            "/lib/x86_64-linux-gnu/libXft.so.2": {
+              "bytes": 97624,
+              "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+            },
+            "/lib/x86_64-linux-gnu/libXrender.so.1": {
+              "bytes": 47728,
+              "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+            },
+            "/lib/x86_64-linux-gnu/libXss.so.1": {
+              "bytes": 14680,
+              "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+              "bytes": 137560,
+              "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+            },
+            "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+              "bytes": 51512,
+              "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+            },
+            "/lib/x86_64-linux-gnu/libbsd.so.0": {
+              "bytes": 89096,
+              "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+            },
+            "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+              "bytes": 74848,
+              "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+            },
+            "/lib/x86_64-linux-gnu/libc.so.6": {
+              "bytes": 2220400,
+              "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+            },
+            "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+              "bytes": 18504,
+              "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+            },
+            "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+              "bytes": 198664,
+              "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+            },
+            "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+              "bytes": 4455728,
+              "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+            },
+            "/lib/x86_64-linux-gnu/libdl.so.2": {
+              "bytes": 14432,
+              "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+            },
+            "/lib/x86_64-linux-gnu/libexpat.so.1": {
+              "bytes": 198968,
+              "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+            },
+            "/lib/x86_64-linux-gnu/libffi.so.8": {
+              "bytes": 47688,
+              "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+            },
+            "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+              "bytes": 298120,
+              "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+            },
+            "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+              "bytes": 813128,
+              "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+            },
+            "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+              "bytes": 125488,
+              "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+              "bytes": 71848,
+              "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+            },
+            "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+              "bytes": 18344,
+              "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+            },
+            "/lib/x86_64-linux-gnu/libgomp.so.1": {
+              "bytes": 298776,
+              "sha256": "d46f9225c1883039e8a6853e6d96ca1af11d034ce186a090952e4a7c8a7c2fdc"
+            },
+            "/lib/x86_64-linux-gnu/libgomp.so.1.0.0": {
+              "bytes": 298776,
+              "sha256": "d46f9225c1883039e8a6853e6d96ca1af11d034ce186a090952e4a7c8a7c2fdc"
+            },
+            "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+              "bytes": 338648,
+              "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+            },
+            "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+              "bytes": 182864,
+              "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+            },
+            "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+              "bytes": 22600,
+              "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+              "bytes": 827936,
+              "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+            },
+            "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+              "bytes": 52016,
+              "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+            },
+            "/lib/x86_64-linux-gnu/liblzma.so.5": {
+              "bytes": 170456,
+              "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+            },
+            "/lib/x86_64-linux-gnu/libm.so.6": {
+              "bytes": 940560,
+              "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+            },
+            "/lib/x86_64-linux-gnu/libmd.so.0": {
+              "bytes": 47472,
+              "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+            },
+            "/lib/x86_64-linux-gnu/libmvec.so.1": {
+              "bytes": 1031720,
+              "sha256": "e07a4307ab7c2552119fcf92e590936c55bba932ce239c45e3666432174557f2"
+            },
+            "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+              "bytes": 239696,
+              "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+            },
+            "/lib/x86_64-linux-gnu/libnsl.so.2": {
+              "bytes": 93280,
+              "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+            },
+            "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+              "bytes": 22688,
+              "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+            },
+            "/lib/x86_64-linux-gnu/libpng16.so.16": {
+              "bytes": 235592,
+              "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+            },
+            "/lib/x86_64-linux-gnu/libpthread.so.0": {
+              "bytes": 21448,
+              "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+            },
+            "/lib/x86_64-linux-gnu/libreadline.so.8": {
+              "bytes": 335936,
+              "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+            },
+            "/lib/x86_64-linux-gnu/libresolv.so.2": {
+              "bytes": 64456,
+              "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+            },
+            "/lib/x86_64-linux-gnu/librt.so.1": {
+              "bytes": 14664,
+              "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+            },
+            "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+              "bytes": 1358520,
+              "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+            },
+            "/lib/x86_64-linux-gnu/libssl.so.3": {
+              "bytes": 671960,
+              "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+            },
+            "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+              "bytes": 2260296,
+              "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+            },
+            "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+              "bytes": 1762056,
+              "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+            },
+            "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+              "bytes": 200136,
+              "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+            },
+            "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+              "bytes": 182912,
+              "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+            },
+            "/lib/x86_64-linux-gnu/libtk8.6.so": {
+              "bytes": 1531896,
+              "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+            },
+            "/lib/x86_64-linux-gnu/libuuid.so.1": {
+              "bytes": 30936,
+              "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+            },
+            "/lib/x86_64-linux-gnu/libxcb.so.1": {
+              "bytes": 166504,
+              "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+            },
+            "/lib/x86_64-linux-gnu/libz.so.1": {
+              "bytes": 108936,
+              "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+            },
+            "/lib64/ld-linux-x86-64.so.2": {
+              "bytes": 240936,
+              "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+            }
+          },
+          "unresolved_elf_sonames": [
+            "libavcodec.so.58",
+            "libavcodec.so.59",
+            "libavcodec.so.60",
+            "libavdevice.so.58",
+            "libavdevice.so.59",
+            "libavdevice.so.60",
+            "libavfilter.so.7",
+            "libavfilter.so.8",
+            "libavfilter.so.9",
+            "libavformat.so.58",
+            "libavformat.so.59",
+            "libavformat.so.60",
+            "libavutil.so.56",
+            "libavutil.so.57",
+            "libavutil.so.58",
+            "libc10.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libquadmath-828275a7.so.0.0.0",
+            "libquadmath-96973f99.so.0.0.0",
+            "libsox.so",
+            "libtbb.so.12",
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libtorch_python.so",
+            "libtorchaudio.so",
+            "libtorchaudio_sox.so",
+            "libtorio_ffmpeg4.so",
+            "libtorio_ffmpeg5.so",
+            "libtorio_ffmpeg6.so"
+          ],
+          "validated_profiles": [
+            "indic_parler"
+          ]
+        },
+        "bundled_codec": null,
+        "import_count": 9,
+        "interpreter": "/redpad/runtime/bin/python3.11",
+        "isolated_imports_passed": true,
+        "job_id": 136902021400,
+        "lock_sha256": "e592d21204789f61136130010a3e188292497750e3860ab9b7cda23a26d4d404",
+        "prefix": "/redpad/runtime",
+        "python": "3.11.18 (main, Oct 26 2026, 02:48:47) [GCC 11.4.0]",
+        "tested_commit": "0e6a1fde2495cb2004060d4b039d41dccd522768",
+        "workflow_run": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44922713868"
+      },
+      "ffmpeg_scope": "Synthetic H264/AAC host codec test in codec.json",
+      "outstanding": "Validate exact offline speech checkpoint, tokenizer and decoder; CPU path itself requires no GPU."
+    },
+    "ace15": {
+      "repo": "ACE-Step/Ace-Step1.5",
+      "pinned_revision": "19671f406d603126926c1b7e2adc169acbcade22",
+      "registry_adapter": "contract_only",
+      "runtime_family": null,
+      "required_distribution_contract": [
+        "torch",
+        "torchaudio",
+        "transformers"
+      ],
+      "license": "mit",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "BLOCKED — EXTERNAL DEPENDENCY",
+      "blocker": "Exact reviewed ACE-Step 1.5 source and TorchAudio, Diffusers and Transformers closure not instantiated.",
+      "exact_lock_path": null,
+      "installed_host_interpreter": null,
+      "outstanding": "Reviewed dependency closure and offline CPU startup first, then exact model/accelerator validation."
+    },
+    "stable_audio_small": {
+      "repo": "stabilityai/stable-audio-open-small",
+      "pinned_revision": "ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3",
+      "registry_adapter": "existing_sfx_adapter",
+      "runtime_family": null,
+      "required_distribution_contract": [
+        "stable-audio-tools",
+        "torch"
+      ],
+      "license": "other",
+      "production_runtime_approved": false,
+      "model_inference_verified": false,
+      "status": "BLOCKED — EXTERNAL DEPENDENCY",
+      "blocker": "Exact reviewed stable-audio-tools and native audio runtime closure not instantiated.",
+      "exact_lock_path": null,
+      "installed_host_interpreter": null,
+      "outstanding": "Reviewed dependency closure and offline CPU startup first, then exact model/accelerator validation."
+    }
+  },
+  "agents": [
+    {
+      "name": "Director AI",
+      "role": "director",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "qwen35_moe",
+        "qwen36_27"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Quality Control AI",
+      "role": "qc",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "qwen35_9"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Story AI",
+      "role": "story",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "gemma3_27",
+        "gemma3_12"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Script AI",
+      "role": "script",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "gemma3_27",
+        "qwen35_9"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Character AI",
+      "role": "character",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "flux2_klein4"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Art Director AI",
+      "role": "art",
+      "primary": "flux2_klein4",
+      "alternatives": [
+        "qwen35_27",
+        "z_image_turbo"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Location AI",
+      "role": "location",
+      "primary": "flux2_klein4",
+      "alternatives": [
+        "qwen35_27"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Costume Designer AI",
+      "role": "costume",
+      "primary": "flux2_klein4",
+      "alternatives": [
+        "qwen35_27"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Storyboard AI",
+      "role": "storyboard",
+      "primary": "flux2_klein4",
+      "alternatives": [
+        "qwen35_27"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Performance Director AI",
+      "role": "performance",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "wan_animate2"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Cinematographer AI",
+      "role": "cinematographer",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "flux2_klein4"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Motion & Physics AI",
+      "role": "motion",
+      "primary": "wan_animate2",
+      "alternatives": [
+        "qwen35_27"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Video Generation AI",
+      "role": "video",
+      "primary": "wan22_5",
+      "alternatives": [
+        "ltx25",
+        "svd_xt"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Voice & Dialogue AI",
+      "role": "voice",
+      "primary": "indic_speak",
+      "alternatives": [
+        "indicf5",
+        "indic_parler"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Continuity Supervisor AI",
+      "role": "continuity",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "flux2_klein4"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Music & SFX AI",
+      "role": "music",
+      "primary": "ace15",
+      "alternatives": [
+        "stable_audio_small"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Editing & VFX AI",
+      "role": "editing",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "qwen35_9"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Production Manager AI",
+      "role": "production_manager",
+      "primary": "qwen36_27",
+      "alternatives": [
+        "qwen35_9"
+      ],
+      "selection": null
+    },
+    {
+      "name": "Growth AI",
+      "role": "growth",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "flux2_klein4"
+      ],
+      "selection": null
+    },
+    {
+      "name": "YouTube AI",
+      "role": "youtube",
+      "primary": "qwen35_9",
+      "alternatives": [],
+      "selection": null
+    },
+    {
+      "name": "Casting Director AI",
+      "role": "casting",
+      "primary": "qwen35_27",
+      "alternatives": [
+        "flux2_klein4",
+        "wan_animate2",
+        "indic_speak"
+      ],
+      "selection": null
+    }
+  ],
+  "legacy_inventory": {
+    "writer9": {
+      "repo": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "writer12": {
+      "repo": "google/gemma-3-12b-it",
+      "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "vision7": {
+      "repo": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "sdxl": {
+      "repo": "stabilityai/stable-diffusion-xl-base-1.0",
+      "revision": "462165984030d82259a11f4367a4eed129e94a7b",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "flux": {
+      "repo": "black-forest-labs/FLUX.1-schnell",
+      "revision": "741f7c3ce8b383c54771c7003378a50191e9efe9",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "wan": {
+      "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "revision": "b8fff7315c768468a5333511427288870b2e9635",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "ltx": {
+      "repo": "Lightricks/LTX-Video-0.9.5",
+      "revision": "e58e28c39631af4d1468ee57a853764e11c1d37e",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "svd": {
+      "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+      "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "parler": {
+      "repo": "ai4bharat/indic-parler-tts",
+      "revision": "660bc53c64ae83150613264111708a0465211237",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "indicf5": {
+      "repo": "ai4bharat/IndicF5",
+      "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "music35": {
+      "repo": "ACE-Step/ACE-Step-v1-3.5B",
+      "revision": "82cd0d7b6322bd28cd4e830fe675ddb6180ce36c",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "sfxsmall": {
+      "repo": "stabilityai/stable-audio-open-small",
+      "revision": "ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "legacy4": {
+      "repo": "Qwen/Qwen3-4B-Instruct-2507",
+      "revision": null,
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "ffmpeg": {
+      "repo": null,
+      "revision": null,
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "deterministic": {
+      "repo": null,
+      "revision": null,
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "animate14": {
+      "repo": "Wan-AI/Wan2.2-Animate-14B",
+      "revision": "cb93a225fbaf1ca100f54e79da8f994995b689b3",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    },
+    "gemma4e4": {
+      "repo": "google/gemma-4-E4B-it",
+      "revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+      "status": "PASS — STATIC CONTRACT ONLY"
+    }
+  }
+}

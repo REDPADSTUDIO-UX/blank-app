@@ -1,0 +1,8 @@
+{
+  "url": "https://huggingface.co/Qwen/Qwen3.6-27B/resolve/8f33b98937c6031bb49e713dee3e8e185aafd26f/config.json",
+  "git_blob_sha1": "9f3dd1b1c6d0b43f4b33819dbdd1b60369f9006e",
+  "size": 4308,
+  "architectures": [
+    "Qwen3_5ForConditionalGeneration"
+  ]
+}
