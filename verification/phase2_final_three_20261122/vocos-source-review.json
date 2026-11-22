@@ -1,0 +1,71 @@
+{
+  "package": "vocos",
+  "version": "0.1.0",
+  "filename": "vocos-0.1.0-py3-none-any.whl",
+  "url": "https://files.pythonhosted.org/packages/0a/45/82fe9b5696eb5dd4f84632f75b549b48bed0c33a5920b6309fbafd7e3477/vocos-0.1.0-py3-none-any.whl",
+  "bytes": 24085,
+  "sha256": "0ac13eaef68596074301e912d781399b3defa4b4ca60b6bc52c8a4b9209ca235",
+  "files": {
+    "vocos/models.py": {
+      "bytes": 4549,
+      "sha256": "7031a1e223678cfeb522046f7e179e3ff9efd70aa32f969a4234880b59be1b71"
+    },
+    "vocos/loss.py": {
+      "bytes": 4130,
+      "sha256": "cef1f840e2e8410466fbce869c0394c0fece9a5a797e7475f305d78a9e2f93b9"
+    },
+    "vocos/spectral_ops.py": {
+      "bytes": 8081,
+      "sha256": "5577771daae83a9ffc6df3f1a3ce7f3f9c2543562c8ca3f5aff740ee2b515682"
+    },
+    "vocos/discriminators.py": {
+      "bytes": 8180,
+      "sha256": "d61bd7fbbb87c6d576c10fd76c9c75c20bfe126bfd1749a3d63e0ed002f2cdf9"
+    },
+    "vocos/__init__.py": {
+      "bytes": 59,
+      "sha256": "89adaa6f53c75f96f53ee8fc79720e701f109b242d6f7a78fa51fa9a35e07ec6"
+    },
+    "vocos/feature_extractors.py": {
+      "bytes": 4044,
+      "sha256": "a2cd1692a1eb608b2efa6708e2eb442194aef4a10c13bad6ff7daf4edf304a7c"
+    },
+    "vocos/heads.py": {
+      "bytes": 6373,
+      "sha256": "1ae5389805e63a77eaaf36502396591e34e0d92ccc4ae94e69e3f495f551a38d"
+    },
+    "vocos/dataset.py": {
+      "bytes": 2527,
+      "sha256": "e718ef9e88c948024296613c32c55a24fffee14a808f18f8a2cfab53d53983f7"
+    },
+    "vocos/helpers.py": {
+      "bytes": 1906,
+      "sha256": "8d038968751dfe4c5d77121c7807214fa0db7acd3d399e06b740b5876a4d98b2"
+    },
+    "vocos/experiment.py": {
+      "bytes": 16742,
+      "sha256": "4d3ea37f7194ca578b21a139c6ec5defef72130842031a5392167a343e77f607"
+    },
+    "vocos/pretrained.py": {
+      "bytes": 6005,
+      "sha256": "c7581e848c9b5be216f91a8db638db9bcbd4a8a5ab663d5125013d34df656758"
+    },
+    "vocos/modules.py": {
+      "bytes": 7832,
+      "sha256": "1132b0081333cc4abe1c36b2bd709185ceaa243519ea8903bec7ab08e67d5d64"
+    },
+    "vocos-0.1.0.dist-info/METADATA": {
+      "bytes": 4780,
+      "sha256": "f49ed66b1862848d3712b432f0ff99ee31fabbef6a2bcb6d3eb5d7c827ea3410"
+    },
+    "vocos-0.1.0.dist-info/LICENSE": {
+      "bytes": 1069,
+      "sha256": "8f36ba0c214d4f487ffd7ee0b8528da9b67b459bef2d115de9cd001316589f46"
+    }
+  },
+  "installed": false,
+  "source_executed": false,
+  "model_weights": false,
+  "source_home_page_from_exact_wheel_metadata": "https://github.com/charactr-platform/vocos",
+  "provenance": "Official PyPI 0.1.0 wheel, size and full SHA256 matched; not a guessed Git revision"
+}

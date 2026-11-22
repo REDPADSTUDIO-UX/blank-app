@@ -1,0 +1,86 @@
+{
+  "package": "vocos==0.1.0",
+  "selected_source_hashes": {
+    "modules.py": "1132b0081333cc4abe1c36b2bd709185ceaa243519ea8903bec7ab08e67d5d64",
+    "spectral_ops.py": "5577771daae83a9ffc6df3f1a3ce7f3f9c2543562c8ca3f5aff740ee2b515682",
+    "models.py": "7031a1e223678cfeb522046f7e179e3ff9efd70aa32f969a4234880b59be1b71",
+    "heads.py": "1ae5389805e63a77eaaf36502396591e34e0d92ccc4ae94e69e3f495f551a38d",
+    "pretrained.py": "c7581e848c9b5be216f91a8db638db9bcbd4a8a5ab663d5125013d34df656758",
+    "feature_extractors.py": "a2cd1692a1eb608b2efa6708e2eb442194aef4a10c13bad6ff7daf4edf304a7c",
+    "LICENSE": "8f36ba0c214d4f487ffd7ee0b8528da9b67b459bef2d115de9cd001316589f46"
+  },
+  "selected_ast": [
+    {
+      "file": "modules.py",
+      "symbol": "safe_log",
+      "selected_ast_sha256": "efeb25428b8eef3e3dda1d81dbbea02109c0b4549d43b8da60d5bec000b4d207"
+    },
+    {
+      "file": "modules.py",
+      "symbol": "AdaLayerNorm",
+      "selected_ast_sha256": "d9a19f656060e4ff97f673cbbf3c72b611b8407dad0d398e86226ed16040bea0"
+    },
+    {
+      "file": "modules.py",
+      "symbol": "ConvNeXtBlock",
+      "selected_ast_sha256": "8669d77ff3e92facd4a1300abca527485f999149a638aba196b65a3d05dcf1df"
+    },
+    {
+      "file": "feature_extractors.py",
+      "symbol": "FeatureExtractor",
+      "selected_ast_sha256": "8247308ef33cd0fe44a9c8ab6f5c88cb1e14c6bec954d61fa70fc258a7445662"
+    },
+    {
+      "file": "feature_extractors.py",
+      "symbol": "MelSpectrogramFeatures",
+      "selected_ast_sha256": "7d5dbe5a8d3a7694ada3f6b2c147c8998d761fa886a835140f74bd9f1a6fe752"
+    },
+    {
+      "file": "models.py",
+      "symbol": "Backbone",
+      "selected_ast_sha256": "a01808b86100f669bc25226230b52ff2963b568f6a6069059aeb3a313374298e"
+    },
+    {
+      "file": "models.py",
+      "symbol": "VocosBackbone",
+      "selected_ast_sha256": "1065a31874d51cc708a35856c5027415789a78ba22ab676e64603db5ea57ca7f"
+    },
+    {
+      "file": "spectral_ops.py",
+      "symbol": "ISTFT",
+      "selected_ast_sha256": "e809272450ae799a7ca0d87befac1af0a213f3578a4da9e793ec738536406b66"
+    },
+    {
+      "file": "heads.py",
+      "symbol": "FourierHead",
+      "selected_ast_sha256": "52aa050ffe4a15297505be520b28b5d75a805fdeaba86c172b3344f7472d7d4a"
+    },
+    {
+      "file": "heads.py",
+      "symbol": "ISTFTHead",
+      "selected_ast_sha256": "a8bb12cb6b46c23776aaa443ed445b3ed5a5d0d54241cc365c8d5329797a6d6e"
+    },
+    {
+      "file": "pretrained.py",
+      "symbol": "Vocos",
+      "selected_ast_sha256": "0dbd2c27053424e66a452738dce24ac942967c17482a5cc40a61956bd3a80842"
+    }
+  ],
+  "candidate_sha256": "f5827f41ffd349ad726fe069182cae2d03823f9e9afbee3b9e5eb0b1ac34d6a1",
+  "code_license": "MIT, Charactr Inc. 2023; original notice retained",
+  "purpose": "Same Vocos mel/ConvNeXt/ISTFT architecture review; NOT a BigVGAN substitution",
+  "encodec_source_or_weights_included": false,
+  "source_executed": false,
+  "native_worker_changed": false,
+  "checkpoint_state_verified": false,
+  "decoder_waveform_verified": false,
+  "sample_rate_contract_verified_by_execution": false,
+  "secure_binding_verified": false,
+  "full_commercial_stack_verified": false,
+  "launch_authorized": false,
+  "remaining": [
+    "Secure private host source/runtime startup",
+    "Actual exact pinned IndicF5 wrapper state/key/tensor compatibility",
+    "Exact mel/decoder/waveform/24kHz acceptance and all checkpoint rights"
+  ]
+}

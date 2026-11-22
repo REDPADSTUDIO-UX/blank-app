@@ -1,0 +1,33 @@
+{
+  "workspace_id": "tea-dbfic56c6qcc739r52i0",
+  "services": [
+    {
+      "id": "srv-dbhfgfijnfac739sjpm0",
+      "name": "redpad-ai-studio-v3-safe-preview",
+      "branch": "feature/video-music-editing-studio",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off"
+    },
+    {
+      "id": "srv-dbhf5vp42hec73ca7bag",
+      "name": "redpad-growth-engine-demo",
+      "branch": "feature/video-music-editing-studio",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off"
+    },
+    {
+      "id": "srv-dbfiesvb9u1s73d2qblg",
+      "name": "redpad-ai-studio-private-preview",
+      "branch": "feature/video-music-editing-studio",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off"
+    }
+  ],
+  "read_only": true,
+  "services_modified": false,
+  "skip_tags": [
+    "[skip ci]",
+    "[skip render]"
+  ],
+  "safe_to_push": true
+}

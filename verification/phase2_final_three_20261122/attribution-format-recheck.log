@@ -1,0 +1,6 @@
+test_selected_mel_ast_and_attribution_are_preserved (tests.test_phase2_final_three.MelCandidateTests.test_selected_mel_ast_and_attribution_are_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.023s
+
+OK

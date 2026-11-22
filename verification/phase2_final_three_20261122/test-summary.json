@@ -1,0 +1,21 @@
+{
+  "new_cpu_unittest_methods": 5,
+  "new_cpu_unittest_passed": 5,
+  "private_work_host_test_runs": 1,
+  "private_work_host_test_skipped": 1,
+  "private_work_host_test_passed": 0,
+  "private_work_host_error": "bwrap: loopback: Failed to create NETLINK_ROUTE socket: Operation not permitted",
+  "kaggle_namespace_probe_runs": 1,
+  "kaggle_namespace_probe_exit_code": 1,
+  "kaggle_secure_host_eligible": false,
+  "new_model_imports": 0,
+  "gpu_or_cuda_execution": false,
+  "free_gpu_vm_provisioned": true,
+  "gpu_vm_stopped_after_rejection": true,
+  "model_weights_downloaded": false,
+  "qwen_installation_repeated": false,
+  "previous_95_tests_reused_not_rerun": true,
+  "application_worker_source_sha256": "b164ef5072c53e6053443332930f574d833470dd436d42c16a2c4d27e77448d2",
+  "application_worker_source_unchanged": true,
+  "default_voice_runtime_modified": false
+}

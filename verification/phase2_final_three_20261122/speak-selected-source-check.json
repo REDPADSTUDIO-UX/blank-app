@@ -1,0 +1,11 @@
+{
+  "repo": "bodhan-ai/indic-speak",
+  "revision": "76e0814f189321efe550011850cd288dae366aad",
+  "path": "inference.py",
+  "bytes": 7939,
+  "sha256": "9be5d6391bc527a7ac626cb819494f98b486ac6b616e247e9ca74c4cae525ef5",
+  "expected_sha256": "9be5d6391bc527a7ac626cb819494f98b486ac6b616e247e9ca74c4cae525ef5",
+  "authenticated_browser_read": true,
+  "source_executed": false,
+  "gated_source_committed_or_uploaded": false
+}

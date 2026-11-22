@@ -1,0 +1,13 @@
+{
+  "repo": "Wan-Video/Wan-Animate-2",
+  "pinned_revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+  "observed_official_main": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+  "source_lock": "../runtime_phase2_exact_20261121/wan_animate2-source-lock.json",
+  "diagnostic_cpu_lock": "../runtime_phase2_exact_20261121/wan_animate2.lock.txt",
+  "original_import_trace": "../runtime_phase2_exact_20261121/wan-import-trace.txt",
+  "diagnostic_torch": "2.7.1+cpu",
+  "source_modified": false,
+  "old_cpu_import_failure_repeated": false,
+  "cuda_variant_lock": "NOT ACCEPTED; CPU lock cannot stand in for a CUDA closure",
+  "new_cuda_import": "NOT RUN — mandatory isolation rejected before dependency acquisition/device probe"
+}
