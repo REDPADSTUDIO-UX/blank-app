@@ -4,8 +4,8 @@
   "phase2": "BLOCKED",
   "gpu_purchase": "NOT APPROVED",
   "previous_model_free_secure_pass": 13,
-  "new_model_free_secure_pass": 0,
-  "total_model_free_secure_pass": 13,
+  "new_model_free_secure_pass": 2,
+  "total_model_free_secure_pass": 15,
   "total_profiles": 18,
   "scope": "Model-free CPU/secure binding, separate from actual GPU, model inference and artistic acceptance",
   "profiles": {
@@ -22,21 +22,26 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_20261121/sandbox-results.json",
       "remaining": "Separate approved checkpoint, exact CUDA/kernel fit and output-quality validation",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "apache-2.0",
+      "license_conditions_from_existing_registry": "Apache-2.0 obligations; no terms accepted here.",
+      "planning_gpu_gib_not_measured": 24,
+      "planning_ram_gib_not_measured": 32,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "qwen35_moe": {
       "repo": "Qwen/Qwen3.5-35B-A3B",
       "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
       "registry_adapter": "contract_only",
       "cpu_startup": "PASS actual selected class and approved 79-wheel closure, no model construction",
-      "secure_binding": "IN PROGRESS new public CPU CI; current host ABI/manifest preflight pending",
+      "secure_binding": "PASS actual exact interpreter/package/file/ABI validation and model-free child in both existing production sandbox boundaries; no production launch approval",
       "dependency_closure": "PASS 79 full SHA256 checked wheels, hash-locked offline install and pip check",
       "artifact_integrity": "Existing source/runtime receipts preserved; full model weights NOT verified in this session",
       "licensing": "Existing per-profile gates preserved; CPU startup does not certify all commercial/model-asset rights",
       "gpu_kernel": "NOT TESTED in this session",
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_exact_20261121/moe-candidate-recipe.json",
-      "remaining": "Secure public runtime CPU CI, actual approved CUDA/kernel dispatch, checkpoint asset approval and model integration; no active FP8 route",
+      "remaining": "Actual eligible CUDA/SM >=8.9 grouped FP8 precision/memory/kernel acceptance, exact checkpoint asset approval and active adapter integration; base route unchanged",
       "professional_acceptance": "NOT ESTABLISHED",
       "evidence": "qwen-fp8-cpu-startup.json",
       "alternative": {
@@ -45,8 +50,17 @@
         "registered_base_route_replaced": false,
         "exact_signed_kernel": "3c8fcc86c0e42b7abe5bcf666d3a3afdce93a0e8",
         "offline_v4_resolver": "PASS; actual resolver pinned read-only",
-        "gpu_precision": "NOT TESTED; SM >=8.9 and grouped FP8 required"
-      }
+        "gpu_precision": "NOT TESTED; SM >=8.9 and grouped FP8 required",
+        "official_selected_shard_bytes": 37463724680,
+        "full_resident_32gib_fit": "NOT established; selected serialized shards alone are 34.89 GiB; actual GPU memory not measured"
+      },
+      "license_metadata": "apache-2.0",
+      "license_conditions_from_existing_registry": "Apache-2.0; 3B active parameters do not mean 3B resident weights.",
+      "planning_gpu_gib_not_measured": 32,
+      "planning_ram_gib_not_measured": 64,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "secure_binding_evidence": "ci-verification.json and ci-public-runtime/{shared_model_worker,native_local_worker}.json",
+      "gpu_abi": "BLOCKED / NOT VERIFIED; optional CUDA/RDMA sonames unresolved in CPU runner; no device/GPU kernel executed"
     },
     "qwen36_27": {
       "repo": "Qwen/Qwen3.6-27B",
@@ -61,7 +75,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_20261121/sandbox-results.json",
       "remaining": "Separate approved checkpoint, exact CUDA/kernel fit and output-quality validation",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "apache-2.0",
+      "license_conditions_from_existing_registry": "Apache-2.0; no Bengali superiority established.",
+      "planning_gpu_gib_not_measured": 24,
+      "planning_ram_gib_not_measured": 32,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "qwen35_9": {
       "repo": "Qwen/Qwen3.5-9B",
@@ -76,7 +95,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_20261121/sandbox-results.json",
       "remaining": "Separate approved checkpoint, exact CUDA/kernel fit and output-quality validation",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "apache-2.0",
+      "license_conditions_from_existing_registry": "Apache-2.0; native BF16 source quantized to NF4 only in memory.",
+      "planning_gpu_gib_not_measured": 12,
+      "planning_ram_gib_not_measured": 16,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "gemma3_27": {
       "repo": "google/gemma-3-27b-it",
@@ -91,7 +115,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_20261121/sandbox-results.json",
       "remaining": "Separate approved checkpoint, exact CUDA/kernel fit and output-quality validation",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "gemma",
+      "license_conditions_from_existing_registry": "Gemma custom terms, use restrictions and explicit gated access acceptance required.",
+      "planning_gpu_gib_not_measured": 24,
+      "planning_ram_gib_not_measured": 48,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "gemma3_12": {
       "repo": "google/gemma-3-12b-it",
@@ -106,7 +135,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_20261121/sandbox-results.json",
       "remaining": "Separate approved checkpoint, exact CUDA/kernel fit and output-quality validation",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "gemma",
+      "license_conditions_from_existing_registry": "Gemma custom terms and gated access acceptance required; not Apache-2.0.",
+      "planning_gpu_gib_not_measured": 16,
+      "planning_ram_gib_not_measured": 24,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "flux2_klein4": {
       "repo": "black-forest-labs/FLUX.2-klein-4B",
@@ -121,7 +155,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_20261121/sandbox-results.json",
       "remaining": "Separate approved checkpoint, exact CUDA/kernel fit and output-quality validation",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "apache-2.0",
+      "license_conditions_from_existing_registry": "Apache-2.0; 4B distinguished from noncommercial 9B variants. Publisher mentions ~13GB VRAM; 16GiB is conservative unmeasured gate.",
+      "planning_gpu_gib_not_measured": 16,
+      "planning_ram_gib_not_measured": 24,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "z_image_turbo": {
       "repo": "Tongyi-MAI/Z-Image-Turbo",
@@ -136,7 +175,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_20261121/sandbox-results.json",
       "remaining": "Separate approved checkpoint, exact CUDA/kernel fit and output-quality validation",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "apache-2.0",
+      "license_conditions_from_existing_registry": "Apache-2.0; text-to-image does not implement reference identity editing.",
+      "planning_gpu_gib_not_measured": 24,
+      "planning_ram_gib_not_measured": 48,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "wan_animate2": {
       "repo": "Wan-AI/Wan2.2-Animate-2-14B",
@@ -152,25 +196,38 @@
       "historical_evidence": "../runtime_phase2_exact_20261121/wan-import-trace.txt",
       "remaining": "Official supported deferred-device revision or eligible free secure CUDA host; prior import failure not repeated",
       "professional_acceptance": "NOT ESTABLISHED",
-      "current_official_source": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3 unchanged"
+      "current_official_source": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3 unchanged",
+      "license_metadata": "apache-2.0",
+      "license_conditions_from_existing_registry": "Apache-2.0 base/distilled native checkpoints plus auxiliary components need exact audit. No old Animate substitution.",
+      "planning_gpu_gib_not_measured": 80,
+      "planning_ram_gib_not_measured": 128,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "wan_animate2_distilled": {
       "repo": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
       "revision": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
       "registry_adapter": "contract_only",
       "cpu_startup": "PASS actual new official merged classes and local pinned metadata loader",
-      "secure_binding": "IN PROGRESS new public CPU CI",
+      "secure_binding": "PASS actual exact interpreter/package/file/ABI validation and model-free child in both existing production sandbox boundaries; no production launch approval",
       "dependency_closure": "PASS model-free source imports against pinned Qwen closure; no full component load",
-      "artifact_integrity": "Official merged source archive full SHA256 PASS; original pinned modular index PASS; component tensor equivalence NOT VERIFIED",
+      "artifact_integrity": "PASS merged source/archive and original index. All 4 transformer shard LFS identities plus config/index/scheduler Git IDs match immutable base and PR component revisions. Actual weight bytes/tensors NOT downloaded or verified.",
       "licensing": "Existing per-profile gates preserved; CPU startup does not certify all commercial/model-asset rights",
       "gpu_kernel": "NOT TESTED in this session",
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_exact_20261121/publisher-options.json",
-      "remaining": "Publisher immutable component/tensor mapping; secure CPU CI; native generation dispatch and full GPU/checkpoint validation remain disabled",
+      "remaining": "Full downloaded-asset verification and actual components/GPU acceptance; native generation worker/production route disabled. Normative processor publisher confirmation remains pending; class/metadata-loader source compatibility now PASS.",
       "professional_acceptance": "NOT ESTABLISHED",
       "evidence": "wan-merged-import.log",
       "source_revision": "3a2f35d4efa4c059c8bfb3bc0d6c906264895c81",
-      "publisher": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/discussions/3"
+      "publisher": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/discussions/3",
+      "license_metadata": "apache-2.0",
+      "license_conditions_from_existing_registry": "Apache-2.0; separately identified distilled Diffusers candidate, not silently substituted for native base.",
+      "planning_gpu_gib_not_measured": 64,
+      "planning_ram_gib_not_measured": 96,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved.",
+      "secure_binding_evidence": "ci-verification.json and ci-public-runtime/{shared_model_worker,native_local_worker}.json",
+      "gpu_abi": "BLOCKED / NOT VERIFIED; optional CUDA/RDMA sonames unresolved in CPU runner; no device/GPU kernel executed",
+      "component_identity_evidence": "wan-component-identity-comparison.json"
     },
     "wan22_5": {
       "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
@@ -185,7 +242,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_20261121/sandbox-results.json",
       "remaining": "Separate approved checkpoint, exact CUDA/kernel fit and output-quality validation",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "apache-2.0",
+      "license_conditions_from_existing_registry": "Apache-2.0; existing Wan Diffusers recipe fit unmeasured; current BF16 worker requires capable GPU.",
+      "planning_gpu_gib_not_measured": 24,
+      "planning_ram_gib_not_measured": 64,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "ltx25": {
       "repo": "Lightricks/LTX-2.5",
@@ -201,7 +263,12 @@
       "historical_evidence": "../runtime_phase2_exact_20261121/sandbox-receipts.json#ltx25",
       "remaining": "Publisher-authoritative exact auxiliary hash or authorized artifact metadata; no checkpoint download until gate passes; then separately approved CUDA/model tests",
       "professional_acceptance": "NOT ESTABLISHED",
-      "publisher": "https://huggingface.co/Lightricks/LTX-2.5/discussions/113"
+      "publisher": "https://huggingface.co/Lightricks/LTX-2.5/discussions/113",
+      "license_metadata": "other",
+      "license_conditions_from_existing_registry": "LTX-2.x community terms: conditional free commercial use below entity/affiliate USD10m annual revenue; fine-tune transfer and components require review. Gated. NVFP4 needs Blackwell; Comfy int8 files are not PyTorch pipeline weights.",
+      "planning_gpu_gib_not_measured": 80,
+      "planning_ram_gib_not_measured": 128,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "svd_xt": {
       "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
@@ -216,7 +283,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_20261121/sandbox-results.json",
       "remaining": "Separate approved checkpoint, exact CUDA/kernel fit and output-quality validation",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "other",
+      "license_conditions_from_existing_registry": "Stability Community terms, owner eligibility/registration/attribution and revenue conditions require review; no text prompt or acting control.",
+      "planning_gpu_gib_not_measured": 12,
+      "planning_ram_gib_not_measured": 32,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "indic_speak": {
       "repo": "bodhan-ai/indic-speak",
@@ -232,7 +304,12 @@
       "historical_evidence": "../runtime_phase2_exact_20261121/publisher-options.json",
       "remaining": "Secure host with authorized gated source, complete component asset rights/hash approval, GPU startup and real speech/listening evaluation",
       "professional_acceptance": "NOT ESTABLISHED",
-      "evidence": "indic-speak-cpu-startup.json"
+      "evidence": "indic-speak-cpu-startup.json",
+      "license_metadata": "other",
+      "license_conditions_from_existing_registry": "Indic Open Model License v1.0 plus Llama/SNAC/Vocos upstream audit. Self-hosting differs from serving others through an API; written permission/exceptions and scale thresholds apply. No cloning; style control preview quality.",
+      "planning_gpu_gib_not_measured": 12,
+      "planning_ram_gib_not_measured": 24,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "indicf5": {
       "repo": "ai4bharat/IndicF5",
@@ -249,7 +326,12 @@
       "remaining": "Publisher-supported commercial vocoder/checkpoint with exact mel, decoder, tensor/key and output contract; no BigVGAN substitution",
       "professional_acceptance": "NOT ESTABLISHED",
       "evidence": "f5-mel-comparison.json",
-      "publisher": "https://huggingface.co/ai4bharat/IndicF5/discussions/48"
+      "publisher": "https://huggingface.co/ai4bharat/IndicF5/discussions/48",
+      "license_metadata": "mit",
+      "license_conditions_from_existing_registry": "MIT model metadata plus gated access, authorized voice reference/transcript and reviewed custom code required.",
+      "planning_gpu_gib_not_measured": 8,
+      "planning_ram_gib_not_measured": 16,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "indic_parler": {
       "repo": "ai4bharat/indic-parler-tts",
@@ -264,7 +346,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_20261121/sandbox-results.json",
       "remaining": "Separate approved checkpoint, exact CUDA/kernel fit and output-quality validation",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "apache-2.0",
+      "license_conditions_from_existing_registry": "Apache-2.0 model metadata plus gated access. Existing preset worker; Bengali accent/emotion unverified.",
+      "planning_gpu_gib_not_measured": 8,
+      "planning_ram_gib_not_measured": 16,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "ace15": {
       "repo": "ACE-Step/Ace-Step1.5",
@@ -279,7 +366,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_exact_20261121/sandbox-receipts.json#ace15",
       "remaining": "Approved model install and publisher CUDA 12.8 runtime, GPU execution and actual generated audio validation. Optional training modules excluded.",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "mit",
+      "license_conditions_from_existing_registry": "MIT; ACE-Step 1.5 API/checkpoints differ from existing 3.5B worker. Component and generated-rights review required.",
+      "planning_gpu_gib_not_measured": 8,
+      "planning_ram_gib_not_measured": 24,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     },
     "stable_audio_small": {
       "repo": "stabilityai/stable-audio-open-small",
@@ -294,7 +386,12 @@
       "actual_model_inference": "NOT PERFORMED in this session",
       "historical_evidence": "../runtime_phase2_exact_20261121/stable-sandbox-receipt.json",
       "remaining": "Explicit approval/licensing and manifest for exact model and auxiliary assets; CUDA launch and generation validation.",
-      "professional_acceptance": "NOT ESTABLISHED"
+      "professional_acceptance": "NOT ESTABLISHED",
+      "license_metadata": "other",
+      "license_conditions_from_existing_registry": "Stability Community license and gated access; entity eligibility and exact component terms require owner approval.",
+      "planning_gpu_gib_not_measured": 8,
+      "planning_ram_gib_not_measured": 16,
+      "weight_download_scope": "Selected weights only; configs/tokenizers and auxiliary dependencies extra. NF4 runtime does not reduce full source download. Native Wan Animate-2 needs additional components. No download approved."
     }
   }
 }

@@ -1,0 +1,45 @@
+{
+  "revision": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+  "folder": "scheduler",
+  "url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/tree/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/scheduler?expand=true&recursive=true&limit=50",
+  "response_sha256": "d0ab1813fd68e7e9c761a6d9eae27071fe86db741e30c8f7aa9dd899e8a0adab",
+  "pagination": null,
+  "files": [
+    {
+      "type": "file",
+      "oid": "c89cc9d905c4ec5f92dc2fc45b35c80c99e4a99c",
+      "size": 487,
+      "path": "scheduler/scheduler_config.json",
+      "lastCommit": {
+        "id": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+        "title": "Add diffusers-format transformer weights (#1)",
+        "date": "2026-08-13T02:19:44.000Z"
+      },
+      "securityFileStatus": {
+        "status": "safe",
+        "protectAiScan": {
+          "status": "safe",
+          "message": "This file has no security findings.",
+          "reportLink": "https://insights-db.paloaltonetworks.com/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/files?blob-id=c89cc9d905c4ec5f92dc2fc45b35c80c99e4a99c&utm_source=huggingface"
+        },
+        "avScan": {
+          "status": "safe",
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "unscanned"
+        },
+        "jFrogScan": {
+          "status": "unscanned",
+          "message": "Not a machine-learning model"
+        }
+      }
+    }
+  ]
+}

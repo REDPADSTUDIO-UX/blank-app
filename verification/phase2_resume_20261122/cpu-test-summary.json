@@ -111,5 +111,8 @@
     "wan-merged-import.log",
     "f5-mel-comparison.json"
   ],
-  "new_ci_status": "NOT YET SUBMITTED"
+  "new_ci_status": "PASS",
+  "secure_host_evidence": "ci-verification.json",
+  "new_distinct_model_free_secure_profiles": 2,
+  "changed_contract_regression": "8 relevant tests rerun after contract additions, PASS; already included in distinct count"
 }

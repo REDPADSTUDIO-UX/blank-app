@@ -1,0 +1,261 @@
+{
+  "revision": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+  "folder": "transformer",
+  "url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/tree/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/transformer?expand=true&recursive=true&limit=50",
+  "response_sha256": "90a3a3400b117d51b60984c2ff8101a5cd27969aca127e2e70a8b9d825fa7379",
+  "pagination": null,
+  "files": [
+    {
+      "type": "file",
+      "oid": "36edc18f14f70acaca96996f42e120dcdabf2a55",
+      "size": 457,
+      "path": "transformer/config.json",
+      "lastCommit": {
+        "id": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+        "title": "Add diffusers-format transformer weights (#1)",
+        "date": "2026-08-13T02:19:44.000Z"
+      },
+      "securityFileStatus": {
+        "status": "safe",
+        "protectAiScan": {
+          "status": "safe",
+          "message": "This file has no security findings.",
+          "reportLink": "https://insights-db.paloaltonetworks.com/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/files?blob-id=36edc18f14f70acaca96996f42e120dcdabf2a55&utm_source=huggingface"
+        },
+        "avScan": {
+          "status": "safe",
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "unscanned"
+        },
+        "jFrogScan": {
+          "status": "unscanned",
+          "message": "Not a machine-learning model"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "oid": "f85ff48624f49b357b05cc64dd68e88278f4c7b8",
+      "size": 9874593104,
+      "lfs": {
+        "oid": "ebc182727d948cb61cac929af3b2887e0a4b7c8b683b7356628cf0350d332c0a",
+        "size": 9874593104,
+        "pointerSize": 135
+      },
+      "xetHash": "2b9f0005c99bb9dbac780296c309ac060373f502ef2cc1cda96fc0135225add6",
+      "path": "transformer/diffusion_pytorch_model-00001-of-00004.safetensors",
+      "lastCommit": {
+        "id": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+        "title": "Add diffusers-format transformer weights (#1)",
+        "date": "2026-08-13T02:19:44.000Z"
+      },
+      "securityFileStatus": {
+        "status": "queued",
+        "protectAiScan": {
+          "status": "safe",
+          "message": "This file has no security findings.",
+          "reportLink": "https://insights-db.paloaltonetworks.com/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/files?blob-id=f85ff48624f49b357b05cc64dd68e88278f4c7b8&utm_source=huggingface"
+        },
+        "avScan": {
+          "status": "unscanned",
+          "message": "",
+          "version": "1.5.3/28084"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "queued",
+          "message": "QUEUED",
+          "reportLink": "https://www.virustotal.com/gui/file/ebc182727d948cb61cac929af3b2887e0a4b7c8b683b7356628cf0350d332c0a?utm_source=huggingface"
+        },
+        "jFrogScan": {
+          "status": "safe",
+          "message": "Safe model, does not support code execution on load.",
+          "reportLink": "https://research.jfrog.com/model-threats/noautoload-suscode?utm_source=huggingface"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "oid": "300af6417861d0ba507bea5daf623b22de9fa047",
+      "size": 9975379320,
+      "lfs": {
+        "oid": "e808cf7a7e7aaf358478a2198152f9e3ec8609c66712be397c21b4b7ec7ef501",
+        "size": 9975379320,
+        "pointerSize": 135
+      },
+      "xetHash": "fc0b87326f14ef9ae2be2f560cb52327030240359263c297f1dd029f7e2bc8b6",
+      "path": "transformer/diffusion_pytorch_model-00002-of-00004.safetensors",
+      "lastCommit": {
+        "id": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+        "title": "Add diffusers-format transformer weights (#1)",
+        "date": "2026-08-13T02:19:44.000Z"
+      },
+      "securityFileStatus": {
+        "status": "safe",
+        "protectAiScan": {
+          "status": "safe",
+          "message": "This file has no security findings.",
+          "reportLink": "https://insights-db.paloaltonetworks.com/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/files?blob-id=300af6417861d0ba507bea5daf623b22de9fa047&utm_source=huggingface"
+        },
+        "avScan": {
+          "status": "unscanned",
+          "message": "",
+          "version": "1.5.3/28084"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "unscanned",
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/e808cf7a7e7aaf358478a2198152f9e3ec8609c66712be397c21b4b7ec7ef501?utm_source=huggingface"
+        },
+        "jFrogScan": {
+          "status": "safe",
+          "message": "Safe model, does not support code execution on load.",
+          "reportLink": "https://research.jfrog.com/model-threats/noautoload-suscode?utm_source=huggingface"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "oid": "b1cf24437ced5afeada0095a8d260c526e386d32",
+      "size": 9954401600,
+      "lfs": {
+        "oid": "444eeea631fe6d2df80780f521f6c7716bd079fc177279ba09d2d20479f2dfaf",
+        "size": 9954401600,
+        "pointerSize": 135
+      },
+      "xetHash": "84fe5dc7f62403478759f41b311081e57798fe738ee9e936ae6d2d1b8e5d8d29",
+      "path": "transformer/diffusion_pytorch_model-00003-of-00004.safetensors",
+      "lastCommit": {
+        "id": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+        "title": "Add diffusers-format transformer weights (#1)",
+        "date": "2026-08-13T02:19:44.000Z"
+      },
+      "securityFileStatus": {
+        "status": "safe",
+        "protectAiScan": {
+          "status": "safe",
+          "message": "This file has no security findings.",
+          "reportLink": "https://insights-db.paloaltonetworks.com/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/files?blob-id=b1cf24437ced5afeada0095a8d260c526e386d32&utm_source=huggingface"
+        },
+        "avScan": {
+          "status": "unscanned",
+          "message": "",
+          "version": "1.5.3/28084"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "unscanned",
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/444eeea631fe6d2df80780f521f6c7716bd079fc177279ba09d2d20479f2dfaf?utm_source=huggingface"
+        },
+        "jFrogScan": {
+          "status": "safe",
+          "message": "Safe model, does not support code execution on load.",
+          "reportLink": "https://research.jfrog.com/model-threats/noautoload-suscode?utm_source=huggingface"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "oid": "aef8a9bb3cad576dfa2cc9d01fbe32b6fa422bac",
+      "size": 2985521520,
+      "lfs": {
+        "oid": "130fd0a278a06096e483f08b2492ddd86b89fef8676b3d7b30556b3230a9b005",
+        "size": 2985521520,
+        "pointerSize": 135
+      },
+      "xetHash": "ac520caa10894e804a8557a040c3dbaaa25a083298700d389ac0400dc96d68f5",
+      "path": "transformer/diffusion_pytorch_model-00004-of-00004.safetensors",
+      "lastCommit": {
+        "id": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+        "title": "Add diffusers-format transformer weights (#1)",
+        "date": "2026-08-13T02:19:44.000Z"
+      },
+      "securityFileStatus": {
+        "status": "safe",
+        "protectAiScan": {
+          "status": "safe",
+          "message": "This file has no security findings.",
+          "reportLink": "https://insights-db.paloaltonetworks.com/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/files?blob-id=aef8a9bb3cad576dfa2cc9d01fbe32b6fa422bac&utm_source=huggingface"
+        },
+        "avScan": {
+          "status": "unscanned",
+          "message": "",
+          "version": "1.5.3/28084"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "unscanned",
+          "message": "File not scanned in VirusTotal",
+          "reportLink": "https://www.virustotal.com/gui/file/130fd0a278a06096e483f08b2492ddd86b89fef8676b3d7b30556b3230a9b005?utm_source=huggingface"
+        },
+        "jFrogScan": {
+          "status": "safe",
+          "message": "Safe model, does not support code execution on load.",
+          "reportLink": "https://research.jfrog.com/model-threats/noautoload-suscode?utm_source=huggingface"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "oid": "7f60a6ffb3400e6c1429cac453ffdea16be2fbb6",
+      "size": 119890,
+      "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "lastCommit": {
+        "id": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+        "title": "Add diffusers-format transformer weights (#1)",
+        "date": "2026-08-13T02:19:44.000Z"
+      },
+      "securityFileStatus": {
+        "status": "safe",
+        "protectAiScan": {
+          "status": "safe",
+          "message": "This file has no security findings.",
+          "reportLink": "https://insights-db.paloaltonetworks.com/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/files?blob-id=7f60a6ffb3400e6c1429cac453ffdea16be2fbb6&utm_source=huggingface"
+        },
+        "avScan": {
+          "status": "safe",
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "unscanned"
+        },
+        "jFrogScan": {
+          "status": "unscanned",
+          "message": "Not a machine-learning model"
+        }
+      }
+    }
+  ]
+}

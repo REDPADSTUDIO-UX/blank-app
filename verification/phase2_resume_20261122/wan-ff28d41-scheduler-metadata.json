@@ -1,0 +1,45 @@
+{
+  "revision": "ff28d41a9c0c331137691847cc8700593d785593",
+  "folder": "scheduler",
+  "url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/tree/ff28d41a9c0c331137691847cc8700593d785593/scheduler?expand=true&recursive=true&limit=50",
+  "response_sha256": "bd6a3bc6bb3510d732aad9ead4ce0e5b9dd5f5517a30db16d9113619f9f0a58f",
+  "pagination": null,
+  "files": [
+    {
+      "type": "file",
+      "oid": "c89cc9d905c4ec5f92dc2fc45b35c80c99e4a99c",
+      "size": 487,
+      "path": "scheduler/scheduler_config.json",
+      "lastCommit": {
+        "id": "aefb15dae2887ffeffa93a0de3a8ba4df6b22a7d",
+        "title": "Use FlowMatchEulerDiscreteScheduler (the scheduler the release samples with)",
+        "date": "2026-08-12T04:30:15.000Z"
+      },
+      "securityFileStatus": {
+        "status": "safe",
+        "protectAiScan": {
+          "status": "safe",
+          "message": "This file has no security findings.",
+          "reportLink": "https://insights-db.paloaltonetworks.com/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/ff28d41a9c0c331137691847cc8700593d785593/files?blob-id=c89cc9d905c4ec5f92dc2fc45b35c80c99e4a99c&utm_source=huggingface"
+        },
+        "avScan": {
+          "status": "safe",
+          "message": "No security issues detected",
+          "reportLink": "https://fdtn.ai/ai-supply-chain/hugging-face?utm_source=huggingface"
+        },
+        "pickleImportScan": {
+          "status": "unscanned",
+          "pickleImports": [],
+          "version": "0.0.0"
+        },
+        "virusTotalScan": {
+          "status": "unscanned"
+        },
+        "jFrogScan": {
+          "status": "unscanned",
+          "message": "Not a machine-learning model"
+        }
+      }
+    }
+  ]
+}
