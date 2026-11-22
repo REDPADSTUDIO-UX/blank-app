@@ -1,0 +1,451 @@
+{
+  "resumed_checkpoint": "0220a69787883b0c60b178571995f0019a4a9541",
+  "target_roles": [
+    "casting",
+    "cinematographer",
+    "continuity",
+    "editing",
+    "location",
+    "motion",
+    "music",
+    "performance",
+    "qc",
+    "video",
+    "voice"
+  ],
+  "newly_engineering_complete": [
+    "qc",
+    "location",
+    "editing",
+    "cinematographer",
+    "continuity"
+  ],
+  "no_gpu_complete_total": 13,
+  "gpu_inference_weights_paid_api": 0,
+  "production_ready": 0,
+  "eight_and_director_script_preserved": true,
+  "roles": {
+    "performance": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "reference_video": [
+          "wan_animate2"
+        ],
+        "video_inspection": []
+      },
+      "unsupported_required_operations": [
+        "video_inspection"
+      ],
+      "execution_binding_pending": [
+        "wan_animate2"
+      ],
+      "deterministic_operations": [
+        "temporal_assessment"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null,
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution."
+      ]
+    },
+    "motion": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "reference_video": [
+          "wan_animate2"
+        ],
+        "image_inspection": [
+          "vision7"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "wan_animate2",
+        "vision7"
+      ],
+      "deterministic_operations": [
+        "temporal_assessment"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution."
+      ]
+    },
+    "qc": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27",
+          "qwen35_9"
+        ],
+        "image_inspection": [
+          "vision7"
+        ],
+        "audio_inspection": []
+      },
+      "unsupported_required_operations": [
+        "audio_inspection"
+      ],
+      "execution_binding_pending": [],
+      "deterministic_operations": [
+        "state_ledger"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "runtime_validation_pending": [
+        "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+      ],
+      "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
+    },
+    "location": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "reference_edit": [
+          "flux2_klein4"
+        ],
+        "image_inspection": [
+          "vision7"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "runtime_validation_pending": [
+        "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+      ],
+      "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
+    },
+    "editing": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27",
+          "qwen35_9"
+        ],
+        "image_inspection": [
+          "vision7"
+        ],
+        "audio_inspection": []
+      },
+      "unsupported_required_operations": [
+        "audio_inspection"
+      ],
+      "execution_binding_pending": [],
+      "deterministic_operations": [
+        "assembly_receipt",
+        "edit_manifest"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "runtime_validation_pending": [
+        "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+      ],
+      "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
+    },
+    "casting": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "reference_edit": [
+          "flux2_klein4"
+        ],
+        "reference_video": [
+          "wan_animate2"
+        ],
+        "text_to_audio": [
+          "indic_speak"
+        ],
+        "video_inspection": []
+      },
+      "unsupported_required_operations": [
+        "video_inspection"
+      ],
+      "execution_binding_pending": [
+        "wan_animate2",
+        "indic_speak"
+      ],
+      "deterministic_operations": [
+        "casting_evidence",
+        "temporal_assessment"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null,
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution.",
+        "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified."
+      ]
+    },
+    "cinematographer": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "image_inspection": [
+          "vision7"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "runtime_validation_pending": [
+        "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+      ],
+      "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
+    },
+    "video": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "image_to_video": [
+          "wan22_5",
+          "ltx25",
+          "svd_xt"
+        ],
+        "text_to_video": [
+          "wan22_5",
+          "ltx25"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "wan22_5",
+        "ltx25",
+        "svd_xt"
+      ],
+      "deterministic_operations": [],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null,
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Selected pinned BF16 component recipe lacks required spatial upsampler; reviewed LTX-2 code revision/CLI compatibility missing. Do not use older LTX-Video or a Diffusers repack."
+      ]
+    },
+    "music": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "music": [
+          "ace15"
+        ],
+        "sound_effect": [
+          "stable_audio_small"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "ace15",
+        "stable_audio_small"
+      ],
+      "deterministic_operations": [
+        "cue_manifest"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null,
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Exact code revision and component-loading API not pinned; silence_latent.pt needs a reviewed safe loading policy. Existing ACE 3.5B worker is a different model."
+      ]
+    },
+    "continuity": {
+      "engineering_status": "NO-GPU ENGINEERING COMPLETE",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text": [
+          "qwen35_27"
+        ],
+        "image_inspection": [
+          "vision7"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [],
+      "deterministic_operations": [
+        "state_ledger"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": "Existing suite-authorized models.json vision7 staged separately; image/frame inspection only, no whole-video or audio judgment.",
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "runtime_validation_pending": [
+        "vision7 exact installed bundle, local dependencies, device/API and actual critic accuracy"
+      ],
+      "unsupported_mode_policy": "Reject unsupported audio/whole-video claims; actual listening and artistic acceptance require independent review."
+    },
+    "voice": {
+      "engineering_status": "PARTIAL",
+      "configuration_validated": true,
+      "operation_candidates": {
+        "text_to_audio": [
+          "indic_speak",
+          "indic_parler"
+        ],
+        "reference_voice": [
+          "indicf5"
+        ]
+      },
+      "unsupported_required_operations": [],
+      "execution_binding_pending": [
+        "indic_speak",
+        "indicf5",
+        "indic_parler"
+      ],
+      "deterministic_operations": [
+        "voice_metadata"
+      ],
+      "gpu_status": "GPU TEST BLOCKED",
+      "human_status": "HUMAN REVIEW PENDING",
+      "production_ready": false,
+      "runtime_verified": false,
+      "vision_dependency_note": null,
+      "offline_native_preparation": "implemented; no runtime launch",
+      "runtime_status": "RUNTIME BLOCKED",
+      "missing_official_interface": [
+        "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified.",
+        "Requires reviewed custom code and local auxiliary dependencies; trust_remote_code=True is not authorized. Gated access and specific voice consent pending."
+      ]
+    }
+  },
+  "contract_only_interfaces": {
+    "wan_animate2": {
+      "documented_local_entry": "infer/wan_animate_2_demo.py",
+      "inputs": [
+        "prompt",
+        "refer-img-file",
+        "refer-video-file",
+        "config"
+      ],
+      "blocker": "Pinned native checkpoint code revision not verified; published Diffusers example uses a different *-Diffusers repository. No substitution."
+    },
+    "ltx25": {
+      "documented_local_entry": "ltx_pipelines.distilled",
+      "inputs": [
+        "transformer-path",
+        "text-encoder-path",
+        "video-vae-path",
+        "audio-vae-path",
+        "spatial-upsampler-path"
+      ],
+      "blocker": "Selected pinned BF16 component recipe lacks required spatial upsampler; reviewed LTX-2 code revision/CLI compatibility missing. Do not use older LTX-Video or a Diffusers repack."
+    },
+    "indic_speak": {
+      "documented_local_entry": "inference.TTS (current model card)",
+      "inputs": [
+        "local directory",
+        "text",
+        "speaker"
+      ],
+      "blocker": "Pinned card inaccessible; current example names preview-v2. Exact code/components/speaker mapping and upstream licenses unverified."
+    },
+    "indicf5": {
+      "documented_local_entry": "custom AutoModel callable (model card)",
+      "inputs": [
+        "text",
+        "ref_audio_path",
+        "ref_text"
+      ],
+      "blocker": "Requires reviewed custom code and local auxiliary dependencies; trust_remote_code=True is not authorized. Gated access and specific voice consent pending."
+    },
+    "ace15": {
+      "documented_local_entry": "ACE-Step 1.5 project local package",
+      "inputs": [
+        "caption",
+        "instrumental generation",
+        "duration",
+        "seed"
+      ],
+      "blocker": "Exact code revision and component-loading API not pinned; silence_latent.pt needs a reviewed safe loading policy. Existing ACE 3.5B worker is a different model."
+    }
+  },
+  "existing_native_bindings": {
+    "vision7": [
+      "qwen25-vl-7b",
+      "config.json",
+      "redpad_pipeline.vision_worker"
+    ],
+    "wan22_5": [
+      "wan-local",
+      "model_index.json",
+      "redpad_pipeline.offline_worker"
+    ],
+    "svd_xt": [
+      "local-svd",
+      "model_index.json",
+      "redpad_pipeline.offline_worker"
+    ],
+    "indic_parler": [
+      "bengali-tts",
+      "config.json",
+      "redpad_pipeline.speech_worker"
+    ],
+    "stable_audio_small": [
+      "stable-audio-small",
+      "model_config.json",
+      "redpad_pipeline.audio_worker"
+    ]
+  },
+  "status_scope": "No-GPU engineering only, actual runtime/outputs/human review unverified"
+}

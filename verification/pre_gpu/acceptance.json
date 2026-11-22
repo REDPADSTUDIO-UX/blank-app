@@ -1,0 +1,973 @@
+{
+  "title": "ফিরতি টিকিট",
+  "source": "manually_authored_fixture",
+  "log": [
+    {
+      "run": "2973e3da5c604d8492c642c1bf4ce9c2",
+      "task": "1b085d0786e14e08841aee5f75bfb013",
+      "role": "story",
+      "artifact_sha256": "a133ec102468015ca9e0a36c6f1e9340969a023eb10f0bc48cd3434b8c5691f3",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "a5a7162b95054ce18938095be7afe3eb",
+      "task": "abf5a3dd319b4409b0ba32169ab17d5c",
+      "role": "story",
+      "artifact_sha256": "3a6a8e886c1e46a37c08491c4b994ab6d7cd77f00fb88d88754ebc6b109a1f02",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "0a7eafc40fbe4653b3ef165a53af3049",
+      "task": "c110358a939d43e0a20e120a7ab154ed",
+      "role": "story",
+      "artifact_sha256": "922eef9738615ff9b33288bc817fbb01493a3a53dada764eed4784f1d22c3d01",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "76b14dc3ea6d4114800ef041e70066a8",
+      "task": "b95aed12858d426096b239d7648ea755",
+      "role": "story",
+      "artifact_sha256": "e2200bac8eefdd2da60bcedd2e898c409cb1db216db8ebd683804af12a9b398a",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "aa35a61829bf46618719a42e0ebcc6a7",
+      "task": "ab976627002c4399b40bd2ab1bf9a6ba",
+      "role": "story",
+      "artifact_sha256": "7aab8729a611c896ad166172f909a77028bd0a4fe588f445dea27d9bc8a70f58",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "44a4b0764ab54f108fdd585672650210",
+      "task": "4d447e5ea62345e0bd86b2334bc5d8a7",
+      "role": "story",
+      "artifact_sha256": "c8cda937524d4ad8849b9a9b0c2fb4adf9c2422d35a8e5d4c80e6197a134d318",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "dffabbca21bf467b9582cf465db193d7",
+      "task": "be958f1d4a7242498a010cb2bc6be620",
+      "role": "story",
+      "artifact_sha256": "8c5cb3edc2a8f792920919d12584c1cd89de5e9f281862d6e37cc8a6f74e5ace",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "9db21d62ba2443d581c5c213551c9186",
+      "task": "5dbd885a704b4b8d8f9f5fe5ea713b76",
+      "role": "story",
+      "artifact_sha256": "cfda03b344dbc4b908c93e07c42aabb048167b433f3717b21c65077da15b12c5",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "40e4c31920314306a99524a1d0de7565",
+      "task": "4cdf4a4cbefc4640817cf1e62892c912",
+      "role": "story",
+      "artifact_sha256": "ad708f01666769f55a91f7f86fe194095e1f47a97b11f3cc80ce9ad6f555bef3",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "d722e9107a9f42029e3a8aeb4db46d4b",
+      "task": "da89efadbdea47e1a57ea2096468b308",
+      "role": "story",
+      "artifact_sha256": "8f167ecb88eaebef519b05c2103ac85308856eee300c6ae112213fd0d6ead1d9",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "e9c06bddc83b41f795eab9802f35068c",
+      "task": "f77f34d1bb234380bed136c80a2aa5e2",
+      "role": "story",
+      "artifact_sha256": "ac8a7df486acf4ae29ed049958eee012f6f8dda2764ee486e77ddc3f6db46103",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "564e9a122aa24ccea8c5c7f34b3d0687",
+      "task": "aff0615503dd4bb98a3269d141002aac",
+      "role": "story",
+      "artifact_sha256": "de9935c12ad3ae7b73153c381f62eff70356944a5ab97686a74fefb02f6f29a2",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "de16745e9bdd40aaa02444254f990039",
+      "task": "95e630234df24c6f90c7b65045182488",
+      "role": "story",
+      "artifact_sha256": "a37ff387ff1305f1b320145aa4ef869d5b854bbd73537680aeab73c9341fc2dd",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "8ccde0edad7940e994d2d9a899161a0d",
+      "task": "a57337390b6048a1bf08032875fb2187",
+      "role": "story",
+      "artifact_sha256": "178377f1c329dfd9c964239f8ecc465550984cf3a61d53c6410b4cc2edecb8a2",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "424b023845c74a13aa3ad6d198fbe2c7",
+      "task": "421fddaa6388454d8cf706be01e59059",
+      "role": "story",
+      "artifact_sha256": "3408b1b100a2c3622e2ac134ec8069b8d60313ddeb8ff07fe88afceb9132a2d7",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "2d27b6f301a44ecd8e1c7bb5d4e27221",
+      "task": "5831dd674b8e4684a918bff0671f9ad4",
+      "role": "story",
+      "artifact_sha256": "3070b78765b53ffc82d995dd0a0abfa6b083bc4e7e40aa41a24679e28aa0ad9e",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "0b4efe8f711d432a9830f101df540e7c",
+      "task": "e59b6d13cf52416bbaa0db375fff85a9",
+      "role": "story",
+      "artifact_sha256": "d8267d1cbbff5f5aa7c899fd842609b96a0cf53b2ab4eea47541472285eb02ac",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "301a85a83b3d49aaa877aef9d21d1938",
+      "task": "a661479480b9496695c82f7f4ed13be7",
+      "role": "story",
+      "artifact_sha256": "02e4dd2c3608c382cfcba9349f94d08d0abd0368e4b262867e02ad941065e58a",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "e20dcc37eded47ac94543859ae65ee5b",
+      "task": "3e293f33c75f40d5a23f5082c707b90c",
+      "role": "story",
+      "artifact_sha256": "255e2b03f65e5543a70303014a8a185b8d54b10e5ed2b1dade399197625b1f43",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "08c276222aea4338ab67c896bfb212e6",
+      "task": "cd90ef394d3248f88e9a66a60b839736",
+      "role": "story",
+      "artifact_sha256": "81651713a42535d9b784a46cc8b3269c698de8f5fad919288edb998ebad91ece",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "5ac1b329d9ef4a24bfdd4e58d211d672",
+      "task": "296ae91494894bb480b7490d33025cd1",
+      "role": "story",
+      "artifact_sha256": "c8e3a23fd823f756e89d0bd9e1386050c07b5ea85004bceb161834a502cf5de5",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "fa93daf899164a1ebeec59c9e93eb976",
+      "task": "2baef0e9edea4572a948f08ab8fc3210",
+      "role": "story",
+      "artifact_sha256": "f9b566579b98aacad5d01acfa0b5e68ff8e3be5e5661a41255b97e6a7af4b1ad",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "bae1843885ed4b3388636bb771db3b9f",
+      "task": "6e3b99adb26941c68390d4a9ee334c0d",
+      "role": "story",
+      "artifact_sha256": "3e9319e13ee36cc9ada72bc388e8d0227cec8b16a7cca5d525e91421d260f8ff",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "7442c616d7204fb4ac1ff23de8564d84",
+      "task": "8c5975bfc1444f398825ef1d345a6dc5",
+      "role": "story",
+      "artifact_sha256": "7648927cc4eddd360cab5a696af3e40c0963986ff2db3407d161230589bfffd3",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "760fbf221e4a4ef28ec19251ad349254",
+      "task": "5530ce3cc50648a094eb71fcd51b3612",
+      "role": "story",
+      "artifact_sha256": "f69c3bf00185452f3bceebac591b0297e95abf58f8c501f66accdabcc07ce8ab",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "dcb5c29233ce4ae091f6d92d05c5bec2",
+      "task": "ba8d1c9d87f84b7293eba93ea76b85cf",
+      "role": "story",
+      "artifact_sha256": "459f60a4fc16ad50ca275d3fc8e12e56328ffefdd8b21cd15f90942ecf1cb35f",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "97b3d8c75e6649b99f9e4a863192ee68",
+      "task": "e496e78e93d742789111402b4a06d538",
+      "role": "story",
+      "artifact_sha256": "65ccae01bb61d6c8bc9e9eb7377014cdf991de762aaf794958c4cc09f31310de",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "848786a5c05f4ddfaf0d610489b66f4a",
+      "task": "ec9a178e389e4a53ab065e5093cdbcf8",
+      "role": "story",
+      "artifact_sha256": "4a48a02de63b0ca1052894954533ed4aab2d5fd693ce2b74f0e9c8245e7914c7",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "6b7ba8971f5a498fa43c3fc11da45e72",
+      "task": "6f00c604c99841688764a42e09719d93",
+      "role": "story",
+      "artifact_sha256": "4d8e32101992e3678ce6f4da18eda19f7c72cc0fdc1f5e4875f2b41c1e7328f4",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "3bf1a33b386348c7a0c71b6a08249358",
+      "task": "2950513f851c4eb9b6e4acfba0bdbc98",
+      "role": "story",
+      "artifact_sha256": "d7ef02f1ef4003e38ec6b278e6cc50060ab95c9eabeb8f85b5e137bc46488f3f",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "c1d7091a50334728ab121cad00aa6a0a",
+      "task": "efeb056381d7419c89add6349d60ac80",
+      "role": "story",
+      "artifact_sha256": "99e87f1ad13115c57474e67c22fbd7d27117acb11e3018ee806153b9a6e38c49",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "4859c0f9a44e465bafdf096d0cf1b601",
+      "task": "dff29a77a21740e4a1b8f96adb5fce2b",
+      "role": "story",
+      "artifact_sha256": "844c376a1094527577c734c2bb862908a1b904f0f33e06999e14bf1a62d90c5d",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "244475c652aa48c68bc84c586b94bae6",
+      "task": "397b0542f205460da0bef0329f07e23b",
+      "role": "story",
+      "artifact_sha256": "72d5dae120ba0497c1bf225c4971bd56e9b160dd55e66d95b19a653d76006bf3",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "dc94f13ef60c4d4db2b483db4d6e4b8f",
+      "task": "9d3e8d0669694564a7925067ba9083dc",
+      "role": "director",
+      "artifact_sha256": "1c9356efb68a3caac6b8b8a88ec022288572701c6f577818c9ef86bd13f450bc",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "026f821719b64e1c81f38d69b046f04e",
+      "task": "98b74a673c2c4708a7e30534aded167a",
+      "role": "story",
+      "artifact_sha256": "43298a2ae95b54ad021c310db2ed508ef82fc703d0870eb4b46d390a5aa2528d",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "1550dfd35fd74a1fb324ce7f9dfab582",
+      "task": "00043f16ef1f49b9a64d5814d049397a",
+      "role": "script",
+      "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "4ebd833c1fa5456489ee423f98e0e892",
+      "task": "d239267c922c48708bb72a2dee62c412",
+      "role": "director",
+      "artifact_sha256": "ebab63eec4ccae21e304833737f4b44389294c9a949af268412e44ee57e7e45d",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "cae0fae3cacd458a83ac0867c00aac9a",
+      "task": "d6d1658814d44abe869d2bb2cc8314a3",
+      "role": "character",
+      "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "5dce95e61bb24b5f8fd06519be7e7d06",
+      "task": "ece49174dcc94e24925b485c28c3fdcd",
+      "role": "art",
+      "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "3d5adc6eee9544b6ae66b9210cf4f001",
+      "task": "33a000e4f1184291b7b9f7a38475920e",
+      "role": "location",
+      "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "9df327e91fde4e0d8dddf0fb680b5071",
+      "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+      "role": "costume",
+      "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "af583341475244e2b0c1617f1731c010",
+      "task": "45cf1de3f7ed444c89661f3fa659905a",
+      "role": "storyboard",
+      "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "d820069bdf3d4b01ad94b9caf98db291",
+      "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+      "role": "performance",
+      "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "e21cfaac63464d64a17cf722daeb5214",
+      "task": "baeb461e7d564044b43df9fb81d42424",
+      "role": "cinematographer",
+      "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "8cd2749d37b0425c88037e6d72b36ed3",
+      "task": "0b183324ce9e4d1da61389bea0440b9f",
+      "role": "motion",
+      "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "a898a1ef300f4bda93e852cdc2eedbc8",
+      "task": "88403ff0b71c4bb6abd8904929a3dfd0",
+      "role": "video",
+      "artifact_sha256": "5079078530c85cc774986c367f74dc25ac807ff66c83c7a1ff60ee5e413e4a33",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "2056902ee4b241b6b0b2cf73d7498ed8",
+      "task": "b86045c501c846fb8aba65da98fc6a5c",
+      "role": "voice",
+      "artifact_sha256": "68837feb7904b41eac428089ccfe0e6010bc4368867ad8817cf1cb1bf440fd77",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "daababc181564a76b18a8ad404d8bce6",
+      "task": "23a71f29b2334c77acc71ef98544b835",
+      "role": "music",
+      "artifact_sha256": "054806116fde6d5ac5b23dcb94719acb890494fa044f36cbaef3a7c4bf96b98f",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "e857af816bbf4d398b3d5eb8daa75f29",
+      "task": "a310954e87064cdba30b644eb3263174",
+      "role": "editing",
+      "artifact_sha256": "8eebc576907ea6d5465f4d2f0754a2080d364bcae4769c9ec155b5b3b8f4ee86",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "54c0416acbc545ec924886acbc8b2e16",
+      "task": "09f473838cdf4669951bffe2ff6eaf15",
+      "role": "continuity",
+      "artifact_sha256": "36e7f42b051c77f0667eef7df147c0b712da7b3b3a1ccc2a49874b8ceec512b3",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "efec8734a93149e7a02b65ee4da92313",
+      "task": "04e497042cfd4830aacaa85689179403",
+      "role": "qc",
+      "artifact_sha256": "7c896d54744b8776ef018c393d097519a53e808f17623d57535c3cf3961fe4d3",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "4242c434d1fc447aad5c20d21e9b77f9",
+      "task": "58e67c642a3948aaba1850867e02335e",
+      "role": "production_manager",
+      "artifact_sha256": "4d840af954327ed22a3fd87547357ae71a3771a17eaf44a8066f7d4a37908904",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "199167090c98450a9217a317b1f9e272",
+      "task": "d7405c214fe3485991b66fe0558688f4",
+      "role": "growth",
+      "artifact_sha256": "a75214efb542e7df56ad14f9fe3d99b1d853df2c8e50566489b07e1c237c3ade",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    },
+    {
+      "run": "6b9c2cc88f9e4ace871c0063cb390419",
+      "task": "5c177a1c64ee4ca5a1709e504ef655e3",
+      "role": "youtube",
+      "artifact_sha256": "35759b2a0815373227367a5f02536aea909ec5f97bc6f4b68025be0d489f388a",
+      "provenance": "software",
+      "approval": "simulated_fixture_only"
+    }
+  ],
+  "tasks": {
+    "character": "d6d1658814d44abe869d2bb2cc8314a3",
+    "art": "ece49174dcc94e24925b485c28c3fdcd",
+    "location": "33a000e4f1184291b7b9f7a38475920e",
+    "costume": "4377520253ec4d77a6a2cbb9ed2437fa",
+    "storyboard": "45cf1de3f7ed444c89661f3fa659905a",
+    "performance": "a2b50ee7438544cb97b90385e1f4ee8e",
+    "cinematographer": "baeb461e7d564044b43df9fb81d42424",
+    "motion": "0b183324ce9e4d1da61389bea0440b9f",
+    "video": "88403ff0b71c4bb6abd8904929a3dfd0",
+    "voice": "b86045c501c846fb8aba65da98fc6a5c",
+    "music": "23a71f29b2334c77acc71ef98544b835",
+    "editing": "a310954e87064cdba30b644eb3263174",
+    "continuity": "09f473838cdf4669951bffe2ff6eaf15",
+    "qc": "04e497042cfd4830aacaa85689179403",
+    "production_manager": "58e67c642a3948aaba1850867e02335e",
+    "growth": "d7405c214fe3485991b66fe0558688f4",
+    "youtube": "5c177a1c64ee4ca5a1709e504ef655e3"
+  },
+  "script_task": "00043f16ef1f49b9a64d5814d049397a",
+  "shot_packet": {
+    "id": "eb7817d8a57b065066a419037448aee3",
+    "kind": "shot_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      },
+      {
+        "role": "art",
+        "task": "ece49174dcc94e24925b485c28c3fdcd",
+        "revision": 1,
+        "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+      },
+      {
+        "role": "location",
+        "task": "33a000e4f1184291b7b9f7a38475920e",
+        "revision": 1,
+        "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+      },
+      {
+        "role": "costume",
+        "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+        "revision": 1,
+        "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+      },
+      {
+        "role": "storyboard",
+        "task": "45cf1de3f7ed444c89661f3fa659905a",
+        "revision": 1,
+        "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+      },
+      {
+        "role": "performance",
+        "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+        "revision": 1,
+        "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+      },
+      {
+        "role": "cinematographer",
+        "task": "baeb461e7d564044b43df9fb81d42424",
+        "revision": 1,
+        "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+      },
+      {
+        "role": "motion",
+        "task": "0b183324ce9e4d1da61389bea0440b9f",
+        "revision": 1,
+        "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+      }
+    ],
+    "shot": {
+      "id": "s1-shot1",
+      "scene": "s1",
+      "order": 1,
+      "action": "হাসান ব্যাগের আলগা হাতলে সুই ঢোকান। নীরা ঘড়ির দিকে তাকিয়ে ঠান্ডা চায়ে চুমুক দেয়।",
+      "purpose": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক",
+      "composition": "wide geography",
+      "characters": [
+        "nira",
+        "hasan"
+      ],
+      "location": "living",
+      "camera": "Static",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "seconds": 20
+    },
+    "scene": {
+      "id": "s1",
+      "number": 1,
+      "heading": "INT. কাঁঠালবাগানের বসার ঘর — সকাল",
+      "location": "living",
+      "time": "same morning",
+      "objective": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক",
+      "obstacle": "বাসের সময় ও না বলা একাকিত্ব",
+      "turn": "কাজের ফাঁকে কথার দিক পাল্টায়।",
+      "consequence": "পরের সিদ্ধান্তের ব্যবহারিক চাপ বাড়ে।",
+      "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "transition": "cut",
+      "seconds": 60,
+      "action_seconds": 30,
+      "pause_seconds": 8,
+      "continuity": [
+        "same morning",
+        "single key with hasan",
+        "same outfits"
+      ],
+      "beats": [
+        {
+          "type": "action",
+          "text": "হাসান ব্যাগের আলগা হাতলে সুই ঢোকান। নীরা ঘড়ির দিকে তাকিয়ে ঠান্ডা চায়ে চুমুক দেয়।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "চা-ও কি আমার সঙ্গে যাবে? এত ঠান্ডা কেন?"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "হাসান",
+          "text": "তুই রেডি হতে হতে ও রাজশাহী ঘুরে আসছে।"
+        },
+        {
+          "type": "action",
+          "text": "নীরা ব্যাগ ছেড়ে বাবার পাশের চেয়ারে বসে।"
+        }
+      ],
+      "sound": {
+        "music": "ইচ্ছাকৃত নীরবতা; আবেগ ঘোষণার cue নয়।",
+        "sfx": "সুই-সুতো, ব্যাগের কাপড়, দূরের গলি; সংলাপ পরিষ্কার থাকবে।"
+      }
+    },
+    "identities": [
+      {
+        "id": "nira",
+        "name": "নীরা",
+        "age": 27,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "নীরার কালো বাঁধা চুল",
+        "appearance": "নীল সুতি কামিজ",
+        "personality": "বাবাকে ছেড়ে যাওয়ার অপরাধবোধ",
+        "relationships": {
+          "hasan": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "অভিযোগ থেকে প্রাপ্তবয়স্ক সমঝোতা",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "1995224879dbf47a5e5b7db60fb981e9a8a011ce17a00cde6299f5fd2333a957"
+      },
+      {
+        "id": "hasan",
+        "name": "হাসান",
+        "age": 58,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "ছোট চুল",
+        "appearance": "ধূসর পাঞ্জাবি",
+        "personality": "যত্নে নিয়ন্ত্রণ ঢুকে পড়ে",
+        "relationships": {
+          "nira": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "গোপন রাখা থেকে দায় স্বীকার",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "66c966b8aa14c19250d694dfed5dbc83f6326317ff98658887eacadd57933722"
+      }
+    ],
+    "location": {
+      "id": "living",
+      "architecture": "বসার ঘর",
+      "geography": "পূর্ব জানলা, পশ্চিম দরজা, উত্তরে রান্নাঘর",
+      "connections": [
+        "kitchen"
+      ],
+      "openings": [
+        {
+          "id": "d1",
+          "to": "kitchen",
+          "kind": "door"
+        }
+      ],
+      "camera_access": "দক্ষিণ দেয়াল, চলার পথ খালি",
+      "references": []
+    },
+    "art": {
+      "id": "set1",
+      "scene_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "palette": [
+        "কাঠের বাদামি",
+        "সকালের ফিকে সোনা"
+      ],
+      "set": "বাসার বসার ঘর; দর্জির কাজের টেবিল",
+      "props": {
+        "key": "একটি চাবি হাসানের কাছে",
+        "bag": "হাতল মেরামত",
+        "receipt": "টিকিটের নিচে পুরোনো রসিদ",
+        "box": "লাল টিন"
+      },
+      "period": "বর্তমান",
+      "culture": "ঢাকার মধ্যবিত্ত ভাড়াবাসা",
+      "lighting": "পূর্ব জানালার সকালের আলো",
+      "style": "photorealistic"
+    },
+    "costumes": [
+      {
+        "id": "w1-nira",
+        "scene": "s1",
+        "character": "nira",
+        "outfit": "blue-kamiz",
+        "color": "blue",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      },
+      {
+        "id": "w1-hasan",
+        "scene": "s1",
+        "character": "hasan",
+        "outfit": "gray-panjabi",
+        "color": "gray",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      }
+    ],
+    "performance": [
+      {
+        "id": "p1-nira",
+        "scene": "s1",
+        "character": "nira",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      },
+      {
+        "id": "p1-hasan",
+        "scene": "s1",
+        "character": "hasan",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      }
+    ],
+    "camera": {
+      "id": "s1-shot1",
+      "shot": "s1-shot1",
+      "scene": "s1",
+      "lens_mm": 50,
+      "height_m": 1.4,
+      "angle": "eye level",
+      "movement": "static",
+      "lighting": "east window key, south negative fill",
+      "exposure": "protect window highlights",
+      "color": "source",
+      "framing": "wide geography",
+      "axis_side": "A",
+      "screen_direction": "left",
+      "axis_reset": false,
+      "purpose": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক"
+    },
+    "motion": [
+      {
+        "id": "s1-shot1-nira",
+        "shot": "s1-shot1",
+        "character": "nira",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 0,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "nira-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      },
+      {
+        "id": "s1-shot1-hasan",
+        "shot": "s1-shot1",
+        "character": "hasan",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 0,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "hasan-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      }
+    ],
+    "reference_assets": [],
+    "technical_requirements": {
+      "identity_lock": false,
+      "lip_sync": false,
+      "physics_simulation": false,
+      "unsupported_controls": "Performance/camera/motion prose is editorial intent until actual model conditioning is verified."
+    },
+    "actual_media_generated": false,
+    "professional_quality_verified": false
+  },
+  "voice_packet": {
+    "id": "1d6c3f8d5c5e30fa1f8c145139c3a44f",
+    "kind": "voice_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "voice",
+        "task": "b86045c501c846fb8aba65da98fc6a5c",
+        "revision": 1,
+        "artifact_sha256": "68837feb7904b41eac428089ccfe0e6010bc4368867ad8817cf1cb1bf440fd77"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      }
+    ],
+    "lexicon_version": "bn-v1",
+    "lexicon": {
+      "রাজশাহী": "রাজশাহী"
+    },
+    "lines": [
+      {
+        "id": "line1",
+        "scene": "s1",
+        "character": "nira",
+        "original": "চা-ও কি আমার সঙ্গে যাবে? এত ঠান্ডা কেন?",
+        "request": {
+          "preset": "Aditi",
+          "style": "warm",
+          "text": "চা-ও কি আমার সঙ্গে যাবে? এত ঠান্ডা কেন?",
+          "seed": 42
+        },
+        "planned_start": 0,
+        "planned_seconds": 5,
+        "pauses": [
+          0.5
+        ],
+        "timing_status": "Editorial targets; measured speech and alignment pending. No speed/pause/lip-sync control claimed."
+      },
+      {
+        "id": "line2",
+        "scene": "s1",
+        "character": "hasan",
+        "original": "তুই রেডি হতে হতে ও রাজশাহী ঘুরে আসছে।",
+        "request": {
+          "preset": "Arjun",
+          "style": "warm",
+          "text": "তুই রেডি হতে হতে ও রাজশাহী ঘুরে আসছে।",
+          "seed": 42
+        },
+        "planned_start": 5,
+        "planned_seconds": 5,
+        "pauses": [
+          0.5
+        ],
+        "timing_status": "Editorial targets; measured speech and alignment pending. No speed/pause/lip-sync control claimed."
+      },
+      {
+        "id": "line3",
+        "scene": "s2",
+        "character": "nira",
+        "original": "আবার খুলবে? বাস তো তোমার সেলাই দেখে ছাড়বে না।",
+        "request": {
+          "preset": "Aditi",
+          "style": "warm",
+          "text": "আবার খুলবে? বাস তো তোমার সেলাই দেখে ছাড়বে না।",
+          "seed": 42
+        },
+        "planned_start": 60,
+        "planned_seconds": 5,
+        "pauses": [
+          0.5
+        ],
+        "timing_status": "Editorial targets; measured speech and alignment pending. No speed/pause/lip-sync control claimed."
+      },
+      {
+        "id": "line4",
+        "scene": "s2",
+        "character": "hasan",
+        "original": "হাতল ছিঁড়লে বাসও তোকে ব্যাগ ধরবে না।",
+        "request": {
+          "preset": "Arjun",
+          "style": "warm",
+          "text": "হাতল ছিঁড়লে বাসও তোকে ব্যাগ ধরবে না।",
+          "seed": 42
+        },
+        "planned_start": 65,
+        "planned_seconds": 5,
+        "pauses": [
+          0.5
+        ],
+        "timing_status": "Editorial targets; measured speech and alignment pending. No speed/pause/lip-sync control claimed."
+      },
+      {
+        "id": "line5",
+        "scene": "s3",
+        "character": "nira",
+        "original": "এই টাকাটা মা কবে জমা দিছিল?",
+        "request": {
+          "preset": "Aditi",
+          "style": "warm",
+          "text": "এই টাকাটা মা কবে জমা দিছিল?",
+          "seed": 42
+        },
+        "planned_start": 120,
+        "planned_seconds": 5,
+        "pauses": [
+          0.5
+        ],
+        "timing_status": "Editorial targets; measured speech and alignment pending. No speed/pause/lip-sync control claimed."
+      },
+      {
+        "id": "line6",
+        "scene": "s3",
+        "character": "hasan",
+        "original": "টিকিটটা আগে রাখ।",
+        "request": {
+          "preset": "Arjun",
+          "style": "warm",
+          "text": "টিকিটটা আগে রাখ।",
+          "seed": 42
+        },
+        "planned_start": 125,
+        "planned_seconds": 5,
+        "pauses": [
+          0.5
+        ],
+        "timing_status": "Editorial targets; measured speech and alignment pending. No speed/pause/lip-sync control claimed."
+      },
+      {
+        "id": "line7",
+        "scene": "s3",
+        "character": "nira",
+        "original": "টিকিট রাখছি। প্রশ্নটা কোথায় রাখব?",
+        "request": {
+          "preset": "Aditi",
+          "style": "warm",
+          "text": "টিকিট রাখছি। প্রশ্নটা কোথায় রাখব?",
+          "seed": 42
+        },
+        "planned_start": 130,
+        "planned_seconds": 5,
+        "pauses": [
+          0.5
+        ],
+        "timing_status": "Editorial targets; measured speech and alignment pending. No speed/pause/lip-sync control claimed."
+      }
+    ],
+    "listening_review_completed": false,
+    "reference_cloning": false
+  },
+  "agents_exercised": [
+    "art",
+    "character",
+    "cinematographer",
+    "continuity",
+    "costume",
+    "director",
+    "editing",
+    "growth",
+    "location",
+    "motion",
+    "music",
+    "performance",
+    "production_manager",
+    "qc",
+    "script",
+    "story",
+    "storyboard",
+    "video",
+    "voice",
+    "youtube"
+  ],
+  "new_real_model_inference": 0,
+  "new_human_reviews": 0,
+  "professional_quality_verified": false,
+  "simulated_approvals": true,
+  "project_id": "pre-gpu-fixture-e43-completion",
+  "seconds": 3.03,
+  "scope": "Executable engineering fixture, not real creative intelligence or artistic approval."
+}

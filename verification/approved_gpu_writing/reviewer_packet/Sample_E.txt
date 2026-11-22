@@ -1,0 +1,1 @@
+{"findings":[{"code":"prop_state","quote":"ব্যাগ চেয়ারের পাশেই থাকে।","observation":"সালমা ব্যাগটি চেয়ারের পাশে রাখার পর দৃশ্যের শুরুতে ব্যাগটি সেই অবস্থাতেই দেখানো হয়েছে, যা অব্যবস্থাপনার মতো একটি continuity defect।","category":"contract","decision":"revise"}]}

@@ -1,0 +1,21 @@
+test_retry_cannot_switch_from_legacy_to_new_shared_preference (tests.test_kaggle_model_services.KaggleServices.test_retry_cannot_switch_from_legacy_to_new_shared_preference) ... ok
+test_shared_retry_stays_bound_when_production_policy_changes (tests.test_kaggle_model_services.KaggleServices.test_shared_retry_stays_bound_when_production_policy_changes) ... ok
+test_old_ollama_run_snapshot_wins_over_later_shared_configuration (tests.test_kaggle_model_services.KaggleServices.test_old_ollama_run_snapshot_wins_over_later_shared_configuration) ... ok
+test_engine_retry_uses_same_shared_backend_after_policy_change (tests.test_kaggle_model_services.KaggleServices.test_engine_retry_uses_same_shared_backend_after_policy_change) ... ERROR
+
+======================================================================
+ERROR: test_engine_retry_uses_same_shared_backend_after_policy_change (tests.test_kaggle_model_services.KaggleServices.test_engine_retry_uses_same_shared_backend_after_policy_change)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_kaggle_model_services.py", line 186, in test_engine_retry_uses_same_shared_backend_after_policy_change
+    self.assertEqual(engine.execute(rid),'Blocked')
+                     ~~~~~~~~~~~~~~^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/agent_engine.py", line 332, in execute
+    if provenance=='local_inference' and (isinstance(complete,(LocalWriter,RoutedWriter)) or complete.__class__.__name__=='SharedWriter'):
+                                          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.025s
+
+FAILED (errors=1)

@@ -1,0 +1,6 @@
+{
+  "peak_sampled_aggregate_rss_bytes": 4317732864,
+  "sample_interval_seconds": 0.5,
+  "measurement": "Sum RSS of this Python process and owned Ollama descendants; shared pages may be counted more than once; not PSS",
+  "wall_seconds_including_postchecks": 109.594
+}

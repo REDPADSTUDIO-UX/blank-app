@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-11-21T12:32:19.687463+00:00",
+  "branch": "feature/video-music-editing-studio",
+  "remote_feature_head_verified": "e39752502f7de12777ff44e461cfd07ab0419f19",
+  "original_completed_sync_commit": "4109a9075ee08a6020c703280e9c2879ab3f5e95",
+  "result": "VERIFIED COMPLETE: existing synchronization preserved; no missing application fix found",
+  "checks": {
+    "branch_is_authorized": true,
+    "prior_sync_commit_is_ancestor": true,
+    "all_18_sync_paths_byte_unchanged": true,
+    "registry_exactly_21": true,
+    "matrix_exactly_21": true,
+    "exact_registry_identity_match": true,
+    "casting_present_in_registry_and_current_matrix": true,
+    "historical_matrix_exactly_20": true,
+    "historical_matrix_protected_sha_matches": true,
+    "registry_hash_matches_matrix_and_test_receipt": true,
+    "prior_109_distinct_tests_passed": true,
+    "no_production_promotion": true
+  },
+  "source_and_evidence_blob_comparison": [
+    {
+      "path": ".github/workflows/video-studio-smoke.yml",
+      "verified_commit_blob": "d7fb9226ad3405b749a0e99fca2e53a6f4e795af",
+      "current_blob": "d7fb9226ad3405b749a0e99fca2e53a6f4e795af",
+      "unchanged": true
+    },
+    {
+      "path": "experiments/export_agent_matrix.py",
+      "verified_commit_blob": "103cd1c8edaaa3ed25529ab923a223778f89d478",
+      "current_blob": "103cd1c8edaaa3ed25529ab923a223778f89d478",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/agent_reporting.py",
+      "verified_commit_blob": "e0df0e7b568bb719d3a3499a1604ed6361d20313",
+      "current_blob": "e0df0e7b568bb719d3a3499a1604ed6361d20313",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/agent_reporting_ui.py",
+      "verified_commit_blob": "cf359f3de98ebf4c2b73a955998e858f9e760561",
+      "current_blob": "cf359f3de98ebf4c2b73a955998e858f9e760561",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/agents.py",
+      "verified_commit_blob": "260be5fe55dec4c6928721a0057e1c1062e9bc2f",
+      "current_blob": "260be5fe55dec4c6928721a0057e1c1062e9bc2f",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/agents_ui.py",
+      "verified_commit_blob": "828596f94f8aa3bec9e32011cb7b003f4b555cf9",
+      "current_blob": "828596f94f8aa3bec9e32011cb7b003f4b555cf9",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/departments.py",
+      "verified_commit_blob": "705e0bab5a17e1b8c72476bb0f51fca6391f6610",
+      "current_blob": "705e0bab5a17e1b8c72476bb0f51fca6391f6610",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/producer_ui.py",
+      "verified_commit_blob": "772cb79acdc4afc65eba26a6017729a6da0b572e",
+      "current_blob": "772cb79acdc4afc65eba26a6017729a6da0b572e",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/professional_ui.py",
+      "verified_commit_blob": "ec1f0b2a758a787d50dd3d9bfe9ba471fae261c4",
+      "current_blob": "ec1f0b2a758a787d50dd3d9bfe9ba471fae261c4",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/studio_program.py",
+      "verified_commit_blob": "58e533a91e54f0cb012f53ecb0febd194aa3490f",
+      "current_blob": "58e533a91e54f0cb012f53ecb0febd194aa3490f",
+      "unchanged": true
+    },
+    {
+      "path": "redpad_pipeline/studio_program_ui.py",
+      "verified_commit_blob": "07af553eb1f71578babf0d847e4573a4a5bba57b",
+      "current_blob": "07af553eb1f71578babf0d847e4573a4a5bba57b",
+      "unchanged": true
+    },
+    {
+      "path": "tests/export_foundation_evidence.py",
+      "verified_commit_blob": "66ed8e1d67387993564fbad046486da0cc62064c",
+      "current_blob": "66ed8e1d67387993564fbad046486da0cc62064c",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_agent_reporting.py",
+      "verified_commit_blob": "b0fa67027bf3371818ff21bac939eb97f1f2512f",
+      "current_blob": "b0fa67027bf3371818ff21bac939eb97f1f2512f",
+      "unchanged": true
+    },
+    {
+      "path": "verification/agent_implementation_matrix_current.json",
+      "verified_commit_blob": "efb1fc39da4b260c91adbb4de96d5bdfdc2b3ed4",
+      "current_blob": "efb1fc39da4b260c91adbb4de96d5bdfdc2b3ed4",
+      "unchanged": true
+    },
+    {
+      "path": "verification/agent_registry_sync_20261120/audit.json",
+      "verified_commit_blob": "4e606807766ace7e4a7b2ac1b5dd88537da4d034",
+      "current_blob": "4e606807766ace7e4a7b2ac1b5dd88537da4d034",
+      "unchanged": true
+    },
+    {
+      "path": "verification/agent_registry_sync_20261120/cpu_tests.json",
+      "verified_commit_blob": "1c49f2cf267ca3dc788b97477cad70e9cb9d6612",
+      "current_blob": "1c49f2cf267ca3dc788b97477cad70e9cb9d6612",
+      "unchanged": true
+    },
+    {
+      "path": "verification/agent_registry_sync_20261120/cpu_tests.txt",
+      "verified_commit_blob": "a6e4a12e4f8c377121ff82872659f38bafb4ad22",
+      "current_blob": "a6e4a12e4f8c377121ff82872659f38bafb4ad22",
+      "unchanged": true
+    },
+    {
+      "path": "verification/agent_registry_sync_20261120/post_export_tests.txt",
+      "verified_commit_blob": "2722bc8c4c79641bc85330fbc643e35b7209780f",
+      "current_blob": "2722bc8c4c79641bc85330fbc643e35b7209780f",
+      "unchanged": true
+    }
+  ],
+  "current_registry_sha256": "bf81744022229662c8ec56ca3a17ebdc64dfadcaacf676072b86a73cce7b345f",
+  "historical_matrix_sha256": "8915731a4a98786cf3c1f3ab5e5b9d091854562759b4860fab155bc445d2738d",
+  "fresh_command": {
+    "command": "python -m experiments.export_agent_matrix --check",
+    "exit_code": 0,
+    "stdout": "Verified current matrix: 21 registered agents; historical matrix preserved.",
+    "executed_this_resume": true
+  },
+  "regression_evidence_reused": {
+    "path": "verification/agent_registry_sync_20261120/cpu_tests.json",
+    "sha256": "78874cbdd7ad19f595fa0ecb7bf96c97cdabc2b499bdf53a8146cebdfdc50b1c",
+    "distinct_tests": 109,
+    "failures": 0,
+    "errors": 0,
+    "rerun_this_resume": false,
+    "reason": "All 18 synchronization implementation/evidence paths remain byte-identical to the successful verified checkpoint."
+  },
+  "application_source_changed": false,
+  "gpu_or_cpu_model_inference_this_sync_task": false,
+  "downloads_this_sync_task": false,
+  "deployment": false,
+  "main_changed": false,
+  "production_data_accessed": false,
+  "youtube_publishing": false,
+  "remaining_in_scope": [],
+  "separate_pending_work": "Real selected-model inference, independent creative review and production acceptance are not established by this synchronization audit."
+}

@@ -1,0 +1,274 @@
+{
+  "version": "filmmaking-2026-11-07.2",
+  "bundle_sha256": "67d4b1b364b6741893cd14d3505b44f1d06329b2819d757ea9b1f74f863397b6",
+  "method": "versioned offline retrieval and contextual conditioning; NOT model weight training",
+  "agents": [
+    {
+      "agent": "director",
+      "lessons": 3,
+      "rubric": [
+        "source fidelity",
+        "pacing",
+        "targeted revision"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "qc",
+      "lessons": 3,
+      "rubric": [
+        "false positives",
+        "defect recall",
+        "correct abstention"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "story",
+      "lessons": 3,
+      "rubric": [
+        "motivation",
+        "causality",
+        "setup payoff",
+        "emotional behavior"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "script",
+      "lessons": 3,
+      "rubric": [
+        "dialogue attribution",
+        "naturalness",
+        "responsive humor",
+        "restraint"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "character",
+      "lessons": 3,
+      "rubric": [
+        "identity fidelity",
+        "agency",
+        "relationship continuity"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "art",
+      "lessons": 3,
+      "rubric": [
+        "cultural plausibility",
+        "prop identity",
+        "practical construction"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "location",
+      "lessons": 3,
+      "rubric": [
+        "door consistency",
+        "sightlines",
+        "access"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "costume",
+      "lessons": 3,
+      "rubric": [
+        "outfit state",
+        "motivated changes",
+        "reference fidelity"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "storyboard",
+      "lessons": 3,
+      "rubric": [
+        "coverage purpose",
+        "reveal order",
+        "timed references"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "performance",
+      "lessons": 3,
+      "rubric": [
+        "playable tactic",
+        "reactive timing",
+        "restrained emotion"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "cinematographer",
+      "lessons": 3,
+      "rubric": [
+        "axis continuity",
+        "light motivation",
+        "shot purpose"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "motion",
+      "lessons": 3,
+      "rubric": [
+        "contact",
+        "balance",
+        "transfer chronology"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "video",
+      "lessons": 3,
+      "rubric": [
+        "checkpoint identity",
+        "source binding",
+        "actual output"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "voice",
+      "lessons": 3,
+      "rubric": [
+        "speaker identity",
+        "pronunciation",
+        "measured timing"
+      ],
+      "sources": [
+        "original",
+        "audacity"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "continuity",
+      "lessons": 3,
+      "rubric": [
+        "state transitions",
+        "known facts",
+        "source version"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "music",
+      "lessons": 3,
+      "rubric": [
+        "cue motivation",
+        "rights",
+        "dialogue intelligibility"
+      ],
+      "sources": [
+        "original",
+        "audacity"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "editing",
+      "lessons": 3,
+      "rubric": [
+        "source bounds",
+        "sync",
+        "reaction pacing"
+      ],
+      "sources": [
+        "original",
+        "audacity"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "production_manager",
+      "lessons": 3,
+      "rubric": [
+        "DAG integrity",
+        "resource constraints",
+        "recoverability"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "growth",
+      "lessons": 3,
+      "rubric": [
+        "audience fit",
+        "factual fidelity",
+        "spoiler discipline"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    },
+    {
+      "agent": "youtube",
+      "lessons": 3,
+      "rubric": [
+        "read-only boundary",
+        "rights",
+        "metadata provenance"
+      ],
+      "sources": [
+        "original"
+      ],
+      "actual_creative_acceptance": false
+    }
+  ],
+  "weight_training_completed": false,
+  "human_review_completed": false
+}

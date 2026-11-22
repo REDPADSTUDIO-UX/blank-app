@@ -1,0 +1,21 @@
+{
+  "accepted": false,
+  "error_type": "JSONDecodeError",
+  "error": "Expecting value: line 1 column 1 (char 0)",
+  "raw_repaired": false,
+  "partial_extraction_used": false,
+  "ui_finished": true,
+  "actual_finish_reason": null,
+  "visible_end_incomplete": true,
+  "duplicate_field_markers_observed": [
+    "performance",
+    "continuity"
+  ],
+  "editorial_findings": [
+    "English directions rather than Bengali; Cyrillic character names substituted.",
+    "Per-department material inserted into scenes outside exact scene schema.",
+    "Only story assignment was visible; all departments are not genuinely delegated.",
+    "Some filmable gestures/camera ideas exist, but no complete usable plan."
+  ],
+  "professional_accepted": false
+}

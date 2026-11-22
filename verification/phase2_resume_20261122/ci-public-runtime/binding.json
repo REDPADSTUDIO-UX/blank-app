@@ -1,0 +1,328 @@
+{
+  "identity": {
+    "interpreter": "/redpad/runtime/bin/python3.11",
+    "dependency_lock": {
+      "nvidia-cudnn-cu12": "9.10.2.21",
+      "accelerate": "1.13.0",
+      "h11": "0.16.0",
+      "urllib3": "2.8.0",
+      "nvidia-cuda-nvrtc-cu12": "12.8.93",
+      "huggingface-hub": "1.31.0",
+      "tokenizers": "0.23.3",
+      "anyio": "4.16.0",
+      "fsspec": "2026.9.0",
+      "requests": "2.34.2",
+      "typing-extensions": "4.16.0",
+      "tqdm": "4.70.1",
+      "cffi": "2.1.1",
+      "nvidia-cuda-runtime-cu12": "12.8.90",
+      "dnspython": "2.9.2",
+      "shellingham": "1.5.4",
+      "typer": "0.29.2",
+      "transformers": "5.22.2",
+      "pyjwt": "2.15.1",
+      "rich": "15.0.0",
+      "certifi": "2026.11.20",
+      "nvidia-cusolver-cu12": "11.7.3.90",
+      "pip": "26.3",
+      "id": "1.6.1",
+      "nvidia-curand-cu12": "10.3.9.90",
+      "numpy": "2.4.6",
+      "markupsafe": "3.0.4",
+      "nvidia-cuda-cupti-cu12": "12.8.90",
+      "kernels": "0.17.2",
+      "nvidia-nccl-cu12": "2.27.5",
+      "pydantic": "2.14.4",
+      "httpcore": "1.0.9",
+      "pyyaml": "6.0.4",
+      "nvidia-cufile-cu12": "1.13.1.3",
+      "hf-xet": "1.8.0",
+      "tuf": "7.0.1",
+      "safetensors": "0.8.0",
+      "tomlkit": "0.15.2",
+      "sigstore-rekor-types": "0.0.18",
+      "pillow": "11.3.0",
+      "email-validator": "2.4.0",
+      "charset-normalizer": "3.5.2",
+      "cuda-pathfinder": "1.9.1",
+      "pycparser": "3.12",
+      "httpx": "0.28.1",
+      "sympy": "1.14.0",
+      "rfc8785": "0.1.4",
+      "annotated-doc": "0.0.7",
+      "torch": "2.10.0",
+      "markdown-it-py": "4.3.0",
+      "nvidia-nvjitlink-cu12": "12.8.93",
+      "platformdirs": "4.14.8",
+      "mdurl": "0.1.2",
+      "filelock": "4.2.12",
+      "setuptools": "79.0.1",
+      "nvidia-nvshmem-cu12": "3.4.5",
+      "networkx": "3.6.1",
+      "sigstore": "4.5.1",
+      "pygments": "2.21.0",
+      "nvidia-cufft-cu12": "11.3.3.83",
+      "mpmath": "1.3.0",
+      "packaging": "26.3",
+      "idna": "3.20",
+      "psutil": "7.2.2",
+      "click": "8.5.1",
+      "annotated-types": "0.8.0",
+      "cryptography": "50.0.2",
+      "nvidia-cusparselt-cu12": "0.7.1",
+      "torchvision": "0.25.0",
+      "nvidia-nvtx-cu12": "12.8.90",
+      "pydantic-core": "2.50.5",
+      "rfc3161-client": "1.0.9",
+      "nvidia-cusparse-cu12": "12.5.8.93",
+      "cuda-bindings": "12.9.4",
+      "regex": "2026.11.19",
+      "nvidia-cublas-cu12": "12.8.4.1",
+      "typing-inspection": "0.4.5",
+      "securesystemslib": "1.6.0",
+      "triton": "3.6.0",
+      "sigstore-models": "0.0.6",
+      "jinja2": "3.1.6"
+    },
+    "sha256": "6812c0bfdf383315d2ad22dace98242df2ec20abea78b70012f96837ea51b9bc"
+  },
+  "manifest_files": 25345,
+  "system_files": {
+    "/lib/x86_64-linux-gnu/libX11.so.6": {
+      "bytes": 1306280,
+      "sha256": "e23ed094eaf0a74a822a6d9d14eee628ab9f7ec08aecbf20ffd803f019ff6e98"
+    },
+    "/lib/x86_64-linux-gnu/libXau.so.6": {
+      "bytes": 18720,
+      "sha256": "98343a8324ea62ed75a13c923ed5dea96b7a8ad41aeba9f18126c4cbf7178064"
+    },
+    "/lib/x86_64-linux-gnu/libXdmcp.so.6": {
+      "bytes": 26800,
+      "sha256": "1dc3ff1269a5ede69ef9a8ec2436d73fccbcd10531055b359292e0bde4e29b46"
+    },
+    "/lib/x86_64-linux-gnu/libXext.so.6": {
+      "bytes": 81640,
+      "sha256": "d61399986f565c00c090a1f222019db7b40f42eaf2d93834136d6234c16ec465"
+    },
+    "/lib/x86_64-linux-gnu/libXft.so.2": {
+      "bytes": 97624,
+      "sha256": "73c9e0d9bb6fcfc943cafc78590034b85bdb2f3d0b071a979c3a852f30fd268d"
+    },
+    "/lib/x86_64-linux-gnu/libXrender.so.1": {
+      "bytes": 47728,
+      "sha256": "2415c0b512d332522625bc65bcc5e05dba93c2e3418329ded2855111fb0cf723"
+    },
+    "/lib/x86_64-linux-gnu/libXss.so.1": {
+      "bytes": 14680,
+      "sha256": "2c30b5f8ae4a1a733c70385229fe2143de270f292097a61879f4696abe63545b"
+    },
+    "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": {
+      "bytes": 137560,
+      "sha256": "617035f98d836e37ccaefdd5fe56b45ef4f5e10460c5b4f68c2d488e5a62766f"
+    },
+    "/lib/x86_64-linux-gnu/libbrotlidec.so.1": {
+      "bytes": 51512,
+      "sha256": "b877956d7814d95fb37473002f46a43fe7f09bebb48a41312c329c65631622b5"
+    },
+    "/lib/x86_64-linux-gnu/libbsd.so.0": {
+      "bytes": 89096,
+      "sha256": "e4ad21c203d8e8b9b7f49071311339af6b438026e1ad236403e3b379b022f23d"
+    },
+    "/lib/x86_64-linux-gnu/libbz2.so.1.0": {
+      "bytes": 74848,
+      "sha256": "54d16979912ab62282350dd2dc5dceb5b73b13e27bb02792087aff752d16f6e9"
+    },
+    "/lib/x86_64-linux-gnu/libc.so.6": {
+      "bytes": 2220400,
+      "sha256": "4ebb1967c395ca547dcfeaeeab7a2819724604a331aede44e8a749a7e1a4628e"
+    },
+    "/lib/x86_64-linux-gnu/libcom_err.so.2": {
+      "bytes": 18504,
+      "sha256": "f196091d8ec9790b4cd203ecdb0eab3b242d35ae8625ead7962d0a944a8fdfa5"
+    },
+    "/lib/x86_64-linux-gnu/libcrypt.so.1": {
+      "bytes": 198664,
+      "sha256": "d8b34ade1d95c6243a48e90f2873d65399dfb0cd3fa4ee2af45afc9e6cb8642b"
+    },
+    "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+      "bytes": 4455728,
+      "sha256": "7cc817ff1841b59516d684f357bc0c3fc2cc52c3fa9b4ffb8ce8bdc215f02915"
+    },
+    "/lib/x86_64-linux-gnu/libdl.so.2": {
+      "bytes": 14432,
+      "sha256": "9cb9b7e3171939e7409e26773f44f3f22e200ec2e6936a5d7484a4f9b81d92f2"
+    },
+    "/lib/x86_64-linux-gnu/libexpat.so.1": {
+      "bytes": 198968,
+      "sha256": "683e2e41db14581194bf1f6616e95a8f02cd4ab599f0fba807e46325ec01d21f"
+    },
+    "/lib/x86_64-linux-gnu/libffi.so.8": {
+      "bytes": 47688,
+      "sha256": "247da4d5d34a91cadcdd6282be4c4644fcb8af001334d2b8a82ecda435418cbf"
+    },
+    "/lib/x86_64-linux-gnu/libfontconfig.so.1": {
+      "bytes": 298120,
+      "sha256": "7d688909aab1c566b60832045fef012ea118ff7ee189df87608fbff999d3bd0d"
+    },
+    "/lib/x86_64-linux-gnu/libfreetype.so.6": {
+      "bytes": 813128,
+      "sha256": "c338538f8d90eb85217e8525ab363e68e79b46d3c8acc0b6824190e032687e5f"
+    },
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+      "bytes": 125488,
+      "sha256": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a"
+    },
+    "/lib/x86_64-linux-gnu/libgdbm.so.6": {
+      "bytes": 71848,
+      "sha256": "ffa9adb042df32f985ca2f1deb9247dfcb61d46fa513de2aa7159ecd55c18d67"
+    },
+    "/lib/x86_64-linux-gnu/libgdbm_compat.so.4": {
+      "bytes": 18344,
+      "sha256": "cd77f7a952bc04649ce0608251b5a99d76219b1132c7375921e0c8bf6ff20c80"
+    },
+    "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": {
+      "bytes": 338648,
+      "sha256": "a8c1a62a7b925e198c5fb8f8123bb2900c235dd678d6dbf0c1e0b5f06175e84b"
+    },
+    "/lib/x86_64-linux-gnu/libk5crypto.so.3": {
+      "bytes": 182864,
+      "sha256": "d3c3d1c5415f09918c67a5bb23cf5004aa9524b916003655af4a2bb15627760a"
+    },
+    "/lib/x86_64-linux-gnu/libkeyutils.so.1": {
+      "bytes": 22600,
+      "sha256": "ad20d5fb89df5297073b46373c65bfbb01f33a00b4949894055d29a7fcf00900"
+    },
+    "/lib/x86_64-linux-gnu/libkrb5.so.3": {
+      "bytes": 827936,
+      "sha256": "ecc1a3b592c3685e330499aba8eac3b635e9be80b99fa65b2ef3e4f0b2d8a166"
+    },
+    "/lib/x86_64-linux-gnu/libkrb5support.so.0": {
+      "bytes": 52016,
+      "sha256": "add5050d2a960ab105b568c714849d1e771cf2bd67a46dbfcc068a99de80eeec"
+    },
+    "/lib/x86_64-linux-gnu/liblzma.so.5": {
+      "bytes": 170456,
+      "sha256": "3147e2cb512d17a4064d34f61e69591b6473543db2ec63cd797f766cd3b09037"
+    },
+    "/lib/x86_64-linux-gnu/libm.so.6": {
+      "bytes": 940560,
+      "sha256": "045fdb0436a8fb0d651f039e3444a9cbffc011d379c82b979cebf43571053eca"
+    },
+    "/lib/x86_64-linux-gnu/libmd.so.0": {
+      "bytes": 47472,
+      "sha256": "bb376813876bb214535bbbdac70f2c0c4b00baecb81557dab78a79518248df06"
+    },
+    "/lib/x86_64-linux-gnu/libncursesw.so.6": {
+      "bytes": 239696,
+      "sha256": "96a5920c1f6d1fd6ff3ac35c03b8fc9725e8fe6964c10e0299f772667d522a6b"
+    },
+    "/lib/x86_64-linux-gnu/libnsl.so.2": {
+      "bytes": 93280,
+      "sha256": "3bea6a9232e4245cb6f7973bb75049be671980ba5ccf232421ac7464b254ad3d"
+    },
+    "/lib/x86_64-linux-gnu/libpanelw.so.6": {
+      "bytes": 22688,
+      "sha256": "20771997288c90841349f1eef3b66148eac771df02bb94462a9c3463f275fbc5"
+    },
+    "/lib/x86_64-linux-gnu/libpng16.so.16": {
+      "bytes": 235592,
+      "sha256": "0c55d5776d3382cb7859ff48fcf813e0c3b27f33c46f9364633748830246c723"
+    },
+    "/lib/x86_64-linux-gnu/libpthread.so.0": {
+      "bytes": 21448,
+      "sha256": "fbed9505adacada2abb37c6b43be2df6de81e742712c6025694ba48de62c7e78"
+    },
+    "/lib/x86_64-linux-gnu/libreadline.so.8": {
+      "bytes": 335936,
+      "sha256": "57419e3b177639246ecf7ffd2eba170bde779b7369d70e68b9b4c5fc3051cbc1"
+    },
+    "/lib/x86_64-linux-gnu/libresolv.so.2": {
+      "bytes": 64456,
+      "sha256": "7b2ceed6a3b0f20c5fd5c7d9a327ea6b3d0b97c3f47156a77ee859938dedd019"
+    },
+    "/lib/x86_64-linux-gnu/librt.so.1": {
+      "bytes": 14664,
+      "sha256": "37bf90d672ac5b85c5f0b7d443f2463af7662de8cb130535dcc4b12520e02419"
+    },
+    "/lib/x86_64-linux-gnu/libsqlite3.so.0": {
+      "bytes": 1358520,
+      "sha256": "f5a7fc236f80f3185608d14e9f4dea3e3fd647582e123e8a00f253629fe16830"
+    },
+    "/lib/x86_64-linux-gnu/libssl.so.3": {
+      "bytes": 671960,
+      "sha256": "51fc92556f11ddce62f3f988d3fe973fab8fb4742032e61a713688581c924262"
+    },
+    "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+      "bytes": 2260296,
+      "sha256": "ff0825e113603c3866680d5d52216bc6d8eedf3a59f52a0aef67ff01994db128"
+    },
+    "/lib/x86_64-linux-gnu/libtcl8.6.so": {
+      "bytes": 1762056,
+      "sha256": "8aa8d78367d409e0a53ae62608b52a1c3899da60d03c52a2fd3cc94e162db7a8"
+    },
+    "/lib/x86_64-linux-gnu/libtinfo.so.6": {
+      "bytes": 200136,
+      "sha256": "856b8451914abc2277c3d91c64ba3e72b2e0d519806397afecae92fda1a6b10c"
+    },
+    "/lib/x86_64-linux-gnu/libtirpc.so.3": {
+      "bytes": 182912,
+      "sha256": "d1434508e5bae3fcba2a3bc2e465f52e89a1aad389d9ed9affe855addda853a4"
+    },
+    "/lib/x86_64-linux-gnu/libtk8.6.so": {
+      "bytes": 1531896,
+      "sha256": "468fe0e3d8939757f1c9c66f3aa8ff6e45d09616dd85e02a5ef5e95979cb6f3d"
+    },
+    "/lib/x86_64-linux-gnu/libutil.so.1": {
+      "bytes": 14432,
+      "sha256": "3dee586e8871e4319fc2509655d3bba0cffd723c5bed216974bb96b16efe70e7"
+    },
+    "/lib/x86_64-linux-gnu/libuuid.so.1": {
+      "bytes": 30936,
+      "sha256": "4472cf91dbc01395761fb45d0f4b25f6241406fe54cbf540c13755a3706a7b17"
+    },
+    "/lib/x86_64-linux-gnu/libxcb.so.1": {
+      "bytes": 166504,
+      "sha256": "aabc489094abd96c876d1c989a2da8a8aa6d28f5a676c4a84dd6d0a0c34aec5d"
+    },
+    "/lib/x86_64-linux-gnu/libz.so.1": {
+      "bytes": 108936,
+      "sha256": "64c206f0146cc58bbddc4f22054436f4ff278f5a554aa3ce6921ddf7e9133370"
+    },
+    "/lib64/ld-linux-x86-64.so.2": {
+      "bytes": 240936,
+      "sha256": "a87fec14aeedb537d0b2a80c6a3308b82e774d86541dff4654a75ab1fd22df0a"
+    }
+  },
+  "unresolved_elf_sonames": [
+    "libXau-154567c4.so.6.0.0",
+    "libbrotlicommon-c55a5f7a.so.1.1.0",
+    "libbrotlidec-2ced2f3a.so.1.1.0",
+    "libc10.so",
+    "libc10_cuda.so",
+    "libcuda.so.1",
+    "libcudart.so.12",
+    "libfabric.so.1",
+    "libfreetype-083ff72c.so.6.20.2",
+    "libibverbs.so.1",
+    "libjpeg-8a13c6e0.so.62.4.0",
+    "liblzma-64b7ab39.so.5.8.1",
+    "libmlx5.so.1",
+    "libmpi.so.40",
+    "liboshmem.so.40",
+    "libpmix.so.2",
+    "libpng16-d00bd151.so.16.49.0",
+    "librdmacm.so.1",
+    "libsharpyuv-60a7c00b.so.0.1.1",
+    "libtorch.so",
+    "libtorch_cpu.so",
+    "libtorch_cuda.so",
+    "libtorch_python.so",
+    "libucp.so.0",
+    "libucs.so.0",
+    "libwebp-5f0275c0.so.7.1.10"
+  ],
+  "studio_sha256": "b164ef5072c53e6053443332930f574d833470dd436d42c16a2c4d27e77448d2",
+  "source_manifest_sha256": "e9241a940ca17704e817f31e5f6ab654dc72629e589fd165c1b1cabf29b51d93",
+  "source_files": 1033,
+  "scope": "Model-free CPU diagnostic only, not a production runtime approval"
+}

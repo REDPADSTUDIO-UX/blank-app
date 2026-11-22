@@ -1,0 +1,6 @@
+test_stable_audio_small_does_not_use_older_sampler_cfg_or_step_defaults (tests.test_offline_11_preparation.OfflineElevenTests.test_stable_audio_small_does_not_use_older_sampler_cfg_or_step_defaults) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.021s
+
+OK

@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/home/rbpritam04/redpad-phase2-private-20261122/studio/experiments/phase2_private_voice_probe.py", line 140, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/rbpritam04/redpad-phase2-private-20261122/studio/experiments/phase2_private_voice_probe.py", line 115, in main
+    assert not unresolved,unresolved
+           ^^^^^^^^^^^^^^
+AssertionError: ['libavcodec.so.58', 'libavcodec.so.59', 'libavcodec.so.60', 'libavdevice.so.58', 'libavdevice.so.59', 'libavdevice.so.60', 'libavfilter.so.7', 'libavfilter.so.8', 'libavfilter.so.9', 'libavformat.so.58', 'libavformat.so.59', 'libavformat.so.60', 'libavutil.so.56', 'libavutil.so.57', 'libavutil.so.58', 'libc10.so', 'libsox.so', 'libtorch.so', 'libtorch_cpu.so', 'libtorch_python.so', 'libtorchaudio.so', 'libtorchaudio_sox.so', 'libtorio_ffmpeg4.so', 'libtorio_ffmpeg5.so', 'libtorio_ffmpeg6.so']
+Traceback (most recent call last):
+  File "/home/rbpritam04/redpad-phase2-private-20261122/studio/experiments/phase2_private_voice_probe.py", line 142, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/rbpritam04/redpad-phase2-private-20261122/studio/experiments/phase2_private_voice_probe.py", line 120, in main
+    RuntimeBindings.validate('indic_speak',{**base,'profile':'indic_speak','revision':profile('indic_speak')['revision']})
+  File "/home/rbpritam04/redpad-phase2-private-20261122/studio/redpad_pipeline/worker_isolation.py", line 181, in validate
+    raise IsolationBlocked('Ambiguous runtime distribution metadata.')
+redpad_pipeline.worker_isolation.IsolationBlocked: Ambiguous runtime distribution metadata.
+Traceback (most recent call last):
+  File "/home/rbpritam04/redpad-phase2-private-20261122/studio/experiments/phase2_private_voice_probe.py", line 142, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/rbpritam04/redpad-phase2-private-20261122/studio/experiments/phase2_private_voice_probe.py", line 128, in main
+    command=isolation_command(job,out,[candidate],runtime=base,worker='native_local_worker',source=(source,manifest))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbpritam04/redpad-phase2-private-20261122/studio/redpad_pipeline/worker_isolation.py", line 230, in isolation_command
+    devices = validate_worker_devices(devices)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbpritam04/redpad-phase2-private-20261122/studio/redpad_pipeline/worker_isolation.py", line 223, in validate_worker_devices
+    raise IsolationBlocked('GPU devices must be a list of authorized local device paths.')
+redpad_pipeline.worker_isolation.IsolationBlocked: GPU devices must be a list of authorized local device paths.
+RP_VOICE_ACCEPTANCE_PASS {"profile": "indic_speak", "manifest_files": 23944, "weights_loaded": false, "gated_source_files": 9, "vocos_candidate": "PARTIAL ONLY"}

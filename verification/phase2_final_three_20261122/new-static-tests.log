@@ -1,0 +1,10 @@
+test_changed_source_or_license_is_rejected_before_compilation (tests.test_phase2_final_three.MelCandidateTests.test_changed_source_or_license_is_rejected_before_compilation) ... ok
+test_encodec_and_hub_download_entrypoints_are_absent (tests.test_phase2_final_three.MelCandidateTests.test_encodec_and_hub_download_entrypoints_are_absent) ... ok
+test_missing_or_extra_code_cannot_enter_reviewed_candidate (tests.test_phase2_final_three.MelCandidateTests.test_missing_or_extra_code_cannot_enter_reviewed_candidate) ... ok
+test_no_source_execution_or_module_import_during_preparation (tests.test_phase2_final_three.MelCandidateTests.test_no_source_execution_or_module_import_during_preparation) ... ok
+test_selected_mel_ast_and_attribution_are_preserved (tests.test_phase2_final_three.MelCandidateTests.test_selected_mel_ast_and_attribution_are_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.058s
+
+OK

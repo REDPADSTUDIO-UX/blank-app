@@ -1,0 +1,12 @@
+{
+  "prior_receipt": "verification/multicloud_phase3/hf_gemma_dialogue_attempt.json",
+  "prior_state": "submission_uncertain",
+  "prior_event_id_available": false,
+  "prior_raw_response_available": false,
+  "prior_completion": "unknown_not_claimed_failed",
+  "current_owner_explicitly_approved_payload_and_destination": true,
+  "current_attempt": "one_new_browser_UI_attempt_after_explicit_consent",
+  "why_not_retrieved": "No event identifier or verified response in preserved files; no known completed trial to reuse; no repeated unknown network polls",
+  "paid_fallback": false,
+  "auto_review_bypassed": false
+}

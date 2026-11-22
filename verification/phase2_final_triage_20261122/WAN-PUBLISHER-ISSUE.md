@@ -1,0 +1,11 @@
+# Confirm a revision-locked processor and loader for Wan Animate 2 Distilled
+
+**Draft for the Wan-AI model maintainers and Diffusers PR #14412.**
+
+We are checking `Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers@59e4141466bcb1bf9733eca1bc78be6891c9fbdf` with Diffusers PR #14412 head `14f482c30c91021cc0e363a0a17a115b44972aee`. The standard model index declares seven components, including a `CLIPImageProcessor` in `image_processor/`. The exact monolithic class has six constructor components. Its local loader emits a warning and drops the processor declaration and an explicit processor override. `encode_image` constructs a default processor. That default matched the published preprocessing on the synthetic RGB case in our fixture.
+
+We also tried the published modular index via `ModularPipeline.from_pretrained(local_dir, local_files_only=True, trust_remote_code=False)`. The directory contained only the exact modular index. The pinned Diffusers source provides generic Wan modular classes in its Wan submodule. The index requests `WanAnimate2DistilledModularPipeline` and `WanAnimate2DistilledBlocks`. It omits the processor and refers to scheduler and transformer through `refs/pr/1`. That ref resolved to `ff28d41a9c0c331137691847cc8700593d785593` during this review. The two public config files matched the pinned model revision byte-for-byte. Checkpoint tensors were outside this reproduction.
+
+Could you confirm whether the monolithic processor entry is intentionally unused, and specify which processor contract is normative for this checkpoint? If its published configuration must load, please identify the exact released or reviewed source commit, class, loader invocation and revision-locked component mapping. For the modular route, please provide the exact exports and immutable component revisions, or confirm its support status. A weight-free loader dispatch or preprocessing contract test would make the intended behavior reproducible.
+
+[Publisher model revision](https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/tree/59e4141466bcb1bf9733eca1bc78be6891c9fbdf) · [PR #14412](https://github.com/huggingface/diffusers/pull/14412) · [Public metadata](wan-publisher-receipt.json) · [Monolithic reproduction](../phase2_cpu_gaps_20261122/wan-loader.log) · [Modular reproduction](wan-modular.log)

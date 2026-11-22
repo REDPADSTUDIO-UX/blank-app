@@ -1,0 +1,65 @@
+{
+  "wan-local": {
+    "model": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "family": "Wan2.2 TI2V 5B",
+    "license": "Apache-2.0",
+    "modes": [
+      "text_to_video",
+      "image_to_video"
+    ],
+    "text_pipeline": "WanPipeline",
+    "image_pipeline": "WanImageToVideoPipeline",
+    "frames_mod": 4,
+    "fps": 24,
+    "steps": 50,
+    "guidance": 5.0,
+    "budget_vram_gib": 24,
+    "memory_note": "Conservative budget floor; official native 1280x704 offload example requires at least 24GB VRAM; other settings unmeasured",
+    "source": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "native_audio": false,
+    "identity_lock": false,
+    "lip_sync": false,
+    "reviewed_repository_revision": "b8fff7315c768468a5333511427288870b2e9635"
+  },
+  "ltx-local": {
+    "model": "Lightricks/LTX-Video-0.9.5",
+    "family": "LTX Video 2B 0.9.5",
+    "license": "LTX custom open weights terms",
+    "modes": [
+      "text_to_video",
+      "image_to_video"
+    ],
+    "text_pipeline": "LTXPipeline",
+    "image_pipeline": "LTXImageToVideoPipeline",
+    "frames_mod": 8,
+    "fps": 24,
+    "steps": 50,
+    "guidance": 3.0,
+    "budget_vram_gib": 12,
+    "memory_note": "Unmeasured conservative budget, not a claimed minimum. 0.9.8 distilled researched separately; not substituted into this adapter",
+    "source": "https://huggingface.co/Lightricks/LTX-Video-0.9.5",
+    "native_audio": false,
+    "identity_lock": false,
+    "lip_sync": false,
+    "reviewed_repository_revision": "e58e28c39631af4d1468ee57a853764e11c1d37e"
+  },
+  "local-svd": {
+    "model": "stabilityai/stable-video-diffusion-img2vid-xt",
+    "family": "SVD XT 25-frame image-conditioned",
+    "license": "Stable Video Diffusion community terms",
+    "modes": [
+      "image_to_video"
+    ],
+    "image_pipeline": "StableVideoDiffusionPipeline",
+    "frames_mod": null,
+    "fps": 7,
+    "steps": 25,
+    "guidance": null,
+    "budget_vram_gib": 8,
+    "memory_note": "Unmeasured conservative offload budget, not a promised fit",
+    "source": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt",
+    "native_audio": false,
+    "identity_lock": false,
+    "lip_sync": false
+  }
+}

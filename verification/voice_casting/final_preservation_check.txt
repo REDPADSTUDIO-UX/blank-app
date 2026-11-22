@@ -1,0 +1,6 @@
+test_other_seventeen_profiles_and_director_script_records_preserved (tests.test_voice_casting_integration.VoiceCastingTests.test_other_seventeen_profiles_and_director_script_records_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.029s
+
+OK

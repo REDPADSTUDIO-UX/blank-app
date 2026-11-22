@@ -1,0 +1,22 @@
+{
+  "case": {
+    "id": "director_criticism",
+    "roles": [
+      "director"
+    ],
+    "prompt": "শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}.",
+    "source": "C2 — একই রান্নাঘর, একই সকাল, কোনো সময়ের বিরতি নেই। সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।",
+    "dimensions": [
+      "grounded_criticism"
+    ],
+    "expected_objective_defects": [
+      "prop_state"
+    ],
+    "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+    "required_keys": [
+      "findings"
+    ]
+  },
+  "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+  "prompt": "শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}.\n\nSOURCE MATERIAL:\nC2 — একই রান্নাঘর, একই সকাল, কোনো সময়ের বিরতি নেই। সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।"
+}

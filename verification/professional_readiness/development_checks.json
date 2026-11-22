@@ -1,0 +1,20 @@
+{
+  "development_failures": [
+    {
+      "check": "first full regression",
+      "failure": "speech worker test FakeTorch lacked manual_seed after explicit seed support",
+      "resolution": "record and assert synthetic seed; corrected complete regression passed"
+    },
+    {
+      "check": "targeted optional telemetry",
+      "failure": "synthetic FakeTorch lacked CUDA namespace",
+      "resolution": "optional telemetry returns unavailable; actual GPU gate remains"
+    },
+    {
+      "check": "license research",
+      "failure": "exact LTX license raw UTF-8 decoding",
+      "resolution": "replacement decoding for source excerpt; fetched bytes hash retained"
+    }
+  ],
+  "evidence_scope": "All tests use software fixtures. No new model outputs or human assessments."
+}

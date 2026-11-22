@@ -1,0 +1,7 @@
+{
+  "reason": "Previously unfinished explicit-boolean and derived-fixture provenance guards; no model inference",
+  "exit_code": 0,
+  "seconds": 10.657,
+  "stdout": "",
+  "stderr": "test_real_codec_import_edl_receipts_render_and_tamper_guard (tests.test_pre_gpu_completion.PreGpuCompletion.test_real_codec_import_edl_receipts_render_and_tamper_guard) ... ok\ntest_receipt_bound_audio_mix_uses_real_samples_without_claiming_speech_quality (tests.test_pre_gpu_completion.PreGpuCompletion.test_receipt_bound_audio_mix_uses_real_samples_without_claiming_speech_quality) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 10.263s\n\nOK\n"
+}

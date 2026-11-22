@@ -1,0 +1,7 @@
+{
+  "observed_older_receipt": "verification/no_gpu_19agent/affected_regression_receipt.json",
+  "older_blocked_socket_attempts": 1,
+  "older_model_or_gpu_calls": 0,
+  "correction": "Earlier zero-forbidden-attempt narrative was inaccurate: receipt records one blocked socket construction. No evidence of successful external model request. Historical evidence left unchanged; exact cause not asserted.",
+  "current_test_guard_scope": "Current compatibility failed once for missing requests, then only that test was rechecked; no GPU/inference path allowed."
+}

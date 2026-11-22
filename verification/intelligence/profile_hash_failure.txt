@@ -1,0 +1,19 @@
+2026-11-14 13:00:54.809 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-14 13:00:56.335 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-14 13:00:56.591 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-14 13:00:56.860 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+======================================================================
+FAIL: test_professional_trial_snapshots_role_rubric_without_execution (tests.test_intelligence.IntelligenceTests.test_professional_trial_snapshots_role_rubric_without_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/blank-app/tests/test_intelligence.py", line 45, in test_professional_trial_snapshots_role_rubric_without_execution
+    self.assertEqual(trial['intelligence']['profile_sha256'],q.digest(q.profile('story')))
+AssertionError: '17d20cafd7d03947fc96011957dbfbbc448df52679157f9a846d43ca317e41b3' != '50095df9fc98eb4c0c3211727a64faef6dd13d26c6cea222c1704293665dbd80'
+- 17d20cafd7d03947fc96011957dbfbbc448df52679157f9a846d43ca317e41b3
++ 50095df9fc98eb4c0c3211727a64faef6dd13d26c6cea222c1704293665dbd80
+
+
+----------------------------------------------------------------------
+Ran 351 tests in 24.449s
+
+FAILED (failures=1)

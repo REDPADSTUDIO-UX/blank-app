@@ -1,0 +1,7 @@
+{
+  "url": "https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltx-video-2b-v0.9.5.license.txt",
+  "sha256": "720f6ca3843b2152fc9bfee90864a2d0645bc673c6436512f44d9afe22025a37",
+  "decode_note": "Vendor text contains non-UTF8 bytes; replacement decoding used for inspection, byte hash retained",
+  "accepted": false,
+  "commercial_use": "See custom LTX 0.9.5 license and permitted-purpose/use restrictions; no blanket Apache claim."
+}

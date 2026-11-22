@@ -1,0 +1,27 @@
+{
+  "new_unit_tests": {
+    "executed": 4,
+    "passed": 4,
+    "failed": 0,
+    "log": "new-tests.log"
+  },
+  "new_host_kernel_contract": "PASS in both unchanged worker boundaries",
+  "actual_indic_speak_source_startup": "PASS",
+  "actual_runtime_binding": "PASS",
+  "actual_public_mel_istft_diagnostics": "PASS_PARTIAL_ONLY",
+  "prior_15_profiles_rerun": false,
+  "original_matrices_unchanged": true,
+  "application_source_digest_unchanged": "b164ef5072c53e6053443332930f574d833470dd436d42c16a2c4d27e77448d2",
+  "model_inference": false,
+  "gpu": false,
+  "gated_source_published": false,
+  "phase3_started": false,
+  "first_install_issues_preserved": [
+    "dedicated-root marker staging preflight",
+    "wrong platform wheel hash from initial uv lock rejected",
+    "over-strict all-optional-ELF preflight rejected; required imports verified instead under original ABI allowlist",
+    "duplicate standalone pip metadata rejected and narrowly repaired",
+    "probe input/device argument mismatch rejected and corrected"
+  ],
+  "optional_elf_support": "Static ldd unresolved optional FFmpeg/SoX and preloader sonames preserved in receipt; no multimedia or GPU runtime acceptance claimed"
+}

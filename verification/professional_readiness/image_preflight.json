@@ -1,0 +1,17 @@
+{
+  "model": "stabilityai/stable-diffusion-xl-base-1.0",
+  "adapter_implemented": true,
+  "ready": false,
+  "blockers": [
+    "Approved SDXL checkpoint/license unavailable; no download attempted.",
+    "Missing local dependency: torch",
+    "Missing local dependency: diffusers",
+    "Missing local dependency: transformers",
+    "Missing local dependency: accelerate",
+    "CUDA memory cannot be verified."
+  ],
+  "actual_inference_verified": false,
+  "visual_review_completed": false,
+  "identity_conditioning_implemented": false,
+  "memory_scope": "12 GiB is a conservative planning gate, not a measured minimum."
+}

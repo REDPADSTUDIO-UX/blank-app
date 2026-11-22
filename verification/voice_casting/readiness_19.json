@@ -1,0 +1,164 @@
+{
+  "resumed_commit": "e7dc992f187d9bd545b88d3ee11dd174ac08566c",
+  "total_agents_in_matrix": 19,
+  "director_script": "separate unchanged workstreams",
+  "engineering_complete": 19,
+  "partial": 0,
+  "professionally_accepted_of_21": 0,
+  "other_seventeen_and_all_profiles_preserved": true,
+  "gpu_inference_weights_hosted_paid_license_acceptance": 0,
+  "roles": {
+    "qc": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "story": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "character": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "art": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "location": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "costume": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "storyboard": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "performance": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "cinematographer": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "motion": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "video": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "voice": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "continuity": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "music": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "editing": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "production_manager": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "growth": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "youtube": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    },
+    "casting": {
+      "engineering": "NO-GPU ENGINEERING COMPLETE",
+      "runtime": "MODEL/GPU VALIDATION BLOCKED",
+      "creative": "HUMAN REVIEW PENDING",
+      "production_ready": false
+    }
+  },
+  "voice_candidates": {
+    "indic_speak": {
+      "profile": "indic_speak",
+      "adapter_implemented": true,
+      "source_blocked": false,
+      "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+      "selected_binding_implemented": true,
+      "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+      "launch_authorized": false,
+      "production_integrated": false,
+      "runtime_verified": false,
+      "fallback": null,
+      "blocker": "Exact selected source reviewed through owner-authenticated Chrome. Local bundle/dependency/license approval and actual runtime/listening remain pending; no inference authority.",
+      "missing_source": []
+    },
+    "indicf5": {
+      "profile": "indicf5",
+      "adapter_implemented": true,
+      "source_blocked": false,
+      "adapter_scope": "exact selected source binding; runtime disabled until separate explicit authorization",
+      "selected_binding_implemented": true,
+      "source_evidence": "assets/professional/phase3_voice_selected_source_lock.json",
+      "launch_authorized": false,
+      "production_integrated": false,
+      "runtime_verified": false,
+      "fallback": null,
+      "blocker": "Exact custom source reviewed; model.py itself must NEVER execute (unguarded downloads/inference/upload). Fixed local constructor and strict selected wrapper state replace it. Actual checkpoint layout/shape/runtime/listening remain unverified.",
+      "missing_source": []
+    },
+    "indic_parler": {
+      "profile": "indic_parler",
+      "adapter_implemented": true,
+      "source_blocked": false,
+      "runtime_verified": false,
+      "fallback": null
+    }
+  },
+  "latest_evidence": "verification/voice_final/"
+}

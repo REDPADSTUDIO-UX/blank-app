@@ -1,0 +1,11 @@
+{
+  "budget_amendment_checks": "PASS",
+  "historical_five_calls_unchanged": true,
+  "prior_amendment_retained": true,
+  "five_distinct_scoped_attempt_ids": true,
+  "limits_unchanged": true,
+  "protected_files_byte_identical": 67,
+  "runtime_migration_applied": false,
+  "new_model_calls": 0,
+  "scope": "Static authorization/source preservation checks; not model or runtime validation"
+}

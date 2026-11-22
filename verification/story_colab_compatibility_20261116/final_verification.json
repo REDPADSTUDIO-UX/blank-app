@@ -1,0 +1,69 @@
+{
+  "kind": "Read captured evidence and source only; not another regression or GPU probe",
+  "distinct_new_cpu_checks": 7,
+  "fresh_model_inferences": 0,
+  "fifteen_criteria_assessments": 0,
+  "source_notebook_syntax_and_pause_metadata_valid": true,
+  "prior_bwrap_failure_reused_without_retest": true,
+  "same_approved_model_authorization_preserved": true,
+  "new_research_boundary_authorization": false,
+  "production_gate_modified": false,
+  "files": {
+    "verification/story_colab_compatibility_20261116/cpu_test_receipt.json": {
+      "sha256": "b1d15f0bfb345145d8f5084b5eef3b0d811c32180fd0db51a08d270a3f7521bc",
+      "bytes": 1347
+    },
+    "verification/story_colab_compatibility_20261116/browser_account_observation.json": {
+      "sha256": "5b26aba38a214e916dcdaea8adcc334179dc92bfc2fead4ce18a4a9312ac4872",
+      "bytes": 605
+    },
+    "verification/story_colab_compatibility_20261116/current_colab_stdout.txt": {
+      "sha256": "e56cabfcad2f47efed2eaf8ef7ed4b5cb71e7f4d662f4489638e1b59d96fc020",
+      "bytes": 2699
+    },
+    "verification/story_colab_compatibility_20261116/current_colab_metadata.json": {
+      "sha256": "e56cabfcad2f47efed2eaf8ef7ed4b5cb71e7f4d662f4489638e1b59d96fc020",
+      "bytes": 2699
+    },
+    "verification/story_colab_compatibility_20261116/preservation.json": {
+      "sha256": "f42f29011417b3e4a15aacb77e3b580edfe9235e76f17181eecc5148a970fb5f",
+      "bytes": 3295
+    },
+    "verification/story_colab_compatibility_20261116/colab_free_runtime_status.png": {
+      "sha256": "1c88df3f6d0bb8fa693d8e01482d366ac34601ed7cbbe1724635ec6ec6a75278",
+      "bytes": 138672
+    },
+    "verification/story_colab_compatibility_20261116/security_options_audit.json": {
+      "sha256": "c490890c7c01963d950b19dcf07d0b5f7da1ace97bc9f52bfe01e9ba01c0b9d2",
+      "bytes": 7075
+    },
+    "verification/story_colab_compatibility_20261116/story_evaluation_status.json": {
+      "sha256": "f4516f1581bcd71b3f5ad67bb85fc07cb14ea60bf6aba41d444cb84a6b43bd33",
+      "bytes": 3342
+    },
+    "verification/story_colab_compatibility_20261116/colab_story_checkpoint.png": {
+      "sha256": "b64b49345620340a9261b53c05b58fe8e8961b04b9ba2607329dfb9f27bc5c3d",
+      "bytes": 120014
+    },
+    "verification/story_colab_compatibility_20261116/STORY_COLAB_READONLY_AND_BOUNDARY_REVIEW.ipynb": {
+      "sha256": "ab203633019c48c47f19a85120ae4f4418a2440aaa6f4a304c483780ebca8ed5",
+      "bytes": 13053
+    },
+    "verification/story_colab_compatibility_20261116/research_boundary_plan.json": {
+      "sha256": "f26a3931dbcb57c6a4c8f48756252e4a15d6c0c059048c910f924d2ea4fd0de9",
+      "bytes": 2590
+    },
+    "experiments/story_colab_readonly.py": {
+      "sha256": "f44e86f94afbd1eb364ba602a602add897820b38fb37a6dad05c2bc5363503fc",
+      "bytes": 7241
+    },
+    "tests/test_story_colab_readonly.py": {
+      "sha256": "411b04cff04cc2a085b8fe868f0dace1f54a51c81dda105fdbce7c9497ebbedf",
+      "bytes": 5295
+    },
+    "PHASE3_STORY_COLAB_COMPATIBILITY_REPORT_BN.md": {
+      "sha256": "5ca0bd0caf8a5284c2dcf9c44ecd99f8caf18b97272d890e653a02e9768eb695",
+      "bytes": 14493
+    }
+  }
+}

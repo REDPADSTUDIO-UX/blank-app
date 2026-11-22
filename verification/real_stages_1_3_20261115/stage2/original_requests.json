@@ -1,0 +1,122 @@
+[
+  {
+    "label": "A",
+    "request": {
+      "prompt": "Sparse original instrumental: soft acoustic plucked strings, low warm sustained notes, restrained unresolved emotion, no vocals.",
+      "seconds": 8,
+      "seed": 117
+    },
+    "spec": {
+      "task_type": "text2music",
+      "instrumental": true,
+      "lyrics": "",
+      "thinking": false,
+      "sample_rate": 48000,
+      "cue": {
+        "scene_id": "departure",
+        "scene_duration_ms": 60000,
+        "cues": [
+          {
+            "id": "A",
+            "kind": "music",
+            "start_ms": 40000,
+            "end_ms": 48000,
+            "beat": "After dialogue; restrained change from practical care to vulnerability.",
+            "source_reference": null
+          }
+        ]
+      }
+    },
+    "provenance": "manually_authored_input_NOT_model_output"
+  },
+  {
+    "label": "B",
+    "request": {
+      "prompt": "Original warm but uncertain transition, gentle acoustic guitar and soft flute, very low energy, no vocals.",
+      "seconds": 8,
+      "seed": 118
+    },
+    "spec": {
+      "task_type": "text2music",
+      "instrumental": true,
+      "lyrics": "",
+      "thinking": false,
+      "sample_rate": 48000,
+      "cue": {
+        "scene_id": "departure",
+        "scene_duration_ms": 60000,
+        "cues": [
+          {
+            "id": "B",
+            "kind": "music",
+            "start_ms": 40000,
+            "end_ms": 48000,
+            "beat": "After dialogue; restrained change from practical care to vulnerability.",
+            "source_reference": null
+          }
+        ]
+      }
+    },
+    "provenance": "manually_authored_input_NOT_model_output"
+  },
+  {
+    "label": "C",
+    "request": {
+      "prompt": "Original brief quiet tension cue, sparse low strings with restrained pulse, no stingers, no vocals.",
+      "seconds": 8,
+      "seed": 119
+    },
+    "spec": {
+      "task_type": "text2music",
+      "instrumental": true,
+      "lyrics": "",
+      "thinking": false,
+      "sample_rate": 48000,
+      "cue": {
+        "scene_id": "departure",
+        "scene_duration_ms": 60000,
+        "cues": [
+          {
+            "id": "C",
+            "kind": "music",
+            "start_ms": 40000,
+            "end_ms": 48000,
+            "beat": "After dialogue; restrained change from practical care to vulnerability.",
+            "source_reference": null
+          }
+        ]
+      }
+    },
+    "provenance": "manually_authored_input_NOT_model_output"
+  },
+  {
+    "label": "D",
+    "request": {
+      "prompt": "Original minimal solo soft piano with wide pauses, no swelling, no percussion, no vocals.",
+      "seconds": 8,
+      "seed": 120
+    },
+    "spec": {
+      "task_type": "text2music",
+      "instrumental": true,
+      "lyrics": "",
+      "thinking": false,
+      "sample_rate": 48000,
+      "cue": {
+        "scene_id": "departure",
+        "scene_duration_ms": 60000,
+        "cues": [
+          {
+            "id": "D",
+            "kind": "music",
+            "start_ms": 40000,
+            "end_ms": 48000,
+            "beat": "After dialogue; restrained change from practical care to vulnerability.",
+            "source_reference": null
+          }
+        ]
+      }
+    },
+    "provenance": "manually_authored_input_NOT_model_output"
+  }
+]

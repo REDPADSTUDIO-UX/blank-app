@@ -1,0 +1,42 @@
+         - 'button "Select example 12: Read the text in the image into markdown."':
+              - img "3.png"
+              - generic: Read the text in the image into markdown.
+            - 'button "Select example 13: Evaluate this integral."':
+              - img "4.png"
+              - generic: Evaluate this integral.
+            - 'button "Select example 14: caption this image"':
+              - img "01.png"
+              - generic: caption this image
+            - 'button "Select example 15: What''s the sign says?"':
+              - img "02.png"
+              - generic: What's the sign says?
+            - 'button "Select example 16: Compare and contrast the two images."':
+              - img "03.png"
+              - generic: Compare and contrast the two images.
+            - 'button "Select example 17: List all the objects in the image and their colors."':
+              - img "04.png"
+              - generic: List all the objects in the image and their colors.
+            - 'button "Select example 18: Describe the atmosphere of the scene."':
+              - img "05.png"
+              - generic: Describe the atmosphere of the scene.
+      - group "Multimedia input field":
+        - generic: MultimodalTextbox
+        - button "Upload a file":
+        - textbox [active]
+        - button "Submit":
+      - button "Additional inputs ▼":
+        - generic: Additional inputs
+        - generic: ▼
+    - contentinfo "Gradio footer navigation":
+      - button "Use via API logo":
+        - text: Use via API
+        - img "logo"
+      - generic: ·
+      - link "Built with Gradio logo":
+        - /url: https://gradio.app
+        - text: Built with Gradio
+        - img "logo"
+      - generic: ·
+      - button "Settings Settings":
+        - text: Settings
+        - img "Settings"

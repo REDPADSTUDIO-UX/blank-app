@@ -1,0 +1,76 @@
+{
+  "diffusers_current_wan_exports": {
+    "url": "https://raw.githubusercontent.com/huggingface/diffusers/main/src/diffusers/pipelines/wan/__init__.py",
+    "status": 200,
+    "response_sha256": "742b3deee85dd9118212bcdbfd5574ea6a5e0ecc03355dcc8768528293a7b70e",
+    "relevant_lines": [
+      "    _import_structure[\"pipeline_wan_animate\"] = [\"WanAnimatePipeline\"]",
+      "        from .pipeline_wan_animate import WanAnimatePipeline"
+    ]
+  },
+  "f5_upstream_vocoder_options": {
+    "url": "https://raw.githubusercontent.com/SWivid/F5-TTS/main/src/f5_tts/infer/utils_infer.py",
+    "status": 200,
+    "response_sha256": "f4cdc874c112762d7f6f8be03c787b385a1c0315f50f47b837040632a01ad54d",
+    "relevant_lines": [
+      "sys.path.append(f\"{os.path.dirname(os.path.abspath(__file__))}/../../third_party/BigVGAN/\")",
+      "from vocos import Vocos",
+      "mel_spec_type = \"vocos\"",
+      "def load_vocoder(vocoder_name=\"vocos\", is_local=False, local_path=\"\", device=device, hf_cache_dir=None):",
+      "    if vocoder_name == \"vocos\":",
+      "        # vocoder = Vocos.from_pretrained(\"charactr/vocos-mel-24khz\").to(device)",
+      "            print(f\"Load vocos from local path {local_path}\")",
+      "            print(\"Download Vocos from huggingface charactr/vocos-mel-24khz\")",
+      "            repo_id = \"charactr/vocos-mel-24khz\"",
+      "        vocoder = Vocos.from_hparams(config_path)",
+      "        from vocos.feature_extractors import EncodecFeatures",
+      "    elif vocoder_name == \"bigvgan\":",
+      "            from third_party.BigVGAN import bigvgan",
+      "            print(\"You need to follow the README to init submodule and change the BigVGAN source code.\")",
+      "            # download generator from https://huggingface.co/nvidia/bigvgan_v2_24khz_100band_256x/tree/main",
+      "            vocoder = bigvgan.BigVGAN.from_pretrained(local_path, use_cuda_kernel=False)",
+      "            vocoder = bigvgan.BigVGAN.from_pretrained(",
+      "                \"nvidia/bigvgan_v2_24khz_100band_256x\", use_cuda_kernel=False, cache_dir=hf_cache_dir",
+      "    dtype = torch.float32 if mel_spec_type == \"bigvgan\" else None",
+      "    mel_spec_type=\"vocos\",",
+      "            if mel_spec_type == \"vocos\":",
+      "            elif mel_spec_type == \"bigvgan\":"
+    ]
+  },
+  "bigvgan_code_license": {
+    "url": "https://api.github.com/repos/NVIDIA/BigVGAN/license",
+    "status": 200,
+    "response_sha256": "c627a4dd5fbdcebf456f12b159ead4216c338eb34180ccadd29e084d0fa303b1",
+    "source_license_spdx": "MIT",
+    "first_lines": [
+      "MIT License",
+      "",
+      "Copyright (c) 2024 NVIDIA CORPORATION.",
+      ""
+    ]
+  },
+  "bigvgan_model_license_metadata": {
+    "url": "https://huggingface.co/api/models/nvidia/bigvgan_v2_24khz_100band_256x",
+    "status": 200,
+    "response_sha256": "a6d6fb4387e42d08af6aefb3e9deb06b0ab21532490aad7da69d76633cce0a4b",
+    "revision": "c329ede9e9bbc100ddf5c91e2330a61921262370",
+    "gated": false,
+    "license": "mit"
+  },
+  "indicf5_selected_public_metadata": {
+    "url": "https://huggingface.co/api/models/ai4bharat/IndicF5/revision/fb652a96e508091045890dae5bb99fe511facbcf",
+    "status": 200,
+    "response_sha256": "43fefb5a455f41d2dbee0b44847678e2c6852575f0d18e0b3676983934e60272",
+    "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+    "gated": "auto",
+    "license": "mit"
+  },
+  "indic_speak_selected_public_metadata": {
+    "url": "https://huggingface.co/api/models/bodhan-ai/indic-speak/revision/76e0814f189321efe550011850cd288dae366aad",
+    "status": 200,
+    "response_sha256": "fda5ce55db695d5131675a8f31e584ade8bcc3ce8b0d2580ca5e6356047957d0",
+    "revision": "76e0814f189321efe550011850cd288dae366aad",
+    "gated": "auto",
+    "license": "other"
+  }
+}

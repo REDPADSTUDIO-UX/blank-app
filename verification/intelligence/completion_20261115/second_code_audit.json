@@ -1,0 +1,106 @@
+{
+  "base": "9122eca96881550826d3aa7f2d2e0e895bece471",
+  "branch": "feature/video-music-editing-studio",
+  "method": "Second manual code inspection tied to CPU regression and final focused checksum tests; not an independent artistic assessment.",
+  "source_files": [
+    {
+      "path": "redpad_pipeline/intelligence.py",
+      "sha256": "c09a634f32a5bf9824ed553333002c5a249c1e74402f7e9ddf79fcbf2308691a"
+    },
+    {
+      "path": "redpad_pipeline/agent_engine.py",
+      "sha256": "f4386c1e7acffeb392f1416393410b02afb87027f3bd698b108cd3924dff8d02"
+    },
+    {
+      "path": "redpad_pipeline/agent_execution_ui.py",
+      "sha256": "0349580830bd9cdbab89ed1ee43915f0d1903431bf9c1c959b6752a5ca5c831f"
+    },
+    {
+      "path": "redpad_pipeline/professional_readiness.py",
+      "sha256": "e5f66f90a96eae423a22da126b92bd771523a11b9457fa5af614550ab1257190"
+    },
+    {
+      "path": "redpad_pipeline/professional_ui.py",
+      "sha256": "82b6230a3bdeb1bb8dbfc9745fd6f0c34a9aba6c820ab9a9138b71293607e8b4"
+    },
+    {
+      "path": "redpad_pipeline/shared_model_services.py",
+      "sha256": "7d55b74138bfea2c20d3d885ca63dbaf70ba3e0449e48f0058ccfcaa153398d6"
+    },
+    {
+      "path": "redpad_pipeline/agent_media_bridge.py",
+      "sha256": "fc23d7c4f2ebc52995d853c109eee75dc57e1d9f6fdcb33fddd4aeae3ca32751"
+    },
+    {
+      "path": "redpad_pipeline/native_execution.py",
+      "sha256": "e5f6144e83417f6f51ca66491a1534bc7ff9e87c0682a444229d74f82423b2d9"
+    }
+  ],
+  "checks": [
+    {
+      "invariant": "21 role profiles and benchmark coverage",
+      "evidence": "tests.test_intelligence.IntelligenceTests / tests.test_intelligence_completion.CompletionTests",
+      "code_review_result": "prepared_and_integrated"
+    },
+    {
+      "invariant": "research rights and immutable conditioning provenance",
+      "evidence": "tests.test_filmmaking_intelligence.KnowledgeTests; intelligence fact attribution controls",
+      "code_review_result": "prepared_and_integrated"
+    },
+    {
+      "invariant": "QC target evidence, independence and abstention",
+      "evidence": "tests.test_intelligence; tests.test_intelligence_completion",
+      "code_review_result": "prepared_and_integrated"
+    },
+    {
+      "invariant": "owner revision gate and source-bound defect recheck",
+      "evidence": "tests.test_intelligence_completion; tests.test_producer_control",
+      "code_review_result": "prepared_and_integrated"
+    },
+    {
+      "invariant": "current reviewer disagreement and anonymous packet import",
+      "evidence": "tests.test_professional_readiness",
+      "code_review_result": "prepared_and_integrated"
+    },
+    {
+      "invariant": "exact shared model/image identity and original evidence",
+      "evidence": "tests.test_professional_readiness; tests.test_kaggle_model_services",
+      "code_review_result": "prepared_and_integrated"
+    },
+    {
+      "invariant": "native prebinding, budget, source staleness and artifact tamper rejection",
+      "evidence": "tests.test_native_professional; tests.test_native_local_execution",
+      "code_review_result": "prepared_and_integrated"
+    },
+    {
+      "invariant": "application intake and opening without model execution",
+      "evidence": "tests.test_agent_execution_ui; tests.test_native_professional",
+      "code_review_result": "prepared_and_integrated"
+    },
+    {
+      "invariant": "existing specialist approval and handoff chain",
+      "evidence": "tests.test_specialist_integration; tests.test_no_gpu_staging",
+      "code_review_result": "prepared_and_integrated"
+    }
+  ],
+  "final_regression": {
+    "tests": 281,
+    "result": "passed",
+    "log": "cpu_regression.txt"
+  },
+  "final_hash_scope_recheck": {
+    "tests": 4,
+    "result": "passed",
+    "log": "second_audit_tests.txt"
+  },
+  "software_preparation_profiles": 21,
+  "new_inference_calls": 0,
+  "real_human_reviews_performed": 0,
+  "new_owner_acceptances": 0,
+  "limitations": [
+    "Synthetic fixtures are never real model results.",
+    "Selected-model runtime compatibility and artistic quality remain unverified by this task.",
+    "Expert qualifications are owner-attested.",
+    "No protected production database or media was opened."
+  ]
+}

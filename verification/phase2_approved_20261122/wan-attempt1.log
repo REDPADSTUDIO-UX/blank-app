@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/redpad-approved/wan_sandbox_fixture.py", line 27, in <module>
+    abi = checked(libc.syscall(444, 0, 0, 1))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-approved/wan_sandbox_fixture.py", line 23, in checked
+    raise OSError(c.get_errno(), os.strerror(c.get_errno()))
+OSError: [Errno 38] Function not implemented

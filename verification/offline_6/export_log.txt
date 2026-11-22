@@ -1,0 +1,18 @@
+{
+  "checkpoint": "0de2bf336ca2c3c1f7abff1b155962aeaec83cc9",
+  "target_roles": [
+    "casting",
+    "motion",
+    "music",
+    "performance",
+    "video",
+    "voice"
+  ],
+  "engineering_complete": 13,
+  "partial": 6,
+  "production_ready": 0,
+  "professionally_verified_of_21": 0,
+  "other_thirteen_and_director_script_preserved": true,
+  "all_pinned_model_profiles_preserved": true,
+  "gpu_inference_model_weights_hosted_paid_license_acceptance": 0
+}

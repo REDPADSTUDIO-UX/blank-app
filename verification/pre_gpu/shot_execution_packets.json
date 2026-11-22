@@ -1,0 +1,2969 @@
+[
+  {
+    "id": "eb7817d8a57b065066a419037448aee3",
+    "kind": "shot_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      },
+      {
+        "role": "art",
+        "task": "ece49174dcc94e24925b485c28c3fdcd",
+        "revision": 1,
+        "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+      },
+      {
+        "role": "location",
+        "task": "33a000e4f1184291b7b9f7a38475920e",
+        "revision": 1,
+        "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+      },
+      {
+        "role": "costume",
+        "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+        "revision": 1,
+        "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+      },
+      {
+        "role": "storyboard",
+        "task": "45cf1de3f7ed444c89661f3fa659905a",
+        "revision": 1,
+        "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+      },
+      {
+        "role": "performance",
+        "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+        "revision": 1,
+        "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+      },
+      {
+        "role": "cinematographer",
+        "task": "baeb461e7d564044b43df9fb81d42424",
+        "revision": 1,
+        "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+      },
+      {
+        "role": "motion",
+        "task": "0b183324ce9e4d1da61389bea0440b9f",
+        "revision": 1,
+        "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+      }
+    ],
+    "shot": {
+      "id": "s1-shot1",
+      "scene": "s1",
+      "order": 1,
+      "action": "হাসান ব্যাগের আলগা হাতলে সুই ঢোকান। নীরা ঘড়ির দিকে তাকিয়ে ঠান্ডা চায়ে চুমুক দেয়।",
+      "purpose": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক",
+      "composition": "wide geography",
+      "characters": [
+        "nira",
+        "hasan"
+      ],
+      "location": "living",
+      "camera": "Static",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "seconds": 20
+    },
+    "scene": {
+      "id": "s1",
+      "number": 1,
+      "heading": "INT. কাঁঠালবাগানের বসার ঘর — সকাল",
+      "location": "living",
+      "time": "same morning",
+      "objective": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক",
+      "obstacle": "বাসের সময় ও না বলা একাকিত্ব",
+      "turn": "কাজের ফাঁকে কথার দিক পাল্টায়।",
+      "consequence": "পরের সিদ্ধান্তের ব্যবহারিক চাপ বাড়ে।",
+      "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "transition": "cut",
+      "seconds": 60,
+      "action_seconds": 30,
+      "pause_seconds": 8,
+      "continuity": [
+        "same morning",
+        "single key with hasan",
+        "same outfits"
+      ],
+      "beats": [
+        {
+          "type": "action",
+          "text": "হাসান ব্যাগের আলগা হাতলে সুই ঢোকান। নীরা ঘড়ির দিকে তাকিয়ে ঠান্ডা চায়ে চুমুক দেয়।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "চা-ও কি আমার সঙ্গে যাবে? এত ঠান্ডা কেন?"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "হাসান",
+          "text": "তুই রেডি হতে হতে ও রাজশাহী ঘুরে আসছে।"
+        },
+        {
+          "type": "action",
+          "text": "নীরা ব্যাগ ছেড়ে বাবার পাশের চেয়ারে বসে।"
+        }
+      ],
+      "sound": {
+        "music": "ইচ্ছাকৃত নীরবতা; আবেগ ঘোষণার cue নয়।",
+        "sfx": "সুই-সুতো, ব্যাগের কাপড়, দূরের গলি; সংলাপ পরিষ্কার থাকবে।"
+      }
+    },
+    "identities": [
+      {
+        "id": "nira",
+        "name": "নীরা",
+        "age": 27,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "নীরার কালো বাঁধা চুল",
+        "appearance": "নীল সুতি কামিজ",
+        "personality": "বাবাকে ছেড়ে যাওয়ার অপরাধবোধ",
+        "relationships": {
+          "hasan": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "অভিযোগ থেকে প্রাপ্তবয়স্ক সমঝোতা",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "1995224879dbf47a5e5b7db60fb981e9a8a011ce17a00cde6299f5fd2333a957"
+      },
+      {
+        "id": "hasan",
+        "name": "হাসান",
+        "age": 58,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "ছোট চুল",
+        "appearance": "ধূসর পাঞ্জাবি",
+        "personality": "যত্নে নিয়ন্ত্রণ ঢুকে পড়ে",
+        "relationships": {
+          "nira": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "গোপন রাখা থেকে দায় স্বীকার",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "66c966b8aa14c19250d694dfed5dbc83f6326317ff98658887eacadd57933722"
+      }
+    ],
+    "location": {
+      "id": "living",
+      "architecture": "বসার ঘর",
+      "geography": "পূর্ব জানলা, পশ্চিম দরজা, উত্তরে রান্নাঘর",
+      "connections": [
+        "kitchen"
+      ],
+      "openings": [
+        {
+          "id": "d1",
+          "to": "kitchen",
+          "kind": "door"
+        }
+      ],
+      "camera_access": "দক্ষিণ দেয়াল, চলার পথ খালি",
+      "references": []
+    },
+    "art": {
+      "id": "set1",
+      "scene_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "palette": [
+        "কাঠের বাদামি",
+        "সকালের ফিকে সোনা"
+      ],
+      "set": "বাসার বসার ঘর; দর্জির কাজের টেবিল",
+      "props": {
+        "key": "একটি চাবি হাসানের কাছে",
+        "bag": "হাতল মেরামত",
+        "receipt": "টিকিটের নিচে পুরোনো রসিদ",
+        "box": "লাল টিন"
+      },
+      "period": "বর্তমান",
+      "culture": "ঢাকার মধ্যবিত্ত ভাড়াবাসা",
+      "lighting": "পূর্ব জানালার সকালের আলো",
+      "style": "photorealistic"
+    },
+    "costumes": [
+      {
+        "id": "w1-nira",
+        "scene": "s1",
+        "character": "nira",
+        "outfit": "blue-kamiz",
+        "color": "blue",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      },
+      {
+        "id": "w1-hasan",
+        "scene": "s1",
+        "character": "hasan",
+        "outfit": "gray-panjabi",
+        "color": "gray",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      }
+    ],
+    "performance": [
+      {
+        "id": "p1-nira",
+        "scene": "s1",
+        "character": "nira",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      },
+      {
+        "id": "p1-hasan",
+        "scene": "s1",
+        "character": "hasan",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      }
+    ],
+    "camera": {
+      "id": "s1-shot1",
+      "shot": "s1-shot1",
+      "scene": "s1",
+      "lens_mm": 50,
+      "height_m": 1.4,
+      "angle": "eye level",
+      "movement": "static",
+      "lighting": "east window key, south negative fill",
+      "exposure": "protect window highlights",
+      "color": "source",
+      "framing": "wide geography",
+      "axis_side": "A",
+      "screen_direction": "left",
+      "axis_reset": false,
+      "purpose": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক"
+    },
+    "motion": [
+      {
+        "id": "s1-shot1-nira",
+        "shot": "s1-shot1",
+        "character": "nira",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 0,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "nira-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      },
+      {
+        "id": "s1-shot1-hasan",
+        "shot": "s1-shot1",
+        "character": "hasan",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 0,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "hasan-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      }
+    ],
+    "reference_assets": [],
+    "technical_requirements": {
+      "identity_lock": false,
+      "lip_sync": false,
+      "physics_simulation": false,
+      "unsupported_controls": "Performance/camera/motion prose is editorial intent until actual model conditioning is verified."
+    },
+    "actual_media_generated": false,
+    "professional_quality_verified": false
+  },
+  {
+    "id": "f5c6ef0f5af0ea7c61e927dbfc471719",
+    "kind": "shot_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      },
+      {
+        "role": "art",
+        "task": "ece49174dcc94e24925b485c28c3fdcd",
+        "revision": 1,
+        "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+      },
+      {
+        "role": "location",
+        "task": "33a000e4f1184291b7b9f7a38475920e",
+        "revision": 1,
+        "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+      },
+      {
+        "role": "costume",
+        "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+        "revision": 1,
+        "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+      },
+      {
+        "role": "storyboard",
+        "task": "45cf1de3f7ed444c89661f3fa659905a",
+        "revision": 1,
+        "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+      },
+      {
+        "role": "performance",
+        "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+        "revision": 1,
+        "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+      },
+      {
+        "role": "cinematographer",
+        "task": "baeb461e7d564044b43df9fb81d42424",
+        "revision": 1,
+        "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+      },
+      {
+        "role": "motion",
+        "task": "0b183324ce9e4d1da61389bea0440b9f",
+        "revision": 1,
+        "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+      }
+    ],
+    "shot": {
+      "id": "s1-shot2",
+      "scene": "s1",
+      "order": 2,
+      "action": "হাসান ব্যাগের আলগা হাতলে সুই ঢোকান। নীরা ঘড়ির দিকে তাকিয়ে ঠান্ডা চায়ে চুমুক দেয়।",
+      "purpose": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক",
+      "composition": "hands/prop insert",
+      "characters": [
+        "nira",
+        "hasan"
+      ],
+      "location": "living",
+      "camera": "Static",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "seconds": 20
+    },
+    "scene": {
+      "id": "s1",
+      "number": 1,
+      "heading": "INT. কাঁঠালবাগানের বসার ঘর — সকাল",
+      "location": "living",
+      "time": "same morning",
+      "objective": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক",
+      "obstacle": "বাসের সময় ও না বলা একাকিত্ব",
+      "turn": "কাজের ফাঁকে কথার দিক পাল্টায়।",
+      "consequence": "পরের সিদ্ধান্তের ব্যবহারিক চাপ বাড়ে।",
+      "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "transition": "cut",
+      "seconds": 60,
+      "action_seconds": 30,
+      "pause_seconds": 8,
+      "continuity": [
+        "same morning",
+        "single key with hasan",
+        "same outfits"
+      ],
+      "beats": [
+        {
+          "type": "action",
+          "text": "হাসান ব্যাগের আলগা হাতলে সুই ঢোকান। নীরা ঘড়ির দিকে তাকিয়ে ঠান্ডা চায়ে চুমুক দেয়।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "চা-ও কি আমার সঙ্গে যাবে? এত ঠান্ডা কেন?"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "হাসান",
+          "text": "তুই রেডি হতে হতে ও রাজশাহী ঘুরে আসছে।"
+        },
+        {
+          "type": "action",
+          "text": "নীরা ব্যাগ ছেড়ে বাবার পাশের চেয়ারে বসে।"
+        }
+      ],
+      "sound": {
+        "music": "ইচ্ছাকৃত নীরবতা; আবেগ ঘোষণার cue নয়।",
+        "sfx": "সুই-সুতো, ব্যাগের কাপড়, দূরের গলি; সংলাপ পরিষ্কার থাকবে।"
+      }
+    },
+    "identities": [
+      {
+        "id": "nira",
+        "name": "নীরা",
+        "age": 27,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "নীরার কালো বাঁধা চুল",
+        "appearance": "নীল সুতি কামিজ",
+        "personality": "বাবাকে ছেড়ে যাওয়ার অপরাধবোধ",
+        "relationships": {
+          "hasan": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "অভিযোগ থেকে প্রাপ্তবয়স্ক সমঝোতা",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "1995224879dbf47a5e5b7db60fb981e9a8a011ce17a00cde6299f5fd2333a957"
+      },
+      {
+        "id": "hasan",
+        "name": "হাসান",
+        "age": 58,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "ছোট চুল",
+        "appearance": "ধূসর পাঞ্জাবি",
+        "personality": "যত্নে নিয়ন্ত্রণ ঢুকে পড়ে",
+        "relationships": {
+          "nira": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "গোপন রাখা থেকে দায় স্বীকার",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "66c966b8aa14c19250d694dfed5dbc83f6326317ff98658887eacadd57933722"
+      }
+    ],
+    "location": {
+      "id": "living",
+      "architecture": "বসার ঘর",
+      "geography": "পূর্ব জানলা, পশ্চিম দরজা, উত্তরে রান্নাঘর",
+      "connections": [
+        "kitchen"
+      ],
+      "openings": [
+        {
+          "id": "d1",
+          "to": "kitchen",
+          "kind": "door"
+        }
+      ],
+      "camera_access": "দক্ষিণ দেয়াল, চলার পথ খালি",
+      "references": []
+    },
+    "art": {
+      "id": "set1",
+      "scene_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "palette": [
+        "কাঠের বাদামি",
+        "সকালের ফিকে সোনা"
+      ],
+      "set": "বাসার বসার ঘর; দর্জির কাজের টেবিল",
+      "props": {
+        "key": "একটি চাবি হাসানের কাছে",
+        "bag": "হাতল মেরামত",
+        "receipt": "টিকিটের নিচে পুরোনো রসিদ",
+        "box": "লাল টিন"
+      },
+      "period": "বর্তমান",
+      "culture": "ঢাকার মধ্যবিত্ত ভাড়াবাসা",
+      "lighting": "পূর্ব জানালার সকালের আলো",
+      "style": "photorealistic"
+    },
+    "costumes": [
+      {
+        "id": "w1-nira",
+        "scene": "s1",
+        "character": "nira",
+        "outfit": "blue-kamiz",
+        "color": "blue",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      },
+      {
+        "id": "w1-hasan",
+        "scene": "s1",
+        "character": "hasan",
+        "outfit": "gray-panjabi",
+        "color": "gray",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      }
+    ],
+    "performance": [
+      {
+        "id": "p1-nira",
+        "scene": "s1",
+        "character": "nira",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      },
+      {
+        "id": "p1-hasan",
+        "scene": "s1",
+        "character": "hasan",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      }
+    ],
+    "camera": {
+      "id": "s1-shot2",
+      "shot": "s1-shot2",
+      "scene": "s1",
+      "lens_mm": 50,
+      "height_m": 1.4,
+      "angle": "eye level",
+      "movement": "static",
+      "lighting": "east window key, south negative fill",
+      "exposure": "protect window highlights",
+      "color": "source",
+      "framing": "hands/prop insert",
+      "axis_side": "A",
+      "screen_direction": "left",
+      "axis_reset": false,
+      "purpose": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক"
+    },
+    "motion": [
+      {
+        "id": "s1-shot2-nira",
+        "shot": "s1-shot2",
+        "character": "nira",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 20,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "nira-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      },
+      {
+        "id": "s1-shot2-hasan",
+        "shot": "s1-shot2",
+        "character": "hasan",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 20,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "hasan-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      }
+    ],
+    "reference_assets": [],
+    "technical_requirements": {
+      "identity_lock": false,
+      "lip_sync": false,
+      "physics_simulation": false,
+      "unsupported_controls": "Performance/camera/motion prose is editorial intent until actual model conditioning is verified."
+    },
+    "actual_media_generated": false,
+    "professional_quality_verified": false
+  },
+  {
+    "id": "da7a2155aa3c56d550038ca696ebb006",
+    "kind": "shot_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      },
+      {
+        "role": "art",
+        "task": "ece49174dcc94e24925b485c28c3fdcd",
+        "revision": 1,
+        "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+      },
+      {
+        "role": "location",
+        "task": "33a000e4f1184291b7b9f7a38475920e",
+        "revision": 1,
+        "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+      },
+      {
+        "role": "costume",
+        "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+        "revision": 1,
+        "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+      },
+      {
+        "role": "storyboard",
+        "task": "45cf1de3f7ed444c89661f3fa659905a",
+        "revision": 1,
+        "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+      },
+      {
+        "role": "performance",
+        "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+        "revision": 1,
+        "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+      },
+      {
+        "role": "cinematographer",
+        "task": "baeb461e7d564044b43df9fb81d42424",
+        "revision": 1,
+        "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+      },
+      {
+        "role": "motion",
+        "task": "0b183324ce9e4d1da61389bea0440b9f",
+        "revision": 1,
+        "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+      }
+    ],
+    "shot": {
+      "id": "s1-shot3",
+      "scene": "s1",
+      "order": 3,
+      "action": "হাসান ব্যাগের আলগা হাতলে সুই ঢোকান। নীরা ঘড়ির দিকে তাকিয়ে ঠান্ডা চায়ে চুমুক দেয়।",
+      "purpose": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক",
+      "composition": "reaction two-shot",
+      "characters": [
+        "nira",
+        "hasan"
+      ],
+      "location": "living",
+      "camera": "Static",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "seconds": 20
+    },
+    "scene": {
+      "id": "s1",
+      "number": 1,
+      "heading": "INT. কাঁঠালবাগানের বসার ঘর — সকাল",
+      "location": "living",
+      "time": "same morning",
+      "objective": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক",
+      "obstacle": "বাসের সময় ও না বলা একাকিত্ব",
+      "turn": "কাজের ফাঁকে কথার দিক পাল্টায়।",
+      "consequence": "পরের সিদ্ধান্তের ব্যবহারিক চাপ বাড়ে।",
+      "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "transition": "cut",
+      "seconds": 60,
+      "action_seconds": 30,
+      "pause_seconds": 8,
+      "continuity": [
+        "same morning",
+        "single key with hasan",
+        "same outfits"
+      ],
+      "beats": [
+        {
+          "type": "action",
+          "text": "হাসান ব্যাগের আলগা হাতলে সুই ঢোকান। নীরা ঘড়ির দিকে তাকিয়ে ঠান্ডা চায়ে চুমুক দেয়।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "চা-ও কি আমার সঙ্গে যাবে? এত ঠান্ডা কেন?"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "হাসান",
+          "text": "তুই রেডি হতে হতে ও রাজশাহী ঘুরে আসছে।"
+        },
+        {
+          "type": "action",
+          "text": "নীরা ব্যাগ ছেড়ে বাবার পাশের চেয়ারে বসে।"
+        }
+      ],
+      "sound": {
+        "music": "ইচ্ছাকৃত নীরবতা; আবেগ ঘোষণার cue নয়।",
+        "sfx": "সুই-সুতো, ব্যাগের কাপড়, দূরের গলি; সংলাপ পরিষ্কার থাকবে।"
+      }
+    },
+    "identities": [
+      {
+        "id": "nira",
+        "name": "নীরা",
+        "age": 27,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "নীরার কালো বাঁধা চুল",
+        "appearance": "নীল সুতি কামিজ",
+        "personality": "বাবাকে ছেড়ে যাওয়ার অপরাধবোধ",
+        "relationships": {
+          "hasan": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "অভিযোগ থেকে প্রাপ্তবয়স্ক সমঝোতা",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "1995224879dbf47a5e5b7db60fb981e9a8a011ce17a00cde6299f5fd2333a957"
+      },
+      {
+        "id": "hasan",
+        "name": "হাসান",
+        "age": 58,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "ছোট চুল",
+        "appearance": "ধূসর পাঞ্জাবি",
+        "personality": "যত্নে নিয়ন্ত্রণ ঢুকে পড়ে",
+        "relationships": {
+          "nira": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "গোপন রাখা থেকে দায় স্বীকার",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "66c966b8aa14c19250d694dfed5dbc83f6326317ff98658887eacadd57933722"
+      }
+    ],
+    "location": {
+      "id": "living",
+      "architecture": "বসার ঘর",
+      "geography": "পূর্ব জানলা, পশ্চিম দরজা, উত্তরে রান্নাঘর",
+      "connections": [
+        "kitchen"
+      ],
+      "openings": [
+        {
+          "id": "d1",
+          "to": "kitchen",
+          "kind": "door"
+        }
+      ],
+      "camera_access": "দক্ষিণ দেয়াল, চলার পথ খালি",
+      "references": []
+    },
+    "art": {
+      "id": "set1",
+      "scene_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "palette": [
+        "কাঠের বাদামি",
+        "সকালের ফিকে সোনা"
+      ],
+      "set": "বাসার বসার ঘর; দর্জির কাজের টেবিল",
+      "props": {
+        "key": "একটি চাবি হাসানের কাছে",
+        "bag": "হাতল মেরামত",
+        "receipt": "টিকিটের নিচে পুরোনো রসিদ",
+        "box": "লাল টিন"
+      },
+      "period": "বর্তমান",
+      "culture": "ঢাকার মধ্যবিত্ত ভাড়াবাসা",
+      "lighting": "পূর্ব জানালার সকালের আলো",
+      "style": "photorealistic"
+    },
+    "costumes": [
+      {
+        "id": "w1-nira",
+        "scene": "s1",
+        "character": "nira",
+        "outfit": "blue-kamiz",
+        "color": "blue",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      },
+      {
+        "id": "w1-hasan",
+        "scene": "s1",
+        "character": "hasan",
+        "outfit": "gray-panjabi",
+        "color": "gray",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      }
+    ],
+    "performance": [
+      {
+        "id": "p1-nira",
+        "scene": "s1",
+        "character": "nira",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      },
+      {
+        "id": "p1-hasan",
+        "scene": "s1",
+        "character": "hasan",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      }
+    ],
+    "camera": {
+      "id": "s1-shot3",
+      "shot": "s1-shot3",
+      "scene": "s1",
+      "lens_mm": 50,
+      "height_m": 1.4,
+      "angle": "eye level",
+      "movement": "static",
+      "lighting": "east window key, south negative fill",
+      "exposure": "protect window highlights",
+      "color": "source",
+      "framing": "reaction two-shot",
+      "axis_side": "A",
+      "screen_direction": "left",
+      "axis_reset": false,
+      "purpose": "প্রস্তুতির মধ্যে যত্নের সম্পর্ক"
+    },
+    "motion": [
+      {
+        "id": "s1-shot3-nira",
+        "shot": "s1-shot3",
+        "character": "nira",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 40,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "nira-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      },
+      {
+        "id": "s1-shot3-hasan",
+        "shot": "s1-shot3",
+        "character": "hasan",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 40,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "hasan-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      }
+    ],
+    "reference_assets": [],
+    "technical_requirements": {
+      "identity_lock": false,
+      "lip_sync": false,
+      "physics_simulation": false,
+      "unsupported_controls": "Performance/camera/motion prose is editorial intent until actual model conditioning is verified."
+    },
+    "actual_media_generated": false,
+    "professional_quality_verified": false
+  },
+  {
+    "id": "876a42c8e59e50467444e280cdc46480",
+    "kind": "shot_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      },
+      {
+        "role": "art",
+        "task": "ece49174dcc94e24925b485c28c3fdcd",
+        "revision": 1,
+        "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+      },
+      {
+        "role": "location",
+        "task": "33a000e4f1184291b7b9f7a38475920e",
+        "revision": 1,
+        "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+      },
+      {
+        "role": "costume",
+        "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+        "revision": 1,
+        "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+      },
+      {
+        "role": "storyboard",
+        "task": "45cf1de3f7ed444c89661f3fa659905a",
+        "revision": 1,
+        "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+      },
+      {
+        "role": "performance",
+        "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+        "revision": 1,
+        "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+      },
+      {
+        "role": "cinematographer",
+        "task": "baeb461e7d564044b43df9fb81d42424",
+        "revision": 1,
+        "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+      },
+      {
+        "role": "motion",
+        "task": "0b183324ce9e4d1da61389bea0440b9f",
+        "revision": 1,
+        "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+      }
+    ],
+    "shot": {
+      "id": "s2-shot1",
+      "scene": "s2",
+      "order": 4,
+      "action": "নীরা ব্যাগ তুলতেই সেলাই আটকে যায়। হাসান না টেনে হাত বাড়িয়ে ব্যাগ চান।",
+      "purpose": "সাহায্য নেওয়ার সংকোচ",
+      "composition": "wide geography",
+      "characters": [
+        "nira",
+        "hasan"
+      ],
+      "location": "living",
+      "camera": "Static",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "seconds": 20
+    },
+    "scene": {
+      "id": "s2",
+      "number": 2,
+      "heading": "INT. কাঁঠালবাগানের বসার ঘর — সকাল",
+      "location": "living",
+      "time": "same morning",
+      "objective": "সাহায্য নেওয়ার সংকোচ",
+      "obstacle": "বাসের সময় ও না বলা একাকিত্ব",
+      "turn": "কাজের ফাঁকে কথার দিক পাল্টায়।",
+      "consequence": "পরের সিদ্ধান্তের ব্যবহারিক চাপ বাড়ে।",
+      "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "transition": "cut",
+      "seconds": 60,
+      "action_seconds": 30,
+      "pause_seconds": 8,
+      "continuity": [
+        "same morning",
+        "single key with hasan",
+        "same outfits"
+      ],
+      "beats": [
+        {
+          "type": "action",
+          "text": "নীরা ব্যাগ তুলতেই সেলাই আটকে যায়। হাসান না টেনে হাত বাড়িয়ে ব্যাগ চান।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "আবার খুলবে? বাস তো তোমার সেলাই দেখে ছাড়বে না।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "হাসান",
+          "text": "হাতল ছিঁড়লে বাসও তোকে ব্যাগ ধরবে না।"
+        },
+        {
+          "type": "action",
+          "text": "নীরা ব্যাগ ছেড়ে বাবার পাশের চেয়ারে বসে।"
+        }
+      ],
+      "sound": {
+        "music": "ইচ্ছাকৃত নীরবতা; আবেগ ঘোষণার cue নয়।",
+        "sfx": "সুই-সুতো, ব্যাগের কাপড়, দূরের গলি; সংলাপ পরিষ্কার থাকবে।"
+      }
+    },
+    "identities": [
+      {
+        "id": "nira",
+        "name": "নীরা",
+        "age": 27,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "নীরার কালো বাঁধা চুল",
+        "appearance": "নীল সুতি কামিজ",
+        "personality": "বাবাকে ছেড়ে যাওয়ার অপরাধবোধ",
+        "relationships": {
+          "hasan": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "অভিযোগ থেকে প্রাপ্তবয়স্ক সমঝোতা",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "1995224879dbf47a5e5b7db60fb981e9a8a011ce17a00cde6299f5fd2333a957"
+      },
+      {
+        "id": "hasan",
+        "name": "হাসান",
+        "age": 58,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "ছোট চুল",
+        "appearance": "ধূসর পাঞ্জাবি",
+        "personality": "যত্নে নিয়ন্ত্রণ ঢুকে পড়ে",
+        "relationships": {
+          "nira": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "গোপন রাখা থেকে দায় স্বীকার",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "66c966b8aa14c19250d694dfed5dbc83f6326317ff98658887eacadd57933722"
+      }
+    ],
+    "location": {
+      "id": "living",
+      "architecture": "বসার ঘর",
+      "geography": "পূর্ব জানলা, পশ্চিম দরজা, উত্তরে রান্নাঘর",
+      "connections": [
+        "kitchen"
+      ],
+      "openings": [
+        {
+          "id": "d1",
+          "to": "kitchen",
+          "kind": "door"
+        }
+      ],
+      "camera_access": "দক্ষিণ দেয়াল, চলার পথ খালি",
+      "references": []
+    },
+    "art": {
+      "id": "set1",
+      "scene_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "palette": [
+        "কাঠের বাদামি",
+        "সকালের ফিকে সোনা"
+      ],
+      "set": "বাসার বসার ঘর; দর্জির কাজের টেবিল",
+      "props": {
+        "key": "একটি চাবি হাসানের কাছে",
+        "bag": "হাতল মেরামত",
+        "receipt": "টিকিটের নিচে পুরোনো রসিদ",
+        "box": "লাল টিন"
+      },
+      "period": "বর্তমান",
+      "culture": "ঢাকার মধ্যবিত্ত ভাড়াবাসা",
+      "lighting": "পূর্ব জানালার সকালের আলো",
+      "style": "photorealistic"
+    },
+    "costumes": [
+      {
+        "id": "w2-nira",
+        "scene": "s2",
+        "character": "nira",
+        "outfit": "blue-kamiz",
+        "color": "blue",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      },
+      {
+        "id": "w2-hasan",
+        "scene": "s2",
+        "character": "hasan",
+        "outfit": "gray-panjabi",
+        "color": "gray",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      }
+    ],
+    "performance": [
+      {
+        "id": "p2-nira",
+        "scene": "s2",
+        "character": "nira",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      },
+      {
+        "id": "p2-hasan",
+        "scene": "s2",
+        "character": "hasan",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      }
+    ],
+    "camera": {
+      "id": "s2-shot1",
+      "shot": "s2-shot1",
+      "scene": "s2",
+      "lens_mm": 50,
+      "height_m": 1.4,
+      "angle": "eye level",
+      "movement": "static",
+      "lighting": "east window key, south negative fill",
+      "exposure": "protect window highlights",
+      "color": "source",
+      "framing": "wide geography",
+      "axis_side": "A",
+      "screen_direction": "left",
+      "axis_reset": false,
+      "purpose": "সাহায্য নেওয়ার সংকোচ"
+    },
+    "motion": [
+      {
+        "id": "s2-shot1-nira",
+        "shot": "s2-shot1",
+        "character": "nira",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 60,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "nira-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      },
+      {
+        "id": "s2-shot1-hasan",
+        "shot": "s2-shot1",
+        "character": "hasan",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 60,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "hasan-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      }
+    ],
+    "reference_assets": [],
+    "technical_requirements": {
+      "identity_lock": false,
+      "lip_sync": false,
+      "physics_simulation": false,
+      "unsupported_controls": "Performance/camera/motion prose is editorial intent until actual model conditioning is verified."
+    },
+    "actual_media_generated": false,
+    "professional_quality_verified": false
+  },
+  {
+    "id": "6963deb351522a2d939a6d80d4fa1685",
+    "kind": "shot_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      },
+      {
+        "role": "art",
+        "task": "ece49174dcc94e24925b485c28c3fdcd",
+        "revision": 1,
+        "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+      },
+      {
+        "role": "location",
+        "task": "33a000e4f1184291b7b9f7a38475920e",
+        "revision": 1,
+        "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+      },
+      {
+        "role": "costume",
+        "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+        "revision": 1,
+        "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+      },
+      {
+        "role": "storyboard",
+        "task": "45cf1de3f7ed444c89661f3fa659905a",
+        "revision": 1,
+        "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+      },
+      {
+        "role": "performance",
+        "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+        "revision": 1,
+        "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+      },
+      {
+        "role": "cinematographer",
+        "task": "baeb461e7d564044b43df9fb81d42424",
+        "revision": 1,
+        "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+      },
+      {
+        "role": "motion",
+        "task": "0b183324ce9e4d1da61389bea0440b9f",
+        "revision": 1,
+        "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+      }
+    ],
+    "shot": {
+      "id": "s2-shot2",
+      "scene": "s2",
+      "order": 5,
+      "action": "নীরা ব্যাগ তুলতেই সেলাই আটকে যায়। হাসান না টেনে হাত বাড়িয়ে ব্যাগ চান।",
+      "purpose": "সাহায্য নেওয়ার সংকোচ",
+      "composition": "hands/prop insert",
+      "characters": [
+        "nira",
+        "hasan"
+      ],
+      "location": "living",
+      "camera": "Static",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "seconds": 20
+    },
+    "scene": {
+      "id": "s2",
+      "number": 2,
+      "heading": "INT. কাঁঠালবাগানের বসার ঘর — সকাল",
+      "location": "living",
+      "time": "same morning",
+      "objective": "সাহায্য নেওয়ার সংকোচ",
+      "obstacle": "বাসের সময় ও না বলা একাকিত্ব",
+      "turn": "কাজের ফাঁকে কথার দিক পাল্টায়।",
+      "consequence": "পরের সিদ্ধান্তের ব্যবহারিক চাপ বাড়ে।",
+      "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "transition": "cut",
+      "seconds": 60,
+      "action_seconds": 30,
+      "pause_seconds": 8,
+      "continuity": [
+        "same morning",
+        "single key with hasan",
+        "same outfits"
+      ],
+      "beats": [
+        {
+          "type": "action",
+          "text": "নীরা ব্যাগ তুলতেই সেলাই আটকে যায়। হাসান না টেনে হাত বাড়িয়ে ব্যাগ চান।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "আবার খুলবে? বাস তো তোমার সেলাই দেখে ছাড়বে না।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "হাসান",
+          "text": "হাতল ছিঁড়লে বাসও তোকে ব্যাগ ধরবে না।"
+        },
+        {
+          "type": "action",
+          "text": "নীরা ব্যাগ ছেড়ে বাবার পাশের চেয়ারে বসে।"
+        }
+      ],
+      "sound": {
+        "music": "ইচ্ছাকৃত নীরবতা; আবেগ ঘোষণার cue নয়।",
+        "sfx": "সুই-সুতো, ব্যাগের কাপড়, দূরের গলি; সংলাপ পরিষ্কার থাকবে।"
+      }
+    },
+    "identities": [
+      {
+        "id": "nira",
+        "name": "নীরা",
+        "age": 27,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "নীরার কালো বাঁধা চুল",
+        "appearance": "নীল সুতি কামিজ",
+        "personality": "বাবাকে ছেড়ে যাওয়ার অপরাধবোধ",
+        "relationships": {
+          "hasan": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "অভিযোগ থেকে প্রাপ্তবয়স্ক সমঝোতা",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "1995224879dbf47a5e5b7db60fb981e9a8a011ce17a00cde6299f5fd2333a957"
+      },
+      {
+        "id": "hasan",
+        "name": "হাসান",
+        "age": 58,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "ছোট চুল",
+        "appearance": "ধূসর পাঞ্জাবি",
+        "personality": "যত্নে নিয়ন্ত্রণ ঢুকে পড়ে",
+        "relationships": {
+          "nira": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "গোপন রাখা থেকে দায় স্বীকার",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "66c966b8aa14c19250d694dfed5dbc83f6326317ff98658887eacadd57933722"
+      }
+    ],
+    "location": {
+      "id": "living",
+      "architecture": "বসার ঘর",
+      "geography": "পূর্ব জানলা, পশ্চিম দরজা, উত্তরে রান্নাঘর",
+      "connections": [
+        "kitchen"
+      ],
+      "openings": [
+        {
+          "id": "d1",
+          "to": "kitchen",
+          "kind": "door"
+        }
+      ],
+      "camera_access": "দক্ষিণ দেয়াল, চলার পথ খালি",
+      "references": []
+    },
+    "art": {
+      "id": "set1",
+      "scene_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "palette": [
+        "কাঠের বাদামি",
+        "সকালের ফিকে সোনা"
+      ],
+      "set": "বাসার বসার ঘর; দর্জির কাজের টেবিল",
+      "props": {
+        "key": "একটি চাবি হাসানের কাছে",
+        "bag": "হাতল মেরামত",
+        "receipt": "টিকিটের নিচে পুরোনো রসিদ",
+        "box": "লাল টিন"
+      },
+      "period": "বর্তমান",
+      "culture": "ঢাকার মধ্যবিত্ত ভাড়াবাসা",
+      "lighting": "পূর্ব জানালার সকালের আলো",
+      "style": "photorealistic"
+    },
+    "costumes": [
+      {
+        "id": "w2-nira",
+        "scene": "s2",
+        "character": "nira",
+        "outfit": "blue-kamiz",
+        "color": "blue",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      },
+      {
+        "id": "w2-hasan",
+        "scene": "s2",
+        "character": "hasan",
+        "outfit": "gray-panjabi",
+        "color": "gray",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      }
+    ],
+    "performance": [
+      {
+        "id": "p2-nira",
+        "scene": "s2",
+        "character": "nira",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      },
+      {
+        "id": "p2-hasan",
+        "scene": "s2",
+        "character": "hasan",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      }
+    ],
+    "camera": {
+      "id": "s2-shot2",
+      "shot": "s2-shot2",
+      "scene": "s2",
+      "lens_mm": 50,
+      "height_m": 1.4,
+      "angle": "eye level",
+      "movement": "static",
+      "lighting": "east window key, south negative fill",
+      "exposure": "protect window highlights",
+      "color": "source",
+      "framing": "hands/prop insert",
+      "axis_side": "A",
+      "screen_direction": "left",
+      "axis_reset": false,
+      "purpose": "সাহায্য নেওয়ার সংকোচ"
+    },
+    "motion": [
+      {
+        "id": "s2-shot2-nira",
+        "shot": "s2-shot2",
+        "character": "nira",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 80,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "nira-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      },
+      {
+        "id": "s2-shot2-hasan",
+        "shot": "s2-shot2",
+        "character": "hasan",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 80,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "hasan-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      }
+    ],
+    "reference_assets": [],
+    "technical_requirements": {
+      "identity_lock": false,
+      "lip_sync": false,
+      "physics_simulation": false,
+      "unsupported_controls": "Performance/camera/motion prose is editorial intent until actual model conditioning is verified."
+    },
+    "actual_media_generated": false,
+    "professional_quality_verified": false
+  },
+  {
+    "id": "78cc573d07ee0e767df4e4163013e35a",
+    "kind": "shot_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      },
+      {
+        "role": "art",
+        "task": "ece49174dcc94e24925b485c28c3fdcd",
+        "revision": 1,
+        "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+      },
+      {
+        "role": "location",
+        "task": "33a000e4f1184291b7b9f7a38475920e",
+        "revision": 1,
+        "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+      },
+      {
+        "role": "costume",
+        "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+        "revision": 1,
+        "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+      },
+      {
+        "role": "storyboard",
+        "task": "45cf1de3f7ed444c89661f3fa659905a",
+        "revision": 1,
+        "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+      },
+      {
+        "role": "performance",
+        "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+        "revision": 1,
+        "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+      },
+      {
+        "role": "cinematographer",
+        "task": "baeb461e7d564044b43df9fb81d42424",
+        "revision": 1,
+        "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+      },
+      {
+        "role": "motion",
+        "task": "0b183324ce9e4d1da61389bea0440b9f",
+        "revision": 1,
+        "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+      }
+    ],
+    "shot": {
+      "id": "s2-shot3",
+      "scene": "s2",
+      "order": 6,
+      "action": "নীরা ব্যাগ তুলতেই সেলাই আটকে যায়। হাসান না টেনে হাত বাড়িয়ে ব্যাগ চান।",
+      "purpose": "সাহায্য নেওয়ার সংকোচ",
+      "composition": "reaction two-shot",
+      "characters": [
+        "nira",
+        "hasan"
+      ],
+      "location": "living",
+      "camera": "Static",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "seconds": 20
+    },
+    "scene": {
+      "id": "s2",
+      "number": 2,
+      "heading": "INT. কাঁঠালবাগানের বসার ঘর — সকাল",
+      "location": "living",
+      "time": "same morning",
+      "objective": "সাহায্য নেওয়ার সংকোচ",
+      "obstacle": "বাসের সময় ও না বলা একাকিত্ব",
+      "turn": "কাজের ফাঁকে কথার দিক পাল্টায়।",
+      "consequence": "পরের সিদ্ধান্তের ব্যবহারিক চাপ বাড়ে।",
+      "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "transition": "cut",
+      "seconds": 60,
+      "action_seconds": 30,
+      "pause_seconds": 8,
+      "continuity": [
+        "same morning",
+        "single key with hasan",
+        "same outfits"
+      ],
+      "beats": [
+        {
+          "type": "action",
+          "text": "নীরা ব্যাগ তুলতেই সেলাই আটকে যায়। হাসান না টেনে হাত বাড়িয়ে ব্যাগ চান।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "আবার খুলবে? বাস তো তোমার সেলাই দেখে ছাড়বে না।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "হাসান",
+          "text": "হাতল ছিঁড়লে বাসও তোকে ব্যাগ ধরবে না।"
+        },
+        {
+          "type": "action",
+          "text": "নীরা ব্যাগ ছেড়ে বাবার পাশের চেয়ারে বসে।"
+        }
+      ],
+      "sound": {
+        "music": "ইচ্ছাকৃত নীরবতা; আবেগ ঘোষণার cue নয়।",
+        "sfx": "সুই-সুতো, ব্যাগের কাপড়, দূরের গলি; সংলাপ পরিষ্কার থাকবে।"
+      }
+    },
+    "identities": [
+      {
+        "id": "nira",
+        "name": "নীরা",
+        "age": 27,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "নীরার কালো বাঁধা চুল",
+        "appearance": "নীল সুতি কামিজ",
+        "personality": "বাবাকে ছেড়ে যাওয়ার অপরাধবোধ",
+        "relationships": {
+          "hasan": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "অভিযোগ থেকে প্রাপ্তবয়স্ক সমঝোতা",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "1995224879dbf47a5e5b7db60fb981e9a8a011ce17a00cde6299f5fd2333a957"
+      },
+      {
+        "id": "hasan",
+        "name": "হাসান",
+        "age": 58,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "ছোট চুল",
+        "appearance": "ধূসর পাঞ্জাবি",
+        "personality": "যত্নে নিয়ন্ত্রণ ঢুকে পড়ে",
+        "relationships": {
+          "nira": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "গোপন রাখা থেকে দায় স্বীকার",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "66c966b8aa14c19250d694dfed5dbc83f6326317ff98658887eacadd57933722"
+      }
+    ],
+    "location": {
+      "id": "living",
+      "architecture": "বসার ঘর",
+      "geography": "পূর্ব জানলা, পশ্চিম দরজা, উত্তরে রান্নাঘর",
+      "connections": [
+        "kitchen"
+      ],
+      "openings": [
+        {
+          "id": "d1",
+          "to": "kitchen",
+          "kind": "door"
+        }
+      ],
+      "camera_access": "দক্ষিণ দেয়াল, চলার পথ খালি",
+      "references": []
+    },
+    "art": {
+      "id": "set1",
+      "scene_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "palette": [
+        "কাঠের বাদামি",
+        "সকালের ফিকে সোনা"
+      ],
+      "set": "বাসার বসার ঘর; দর্জির কাজের টেবিল",
+      "props": {
+        "key": "একটি চাবি হাসানের কাছে",
+        "bag": "হাতল মেরামত",
+        "receipt": "টিকিটের নিচে পুরোনো রসিদ",
+        "box": "লাল টিন"
+      },
+      "period": "বর্তমান",
+      "culture": "ঢাকার মধ্যবিত্ত ভাড়াবাসা",
+      "lighting": "পূর্ব জানালার সকালের আলো",
+      "style": "photorealistic"
+    },
+    "costumes": [
+      {
+        "id": "w2-nira",
+        "scene": "s2",
+        "character": "nira",
+        "outfit": "blue-kamiz",
+        "color": "blue",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      },
+      {
+        "id": "w2-hasan",
+        "scene": "s2",
+        "character": "hasan",
+        "outfit": "gray-panjabi",
+        "color": "gray",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      }
+    ],
+    "performance": [
+      {
+        "id": "p2-nira",
+        "scene": "s2",
+        "character": "nira",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      },
+      {
+        "id": "p2-hasan",
+        "scene": "s2",
+        "character": "hasan",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      }
+    ],
+    "camera": {
+      "id": "s2-shot3",
+      "shot": "s2-shot3",
+      "scene": "s2",
+      "lens_mm": 50,
+      "height_m": 1.4,
+      "angle": "eye level",
+      "movement": "static",
+      "lighting": "east window key, south negative fill",
+      "exposure": "protect window highlights",
+      "color": "source",
+      "framing": "reaction two-shot",
+      "axis_side": "A",
+      "screen_direction": "left",
+      "axis_reset": false,
+      "purpose": "সাহায্য নেওয়ার সংকোচ"
+    },
+    "motion": [
+      {
+        "id": "s2-shot3-nira",
+        "shot": "s2-shot3",
+        "character": "nira",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 100,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "nira-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      },
+      {
+        "id": "s2-shot3-hasan",
+        "shot": "s2-shot3",
+        "character": "hasan",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 100,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "hasan-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      }
+    ],
+    "reference_assets": [],
+    "technical_requirements": {
+      "identity_lock": false,
+      "lip_sync": false,
+      "physics_simulation": false,
+      "unsupported_controls": "Performance/camera/motion prose is editorial intent until actual model conditioning is verified."
+    },
+    "actual_media_generated": false,
+    "professional_quality_verified": false
+  },
+  {
+    "id": "a3f92ad3fdccf75a2cebc961a60adef3",
+    "kind": "shot_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      },
+      {
+        "role": "art",
+        "task": "ece49174dcc94e24925b485c28c3fdcd",
+        "revision": 1,
+        "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+      },
+      {
+        "role": "location",
+        "task": "33a000e4f1184291b7b9f7a38475920e",
+        "revision": 1,
+        "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+      },
+      {
+        "role": "costume",
+        "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+        "revision": 1,
+        "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+      },
+      {
+        "role": "storyboard",
+        "task": "45cf1de3f7ed444c89661f3fa659905a",
+        "revision": 1,
+        "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+      },
+      {
+        "role": "performance",
+        "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+        "revision": 1,
+        "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+      },
+      {
+        "role": "cinematographer",
+        "task": "baeb461e7d564044b43df9fb81d42424",
+        "revision": 1,
+        "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+      },
+      {
+        "role": "motion",
+        "task": "0b183324ce9e4d1da61389bea0440b9f",
+        "revision": 1,
+        "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+      }
+    ],
+    "shot": {
+      "id": "s3-shot1",
+      "scene": "s3",
+      "order": 7,
+      "action": "সুতো খুঁজতে নীরা বাবার অনুমতি নিয়ে লাল টিনের বাক্স খোলে। টিকিটের নিচে মায়ের নামে পুরোনো রসিদ।",
+      "purpose": "রসিদের ব্যাখ্যা চাওয়া",
+      "composition": "wide geography",
+      "characters": [
+        "nira",
+        "hasan"
+      ],
+      "location": "living",
+      "camera": "Static",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "seconds": 20
+    },
+    "scene": {
+      "id": "s3",
+      "number": 3,
+      "heading": "INT. কাঁঠালবাগানের বসার ঘর — সকাল",
+      "location": "living",
+      "time": "same morning",
+      "objective": "রসিদের ব্যাখ্যা চাওয়া",
+      "obstacle": "বাসের সময় ও না বলা একাকিত্ব",
+      "turn": "কাজের ফাঁকে কথার দিক পাল্টায়।",
+      "consequence": "পরের সিদ্ধান্তের ব্যবহারিক চাপ বাড়ে।",
+      "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "transition": "cut",
+      "seconds": 60,
+      "action_seconds": 30,
+      "pause_seconds": 8,
+      "continuity": [
+        "same morning",
+        "single key with hasan",
+        "same outfits"
+      ],
+      "beats": [
+        {
+          "type": "action",
+          "text": "সুতো খুঁজতে নীরা বাবার অনুমতি নিয়ে লাল টিনের বাক্স খোলে। টিকিটের নিচে মায়ের নামে পুরোনো রসিদ।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "এই টাকাটা মা কবে জমা দিছিল?"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "হাসান",
+          "text": "টিকিটটা আগে রাখ।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "টিকিট রাখছি। প্রশ্নটা কোথায় রাখব?"
+        },
+        {
+          "type": "action",
+          "text": "হাসান সুইয়ে সুতো পরানোর চেষ্টা থামান। নীরা রসিদটি বাক্সের ওপর রাখে।"
+        }
+      ],
+      "sound": {
+        "music": "ইচ্ছাকৃত নীরবতা; আবেগ ঘোষণার cue নয়।",
+        "sfx": "সুই-সুতো, ব্যাগের কাপড়, দূরের গলি; সংলাপ পরিষ্কার থাকবে।"
+      }
+    },
+    "identities": [
+      {
+        "id": "nira",
+        "name": "নীরা",
+        "age": 27,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "নীরার কালো বাঁধা চুল",
+        "appearance": "নীল সুতি কামিজ",
+        "personality": "বাবাকে ছেড়ে যাওয়ার অপরাধবোধ",
+        "relationships": {
+          "hasan": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "অভিযোগ থেকে প্রাপ্তবয়স্ক সমঝোতা",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "1995224879dbf47a5e5b7db60fb981e9a8a011ce17a00cde6299f5fd2333a957"
+      },
+      {
+        "id": "hasan",
+        "name": "হাসান",
+        "age": 58,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "ছোট চুল",
+        "appearance": "ধূসর পাঞ্জাবি",
+        "personality": "যত্নে নিয়ন্ত্রণ ঢুকে পড়ে",
+        "relationships": {
+          "nira": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "গোপন রাখা থেকে দায় স্বীকার",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "66c966b8aa14c19250d694dfed5dbc83f6326317ff98658887eacadd57933722"
+      }
+    ],
+    "location": {
+      "id": "living",
+      "architecture": "বসার ঘর",
+      "geography": "পূর্ব জানলা, পশ্চিম দরজা, উত্তরে রান্নাঘর",
+      "connections": [
+        "kitchen"
+      ],
+      "openings": [
+        {
+          "id": "d1",
+          "to": "kitchen",
+          "kind": "door"
+        }
+      ],
+      "camera_access": "দক্ষিণ দেয়াল, চলার পথ খালি",
+      "references": []
+    },
+    "art": {
+      "id": "set1",
+      "scene_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "palette": [
+        "কাঠের বাদামি",
+        "সকালের ফিকে সোনা"
+      ],
+      "set": "বাসার বসার ঘর; দর্জির কাজের টেবিল",
+      "props": {
+        "key": "একটি চাবি হাসানের কাছে",
+        "bag": "হাতল মেরামত",
+        "receipt": "টিকিটের নিচে পুরোনো রসিদ",
+        "box": "লাল টিন"
+      },
+      "period": "বর্তমান",
+      "culture": "ঢাকার মধ্যবিত্ত ভাড়াবাসা",
+      "lighting": "পূর্ব জানালার সকালের আলো",
+      "style": "photorealistic"
+    },
+    "costumes": [
+      {
+        "id": "w3-nira",
+        "scene": "s3",
+        "character": "nira",
+        "outfit": "blue-kamiz",
+        "color": "blue",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      },
+      {
+        "id": "w3-hasan",
+        "scene": "s3",
+        "character": "hasan",
+        "outfit": "gray-panjabi",
+        "color": "gray",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      }
+    ],
+    "performance": [
+      {
+        "id": "p3-nira",
+        "scene": "s3",
+        "character": "nira",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      },
+      {
+        "id": "p3-hasan",
+        "scene": "s3",
+        "character": "hasan",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      }
+    ],
+    "camera": {
+      "id": "s3-shot1",
+      "shot": "s3-shot1",
+      "scene": "s3",
+      "lens_mm": 50,
+      "height_m": 1.4,
+      "angle": "eye level",
+      "movement": "static",
+      "lighting": "east window key, south negative fill",
+      "exposure": "protect window highlights",
+      "color": "source",
+      "framing": "wide geography",
+      "axis_side": "A",
+      "screen_direction": "left",
+      "axis_reset": false,
+      "purpose": "রসিদের ব্যাখ্যা চাওয়া"
+    },
+    "motion": [
+      {
+        "id": "s3-shot1-nira",
+        "shot": "s3-shot1",
+        "character": "nira",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 120,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "nira-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      },
+      {
+        "id": "s3-shot1-hasan",
+        "shot": "s3-shot1",
+        "character": "hasan",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 120,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "hasan-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      }
+    ],
+    "reference_assets": [],
+    "technical_requirements": {
+      "identity_lock": false,
+      "lip_sync": false,
+      "physics_simulation": false,
+      "unsupported_controls": "Performance/camera/motion prose is editorial intent until actual model conditioning is verified."
+    },
+    "actual_media_generated": false,
+    "professional_quality_verified": false
+  },
+  {
+    "id": "fb2be217e45977204ecbec2a8f59cb7d",
+    "kind": "shot_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      },
+      {
+        "role": "art",
+        "task": "ece49174dcc94e24925b485c28c3fdcd",
+        "revision": 1,
+        "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+      },
+      {
+        "role": "location",
+        "task": "33a000e4f1184291b7b9f7a38475920e",
+        "revision": 1,
+        "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+      },
+      {
+        "role": "costume",
+        "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+        "revision": 1,
+        "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+      },
+      {
+        "role": "storyboard",
+        "task": "45cf1de3f7ed444c89661f3fa659905a",
+        "revision": 1,
+        "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+      },
+      {
+        "role": "performance",
+        "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+        "revision": 1,
+        "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+      },
+      {
+        "role": "cinematographer",
+        "task": "baeb461e7d564044b43df9fb81d42424",
+        "revision": 1,
+        "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+      },
+      {
+        "role": "motion",
+        "task": "0b183324ce9e4d1da61389bea0440b9f",
+        "revision": 1,
+        "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+      }
+    ],
+    "shot": {
+      "id": "s3-shot2",
+      "scene": "s3",
+      "order": 8,
+      "action": "সুতো খুঁজতে নীরা বাবার অনুমতি নিয়ে লাল টিনের বাক্স খোলে। টিকিটের নিচে মায়ের নামে পুরোনো রসিদ।",
+      "purpose": "রসিদের ব্যাখ্যা চাওয়া",
+      "composition": "hands/prop insert",
+      "characters": [
+        "nira",
+        "hasan"
+      ],
+      "location": "living",
+      "camera": "Static",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "seconds": 20
+    },
+    "scene": {
+      "id": "s3",
+      "number": 3,
+      "heading": "INT. কাঁঠালবাগানের বসার ঘর — সকাল",
+      "location": "living",
+      "time": "same morning",
+      "objective": "রসিদের ব্যাখ্যা চাওয়া",
+      "obstacle": "বাসের সময় ও না বলা একাকিত্ব",
+      "turn": "কাজের ফাঁকে কথার দিক পাল্টায়।",
+      "consequence": "পরের সিদ্ধান্তের ব্যবহারিক চাপ বাড়ে।",
+      "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "transition": "cut",
+      "seconds": 60,
+      "action_seconds": 30,
+      "pause_seconds": 8,
+      "continuity": [
+        "same morning",
+        "single key with hasan",
+        "same outfits"
+      ],
+      "beats": [
+        {
+          "type": "action",
+          "text": "সুতো খুঁজতে নীরা বাবার অনুমতি নিয়ে লাল টিনের বাক্স খোলে। টিকিটের নিচে মায়ের নামে পুরোনো রসিদ।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "এই টাকাটা মা কবে জমা দিছিল?"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "হাসান",
+          "text": "টিকিটটা আগে রাখ।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "টিকিট রাখছি। প্রশ্নটা কোথায় রাখব?"
+        },
+        {
+          "type": "action",
+          "text": "হাসান সুইয়ে সুতো পরানোর চেষ্টা থামান। নীরা রসিদটি বাক্সের ওপর রাখে।"
+        }
+      ],
+      "sound": {
+        "music": "ইচ্ছাকৃত নীরবতা; আবেগ ঘোষণার cue নয়।",
+        "sfx": "সুই-সুতো, ব্যাগের কাপড়, দূরের গলি; সংলাপ পরিষ্কার থাকবে।"
+      }
+    },
+    "identities": [
+      {
+        "id": "nira",
+        "name": "নীরা",
+        "age": 27,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "নীরার কালো বাঁধা চুল",
+        "appearance": "নীল সুতি কামিজ",
+        "personality": "বাবাকে ছেড়ে যাওয়ার অপরাধবোধ",
+        "relationships": {
+          "hasan": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "অভিযোগ থেকে প্রাপ্তবয়স্ক সমঝোতা",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "1995224879dbf47a5e5b7db60fb981e9a8a011ce17a00cde6299f5fd2333a957"
+      },
+      {
+        "id": "hasan",
+        "name": "হাসান",
+        "age": 58,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "ছোট চুল",
+        "appearance": "ধূসর পাঞ্জাবি",
+        "personality": "যত্নে নিয়ন্ত্রণ ঢুকে পড়ে",
+        "relationships": {
+          "nira": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "গোপন রাখা থেকে দায় স্বীকার",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "66c966b8aa14c19250d694dfed5dbc83f6326317ff98658887eacadd57933722"
+      }
+    ],
+    "location": {
+      "id": "living",
+      "architecture": "বসার ঘর",
+      "geography": "পূর্ব জানলা, পশ্চিম দরজা, উত্তরে রান্নাঘর",
+      "connections": [
+        "kitchen"
+      ],
+      "openings": [
+        {
+          "id": "d1",
+          "to": "kitchen",
+          "kind": "door"
+        }
+      ],
+      "camera_access": "দক্ষিণ দেয়াল, চলার পথ খালি",
+      "references": []
+    },
+    "art": {
+      "id": "set1",
+      "scene_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "palette": [
+        "কাঠের বাদামি",
+        "সকালের ফিকে সোনা"
+      ],
+      "set": "বাসার বসার ঘর; দর্জির কাজের টেবিল",
+      "props": {
+        "key": "একটি চাবি হাসানের কাছে",
+        "bag": "হাতল মেরামত",
+        "receipt": "টিকিটের নিচে পুরোনো রসিদ",
+        "box": "লাল টিন"
+      },
+      "period": "বর্তমান",
+      "culture": "ঢাকার মধ্যবিত্ত ভাড়াবাসা",
+      "lighting": "পূর্ব জানালার সকালের আলো",
+      "style": "photorealistic"
+    },
+    "costumes": [
+      {
+        "id": "w3-nira",
+        "scene": "s3",
+        "character": "nira",
+        "outfit": "blue-kamiz",
+        "color": "blue",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      },
+      {
+        "id": "w3-hasan",
+        "scene": "s3",
+        "character": "hasan",
+        "outfit": "gray-panjabi",
+        "color": "gray",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      }
+    ],
+    "performance": [
+      {
+        "id": "p3-nira",
+        "scene": "s3",
+        "character": "nira",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      },
+      {
+        "id": "p3-hasan",
+        "scene": "s3",
+        "character": "hasan",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      }
+    ],
+    "camera": {
+      "id": "s3-shot2",
+      "shot": "s3-shot2",
+      "scene": "s3",
+      "lens_mm": 50,
+      "height_m": 1.4,
+      "angle": "eye level",
+      "movement": "static",
+      "lighting": "east window key, south negative fill",
+      "exposure": "protect window highlights",
+      "color": "source",
+      "framing": "hands/prop insert",
+      "axis_side": "A",
+      "screen_direction": "left",
+      "axis_reset": false,
+      "purpose": "রসিদের ব্যাখ্যা চাওয়া"
+    },
+    "motion": [
+      {
+        "id": "s3-shot2-nira",
+        "shot": "s3-shot2",
+        "character": "nira",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 140,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "nira-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      },
+      {
+        "id": "s3-shot2-hasan",
+        "shot": "s3-shot2",
+        "character": "hasan",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 140,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "hasan-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      }
+    ],
+    "reference_assets": [],
+    "technical_requirements": {
+      "identity_lock": false,
+      "lip_sync": false,
+      "physics_simulation": false,
+      "unsupported_controls": "Performance/camera/motion prose is editorial intent until actual model conditioning is verified."
+    },
+    "actual_media_generated": false,
+    "professional_quality_verified": false
+  },
+  {
+    "id": "e82cbd039042b76758c8d2eb915f41f1",
+    "kind": "shot_execution",
+    "sources": [
+      {
+        "role": "script",
+        "task": "00043f16ef1f49b9a64d5814d049397a",
+        "revision": 1,
+        "artifact_sha256": "9824906c5b86f1b553d96427366ca73869a65ad83339266131d2958c13e78f12"
+      },
+      {
+        "role": "character",
+        "task": "d6d1658814d44abe869d2bb2cc8314a3",
+        "revision": 1,
+        "artifact_sha256": "f027228472707b7195761e792e89ad0c4c850dbc60598fbd19cddafbe13785df"
+      },
+      {
+        "role": "art",
+        "task": "ece49174dcc94e24925b485c28c3fdcd",
+        "revision": 1,
+        "artifact_sha256": "5f0efa29053e3dcf197ccc317ec656434044450052ed2169ca1eb5667a8259a3"
+      },
+      {
+        "role": "location",
+        "task": "33a000e4f1184291b7b9f7a38475920e",
+        "revision": 1,
+        "artifact_sha256": "0cfe8fbe798b97903d65a7e99df4d7d67eaa9283ba6d9f4bcd2d62e4689b54ac"
+      },
+      {
+        "role": "costume",
+        "task": "4377520253ec4d77a6a2cbb9ed2437fa",
+        "revision": 1,
+        "artifact_sha256": "54bf88a30841a81e14b7bc1d583495a8dafa52884e8b4a2e30ba4829a403c2a9"
+      },
+      {
+        "role": "storyboard",
+        "task": "45cf1de3f7ed444c89661f3fa659905a",
+        "revision": 1,
+        "artifact_sha256": "6ab926a0898755461158357c2b0a5833dac9609112143b5fe2f4108fdbb8aa3f"
+      },
+      {
+        "role": "performance",
+        "task": "a2b50ee7438544cb97b90385e1f4ee8e",
+        "revision": 1,
+        "artifact_sha256": "48a1c7949740591dede58c98424395eec2a77b24779516681eafa887b21f93a3"
+      },
+      {
+        "role": "cinematographer",
+        "task": "baeb461e7d564044b43df9fb81d42424",
+        "revision": 1,
+        "artifact_sha256": "2717f024fc3b1d2f516197a7f7dec15d1f906c7ab15cd2907326ca9b5ec6545e"
+      },
+      {
+        "role": "motion",
+        "task": "0b183324ce9e4d1da61389bea0440b9f",
+        "revision": 1,
+        "artifact_sha256": "8da8cc8aee35118e03740f0cd7dcb2627523d6bafba57cdf189259c6be1bef7b"
+      }
+    ],
+    "shot": {
+      "id": "s3-shot3",
+      "scene": "s3",
+      "order": 9,
+      "action": "সুতো খুঁজতে নীরা বাবার অনুমতি নিয়ে লাল টিনের বাক্স খোলে। টিকিটের নিচে মায়ের নামে পুরোনো রসিদ।",
+      "purpose": "রসিদের ব্যাখ্যা চাওয়া",
+      "composition": "reaction two-shot",
+      "characters": [
+        "nira",
+        "hasan"
+      ],
+      "location": "living",
+      "camera": "Static",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "seconds": 20
+    },
+    "scene": {
+      "id": "s3",
+      "number": 3,
+      "heading": "INT. কাঁঠালবাগানের বসার ঘর — সকাল",
+      "location": "living",
+      "time": "same morning",
+      "objective": "রসিদের ব্যাখ্যা চাওয়া",
+      "obstacle": "বাসের সময় ও না বলা একাকিত্ব",
+      "turn": "কাজের ফাঁকে কথার দিক পাল্টায়।",
+      "consequence": "পরের সিদ্ধান্তের ব্যবহারিক চাপ বাড়ে।",
+      "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+      "performance": "সংযত, চোখের বদল; ঘোষণামূলক কান্না নয়।",
+      "transition": "cut",
+      "seconds": 60,
+      "action_seconds": 30,
+      "pause_seconds": 8,
+      "continuity": [
+        "same morning",
+        "single key with hasan",
+        "same outfits"
+      ],
+      "beats": [
+        {
+          "type": "action",
+          "text": "সুতো খুঁজতে নীরা বাবার অনুমতি নিয়ে লাল টিনের বাক্স খোলে। টিকিটের নিচে মায়ের নামে পুরোনো রসিদ।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "এই টাকাটা মা কবে জমা দিছিল?"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "হাসান",
+          "text": "টিকিটটা আগে রাখ।"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "নীরা",
+          "text": "টিকিট রাখছি। প্রশ্নটা কোথায় রাখব?"
+        },
+        {
+          "type": "action",
+          "text": "হাসান সুইয়ে সুতো পরানোর চেষ্টা থামান। নীরা রসিদটি বাক্সের ওপর রাখে।"
+        }
+      ],
+      "sound": {
+        "music": "ইচ্ছাকৃত নীরবতা; আবেগ ঘোষণার cue নয়।",
+        "sfx": "সুই-সুতো, ব্যাগের কাপড়, দূরের গলি; সংলাপ পরিষ্কার থাকবে।"
+      }
+    },
+    "identities": [
+      {
+        "id": "nira",
+        "name": "নীরা",
+        "age": 27,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "নীরার কালো বাঁধা চুল",
+        "appearance": "নীল সুতি কামিজ",
+        "personality": "বাবাকে ছেড়ে যাওয়ার অপরাধবোধ",
+        "relationships": {
+          "hasan": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "অভিযোগ থেকে প্রাপ্তবয়স্ক সমঝোতা",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "1995224879dbf47a5e5b7db60fb981e9a8a011ce17a00cde6299f5fd2333a957"
+      },
+      {
+        "id": "hasan",
+        "name": "হাসান",
+        "age": 58,
+        "face": "মানবিক স্বতন্ত্র মুখ; approved reference pending",
+        "hair": "ছোট চুল",
+        "appearance": "ধূসর পাঞ্জাবি",
+        "personality": "যত্নে নিয়ন্ত্রণ ঢুকে পড়ে",
+        "relationships": {
+          "nira": "পরিবার/সমিতির সহযোগী; consent boundary",
+          "mita": "পরিবার/সমিতির সহযোগী; consent boundary"
+        },
+        "evolution": "গোপন রাখা থেকে দায় স্বীকার",
+        "references": [],
+        "scene_states": [],
+        "identity_hash": "66c966b8aa14c19250d694dfed5dbc83f6326317ff98658887eacadd57933722"
+      }
+    ],
+    "location": {
+      "id": "living",
+      "architecture": "বসার ঘর",
+      "geography": "পূর্ব জানলা, পশ্চিম দরজা, উত্তরে রান্নাঘর",
+      "connections": [
+        "kitchen"
+      ],
+      "openings": [
+        {
+          "id": "d1",
+          "to": "kitchen",
+          "kind": "door"
+        }
+      ],
+      "camera_access": "দক্ষিণ দেয়াল, চলার পথ খালি",
+      "references": []
+    },
+    "art": {
+      "id": "set1",
+      "scene_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "palette": [
+        "কাঠের বাদামি",
+        "সকালের ফিকে সোনা"
+      ],
+      "set": "বাসার বসার ঘর; দর্জির কাজের টেবিল",
+      "props": {
+        "key": "একটি চাবি হাসানের কাছে",
+        "bag": "হাতল মেরামত",
+        "receipt": "টিকিটের নিচে পুরোনো রসিদ",
+        "box": "লাল টিন"
+      },
+      "period": "বর্তমান",
+      "culture": "ঢাকার মধ্যবিত্ত ভাড়াবাসা",
+      "lighting": "পূর্ব জানালার সকালের আলো",
+      "style": "photorealistic"
+    },
+    "costumes": [
+      {
+        "id": "w3-nira",
+        "scene": "s3",
+        "character": "nira",
+        "outfit": "blue-kamiz",
+        "color": "blue",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      },
+      {
+        "id": "w3-hasan",
+        "scene": "s3",
+        "character": "hasan",
+        "outfit": "gray-panjabi",
+        "color": "gray",
+        "material": "cotton",
+        "weather": "humid morning",
+        "culture": "Bangladeshi everyday",
+        "accessories": [],
+        "reference": "pending",
+        "change_reason": "none"
+      }
+    ],
+    "performance": [
+      {
+        "id": "p3-nira",
+        "scene": "s3",
+        "character": "nira",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      },
+      {
+        "id": "p3-hasan",
+        "scene": "s3",
+        "character": "hasan",
+        "emotion_from": "restrained",
+        "emotion_to": "restrained",
+        "transition_reason": "partner reacts to practical care",
+        "intensity": 3,
+        "subtext": "থাকতে বলব না, কিন্তু চলে যাওয়া সহজ নয়।",
+        "gaze": "bag, then partner",
+        "body_language": "hands finish practical task before eye contact",
+        "pause_seconds": 1,
+        "blocking": "sits beside table",
+        "micro_expression": "a held breath",
+        "objective": "চলে যাওয়া/ধরে রাখার ইচ্ছা সামলানো",
+        "tactic": "কাজের কথা বলে যত্ন দেখানো",
+        "partner_reaction": "উত্তর পেলে হাত থামে"
+      }
+    ],
+    "camera": {
+      "id": "s3-shot3",
+      "shot": "s3-shot3",
+      "scene": "s3",
+      "lens_mm": 50,
+      "height_m": 1.4,
+      "angle": "eye level",
+      "movement": "static",
+      "lighting": "east window key, south negative fill",
+      "exposure": "protect window highlights",
+      "color": "source",
+      "framing": "reaction two-shot",
+      "axis_side": "A",
+      "screen_direction": "left",
+      "axis_reset": false,
+      "purpose": "রসিদের ব্যাখ্যা চাওয়া"
+    },
+    "motion": [
+      {
+        "id": "s3-shot3-nira",
+        "shot": "s3-shot3",
+        "character": "nira",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 160,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "nira-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      },
+      {
+        "id": "s3-shot3-hasan",
+        "shot": "s3-shot3",
+        "character": "hasan",
+        "from_pose": "sitting",
+        "to_pose": "sitting",
+        "start": 160,
+        "seconds": 20,
+        "contact": "chair seat",
+        "object": "hasan-chair",
+        "object_before": "beside table",
+        "object_after": "beside table",
+        "gravity": "normal",
+        "collision": "no_penetration",
+        "change_reason": "none",
+        "shot_start": 0,
+        "shot_local_start": 0
+      }
+    ],
+    "reference_assets": [],
+    "technical_requirements": {
+      "identity_lock": false,
+      "lip_sync": false,
+      "physics_simulation": false,
+      "unsupported_controls": "Performance/camera/motion prose is editorial intent until actual model conditioning is verified."
+    },
+    "actual_media_generated": false,
+    "professional_quality_verified": false
+  }
+]

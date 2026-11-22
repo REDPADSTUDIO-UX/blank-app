@@ -1,0 +1,11 @@
+```json
+{
+  "salma_has_job": false,
+  "ruba_knows_interview": false,
+  "advance_count": 1,
+  "rescue_money_allowed": false,
+  "mother_motivation_hypothesis": "সন্তানদের সুরক্ষা ও মিথ্যা বলে তাদের উদ্বেগমুক্ত রাখা।",
+  "evidence": "মা সালমা (৫৫) ভোরে স্কুলের চাকরির ইন্টারভিউতে যাবেন, কিন্তু সন্তানদের বলেন পাশের বাসায় যাচ্ছেন।",
+  "subtext_direction": " সালমা দ্রুত প্রস্তুতি নিচ্ছেন, চোখে চাপা উদ্বেগ।"
+}
+```

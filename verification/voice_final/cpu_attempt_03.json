@@ -1,0 +1,31 @@
+{
+  "selected": [
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_f5_reference_zero_energy_wrong_rate_and_truncation_fail_before_loading",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_direct_f5_preparation_binds_consent_original_transcript_and_supervisor",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_direct_f5_revocation_or_task_revision_stales_prepared_request",
+    "tests.test_selected_voice_binding.SelectedCastingTests.test_f5_casting_uses_same_scoped_receipt_and_revocation_stales_handoff",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_indicf5_reference_transcript_consent_and_original_bengali_preserved"
+  ],
+  "attempted": [
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_f5_reference_zero_energy_wrong_rate_and_truncation_fail_before_loading",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_direct_f5_preparation_binds_consent_original_transcript_and_supervisor",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_direct_f5_revocation_or_task_revision_stales_prepared_request",
+    "tests.test_selected_voice_binding.SelectedCastingTests.test_f5_casting_uses_same_scoped_receipt_and_revocation_stales_handoff",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_indicf5_reference_transcript_consent_and_original_bengali_preserved"
+  ],
+  "successful": [
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_f5_reference_zero_energy_wrong_rate_and_truncation_fail_before_loading",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_direct_f5_preparation_binds_consent_original_transcript_and_supervisor",
+    "tests.test_selected_voice_binding.SelectedVoiceTests.test_direct_f5_revocation_or_task_revision_stales_prepared_request",
+    "tests.test_selected_voice_binding.SelectedCastingTests.test_f5_casting_uses_same_scoped_receipt_and_revocation_stales_handoff",
+    "tests.test_offline_six_preparation.OfflineSixTests.test_indicf5_reference_transcript_consent_and_original_bengali_preserved"
+  ],
+  "errors": [],
+  "failures": [],
+  "gpu": false,
+  "inference": false,
+  "real_weights_read_loaded_downloaded": false,
+  "custom_upstream_executed": false,
+  "human_review": false,
+  "fixture_scope": "Manual fixtures and injected classes only; no native model process launched."
+}

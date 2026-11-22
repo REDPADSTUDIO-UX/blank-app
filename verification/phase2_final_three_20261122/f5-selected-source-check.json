@@ -1,0 +1,12 @@
+{
+  "repo": "ai4bharat/IndicF5",
+  "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+  "path": "model.py",
+  "bytes": 5774,
+  "sha256": "64ae04ffd86ba942de8342229a2883a915b54d74e21717b0cee2b13782df4c60",
+  "expected_sha256": "64ae04ffd86ba942de8342229a2883a915b54d74e21717b0cee2b13782df4c60",
+  "authenticated_browser_read": true,
+  "source_executed": false,
+  "gated_source_committed_or_uploaded": false,
+  "model_weight_accessed": false
+}

@@ -1,0 +1,24 @@
+/tmp/redpad-exact/ltx-env/lib/python3.11/site-packages/colour/utilities/verbose.py:340: ColourUsageWarning: "Matplotlib" related API features are not available: "No module named 'matplotlib'".
+See the installation guide for more information: https://www.colour-science.org/installation-guide/
+  warn(*args, **kwargs)
+nanobind: leaked 2 instances!
+ - leaked instance 0x7fe4e0c36da8 of type "OpenImageIO.OpenImageIO.TypeDesc"
+ - leaked instance 0x7fe4e0c37388 of type "OpenImageIO.OpenImageIO.TypeDesc"
+nanobind: leaked 3 types!
+ - leaked type "OpenImageIO.OpenImageIO.TypeDesc"
+ - leaked type "OpenImageIO.OpenImageIO.ImageSpec"
+ - leaked type "BASETYPE"
+nanobind: leaked 114 functions!
+ - leaked function ""
+ - leaked function ""
+ - leaked function "tile_pixels"
+ - leaked function "unarray"
+ - leaked function ""
+ - leaked function ""
+ - leaked function "scanline_bytes"
+ - leaked function "serialize"
+ - leaked function "__init__"
+ - leaked function ""
+ - ... skipped remainder
+nanobind: this is likely caused by a reference counting issue in the binding code.
+See https://nanobind.readthedocs.io/en/latest/refleaks.html

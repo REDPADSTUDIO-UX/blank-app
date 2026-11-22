@@ -1,0 +1,4 @@
+Using Python 3.11.18 environment at: /tmp/redpad-remain/voice
+Checked 32 packages in 0.57ms
+Found 1 incompatibility
+The package `vocos` requires `encodec==0.1.1`, but it's not installed

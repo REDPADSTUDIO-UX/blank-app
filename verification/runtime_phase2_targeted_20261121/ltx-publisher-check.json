@@ -1,0 +1,10 @@
+{
+  "tree_url": "https://huggingface.co/api/models/Lightricks/LTX-2.5/tree/49b093a39c19169a8a81721dcc541e07e945232f/latent_upscale_models?expand=true",
+  "artifact": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+  "reported_size": 995778752,
+  "publisher_lfs_oid": "****************************************************************",
+  "head_url": "https://huggingface.co/Lightricks/LTX-2.5/resolve/49b093a39c19169a8a81721dcc541e07e945232f/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+  "head_status": 401,
+  "head_linked_etag": null,
+  "checkpoint_downloaded": false
+}

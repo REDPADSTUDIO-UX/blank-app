@@ -1,0 +1,18 @@
+{
+  "evidence_kind": "CPU-only software regression, not real-model evaluation",
+  "tests": 58,
+  "new_story_tests": 22,
+  "failures": 0,
+  "errors": 0,
+  "baseline_351": "preserved, not rerun wholesale",
+  "log": "final_cpu_tests.txt",
+  "prior_shared_run": {
+    "tests": 113,
+    "result": "pass",
+    "scope_error": "Included pre-existing all-agent authored fixture loops; final scope narrowed"
+  },
+  "model_executions": 0,
+  "gpu_activations": 0,
+  "new_paid_services": 0,
+  "candidate_outputs": 0
+}

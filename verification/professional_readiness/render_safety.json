@@ -1,0 +1,28 @@
+{
+  "operation": "read-only list_services",
+  "services": [
+    {
+      "name": "redpad-ai-studio-v3-safe-preview",
+      "id": "srv-dbhfgfijnfac739sjpm0",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off",
+      "branch": "feature/video-music-editing-studio"
+    },
+    {
+      "name": "redpad-growth-engine-demo",
+      "id": "srv-dbhf5vp42hec73ca7bag",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off",
+      "branch": "feature/video-music-editing-studio"
+    },
+    {
+      "name": "redpad-ai-studio-private-preview",
+      "id": "srv-dbfiesvb9u1s73d2qblg",
+      "autoDeploy": "no",
+      "autoDeployTrigger": "off",
+      "branch": "feature/video-music-editing-studio"
+    }
+  ],
+  "all_auto_deploy_disabled": true,
+  "mutations": 0
+}

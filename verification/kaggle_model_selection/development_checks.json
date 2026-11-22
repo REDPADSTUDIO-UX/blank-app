@@ -1,0 +1,27 @@
+{
+  "new_tests_final": 25,
+  "new_tests_status": "pass",
+  "initial_software_test_harness_errors": [
+    {
+      "error": "isinstance mock replaced a class with MagicMock",
+      "fix": "Patch constructor instead of class in no-fallback test; production behavior unchanged"
+    },
+    {
+      "error": "Missing install raised LocalUnavailable, not AgentError",
+      "fix": "Expect the actual guarded prerequisite exception in the test"
+    }
+  ],
+  "actual_model_failures": 0,
+  "actual_model_attempts": 0,
+  "scope": "Software test fixtures are not inference or human review evidence.",
+  "resume": {
+    "prior_full_regression_repeated": false,
+    "prior_full_tests_passed": 418,
+    "new_focused_guards": 4,
+    "final_focused_guards_passed": 4,
+    "initial_focused_passed": 3,
+    "initial_harness_error": "RoutedWriter class mock invalidated isinstance; constructor spy corrected",
+    "failed_case_retest_only": true,
+    "source_fix": "Per-run backend binding prevents retry switching across Ollama/shared services"
+  }
+}

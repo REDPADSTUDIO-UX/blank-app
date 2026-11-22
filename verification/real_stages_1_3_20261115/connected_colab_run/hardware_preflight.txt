@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "captured_unix": 1794738325.4808242,
+  "provider": "current_development_host_not_verified_as_kaggle",
+  "python": "3.13.16",
+  "platform": "Linux",
+  "cpu_count": 2,
+  "host_memory": {
+    "MemTotal_bytes": 13605818368,
+    "MemAvailable_bytes": 12311240704
+  },
+  "cgroup_available_bytes": null,
+  "disk_free_bytes": 120825925632,
+  "disk_total_bytes": 120942624768,
+  "gpus": [
+    {
+      "index": 0,
+      "name": "Tesla T4",
+      "total_bytes": 16106127360,
+      "free_bytes": 15637413888,
+      "driver": "580.82.07",
+      "compute_capability": "7.5"
+    }
+  ],
+  "gpu_probe_error": null,
+  "cuda_driver_supported_version": "13.0",
+  "libraries": {
+    "torch": "2.14.1+cu130",
+    "transformers": "5.22.1",
+    "accelerate": "1.15.0",
+    "bitsandbytes": null,
+    "diffusers": "0.42.1",
+    "safetensors": "0.8.0",
+    "huggingface_hub": "1.33.0",
+    "numpy": "2.4.6",
+    "Pillow": "11.3.0",
+    "kaggle": "2.0.2"
+  },
+  "kaggle_account_connected": null,
+  "accelerator_setting": null,
+  "remaining_gpu_quota_hours": null,
+  "maximum_session_hours": null,
+  "internet_download_available": null,
+  "free_tier_verified": false,
+  "quota_source": null,
+  "scope": "Measured process-host inventory only. Driver CUDA support is not installed toolkit/runtime. System RAM can exceed container cgroup limits. Account, quota, accelerator setting and free tier require actual Kaggle settings inspection. No model inference or download.",
+  "observed_at_utc": "2026-11-15T10:25:25.480954+00:00",
+  "free_runtime_connected": null,
+  "known_cache_paths": {
+    "/content/redpad_stages_1_3": false,
+    "/workspace/blank-app/phase3_models": false,
+    "/workspace/models": false,
+    "/workspace/.cache/huggingface": false
+  },
+  "remaining_free_quota": null,
+  "container_memory_limit_bytes": null
+}
+native isolation tool: None
+Remaining free quota: unknown unless actually exposed in Colab UI.
+Use only existing owner-approved research install receipts and exact cached bundles.
+This notebook never creates a license approval or downloads missing components.

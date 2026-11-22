@@ -1,0 +1,41 @@
+{
+  "base_commit": "0ba7f5c82031e1c16f7dd8635058d18496f355ee",
+  "branch": "feature/video-music-editing-studio",
+  "three_artifact_download_authorized": true,
+  "downloaded_files": 3,
+  "unauthorized_downloads": 0,
+  "all_three_sizes_and_full_sha256": "VERIFIED",
+  "binary_sha_and_version": "VERIFIED",
+  "runtime_status": "BLOCKED_LAUNCH_ENV_DRIVER_PATH",
+  "model_load_compatibility": "NOT VERIFIED",
+  "model_generation_submissions_new": 0,
+  "genuine_new_outputs": 0,
+  "worker_launch_failures_new": 1,
+  "call_budget": {
+    "ceiling": 7,
+    "historical_consumed": 2,
+    "new_submitted": 0,
+    "remaining": 5
+  },
+  "exact_error": "invalid device: CUDA0",
+  "dependency_diagnostic": "libcuda.so.1 => not found in minimal launch environment",
+  "driver_metadata": {
+    "existing_path": "/usr/lib64-nvidia/libcuda.so.1",
+    "resolved_path": "/usr/lib64-nvidia/libcuda.so.580.82.07",
+    "not_in_worker_library_path": true
+  },
+  "interpretation": "Research launcher omitted the existing provider driver directory; this is not proof of an absent GPU or fundamentally incompatible model.",
+  "stop_source": "Owner instruction: stop safely after checksum or compatibility failure",
+  "new_canary_status": "NOT GENERATED: launch failed before model request",
+  "complete_story": "ABSENT",
+  "server_stopped": true,
+  "gpu_processes_postflight": [],
+  "human_review": "PENDING",
+  "production_approved": false,
+  "next_action": "Resume after stop: retain this failed launch under its original ID. Add only the verified existing provider driver directory to the research runtime allowlist; verify dependencies/device enumeration before any model load. No additional artifact download is currently indicated. Use a distinct canary attempt ID and retain 2 historical calls plus all later generation reservations.",
+  "full_story_budget_constraint": "Fresh canary + five original sections requires 6 calls; only 5 remain. Do not silently batch, expand limits, reset counters, skip reflection, or claim a complete original benchmark.",
+  "studio_security_gate_changed": false,
+  "bubblewrap_test_repeated": false,
+  "protected_files_unchanged": 28,
+  "original_report_and_paused_notebook_preserved": true
+}

@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "New unique section ID preserves exact original schema and output limit; old failure untouched",
+    "New failed canary cannot be replaced by old success",
+    "Act generation refuses incomplete required foundation"
+  ],
+  "distinct_checks": 3,
+  "passed": 3,
+  "scope": "CPU fixtures only; no generated evidence, GPU, model, network or production worker execution",
+  "previous_successful_tests_rerun": false
+}

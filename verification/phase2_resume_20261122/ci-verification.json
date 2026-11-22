@@ -1,0 +1,26 @@
+{
+  "run": 44997981646,
+  "job": 137133048190,
+  "url": "https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44997981646",
+  "commit": "d8fbed1f9593934b170be404e5af72ab5209f64d",
+  "conclusion": "success",
+  "runner": "ubuntu-22.04",
+  "python": "3.11.18",
+  "artifact_id": 14744259018,
+  "artifact_archive_sha256": "22c2d4b3324ec36c10018f59bbfd5d39b6a5a6e0e91961f2167447338de38f22",
+  "archive_bytes": 74105,
+  "actual_isolated_model_free_profiles": [
+    "qwen35_moe",
+    "wan_animate2_distilled"
+  ],
+  "worker_boundaries": [
+    "shared_model_worker",
+    "native_local_worker"
+  ],
+  "gpu": false,
+  "weights": false,
+  "inference": false,
+  "private_source_uploaded": false,
+  "log_sha256": "a75ddf46ccd0163eaf31d93bc7ba69846862a344bf4beb83631b0470a14e96b8",
+  "notes": "Host private-file/network/read-only/lifecycle canaries passed before acquisition. Hash-locked offline installation and pip check passed. Per-object ldd reports unresolved optional CUDA/RDMA sonames; these are NOT certified for GPU use. Actual required CPU imports passed inside both sandbox boundaries."
+}

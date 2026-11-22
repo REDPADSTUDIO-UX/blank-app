@@ -1,0 +1,165 @@
+[
+  {
+    "case": "causal_outline",
+    "wall_seconds": 48.42440850699859,
+    "finish_reason": "stop",
+    "response_complete": true,
+    "prompt_tokens": 395,
+    "completion_tokens": 1022,
+    "predicted_tokens_per_second": 21.400933172913675,
+    "peak_server_rss_bytes": 1977565184,
+    "peak_device_used_mib": 5303,
+    "validation": {
+      "json_valid": true,
+      "technical_pass": true,
+      "generation_complete": true,
+      "quote_findings": [],
+      "artistic_scores": null,
+      "human_review": "pending",
+      "professional_accepted": false,
+      "contract_fields_valid": true,
+      "contract_field_types_valid": true
+    },
+    "raw_sha256": "e8192f3ec0fc587534e4702ade04e613f02ef3af099e0e6de6c54107b52a80c3",
+    "validator_source_sha256": "3116cb9b149081459cbf68213dcdef07485e15fe7f04d06e226a29bbd496a465"
+  },
+  {
+    "case": "clean_abstention",
+    "wall_seconds": 4.691967913000553,
+    "finish_reason": "stop",
+    "response_complete": true,
+    "prompt_tokens": 323,
+    "completion_tokens": 86,
+    "predicted_tokens_per_second": 20.624309995511176,
+    "peak_server_rss_bytes": 2461446144,
+    "peak_device_used_mib": 5303,
+    "validation": {
+      "json_valid": true,
+      "technical_pass": false,
+      "generation_complete": true,
+      "quote_findings": [
+        {
+          "code": "prop_state",
+          "quote": "ব্যাগ চেয়ারের পাশেই থাকে।",
+          "observation": "সালমা ব্যাগটি চেয়ারের পাশে রাখার পর দৃশ্যের শুরুতে ব্যাগটি সেই অবস্থাতেই দেখানো হয়েছে, যা অব্যবস্থাপনার মতো একটি continuity defect।",
+          "category": "contract",
+          "decision": "revise"
+        }
+      ],
+      "artistic_scores": null,
+      "human_review": "pending",
+      "professional_accepted": false,
+      "contract_fields_valid": true,
+      "contract_field_types_valid": true,
+      "critic_control_pass": false,
+      "true_positive_defects": 0,
+      "false_positive_findings": 1,
+      "missed_expected_defects": 0,
+      "unsupported_quotes": 0
+    },
+    "raw_sha256": "d4c6163938803ee2dc0932cdef5f40ba86481f7795cb65570ad5efff30fe658a",
+    "validator_source_sha256": "3116cb9b149081459cbf68213dcdef07485e15fe7f04d06e226a29bbd496a465"
+  },
+  {
+    "case": "director_criticism",
+    "wall_seconds": 10.16495153699725,
+    "finish_reason": "stop",
+    "response_complete": true,
+    "prompt_tokens": 271,
+    "completion_tokens": 205,
+    "predicted_tokens_per_second": 21.200078232445556,
+    "peak_server_rss_bytes": 2234953728,
+    "peak_device_used_mib": 5303,
+    "validation": {
+      "json_valid": true,
+      "technical_pass": true,
+      "generation_complete": true,
+      "quote_findings": [
+        {
+          "code": "prop_state",
+          "quote": "সালমা একমাত্র নীল ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নেন। কেউ আলমারি খোলে না। পরের action: রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ পড়ে আদনানকে দেখায়।",
+          "observation": "প্রথম দৃশ্যে সালমা ব্যাগটি তালাবদ্ধ আলমারিতে রেখে চাবি নিজের পকেটে নিয়েছেন এবং কেউ আলমারি খোলে না। দ্বিতীয় দৃশ্যে রুবা একই নীল ব্যাগ হাতে করে ব্যাগের সনদ দেখায়, যা আগে তালাবদ্ধ ছিল এবং কোনো চাবি ব্যবহার না করে আলমারি থেকে বের হয়নি।",
+          "category": "contract",
+          "decision": "revise"
+        }
+      ],
+      "artistic_scores": null,
+      "human_review": "pending",
+      "professional_accepted": false,
+      "contract_fields_valid": true,
+      "contract_field_types_valid": true,
+      "critic_control_pass": true,
+      "true_positive_defects": 1,
+      "false_positive_findings": 0,
+      "missed_expected_defects": 0,
+      "unsupported_quotes": 0
+    },
+    "raw_sha256": "d82b7c817e8aaeb4940a516b613aac6f10548832df13c5b50022d767008c45a1",
+    "validator_source_sha256": "3116cb9b149081459cbf68213dcdef07485e15fe7f04d06e226a29bbd496a465"
+  },
+  {
+    "case": "natural_dialogue",
+    "wall_seconds": 23.961653384001693,
+    "finish_reason": "stop",
+    "response_complete": true,
+    "prompt_tokens": 405,
+    "completion_tokens": 400,
+    "predicted_tokens_per_second": 17.154558357399875,
+    "peak_server_rss_bytes": 1740259328,
+    "peak_device_used_mib": 5303,
+    "validation": {
+      "json_valid": true,
+      "technical_pass": false,
+      "generation_complete": true,
+      "quote_findings": [],
+      "artistic_scores": null,
+      "human_review": "pending",
+      "professional_accepted": false,
+      "contract_fields_valid": true,
+      "contract_field_types_valid": false
+    },
+    "raw_sha256": "10a19b7131973150b9e3b33a90d725c1beb1975b7bf4620c018fa282d0e4756a",
+    "validator_source_sha256": "3116cb9b149081459cbf68213dcdef07485e15fe7f04d06e226a29bbd496a465"
+  },
+  {
+    "case": "runtime_text_canary",
+    "wall_seconds": 3.590698407999298,
+    "finish_reason": "stop",
+    "response_complete": true,
+    "prompt_tokens": 70,
+    "completion_tokens": 9,
+    "predicted_tokens_per_second": 20.746834162774473,
+    "peak_server_rss_bytes": 1525809152,
+    "peak_device_used_mib": 5291,
+    "validation": {
+      "technical_pass": true,
+      "artistic_review": "not_applicable_runtime_canary"
+    },
+    "raw_sha256": "734454633499d436bf65d1f9af523c742f816a9b62f3e72bbbf48734cca3d19f",
+    "validator_source_sha256": "3116cb9b149081459cbf68213dcdef07485e15fe7f04d06e226a29bbd496a465"
+  },
+  {
+    "case": "targeted_rewrite",
+    "wall_seconds": 1.8719788269991113,
+    "finish_reason": "stop",
+    "response_complete": true,
+    "prompt_tokens": 316,
+    "completion_tokens": 28,
+    "predicted_tokens_per_second": 20.404461775641604,
+    "peak_server_rss_bytes": 2685669376,
+    "peak_device_used_mib": 5303,
+    "validation": {
+      "json_valid": true,
+      "technical_pass": true,
+      "generation_complete": true,
+      "quote_findings": [],
+      "artistic_scores": null,
+      "human_review": "pending",
+      "professional_accepted": false,
+      "contract_fields_valid": true,
+      "contract_field_types_valid": true
+    },
+    "raw_sha256": "7c9849600300edfee415edee5accceb6d21ce1ed5f2e8d9d51035f3231749809",
+    "validator_source_sha256": "3116cb9b149081459cbf68213dcdef07485e15fe7f04d06e226a29bbd496a465"
+  }
+]

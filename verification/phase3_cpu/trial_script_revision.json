@@ -1,0 +1,168 @@
+{
+  "name": "trial_script_revision",
+  "agent": "script",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "device": "CPU",
+  "request": {
+    "agent": "script",
+    "instructions": "Return a JSON ARRAY containing ONLY revised scene s2, same complete scene fields and 30 seconds. Keep s1 and the two character names unchanged. Apply only relevant criticism: null. Additional observed defect to fix ONLY in s2: bus fare is money, not a building/location. s2 is the actual front door of their rented home; keep time morning and make the umbrella handoff and choice physically coherent. Preserve the existing source character identities for this isolated scope test; global name corruption is a separate Story revision. Dialogue must be colloquial Bengali, 2–3 short turns. Replace exposition or vague sentiment with visible action and understated warmth. Do not add characters, cars, vehicles or unexplained money. Do not rewrite s1 or the outer screenplay.",
+    "brief": {
+      "title": "একটা ছাতা",
+      "premise": "ঢাকার বৃষ্টির সকাল। রাশেদ (৩২) ও তানিয়া (২৯) বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নয়।",
+      "genre": "family drama",
+      "tone": "natural Bangladeshi Bengali, restrained emotion, gentle character wit"
+    },
+    "experimental_source": {
+      "title": "একটা ছাতা",
+      "hook": {
+        "image": "তানিiflowerা বাসভাড়া থেকে বাইরে যাচ্ছে, রাশেদের ছাতা হাতে দেখা যাচ্ছে কিন্তু তার মুখে না",
+        "question": "তানিiflowerা কেন ছাতা দেখে বিস্ময় করে?",
+        "payoff": "রাশেদ তার ছাতা দেখেছে কিন্তু তানিiflowerা জানে না"
+      },
+      "characters": [
+        {
+          "name": "রাশেদ",
+          "want": "অফিসে জরুরি উপস্থিতি করতে পারে",
+          "voice": "স্থায়ী, সামান্য ক্ষুদ্র হাসি"
+        },
+        {
+          "name": "তানিiflowerা",
+          "want": "চাকরির সাক্ষাৎকার পাওয়া",
+          "voice": "সামান্য বিস্ময়, স্বাভাবিক হাসি"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "s1",
+          "heading": "INT. বাসভাড়া - সকাল",
+          "seconds": 30,
+          "objective": "রাশেদ ছাতা নিয়ে বাইরে যায়",
+          "obstacle": "তানিiflowerা বাইরে যাচ্ছে না",
+          "turn": "তানিiflowerা ছাতা দেখে মুখে হাসি দেয়",
+          "consequence": "তানিiflowerা বাইরে যায় না",
+          "beats": [
+            {
+              "type": "action",
+              "text": "রাশেদ ছাতা নিয়ে বাসভাড়া থেকে বাইরে যায়।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "তানিiflowerা",
+              "text": "ওই ছাতা আগে কখন দেখেছিলি?"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "রাশেদ",
+              "text": "কাল রাতে হাতে ছিল না, আজ পরে হাতে আসল।"
+            }
+          ],
+          "sound": {
+            "music": "সাদা সামান্য বাজনা",
+            "sfx": "বৃষ্টির শব্দ, ছাতা বাজানোর শব্দ"
+          }
+        },
+        {
+          "id": "s2",
+          "heading": "EXT. বাসভাড়া দরজা - সকাল",
+          "seconds": 30,
+          "objective": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়",
+          "obstacle": "স্ক্রিনে রাশেদের ছাতা দেখা যায়",
+          "turn": "তানিiflowerা স্ক্রিন বন্ধ করে দেয়",
+          "consequence": "রাশেদ ফেরত আসে, ছাতা হাতে না দেখা যায়",
+          "beats": [
+            {
+              "type": "action",
+              "text": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়, স্ক্রিনে রাশেদের ছাতা দেখা যায়।"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "তানিiflowerা",
+              "text": "আমি কি কোনো ছাতা দেখেছি?"
+            },
+            {
+              "type": "dialogue",
+              "speaker": "রাশেদ",
+              "text": "তুমি ছাতা দেখে না, আমি তো দেখেছি।"
+            }
+          ],
+          "sound": {
+            "music": "সাদা সামান্য বাজনা",
+            "sfx": "স্ক্রিনে ছাতা দেখা, তানিiflowerা হাত বন্ধ করে দেয়"
+          }
+        }
+      ]
+    },
+    "targets": [
+      "s2"
+    ]
+  },
+  "prompt_sha256": "359961a5b77b78be9621c3711d4821ee0cb901e702f063f2dc613c9d14b909d8",
+  "raw": "{\"id\": \"s2\", \"heading\": \"EXT. বাসভাড়া দরজা - সকাল\", \"seconds\": 30, \"objective\": \"তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়\", \"obstacle\": \"স্ক্রিনে রাশেদের ছাতা দেখা যায়\", \"turn\": \"তানিiflowerা স্ক্রিন বন্ধ করে দেয়\", \"consequence\": \"রাশেদ ফেরত আসে, ছাতা হাতে না দেখা যায়\", \"beats\": [{\"type\": \"action\", \"text\": \"তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়, স্ক্রিনে রাশেদের ছাতা দেখা যায়।\"}, {\"type\": \"action\", \"text\": \"তানিiflowerা হঠাৎ হাত বাড়িয়ে দেয়, দরজা বন্ধ করে দেয়।\"}, {\"type\": \"dialogue\", \"speaker\": \"তানিiflowerা\", \"text\": \"বাসভাড়া থেকে বাইরে যাওয়ার আগে কি আমি ছাতা দেখি?\"}, {\"type\": \"dialogue\", \"speaker\": \"রাশেদ\", \"text\": \"কাল রাতে হাতে ছিল না, আজ পরে হাতে আসল।\"}], \"sound\": {\"music\": \"সাদা সামান্য বাজনা\", \"sfx\": \"স্ক্রিনে ছাতা দেখা, তানিiflowerা হাত বন্ধ করে দেয়\"}}",
+  "result": {
+    "id": "s2",
+    "heading": "EXT. বাসভাড়া দরজা - সকাল",
+    "seconds": 30,
+    "objective": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়",
+    "obstacle": "স্ক্রিনে রাশেদের ছাতা দেখা যায়",
+    "turn": "তানিiflowerা স্ক্রিন বন্ধ করে দেয়",
+    "consequence": "রাশেদ ফেরত আসে, ছাতা হাতে না দেখা যায়",
+    "beats": [
+      {
+        "type": "action",
+        "text": "তানিiflowerা চাকরির সাক্ষাৎকারে পৌঁছায়, স্ক্রিনে রাশেদের ছাতা দেখা যায়।"
+      },
+      {
+        "type": "action",
+        "text": "তানিiflowerা হঠাৎ হাত বাড়িয়ে দেয়, দরজা বন্ধ করে দেয়।"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "তানিiflowerা",
+        "text": "বাসভাড়া থেকে বাইরে যাওয়ার আগে কি আমি ছাতা দেখি?"
+      },
+      {
+        "type": "dialogue",
+        "speaker": "রাশেদ",
+        "text": "কাল রাতে হাতে ছিল না, আজ পরে হাতে আসল।"
+      }
+    ],
+    "sound": {
+      "music": "সাদা সামান্য বাজনা",
+      "sfx": "স্ক্রিনে ছাতা দেখা, তানিiflowerা হাত বন্ধ করে দেয়"
+    }
+  },
+  "error": "Only scene s2 may be replaced.",
+  "state": "Failed",
+  "validation": {},
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.4,
+      "num_predict": 1100,
+      "num_ctx": 4096,
+      "seed": 42
+    },
+    "inference_completed": true,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 563,
+    "eval_duration_ns": 72361613000,
+    "prompt_eval_count": 1836,
+    "prompt_eval_duration_ns": 37539206000,
+    "load_duration_ns": 1221696,
+    "total_duration_ns": 110938799229,
+    "finish_reason": "stop",
+    "wall_seconds": 110.943,
+    "raw_sha256": "27ceeb73b8866b9ddcea5456cf9d33d9e89cf58c71e968406e2e5b76f355f45c"
+  },
+  "wall_seconds": 110.944,
+  "aggregate_process_peak_rss_bytes": 4183298048,
+  "memory_note": "Sampled aggregate RSS of caller and descendant server/runner, not unique model allocation",
+  "provenance": "local_inference",
+  "source_approval": "Unapproved research candidate only",
+  "production_approved": false,
+  "independent_human_review": false
+}

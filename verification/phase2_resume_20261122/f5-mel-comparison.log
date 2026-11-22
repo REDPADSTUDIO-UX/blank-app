@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/experiments/phase2_f5_mel_probe.py", line 53, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/experiments/phase2_f5_mel_probe.py", line 26, in main
+    from librosa.filters import mel
+  File "/workspace/scratch/19aa449d4f91/phase2-local/voice-runtime/lib/python3.11/site-packages/librosa/filters.py", line 54, in <module>
+    from ._cache import cache
+  File "/workspace/scratch/19aa449d4f91/phase2-local/voice-runtime/lib/python3.11/site-packages/librosa/_cache.py", line 7, in <module>
+    from joblib import Memory
+  File "/workspace/scratch/19aa449d4f91/phase2-local/voice-runtime/lib/python3.11/site-packages/joblib/__init__.py", line 114, in <module>
+    from ._cloudpickle_wrapper import wrap_non_picklable_objects
+  File "/workspace/scratch/19aa449d4f91/phase2-local/voice-runtime/lib/python3.11/site-packages/joblib/_cloudpickle_wrapper.py", line 14, in <module>
+    from .externals.loky import wrap_non_picklable_objects
+  File "/workspace/scratch/19aa449d4f91/phase2-local/voice-runtime/lib/python3.11/site-packages/joblib/externals/loky/__init__.py", line 22, in <module>
+    from .cloudpickle_wrapper import wrap_non_picklable_objects
+  File "/workspace/scratch/19aa449d4f91/phase2-local/voice-runtime/lib/python3.11/site-packages/joblib/externals/loky/cloudpickle_wrapper.py", line 3, in <module>
+    from cloudpickle import dumps, loads
+ModuleNotFoundError: No module named 'cloudpickle'

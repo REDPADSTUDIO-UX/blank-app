@@ -1,0 +1,7 @@
+{
+  "revision": "3c8fcc86c0e42b7abe5bcf666d3a3afdce93a0e8",
+  "matching_local_files": 12,
+  "signer_verification": "historical verified; reused",
+  "actual_offline_loader_binding": "BLOCKED \u2014 no installed exact closure",
+  "synthetic_revision_drift_rejection": "PASS"
+}

@@ -1,0 +1,20 @@
+{
+  "resumed_commit": "e7dc992f187d9bd545b88d3ee11dd174ac08566c",
+  "observed_date": "2026-11-14",
+  "chrome_family_verified": "Chrome extension ID 0",
+  "authenticated_source_access_confirmed": {
+    "indic_speak": true,
+    "indicf5": true
+  },
+  "evidence": "Exact-revision raw source body text returned through existing authenticated browser. No Agree form, credentials, cookies or access tokens read/copied.",
+  "revision_checks": {
+    "indic_speak": "76e0814f189321efe550011850cd288dae366aad",
+    "indicf5": "fb652a96e508091045890dae5bb99fe511facbcf"
+  },
+  "source_manifest": "assets/professional/phase3_voice_selected_source_lock.json",
+  "model_weights_accessed": false,
+  "upstream_python_executed": false,
+  "new_license_acceptance_by_assistant": false,
+  "owner_action_for_repository_access": "none; both accessible during this verification",
+  "previous_blocker_checkpoint": "e7dc992f187d9bd545b88d3ee11dd174ac08566c"
+}

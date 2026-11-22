@@ -1,0 +1,7 @@
+test_runtime_receipt_binds_exact_interpreter_dependencies_and_source (tests.test_worker_isolation.WorkerIsolationTests.test_runtime_receipt_binds_exact_interpreter_dependencies_and_source) ... ok
+test_native_bundle_still_rejects_empty_model_component (tests.test_native_local_execution.NativeLocalTests.test_native_bundle_still_rejects_empty_model_component) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.222s
+
+OK

@@ -1,0 +1,7 @@
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python
+Resolved 1 package in 198ms
+Downloading opencv-python-headless (59.6MiB)
+ Downloaded opencv-python-headless
+Prepared 1 package in 1.92s
+Installed 1 package in 16ms
+ + opencv-python-headless==4.13.0.90

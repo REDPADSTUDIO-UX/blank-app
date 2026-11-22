@@ -1,0 +1,89 @@
+{
+  "_blocks_class_name": "WanAnimate2DistilledBlocks",
+  "_class_name": "WanAnimate2DistilledModularPipeline",
+  "_diffusers_version": "0.36.0.dev0",
+  "image_encoder": [
+    "transformers",
+    "CLIPVisionModel",
+    {
+      "pretrained_model_name_or_path": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+      "revision": null,
+      "subfolder": "image_encoder",
+      "type_hint": [
+        "transformers",
+        "CLIPVisionModel"
+      ],
+      "variant": null
+    }
+  ],
+  "scheduler": [
+    "diffusers",
+    "FlowMatchEulerDiscreteScheduler",
+    {
+      "pretrained_model_name_or_path": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+      "revision": "refs/pr/1",
+      "subfolder": "scheduler",
+      "type_hint": [
+        "diffusers",
+        "FlowMatchEulerDiscreteScheduler"
+      ],
+      "variant": null
+    }
+  ],
+  "text_encoder": [
+    "transformers",
+    "UMT5EncoderModel",
+    {
+      "pretrained_model_name_or_path": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+      "revision": null,
+      "subfolder": "text_encoder",
+      "type_hint": [
+        "transformers",
+        "UMT5EncoderModel"
+      ],
+      "variant": null
+    }
+  ],
+  "tokenizer": [
+    "transformers",
+    "T5TokenizerFast",
+    {
+      "pretrained_model_name_or_path": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+      "revision": null,
+      "subfolder": "tokenizer",
+      "type_hint": [
+        "transformers",
+        "T5TokenizerFast"
+      ],
+      "variant": null
+    }
+  ],
+  "transformer": [
+    "diffusers",
+    "WanAnimate2Transformer3DModel",
+    {
+      "pretrained_model_name_or_path": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+      "revision": "refs/pr/1",
+      "subfolder": "transformer",
+      "type_hint": [
+        "diffusers",
+        "WanAnimate2Transformer3DModel"
+      ],
+      "variant": null
+    }
+  ],
+  "vae": [
+    "diffusers",
+    "AutoencoderKLWan",
+    {
+      "pretrained_model_name_or_path": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+      "revision": null,
+      "subfolder": "vae",
+      "type_hint": [
+        "diffusers",
+        "AutoencoderKLWan"
+      ],
+      "variant": null
+    }
+  ]
+}

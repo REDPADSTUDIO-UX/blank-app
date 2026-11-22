@@ -1,0 +1,17 @@
+{
+  "core/__init__.py": {
+    "bytes": 677,
+    "git_blob_sha1": "1f1868b0ee52fa0ac82fb0dc5399649ca6fc5f22",
+    "mode": "100644"
+  },
+  "core/base_inference_pipeline.py": {
+    "bytes": 342,
+    "git_blob_sha1": "8833cad934fcdaf54a932f72966ea4cb7a65a5e0",
+    "mode": "100644"
+  },
+  "setup.py": {
+    "bytes": 367,
+    "git_blob_sha1": "a0724d482bb678c1afb1f5b70923ab05d4d28b83",
+    "mode": "100644"
+  }
+}

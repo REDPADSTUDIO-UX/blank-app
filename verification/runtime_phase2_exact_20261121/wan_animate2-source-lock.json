@@ -1,0 +1,134 @@
+{
+  "core/__init__.py": {
+    "bytes": 677,
+    "sha256": "83dcd7e37a60eb2a83fb68ecd768b0c3c7e8041047f272dc93c980bb8c6e5b20"
+  },
+  "core/base_inference_pipeline.py": {
+    "bytes": 342,
+    "sha256": "2cf96d60e19b9aeef1acbe47dab203e4bf8b4a6441e666e0e897cfa02fd189fc"
+  },
+  "infer/wan_animate_2.yaml": {
+    "bytes": 2418,
+    "sha256": "746e96f463f72bf46e998a8b94b4208dd122b8b768c3b0daf5c0957791499849"
+  },
+  "infer/wan_animate_2_demo.py": {
+    "bytes": 5173,
+    "sha256": "cb2bb1fb28d4038ee272eb8fe2472d2aa79c732763e56e2b6fcd4c1c5f4f968c"
+  },
+  "infer/wan_animate_2_distillation.yaml": {
+    "bytes": 2432,
+    "sha256": "533b5b7a08a40fff4dfb58e495386f0936baa6d929074bf6c3380d724d0279e5"
+  },
+  "infer/wan_animate_2_gradio.py": {
+    "bytes": 6058,
+    "sha256": "677def5f7365cefa2542691d47a0b88fbe7bf57746c9f8f943e62d194b8d6cd2"
+  },
+  "infer/wan_animate_2_gradio_distillation.py": {
+    "bytes": 6071,
+    "sha256": "a8526b37b3b9346c19236000e3a2c369c316af3bbcdb8d2a5624ec31faaa13a1"
+  },
+  "pipelines/__init__.py": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pipelines/utils/__init__.py": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pipelines/utils/human_video_omni_utils.py": {
+    "bytes": 6015,
+    "sha256": "f508b8217ef75bec25bac7d4981561b9b4a750147896c9c0778e38e18eb50b6f"
+  },
+  "pipelines/utils/multiclip_utils.py": {
+    "bytes": 2460,
+    "sha256": "1c9c68d3e57e64170100e5937f1f7b9d8729eacddbcedd2b2fc22833ffc2ee1f"
+  },
+  "pipelines/utils/padding_resize2.py": {
+    "bytes": 2398,
+    "sha256": "04428ab932e3c5616898aa379ff4ed793c04d94def0f5a0120a9e40de7b36654"
+  },
+  "pipelines/utils/utils.py": {
+    "bytes": 6662,
+    "sha256": "6ad0b233e6447c480dc0b738ab81aa32a94758657250b49a311ae6ea68053941"
+  },
+  "pipelines/wan_animate_2_pipeline.py": {
+    "bytes": 31957,
+    "sha256": "cfd5862c192a1fdff725a108d004250487f9c489767bdcf563f4ee3b4c39be43"
+  },
+  "setup.py": {
+    "bytes": 367,
+    "sha256": "8583f650fe287241ad0dc99a5ab892210b3abc1dfcc9b234bfb869a68bb521ca"
+  },
+  "wanxiang/__init__.py": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "wanxiang/distributed/__init__.py": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "wanxiang/distributed/fsdp.py": {
+    "bytes": 1920,
+    "sha256": "35c9e78ecb09dc6d88c4aa2b906ca9aa6a0b5bd0a81561e757a6d2509849d391"
+  },
+  "wanxiang/eval_i2v.py": {
+    "bytes": 6196,
+    "sha256": "9c984ab7f830ff6a9a543073272a387d9fe4af95197c035fb3c4fc52d4ef985d"
+  },
+  "wanxiang/models/__init__.py": {
+    "bytes": 342,
+    "sha256": "d316ed50ba478bfaeb9d899b1a35ac4ecdb9ec1a205858579a99ca5ee458fda2"
+  },
+  "wanxiang/models/attention.py": {
+    "bytes": 5692,
+    "sha256": "a0a54f31746aeb8bd19f831546d0e916608605a6592c0abbb20779e22dc3daec"
+  },
+  "wanxiang/models/clip.py": {
+    "bytes": 20131,
+    "sha256": "a54553845f56f952be97499f46c396c5245825b88bf95be0ea0a54b0301481e5"
+  },
+  "wanxiang/models/t5.py": {
+    "bytes": 15379,
+    "sha256": "6a633dba544137ea2c7d6005509b007f56fb6f967955034fbdddd705d01f8315"
+  },
+  "wanxiang/models/vae.py": {
+    "bytes": 24721,
+    "sha256": "7b2501bab60d7340566b8b5bea6fdb6d935c70c85e4834938240ddead6bb36d1"
+  },
+  "wanxiang/models/wan_animate_2_model.py": {
+    "bytes": 34890,
+    "sha256": "241e4f9bdce80a812ba43e25cb5c31eb278c901ab9a878e1a7dce6a490f9d107"
+  },
+  "wanxiang/models/xlm_roberta.py": {
+    "bytes": 4732,
+    "sha256": "720ded20067db6f759928eaa805b7edf2303db051ef3300ebedf51195fa32ec0"
+  },
+  "wanxiang/ops/__init__.py": {
+    "bytes": 990,
+    "sha256": "52491a9764d0ae41ef3bbc6f346ccd0290c41155c8f8449110f86b41c6a202b8"
+  },
+  "wanxiang/ops/distributed.py": {
+    "bytes": 23686,
+    "sha256": "b951a393f63cc7bc55200ca3065a675beeffb694f4c8cfc2da6e3e7d3fcd10c4"
+  },
+  "wanxiang/utils/__init__.py": {
+    "bytes": 172,
+    "sha256": "95cc6d44cd895bc30b0e251a8f04ec623ad866ad887e1b31347037ed71536414"
+  },
+  "wanxiang/utils/fm_solvers.py": {
+    "bytes": 37355,
+    "sha256": "da6d63adf9337ccd30b03a8ecd60226579515bc5389db9b1a704ed71678d12d3"
+  },
+  "wanxiang/utils/tokenizers.py": {
+    "bytes": 2413,
+    "sha256": "5b998e6d453b3526e5905e6daec2fbd9ae250bf47fbf4d724d91c27479c4d67e"
+  },
+  "wanxiang/utils/utils.py": {
+    "bytes": 7582,
+    "sha256": "16b9fc1ad863b119ee6f42f528323880a5276d2fff7a038c32f3691871350e18"
+  },
+  "wanxiang/wanxiang_animate_2_arch.py": {
+    "bytes": 854,
+    "sha256": "0cf60e8583d511924e69a507f2144186bd5d3fe7ee38563e7c930ef9f47224c3"
+  }
+}

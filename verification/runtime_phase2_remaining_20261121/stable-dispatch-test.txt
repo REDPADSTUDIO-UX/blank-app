@@ -1,0 +1,6 @@
+test_stable_audio_native_dispatch_uses_the_existing_audio_entrypoint (tests.test_native_local_execution.NativeLocalTests.test_stable_audio_native_dispatch_uses_the_existing_audio_entrypoint) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.025s
+
+OK

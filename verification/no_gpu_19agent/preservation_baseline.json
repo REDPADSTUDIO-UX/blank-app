@@ -1,0 +1,29 @@
+{
+  "checkpoint": "8741ad26ccd76a6d855b3c4b7c0bdf39dfb9e187",
+  "director_sha256": "65ad67525a4dfb6a93fc298e10b77a2e2a8e8154ba6ede6f0a472abe1dfcbfec",
+  "script_sha256": "8550d60977f1e35f7a0e2f6a7f112bce14bbd71bc90efac47a843a1c978f4885",
+  "profiles_sha256": "f5e93d4a0640f57615416889b30dcc49f80cfc6c60c1824c837456ae82a66870",
+  "agent_keys": [
+    "director",
+    "qc",
+    "story",
+    "script",
+    "character",
+    "art",
+    "location",
+    "costume",
+    "storyboard",
+    "performance",
+    "cinematographer",
+    "motion",
+    "video",
+    "voice",
+    "continuity",
+    "music",
+    "editing",
+    "production_manager",
+    "growth",
+    "youtube",
+    "casting"
+  ]
+}

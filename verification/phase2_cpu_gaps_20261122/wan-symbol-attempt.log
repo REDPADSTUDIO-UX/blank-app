@@ -1,0 +1,20 @@
+The config attributes {'image_processor': ['transformers', 'CLIPImageProcessor']} were passed to WanAnimate2Pipeline, but are not expected and will be ignored. Please verify your model_index.json configuration file.
+The config attributes {'image_processor': ['transformers', 'CLIPImageProcessor']} were passed to WanAnimate2Pipeline, but are not expected and will be ignored. Please verify your model_index.json configuration file.
+Keyword arguments {'image_processor': ['transformers', 'CLIPImageProcessor']} are not expected by WanAnimate2Pipeline and will be ignored.
+PASS config extraction ignores image_processor
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 7084.97it/s]
+The config attributes {'image_processor': ['transformers', 'CLIPImageProcessor']} were passed to WanAnimate2Pipeline, but are not expected and will be ignored. Please verify your model_index.json configuration file.
+Keyword arguments {'image_processor': <object object at 0x7fd8515c3120>} are not expected by WanAnimate2Pipeline and will be ignored.
+PASS exact loader requests only constructor components {"image_encoder": ["transformers", "CLIPVisionModel"], "scheduler": ["diffusers", "FlowMatchEulerDiscreteScheduler"], "text_encoder": ["transformers", "UMT5EncoderModel"], "tokenizer": ["transformers", "T5TokenizerFast"], "transformer": ["diffusers", "WanAnimate2Transformer3DModel"], "vae": ["diffusers", "AutoencoderKLWan"]}
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 20020.54it/s]
+The config attributes {'image_processor': ['transformers', 'CLIPImageProcessor']} were passed to WanAnimate2Pipeline, but are not expected and will be ignored. Please verify your model_index.json configuration file.
+Keyword arguments {'image_processor': ['transformers', 'CLIPImageProcessor']} are not expected by WanAnimate2Pipeline and will be ignored.
+PASS explicit processor override ignored
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 18509.73it/s]
+PASS required scheduler omission rejected
+PASS exact encode_image default equals pinned CLIP preprocessing for synthetic RGB image
+Traceback (most recent call last):
+  File "/diagnostic/wan_loader_fixture.py", line 93, in <module>
+    assert getattr(importlib.import_module(spec[0]), spec[1]).__name__ == spec[1]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

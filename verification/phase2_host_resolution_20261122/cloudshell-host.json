@@ -1,0 +1,28 @@
+{
+  "task_dir": "/tmp/redpad-phase2-9gk9fe38",
+  "python": "/tmp/redpad-phase2-9gk9fe38/bootstrap/bin/python3.12",
+  "kernel_log_sha256": "cf41a7c790cccd23691269ad531fe96684e16020d49eba1bbd8d786d338bde61",
+  "kernel_checks": {
+    "PASS A private read": 2,
+    "PASS B read-only": 2,
+    "PASS C writable": 2,
+    "PASS D network": 2,
+    "PASS E timeout": 2,
+    "PASS E cancel": 2,
+    "PASS E controller_loss": 2,
+    "PASS F synthetic launch boundary: native_local_worker": 1,
+    "PASS F synthetic launch boundary: shared_model_worker": 1
+  },
+  "all_required_checks_passed": true,
+  "python_version": "3.12.3",
+  "pip_available": true,
+  "uv": "/usr/local/bin/uv",
+  "cpu_count": 2,
+  "free_disk_bytes": 10530091008,
+  "ram_total_kib": "8134096",
+  "api_credentials_authorized": false,
+  "provisioning": "Provider UI stated Cloud Shell is free; no billing/project activation",
+  "gpu": false,
+  "private_source_transferred": false,
+  "host_is_private_account_shell": true
+}

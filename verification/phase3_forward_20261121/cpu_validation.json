@@ -1,0 +1,62 @@
+{
+  "source_commit": "e39752502f7de12777ff44e461cfd07ab0419f19",
+  "source_blob_sha1": {
+    "technical_validation": "c6ddb8960d4f7738fef0893da9bbcd6251bff969",
+    "parser": "7110c79931c711f637be713c1d56ec53f654ecb3"
+  },
+  "method": "Only original pure parser+technical_validation AST nodes executed; no package initialization or model access",
+  "actual_new_outputs_validated": [
+    {
+      "case": "multi_agent_delegation",
+      "raw_http_hash_payload_checks": "PASS",
+      "validation": {
+        "json_valid": true,
+        "technical_pass": true,
+        "generation_complete": true,
+        "quote_findings": [],
+        "artistic_scores": null,
+        "human_review": "pending",
+        "professional_accepted": false,
+        "contract_fields_valid": true,
+        "contract_field_types_valid": true
+      },
+      "finish_reason": "stop",
+      "prompt_tokens": 417,
+      "output_tokens": 874,
+      "generation_seconds": 26.269519985000443,
+      "raw_sha256": "138a0ad98f57cd084b2c84ff62cd54e07281b7aed1ed203f4a9ee15161a4441b"
+    },
+    {
+      "case": "emotional_confrontation",
+      "raw_http_hash_payload_checks": "PASS",
+      "validation": {
+        "json_valid": false,
+        "technical_pass": false,
+        "generation_complete": false,
+        "quote_findings": [],
+        "artistic_scores": null,
+        "human_review": "pending",
+        "professional_accepted": false
+      },
+      "finish_reason": "length",
+      "prompt_tokens": 395,
+      "output_tokens": 1024,
+      "generation_seconds": 33.165562086000136,
+      "raw_sha256": "f419462ed6200748f28a41cba8bb05e93b9a93490bcf8003960367b862a20f83"
+    }
+  ],
+  "new_evidence_checks": {
+    "pinned_source_blob_hashes": "PASS",
+    "raw_http_content_and_payload_identity": "PASS",
+    "pending_human_artistic_gates_preserved": "PASS",
+    "no_generation_during_token_preflight": "PASS",
+    "story_budget_and_worker_cleanup": "PASS"
+  },
+  "old_test_suites_rerun": false,
+  "gpu_or_inference_this_cpu_check": false,
+  "new_independent_model_calls": 2,
+  "new_story_model_calls": 0,
+  "story_consumed": 9,
+  "story_ceiling": 11,
+  "romantic_case": "NOT SUBMITTED after emotional length termination"
+}

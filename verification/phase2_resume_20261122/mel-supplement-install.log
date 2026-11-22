@@ -1,0 +1,7 @@
+Looking in links: /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/cloudpickle-3.1.3-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-supplement.lock (line 1))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/msgpack-1.2.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-supplement.lock (line 2))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/narwhals-2.29.0-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-supplement.lock (line 3))
+Installing collected packages: narwhals, msgpack, cloudpickle
+
+Successfully installed cloudpickle-3.1.3 msgpack-1.2.4 narwhals-2.29.0

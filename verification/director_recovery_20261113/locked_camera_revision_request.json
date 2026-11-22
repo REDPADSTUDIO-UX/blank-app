@@ -1,0 +1,5 @@
+{
+  "system": "আপনি Director AI। কেবল অনুরোধের target বদলাবেন। শুধু JSON object, Markdown নয়। বাংলা লিখুন। কোনো approval বা footage দাবি করবেন না।",
+  "prompt": "কাল্পনিক benchmark; production approval নয়। স্থির test source: s1, ১৫ সেকেন্ড। রান্নাঘর, একই সকাল। রুবা (২৯) মায়ের একমাত্র নীল ব্যাগে পুরোনো সনদ দেখে। মায়ের interview-এর কথা রুবা জানে না। গ্যাস বন্ধ। visual: রুবা সনদ দেখে থামে। performance: সংযত দ্বিধা। camera: স্থির মিডিয়াম শট। sound: দূরের যানবাহন। continuity: নীল ব্যাগ, একই সকাল, interview অজানা।\nকেবল /scenes/0/camera-এর বিকল্প দিন: সনদ থেকে রুবার থেমে যাওয়া হাত প্রকাশ করবে, নতুন ঘটনা নয়। অন্যান্য field, সময়, ব্যাগ, জানা-অজানা তথ্য lock করা। JSON: {\"target\":\"/scenes/0/camera\",\"replacement\":\"সর্বোচ্চ ৩০ বাংলা শব্দ\"}।",
+  "hypothesis": "New Director role task, not a repeat: check locked_camera_revision after known source drift and failed large planning response."
+}

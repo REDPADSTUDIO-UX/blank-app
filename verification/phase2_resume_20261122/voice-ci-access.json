@@ -1,0 +1,10 @@
+{
+  "exact_source_anonymous_HEAD": {
+    "indic_speak": 401,
+    "indicf5": 401
+  },
+  "authenticated_browser_source_review": "PASS 18 exact matching source files",
+  "private_gated_source_sent_to_public_ci": false,
+  "secure_source_startup": "BLOCKED \u2014 legitimate authenticated source transfer to a namespace-capable authorized host required",
+  "license_terms_bypassed": false
+}

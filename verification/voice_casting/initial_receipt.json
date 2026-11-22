@@ -1,0 +1,22 @@
+{
+  "selected": [
+    "tests.test_voice_casting_integration.VoiceCastingTests",
+    "tests.test_producer_control.ProducerTests.test_casting_cannot_bypass_director_qc_or_identity_rights",
+    "tests.test_producer_control.ProducerTests.test_casting_lock_costume_consumption_and_reference_replacement_stales",
+    "tests.test_producer_control.ProducerTests.test_wrong_actor_unexplained_hair_change_and_portrait_acting_rejected",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_parler_and_stable_audio_prepare_only_their_existing_local_payloads",
+    "tests.test_native_local_execution.NativeLocalTests.test_actual_running_dummy_is_cancelled_from_restarted_service",
+    "tests.test_native_local_execution.NativeLocalTests.test_isolated_child_environment_does_not_inherit_provider_tokens_or_proxies"
+  ],
+  "tests": 30,
+  "errors": 1,
+  "failures": 0,
+  "requests_import_only_shim": true,
+  "gpu": false,
+  "model_inference": false,
+  "weights_read_loaded_downloaded": false,
+  "hosted_paid_calls": false,
+  "license_acceptance": false,
+  "actual_human_voice_or_artistic_review": false,
+  "scope": "manual software fixtures and injected classes only; any process recheck is the existing fixed CPU dummy, not native model inference"
+}

@@ -1,0 +1,22 @@
+{
+  "approved_model_file": {
+    "bytes": null,
+    "exists": false
+  },
+  "approved_model_hf_cache": [],
+  "disk": {
+    "free": 115553210368,
+    "total": 115658190848,
+    "used": 88203264
+  },
+  "downloads": 0,
+  "gpu_query": null,
+  "kind": "current_runtime_read_only_NOT_inference",
+  "meminfo": [
+    "MemTotal: 13286932 kB",
+    "MemAvailable: 11995996 kB"
+  ],
+  "model_inferences": 0,
+  "nvidia_smi_present": false,
+  "verified_runtime_exists": false
+}

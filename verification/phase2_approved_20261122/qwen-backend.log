@@ -1,0 +1,8 @@
+test_exact_guard_fallback_is_rejected (__main__.TestBackend.test_exact_guard_fallback_is_rejected) ... [transformers] FP8 quantized models is only supported on GPUs with compute capability >= 8.9 (e.g 4090/H100), actual = `8.6`. We will default to dequantizing the model to bf16. Feel free to use a different quantization method like bitsandbytes or torchao
+ok
+test_exact_guard_passes_with_supported_mock (__main__.TestBackend.test_exact_guard_passes_with_supported_mock) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK

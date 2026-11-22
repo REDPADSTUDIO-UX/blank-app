@@ -1,0 +1,3 @@
+Using Python 3.11.18 environment at: /tmp/redpad-exact/ace-env
+Checked 51 packages in 0.88ms
+All installed packages are compatible

@@ -1,0 +1,87 @@
+{
+  "cpu_native_torchvision_nms": true,
+  "cpu_torchaudio_resample": true,
+  "exact_ltx_pipeline_imported": false,
+  "executable": "/tmp/redpad-remain/ltx-targeted/bin/python",
+  "imports": {
+    "accelerate": {
+      "passed": true
+    },
+    "av": {
+      "passed": true
+    },
+    "einops": {
+      "passed": true
+    },
+    "safetensors.torch": {
+      "passed": true
+    },
+    "scipy": {
+      "passed": true
+    },
+    "torch": {
+      "passed": true
+    },
+    "torchaudio": {
+      "passed": true
+    },
+    "torchvision": {
+      "passed": true
+    },
+    "transformers:Gemma4UnifiedProcessor": {
+      "passed": true
+    }
+  },
+  "packages": {
+    "Jinja2": "3.1.6",
+    "MarkupSafe": "3.0.3",
+    "PyYAML": "6.0.4",
+    "Pygments": "2.21.0",
+    "accelerate": "1.16.0",
+    "annotated-doc": "0.0.7",
+    "annotated-types": "0.8.0",
+    "anyio": "4.16.0",
+    "av": "18.1.1",
+    "certifi": "2026.11.20",
+    "click": "8.5.1",
+    "einops": "0.8.2",
+    "filelock": "4.2.4",
+    "fsspec": "2026.9.0",
+    "h11": "0.16.0",
+    "hf-xet": "1.8.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "huggingface_hub": "1.33.0",
+    "idna": "3.20",
+    "markdown-it-py": "4.3.0",
+    "mdurl": "0.1.2",
+    "mpmath": "1.3.0",
+    "networkx": "3.6.1",
+    "numpy": "2.4.6",
+    "packaging": "26.3",
+    "pillow": "13.0.0",
+    "psutil": "7.2.2",
+    "pydantic": "2.14.4",
+    "pydantic_core": "2.50.5",
+    "regex": "2026.11.19",
+    "rich": "15.0.0",
+    "safetensors": "0.8.0",
+    "scipy": "1.17.1",
+    "shellingham": "1.5.4",
+    "sympy": "1.14.0",
+    "tokenizers": "0.22.2",
+    "torch": "2.7.1+cpu",
+    "torchaudio": "2.7.1+cpu",
+    "torchvision": "0.22.1+cpu",
+    "tqdm": "4.70.1",
+    "transformers": "5.14.1",
+    "typer": "0.29.2",
+    "typing-inspection": "0.4.5",
+    "typing_extensions": "4.16.0"
+  },
+  "prefix": "/tmp/redpad-remain/ltx-targeted",
+  "pyav_synthetic_pcm_roundtrip": true,
+  "python": "3.11.18 (main, Oct 26 2026, 14:05:07) [Clang 23.1.3 ]",
+  "run_in_kernel_sandbox": false,
+  "weights_loaded": false
+}

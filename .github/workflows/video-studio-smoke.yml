@@ -1,0 +1,260 @@
+name: Video Studio smoke test
+
+on:
+  push:
+    branches:
+      - feature/video-music-editing-studio
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      kernel_phase1:
+        description: Run only the synthetic Linux kernel isolation verification
+        type: boolean
+        default: false
+      runtime_phase2:
+        description: Run model-free CPU runtime and offline ABI verification
+        type: boolean
+        default: false
+
+      runtime_phase2_stable:
+        description: Verify only the new Stable Audio CPU stack
+        type: boolean
+        default: false
+
+      runtime_phase2_ltx:
+        description: Verify only the exact LTX source CPU imports
+        type: boolean
+        default: false
+
+      runtime_phase2_ace:
+        description: Verify only the exact ACE-Step CPU source imports
+        type: boolean
+        default: false
+      runtime_phase2_wan:
+        description: Verify only the exact Wan Animate CPU source import
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  video-smoke-test:
+    if: ${{ !contains(github.event.head_commit.message, '[phase2-runtime-only]') && !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Test agent registry, contracts and Control Center (offline)
+        run: python -m unittest tests.test_agents tests.test_agents_ui tests.test_director tests.test_director_ui tests.test_agent_foundation tests.test_agent_execution_ui tests.test_creative tests.test_creative_ui -v
+
+      - name: Check current registry, implementation matrix and QC coverage (offline)
+        run: |
+          python -m experiments.export_agent_matrix --check
+          python -m unittest tests.test_agent_reporting -v
+
+      - name: Test isolated worker lifecycle and pre-GPU fixtures (CPU only)
+        run: python -m unittest -v tests.test_worker_isolation tests.test_native_local_execution tests.test_pre_gpu_completion
+
+      - name: Compile app and video module
+        run: python -m compileall -q streamlit_app.py redpad_video_studio.py redpad_pipeline
+
+      - name: Render and validate a demo MP4
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          from redpad_video_studio import ffmpeg_binary, render_mp4
+
+          ff = ffmpeg_binary()
+          assert ff, "FFmpeg is unavailable"
+          output_dir = Path("ci_artifacts")
+          output_dir.mkdir(exist_ok=True)
+          mp4 = output_dir / "redpad-video-demo.mp4"
+          result = render_mp4("CI horror demo", "A short Bengali video studio test", mp4, portrait=True)
+          assert mp4.is_file() and mp4.stat().st_size > 3000, "MP4 missing or empty"
+          assert result["seconds"] == 30.0, "Unexpected duration"
+          assert not result["voice"], "Test should not require narration credentials"
+          inspection = subprocess.run([ff, "-hide_banner", "-i", str(mp4)], text=True, capture_output=True, timeout=30)
+          assert "Video:" in inspection.stderr and "Audio:" in inspection.stderr, "Missing MP4 video or audio"
+          print("PASS: 30-second demo video and soundtrack encoded", mp4.stat().st_size, "bytes")
+          PY
+
+      - name: Test Streamlit app and Video Studio UI
+        run: python tests/smoke_streamlit_ui.py
+
+      - name: Test narration mixing and duration validation
+        run: python tests/test_renderer.py
+
+      - name: Test production providers, paid-call guards, checkpoints and real editing
+        run: python tests/test_production_pipeline.py
+
+      - name: Test multi-model selection and budget controls (offline)
+        run: python -m unittest tests/test_multi_model.py -v
+
+      - name: Test private Render dashboard login
+        run: python tests/test_private_preview.py
+
+      - name: Test production UI and bilingual approval integration
+        run: python tests/test_production_ui.py
+
+      - name: Test offline Marketing Growth Engine approvals and analytics
+        run: python -m unittest tests.test_marketing -v
+
+      - name: Test marketing dashboards and public preview
+        run: python tests/test_marketing_ui.py
+
+      - name: Verify SQLite and media backup with isolated restore (test data only)
+        run: python -m unittest tests.test_backup -v
+
+      - name: Test offline Storyboard Studio versioning, sketches and approval
+        run: python tests/test_storyboard.py
+
+      - name: Render approved storyboard to an offline MP4 with Bangla captions
+        run: python tests/test_storyboard_render.py
+
+      - name: Verify approved storyboard to Live AI scene plans and image-to-video mocks
+        run: python -m unittest tests/test_storyboard_live.py -v
+
+      - name: Test YouTube OAuth, approval and scheduling without Google requests
+        run: python tests/test_youtube.py
+
+      - name: Test YouTube Connect dashboard with a real offline MP4
+        run: python tests/test_youtube_ui.py
+
+      - name: Save demo MP4 for download
+        uses: actions/upload-artifact@v6
+        with:
+          name: redpad-video-demo
+          path: |
+            ci_artifacts/*.mp4
+            ci_artifacts/*.srt
+          if-no-files-found: error
+          retention-days: 7
+
+  browser-smoke-test:
+    if: ${{ !contains(github.event.head_commit.message, '[phase2-runtime-only]') && !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
+    # Match the pinned browser runtime to a supported OS, rather than moving latest.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install app and browser test dependencies
+        run: |
+          python -m pip install -r requirements.txt playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Test real browser UI without secrets or paid requests
+        run: python tests/browser_smoke.py
+      - name: Save actual dashboard screenshots and downloaded mock MP4
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: redpad-browser-preview
+          path: ci_artifacts/
+          if-no-files-found: warn
+          retention-days: 7
+
+  kernel-phase1:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+      - name: Inspect runner and install Bubblewrap from Ubuntu packages
+        run: |
+          set -eux
+          uname -srmo
+          cat /etc/os-release
+          findmnt -n -o TARGET,OPTIONS -T /proc/self/uid_map
+          sysctl user.max_user_namespaces user.max_mnt_namespaces user.max_net_namespaces user.max_pid_namespaces
+          grep -E '^(Cap(Inh|Prm|Eff|Bnd|Amb)|NoNewPrivs|Seccomp):' /proc/self/status
+          for policy in /proc/sys/kernel/apparmor_restrict_unprivileged_userns /proc/sys/kernel/unprivileged_userns_clone; do
+            if test -r "$policy"; then printf '%s: ' "$policy"; cat "$policy"; fi
+          done
+          sudo -n apt-get update
+          apt-cache policy bubblewrap
+          sudo -n apt-get install -y --no-install-recommends bubblewrap
+          dpkg-query -W bubblewrap
+          /usr/bin/bwrap --version
+      - name: Run synthetic kernel canaries as the runner user
+        run: |
+          id
+          set +e
+          python verification/kernel_phase1_20261121/probe.py
+          result=$?
+          printf 'Phase 1 probe exit code: %s\n' "$result"
+          exit "$result"
+
+  runtime-phase2:
+    if: ${{ github.event_name == 'workflow_dispatch' && (inputs.runtime_phase2 || inputs.runtime_phase2_stable) && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        family: ${{ fromJSON(inputs.runtime_phase2_stable && '["stable"]' || '["media","speech","modern"]') }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ inputs.runtime_phase2_stable && '3.10' || '3.11' }}
+      - name: Install host sandbox and locked CPU packages
+        env:
+          FAMILY: ${{ matrix.family }}
+        run: |
+          set -eux
+          uname -srmo
+          sudo -n apt-get update
+          sudo -n apt-get install -y --no-install-recommends bubblewrap
+          bwrap --version
+          bash verification/runtime_phase2_20261121/install-prefix.sh "$FAMILY" "$RUNNER_TEMP/phase2-$FAMILY"
+      - name: Verify real runtime startup inside the production sandbox
+        env:
+          FAMILY: ${{ matrix.family }}
+        run: |
+          set -eux
+          python -B verification/runtime_phase2_20261121/sandbox_probe.py "$FAMILY" "$RUNNER_TEMP/phase2-$FAMILY"
+
+  runtime-phase2-ltx:
+    if: ${{ github.event_name == 'workflow_dispatch' && (inputs.runtime_phase2_ltx || inputs.runtime_phase2_ace || inputs.runtime_phase2_wan) }}
+    env:
+      EXACT_PROFILE: ${{ inputs.runtime_phase2_ace && 'ace15' || inputs.runtime_phase2_wan && 'wan_animate2' || 'ltx25' }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Materialize locked packages and pinned Python source
+        run: |
+          set -eux
+          sudo -n apt-get update
+          sudo -n apt-get install -y --no-install-recommends bubblewrap
+          bash verification/runtime_phase2_20261121/install-prefix.sh "$EXACT_PROFILE" "$RUNNER_TEMP/exact-runtime"
+          python verification/runtime_phase2_exact_20261121/fetch-source.py "$EXACT_PROFILE" "$RUNNER_TEMP/exact-source" > "$RUNNER_TEMP/source-lock.json"
+          cmp "$RUNNER_TEMP/source-lock.json" "verification/runtime_phase2_exact_20261121/$EXACT_PROFILE-source-lock.json"
+      - name: Import pinned entrypoints in the production sandbox
+        run: |
+          set -eux
+          python -B verification/runtime_phase2_exact_20261121/sandbox.py "$EXACT_PROFILE" "$RUNNER_TEMP/exact-runtime" "$RUNNER_TEMP/exact-source"

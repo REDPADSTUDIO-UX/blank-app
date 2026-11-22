@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "Two actual historical calls leave five, not seven",
+    "Sixth new call rejected before process creation",
+    "Submitted ID cannot be retried",
+    "Historical ledger reset rejected"
+  ],
+  "distinct_checks": 4,
+  "passed": 4,
+  "scope": "New research runner guard functions only; no GPU/model/network; prior engineering tests not rerun"
+}

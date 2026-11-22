@@ -1,0 +1,56 @@
+{
+  "cuda_device": false,
+  "torch_installed": false,
+  "ollama_executable": false,
+  "local_models": [],
+  "local_probe": "Not requested",
+  "inference_verified": false,
+  "large_downloads": false,
+  "paid_fallback": false,
+  "cpu_arch": "x86_64",
+  "logical_cpus": 9,
+  "ram_bytes": 10451427328,
+  "disk_free_bytes": 59974774784,
+  "runtimes": {
+    "ollama": false,
+    "llama-cli": false,
+    "nvidia-smi": false,
+    "ffmpeg": true,
+    "ffprobe": true
+  },
+  "modules": {
+    "torch": false,
+    "transformers": false,
+    "diffusers": false,
+    "llama_cpp": false,
+    "streamlit": true,
+    "huggingface_hub": true
+  },
+  "device": "CPU only",
+  "model_weights_present": true,
+  "remote_inference": false,
+  "weight_filenames": [],
+  "development_ollama_installed": true,
+  "local_model_manifests": [
+    {
+      "name": "registry.ollama.ai/library/qwen3/4b-instruct-2507-q4_K_M",
+      "manifest_sha256": "6214d088d3846e16c9fe00adcbabdbfddc61ce4a70daacc46cb2310c38603054",
+      "all_blobs_present": true
+    }
+  ],
+  "python_version": "3.12.14",
+  "package_versions": {
+    "torch": null,
+    "transformers": null,
+    "diffusers": null,
+    "streamlit": "1.67.0",
+    "huggingface_hub": "0.36.2"
+  },
+  "available_ram_bytes": 9007693824,
+  "svd_preflight": {
+    "ready": false,
+    "reason": "Local SVD-XT checkpoint is not configured. No download or API request was made."
+  },
+  "gpu_vram_bytes": null,
+  "limits": "CPU/RAM/disk availability only; CUDA device nodes are not a driver/VRAM validation. Model serving memory and Bangla quality unmeasured."
+}

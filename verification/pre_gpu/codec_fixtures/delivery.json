@@ -1,0 +1,108 @@
+{
+  "scope": "Synthetic codec-only canary, NOT neural footage/voice/music or finished episode. All review actions simulated.",
+  "result": {
+    "path": "deliveries/1e098540c21a43bdbb995491560e137f/review.mp4",
+    "model": "none — receipt-bound FFmpeg assembly",
+    "actual_generation": true,
+    "metadata": {
+      "state": "technical_output_validated",
+      "editing_task": "cde3b8b22395452e9cf25e6104021954",
+      "editing_body_sha256": "ed4209f3a03562b7ee5387cb3891da81718bfae530b51698a2adfe541c9910e2",
+      "receipts": {
+        "codec_canary/SYNTHETIC_PATTERN.mp4": "3ea48297e9f01561d0116e580251253d61b4a1f4a49c86b93bbbf54f412afa0b",
+        "codec_canary/SYNTHETIC_SILENCE.wav": "8dc562ad6035b6411755d06ab28e6c50d4fff92dff3bddb61491375f6ff2f00c"
+      },
+      "input_hashes": {
+        "codec_canary/SYNTHETIC_PATTERN.mp4": "d33dacfdcc2028ab7bfdac28711d5da19078014ddb7cf173c5eee0a841c41b19",
+        "codec_canary/SYNTHETIC_SILENCE.wav": "78f82cd49af869013e8ec414a15d71f5f4f2ec8d006b6a0c50527c91eaa7a85f"
+      },
+      "evaluation_only": true,
+      "actual_neural_inference": false,
+      "professional_quality_verified": false,
+      "human_review_completed": false,
+      "output": "deliveries/1e098540c21a43bdbb995491560e137f/review.mp4",
+      "output_sha256": "9aa38c9e86a16c9876a9840d2effb9b2c5abbaab6f1d4bed26c005808d5259f7",
+      "inspection": {
+        "path": "deliveries/1e098540c21a43bdbb995491560e137f/review.mp4",
+        "sha256": "9aa38c9e86a16c9876a9840d2effb9b2c5abbaab6f1d4bed26c005808d5259f7",
+        "duration": 18.0,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "sample_rate": "48000"
+          }
+        ],
+        "actual_generation": false,
+        "model": "none — local ffprobe inspection",
+        "creative_quality_verified": false
+      },
+      "subtitles": "dialogue.srt",
+      "subtitle_embedding": false,
+      "wall_seconds": 5.68
+    }
+  },
+  "source_receipts": {
+    "video": {
+      "path": "codec_canary/SYNTHETIC_PATTERN.mp4",
+      "sha256": "d33dacfdcc2028ab7bfdac28711d5da19078014ddb7cf173c5eee0a841c41b19",
+      "inspection": {
+        "path": "codec_canary/SYNTHETIC_PATTERN.mp4",
+        "sha256": "d33dacfdcc2028ab7bfdac28711d5da19078014ddb7cf173c5eee0a841c41b19",
+        "duration": 2.0,
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "h264",
+            "width": 256,
+            "height": 144
+          }
+        ],
+        "actual_generation": false,
+        "model": "none — local ffprobe inspection",
+        "creative_quality_verified": false
+      },
+      "owner": "SIMULATED engineering fixture",
+      "rights": "Original procedural gray codec test, not cinematic footage",
+      "origin": "manually_authored_fixture",
+      "source": null,
+      "model_metadata": {},
+      "professional_quality_verified": false,
+      "human_artistic_review_completed": false
+    },
+    "audio": {
+      "path": "codec_canary/SYNTHETIC_SILENCE.wav",
+      "sha256": "78f82cd49af869013e8ec414a15d71f5f4f2ec8d006b6a0c50527c91eaa7a85f",
+      "inspection": {
+        "path": "codec_canary/SYNTHETIC_SILENCE.wav",
+        "sha256": "78f82cd49af869013e8ec414a15d71f5f4f2ec8d006b6a0c50527c91eaa7a85f",
+        "duration": 2.0,
+        "streams": [
+          {
+            "codec_type": "audio",
+            "codec_name": "pcm_s16le",
+            "sample_rate": "8000"
+          }
+        ],
+        "actual_generation": false,
+        "model": "none — local ffprobe inspection",
+        "creative_quality_verified": false
+      },
+      "owner": "SIMULATED engineering fixture",
+      "rights": "Original digital silence fixture, not speech/music",
+      "origin": "manually_authored_fixture",
+      "source": null,
+      "model_metadata": {},
+      "professional_quality_verified": false,
+      "human_artistic_review_completed": false
+    }
+  },
+  "new_real_model_calls": 0,
+  "human_artistic_reviews": 0
+}

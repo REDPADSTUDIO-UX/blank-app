@@ -1,0 +1,75 @@
+{
+  "name": "trial_dialogue_revision",
+  "agent": "script",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "device": "CPU",
+  "request": {
+    "agent": "script",
+    "instructions": "আগের সংলাপের “বাবার চোখে দেখি না” অর্থহীন এবং নাস্তার প্রসঙ্গ হারিয়েছে। কেবল দুই লাইন নতুন করে লিখুন: মা ছেলেকে আরেকটা পরোটা দিতে চাইছেন; ছেলে অফিসে দেরি হচ্ছে বলে মায়ের বাড়তি যত্ন নিয়ে আদরভরা হালকা রসিকতা করে। বাবা, মৃত্যু, অনুপস্থিত আত্মীয় বা নতুন তথ্য আনবেন না। স্বাভাবিক কথ্য বাংলাদেশি বাংলা; জোর করে punchline নয়। Return {\"dialogue\":[{\"speaker\":\"মা\",\"text\":str},{\"speaker\":\"ছেলে\",\"text\":str}]}.",
+    "brief": null,
+    "experimental_source": {
+      "dialogue": [
+        {
+          "speaker": "মা",
+          "text": "আজ কে বাড়িতে আসবে তুমি বলো, বাবা আজ বাড়ি ফেরে না।"
+        },
+        {
+          "speaker": "ছেলে",
+          "text": "হ্যাঁ, আমি আসব না, কারণ আমি বাবার চোখে দেখি না।"
+        }
+      ]
+    },
+    "targets": null
+  },
+  "prompt_sha256": "058c8366f934b3ade724952774d2527b62578c5c7717e22f61ee0a93b76cbdca",
+  "raw": "{\"dialogue\":[{\"speaker\":\"মা\",\"text\":\"ছেলে, আজ কে বাড়িতে আসবে তুমি বলো, বাবা আজ বাড়ি ফেরে না।\"},{\"speaker\":\"ছেলে\",\"text\":\"হ্যাঁ, আমি আসব না, কারণ মা ছেলেকে আরেকটা পরোটা দিতে চাইছেন; আমি অফিসে দেরি হচ্ছে বলে মা এর বাড়তি যত্ন নি uninterrupted আদরভরা হালকা রসিকতা করে।\"}]}",
+  "result": {
+    "dialogue": [
+      {
+        "speaker": "মা",
+        "text": "ছেলে, আজ কে বাড়িতে আসবে তুমি বলো, বাবা আজ বাড়ি ফেরে না।"
+      },
+      {
+        "speaker": "ছেলে",
+        "text": "হ্যাঁ, আমি আসব না, কারণ মা ছেলেকে আরেকটা পরোটা দিতে চাইছেন; আমি অফিসে দেরি হচ্ছে বলে মা এর বাড়তি যত্ন নি uninterrupted আদরভরা হালকা রসিকতা করে।"
+      }
+    ]
+  },
+  "error": "",
+  "state": "Micro-contract valid; experimental candidate, not production contract approval",
+  "validation": {
+    "scope": "CPU micro-benchmark only; artistic merit unverified",
+    "production_approved": false
+  },
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.4,
+      "num_predict": 256,
+      "num_ctx": 4096,
+      "seed": 42
+    },
+    "inference_completed": true,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 218,
+    "eval_duration_ns": 18221814000,
+    "prompt_eval_count": 631,
+    "prompt_eval_duration_ns": 8797770000,
+    "load_duration_ns": 921260,
+    "total_duration_ns": 27156841544,
+    "finish_reason": "stop",
+    "wall_seconds": 27.16,
+    "raw_sha256": "a4ea74cd09cd25703e963f4f5d43acf808e05a9c6a94166ec93652463ef4d9b8"
+  },
+  "wall_seconds": 27.161,
+  "aggregate_process_peak_rss_bytes": 4537593856,
+  "memory_note": "Sampled aggregate RSS of caller and descendant server/runner, not unique model allocation",
+  "provenance": "local_inference",
+  "source_approval": "Unapproved research candidate only",
+  "production_approved": false,
+  "independent_human_review": false
+}

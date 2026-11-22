@@ -1,0 +1,63 @@
+{
+  "reviewer": "Codex assistant — model-based editorial inspection, not independent human review",
+  "scores": null,
+  "owner_approval": false,
+  "findings": [
+    {
+      "category": "Unicode identity preservation",
+      "status": "specific technical improvement verified",
+      "before": "control_probe.json",
+      "after": "nfc_control_probe.json",
+      "evidence_before": "তানি<tool_call>া",
+      "evidence_after": "তানিয়া",
+      "assessment": "Canonical-equivalent input fixed the exact-name copy in one paired controlled test. This does not establish general dramatic quality."
+    },
+    {
+      "category": "Causal story logic",
+      "status": "not accepted",
+      "source": "trial_story_nfc.json",
+      "quote": "রাশেদ অফিসে পৌঁছায় এবং কাজের কাজ শুরু করে।",
+      "assessment": "Repetitive phrasing and weak causal links remain. Umbrella possession and travel are not made sufficiently clear for the requested relatable family scene."
+    },
+    {
+      "category": "Natural Bengali dialogue and humor",
+      "status": "not accepted",
+      "source": "trial_dialogue_nfc.json",
+      "quote": "হ্যাঁ, আমি আসব না, কারণ আমি বাবার চোখে দেখি না।",
+      "assessment": "The requested breakfast/paratha situation and affectionate wit are not conveyed; the meaning remains unclear after revision."
+    },
+    {
+      "category": "Scene/location language",
+      "status": "not accepted",
+      "source": "trial_script_nfc.json",
+      "quote": "INT. বাড়ির খাদি ঘর - সকাল",
+      "assessment": "The requested breakfast-room location is not naturally expressed; other phrases also need editorial rewriting."
+    },
+    {
+      "category": "Music/SFX text plan",
+      "status": "unverified and weak",
+      "source": "trial_script_nfc.json",
+      "quote": "সাদা পানির শব্দ",
+      "assessment": "This is not a validated musical cue. No audio was generated or listened to; music/acting quality cannot be inferred from this text."
+    },
+    {
+      "category": "Director evidence integrity",
+      "status": "initial review rejected",
+      "source": "trial_director_compact.json",
+      "quote": "রাশেদ তুমি ছাতা দেখে না, আমি তো দেখেছি।",
+      "assessment": "This quoted string is absent from the actual source. The quote gate rejected the review. Later bounded critic replies were incomplete, not approved QC."
+    },
+    {
+      "category": "Targeted revision scope",
+      "status": "technical wrapper repaired; artistic improvement not demonstrated",
+      "source": "script_revision_postcheck.json",
+      "assessment": "The exact s2 object can be wrapped as one target without altering s1. The revised narrative still contains the observed defects; no production approval follows."
+    },
+    {
+      "category": "Real task-engine generation",
+      "status": "technical connection verified; generation quality not demonstrated",
+      "source": "engine_echo_postcheck.json",
+      "assessment": "The model returned supplied instruction text. The engine now flags canonical input echoes; Awaiting QC is not a creative pass."
+    }
+  ]
+}

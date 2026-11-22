@@ -1,0 +1,139 @@
+{
+  "experiment_id": "55574396a33cc88f2fa57907468b767d27a916e082a4108c8ff5552d495762b8",
+  "case": {
+    "id": "clean_abstention",
+    "roles": [
+      "director",
+      "qc"
+    ],
+    "prompt": "শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}.",
+    "source": "C1 — রান্নাঘর, সকাল। সালমা নীল ব্যাগটি নিজের চেয়ারের পাশে রাখেন। রুবা হাঁড়ির ঢাকনা তুলে আবার নামিয়ে রাখে। আদনান ফোনের অর্ডার তালিকা দেখায়। রুবা: \"তুই সময়টা একটু কিনে আন।\" আদনান খালি কাপ এগিয়ে দেয়: \"বাকিতে দেবে?\" সালমা চুলার নিভে থাকা শিখার দিকে তাকিয়ে নীরবে জানালাটি খোলেন। ব্যাগ চেয়ারের পাশেই থাকে।",
+    "dimensions": [
+      "abstention",
+      "quotation_accuracy"
+    ],
+    "expected_objective_defects": [],
+    "system": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।",
+    "required_keys": [
+      "findings"
+    ]
+  },
+  "settings": {
+    "context_tokens": 2048,
+    "max_new_tokens": 1024,
+    "temperature": 0.7,
+    "seed": 117,
+    "enable_thinking": false,
+    "parallel": 1,
+    "case_timeout_seconds": 180,
+    "compatibility_variant": "flash_attention_off_batch128_threads2_after_owned_compile_cleanup"
+  },
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "আপনি বাংলা চলচ্চিত্রের সংশ্লিষ্ট বিশেষজ্ঞ। নির্দেশিত JSON object ছাড়া আর কিছু লিখবেন না। সরবরাহ করা তথ্যের বাইরে কোনো ঘটনা বা quote বানাবেন না। কোনো score, approval বা unseen media inspection দাবি করবেন না।"
+      },
+      {
+        "role": "user",
+        "content": "শুধু supplied scene-এর objective continuity defect খুঁজুন। সঠিক quote verbatim দিন। subjective taste-কে defect করবেন না; evidence না থাকলে findings=[]। JSON: {\"findings\":[{\"code\":\"prop_state\",\"quote\":\"exact source substring\",\"observation\":\"...\",\"category\":\"contract\",\"decision\":\"revise\"}]}.\n\nSOURCE MATERIAL:\nC1 — রান্নাঘর, সকাল। সালমা নীল ব্যাগটি নিজের চেয়ারের পাশে রাখেন। রুবা হাঁড়ির ঢাকনা তুলে আবার নামিয়ে রাখে। আদনান ফোনের অর্ডার তালিকা দেখায়। রুবা: \"তুই সময়টা একটু কিনে আন।\" আদনান খালি কাপ এগিয়ে দেয়: \"বাকিতে দেবে?\" সালমা চুলার নিভে থাকা শিখার দিকে তাকিয়ে নীরবে জানালাটি খোলেন। ব্যাগ চেয়ারের পাশেই থাকে।"
+      }
+    ],
+    "max_tokens": 1024,
+    "temperature": 0.7,
+    "seed": 117,
+    "stream": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "cache_prompt": false
+  },
+  "installation": {
+    "state": "installed_not_yet_inferred",
+    "model_repo": "unsloth/Qwen3.5-9B-GGUF",
+    "model_revision": "3885219b6810b007914f3a7950a8d1b469d598a5",
+    "filename": "Qwen3.5-9B-Q4_K_M.gguf",
+    "expected_bytes": 5680522464,
+    "expected_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "runtime_source_revision": "release-b12318; embedded build version below",
+    "owner_download_approved": true,
+    "model_inference": false,
+    "paid_fallback": false,
+    "actual_gpu": "Tesla T4, 15360",
+    "actual_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "download_and_hash_seconds": 60.012006387998554,
+    "model_path": "/content/redpad_phase3/model/Qwen3.5-9B-Q4_K_M.gguf",
+    "runtime_variant": "official_prebuilt_cuda12.8_b12318",
+    "binary": "/content/redpad_phase3/official-b12318/llama-b12318/llama-server",
+    "binary_sha256": "0ec391741c38d09eb4074db407c162686e310799c0dc36ebb734775688384ff5",
+    "runtime_version": "version: 0.9.0-dev (build 12318, commit 7021f7e09)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+    "runtime_assets": [
+      {
+        "name": "cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "bytes": 594371580,
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/cudart-llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "digest": "sha256:caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea",
+        "verified_sha256": "caec3617f1fd440b85b80f0c2db031ef483f383a1939c684f0476d1d3086caea"
+      },
+      {
+        "name": "llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "bytes": 197999267,
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/b12318/llama-b12318-bin-ubuntu-cuda-12.8-x64.tar.gz",
+        "digest": "sha256:e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797",
+        "verified_sha256": "e5c7ec6d5924059d6222cfad3b266d88fafdb3772700e23f8b0d23f7d68ce797"
+      }
+    ],
+    "runtime_prepare_seconds": 36.84645407500284,
+    "source_build": "interrupted_owned_group_stopped; partial objects retained; no model inference attempted"
+  },
+  "state": "Completed",
+  "actual_output_received": true,
+  "human_review_completed": false,
+  "professional_accepted": false,
+  "automatic_retries": 0,
+  "raw_http_base64": "eyJjaG9pY2VzIjpbeyJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowLCJtZXNzYWdlIjp7InJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50Ijoie1wiZmluZGluZ3NcIjpbe1wiY29kZVwiOlwicHJvcF9zdGF0ZVwiLFwicXVvdGVcIjpcIuCmrOCnjeCmr+CmvuCmlyDgpprgp4fgpq/gprzgpr7gprDgp4fgprAg4Kaq4Ka+4Ka24KeH4KaHIOCmpeCmvuCmleCnh+ClpFwiLFwib2JzZXJ2YXRpb25cIjpcIuCmuOCmvuCmsuCmruCmviDgpqzgp43gpq/gpr7gppfgpp/gpr8g4Kaa4KeH4Kav4Ka84Ka+4Kaw4KeH4KawIOCmquCmvuCmtuCnhyDgprDgpr7gppbgpr7gprAg4Kaq4KawIOCmpuCng+CmtuCnjeCmr+Cnh+CmsCDgprbgp4HgprDgp4HgpqTgp4cg4Kas4KeN4Kav4Ka+4KaX4Kaf4Ka/IOCmuOCnh+CmhyDgpoXgpqzgprjgp43gpqXgpr7gpqTgp4fgpocg4Kam4KeH4KaW4Ka+4Kao4KeLIOCmueCmr+CmvOCnh+Cmm+Cnhywg4Kav4Ka+IOCmheCmrOCnjeCmr+CmrOCmuOCnjeCmpeCmvuCmquCmqOCmvuCmsCDgpq7gpqTgp4sg4KaP4KaV4Kaf4Ka/IGNvbnRpbnVpdHkgZGVmZWN04KWkXCIsXCJjYXRlZ29yeVwiOlwiY29udHJhY3RcIixcImRlY2lzaW9uXCI6XCJyZXZpc2VcIn1dfSJ9fV0sImNyZWF0ZWQiOjE3OTQ0OTQ4NTgsIm1vZGVsIjoiL2NvbnRlbnQvcmVkcGFkX3BoYXNlMy9tb2RlbC9Rd2VuMy41LTlCLVE0X0tfTS5nZ3VmIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiYjEyMzE4LTcwMjFmN2UwOSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsInVzYWdlIjp7ImNvbXBsZXRpb25fdG9rZW5zIjo4NiwicHJvbXB0X3Rva2VucyI6MzIzLCJ0b3RhbF90b2tlbnMiOjQwOSwicHJvbXB0X3Rva2Vuc19kZXRhaWxzIjp7ImNhY2hlZF90b2tlbnMiOjB9fSwiaWQiOiJjaGF0Y21wbC0zUFBIWW05bTVCc204UVdXWERKc3FKQ0FvdFBJTlBwcSIsInRpbWluZ3MiOnsiY2FjaGVfbiI6MCwicHJvbXB0X24iOjMyMywicHJvbXB0X21zIjo1MjUuMDQ3LCJwcm9tcHRfcGVyX3Rva2VuX21zIjoxLjYyNTUzMjUwNzczOTkzOCwicHJvbXB0X3Blcl9zZWNvbmQiOjYxNS4xODMwMjE3MTA0MzczLCJwcmVkaWN0ZWRfbiI6ODYsInByZWRpY3RlZF9tcyI6NDEyMS4zNSwicHJlZGljdGVkX3Blcl90b2tlbl9tcyI6NDguNDg2NDcwNTg4MjM1MywicHJlZGljdGVkX3Blcl9zZWNvbmQiOjIwLjYyNDMwOTk5NTUxMTE3Nn19",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"findings\":[{\"code\":\"prop_state\",\"quote\":\"ব্যাগ চেয়ারের পাশেই থাকে।\",\"observation\":\"সালমা ব্যাগটি চেয়ারের পাশে রাখার পর দৃশ্যের শুরুতে ব্যাগটি সেই অবস্থাতেই দেখানো হয়েছে, যা অব্যবস্থাপনার মতো একটি continuity defect।\",\"category\":\"contract\",\"decision\":\"revise\"}]}"
+        }
+      }
+    ],
+    "created": 1794494858,
+    "model": "/content/redpad_phase3/model/Qwen3.5-9B-Q4_K_M.gguf",
+    "system_fingerprint": "b12318-7021f7e09",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 86,
+      "prompt_tokens": 323,
+      "total_tokens": 409,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-3PPHYm9m5Bsm8QWWXDJsqJCAotPINPpq",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 323,
+      "prompt_ms": 525.047,
+      "prompt_per_token_ms": 1.625532507739938,
+      "prompt_per_second": 615.1830217104373,
+      "predicted_n": 86,
+      "predicted_ms": 4121.35,
+      "predicted_per_token_ms": 48.4864705882353,
+      "predicted_per_second": 20.624309995511176
+    }
+  },
+  "raw_content": "{\"findings\":[{\"code\":\"prop_state\",\"quote\":\"ব্যাগ চেয়ারের পাশেই থাকে।\",\"observation\":\"সালমা ব্যাগটি চেয়ারের পাশে রাখার পর দৃশ্যের শুরুতে ব্যাগটি সেই অবস্থাতেই দেখানো হয়েছে, যা অব্যবস্থাপনার মতো একটি continuity defect।\",\"category\":\"contract\",\"decision\":\"revise\"}]}",
+  "raw_content_sha256": "d4c6163938803ee2dc0932cdef5f40ba86481f7795cb65570ad5efff30fe658a",
+  "finish_reason": "stop",
+  "truncated": false,
+  "wall_seconds": 4.691967913000553,
+  "peak_server_rss_bytes": 2461446144,
+  "peak_device_used_mib": 5303,
+  "memory_scope": "Sampled1s; GPU whole-device used incl baseline, not isolated allocator peak"
+}

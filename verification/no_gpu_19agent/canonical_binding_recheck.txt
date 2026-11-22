@@ -1,0 +1,11 @@
+test_request_key_order_does_not_duplicate_staged_work (tests.test_no_gpu_staging.NoGPUStagingTests.test_request_key_order_does_not_duplicate_staged_work) ... ok
+test_staging_is_restart_safe_idempotent_and_never_changes_routes_or_task_state (tests.test_no_gpu_staging.NoGPUStagingTests.test_staging_is_restart_safe_idempotent_and_never_changes_routes_or_task_state) ... ok
+test_task_bound_tools_keep_same_approval_and_no_publishing_boundary (tests.test_no_gpu_staging.NoGPUStagingTests.test_task_bound_tools_keep_same_approval_and_no_publishing_boundary) ... ok
+test_staging_and_profile_tampering_is_rejected (tests.test_no_gpu_staging.NoGPUStagingTests.test_staging_and_profile_tampering_is_rejected) ... ok
+test_unapproved_dependencies_block_and_changed_source_hash_invalidates (tests.test_no_gpu_staging.NoGPUStagingTests.test_unapproved_dependencies_block_and_changed_source_hash_invalidates) ... ok
+test_owner_revision_note_update_invalidates_staged_request (tests.test_no_gpu_staging.NoGPUStagingTests.test_owner_revision_note_update_invalidates_staged_request) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.111s
+
+OK

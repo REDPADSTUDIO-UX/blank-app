@@ -1,0 +1,246 @@
+{
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "manifest_sha256": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "runtime": "Ollama 0.40.15",
+  "device": "CPU",
+  "actual_attempts": 17,
+  "completed_runtime_replies": 13,
+  "incomplete_or_failed_runtime_attempts": 4,
+  "accepted_micro_contracts": 7,
+  "completed_but_initial_contract_rejections": [
+    "trial_director_compact.json",
+    "trial_script_revision.json"
+  ],
+  "unfinished_reasons": [
+    {
+      "file": "trial_director_nfc.json",
+      "reason": "Local response incomplete; draft was not accepted.",
+      "finish_reason": "length"
+    },
+    {
+      "file": "trial_director_revision.json",
+      "reason": "Local response incomplete; draft was not accepted.",
+      "finish_reason": "length"
+    },
+    {
+      "file": "trial_story.json",
+      "reason": "Local writer unavailable or returned invalid JSON; no fallback or model download occurred.",
+      "finish_reason": null
+    },
+    {
+      "file": "trial_story_revision.json",
+      "reason": "Local response incomplete; draft was not accepted.",
+      "finish_reason": "length"
+    }
+  ],
+  "actual_engine_state": "Awaiting QC",
+  "engine_echo": true,
+  "engine_output_is_new_creative_material": false,
+  "unicode_control": {
+    "before_exact": false,
+    "after_canonical": true,
+    "arithmetic_unchanged": true,
+    "object_transfer_unchanged": true
+  },
+  "aggregate_decode_tokens_per_second": 8.11,
+  "total_call_wall_seconds": 1958.499,
+  "peak_sampled_aggregate_rss_bytes": 4537593856,
+  "memory_note": "Aggregate sampled RSS of caller and owned server/runner; not unique allocation. The first non-stream timeout supplied no raw text or decode counters.",
+  "approved_for_production": false,
+  "independent_human_review": false,
+  "bengali_creative_quality_passed": false,
+  "phase3_complete": false,
+  "actual_visual_assets": 0,
+  "actual_video_assets": 0,
+  "actual_speech_assets": 0,
+  "cinematic_export": null,
+  "record_manifest": [
+    {
+      "file": "trial_dialogue_nfc.json",
+      "kind": "creative_research",
+      "agent": "script",
+      "state": "Micro-contract valid; experimental candidate, not production contract approval",
+      "error": "",
+      "wall_seconds": 23.11,
+      "raw_sha256": "b530eab30b579700c27228c08a7c2d3c4faa2255642d75bf796fcab89467b8b4",
+      "completed": true,
+      "decode_tokens": 134
+    },
+    {
+      "file": "trial_dialogue_revision.json",
+      "kind": "creative_research",
+      "agent": "script",
+      "state": "Micro-contract valid; experimental candidate, not production contract approval",
+      "error": "",
+      "wall_seconds": 27.161,
+      "raw_sha256": "a4ea74cd09cd25703e963f4f5d43acf808e05a9c6a94166ec93652463ef4d9b8",
+      "completed": true,
+      "decode_tokens": 218
+    },
+    {
+      "file": "trial_dialogue_task_last.json",
+      "kind": "creative_research",
+      "agent": "script",
+      "state": "Micro-contract valid; experimental candidate, not production contract approval",
+      "error": "",
+      "wall_seconds": 32.269,
+      "raw_sha256": "3d1d31bd89d898c3a6937bf1112ecde1f6b7c2f9cf344d3d5c0ca3a4248d8321",
+      "completed": true,
+      "decode_tokens": 161
+    },
+    {
+      "file": "trial_director_compact.json",
+      "kind": "creative_research",
+      "agent": "director",
+      "state": "Failed",
+      "error": "Director quote absent from actual source.",
+      "wall_seconds": 128.25,
+      "raw_sha256": "3c32b1b916850b83cd027cd99fc37076c166a01dcab69adb09f4a461adc6c09a",
+      "completed": true,
+      "decode_tokens": 772
+    },
+    {
+      "file": "trial_director_nfc.json",
+      "kind": "creative_research",
+      "agent": "director",
+      "state": "Failed",
+      "error": "Local response incomplete; draft was not accepted.",
+      "wall_seconds": 190.947,
+      "raw_sha256": "1adf322e9600ac64100bce9d1c0603c50603c9c7184b7bd2a0e86f4d225bd1b9",
+      "completed": false,
+      "decode_tokens": 1200
+    },
+    {
+      "file": "trial_director_revision.json",
+      "kind": "creative_research",
+      "agent": "director",
+      "state": "Failed",
+      "error": "Local response incomplete; draft was not accepted.",
+      "wall_seconds": 110.89,
+      "raw_sha256": "0dd4c4a4dade3c7a389e601483741bc401b0ad06018511ab8d4185bb80e17ce4",
+      "completed": false,
+      "decode_tokens": 512
+    },
+    {
+      "file": "trial_script_compact.json",
+      "kind": "creative_research",
+      "agent": "script",
+      "state": "Micro-contract valid; experimental candidate, not production contract approval",
+      "error": "",
+      "wall_seconds": 216.166,
+      "raw_sha256": "eca2e9bd4447d32cd886e2746612cddf1a29d43694c699c11a9df7bae45d94bf",
+      "completed": true,
+      "decode_tokens": 1338
+    },
+    {
+      "file": "trial_script_nfc.json",
+      "kind": "creative_research",
+      "agent": "script",
+      "state": "Micro-contract valid; experimental candidate, not production contract approval",
+      "error": "",
+      "wall_seconds": 197.916,
+      "raw_sha256": "43afb0170ed97f576dbdb10c21c097b3e40edcddbad7046a634581cbe57c3f4b",
+      "completed": true,
+      "decode_tokens": 1206
+    },
+    {
+      "file": "trial_script_revision.json",
+      "kind": "creative_research",
+      "agent": "script",
+      "state": "Failed",
+      "error": "Only scene s2 may be replaced.",
+      "wall_seconds": 110.944,
+      "raw_sha256": "27ceeb73b8866b9ddcea5456cf9d33d9e89cf58c71e968406e2e5b76f355f45c",
+      "completed": true,
+      "decode_tokens": 563
+    },
+    {
+      "file": "trial_story.json",
+      "kind": "creative_research",
+      "agent": "story",
+      "state": "Failed",
+      "error": "Local writer unavailable or returned invalid JSON; no fallback or model download occurred.",
+      "wall_seconds": 420.146,
+      "raw_sha256": null,
+      "completed": false,
+      "decode_tokens": null
+    },
+    {
+      "file": "trial_story_compact.json",
+      "kind": "creative_research",
+      "agent": "story",
+      "state": "Micro-contract valid; experimental candidate, not production contract approval",
+      "error": "",
+      "wall_seconds": 136.41,
+      "raw_sha256": "48b47375ff94ce500f1004496c9b7726ffc9c0ef2a81121ecba0d2579f4ecbb2",
+      "completed": true,
+      "decode_tokens": 1067
+    },
+    {
+      "file": "trial_story_nfc.json",
+      "kind": "creative_research",
+      "agent": "story",
+      "state": "Micro-contract valid; experimental candidate, not production contract approval",
+      "error": "",
+      "wall_seconds": 95.998,
+      "raw_sha256": "4ed5c4b5a0829ecb9230be8b51c579a3ede84ceccdae176a440e8d111b6d086e",
+      "completed": true,
+      "decode_tokens": 782
+    },
+    {
+      "file": "trial_story_revision.json",
+      "kind": "creative_research",
+      "agent": "story",
+      "state": "Failed",
+      "error": "Local response incomplete; draft was not accepted.",
+      "wall_seconds": 201.814,
+      "raw_sha256": "d4a5a03a056bb19419b2f053fbe4eb808cdea20ec9282a8ee869dbba8a5eb07f",
+      "completed": false,
+      "decode_tokens": 1200
+    },
+    {
+      "file": "cpu_smoke.json",
+      "kind": "control",
+      "agent": "runtime",
+      "state": "JSON reply",
+      "error": "",
+      "wall_seconds": 23.697,
+      "raw_sha256": "2139bcc92b633ed8106570d93914f15a8a795f59750f32c766117a5c258453af",
+      "completed": true,
+      "decode_tokens": 127
+    },
+    {
+      "file": "control_probe.json",
+      "kind": "control",
+      "agent": "runtime",
+      "state": "JSON reply",
+      "error": "",
+      "wall_seconds": 5.67,
+      "raw_sha256": "dd6d73cc9cd8698776596015427209a42dc36d15ac56e5fdd5d3b953a6b78c3c",
+      "completed": true,
+      "decode_tokens": 26
+    },
+    {
+      "file": "nfc_control_probe.json",
+      "kind": "control",
+      "agent": "runtime",
+      "state": "JSON reply",
+      "error": "",
+      "wall_seconds": 6.608,
+      "raw_sha256": "ba7e62265f012d91d7794c79efa0d22f23666b685f7c2d31e4ce66a7e66becfe",
+      "completed": true,
+      "decode_tokens": 28
+    },
+    {
+      "file": "engine_roundtrip.json",
+      "kind": "actual_task_engine",
+      "agent": "story",
+      "state": "Awaiting QC",
+      "error": "",
+      "wall_seconds": 30.503,
+      "raw_sha256": "d0c1f280a03f3284f2a89c4fd1105c6b55d638fc4915cb849400d85829f908fa",
+      "completed": true,
+      "decode_tokens": 228
+    }
+  ]
+}

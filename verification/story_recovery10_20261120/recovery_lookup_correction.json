@@ -1,0 +1,9 @@
+{
+  "issue": "Recovery predecessor lookup retained legacy filename suffix; failed before model launch/reservation",
+  "old_source_sha256": "004b0611359e2580f56c464bb6fcf7c5529f2730d03d009f2d228c4a622f547e",
+  "new_source_sha256": "589c605f60de40d64823cc6639fba3e8e3a632e5a952c545e3fea9a466ff672f",
+  "replacement_from": "'driverbound_'+n+'_v1.json'",
+  "replacement_to": "'recovery10_'+n+'_v2.json'",
+  "model_calls_from_failed_preparation": 0,
+  "preserve_old_source": true
+}

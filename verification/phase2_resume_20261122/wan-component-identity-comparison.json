@@ -1,0 +1,56 @@
+{
+  "base_revision": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+  "component_revision": "ff28d41a9c0c331137691847cc8700593d785593",
+  "all_component_file_identities_match": true,
+  "exact_files": [
+    {
+      "path": "transformer/config.json",
+      "bytes": 457,
+      "same_git_blob": true,
+      "publisher_git_blob": "36edc18f14f70acaca96996f42e120dcdabf2a55"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model-00001-of-00004.safetensors",
+      "bytes": 9874593104,
+      "same_git_blob": true,
+      "publisher_lfs_sha256": "ebc182727d948cb61cac929af3b2887e0a4b7c8b683b7356628cf0350d332c0a"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model-00002-of-00004.safetensors",
+      "bytes": 9975379320,
+      "same_git_blob": true,
+      "publisher_lfs_sha256": "e808cf7a7e7aaf358478a2198152f9e3ec8609c66712be397c21b4b7ec7ef501"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model-00003-of-00004.safetensors",
+      "bytes": 9954401600,
+      "same_git_blob": true,
+      "publisher_lfs_sha256": "444eeea631fe6d2df80780f521f6c7716bd079fc177279ba09d2d20479f2dfaf"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model-00004-of-00004.safetensors",
+      "bytes": 2985521520,
+      "same_git_blob": true,
+      "publisher_lfs_sha256": "130fd0a278a06096e483f08b2492ddd86b89fef8676b3d7b30556b3230a9b005"
+    },
+    {
+      "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "bytes": 119890,
+      "same_git_blob": true,
+      "publisher_git_blob": "7f60a6ffb3400e6c1429cac453ffdea16be2fbb6"
+    },
+    {
+      "path": "scheduler/scheduler_config.json",
+      "bytes": 487,
+      "same_git_blob": true,
+      "publisher_git_blob": "c89cc9d905c4ec5f92dc2fc45b35c80c99e4a99c"
+    }
+  ],
+  "weight_shards": 4,
+  "matched_weight_bytes": 32789895544,
+  "meaning": "Authoritative publisher Git/LFS identities match for every transformer and scheduler file. This is metadata evidence of identical artifacts, not downloaded-file verification or a tensor/model load.",
+  "weights_downloaded": false,
+  "tensor_values_read": false,
+  "full_checkpoint_runtime_verified": false,
+  "production_route_promoted": false
+}

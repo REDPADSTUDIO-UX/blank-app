@@ -1,0 +1,45 @@
+{
+  "modular_index": {
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/raw/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/modular_model_index.json",
+    "status": 200,
+    "sha256": "ca29bd15a717e091b0aee14e22adc6669c511221e6e83ff82f42c339eee20827"
+  },
+  "pr_ref_metadata": {
+    "url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/revision/refs%2Fpr%2F1",
+    "status": 200,
+    "sha256": "e6455205988b75266ec84b779375192b9275c0fdc32af09a643174f3ee07761f",
+    "revision": "ff28d41a9c0c331137691847cc8700593d785593"
+  },
+  "diffusers_pr": {
+    "url": "https://api.github.com/repos/huggingface/diffusers/pulls/14412",
+    "status": 200,
+    "sha256": "08862590937a124ebf482a0b82abdb677dedcb3d8eef659824d219f4c0f4770d",
+    "state": "open",
+    "merged": false,
+    "head": "14f482c30c91021cc0e363a0a17a115b44972aee"
+  },
+  "pinned_scheduler": {
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/raw/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/scheduler/scheduler_config.json",
+    "status": 200,
+    "sha256": "dd230f215f07fef6c626e26bb42946ab2db3a100eed1053a43fee738302f7b62",
+    "class": "FlowMatchEulerDiscreteScheduler"
+  },
+  "pinned_transformer": {
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/raw/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/transformer/config.json",
+    "status": 200,
+    "sha256": "a1be4a429c78d11073464954fc94a1f811d1b3b4ccc4d6b8bfe1ff90d92bd8af",
+    "class": "WanAnimate2Transformer3DModel"
+  },
+  "modular_pr_scheduler": {
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/raw/refs%2Fpr%2F1/scheduler/scheduler_config.json",
+    "status": 200,
+    "sha256": "dd230f215f07fef6c626e26bb42946ab2db3a100eed1053a43fee738302f7b62",
+    "class": "FlowMatchEulerDiscreteScheduler"
+  },
+  "modular_pr_transformer": {
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/raw/refs%2Fpr%2F1/transformer/config.json",
+    "status": 200,
+    "sha256": "a1be4a429c78d11073464954fc94a1f811d1b3b4ccc4d6b8bfe1ff90d92bd8af",
+    "class": "WanAnimate2Transformer3DModel"
+  }
+}

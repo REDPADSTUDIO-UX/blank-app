@@ -1,0 +1,187 @@
+{
+  "checked_on": "2026-11-06",
+  "selection_type": "Conditional benchmark candidates, no installed/quality winner",
+  "all_weights_downloaded": false,
+  "sources_are": "Primary model cards and original repositories; license labels are not blanket rights clearance",
+  "candidates": [
+    {
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "department": "text",
+      "license": "apache-2.0",
+      "decision": "First comparison candidate; not a quality winner. Ollama qwen3:4b-instruct-2507-q4_K_M lists 2.5 GB; start bounded CPU context, measure RAM/latency.",
+      "source": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+      "status": "Installed and genuine CPU inference verified; Unicode input correction verified; Bengali creative quality not accepted",
+      "installed": true,
+      "inference_verified": true,
+      "installed_runtime_tag": "qwen3:4b-instruct-2507-q4_K_M",
+      "creative_quality_verified": false
+    },
+    {
+      "model": "Qwen/Qwen3-0.6B",
+      "department": "text",
+      "license": "apache-2.0",
+      "decision": "Optional smaller runtime/JSON smoke candidate. Insufficient evidence for demanding Bengali editorial work.",
+      "source": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "status": "secondary_smoke_only",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "Qwen/Qwen3.5-2B",
+      "department": "text_multimodal",
+      "license": "apache-2.0",
+      "decision": "Newer small-family comparison candidate; exact runtime/version support and Bangla quality require testing.",
+      "source": "https://huggingface.co/Qwen/Qwen3.5-2B",
+      "status": "deferred_comparison",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "google/gemma-4-E2B-it",
+      "department": "text_multimodal",
+      "license": "apache-2.0",
+      "decision": "Current compact Gemma alternative; effective parameter count does not equal total memory. No installed compatible runtime or measured Bengali result.",
+      "source": "https://huggingface.co/google/gemma-4-E2B-it",
+      "status": "deferred_comparison",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "google/gemma-3-4b-it",
+      "department": "text_multimodal",
+      "license": "gemma",
+      "decision": "Different custom terms from Gemma 4; no terms accepted or weights accessed.",
+      "source": "https://huggingface.co/google/gemma-3-4b-it",
+      "status": "deferred_terms_review",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "black-forest-labs/FLUX.1-schnell",
+      "department": "image",
+      "license": "apache-2.0",
+      "decision": "12B image-generation candidate; no GPU/weights here. Not an identity-preservation or pose-control guarantee.",
+      "source": "https://huggingface.co/black-forest-labs/FLUX.1-schnell",
+      "status": "blocked_compute_download",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "Qwen/Qwen-Image-Edit-2509",
+      "department": "reference_editing",
+      "license": "apache-2.0",
+      "decision": "Multi-image edit candidate for reference experiments; untested identity preservation, large model and absent GPU.",
+      "source": "https://huggingface.co/Qwen/Qwen-Image-Edit-2509",
+      "status": "blocked_compute_download",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "lllyasviel/control_v11p_sd15_openpose",
+      "department": "pose_control",
+      "license": "openrail",
+      "decision": "Pose conditioning for a compatible SD1.5 pipeline; not interchangeable with FLUX. Base model, annotator and checkpoint terms must all be reviewed.",
+      "source": "https://huggingface.co/lllyasviel/control_v11p_sd15_openpose",
+      "status": "deferred_stack_review",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "Wan-AI/Wan2.2-TI2V-5B",
+      "department": "video",
+      "license": "apache-2.0",
+      "decision": "Official text/image-to-video candidate. Documented 1280x704 offload command needs at least 24 GB VRAM; not demonstrated on this CPU host or a free T4. No claimed native lip-sync or precise acting control.",
+      "source": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
+      "status": "blocked_gpu_download",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "Lightricks/LTX-Video:ltxv-2b-0.9.8-distilled",
+      "department": "video",
+      "license": "LTX-Video Open Weights License 0.X",
+      "decision": "Lightweight comparison candidate, checkpoint-specific custom license; lower VRAM does not prove fit. Version 0.9.8 has pose/depth-related workflows in the family but exact selected pipeline must be verified.",
+      "source": "https://huggingface.co/Lightricks/LTX-Video",
+      "status": "deferred_license_compute",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "ai4bharat/indic-parler-tts",
+      "department": "speech",
+      "license": "apache-2.0",
+      "decision": "Bengali and emotion prompting documented; first ungated speech comparison candidate. Requires local backend/weights; Bangladeshi accent and character consistency untested. Card recommends newer Indic-Speak, which has different terms.",
+      "source": "https://huggingface.co/ai4bharat/indic-parler-tts",
+      "status": "conditional_voice_trial",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "ai4bharat/IndicF5",
+      "department": "speech",
+      "license": "mit",
+      "decision": "Bengali documented; gated information-sharing/conditions and custom code require separate review. No voice reference consent or weights obtained.",
+      "source": "https://huggingface.co/ai4bharat/IndicF5",
+      "status": "blocked_access_consent",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "bodhan-ai/indic-speak",
+      "department": "speech",
+      "license": "Indic Open Model License v1.0",
+      "decision": "Newer model recommended by older card; custom conditions and gated access. Do not inherit the older model Apache license.",
+      "source": "https://huggingface.co/bodhan-ai/indic-speak",
+      "status": "deferred_terms_access",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "facebook/musicgen-small",
+      "department": "music",
+      "license": "cc-by-nc-4.0",
+      "decision": "Not selected for the commercial channel pipeline under these non-commercial weight terms. Existing original procedural cues remain labeled procedural, not neural music.",
+      "source": "https://huggingface.co/facebook/musicgen-small",
+      "status": "rejected_commercial_default",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "stabilityai/stable-audio-open-1.0",
+      "department": "music_sfx",
+      "license": "stable-audio-community",
+      "decision": "Custom community license; exact usage/organization eligibility requires review before download or commercial production. No listening evaluation or local model.",
+      "source": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+      "status": "deferred_terms_compute",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "TMElyralab/MuseTalk",
+      "department": "lip_sync",
+      "license": "MIT code; separate dependent model terms",
+      "decision": "Official repository permits model commercial use while dependencies keep their own licenses and supplied testdata are non-commercial. No downloaded checkpoints or actual mouth-sync evaluation.",
+      "source": "https://github.com/TMElyralab/MuseTalk",
+      "status": "deferred_dependency_rights",
+      "installed": false,
+      "inference_verified": false
+    },
+    {
+      "model": "Rudrabha/Wav2Lip",
+      "department": "lip_sync",
+      "license": "non-commercial research/personal restriction",
+      "decision": "Public pretrained workflow not selected for commercial default; no commercial API used.",
+      "source": "https://github.com/Rudrabha/Wav2Lip",
+      "status": "rejected_commercial_default",
+      "installed": false,
+      "inference_verified": false
+    }
+  ],
+  "additional_sources": [
+    "https://ollama.com/library/qwen3/tags",
+    "https://www.kaggle.com/docs/notebooks",
+    "https://www.kaggle.com/docs/efficient-gpu-usage",
+    "https://huggingface.co/Lightricks/LTX-Video/blob/main/LTX-Video-Open-Weights-License-0.X.txt"
+  ],
+  "installed_model_count": 1
+}

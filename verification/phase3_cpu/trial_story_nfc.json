@@ -1,0 +1,99 @@
+{
+  "name": "trial_story_nfc",
+  "agent": "story",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "model_manifest_sha256": "6214d088d3846e16c9fe00adcbabdbfddc61ce4a70daacc46cb2310c38603054",
+  "device": "CPU",
+  "request": {
+    "agent": "story",
+    "instructions": "তিনটি causal beat-এ মূল গল্প তৈরি করুন। প্রতিটি text field সর্বোচ্চ এক ছোট বাক্য। একই বিবাহিত দম্পতি, স্পষ্ট সকাল ও ছাতার অবস্থান বজায় রাখুন। Return {\"title\":str,\"premise\":str,\"characters\":[{\"name\":str,\"want\":str},{\"name\":str,\"want\":str}],\"beats\":[{\"id\":\"b1\",\"action\":str,\"cause\":str,\"consequence\":str},{\"id\":\"b2\",\"action\":str,\"cause\":str,\"consequence\":str},{\"id\":\"b3\",\"action\":str,\"cause\":str,\"consequence\":str}],\"hook\":str,\"cliffhanger\":str}. একটি যৌক্তিক ছোট পরিবর্তন; অনর্থক রহস্য নয়।",
+    "brief": {
+      "title": "একটা ছাতা",
+      "premise": "ঢাকার বৃষ্টির সকাল। রাশেদ (৩২) ও তানিয়া (২৯) বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নয়।",
+      "genre": "family drama",
+      "tone": "natural Bangladeshi Bengali, restrained emotion, gentle character wit"
+    },
+    "experimental_source": null,
+    "targets": null
+  },
+  "prompt_sha256": "d0f7820331cb15be4d7720d3efa165b7da1bc85a9af947413fc2778b1e5cbe4f",
+  "raw": "{\"title\":\"একটা ছাতা\",\"premise\":\"ঢাকার বৃষ্টির সকাল। রাশে ও তানিয়া বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া।\",\"characters\":[{\"name\":\"রাশেদ\",\"want\":\"অফিসে পৌঁছার জন্য নিজেকে আগে থাকা।\"},{\"name\":\"তানিয়া\",\"want\":\"চাকরির সাক্ষাৎকারে সাফল্য পাওয়া।\"}],\"beats\":[{\"id\":\"b1\",\"action\":\"তানিয়া ছাতা দিয়ে বাইরে যায়।\",\"cause\":\"চাকরির সাক্ষাৎকারের সময় আসে।\",\"consequence\":\"রাশেদ বাসে থাকে এবং ছাতা দেখে হাসে।\"},{\"id\":\"b2\",\"action\":\"রাশেদ অফিসে পৌঁছায় এবং কাজের কাজ শুরু করে।\",\"cause\":\"বৃষ্টি আরও বেড়ে যায়।\",\"consequence\":\"তানিয়া বাসে থাকে এবং ছাতা নেয় না।\"},{\"id\":\"b3\",\"action\":\"রাশেদ বাড়ি ফিরে আসে এবং ছাতা দেখে বলে।\",\"cause\":\"তানিয়া ছাতা বাজারে কিনেছে কিনা জানে না।\",\"consequence\":\"তানিয়া ছাতা না দেখে বলে যে তার বাড়ি ছাতা নেই।\"}],\"hook\":\"রাশেদ ছাতা দেখে হাসে, তানিয়া কিনেছে কিনা জানে না।\",\"cliffhanger\":\"তানিয়া বলে যে তার ছাতা নেই, কিন্তু রাশেদ ছাতা দেখে আছে যা তার বাড়িতে নেই।\"}",
+  "result": {
+    "title": "একটা ছাতা",
+    "premise": "ঢাকার বৃষ্টির সকাল। রাশে ও তানিয়া বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া।",
+    "characters": [
+      {
+        "name": "রাশেদ",
+        "want": "অফিসে পৌঁছার জন্য নিজেকে আগে থাকা।"
+      },
+      {
+        "name": "তানিয়া",
+        "want": "চাকরির সাক্ষাৎকারে সাফল্য পাওয়া।"
+      }
+    ],
+    "beats": [
+      {
+        "id": "b1",
+        "action": "তানিয়া ছাতা দিয়ে বাইরে যায়।",
+        "cause": "চাকরির সাক্ষাৎকারের সময় আসে।",
+        "consequence": "রাশেদ বাসে থাকে এবং ছাতা দেখে হাসে।"
+      },
+      {
+        "id": "b2",
+        "action": "রাশেদ অফিসে পৌঁছায় এবং কাজের কাজ শুরু করে।",
+        "cause": "বৃষ্টি আরও বেড়ে যায়।",
+        "consequence": "তানিয়া বাসে থাকে এবং ছাতা নেয় না।"
+      },
+      {
+        "id": "b3",
+        "action": "রাশেদ বাড়ি ফিরে আসে এবং ছাতা দেখে বলে।",
+        "cause": "তানিয়া ছাতা বাজারে কিনেছে কিনা জানে না।",
+        "consequence": "তানিয়া ছাতা না দেখে বলে যে তার বাড়ি ছাতা নেই।"
+      }
+    ],
+    "hook": "রাশেদ ছাতা দেখে হাসে, তানিয়া কিনেছে কিনা জানে না।",
+    "cliffhanger": "তানিয়া বলে যে তার ছাতা নেই, কিন্তু রাশেদ ছাতা দেখে আছে যা তার বাড়িতে নেই।"
+  },
+  "error": "",
+  "state": "Micro-contract valid; experimental candidate, not production contract approval",
+  "validation": {
+    "scope": "CPU micro-benchmark only; artistic merit unverified",
+    "production_approved": false
+  },
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.4,
+      "num_predict": 1200,
+      "num_ctx": 4096,
+      "seed": 42
+    },
+    "inference_completed": true,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "input_normalization": "NFC",
+    "prompt_normalization_changed": true,
+    "wire_prompt_sha256": "77c94b0e6189b4aca385db13ef84d65e276a26246a1b042ba8d37190d3d60ae4",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 782,
+    "eval_duration_ns": 73014732000,
+    "prompt_eval_count": 742,
+    "prompt_eval_duration_ns": 12581893000,
+    "load_duration_ns": 10347566628,
+    "total_duration_ns": 95952228165,
+    "finish_reason": "stop",
+    "wall_seconds": 95.997,
+    "raw_sha256": "4ed5c4b5a0829ecb9230be8b51c579a3ede84ceccdae176a440e8d111b6d086e"
+  },
+  "wall_seconds": 95.998,
+  "aggregate_process_peak_rss_bytes": 3308314624,
+  "memory_note": "Sampled aggregate RSS of caller and descendant server/runner, not unique model allocation",
+  "provenance": "local_inference",
+  "prompt_layout": "structured_request",
+  "wire_prompt": "{\"agent\": \"story\", \"instructions\": \"তিনটি causal beat-এ মূল গল্প তৈরি করুন। প্রতিটি text field সর্বোচ্চ এক ছোট বাক্য। একই বিবাহিত দম্পতি, স্পষ্ট সকাল ও ছাতার অবস্থান বজায় রাখুন। Return {\\\"title\\\":str,\\\"premise\\\":str,\\\"characters\\\":[{\\\"name\\\":str,\\\"want\\\":str},{\\\"name\\\":str,\\\"want\\\":str}],\\\"beats\\\":[{\\\"id\\\":\\\"b1\\\",\\\"action\\\":str,\\\"cause\\\":str,\\\"consequence\\\":str},{\\\"id\\\":\\\"b2\\\",\\\"action\\\":str,\\\"cause\\\":str,\\\"consequence\\\":str},{\\\"id\\\":\\\"b3\\\",\\\"action\\\":str,\\\"cause\\\":str,\\\"consequence\\\":str}],\\\"hook\\\":str,\\\"cliffhanger\\\":str}. একটি যৌক্তিক ছোট পরিবর্তন; অনর্থক রহস্য নয়।\", \"brief\": {\"title\": \"একটা ছাতা\", \"premise\": \"ঢাকার বৃষ্টির সকাল। রাশেদ (৩২) ও তানিয়া (২৯) বিবাহিত। তানিয়ার চাকরির সাক্ষাৎকার, রাশেদের অফিসে জরুরি উপস্থিতি; একটি ছাতা আর সীমিত বাসভাড়া। তাদের অভ্যাসের তফাতে স্বাভাবিক রসিকতা ও মমতা আছে। বাস্তব সিদ্ধান্তে সমস্যা সামলাবে; জোর করা কাকতাল বা নীতিকথা নয়।\", \"genre\": \"family drama\", \"tone\": \"natural Bangladeshi Bengali, restrained emotion, gentle character wit\"}, \"experimental_source\": null, \"targets\": null}",
+  "source_approval": "Unapproved research candidate only",
+  "production_approved": false,
+  "independent_human_review": false
+}

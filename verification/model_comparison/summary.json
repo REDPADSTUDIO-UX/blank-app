@@ -1,0 +1,21 @@
+{
+  "continuation_parent": "c5fe3262d6e39e0bc3fe49ad107b72dd1deb7803",
+  "registered_agents": 20,
+  "actual_new_inference_calls": 0,
+  "new_model_weight_downloads": 0,
+  "historical_evidence": [
+    "verification/phase3_cpu/summary.json",
+    "verification/phase3_staged/summary.json"
+  ],
+  "equivalent_task_comparison_status": "awaiting explicit candidate download approval and restored runtime",
+  "selected_models": {
+    "story": null,
+    "script": null,
+    "director": null,
+    "qc": null
+  },
+  "human_review_completed": false,
+  "production_approved": false,
+  "regression_passed": 291,
+  "standalone_passed": 8
+}

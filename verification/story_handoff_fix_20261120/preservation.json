@@ -1,0 +1,245 @@
+{
+  "base_commit": "7a737fc1af6bb62d61ca31dae11d23c6701f64cc",
+  "protected_files_count": 58,
+  "protected_files": [
+    {
+      "path": "verification/story_budget8_20261119/adapter_cpu_test_log.txt",
+      "sha256": "348a5beac5ea5d2c28bb236707c566322869ad1b626767bc54c48b89d4e2f9fd"
+    },
+    {
+      "path": "verification/story_budget8_20261119/adapter_validation.json",
+      "sha256": "20aea19f4884e9c52d4cc60d9d57adf1ec6894e33b924376daa7c19004872120"
+    },
+    {
+      "path": "verification/story_budget8_20261119/authorized_call_ledger.json",
+      "sha256": "4be0fcde6f1bf61310cb2d7bb6d69ccbbbb10693eb824917bbb25335e2bb3363"
+    },
+    {
+      "path": "verification/story_budget8_20261119/browser_blocker.json",
+      "sha256": "366acbd93de953cfa5b6d1d986ac09db853ac186ce39af790e3d8f6020ccb953"
+    },
+    {
+      "path": "verification/story_budget8_20261119/budget8.py",
+      "sha256": "8a5c76ee0a4b126cdad443d35d2bc0640690316957691d4062a1dd5d78e48df5"
+    },
+    {
+      "path": "verification/story_budget8_20261119/cache_eligibility_cell.py",
+      "sha256": "439b1ab0711adb7733d0a96d955219233c6b5b5d6291fd195cc909ffccf18dce"
+    },
+    {
+      "path": "verification/story_budget8_20261119/colab_no_gpu_backend.jpg",
+      "sha256": "40fb5d92d5b1269ef097d4c2d44b0aeeab72eed724a0765169065dad93ac173c"
+    },
+    {
+      "path": "verification/story_budget8_20261119/cpu_test_receipt.json",
+      "sha256": "f85047e1c9dfa8d6d872aa510ff477501a35df38896a7ece2b6be72d253e0514"
+    },
+    {
+      "path": "verification/story_budget8_20261119/preservation.json",
+      "sha256": "a2e5220c500423d94c40397635b16b8aa5fd982350a7c4d5605c3193c74f1b76"
+    },
+    {
+      "path": "verification/story_budget8_20261119/resume_checkpoint.json",
+      "sha256": "e7a6d49deb22b27f172b3d991c7ff6355a5650fa2d89e9989289d28b5b415a59"
+    },
+    {
+      "path": "verification/story_budget8_20261119/test_budget8.py",
+      "sha256": "32e3960b7e3c66ddf7f8603cf26d2c2a0c4572453b61854e8285ee326f103f3d"
+    },
+    {
+      "path": "verification/story_budget8_20261120/browser_access_resume_checkpoint.json",
+      "sha256": "f409074cbed0ad2c1a93bb480757e3a8df2faeaad8305020d421018e623e61d5"
+    },
+    {
+      "path": "verification/story_budget8_20261120/restored_act1_actual.json",
+      "sha256": "a137432896b12c124d8e0ab7ae0a115c5d7495cc066061717242b083d7f36fd4"
+    },
+    {
+      "path": "verification/story_budget8_20261120/restored_final_partial_checkpoint.json",
+      "sha256": "a653b01ac3694e6d413d253f32f684a01b91478f747136aa94f673df1b55ed7f"
+    },
+    {
+      "path": "verification/story_budget8_20261120/restored_foundation_actual.json",
+      "sha256": "d3f7c227ae0a38bb6d45e571899c488d473b2a8168c068332ee6b76a80336b1d"
+    },
+    {
+      "path": "verification/story_budget8_20261120/t4_connected_cache_missing_105935.json",
+      "sha256": "9d709e0df752ceb26bdafc9d3ac0c1bcefaba4ec0d3e63785877804787280119"
+    },
+    {
+      "path": "verification/story_option_c_20261116/STORY_OPTION_C_RESEARCH_PREFLIGHT.ipynb",
+      "sha256": "3aea3358249288947bbd0dd159cd53137cd28d709b2865deb72914e6aa3c07b3"
+    },
+    {
+      "path": "verification/story_option_c_20261116/actual_failure_export.json",
+      "sha256": "4b96a39b79de5e50f1ea580e077a450fb493fe0e625ab3ac3e1276911648d406"
+    },
+    {
+      "path": "verification/story_option_c_20261116/build_checkpoint.py",
+      "sha256": "e2d3bbb98aa361782ca1d8d30d81c6526df753023bffa36688e3e4082c087a48"
+    },
+    {
+      "path": "verification/story_option_c_20261116/bundle_artifact_validation.json",
+      "sha256": "0c30d144e3359517a765e14f2960257f627cfdb289415c9ac80658409cdccab3"
+    },
+    {
+      "path": "verification/story_option_c_20261116/bundle_launch_checkpoint.png",
+      "sha256": "99c8c29d580e2ef5c467869a496a19a39b57b18ee98dea985b376b4d9d39856e"
+    },
+    {
+      "path": "verification/story_option_c_20261116/bundle_resume_checkpoint.json",
+      "sha256": "8d256fe43df22cacfcf9bac0ef711d87d8f1e20c8938327563479d153e112432"
+    },
+    {
+      "path": "verification/story_option_c_20261116/bundle_verified.json",
+      "sha256": "c8205961afc8e8a6984d1bb83caecdd058e326c39c259688b30ff88dcff51209"
+    },
+    {
+      "path": "verification/story_option_c_20261116/call_ledger.json",
+      "sha256": "184358899f26fe7d7f8b21de94bb20026652750d23c15ea042917c878f1a0be5"
+    },
+    {
+      "path": "verification/story_option_c_20261116/call_ledger_after_download.json",
+      "sha256": "f7e61b73d2b3d5739ed689595617e69c531bee126299ee2811e44f163ae811e2"
+    },
+    {
+      "path": "verification/story_option_c_20261116/canary_failed_launch.json",
+      "sha256": "bb02a41dbd38020813320b01c6d96d56f88948117ed85839ea1694955ab06dfc"
+    },
+    {
+      "path": "verification/story_option_c_20261116/canary_failed_launch.server.log",
+      "sha256": "f15aca5b1b98cf1cdc5d8667c8fc699c36c5ac1074f71bc7f9fabc2dfb2e3ef9"
+    },
+    {
+      "path": "verification/story_option_c_20261116/colab_checkpoint.png",
+      "sha256": "6d6b5cfc79a38914d556dc946518de7bbcd427c0111010cead692088fa3c4b10"
+    },
+    {
+      "path": "verification/story_option_c_20261116/colab_stdout.txt",
+      "sha256": "98059abcd915b226407d79308bf61238f308164d7edfc1966742d764dc869cf5"
+    },
+    {
+      "path": "verification/story_option_c_20261116/continuation_manifest.json",
+      "sha256": "4576005b27d0e540f7870437e6c74c1ce8c10dd8f1b9fabff3629851caf1451e"
+    },
+    {
+      "path": "verification/story_option_c_20261116/current_preflight.json",
+      "sha256": "98059abcd915b226407d79308bf61238f308164d7edfc1966742d764dc869cf5"
+    },
+    {
+      "path": "verification/story_option_c_20261116/download_actual_stdout.txt",
+      "sha256": "2afa703fd366dc8b4329bbac86cff7648abecb4cdb0e86ff4b7b8cf8b4bfda50"
+    },
+    {
+      "path": "verification/story_option_c_20261116/download_approved_bundle.py",
+      "sha256": "ee0a6cbe0e74feb9be6ca35d8d9c344f306519c43877cd39550bee89e387b113"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_binding_cell.py",
+      "sha256": "d3a599f1cbebe6666e49aacf699c1a4f63690a3ea803fd35389867e0f9b3a427"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_binding_verified.json",
+      "sha256": "9b3647eace9124dad6ed2bc60db382dbff0876c80c6239de59ed18bb2dd82285"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_recovery_actual_export.json",
+      "sha256": "dedaf4a3398b1e5525546d38832af8f6b72feefad3a31c395f5d5a2c24a58dba"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_recovery_call_ledger.json",
+      "sha256": "b2d1ca86ff719fd7175ed54d87b6a810ba782ff3725d3cb39605d78b36558bd1"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_recovery_canary_checkpoint.png",
+      "sha256": "f86e488be6d089147e6cdadf97321cb3f005cc25a4c5b0cdbec4727e0ac4cdb6"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_recovery_export_cell.py",
+      "sha256": "4cafecbaedbd2264f83307672e65e38e7a7df9c611bff2162c79841278df0f02"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_recovery_preservation.json",
+      "sha256": "53fa6cdc9cb400f06aaf2c49f6b9b369cc8ae94f7b2cc336e3382bf982f30c51"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_recovery_resume_checkpoint.json",
+      "sha256": "078a600f538fcc7eb4f130e48af18870a4a232c809a1d7340ff6685365499cdf"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_recovery_story_evaluation_status.json",
+      "sha256": "3b8e08ad0af73253ffc8f4a8f07989dbe1ba6ec4c73a8023d3e4e0554198d38e"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_recovery_summary_cell.py",
+      "sha256": "eafe192961d7a0afe9e660c58d84005a30c1b2af9f8fad41055203e7ad38f556"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driver_recovery_validation.json",
+      "sha256": "24301ea57c4bba8a8f63c95df0600430432944582f4caad34974e0c55600f7da"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driverbound_canary_v1.json",
+      "sha256": "2fd9edf6f992b33856b72834b78a1e4e9651acfd18fafbf9258b72b17acc9745"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driverbound_canary_v1.raw.txt",
+      "sha256": "1ff2f6a5c4173cdd1841c1ac043f48ca3ac3eb8586ebe1bf45a9aa418e76b7ff"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driverbound_canary_v1.server.log",
+      "sha256": "f1287c2cf43be377147d04abe29fc7015de161378bd1714640d2abedbd4f3654"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driverbound_cpu_checks.py",
+      "sha256": "1353cc1bbfd38916dfc19d252e56fe997b84a801fa7b3a8699b237a22ada0a23"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driverbound_cpu_receipt.json",
+      "sha256": "18691924ff81459919f01a61afb6103f8ab5dd962b78d33130299fd956be987f"
+    },
+    {
+      "path": "verification/story_option_c_20261116/driverbound_runner_cell.py",
+      "sha256": "ce4e99b77728e2158ace419a7a64e00ac53fcef0f03a1472dd488d404994fdc4"
+    },
+    {
+      "path": "verification/story_option_c_20261116/new_runner_cpu_guard_receipt.json",
+      "sha256": "9099b22f4c39b21fa7b8ab1d55bd5da0b3f12c8fafe589dbdafe1688548156b9"
+    },
+    {
+      "path": "verification/story_option_c_20261116/preflight_cell.py",
+      "sha256": "4eb4631d389582b742535c44ac42bf59ccb21eefe3bac3220ff2714445a5a781"
+    },
+    {
+      "path": "verification/story_option_c_20261116/preservation.json",
+      "sha256": "42dd904a7b010ea0c9d5d5b6eb16d13614da5e1903a5badec1b417e0c0d29ede"
+    },
+    {
+      "path": "verification/story_option_c_20261116/research_runner_cell.py",
+      "sha256": "3de95325544f1675fde163527c300fd48d5c9e43d25aaa6f8052f4e85c38ca24"
+    },
+    {
+      "path": "verification/story_option_c_20261116/story_evaluation_after_download.json",
+      "sha256": "c28de1cc7da7c2ad5114598f536c3d4d23c7b91e72c3e42fba72e6296840e66b"
+    },
+    {
+      "path": "verification/story_option_c_20261116/story_evaluation_status.json",
+      "sha256": "6a577dcdfba8889e41c034fccf858a11d02a6875d3b63d0d1d9370eb2f15670e"
+    },
+    {
+      "path": "verification/story_option_c_20261116/validation_receipt.json",
+      "sha256": "0f0d77b68d54fb3c5746b87ede246ed56d3c8df20e729f28e906589283c8cff5"
+    },
+    {
+      "path": "verification/story_option_c_20261116/verify_budget_guards_cpu.py",
+      "sha256": "df639af98f9c965e1fe0974c7066162c1ba83ee1bda332f4df6a50b957a6ed3b"
+    }
+  ],
+  "prompt_bundle_baseline_budget_limits_and_server_command_unchanged": true,
+  "production_worker_changed": false,
+  "new_inferences": 0,
+  "gpu_use": 0,
+  "downloads": 0,
+  "test_scope": "11 distinct new handoff tests + 2 affected adapter/budget regression tests; mocked transport is not inference evidence",
+  "new_test_fixture_repairs": "Mock process STDOUT and foundation schema fixture completed during initial test development; not new model calls or additional independent tests"
+}

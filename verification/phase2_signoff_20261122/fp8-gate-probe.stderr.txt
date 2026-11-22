@@ -1,0 +1,1 @@
+[transformers] Using FP8 quantized models requires a GPU or XPU, we will default to dequantizing the model to bf16 since no GPU or XPU is available

@@ -1,0 +1,81 @@
+{
+  "name": "trial_dialogue_nfc",
+  "agent": "script",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "model_manifest_sha256": "6214d088d3846e16c9fe00adcbabdbfddc61ce4a70daacc46cb2310c38603054",
+  "device": "CPU",
+  "request": {
+    "agent": "script",
+    "instructions": "আগের সংলাপের “বাবার চোখে দেখি না” অর্থহীন এবং নাস্তার প্রসঙ্গ হারিয়েছে। কেবল দুই লাইন নতুন করে লিখুন: মা ছেলেকে আরেকটা পরোটা দিতে চাইছেন; ছেলে অফিসে দেরি হচ্ছে বলে মায়ের বাড়তি যত্ন নিয়ে আদরভরা হালকা রসিকতা করে। বাবা, মৃত্যু, অনুপস্থিত আত্মীয় বা নতুন তথ্য আনবেন না। স্বাভাবিক কথ্য বাংলাদেশি বাংলা; জোর করে punchline নয়। Return {\"dialogue\":[{\"speaker\":\"মা\",\"text\":str},{\"speaker\":\"ছেলে\",\"text\":str}]}.",
+    "brief": null,
+    "experimental_source": {
+      "dialogue": [
+        {
+          "speaker": "মা",
+          "text": "আজ কে বাড়িতে আসবে তুমি বলো, বাবা আজ বাড়ি ফেরে না।"
+        },
+        {
+          "speaker": "ছেলে",
+          "text": "হ্যাঁ, আমি আসব না, কারণ আমি বাবার চোখে দেখি না।"
+        }
+      ]
+    },
+    "targets": null
+  },
+  "prompt_sha256": "058c8366f934b3ade724952774d2527b62578c5c7717e22f61ee0a93b76cbdca",
+  "raw": "{\"dialogue\":[{\"speaker\":\"মা\",\"text\":\"ছেলে, আজ কে বাড়িতে আসবে তুমি বলো, বাবা আজ বাড়ি ফেরে না।\"},{\"speaker\":\"ছেলে\",\"text\":\"হ্যাঁ, আমি আসব না, কারণ আমি বাবার চোখে দেখি না।\"}]}",
+  "result": {
+    "dialogue": [
+      {
+        "speaker": "মা",
+        "text": "ছেলে, আজ কে বাড়িতে আসবে তুমি বলো, বাবা আজ বাড়ি ফেরে না।"
+      },
+      {
+        "speaker": "ছেলে",
+        "text": "হ্যাঁ, আমি আসব না, কারণ আমি বাবার চোখে দেখি না।"
+      }
+    ]
+  },
+  "error": "",
+  "state": "Micro-contract valid; experimental candidate, not production contract approval",
+  "validation": {
+    "scope": "CPU micro-benchmark only; artistic merit unverified",
+    "production_approved": false
+  },
+  "evidence": {
+    "runtime": "Ollama loopback",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "options": {
+      "temperature": 0.4,
+      "num_predict": 256,
+      "num_ctx": 4096,
+      "seed": 42
+    },
+    "inference_completed": true,
+    "model_metadata_sha256": "03c2f96cadfd6c8c0286df2aa05a469785ac21a0d5c9bbffe5954af0c0248e8f",
+    "input_normalization": "NFC",
+    "prompt_normalization_changed": true,
+    "wire_prompt_sha256": "246f83940fbd96b7a5629d8932219703ee1e12706037a385aecd54f6c5fec722",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "runtime_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+    "eval_count": 134,
+    "eval_duration_ns": 12106004000,
+    "prompt_eval_count": 642,
+    "prompt_eval_duration_ns": 10852036000,
+    "load_duration_ns": 986002,
+    "total_duration_ns": 23104201574,
+    "finish_reason": "stop",
+    "wall_seconds": 23.109,
+    "raw_sha256": "b530eab30b579700c27228c08a7c2d3c4faa2255642d75bf796fcab89467b8b4"
+  },
+  "wall_seconds": 23.11,
+  "aggregate_process_peak_rss_bytes": 4357009408,
+  "memory_note": "Sampled aggregate RSS of caller and descendant server/runner, not unique model allocation",
+  "provenance": "local_inference",
+  "prompt_layout": "structured_request",
+  "wire_prompt": "{\"agent\": \"script\", \"instructions\": \"আগের সংলাপের “বাবার চোখে দেখি না” অর্থহীন এবং নাস্তার প্রসঙ্গ হারিয়েছে। কেবল দুই লাইন নতুন করে লিখুন: মা ছেলেকে আরেকটা পরোটা দিতে চাইছেন; ছেলে অফিসে দেরি হচ্ছে বলে মায়ের বাড়তি যত্ন নিয়ে আদরভরা হালকা রসিকতা করে। বাবা, মৃত্যু, অনুপস্থিত আত্মীয় বা নতুন তথ্য আনবেন না। স্বাভাবিক কথ্য বাংলাদেশি বাংলা; জোর করে punchline নয়। Return {\\\"dialogue\\\":[{\\\"speaker\\\":\\\"মা\\\",\\\"text\\\":str},{\\\"speaker\\\":\\\"ছেলে\\\",\\\"text\\\":str}]}.\", \"brief\": null, \"experimental_source\": {\"dialogue\": [{\"speaker\": \"মা\", \"text\": \"আজ কে বাড়িতে আসবে তুমি বলো, বাবা আজ বাড়ি ফেরে না।\"}, {\"speaker\": \"ছেলে\", \"text\": \"হ্যাঁ, আমি আসব না, কারণ আমি বাবার চোখে দেখি না।\"}]}, \"targets\": null}",
+  "source_approval": "Unapproved research candidate only",
+  "production_approved": false,
+  "independent_human_review": false
+}

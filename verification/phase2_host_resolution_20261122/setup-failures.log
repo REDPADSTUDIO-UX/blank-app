@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/home/rbpritam04/redpad-phase2-private-20261122/install.py", line 119, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/rbpritam04/redpad-phase2-private-20261122/install.py", line 36, in main
+    raise RuntimeError('Refuse to overwrite another task directory')
+RuntimeError: Refuse to overwrite another task directory
+RP_PRIVATE_HOST_READY {"root": "/home/rbpritam04/redpad-phase2-private-20261122", "kernel_contract": "PASS", "python": "3.11.18", "source_commit": "dfbcd2412d0b31f737d34f18a5519e20a0d4f2aa", "gated_source_transferred": false}
+Traceback (most recent call last):
+  File "/home/rbpritam04/redpad-phase2-private-20261122/install.py", line 119, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/rbpritam04/redpad-phase2-private-20261122/install.py", line 97, in main
+    execute(download,log,env=env,timeout=600)
+  File "/home/rbpritam04/redpad-phase2-private-20261122/install.py", line 21, in execute
+    subprocess.run(command,cwd=cwd,env=env,check=True,timeout=timeout,
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/rbpritam04/redpad-phase2-private-20261122/python/cpython-3.11.18-linux-x86_64-gnu/bin/python3.11', '-m', 'pip', '--isolated', 'download', '--dest', '/home/rbpritam04/redpad-phase2-private-20261122/wheels', '--index-url', 'https://pypi.org/simple', '--extra-index-url', 'https://download.pytorch.org/whl/cpu', '--require-hashes', '--only-binary=:all:', '--no-deps', '--retries', '1', '-r', '/home/rbpritam04/redpad-phase2-private-20261122/voice-cpu.lock']' returned non-zero exit status 1.
+RP_PRIVATE_HOST_READY {"root": "/home/rbpritam04/redpad-phase2-private-20261122", "kernel_contract": "PASS", "python": "3.11.18", "source_commit": "dfbcd2412d0b31f737d34f18a5519e20a0d4f2aa", "gated_source_transferred": false}
+Traceback (most recent call last):
+  File "/home/rbpritam04/redpad-phase2-private-20261122/install.py", line 129, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/rbpritam04/redpad-phase2-private-20261122/install.py", line 107, in main
+    execute(download,log,env=env,timeout=600)
+  File "/home/rbpritam04/redpad-phase2-private-20261122/install.py", line 21, in execute
+    subprocess.run(command,cwd=cwd,env=env,check=True,timeout=timeout,
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/rbpritam04/redpad-phase2-private-20261122/python/cpython-3.11.18-linux-x86_64-gnu/bin/python3.11', '-m', 'pip', '--isolated', 'download', '--dest', '/home/rbpritam04/redpad-phase2-private-20261122/wheels', '--index-url', 'https://pypi.org/simple', '--find-links', '/home/rbpritam04/redpad-phase2-private-20261122/wheels', '--require-hashes', '--only-binary=:all:', '--no-deps', '--retries', '1', '-r', '/home/rbpritam04/redpad-phase2-private-20261122/pypi.lock']' returned non-zero exit status 1.
+RP_PRIVATE_HOST_READY {"root": "/home/rbpritam04/redpad-phase2-private-20261122", "kernel_contract": "PASS", "python": "3.11.18", "source_commit": "dfbcd2412d0b31f737d34f18a5519e20a0d4f2aa", "gated_source_transferred": false}
+RP_PRIVATE_INSTALL_DONE {"root": "/home/rbpritam04/redpad-phase2-private-20261122", "wheels": 44, "bytes": 236926439, "pip_check": "PASS"}

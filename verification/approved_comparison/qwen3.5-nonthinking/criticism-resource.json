@@ -1,0 +1,6 @@
+{
+  "peak_sampled_aggregate_rss_bytes": 4702060544,
+  "sample_interval_seconds": 0.5,
+  "measurement": "Sum RSS, including shared pages; not PSS",
+  "wall_seconds_including_postchecks": 46.246
+}

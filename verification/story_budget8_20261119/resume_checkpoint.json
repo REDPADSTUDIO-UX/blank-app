@@ -1,0 +1,42 @@
+{
+  "base_commit": "653203a71ae9bf36da9fe7474d9834124e2f30fe",
+  "branch": "feature/video-music-editing-studio",
+  "status": "BLOCKED_FREE_COLAB_GPU_UNAVAILABLE",
+  "budget_adjustment": "AUTHORIZED_AND_SAVED_GIT_SIDE",
+  "call_ceiling": 8,
+  "previous_consumed_calls": 3,
+  "new_calls": 0,
+  "remaining_allowed_calls": 5,
+  "remaining_sections": [
+    {
+      "section": "foundation",
+      "status": "NOT RUN — no GPU backend allocated"
+    },
+    {
+      "section": "act_1",
+      "status": "NOT RUN — no GPU backend allocated"
+    },
+    {
+      "section": "act_2",
+      "status": "NOT RUN — no GPU backend allocated"
+    },
+    {
+      "section": "act_3",
+      "status": "NOT RUN — no GPU backend allocated"
+    },
+    {
+      "section": "reflection",
+      "status": "NOT RUN — no GPU backend allocated"
+    }
+  ],
+  "complete_story_generated": false,
+  "technical_full_story_validation": "NOT RUN",
+  "fifteen_criterion_full_story_qc": "NOT RUN — no complete genuine story",
+  "human_review": "PENDING; full-story packet not ready",
+  "owner_acceptance": "PENDING",
+  "adapter_status": "PREPARED / CPU VALIDATED; current Colab execution NOT VERIFIED",
+  "next_action": "Once an eligible free Colab GPU backend is actually connected, allow only the queued read-only metadata cell to inspect current cache. Do not rerun old download/setup/CUDA diagnostic/canary cells. If the exact bundle exists, verify saved evidence/source and apply the eight-call ledger migration with original backup before sequential section calls. If missing, stop: current approval does not authorize another download.",
+  "production_secure_worker_fixed": false,
+  "production_changes": false,
+  "new_downloads": 0
+}

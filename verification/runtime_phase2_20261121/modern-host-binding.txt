@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/blank-app/verification/runtime_phase2_20261121/sandbox_probe.py", line 99, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/workspace/blank-app/verification/runtime_phase2_20261121/sandbox_probe.py", line 79, in main
+    RuntimeBindings.validate(identifier, receipt)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/blank-app/redpad_pipeline/worker_isolation.py", line 171, in validate
+    raise IsolationBlocked('Ambiguous runtime distribution metadata.')
+redpad_pipeline.worker_isolation.IsolationBlocked: Ambiguous runtime distribution metadata.

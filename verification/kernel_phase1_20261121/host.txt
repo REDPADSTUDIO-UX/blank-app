@@ -1,0 +1,24 @@
+Linux 6.18.57 x86_64 GNU/Linux
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.6
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+bubblewrap 0.12.0
+/proc ro,nosuid,nodev,noexec,relatime
+      1000          0          1
+      1000          0          1
+user.max_user_namespaces = 2147483647
+user.max_mnt_namespaces = 2147483647
+user.max_net_namespaces = 2147483647
+user.max_pid_namespaces = 2147483647
+user:[4026532313]
+mnt:[4026532310]
+net:[4026531833]
+pid:[4026532209]
+test_kernel_private_file_denial_and_readonly_request (test_worker_isolation.WorkerIsolationTests.test_kernel_private_file_denial_and_readonly_request) ... skipped 'bwrap: setting up uid map: Read-only file system'

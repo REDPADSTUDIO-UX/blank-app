@@ -1,0 +1,177 @@
+{
+  "/config": {
+    "status": 200,
+    "version": "5.7.1",
+    "dependencies": [
+      {
+        "api_name": "load_example",
+        "inputs": [
+          12
+        ],
+        "outputs": [
+          6,
+          7
+        ],
+        "queue": false
+      },
+      {
+        "api_name": "generate_finetuned",
+        "inputs": [
+          6,
+          7
+        ],
+        "outputs": [
+          11
+        ],
+        "queue": true
+      },
+      {
+        "api_name": "load_example_1",
+        "inputs": [
+          22
+        ],
+        "outputs": [
+          16,
+          17
+        ],
+        "queue": false
+      },
+      {
+        "api_name": "generate_base",
+        "inputs": [
+          16,
+          17
+        ],
+        "outputs": [
+          21
+        ],
+        "queue": true
+      }
+    ],
+    "components": [
+      {
+        "id": 1,
+        "type": "html",
+        "label": null
+      },
+      {
+        "id": 2,
+        "type": "html",
+        "label": null
+      },
+      {
+        "id": 3,
+        "type": "tabitem",
+        "label": "Finetuned"
+      },
+      {
+        "id": 4,
+        "type": "row",
+        "label": null
+      },
+      {
+        "id": 5,
+        "type": "column",
+        "label": null
+      },
+      {
+        "id": 6,
+        "type": "textbox",
+        "label": "Input Text"
+      },
+      {
+        "id": 7,
+        "type": "textbox",
+        "label": "Description"
+      },
+      {
+        "id": 8,
+        "type": "button",
+        "label": null
+      },
+      {
+        "id": 9,
+        "type": "form",
+        "label": null
+      },
+      {
+        "id": 10,
+        "type": "column",
+        "label": null
+      },
+      {
+        "id": 11,
+        "type": "audio",
+        "label": "Parler-TTS generation"
+      },
+      {
+        "id": 12,
+        "type": "dataset",
+        "label": null
+      },
+      {
+        "id": 13,
+        "type": "tabitem",
+        "label": "Pretrained"
+      },
+      {
+        "id": 14,
+        "type": "row",
+        "label": null
+      },
+      {
+        "id": 15,
+        "type": "column",
+        "label": null
+      },
+      {
+        "id": 16,
+        "type": "textbox",
+        "label": "Input Text"
+      },
+      {
+        "id": 17,
+        "type": "textbox",
+        "label": "Description"
+      },
+      {
+        "id": 18,
+        "type": "button",
+        "label": null
+      },
+      {
+        "id": 19,
+        "type": "form",
+        "label": null
+      },
+      {
+        "id": 20,
+        "type": "column",
+        "label": null
+      },
+      {
+        "id": 21,
+        "type": "audio",
+        "label": "Parler-TTS generation"
+      },
+      {
+        "id": 22,
+        "type": "dataset",
+        "label": null
+      },
+      {
+        "id": 23,
+        "type": "html",
+        "label": null
+      },
+      {
+        "id": 24,
+        "type": "tabs",
+        "label": null
+      }
+    ]
+  },
+  "/": {
+    "error": "ReadTimeout"
+  }
+}

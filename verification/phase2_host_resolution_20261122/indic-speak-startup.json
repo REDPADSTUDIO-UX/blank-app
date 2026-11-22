@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "profile": "indic_speak",
+  "revision": "76e0814f189321efe550011850cd288dae366aad",
+  "exact_source_imports": [
+    "inference.py:TTS",
+    "vocos/model.py:VocosDecoder"
+  ],
+  "dependency_classes": [
+    "LlamaForCausalLM",
+    "AutoTokenizer",
+    "SNAC"
+  ],
+  "torch": "2.7.1+cpu",
+  "torchaudio": "2.7.1+cpu",
+  "cuda_initialized": false,
+  "weights_loaded": false,
+  "model_inference": false,
+  "namespace_private": true,
+  "source_read_only": true,
+  "production_launch_approved": false,
+  "model_component_licenses_verified": false,
+  "speaker_consent_granted": false,
+  "professional_acceptance": false
+}

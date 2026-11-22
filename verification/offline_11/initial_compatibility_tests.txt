@@ -1,0 +1,32 @@
+test_all_19_roles_all_declared_supported_contracts_without_resources (tests.test_no_gpu_staging.NoGPUStagingTests.test_all_19_roles_all_declared_supported_contracts_without_resources) ... ok
+test_staging_is_restart_safe_idempotent_and_never_changes_routes_or_task_state (tests.test_no_gpu_staging.NoGPUStagingTests.test_staging_is_restart_safe_idempotent_and_never_changes_routes_or_task_state) ... ok
+test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art (tests.test_no_gpu_staging.NoGPUStagingTests.test_ledger_reports_real_engineering_gaps_and_never_accepts_mock_art) ... ok
+test_task_bound_tools_keep_same_approval_and_no_publishing_boundary (tests.test_no_gpu_staging.NoGPUStagingTests.test_task_bound_tools_keep_same_approval_and_no_publishing_boundary) ... ERROR
+test_casting_cannot_bypass_director_qc_or_identity_rights (tests.test_producer_control.ProducerTests.test_casting_cannot_bypass_director_qc_or_identity_rights) ... ok
+test_wrong_actor_unexplained_hair_change_and_portrait_acting_rejected (tests.test_producer_control.ProducerTests.test_wrong_actor_unexplained_hair_change_and_portrait_acting_rejected) ... ok
+test_production_route_cannot_be_replaced_by_research_preference (tests.test_kaggle_model_services.KaggleServices.test_production_route_cannot_be_replaced_by_research_preference) ... ok
+test_service_snapshot_is_pinned_not_changed_by_later_preference (tests.test_kaggle_model_services.KaggleServices.test_service_snapshot_is_pinned_not_changed_by_later_preference) ... ok
+
+======================================================================
+ERROR: test_task_bound_tools_keep_same_approval_and_no_publishing_boundary (tests.test_no_gpu_staging.NoGPUStagingTests.test_task_bound_tools_keep_same_approval_and_no_publishing_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_no_gpu_staging.py", line 180, in test_task_bound_tools_keep_same_approval_and_no_publishing_boundary
+    a=self.services.stage_tool_request(run,'read_only_analytics',{'operation':'channel_profile','channel_id':'UC'+'a'*22})
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/shared_model_services.py", line 109, in stage_tool_request
+    return StagingLedger(self.store).stage_tool(run,operation,request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/no_gpu_staging.py", line 336, in stage_tool
+    plan=tool_request(context['role'],operation,request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/no_gpu_staging.py", line 211, in tool_request
+    from .youtube import channel_id
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/youtube.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.183s
+
+FAILED (errors=1)

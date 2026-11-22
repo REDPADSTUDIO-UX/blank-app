@@ -1,0 +1,12 @@
+{
+  "owner_message": "porer porikha ar onumoti dilam",
+  "scope": "Explicit response to the request for exact two model downloads, Gemma terms consent, same six CPU tasks, and read-only existing free-GPU readiness. No new GPU/cloud/account/paid resource authorized.",
+  "models": [
+    "gemma3:4b-it-q4_K_M",
+    "qwen3.5:4b-q4_K_M"
+  ],
+  "gemma_terms_consented": true,
+  "gemma_terms_source": "https://ai.google.dev/gemma/terms",
+  "baseline_reused": "verification/master_studio/qwen_control",
+  "independent_human_review_completed": false
+}

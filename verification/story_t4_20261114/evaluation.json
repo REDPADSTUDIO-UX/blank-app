@@ -1,0 +1,367 @@
+{
+  "raw_http_matches_content": true,
+  "raw_hashes_verified": true,
+  "canary_json_schema_valid": true,
+  "canary_knowledge_boundary": "No prior ticket reaction asserted; generic non-action rather than convincing dramatic decision. Narrow format/knowledge check only; creative quality not passed.",
+  "foundation_json_decode_error": {
+    "type": "JSONDecodeError",
+    "message": "Unterminated string starting at",
+    "line": 1,
+    "column": 3329,
+    "position": 3328
+  },
+  "foundation_schema_errors": null,
+  "foundation_finish_reason": "length",
+  "lossless_assembly": "not possible; foundation truncated, no acts/reflection",
+  "full_story_validator": "not run: no complete candidate artifact; do not supply a fixture or repair prose",
+  "fifteen_criterion_rubric": [
+    {
+      "id": "story.creative.1",
+      "criterion": "originality",
+      "question": "Distinct choices and situations; no originality guarantee without comparative review",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "not_assessable_missing_complete_story",
+      "score": null,
+      "assessment": "পূর্ণ premise বা beat নেই; originality বিচার করা যাচ্ছে না।",
+      "raw_evidence": [],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.2",
+      "criterion": "causal_logic",
+      "question": "Each turn follows an established action and consequence",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "not_assessable_missing_complete_story",
+      "score": null,
+      "assessment": "Causal beats ও consequence chain তৈরি হয়নি; canary-র generic inference পূর্ণ গল্পের causal logic নয়।",
+      "raw_evidence": [],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.3",
+      "criterion": "character_agency",
+      "question": "Protagonist chooses between costly alternatives",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "not_assessable_missing_complete_story",
+      "score": null,
+      "assessment": "চরিত্রের costly decision অনুপস্থিত; canary-তে সিদ্ধান্তের বদলে কী করবে না তার নির্দেশসদৃশ ভাষা এসেছে।",
+      "raw_evidence": [],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.4",
+      "criterion": "psychological_depth",
+      "question": "Wants conflict with fears and observable behavior",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "partial_defect_observed",
+      "score": null,
+      "assessment": "একাকীত্ব লক্ষ্য করা ও না-বোঝার দাবি পরস্পর অস্পষ্ট; পূর্ণ character motivations নেই।",
+      "raw_evidence": [
+        {
+          "quote": "নীরা বাবার একাকীত্বের বিষয়টি গোপনে লক্ষ্য করেন।",
+          "source": "colab_export/outputs/foundation.raw.txt",
+          "occurrences": 11,
+          "first_character_offset": 617,
+          "source_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661"
+        },
+        {
+          "quote": "নীরা বাবার একাকীত্বের বিষয়টি বুঝতে পারেন না।",
+          "source": "colab_export/outputs/foundation.raw.txt",
+          "occurrences": 1,
+          "first_character_offset": 1033,
+          "source_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661"
+        }
+      ],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.5",
+      "criterion": "relationship_credibility",
+      "question": "Both father and daughter have defensible competing needs",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "not_assessable_missing_complete_story",
+      "score": null,
+      "assessment": "সম্পর্কের কোনো enacted progression পাওয়া যায়নি।",
+      "raw_evidence": [],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.6",
+      "criterion": "emotional_authenticity",
+      "question": "Earlier investment and restrained action earn emotional moments",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "not_assessable_missing_complete_story",
+      "score": null,
+      "assessment": "Earlier investment ও restrained emotional action-এর story evidence নেই।",
+      "raw_evidence": [],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.7",
+      "criterion": "organic_humor",
+      "question": "Humor grows from a specific personality or situation",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "not_assessable_missing_complete_story",
+      "score": null,
+      "assessment": "কোনো motivated humor scene তৈরি হয়নি।",
+      "raw_evidence": [],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.8",
+      "criterion": "bangladesh_authenticity",
+      "question": "Social details are specific, attributed where factual, and avoid stereotypes",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "partial_defect_observed",
+      "score": null,
+      "assessment": "চাকরির সুযোগ কম—এ দাবির source নেই; এটি verified বাংলাদেশি factual context নয়।",
+      "raw_evidence": [
+        {
+          "quote": "ঢাকার ভাড়া বাসা ছেড়ে রাজশাহীতে চাকরির সুযোগ খুব কম।",
+          "source": "colab_export/outputs/foundation.raw.txt",
+          "occurrences": 1,
+          "first_character_offset": 211,
+          "source_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661"
+        }
+      ],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.9",
+      "criterion": "hook_suspense",
+      "question": "Fairly controlled information motivates curiosity",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "not_assessable_missing_complete_story",
+      "score": null,
+      "assessment": "একটি assumptions list এসেছে; hook বা suspense narrative বিচার করা যাচ্ছে না।",
+      "raw_evidence": [],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.10",
+      "criterion": "escalation",
+      "question": "Choices narrow or costs increase instead of repetitive conflict",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "partial_defect_observed",
+      "score": null,
+      "assessment": "একই assumptions বারবার এসেছে; escalating choices হয়নি।",
+      "raw_evidence": [
+        {
+          "quote": "বাড়ির দক্ষিণ দিক প্রবেশদ্বার, উত্তর দিকে রান্নাঘর।",
+          "source": "colab_export/outputs/foundation.raw.txt",
+          "occurrences": 12,
+          "first_character_offset": 377,
+          "source_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661"
+        },
+        {
+          "quote": "নীরা বাবার একাকীত্বের বিষয়টি গোপনে লক্ষ্য করেন।",
+          "source": "colab_export/outputs/foundation.raw.txt",
+          "occurrences": 11,
+          "first_character_offset": 617,
+          "source_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661"
+        }
+      ],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.11",
+      "criterion": "setup_payoff",
+      "question": "Earlier visible plants motivate later consequences",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "not_assessable_missing_complete_story",
+      "score": null,
+      "assessment": "Ticket brief-এ আছে; কোনো generated plant-to-payoff story নেই।",
+      "raw_evidence": [],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.12",
+      "criterion": "ending_quality",
+      "question": "Ending follows choices and changes both characters without a formulaic rescue",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "not_assessable_missing_complete_story",
+      "score": null,
+      "assessment": "Ending তৈরি হয়নি; ending score দেওয়া যাবে না।",
+      "raw_evidence": [],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.13",
+      "criterion": "filmability",
+      "question": "Action, location or sound communicates each major beat",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "partial_defect_observed",
+      "score": null,
+      "assessment": "পশ্চিমের প্রবেশদ্বারকে দক্ষিণ করা হয়েছে; spatial continuity ভেঙেছে।",
+      "raw_evidence": [
+        {
+          "quote": "বাড়ির দক্ষিণ দিক প্রবেশদ্বার, উত্তর দিকে রান্নাঘর।",
+          "source": "colab_export/outputs/foundation.raw.txt",
+          "occurrences": 12,
+          "first_character_offset": 377,
+          "source_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661"
+        }
+      ],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.14",
+      "criterion": "consistency",
+      "question": "Knowledge, timeline, possessions and locked facts remain coherent",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "partial_defect_observed",
+      "score": null,
+      "assessment": "Brief-এর geography বদলেছে এবং চাকরি নিতে যাওয়াকে interview preparation করা হয়েছে; একাকীত্ব জানার অবস্থাও অস্পষ্ট।",
+      "raw_evidence": [
+        {
+          "quote": "বাড়ির দক্ষিণ দিক প্রবেশদ্বার, উত্তর দিকে রান্নাঘর।",
+          "source": "colab_export/outputs/foundation.raw.txt",
+          "occurrences": 12,
+          "first_character_offset": 377,
+          "source_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661"
+        },
+        {
+          "quote": "নীরা চাকরির ইন্টারভিউয়ের জন্য প্রস্তুত।",
+          "source": "colab_export/outputs/foundation.raw.txt",
+          "occurrences": 1,
+          "first_character_offset": 951,
+          "source_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661"
+        },
+        {
+          "quote": "নীরা বাবার একাকীত্বের বিষয়টি গোপনে লক্ষ্য করেন।",
+          "source": "colab_export/outputs/foundation.raw.txt",
+          "occurrences": 11,
+          "first_character_offset": 617,
+          "source_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661"
+        },
+        {
+          "quote": "নীরা বাবার একাকীত্বের বিষয়টি বুঝতে পারেন না।",
+          "source": "colab_export/outputs/foundation.raw.txt",
+          "occurrences": 1,
+          "first_character_offset": 1033,
+          "source_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661"
+        }
+      ],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    },
+    {
+      "id": "story.creative.15",
+      "criterion": "audience_engagement",
+      "question": "Engagement is a reviewer hypothesis, not invented audience analytics",
+      "anchors": {
+        "1": "Cited beats show a substantial unresolved weakness",
+        "3": "Cited evidence supports the aim with specific weaknesses remaining",
+        "5": "Independent qualified reviewer supports convincing execution with exact beat evidence"
+      },
+      "required_medium": "text",
+      "status": "not_assessable_missing_complete_story",
+      "score": null,
+      "assessment": "পূর্ণ গল্প/দর্শক-পরীক্ষা নেই; engagement বা viewership দাবি করা যাবে না।",
+      "raw_evidence": [],
+      "beat_id": null,
+      "reviewer_kind": "assistant textual triage, not independent qualified human",
+      "independent_human_review": "pending"
+    }
+  ],
+  "independent_scored_assessment": "not accepted: no complete artifact/beat citations/human inspection receipts",
+  "owner_acceptance": false,
+  "production_ready": false
+}

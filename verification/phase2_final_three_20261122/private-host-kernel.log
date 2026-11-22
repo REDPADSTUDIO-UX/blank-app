@@ -1,0 +1,6 @@
+test_kernel_private_file_denial_and_readonly_request (tests.test_worker_isolation.WorkerIsolationTests.test_kernel_private_file_denial_and_readonly_request) ... skipped 'bwrap: loopback: Failed to create NETLINK_ROUTE socket: Operation not permitted'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.028s
+
+OK (skipped=1)

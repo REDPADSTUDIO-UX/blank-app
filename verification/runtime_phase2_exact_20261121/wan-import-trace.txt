@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/tmp/redpad-exact/wan_animate2/pipelines/wan_animate_2_pipeline.py", line 40, in <module>
+    from wanxiang.eval_i2v import T5Encoder, CLIP, get_i2v_mask
+  File "/tmp/redpad-exact/wan_animate2/wanxiang/eval_i2v.py", line 13, in <module>
+    class T5Encoder:
+  File "/tmp/redpad-exact/wan_animate2/wanxiang/eval_i2v.py", line 20, in T5Encoder
+    device=torch.cuda.current_device(),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/cuda/__init__.py", line 1026, in current_device
+    _lazy_init()
+  File "/tmp/redpad-exact/wan-env/lib/python3.11/site-packages/torch/cuda/__init__.py", line 363, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+[PreInfo] Use flash attention=None

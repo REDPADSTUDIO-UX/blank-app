@@ -1,0 +1,10 @@
+{
+  "resumed_commit": "c649d5f5f3f4c4de2e98722d70ad7821b2d7eb49",
+  "total_agents_in_matrix": 19,
+  "director_script": "separate unchanged workstreams",
+  "engineering_complete": 18,
+  "partial": 1,
+  "professionally_accepted_of_21": 0,
+  "other_seventeen_and_all_profiles_preserved": true,
+  "gpu_inference_weights_hosted_paid_license_acceptance": 0
+}

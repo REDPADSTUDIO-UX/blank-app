@@ -1,0 +1,34 @@
+{
+  "A": {
+    "model": "gemma",
+    "source_file": "gemma_dialogue_raw.txt",
+    "case": "natural_dialogue"
+  },
+  "B": {
+    "model": "qwen",
+    "source_file": "qwen_natural_dialogue_raw.txt",
+    "case": "natural_dialogue"
+  },
+  "C": {
+    "model": "qwen",
+    "case": "causal_outline",
+    "expected_objective_defects": null
+  },
+  "D": {
+    "model": "qwen",
+    "case": "director_criticism",
+    "expected_objective_defects": [
+      "prop_state"
+    ]
+  },
+  "E": {
+    "model": "qwen",
+    "case": "clean_abstention",
+    "expected_objective_defects": []
+  },
+  "F": {
+    "model": "qwen",
+    "case": "targeted_rewrite",
+    "expected_objective_defects": null
+  }
+}

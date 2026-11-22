@@ -1,0 +1,26 @@
+{
+  "scope": "Executed JavaScript evidence inspection and string/set comparisons; not a Python test run or model test",
+  "source_commit": "a3d6252d2886827d7028ef328eff3fbf967901e4",
+  "checks": {
+    "seven_findings_projected_match_original_python_receipt": true,
+    "foundation_receipt_unchanged": true,
+    "act1_receipt_unchanged": true,
+    "failed_act2_receipt_unchanged": true,
+    "full_budget11_ledger_unchanged": true,
+    "no_prefix_or_suffix_change": true,
+    "initial_known_matches_submitted_context": true,
+    "b5_entry_state_matches_literal_context": true,
+    "ticket_plant_excluded_from_h_knowledge": true,
+    "n_ticket_not_known": true,
+    "new_prompt_not_reserved_or_submitted": true
+  },
+  "python_guard_execution": "NOT RUN — selected development environment unavailable",
+  "schema_runtime_validation": "NOT RUN on a new output; no new output exists",
+  "exact_token_fit": "NOT MEASURED — required future preflight",
+  "new_model_calls": 0,
+  "new_downloads": 0,
+  "ledger_consumed": 9,
+  "ledger_ceiling": 11,
+  "ledger_remaining": 2,
+  "all_old_artifacts_unchanged": true
+}

@@ -1,0 +1,8 @@
+test_casting_assessment_is_bound_to_real_character_candidate_and_single_existing_store (tests.test_voice_casting_integration.VoiceCastingTests.test_casting_assessment_is_bound_to_real_character_candidate_and_single_existing_store) ... ok
+test_pair_casting_requires_current_partner_and_actual_performance_refs (tests.test_voice_casting_integration.VoiceCastingTests.test_pair_casting_requires_current_partner_and_actual_performance_refs) ... ok
+test_performance_assessment_and_voice_handoff_share_revision_and_stale_media_guards (tests.test_voice_casting_integration.VoiceCastingTests.test_performance_assessment_and_voice_handoff_share_revision_and_stale_media_guards) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.325s
+
+OK

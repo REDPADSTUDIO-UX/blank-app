@@ -1,0 +1,30 @@
+{
+  "selected": [
+    "tests.test_offline_six_preparation.OfflineSixTests",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_native_wan_and_svd_keep_supported_worker_controls",
+    "tests.test_offline_11_preparation.OfflineElevenTests.test_parler_and_stable_audio_prepare_only_their_existing_local_payloads",
+    "tests.test_producer_control.ProducerTests.test_casting_cannot_bypass_director_qc_or_identity_rights",
+    "tests.test_producer_control.ProducerTests.test_wrong_actor_unexplained_hair_change_and_portrait_acting_rejected",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_all_19_roles_all_declared_supported_contracts_without_resources",
+    "tests.test_no_gpu_staging.NoGPUStagingTests.test_staging_is_restart_safe_idempotent_and_never_changes_routes_or_task_state"
+  ],
+  "tests": 31,
+  "errors": 1,
+  "failures": 0,
+  "forbidden_resource_attempts": {
+    "socket.socket": 0,
+    "subprocess.run": 0,
+    "subprocess.Popen": 0,
+    "urllib.request.OpenerDirector.open": 0,
+    "redpad_pipeline.kaggle_runtime.probe": 0,
+    "redpad_pipeline.shared_model_services.SharedServices.execute": 0,
+    "redpad_pipeline.screenwriter.LocalWriter.__call__": 0
+  },
+  "gpu": false,
+  "model_inference": false,
+  "weights_opened_or_downloaded": false,
+  "requests_import_only_shim": true,
+  "http_transport_tested": false,
+  "scope": "software-only manual fixtures; no artistic/model evidence"
+}

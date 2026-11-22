@@ -1,0 +1,18 @@
+The config attributes {'image_processor': ['transformers', 'CLIPImageProcessor']} were passed to WanAnimate2Pipeline, but are not expected and will be ignored. Please verify your model_index.json configuration file.
+The config attributes {'image_processor': ['transformers', 'CLIPImageProcessor']} were passed to WanAnimate2Pipeline, but are not expected and will be ignored. Please verify your model_index.json configuration file.
+Keyword arguments {'image_processor': ['transformers', 'CLIPImageProcessor']} are not expected by WanAnimate2Pipeline and will be ignored.
+PASS config extraction ignores image_processor
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 23674.34it/s]
+The config attributes {'image_processor': ['transformers', 'CLIPImageProcessor']} were passed to WanAnimate2Pipeline, but are not expected and will be ignored. Please verify your model_index.json configuration file.
+Keyword arguments {'image_processor': <object object at 0x7f5ccb5bb120>} are not expected by WanAnimate2Pipeline and will be ignored.
+PASS exact loader requests only constructor components {"image_encoder": ["transformers", "CLIPVisionModel"], "scheduler": ["diffusers", "FlowMatchEulerDiscreteScheduler"], "text_encoder": ["transformers", "UMT5EncoderModel"], "tokenizer": ["transformers", "T5TokenizerFast"], "transformer": ["diffusers", "WanAnimate2Transformer3DModel"], "vae": ["diffusers", "AutoencoderKLWan"]}
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 16426.78it/s]
+The config attributes {'image_processor': ['transformers', 'CLIPImageProcessor']} were passed to WanAnimate2Pipeline, but are not expected and will be ignored. Please verify your model_index.json configuration file.
+Keyword arguments {'image_processor': ['transformers', 'CLIPImageProcessor']} are not expected by WanAnimate2Pipeline and will be ignored.
+PASS explicit processor override ignored
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 39199.10it/s]
+PASS required scheduler omission rejected
+PASS exact encode_image default equals pinned CLIP preprocessing for synthetic RGB image
+OBSERVED exported alias transformers.T5TokenizerFast -> T5Tokenizer
+PASS pinned component class symbols import from exact diagnostic environment
+PASS OpenCV and Decord native imports {"opencv-python-headless": "4.13.0.90", "decord": "0.6.0", "pillow": "11.3.0", "numpy": "2.4.6"}

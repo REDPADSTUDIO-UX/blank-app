@@ -1,0 +1,6 @@
+test_engine_retry_uses_same_shared_backend_after_policy_change (tests.test_kaggle_model_services.KaggleServices.test_engine_retry_uses_same_shared_backend_after_policy_change) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.028s
+
+OK

@@ -1,0 +1,74 @@
+[
+  {
+    "case": "canary",
+    "state": "completed",
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 127,
+      "total_tokens": 251,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "load_seconds": 71.12815384999999,
+    "generation_seconds": 70.35668729099984,
+    "total_seconds": 144.57331105899993,
+    "sampled_device_used_mib": 5231,
+    "sampled_server_rss_bytes": 1621516288,
+    "offload_lines": [
+      "0.24.336.465 I load_tensors: offloaded 33/33 layers to GPU",
+      "0.24.336.476 I load_tensors:        CUDA0 model buffer size =  4861.28 MiB"
+    ],
+    "template_sha256": "051a136079635359b9a55cc2fac4dacf3e3be05127ce7be999a6f73b86058306",
+    "raw_sha256": "a9dd98d39e91e1eb4b794e6b5626878a5af19408aa294b762d26422f49541d5d",
+    "server_stopped": true,
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 127,
+      "prompt_ms": 65937.343,
+      "prompt_per_token_ms": 519.1916771653542,
+      "prompt_per_second": 1.9260709367679558,
+      "predicted_n": 124,
+      "predicted_ms": 4413.226,
+      "predicted_per_token_ms": 35.87988617886179,
+      "predicted_per_second": 27.870768458266134
+    }
+  },
+  {
+    "case": "foundation",
+    "state": "stopped_with_evidence",
+    "finish_reason": "length",
+    "usage": {
+      "completion_tokens": 1536,
+      "prompt_tokens": 1135,
+      "total_tokens": 2671,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "load_seconds": 4.228568951999932,
+    "generation_seconds": 74.07867742000008,
+    "total_seconds": 78.63082022799995,
+    "sampled_device_used_mib": 5249,
+    "sampled_server_rss_bytes": 1443651584,
+    "offload_lines": [
+      "0.02.191.595 I load_tensors: offloaded 33/33 layers to GPU",
+      "0.02.191.605 I load_tensors:        CUDA0 model buffer size =  4861.28 MiB"
+    ],
+    "template_sha256": "3cf9abff64e0769fe7ff6ac526c9feb1d03bad2e7533cee350af39e86d083cc4",
+    "raw_sha256": "08ec7e2ada9d680cdfad3a1ada64f744cc1fb9c5331a966efd892f02770a2661",
+    "server_stopped": true,
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 1135,
+      "prompt_ms": 1627.216,
+      "prompt_per_token_ms": 1.4336704845814976,
+      "prompt_per_second": 697.5103489641203,
+      "predicted_n": 1536,
+      "predicted_ms": 72443.023,
+      "predicted_per_token_ms": 47.19415179153094,
+      "predicted_per_second": 21.18906606092349
+    }
+  }
+]

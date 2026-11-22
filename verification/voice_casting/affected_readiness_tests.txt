@@ -1,0 +1,7 @@
+test_scope_and_readiness_separate_engineering_from_inference (tests.test_offline_11_preparation.OfflineElevenTests.test_scope_and_readiness_separate_engineering_from_inference) ... ok
+test_readiness_separates_engineering_from_gated_voice_source (tests.test_native_local_execution.NativeLocalTests.test_readiness_separates_engineering_from_gated_voice_source) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.060s
+
+OK

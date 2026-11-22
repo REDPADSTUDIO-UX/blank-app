@@ -1,0 +1,20 @@
+{
+  "S1": {
+    "case": "source_questions",
+    "reported_model": "hosted Gemma 3 12B IT; exact revision unknown",
+    "raw": "verification/director_recovery_20261113/source_questions_raw.txt",
+    "sha256": "664739e0c60fc2cdf197ba82917f032667d33488bc405ff2dbc8eaa2cffff2db"
+  },
+  "S2": {
+    "case": "locked_camera_revision",
+    "reported_model": "hosted Gemma 3 12B IT; exact revision unknown",
+    "raw": "verification/director_recovery_20261113/locked_camera_revision_raw.txt",
+    "sha256": "8355a44983bc3e722eb9cf087d298ce84a544ecae8ae2ae2de2422c6f53fc7c1"
+  },
+  "S3": {
+    "case": "director_plan",
+    "reported_model": "hosted Gemma 3 12B IT; exact revision unknown",
+    "raw": "verification/director_recovery_20261113/director_plan_raw.txt",
+    "sha256": "2e5cd43e59c4f2ec03b9325988efece081f2d0c5b030649189ab041a53aa197e"
+  }
+}

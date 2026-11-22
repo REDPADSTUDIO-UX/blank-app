@@ -1,0 +1,11 @@
+{
+  "validation": "One new artifact consistency/static syntax/preservation validation; not model tests or creative proof",
+  "parsed_actual_stdout": true,
+  "fifteen_criteria_unscored": true,
+  "historical_calls_preserved": 2,
+  "protected_files_byte_identical": 28,
+  "new_preflight_syntax_valid": true,
+  "previous_cpu_regressions_rerun": false,
+  "model_calls": 0,
+  "downloads": 0
+}

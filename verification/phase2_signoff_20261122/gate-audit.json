@@ -1,0 +1,10 @@
+{
+  "check_count": 4,
+  "checks": {
+    "qwen35_moe": "This exact candidate has no new shared-service execution adapter; existing adapters retain separate approval. No substitution.",
+    "wan_animate2_distilled": "This exact candidate has no new shared-service execution adapter; existing adapters retain separate approval. No substitution.",
+    "ltx25_no_publisher_sha": "Official spatial upsampler LFS SHA256 unverified; exact weight verification gate remains blocked.",
+    "indicf5_no_consent": "Specific explicit human voice consent review required; document/rights metadata is insufficient."
+  },
+  "installs_created": 0
+}

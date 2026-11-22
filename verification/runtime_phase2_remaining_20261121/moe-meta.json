@@ -1,0 +1,29 @@
+{
+  "control_converted": true,
+  "packed_experts": {
+    "gate_up_proj": {
+      "type": "Parameter",
+      "shape": [
+        2,
+        8,
+        8
+      ],
+      "device": "meta",
+      "is_bitsandbytes_4bit": false
+    },
+    "down_proj": {
+      "type": "Parameter",
+      "shape": [
+        2,
+        8,
+        4
+      ],
+      "device": "meta",
+      "is_bitsandbytes_4bit": false
+    }
+  },
+  "torch": "2.7.1+cpu",
+  "bitsandbytes": "0.50.2",
+  "weights_loaded": false,
+  "inference": false
+}

@@ -1,0 +1,196 @@
+{
+  "new_verified": 1,
+  "historical_verified": 10,
+  "total_verified": 11,
+  "profiles": {
+    "qwen35_27": {
+      "repo": "Qwen/Qwen3.5-27B",
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "registry_adapter": "hf_text_nf4",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — historical tested CPU family modern",
+      "cpu_model_free_startup": "PASS — historical",
+      "secure_runtime_binding": "PASS — historical",
+      "evidence": "../runtime_phase2_20261121/sandbox-results.json"
+    },
+    "qwen35_moe": {
+      "repo": "Qwen/Qwen3.5-35B-A3B",
+      "revision": "59d61f3ce65a6d9863b86d2e96597125219dc754",
+      "registry_adapter": "contract_only",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "BLOCKED — no approved executable MoE route",
+      "cpu_model_free_startup": "PARTIAL — supporting probes/source only; full entrypoint not verified",
+      "secure_runtime_binding": "NOT TESTED for exact runtime closure",
+      "observed": "MoE class imported. The existing NF4 converter converted the Linear control and left both actual packed expert tensors unquantized on meta.",
+      "remaining": "Approve and verify an exact expert-compatible offline quantization/precision recipe; existing dense route remains closed to this profile."
+    },
+    "qwen36_27": {
+      "repo": "Qwen/Qwen3.6-27B",
+      "revision": "8f33b98937c6031bb49e713dee3e8e185aafd26f",
+      "registry_adapter": "hf_text_nf4",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — historical tested CPU family modern",
+      "cpu_model_free_startup": "PASS — historical",
+      "secure_runtime_binding": "PASS — historical",
+      "evidence": "../runtime_phase2_20261121/sandbox-results.json"
+    },
+    "qwen35_9": {
+      "repo": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "registry_adapter": "hf_text_nf4",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — historical tested CPU family modern",
+      "cpu_model_free_startup": "PASS — historical",
+      "secure_runtime_binding": "PASS — historical",
+      "evidence": "../runtime_phase2_20261121/sandbox-results.json"
+    },
+    "gemma3_27": {
+      "repo": "google/gemma-3-27b-it",
+      "revision": "005ad3404e59d6023443cb575daa05336842228a",
+      "registry_adapter": "hf_text_nf4",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — historical tested CPU family modern",
+      "cpu_model_free_startup": "PASS — historical",
+      "secure_runtime_binding": "PASS — historical",
+      "evidence": "../runtime_phase2_20261121/sandbox-results.json"
+    },
+    "gemma3_12": {
+      "repo": "google/gemma-3-12b-it",
+      "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "registry_adapter": "hf_text_nf4",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — historical tested CPU family modern",
+      "cpu_model_free_startup": "PASS — historical",
+      "secure_runtime_binding": "PASS — historical",
+      "evidence": "../runtime_phase2_20261121/sandbox-results.json"
+    },
+    "flux2_klein4": {
+      "repo": "black-forest-labs/FLUX.2-klein-4B",
+      "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+      "registry_adapter": "flux2_klein",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — historical tested CPU family modern",
+      "cpu_model_free_startup": "PASS — historical",
+      "secure_runtime_binding": "PASS — historical",
+      "evidence": "../runtime_phase2_20261121/sandbox-results.json"
+    },
+    "z_image_turbo": {
+      "repo": "Tongyi-MAI/Z-Image-Turbo",
+      "revision": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+      "registry_adapter": "z_image",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — historical tested CPU family modern",
+      "cpu_model_free_startup": "PASS — historical",
+      "secure_runtime_binding": "PASS — historical",
+      "evidence": "../runtime_phase2_20261121/sandbox-results.json"
+    },
+    "wan_animate2": {
+      "repo": "Wan-AI/Wan2.2-Animate-2-14B",
+      "revision": "6e8f1973bf0abc2aafd517992e8b6d88c3c46e69",
+      "registry_adapter": "contract_only",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "PARTIAL — existing pinned native adapter",
+      "cpu_model_free_startup": "PARTIAL — supporting probes/source only; full entrypoint not verified",
+      "secure_runtime_binding": "NOT TESTED for exact runtime closure",
+      "observed": "Four reviewed source files matched. Actual upstream entrypoint import was not executed.",
+      "remaining": "Review and approve the full source and CPU diagnostic closure matching WanAnimate2MPIPipeline. The pinned source requirements select the CUDA 12.6 Torch stack."
+    },
+    "wan_animate2_distilled": {
+      "repo": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+      "revision": "59e4141466bcb1bf9733eca1bc78be6891c9fbdf",
+      "registry_adapter": "contract_only",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "BLOCKED — exact pipeline absent",
+      "cpu_model_free_startup": "PARTIAL — supporting probes/source only; full entrypoint not verified",
+      "secure_runtime_binding": "NOT TESTED for exact runtime closure",
+      "observed": "WanAnimate2Transformer3DModel imports; the pinned model_index requires WanAnimate2Pipeline, which Diffusers 0.43.0 does not export.",
+      "remaining": "Publisher-supported, reviewed source and locked dependencies for the exact pipeline are required. Keep this separate from the base Animate route."
+    },
+    "wan22_5": {
+      "repo": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "revision": "b8fff7315c768468a5333511427288870b2e9635",
+      "registry_adapter": "existing_wan_adapter",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — historical tested CPU family media",
+      "cpu_model_free_startup": "PASS — historical",
+      "secure_runtime_binding": "PASS — historical",
+      "evidence": "../runtime_phase2_20261121/sandbox-results.json"
+    },
+    "ltx25": {
+      "repo": "Lightricks/LTX-2.5",
+      "revision": "49b093a39c19169a8a81721dcc541e07e945232f",
+      "registry_adapter": "contract_only",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "PARTIAL — existing pinned native adapter",
+      "cpu_model_free_startup": "PARTIAL — supporting probes/source only; full entrypoint not verified",
+      "secure_runtime_binding": "NOT TESTED for exact runtime closure",
+      "observed": "Five reviewed source hashes matched. Pinned ltx-pipelines 1.6.2 metadata acquired; no full authorized CPU runtime.",
+      "remaining": "Review exact LTX source closure and its linked ltx-core; publisher must supply the gated artifact SHA-256 for checkpoint installation."
+    },
+    "svd_xt": {
+      "repo": "stabilityai/stable-video-diffusion-img2vid-xt",
+      "revision": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+      "registry_adapter": "existing_svd_adapter",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — historical tested CPU family media",
+      "cpu_model_free_startup": "PASS — historical",
+      "secure_runtime_binding": "PASS — historical",
+      "evidence": "../runtime_phase2_20261121/sandbox-results.json"
+    },
+    "indic_speak": {
+      "repo": "bodhan-ai/indic-speak",
+      "revision": "76e0814f189321efe550011850cd288dae366aad",
+      "registry_adapter": "contract_only",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "PARTIAL — existing gated native adapter",
+      "cpu_model_free_startup": "PARTIAL — supporting probes/source only; full entrypoint not verified",
+      "secure_runtime_binding": "NOT TESTED for exact runtime closure",
+      "observed": "SNAC, SoundFile, CPU Torch/TorchAudio and Llama symbol import; publisher selected source URLs return HTTP 401.",
+      "remaining": "Owner-approved access to exact reviewed gated source plus complete SNAC/Vocos dependency/license closure."
+    },
+    "indicf5": {
+      "repo": "ai4bharat/IndicF5",
+      "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+      "registry_adapter": "contract_only",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "PARTIAL — existing gated native adapter",
+      "cpu_model_free_startup": "PARTIAL — supporting probes/source only; full entrypoint not verified",
+      "secure_runtime_binding": "NOT TESTED for exact runtime closure",
+      "observed": "CPU Torch/TorchAudio and SoundFile import. Selected source returns HTTP 401 and Vocos imports require absent Encodec.",
+      "remaining": "Owner-approved exact gated F5 source and a commercially eligible reviewed Vocos/codec closure; retain reference consent gate."
+    },
+    "indic_parler": {
+      "repo": "ai4bharat/indic-parler-tts",
+      "revision": "660bc53c64ae83150613264111708a0465211237",
+      "registry_adapter": "existing_parler_adapter",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — historical tested CPU family speech",
+      "cpu_model_free_startup": "PASS — historical",
+      "secure_runtime_binding": "PASS — historical",
+      "evidence": "../runtime_phase2_20261121/sandbox-results.json"
+    },
+    "ace15": {
+      "repo": "ACE-Step/Ace-Step1.5",
+      "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+      "registry_adapter": "contract_only",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "PARTIAL — existing pinned native adapter",
+      "cpu_model_free_startup": "PARTIAL — supporting probes/source only; full entrypoint not verified",
+      "secure_runtime_binding": "NOT TESTED for exact runtime closure",
+      "observed": "Seven reviewed source hashes matched and fixed Diffusers VAE symbol imported separately; actual ACE native handler import was not executed.",
+      "remaining": "Approve complete pinned source and model-free CPU diagnostic lock distinct from publisher Linux Torch 2.10.0+cu128 production dependencies."
+    },
+    "stable_audio_small": {
+      "repo": "stabilityai/stable-audio-open-small",
+      "revision": "ea2772170fc06f80dfd02bea6e57a44d9d4bc9d3",
+      "registry_adapter": "existing_sfx_adapter",
+      "model_loading_gpu": "GPU-DEPENDENT / NOT TESTED",
+      "runtime_contract": "IMPLEMENTED — existing native adapter; Python 3.10 isolated lock",
+      "cpu_model_free_startup": "PASS — actual required imports and synthetic WAV in production sandbox",
+      "secure_runtime_binding": "PASS — actual interpreter, revision, exact dependency/file/ABI validation and isolated child",
+      "observed": "Existing legacy audio dispatch repaired; no generation or model loading.",
+      "evidence": "stable-sandbox-receipt.json",
+      "remaining": "Explicit approval/licensing and manifest for exact model and auxiliary assets; CUDA launch and generation validation."
+    }
+  }
+}

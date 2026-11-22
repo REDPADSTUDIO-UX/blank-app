@@ -1,0 +1,587 @@
+2026-11-22T07:23:03.7658613Z Current runner version: '2.338.2'
+2026-11-22T07:23:03.7695206Z ##[group]Runner Image Provisioner
+2026-11-22T07:23:03.7696963Z Hosted Compute Agent
+2026-11-22T07:23:03.7698107Z Version: 20261111.635
+2026-11-22T07:23:03.7699392Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-22T07:23:03.7701135Z Build Date: 2026-11-11T01:49:01Z
+2026-11-22T07:23:03.7702476Z Worker ID: {0f884fd2-7326-44b4-9028-fabefd0ee048}
+2026-11-22T07:23:03.7703847Z Region: eastus
+2026-11-22T07:23:03.7704950Z Cloud: Azure
+2026-11-22T07:23:03.7706126Z ##[endgroup]
+2026-11-22T07:23:03.7708716Z ##[group]Operating System
+2026-11-22T07:23:03.7710196Z Ubuntu
+2026-11-22T07:23:03.7711367Z 22.04.5
+2026-11-22T07:23:03.7712284Z LTS
+2026-11-22T07:23:03.7713437Z ##[endgroup]
+2026-11-22T07:23:03.7714512Z ##[group]Runner Image
+2026-11-22T07:23:03.7715741Z Image: ubuntu-22.04
+2026-11-22T07:23:03.7716811Z Version: 20261116.365.1
+2026-11-22T07:23:03.7719275Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20261116.365/images/ubuntu/Ubuntu2204-Readme.md
+2026-11-22T07:23:03.7722529Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20261116.365
+2026-11-22T07:23:03.7724431Z ##[endgroup]
+2026-11-22T07:23:03.7726444Z ##[group]GITHUB_TOKEN Permissions
+2026-11-22T07:23:03.7729492Z Contents: read
+2026-11-22T07:23:03.7730904Z Metadata: read
+2026-11-22T07:23:03.7732043Z ##[endgroup]
+2026-11-22T07:23:03.7735696Z Secret source: Actions
+2026-11-22T07:23:03.7737460Z Cache mode: write
+2026-11-22T07:23:03.7739033Z Prepare workflow directory
+2026-11-22T07:23:03.8266173Z Prepare all required actions
+2026-11-22T07:23:03.8314882Z Getting action download info
+2026-11-22T07:23:04.0452247Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-11-22T07:23:04.1902252Z Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-11-22T07:23:04.2746768Z Download action repository 'actions/upload-artifact@v6' (SHA:b7c566a772e6b6bfb58ed0dc250532a479d7789f)
+2026-11-22T07:23:04.4904138Z Complete job name: secure-new-cpu-runtimes
+2026-11-22T07:23:04.5804006Z ##[group]Run actions/checkout@v6
+2026-11-22T07:23:04.5804891Z with:
+2026-11-22T07:23:04.5805354Z   persist-credentials: false
+2026-11-22T07:23:04.5805933Z   repository: REDPADSTUDIO-UX/blank-app
+2026-11-22T07:23:04.5810228Z   token: ***
+2026-11-22T07:23:04.5810705Z   ssh-strict: true
+2026-11-22T07:23:04.5811162Z   ssh-user: git
+2026-11-22T07:23:04.5811604Z   clean: true
+2026-11-22T07:23:04.5812069Z   sparse-checkout-cone-mode: true
+2026-11-22T07:23:04.5812629Z   fetch-depth: 1
+2026-11-22T07:23:04.5813089Z   fetch-tags: false
+2026-11-22T07:23:04.5813557Z   show-progress: true
+2026-11-22T07:23:04.5814026Z   lfs: false
+2026-11-22T07:23:04.5814452Z   submodules: false
+2026-11-22T07:23:04.5814921Z   set-safe-directory: true
+2026-11-22T07:23:04.5815448Z   allow-unsafe-pr-checkout: false
+2026-11-22T07:23:04.5816244Z env:
+2026-11-22T07:23:04.5816703Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-22T07:23:04.5817268Z   CUDA_VISIBLE_DEVICES: 
+2026-11-22T07:23:04.5817754Z ##[endgroup]
+2026-11-22T07:23:04.8571294Z Syncing repository: REDPADSTUDIO-UX/blank-app
+2026-11-22T07:23:04.8574361Z ##[group]Getting Git version info
+2026-11-22T07:23:04.8575956Z Working directory is '/home/runner/work/blank-app/blank-app'
+2026-11-22T07:23:04.8596496Z [command]/usr/bin/git version
+2026-11-22T07:23:04.8741342Z git version 2.56.1
+2026-11-22T07:23:04.8759110Z ##[endgroup]
+2026-11-22T07:23:04.8778127Z Temporarily overriding HOME='/home/runner/work/_temp/1b1f0b01-df7d-4f3f-a3c4-1f05de382b37' before making global git config changes
+2026-11-22T07:23:04.8781601Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-22T07:23:04.8784175Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/blank-app/blank-app
+2026-11-22T07:23:04.8836090Z Deleting the contents of '/home/runner/work/blank-app/blank-app'
+2026-11-22T07:23:04.8858433Z ##[group]Determining repository object format
+2026-11-22T07:23:04.8861521Z ##[endgroup]
+2026-11-22T07:23:04.8863472Z ##[group]Initializing the repository
+2026-11-22T07:23:04.8870755Z [command]/usr/bin/git init /home/runner/work/blank-app/blank-app
+2026-11-22T07:23:04.8982299Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-22T07:23:04.8984231Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-22T07:23:04.8986253Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-22T07:23:04.8987612Z hint: call:
+2026-11-22T07:23:04.8988336Z hint:
+2026-11-22T07:23:04.8989301Z hint: 	git config --global init.defaultBranch <name>
+2026-11-22T07:23:04.8990765Z hint:
+2026-11-22T07:23:04.8991818Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-22T07:23:04.8993525Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-22T07:23:04.8995001Z hint:
+2026-11-22T07:23:04.8995767Z hint: 	git branch -m <name>
+2026-11-22T07:23:04.8996635Z hint:
+2026-11-22T07:23:04.8997832Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-22T07:23:04.9000031Z Initialized empty Git repository in /home/runner/work/blank-app/blank-app/.git/
+2026-11-22T07:23:04.9011660Z [command]/usr/bin/git remote add origin https://github.com/REDPADSTUDIO-UX/blank-app
+2026-11-22T07:23:04.9051240Z ##[endgroup]
+2026-11-22T07:23:04.9053067Z ##[group]Disabling automatic garbage collection
+2026-11-22T07:23:04.9054589Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-22T07:23:04.9098461Z ##[endgroup]
+2026-11-22T07:23:04.9100547Z ##[group]Setting up auth
+2026-11-22T07:23:04.9101871Z Removing SSH command configuration
+2026-11-22T07:23:04.9108747Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-22T07:23:04.9147267Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-22T07:23:04.9638718Z Removing HTTP extra header
+2026-11-22T07:23:04.9646749Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-22T07:23:04.9689202Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-22T07:23:04.9946044Z Removing includeIf entries pointing to credentials config files
+2026-11-22T07:23:04.9953351Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-22T07:23:04.9996419Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-22T07:23:05.0263311Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-22T07:23:05.0312670Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/blank-app/blank-app/.git.path /home/runner/work/_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.0353985Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/blank-app/blank-app/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.0396550Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.0438652Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.0492794Z ##[endgroup]
+2026-11-22T07:23:05.0493636Z ##[group]Fetching the repository
+2026-11-22T07:23:05.0504150Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d8fbed1f9593934b170be404e5af72ab5209f64d:refs/remotes/origin/feature/video-music-editing-studio
+2026-11-22T07:23:05.5263200Z From https://github.com/REDPADSTUDIO-UX/blank-app
+2026-11-22T07:23:05.5264990Z  * [new ref]         d8fbed1f9593934b170be404e5af72ab5209f64d -> origin/feature/video-music-editing-studio
+2026-11-22T07:23:05.5277907Z [command]/usr/bin/git branch --list --remote origin/feature/video-music-editing-studio
+2026-11-22T07:23:05.5310991Z   origin/feature/video-music-editing-studio
+2026-11-22T07:23:05.5322595Z [command]/usr/bin/git rev-parse refs/remotes/origin/feature/video-music-editing-studio
+2026-11-22T07:23:05.5355485Z d8fbed1f9593934b170be404e5af72ab5209f64d
+2026-11-22T07:23:05.5362426Z ##[endgroup]
+2026-11-22T07:23:05.5363867Z ##[group]Determining the checkout info
+2026-11-22T07:23:05.5366056Z ##[endgroup]
+2026-11-22T07:23:05.5367573Z [command]/usr/bin/git sparse-checkout disable
+2026-11-22T07:23:05.5417495Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-22T07:23:05.5456970Z ##[group]Checking out the ref
+2026-11-22T07:23:05.5459341Z [command]/usr/bin/git checkout --progress --force -B feature/video-music-editing-studio refs/remotes/origin/feature/video-music-editing-studio
+2026-11-22T07:23:05.6721407Z Switched to a new branch 'feature/video-music-editing-studio'
+2026-11-22T07:23:05.6725811Z branch 'feature/video-music-editing-studio' set up to track 'origin/feature/video-music-editing-studio'.
+2026-11-22T07:23:05.6741301Z ##[endgroup]
+2026-11-22T07:23:05.6789511Z [command]/usr/bin/git log -1 --format=%H
+2026-11-22T07:23:05.6824904Z d8fbed1f9593934b170be404e5af72ab5209f64d
+2026-11-22T07:23:05.6838994Z ##[group]Removing auth
+2026-11-22T07:23:05.6841100Z Removing SSH command configuration
+2026-11-22T07:23:05.6844416Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-22T07:23:05.6892594Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-22T07:23:05.7162745Z Removing HTTP extra header
+2026-11-22T07:23:05.7169841Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-22T07:23:05.7214600Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-22T07:23:05.7476069Z Removing includeIf entries pointing to credentials config files
+2026-11-22T07:23:05.7480335Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-22T07:23:05.7516705Z includeif.gitdir:/home/runner/work/blank-app/blank-app/.git.path
+2026-11-22T07:23:05.7520841Z includeif.gitdir:/home/runner/work/blank-app/blank-app/.git/worktrees/*.path
+2026-11-22T07:23:05.7524205Z includeif.gitdir:/github/workspace/.git.path
+2026-11-22T07:23:05.7527030Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-22T07:23:05.7534275Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/blank-app/blank-app/.git.path
+2026-11-22T07:23:05.7562479Z /home/runner/work/_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.7575059Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/blank-app/blank-app/.git.path /home/runner/work/_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.7621742Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/blank-app/blank-app/.git/worktrees/*.path
+2026-11-22T07:23:05.7649245Z /home/runner/work/_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.7662770Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/blank-app/blank-app/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.7705183Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-22T07:23:05.7744476Z /github/runner_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.7754629Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.7793353Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-22T07:23:05.7821992Z /github/runner_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.7831635Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config
+2026-11-22T07:23:05.7870493Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-22T07:23:05.8155767Z Removing credentials config '/home/runner/work/_temp/git-credentials-88b11321-2c4e-4c65-b648-b0df64a56fe0.config'
+2026-11-22T07:23:05.8165497Z ##[endgroup]
+2026-11-22T07:23:05.8630864Z ##[group]Run actions/setup-python@v6
+2026-11-22T07:23:05.8632177Z with:
+2026-11-22T07:23:05.8633126Z   python-version: 3.11.18
+2026-11-22T07:23:05.8634246Z   check-latest: false
+2026-11-22T07:23:05.8645475Z   token: ***
+2026-11-22T07:23:05.8646484Z   update-environment: true
+2026-11-22T07:23:05.8647656Z   allow-prereleases: false
+2026-11-22T07:23:05.8648796Z   freethreaded: false
+2026-11-22T07:23:05.8649937Z env:
+2026-11-22T07:23:05.8650894Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-22T07:23:05.8652070Z   CUDA_VISIBLE_DEVICES: 
+2026-11-22T07:23:05.8653156Z ##[endgroup]
+2026-11-22T07:23:06.0100813Z ##[group]Installed versions
+2026-11-22T07:23:06.0140089Z Successfully set up CPython (3.11.18)
+2026-11-22T07:23:06.0142484Z ##[endgroup]
+2026-11-22T07:23:06.0346884Z ##[group]Run set -euo pipefail
+2026-11-22T07:23:06.0348882Z [36;1mset -euo pipefail[0m
+2026-11-22T07:23:06.0350943Z [36;1msudo -n apt-get update[0m
+2026-11-22T07:23:06.0353505Z [36;1msudo -n apt-get install -y --no-install-recommends bubblewrap[0m
+2026-11-22T07:23:06.0356391Z [36;1mmkdir -p "$RUNNER_TEMP/phase2-results"[0m
+2026-11-22T07:23:06.0360506Z [36;1mpython -B verification/kernel_phase1_20261121/probe.py | tee "$RUNNER_TEMP/phase2-results/host-isolation.log"[0m
+2026-11-22T07:23:06.0701701Z shell: /usr/bin/bash -e {0}
+2026-11-22T07:23:06.0702905Z env:
+2026-11-22T07:23:06.0703876Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-22T07:23:06.0705066Z   CUDA_VISIBLE_DEVICES: 
+2026-11-22T07:23:06.0706421Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:06.0708415Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T07:23:06.0710576Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:06.0712434Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:06.0714223Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:06.0716009Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T07:23:06.0717571Z ##[endgroup]
+2026-11-22T07:23:06.1900598Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-22T07:23:06.2164816Z Get:6 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+2026-11-22T07:23:06.2302039Z Hit:2 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+2026-11-22T07:23:06.2313834Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+2026-11-22T07:23:06.2369909Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+2026-11-22T07:23:06.2415113Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+2026-11-22T07:23:06.3025420Z Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [1129 kB]
+2026-11-22T07:23:06.3242897Z Get:8 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [848 kB]
+2026-11-22T07:23:06.4993873Z Get:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [4012 kB]
+2026-11-22T07:23:06.5274011Z Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [587 kB]
+2026-11-22T07:23:06.5303303Z Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [6888 kB]
+2026-11-22T07:23:06.5714010Z Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [1326 kB]
+2026-11-22T07:23:06.5810568Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1291 kB]
+2026-11-22T07:23:06.5951432Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [327 kB]
+2026-11-22T07:23:06.7632957Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3740 kB]
+2026-11-22T07:23:06.7854209Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [520 kB]
+2026-11-22T07:23:06.7889468Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [6635 kB]
+2026-11-22T07:23:06.8228283Z Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [1277 kB]
+2026-11-22T07:23:06.8740515Z Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1058 kB]
+2026-11-22T07:23:13.0065200Z Fetched 30.0 MB in 3s (8936 kB/s)
+2026-11-22T07:23:14.7638444Z Reading package lists...
+2026-11-22T07:23:14.8377091Z Reading package lists...
+2026-11-22T07:23:15.1351055Z Building dependency tree...
+2026-11-22T07:23:15.1362741Z Reading state information...
+2026-11-22T07:23:15.3161993Z The following NEW packages will be installed:
+2026-11-22T07:23:15.3168229Z   bubblewrap
+2026-11-22T07:23:15.3344740Z 0 upgraded, 1 newly installed, 0 to remove and 62 not upgraded.
+2026-11-22T07:23:15.3345469Z Need to get 46.3 kB of archives.
+2026-11-22T07:23:15.3346700Z After this operation, 132 kB of additional disk space will be used.
+2026-11-22T07:23:15.3347542Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-22T07:23:15.3643254Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 bubblewrap amd64 0.6.1-1ubuntu0.3 [46.3 kB]
+2026-11-22T07:23:15.6810494Z Fetched 46.3 kB in 0s (1063 kB/s)
+2026-11-22T07:23:15.7078634Z Selecting previously unselected package bubblewrap.
+2026-11-22T07:23:15.7462566Z (Reading database ... 
+2026-11-22T07:23:15.7463216Z (Reading database ... 5%
+2026-11-22T07:23:15.7463753Z (Reading database ... 10%
+2026-11-22T07:23:15.7464207Z (Reading database ... 15%
+2026-11-22T07:23:15.7464839Z (Reading database ... 20%
+2026-11-22T07:23:15.7465319Z (Reading database ... 25%
+2026-11-22T07:23:15.7465808Z (Reading database ... 30%
+2026-11-22T07:23:15.7466267Z (Reading database ... 35%
+2026-11-22T07:23:15.7466697Z (Reading database ... 40%
+2026-11-22T07:23:15.7467134Z (Reading database ... 45%
+2026-11-22T07:23:15.7467573Z (Reading database ... 50%
+2026-11-22T07:23:15.8322037Z (Reading database ... 55%
+2026-11-22T07:23:16.0419168Z (Reading database ... 60%
+2026-11-22T07:23:16.2914933Z (Reading database ... 65%
+2026-11-22T07:23:16.4338537Z (Reading database ... 70%
+2026-11-22T07:23:16.6844449Z (Reading database ... 75%
+2026-11-22T07:23:16.8940883Z (Reading database ... 80%
+2026-11-22T07:23:17.0856502Z (Reading database ... 85%
+2026-11-22T07:23:17.3907879Z (Reading database ... 90%
+2026-11-22T07:23:17.5926952Z (Reading database ... 95%
+2026-11-22T07:23:17.5927639Z (Reading database ... 100%
+2026-11-22T07:23:17.5928363Z (Reading database ... 265161 files and directories currently installed.)
+2026-11-22T07:23:17.5985191Z Preparing to unpack .../bubblewrap_0.6.1-1ubuntu0.3_amd64.deb ...
+2026-11-22T07:23:17.6018726Z Unpacking bubblewrap (0.6.1-1ubuntu0.3) ...
+2026-11-22T07:23:17.6789041Z Setting up bubblewrap (0.6.1-1ubuntu0.3) ...
+2026-11-22T07:23:17.6844699Z Processing triggers for man-db (2.10.2-1) ...
+2026-11-22T07:23:17.6867769Z Not building database; man-db/auto-update is not 'true'.
+2026-11-22T07:23:18.3342787Z 
+2026-11-22T07:23:18.3343546Z Running kernel seems to be up-to-date.
+2026-11-22T07:23:18.3343978Z 
+2026-11-22T07:23:18.3344187Z No services need to be restarted.
+2026-11-22T07:23:18.3344508Z 
+2026-11-22T07:23:18.3344690Z No containers need to be restarted.
+2026-11-22T07:23:18.3344998Z 
+2026-11-22T07:23:18.3345214Z No user sessions are running outdated binaries.
+2026-11-22T07:23:18.3345586Z 
+2026-11-22T07:23:18.3345915Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-11-22T07:23:21.3008208Z Linux 6.8.0-1070-azure x86_64 GNU/Linux
+2026-11-22T07:23:21.3008787Z PRETTY_NAME="Ubuntu 22.04.5 LTS"
+2026-11-22T07:23:21.3009212Z NAME="Ubuntu"
+2026-11-22T07:23:21.3009550Z VERSION_ID="22.04"
+2026-11-22T07:23:21.3010160Z VERSION="22.04.5 LTS (Jammy Jellyfish)"
+2026-11-22T07:23:21.3010615Z VERSION_CODENAME=jammy
+2026-11-22T07:23:21.3010987Z ID=ubuntu
+2026-11-22T07:23:21.3011314Z ID_LIKE=debian
+2026-11-22T07:23:21.3011886Z HOME_URL="https://www.ubuntu.com/"
+2026-11-22T07:23:21.3012400Z SUPPORT_URL="https://help.ubuntu.com/"
+2026-11-22T07:23:21.3013118Z BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+2026-11-22T07:23:21.3013952Z PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+2026-11-22T07:23:21.3014708Z UBUNTU_CODENAME=jammy
+2026-11-22T07:23:21.3014957Z 
+2026-11-22T07:23:21.3015112Z bubblewrap 0.6.1
+2026-11-22T07:23:21.3017365Z Worker environment: {"HF_DATASETS_OFFLINE": "1", "HF_HUB_DISABLE_TELEMETRY": "1", "HF_HUB_OFFLINE": "1", "HOME": "/tmp", "LOGNAME": "redpad-worker", "PATH": "/redpad/runtime/bin:/usr/bin:/bin", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONNOUSERSITE": "1", "PYTHONPATH": "/redpad/studio", "PYTHONSAFEPATH": "1", "TMPDIR": "/tmp", "TORCH_FORCE_WEIGHTS_ONLY_LOAD": "1", "TRANSFORMERS_OFFLINE": "1"}
+2026-11-22T07:23:21.3094374Z Worker mount command: ["/usr/bin/bwrap", "--unshare-all", "--unshare-user", "--unshare-net", "--cap-drop", "ALL", "--die-with-parent", "--new-session", "--dev", "/dev", "--proc", "/proc", "--tmpfs", "/tmp", "--setenv", "LD_LIBRARY_PATH", "/redpad/runtime/lib:/lib/x86_64-linux-gnu:/lib/aarch64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/aarch64-linux-gnu", "--ro-bind", "/usr/lib/x86_64-linux-gnu/libc.so.6", "/lib/x86_64-linux-gnu/libc.so.6", "--ro-bind", "/usr/lib/x86_64-linux-gnu/libm.so.6", "/lib/x86_64-linux-gnu/libm.so.6", "--ro-bind", "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2", "/lib64/ld-linux-x86-64.so.2", "--ro-bind", "/opt/hostedtoolcache/Python/3.11.18/x64", "/redpad/runtime", "--dir", "/redpad/model", "--ro-bind", "/tmp/tmptnmaff1k/model/component.txt", "/redpad/model/component.txt", "--dir", "/redpad/source", "--ro-bind", "/tmp/tmptnmaff1k/source/component.txt", "/redpad/source/component.txt", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/offline/engines.json", "/redpad/studio/assets/offline/engines.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/models.json", "/redpad/studio/assets/professional/models.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/phase3_19agent_no_gpu_staging.json", "/redpad/studio/assets/professional/phase3_19agent_no_gpu_staging.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/phase3_candidates.json", "/redpad/studio/assets/professional/phase3_candidates.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/phase3_native_source_lock.json", "/redpad/studio/assets/professional/phase3_native_source_lock.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/phase3_voice_public_source_lock.json", "/redpad/studio/assets/professional/phase3_voice_public_source_lock.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/phase3_voice_selected_source_lock.json", "/redpad/studio/assets/professional/phase3_voice_selected_source_lock.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/suite.json", "/redpad/studio/assets/professional/suite.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/__init__.py", "/redpad/studio/redpad_pipeline/__init__.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_catalog.json", "/redpad/studio/redpad_pipeline/agent_catalog.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_engine.py", "/redpad/studio/redpad_pipeline/agent_engine.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_execution_ui.py", "/redpad/studio/redpad_pipeline/agent_execution_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_media_bridge.py", "/redpad/studio/redpad_pipeline/agent_media_bridge.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_reporting.py", "/redpad/studio/redpad_pipeline/agent_reporting.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_reporting_ui.py", "/redpad/studio/redpad_pipeline/agent_reporting_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agents.py", "/redpad/studio/redpad_pipeline/agents.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agents_ui.py", "/redpad/studio/redpad_pipeline/agents_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/audio_evaluation.py", "/redpad/studio/redpad_pipeline/audio_evaluation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/audio_post.py", "/redpad/studio/redpad_pipeline/audio_post.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/audio_worker.py", "/redpad/studio/redpad_pipeline/audio_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/backup.py", "/redpad/studio/redpad_pipeline/backup.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/casting.py", "/redpad/studio/redpad_pipeline/casting.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/casting_voice.py", "/redpad/studio/redpad_pipeline/casting_voice.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/cpu_creative_trial.py", "/redpad/studio/redpad_pipeline/cpu_creative_trial.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/cpu_micro_contracts.py", "/redpad/studio/redpad_pipeline/cpu_micro_contracts.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/craft_validation.py", "/redpad/studio/redpad_pipeline/craft_validation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/creative.py", "/redpad/studio/redpad_pipeline/creative.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/creative_ui.py", "/redpad/studio/redpad_pipeline/creative_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/delivery.py", "/redpad/studio/redpad_pipeline/delivery.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/department_examples.json", "/redpad/studio/redpad_pipeline/department_examples.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/departments.py", "/redpad/studio/redpad_pipeline/departments.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/director.py", "/redpad/studio/redpad_pipeline/director.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/director_ui.py", "/redpad/studio/redpad_pipeline/director_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_animation.py", "/redpad/studio/redpad_pipeline/drama_animation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_finish.py", "/redpad/studio/redpad_pipeline/drama_finish.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_free.py", "/redpad/studio/redpad_pipeline/drama_free.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_quality.py", "/redpad/studio/redpad_pipeline/drama_quality.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_quality_ui.py", "/redpad/studio/redpad_pipeline/drama_quality_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_ui.py", "/redpad/studio/redpad_pipeline/drama_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/engine.py", "/redpad/studio/redpad_pipeline/engine.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/episode_scenes.py", "/redpad/studio/redpad_pipeline/episode_scenes.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/filmmaking_knowledge.py", "/redpad/studio/redpad_pipeline/filmmaking_knowledge.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/filmmaking_ui.py", "/redpad/studio/redpad_pipeline/filmmaking_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/fp8_preflight.py", "/redpad/studio/redpad_pipeline/fp8_preflight.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/free_episode.py", "/redpad/studio/redpad_pipeline/free_episode.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/free_voice.py", "/redpad/studio/redpad_pipeline/free_voice.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/gpu_selftest.py", "/redpad/studio/redpad_pipeline/gpu_selftest.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/grounded_review.py", "/redpad/studio/redpad_pipeline/grounded_review.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/image_worker.py", "/redpad/studio/redpad_pipeline/image_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/intelligence.py", "/redpad/studio/redpad_pipeline/intelligence.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/kaggle_benchmark.py", "/redpad/studio/redpad_pipeline/kaggle_benchmark.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/kaggle_runtime.py", "/redpad/studio/redpad_pipeline/kaggle_runtime.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/local_animation.py", "/redpad/studio/redpad_pipeline/local_animation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/local_animation_ui.py", "/redpad/studio/redpad_pipeline/local_animation_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/local_ollama_session.py", "/redpad/studio/redpad_pipeline/local_ollama_session.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/marketing.py", "/redpad/studio/redpad_pipeline/marketing.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/marketing_ui.py", "/redpad/studio/redpad_pipeline/marketing_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/media.py", "/redpad/studio/redpad_pipeline/media.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/model_benchmark.py", "/redpad/studio/redpad_pipeline/model_benchmark.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/model_routing.py", "/redpad/studio/redpad_pipeline/model_routing.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/model_routing_ui.py", "/redpad/studio/redpad_pipeline/model_routing_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/models.py", "/redpad/studio/redpad_pipeline/models.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/multicloud_ledger.py", "/redpad/studio/redpad_pipeline/multicloud_ledger.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/native_execution.py", "/redpad/studio/redpad_pipeline/native_execution.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/native_fixture_worker.py", "/redpad/studio/redpad_pipeline/native_fixture_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/native_local_bundle.py", "/redpad/studio/redpad_pipeline/native_local_bundle.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/native_local_worker.py", "/redpad/studio/redpad_pipeline/native_local_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/native_voice_worker.py", "/redpad/studio/redpad_pipeline/native_voice_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/no_gpu_staging.py", "/redpad/studio/redpad_pipeline/no_gpu_staging.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_audio.py", "/redpad/studio/redpad_pipeline/offline_audio.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_department_contracts.py", "/redpad/studio/redpad_pipeline/offline_department_contracts.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_image.py", "/redpad/studio/redpad_pipeline/offline_image.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_media.py", "/redpad/studio/redpad_pipeline/offline_media.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_preparation.py", "/redpad/studio/redpad_pipeline/offline_preparation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_specialist_preparation.py", "/redpad/studio/redpad_pipeline/offline_specialist_preparation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_speech.py", "/redpad/studio/redpad_pipeline/offline_speech.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_vision.py", "/redpad/studio/redpad_pipeline/offline_vision.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_worker.py", "/redpad/studio/redpad_pipeline/offline_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/phase3.py", "/redpad/studio/redpad_pipeline/phase3.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/phase3_ui.py", "/redpad/studio/redpad_pipeline/phase3_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/pre_gpu_acceptance.py", "/redpad/studio/redpad_pipeline/pre_gpu_acceptance.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/pre_gpu_project.py", "/redpad/studio/redpad_pipeline/pre_gpu_project.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/pre_gpu_ui.py", "/redpad/studio/redpad_pipeline/pre_gpu_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/producer_control.py", "/redpad/studio/redpad_pipeline/producer_control.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/producer_references.py", "/redpad/studio/redpad_pipeline/producer_references.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/producer_ui.py", "/redpad/studio/redpad_pipeline/producer_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/production_execution.py", "/redpad/studio/redpad_pipeline/production_execution.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/professional_readiness.py", "/redpad/studio/redpad_pipeline/professional_readiness.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/professional_ui.py", "/redpad/studio/redpad_pipeline/professional_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/providers.py", "/redpad/studio/redpad_pipeline/providers.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/readiness.py", "/redpad/studio/redpad_pipeline/readiness.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/remote_gpu.py", "/redpad/studio/redpad_pipeline/remote_gpu.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/remote_gpu_ui.py", "/redpad/studio/redpad_pipeline/remote_gpu_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/resource_guard.py", "/redpad/studio/redpad_pipeline/resource_guard.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/review_guard.py", "/redpad/studio/redpad_pipeline/review_guard.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/screenwriter.py", "/redpad/studio/redpad_pipeline/screenwriter.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/screenwriter_ui.py", "/redpad/studio/redpad_pipeline/screenwriter_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/series_ledger.py", "/redpad/studio/redpad_pipeline/series_ledger.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/shared_model_services.py", "/redpad/studio/redpad_pipeline/shared_model_services.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/shared_model_worker.py", "/redpad/studio/redpad_pipeline/shared_model_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_adapters.py", "/redpad/studio/redpad_pipeline/specialist_adapters.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_examples.py", "/redpad/studio/redpad_pipeline/specialist_examples.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_inspection.py", "/redpad/studio/redpad_pipeline/specialist_inspection.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_media.py", "/redpad/studio/redpad_pipeline/specialist_media.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_operations.py", "/redpad/studio/redpad_pipeline/specialist_operations.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_project.py", "/redpad/studio/redpad_pipeline/specialist_project.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_review.py", "/redpad/studio/redpad_pipeline/specialist_review.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_workflows.py", "/redpad/studio/redpad_pipeline/specialist_workflows.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialists.py", "/redpad/studio/redpad_pipeline/specialists.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/speech_worker.py", "/redpad/studio/redpad_pipeline/speech_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/staged_bengali.py", "/redpad/studio/redpad_pipeline/staged_bengali.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/staged_writing.py", "/redpad/studio/redpad_pipeline/staged_writing.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/staged_writing_ui.py", "/redpad/studio/redpad_pipeline/staged_writing_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/stages_1_3.py", "/redpad/studio/redpad_pipeline/stages_1_3.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/story_bridge.py", "/redpad/studio/redpad_pipeline/story_bridge.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/story_quality.py", "/redpad/studio/redpad_pipeline/story_quality.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/storyboard.py", "/redpad/studio/redpad_pipeline/storyboard.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/storyboard_live.py", "/redpad/studio/redpad_pipeline/storyboard_live.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/storyboard_render.py", "/redpad/studio/redpad_pipeline/storyboard_render.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/storyboard_ui.py", "/redpad/studio/redpad_pipeline/storyboard_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/studio_program.py", "/redpad/studio/redpad_pipeline/studio_program.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/studio_program_ui.py", "/redpad/studio/redpad_pipeline/studio_program_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/ui.py", "/redpad/studio/redpad_pipeline/ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/video_models.py", "/redpad/studio/redpad_pipeline/video_models.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/vision_worker.py", "/redpad/studio/redpad_pipeline/vision_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/voice_consent.py", "/redpad/studio/redpad_pipeline/voice_consent.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/voice_native_contracts.py", "/redpad/studio/redpad_pipeline/voice_native_contracts.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/voice_source_policy.py", "/redpad/studio/redpad_pipeline/voice_source_policy.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/wan_distilled_preparation.py", "/redpad/studio/redpad_pipeline/wan_distilled_preparation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/worker.py", "/redpad/studio/redpad_pipeline/worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/worker_isolation.py", "/redpad/studio/redpad_pipeline/worker_isolation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/worker_telemetry.py", "/redpad/studio/redpad_pipeline/worker_telemetry.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/youtube.py", "/redpad/studio/redpad_pipeline/youtube.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/youtube_ui.py", "/redpad/studio/redpad_pipeline/youtube_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_video_studio.py", "/redpad/studio/redpad_video_studio.py", "--ro-bind", "/tmp/tmptnmaff1k/request.json", "/redpad/input/request.json", "--bind", "/tmp/tmptnmaff1k/output", "/redpad/output", "--remount-ro", "/dev", "--remount-ro", "/", "--chdir", "/redpad/output", "--", "/redpad/runtime/bin/python3.11", "-m", "redpad_pipeline.native_local_worker", "/redpad/input/request.json"]
+2026-11-22T07:23:21.4066311Z PASS A private read and enumeration
+2026-11-22T07:23:21.4067277Z PASS B read-only input
+2026-11-22T07:23:21.4073594Z PASS C writable output boundary
+2026-11-22T07:23:21.4215730Z PASS D network namespace and host loopback denied
+2026-11-22T07:23:21.6905099Z PASS E timeout
+2026-11-22T07:23:21.8257539Z PASS E cancel
+2026-11-22T07:23:21.9737383Z PASS E controller_loss
+2026-11-22T07:23:21.9740414Z PASS F synthetic launch boundary: native_local_worker
+2026-11-22T07:23:21.9883536Z Worker mount command: ["/usr/bin/bwrap", "--unshare-all", "--unshare-user", "--unshare-net", "--cap-drop", "ALL", "--die-with-parent", "--new-session", "--dev", "/dev", "--proc", "/proc", "--tmpfs", "/tmp", "--setenv", "LD_LIBRARY_PATH", "/redpad/runtime/lib:/lib/x86_64-linux-gnu:/lib/aarch64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/aarch64-linux-gnu", "--ro-bind", "/usr/lib/x86_64-linux-gnu/libc.so.6", "/lib/x86_64-linux-gnu/libc.so.6", "--ro-bind", "/usr/lib/x86_64-linux-gnu/libm.so.6", "/lib/x86_64-linux-gnu/libm.so.6", "--ro-bind", "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2", "/lib64/ld-linux-x86-64.so.2", "--ro-bind", "/opt/hostedtoolcache/Python/3.11.18/x64", "/redpad/runtime", "--dir", "/redpad/model", "--ro-bind", "/tmp/tmptnmaff1k/model/component.txt", "/redpad/model/component.txt", "--dir", "/redpad/source", "--ro-bind", "/tmp/tmptnmaff1k/source/component.txt", "/redpad/source/component.txt", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/offline/engines.json", "/redpad/studio/assets/offline/engines.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/models.json", "/redpad/studio/assets/professional/models.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/phase3_19agent_no_gpu_staging.json", "/redpad/studio/assets/professional/phase3_19agent_no_gpu_staging.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/phase3_candidates.json", "/redpad/studio/assets/professional/phase3_candidates.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/phase3_native_source_lock.json", "/redpad/studio/assets/professional/phase3_native_source_lock.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/phase3_voice_public_source_lock.json", "/redpad/studio/assets/professional/phase3_voice_public_source_lock.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/phase3_voice_selected_source_lock.json", "/redpad/studio/assets/professional/phase3_voice_selected_source_lock.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/assets/professional/suite.json", "/redpad/studio/assets/professional/suite.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/__init__.py", "/redpad/studio/redpad_pipeline/__init__.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_catalog.json", "/redpad/studio/redpad_pipeline/agent_catalog.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_engine.py", "/redpad/studio/redpad_pipeline/agent_engine.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_execution_ui.py", "/redpad/studio/redpad_pipeline/agent_execution_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_media_bridge.py", "/redpad/studio/redpad_pipeline/agent_media_bridge.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_reporting.py", "/redpad/studio/redpad_pipeline/agent_reporting.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agent_reporting_ui.py", "/redpad/studio/redpad_pipeline/agent_reporting_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agents.py", "/redpad/studio/redpad_pipeline/agents.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/agents_ui.py", "/redpad/studio/redpad_pipeline/agents_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/audio_evaluation.py", "/redpad/studio/redpad_pipeline/audio_evaluation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/audio_post.py", "/redpad/studio/redpad_pipeline/audio_post.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/audio_worker.py", "/redpad/studio/redpad_pipeline/audio_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/backup.py", "/redpad/studio/redpad_pipeline/backup.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/casting.py", "/redpad/studio/redpad_pipeline/casting.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/casting_voice.py", "/redpad/studio/redpad_pipeline/casting_voice.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/cpu_creative_trial.py", "/redpad/studio/redpad_pipeline/cpu_creative_trial.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/cpu_micro_contracts.py", "/redpad/studio/redpad_pipeline/cpu_micro_contracts.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/craft_validation.py", "/redpad/studio/redpad_pipeline/craft_validation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/creative.py", "/redpad/studio/redpad_pipeline/creative.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/creative_ui.py", "/redpad/studio/redpad_pipeline/creative_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/delivery.py", "/redpad/studio/redpad_pipeline/delivery.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/department_examples.json", "/redpad/studio/redpad_pipeline/department_examples.json", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/departments.py", "/redpad/studio/redpad_pipeline/departments.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/director.py", "/redpad/studio/redpad_pipeline/director.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/director_ui.py", "/redpad/studio/redpad_pipeline/director_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_animation.py", "/redpad/studio/redpad_pipeline/drama_animation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_finish.py", "/redpad/studio/redpad_pipeline/drama_finish.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_free.py", "/redpad/studio/redpad_pipeline/drama_free.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_quality.py", "/redpad/studio/redpad_pipeline/drama_quality.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_quality_ui.py", "/redpad/studio/redpad_pipeline/drama_quality_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/drama_ui.py", "/redpad/studio/redpad_pipeline/drama_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/engine.py", "/redpad/studio/redpad_pipeline/engine.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/episode_scenes.py", "/redpad/studio/redpad_pipeline/episode_scenes.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/filmmaking_knowledge.py", "/redpad/studio/redpad_pipeline/filmmaking_knowledge.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/filmmaking_ui.py", "/redpad/studio/redpad_pipeline/filmmaking_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/fp8_preflight.py", "/redpad/studio/redpad_pipeline/fp8_preflight.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/free_episode.py", "/redpad/studio/redpad_pipeline/free_episode.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/free_voice.py", "/redpad/studio/redpad_pipeline/free_voice.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/gpu_selftest.py", "/redpad/studio/redpad_pipeline/gpu_selftest.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/grounded_review.py", "/redpad/studio/redpad_pipeline/grounded_review.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/image_worker.py", "/redpad/studio/redpad_pipeline/image_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/intelligence.py", "/redpad/studio/redpad_pipeline/intelligence.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/kaggle_benchmark.py", "/redpad/studio/redpad_pipeline/kaggle_benchmark.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/kaggle_runtime.py", "/redpad/studio/redpad_pipeline/kaggle_runtime.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/local_animation.py", "/redpad/studio/redpad_pipeline/local_animation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/local_animation_ui.py", "/redpad/studio/redpad_pipeline/local_animation_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/local_ollama_session.py", "/redpad/studio/redpad_pipeline/local_ollama_session.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/marketing.py", "/redpad/studio/redpad_pipeline/marketing.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/marketing_ui.py", "/redpad/studio/redpad_pipeline/marketing_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/media.py", "/redpad/studio/redpad_pipeline/media.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/model_benchmark.py", "/redpad/studio/redpad_pipeline/model_benchmark.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/model_routing.py", "/redpad/studio/redpad_pipeline/model_routing.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/model_routing_ui.py", "/redpad/studio/redpad_pipeline/model_routing_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/models.py", "/redpad/studio/redpad_pipeline/models.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/multicloud_ledger.py", "/redpad/studio/redpad_pipeline/multicloud_ledger.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/native_execution.py", "/redpad/studio/redpad_pipeline/native_execution.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/native_fixture_worker.py", "/redpad/studio/redpad_pipeline/native_fixture_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/native_local_bundle.py", "/redpad/studio/redpad_pipeline/native_local_bundle.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/native_local_worker.py", "/redpad/studio/redpad_pipeline/native_local_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/native_voice_worker.py", "/redpad/studio/redpad_pipeline/native_voice_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/no_gpu_staging.py", "/redpad/studio/redpad_pipeline/no_gpu_staging.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_audio.py", "/redpad/studio/redpad_pipeline/offline_audio.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_department_contracts.py", "/redpad/studio/redpad_pipeline/offline_department_contracts.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_image.py", "/redpad/studio/redpad_pipeline/offline_image.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_media.py", "/redpad/studio/redpad_pipeline/offline_media.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_preparation.py", "/redpad/studio/redpad_pipeline/offline_preparation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_specialist_preparation.py", "/redpad/studio/redpad_pipeline/offline_specialist_preparation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_speech.py", "/redpad/studio/redpad_pipeline/offline_speech.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_vision.py", "/redpad/studio/redpad_pipeline/offline_vision.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/offline_worker.py", "/redpad/studio/redpad_pipeline/offline_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/phase3.py", "/redpad/studio/redpad_pipeline/phase3.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/phase3_ui.py", "/redpad/studio/redpad_pipeline/phase3_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/pre_gpu_acceptance.py", "/redpad/studio/redpad_pipeline/pre_gpu_acceptance.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/pre_gpu_project.py", "/redpad/studio/redpad_pipeline/pre_gpu_project.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/pre_gpu_ui.py", "/redpad/studio/redpad_pipeline/pre_gpu_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/producer_control.py", "/redpad/studio/redpad_pipeline/producer_control.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/producer_references.py", "/redpad/studio/redpad_pipeline/producer_references.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/producer_ui.py", "/redpad/studio/redpad_pipeline/producer_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/production_execution.py", "/redpad/studio/redpad_pipeline/production_execution.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/professional_readiness.py", "/redpad/studio/redpad_pipeline/professional_readiness.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/professional_ui.py", "/redpad/studio/redpad_pipeline/professional_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/providers.py", "/redpad/studio/redpad_pipeline/providers.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/readiness.py", "/redpad/studio/redpad_pipeline/readiness.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/remote_gpu.py", "/redpad/studio/redpad_pipeline/remote_gpu.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/remote_gpu_ui.py", "/redpad/studio/redpad_pipeline/remote_gpu_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/resource_guard.py", "/redpad/studio/redpad_pipeline/resource_guard.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/review_guard.py", "/redpad/studio/redpad_pipeline/review_guard.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/screenwriter.py", "/redpad/studio/redpad_pipeline/screenwriter.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/screenwriter_ui.py", "/redpad/studio/redpad_pipeline/screenwriter_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/series_ledger.py", "/redpad/studio/redpad_pipeline/series_ledger.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/shared_model_services.py", "/redpad/studio/redpad_pipeline/shared_model_services.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/shared_model_worker.py", "/redpad/studio/redpad_pipeline/shared_model_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_adapters.py", "/redpad/studio/redpad_pipeline/specialist_adapters.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_examples.py", "/redpad/studio/redpad_pipeline/specialist_examples.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_inspection.py", "/redpad/studio/redpad_pipeline/specialist_inspection.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_media.py", "/redpad/studio/redpad_pipeline/specialist_media.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_operations.py", "/redpad/studio/redpad_pipeline/specialist_operations.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_project.py", "/redpad/studio/redpad_pipeline/specialist_project.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_review.py", "/redpad/studio/redpad_pipeline/specialist_review.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialist_workflows.py", "/redpad/studio/redpad_pipeline/specialist_workflows.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/specialists.py", "/redpad/studio/redpad_pipeline/specialists.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/speech_worker.py", "/redpad/studio/redpad_pipeline/speech_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/staged_bengali.py", "/redpad/studio/redpad_pipeline/staged_bengali.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/staged_writing.py", "/redpad/studio/redpad_pipeline/staged_writing.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/staged_writing_ui.py", "/redpad/studio/redpad_pipeline/staged_writing_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/stages_1_3.py", "/redpad/studio/redpad_pipeline/stages_1_3.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/story_bridge.py", "/redpad/studio/redpad_pipeline/story_bridge.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/story_quality.py", "/redpad/studio/redpad_pipeline/story_quality.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/storyboard.py", "/redpad/studio/redpad_pipeline/storyboard.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/storyboard_live.py", "/redpad/studio/redpad_pipeline/storyboard_live.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/storyboard_render.py", "/redpad/studio/redpad_pipeline/storyboard_render.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/storyboard_ui.py", "/redpad/studio/redpad_pipeline/storyboard_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/studio_program.py", "/redpad/studio/redpad_pipeline/studio_program.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/studio_program_ui.py", "/redpad/studio/redpad_pipeline/studio_program_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/ui.py", "/redpad/studio/redpad_pipeline/ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/video_models.py", "/redpad/studio/redpad_pipeline/video_models.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/vision_worker.py", "/redpad/studio/redpad_pipeline/vision_worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/voice_consent.py", "/redpad/studio/redpad_pipeline/voice_consent.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/voice_native_contracts.py", "/redpad/studio/redpad_pipeline/voice_native_contracts.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/voice_source_policy.py", "/redpad/studio/redpad_pipeline/voice_source_policy.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/wan_distilled_preparation.py", "/redpad/studio/redpad_pipeline/wan_distilled_preparation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/worker.py", "/redpad/studio/redpad_pipeline/worker.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/worker_isolation.py", "/redpad/studio/redpad_pipeline/worker_isolation.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/worker_telemetry.py", "/redpad/studio/redpad_pipeline/worker_telemetry.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/youtube.py", "/redpad/studio/redpad_pipeline/youtube.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_pipeline/youtube_ui.py", "/redpad/studio/redpad_pipeline/youtube_ui.py", "--ro-bind", "/home/runner/work/blank-app/blank-app/redpad_video_studio.py", "/redpad/studio/redpad_video_studio.py", "--ro-bind", "/tmp/tmptnmaff1k/request.json", "/redpad/input/request.json", "--bind", "/tmp/tmptnmaff1k/output", "/redpad/output", "--remount-ro", "/dev", "--remount-ro", "/", "--chdir", "/redpad/output", "--", "/redpad/runtime/bin/python3.11", "-m", "redpad_pipeline.shared_model_worker", "/redpad/input/request.json"]
+2026-11-22T07:23:22.0803482Z PASS A private read and enumeration
+2026-11-22T07:23:22.0804642Z PASS B read-only input
+2026-11-22T07:23:22.0810356Z PASS C writable output boundary
+2026-11-22T07:23:22.0825534Z PASS D network namespace and host loopback denied
+2026-11-22T07:23:22.3210035Z PASS E timeout
+2026-11-22T07:23:22.4556470Z PASS E cancel
+2026-11-22T07:23:22.6040706Z PASS E controller_loss
+2026-11-22T07:23:22.6041267Z PASS F synthetic launch boundary: shared_model_worker
+2026-11-22T07:23:22.6276315Z ##[group]Run set -euo pipefail
+2026-11-22T07:23:22.6276655Z [36;1mset -euo pipefail[0m
+2026-11-22T07:23:22.6276972Z [36;1mpython -B experiments/phase2_offline_wheels.py \[0m
+2026-11-22T07:23:22.6277484Z [36;1m  --manifest verification/phase2_cpu_gaps_20261122/qwen-platform-wheels.json \[0m
+2026-11-22T07:23:22.6278059Z [36;1m  --lock verification/phase2_cpu_gaps_20261122/qwen-candidate.lock \[0m
+2026-11-22T07:23:22.6278533Z [36;1m  --wheelhouse "$RUNNER_TEMP/phase2-wheels" \[0m
+2026-11-22T07:23:22.6278984Z [36;1m  --receipt "$RUNNER_TEMP/phase2-results/wheel-acquisition.json"[0m
+2026-11-22T07:23:22.6279525Z [36;1mpython -B experiments/phase2_public_sources.py "$RUNNER_TEMP/phase2-sources" \[0m
+2026-11-22T07:23:22.6280431Z [36;1m  > "$RUNNER_TEMP/phase2-results/source-receipt.json"[0m
+2026-11-22T07:23:22.6347185Z shell: /usr/bin/bash -e {0}
+2026-11-22T07:23:22.6347448Z env:
+2026-11-22T07:23:22.6347665Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-22T07:23:22.6347980Z   CUDA_VISIBLE_DEVICES: 
+2026-11-22T07:23:22.6348295Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:22.6348747Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T07:23:22.6349209Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:22.6349880Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:22.6350371Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:22.6350788Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T07:23:22.6351339Z ##[endgroup]
+2026-11-22T07:23:22.7597255Z 1/79 annotated_types-0.8.0-py3-none-any.whl verified_download
+2026-11-22T07:23:22.7627525Z 2/79 anyio-4.16.0-py3-none-any.whl verified_download
+2026-11-22T07:23:22.7635210Z 3/79 accelerate-1.13.0-py3-none-any.whl verified_download
+2026-11-22T07:23:22.7722596Z 4/79 certifi-2026.11.20-py3-none-any.whl verified_download
+2026-11-22T07:23:22.7767207Z 5/79 annotated_doc-0.0.7-py3-none-any.whl verified_download
+2026-11-22T07:23:22.7774205Z 6/79 cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:22.7784062Z 7/79 charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:22.7844299Z 8/79 click-8.5.1-py3-none-any.whl verified_download
+2026-11-22T07:23:22.7887850Z 9/79 cuda_pathfinder-1.9.1-py3-none-any.whl verified_download
+2026-11-22T07:23:22.7976103Z 10/79 email_validator-2.4.0-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8032688Z 11/79 dnspython-2.9.2-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8104773Z 12/79 filelock-4.2.12-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8200486Z 13/79 h11-0.16.0-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8216383Z 14/79 fsspec-2026.9.0-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8339779Z 15/79 httpcore-1.0.9-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8453803Z 16/79 httpx-0.28.1-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8521550Z 17/79 cuda_bindings-12.9.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:22.8526499Z 18/79 cryptography-50.0.2-cp311-abi3-manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:22.8625786Z 19/79 id-1.6.1-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8639948Z 20/79 idna-3.20-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8710262Z 21/79 huggingface_hub-1.31.0-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8814351Z 22/79 jinja2-3.1.6-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8836764Z 23/79 markdown_it_py-4.3.0-py3-none-any.whl verified_download
+2026-11-22T07:23:22.8926609Z 24/79 markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:22.8990050Z 25/79 hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:22.9001169Z 26/79 kernels-0.17.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl verified_download
+2026-11-22T07:23:22.9070548Z 27/79 mpmath-1.3.0-py3-none-any.whl verified_download
+2026-11-22T07:23:22.9094248Z 28/79 mdurl-0.1.2-py3-none-any.whl verified_download
+2026-11-22T07:23:22.9268433Z 29/79 networkx-3.6.1-py3-none-any.whl verified_download
+2026-11-22T07:23:22.9772120Z 30/79 nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:22.9964069Z 31/79 numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:23.0376615Z 32/79 nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:23.3392923Z 33/79 nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl verified_download
+2026-11-22T07:23:23.3746423Z 34/79 nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:23.6792531Z 35/79 nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl verified_download
+2026-11-22T07:23:23.8723025Z 36/79 nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:25.1900041Z 37/79 nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl verified_download
+2026-11-22T07:23:25.6453042Z 38/79 nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:26.3889323Z 39/79 nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl verified_download
+2026-11-22T07:23:26.8883665Z 40/79 nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl verified_download
+2026-11-22T07:23:26.9885837Z 41/79 nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl verified_download
+2026-11-22T07:23:27.0355618Z 42/79 nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:27.6796333Z 43/79 packaging-26.3-py3-none-any.whl verified_download
+2026-11-22T07:23:28.1797515Z 44/79 nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl verified_download
+2026-11-22T07:23:28.6423875Z 45/79 platformdirs-4.14.8-py3-none-any.whl verified_download
+2026-11-22T07:23:29.0836838Z 46/79 psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:29.5371252Z 47/79 pillow-11.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:29.6835624Z 48/79 pycparser-3.12-py3-none-any.whl verified_download
+2026-11-22T07:23:29.8381152Z 49/79 pydantic-2.14.4-py3-none-any.whl verified_download
+2026-11-22T07:23:29.9803934Z 50/79 pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:30.2773175Z 51/79 pyjwt-2.15.1-py3-none-any.whl verified_download
+2026-11-22T07:23:30.6394946Z 52/79 pygments-2.21.0-py3-none-any.whl verified_download
+2026-11-22T07:23:30.7803034Z 53/79 pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:30.9401331Z 54/79 regex-2026.11.19-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:31.0825022Z 55/79 requests-2.34.2-py3-none-any.whl verified_download
+2026-11-22T07:23:31.2897339Z 56/79 rfc3161_client-1.0.9-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl verified_download
+2026-11-22T07:23:31.3391539Z 57/79 rich-15.0.0-py3-none-any.whl verified_download
+2026-11-22T07:23:31.3863053Z 58/79 rfc8785-0.1.4-py3-none-any.whl verified_download
+2026-11-22T07:23:31.4847415Z 59/79 safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl verified_download
+2026-11-22T07:23:31.5460682Z 60/79 shellingham-1.5.4-py2.py3-none-any.whl verified_download
+2026-11-22T07:23:31.5469311Z 61/79 securesystemslib-1.6.0-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5478109Z 62/79 sigstore-4.5.1-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5485670Z 63/79 sigstore_rekor_types-0.0.18-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5493587Z 64/79 sigstore_models-0.0.6-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5501911Z 65/79 tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl verified_download
+2026-11-22T07:23:31.5509387Z 66/79 sympy-1.14.0-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5517780Z 67/79 tomlkit-0.15.2-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5526496Z 68/79 nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:31.5534846Z 69/79 nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl verified_download
+2026-11-22T07:23:31.5542948Z 70/79 tqdm-4.70.1-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5552184Z 71/79 transformers-5.22.2-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5560660Z 72/79 tuf-7.0.1-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5569038Z 73/79 typer-0.29.2-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5577960Z 74/79 torchvision-0.25.0-cp311-cp311-manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:31.5596845Z 75/79 typing_extensions-4.16.0-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5597791Z 76/79 typing_inspection-0.4.5-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5605980Z 77/79 urllib3-2.8.0-py3-none-any.whl verified_download
+2026-11-22T07:23:31.5616402Z 78/79 triton-3.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:31.5625318Z 79/79 torch-2.10.0-3-cp311-cp311-manylinux_2_28_x86_64.whl verified_download
+2026-11-22T07:23:31.5629218Z COMPLETE 79 verified archives
+2026-11-22T07:23:34.4799976Z ##[group]Run set -euo pipefail
+2026-11-22T07:23:34.4800584Z [36;1mset -euo pipefail[0m
+2026-11-22T07:23:34.4801212Z [36;1mexport TMPDIR="$RUNNER_TEMP/phase2-install-tmp"[0m
+2026-11-22T07:23:34.4802025Z [36;1mmkdir -p "$TMPDIR" "$RUNNER_TEMP/phase2-prefix"[0m
+2026-11-22T07:23:34.4802865Z [36;1mbase=$(python -c 'import sys; print(sys.base_prefix)')[0m
+2026-11-22T07:23:34.4803706Z [36;1mcp -aL "$base/." "$RUNNER_TEMP/phase2-prefix/"[0m
+2026-11-22T07:23:34.4804589Z [36;1mpython -m pip install --prefix "$RUNNER_TEMP/phase2-prefix" \[0m
+2026-11-22T07:23:34.4805549Z [36;1m  --no-index --find-links "$RUNNER_TEMP/phase2-wheels" \[0m
+2026-11-22T07:23:34.4806573Z [36;1m  --only-binary=:all: --require-hashes --no-compile --ignore-installed \[0m
+2026-11-22T07:23:34.4807672Z [36;1m  -r verification/phase2_resume_20261122/selected-wheels.lock[0m
+2026-11-22T07:23:34.4808472Z [36;1m"$RUNNER_TEMP/phase2-prefix/bin/python3.11" -B -m pip check[0m
+2026-11-22T07:23:34.4809415Z [36;1mfind "$RUNNER_TEMP/phase2-prefix" -type d -name __pycache__ -prune -exec rm -rf {} +[0m
+2026-11-22T07:23:34.4810517Z [36;1mfind "$RUNNER_TEMP/phase2-prefix" -type f -name '*.pyc' -delete[0m
+2026-11-22T07:23:34.4895055Z shell: /usr/bin/bash -e {0}
+2026-11-22T07:23:34.4895459Z env:
+2026-11-22T07:23:34.4895797Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-22T07:23:34.4896219Z   CUDA_VISIBLE_DEVICES: 
+2026-11-22T07:23:34.4896720Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:34.4897476Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T07:23:34.4898225Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:34.4898885Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:34.4899732Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:23:34.4900409Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T07:23:34.4900970Z ##[endgroup]
+2026-11-22T07:24:22.2503667Z Looking in links: /home/runner/work/_temp/phase2-wheels
+2026-11-22T07:24:22.2594973Z Processing /home/runner/work/_temp/phase2-wheels/accelerate-1.13.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 1))
+2026-11-22T07:24:22.2686466Z Processing /home/runner/work/_temp/phase2-wheels/annotated_doc-0.0.7-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 2))
+2026-11-22T07:24:22.2710598Z Processing /home/runner/work/_temp/phase2-wheels/annotated_types-0.8.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 3))
+2026-11-22T07:24:22.2734805Z Processing /home/runner/work/_temp/phase2-wheels/anyio-4.16.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 4))
+2026-11-22T07:24:22.2763421Z Processing /home/runner/work/_temp/phase2-wheels/certifi-2026.11.20-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 5))
+2026-11-22T07:24:22.2787184Z Processing /home/runner/work/_temp/phase2-wheels/cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 6))
+2026-11-22T07:24:22.2813759Z Processing /home/runner/work/_temp/phase2-wheels/charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 7))
+2026-11-22T07:24:22.2856543Z Processing /home/runner/work/_temp/phase2-wheels/click-8.5.1-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 8))
+2026-11-22T07:24:22.2879025Z Processing /home/runner/work/_temp/phase2-wheels/cryptography-50.0.2-cp311-abi3-manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 9))
+2026-11-22T07:24:22.3000553Z Processing /home/runner/work/_temp/phase2-wheels/cuda_bindings-12.9.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 10))
+2026-11-22T07:24:22.3234012Z Processing /home/runner/work/_temp/phase2-wheels/cuda_pathfinder-1.9.1-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 11))
+2026-11-22T07:24:22.3254645Z Processing /home/runner/work/_temp/phase2-wheels/dnspython-2.9.2-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 12))
+2026-11-22T07:24:22.3301579Z Processing /home/runner/work/_temp/phase2-wheels/email_validator-2.4.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 13))
+2026-11-22T07:24:22.3330015Z Processing /home/runner/work/_temp/phase2-wheels/filelock-4.2.12-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 14))
+2026-11-22T07:24:22.3365511Z Processing /home/runner/work/_temp/phase2-wheels/fsspec-2026.9.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 15))
+2026-11-22T07:24:22.3580967Z Processing /home/runner/work/_temp/phase2-wheels/h11-0.16.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 16))
+2026-11-22T07:24:22.3603425Z Processing /home/runner/work/_temp/phase2-wheels/hf_xet-1.8.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 17))
+2026-11-22T07:24:22.3702595Z Processing /home/runner/work/_temp/phase2-wheels/httpcore-1.0.9-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 18))
+2026-11-22T07:24:22.3735373Z Processing /home/runner/work/_temp/phase2-wheels/httpx-0.28.1-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 19))
+2026-11-22T07:24:22.3763962Z Processing /home/runner/work/_temp/phase2-wheels/huggingface_hub-1.31.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 20))
+2026-11-22T07:24:22.3881032Z Processing /home/runner/work/_temp/phase2-wheels/id-1.6.1-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 21))
+2026-11-22T07:24:22.3908444Z Processing /home/runner/work/_temp/phase2-wheels/idna-3.20-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 22))
+2026-11-22T07:24:22.3934870Z Processing /home/runner/work/_temp/phase2-wheels/jinja2-3.1.6-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 23))
+2026-11-22T07:24:22.3957447Z Processing /home/runner/work/_temp/phase2-wheels/kernels-0.17.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 24))
+2026-11-22T07:24:22.4031892Z Processing /home/runner/work/_temp/phase2-wheels/markdown_it_py-4.3.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 25))
+2026-11-22T07:24:22.4075492Z Processing /home/runner/work/_temp/phase2-wheels/markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 26))
+2026-11-22T07:24:22.4095013Z Processing /home/runner/work/_temp/phase2-wheels/mdurl-0.1.2-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 27))
+2026-11-22T07:24:22.4113385Z Processing /home/runner/work/_temp/phase2-wheels/mpmath-1.3.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 28))
+2026-11-22T07:24:22.4153928Z Processing /home/runner/work/_temp/phase2-wheels/networkx-3.6.1-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 29))
+2026-11-22T07:24:22.4268872Z Processing /home/runner/work/_temp/phase2-wheels/numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 30))
+2026-11-22T07:24:22.4617983Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 31))
+2026-11-22T07:24:23.3048177Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 32))
+2026-11-22T07:24:23.3239337Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 33))
+2026-11-22T07:24:23.4541828Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 34))
+2026-11-22T07:24:23.4592827Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 35))
+2026-11-22T07:24:24.4553406Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 36))
+2026-11-22T07:24:24.7311804Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 37))
+2026-11-22T07:24:24.7360669Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 38))
+2026-11-22T07:24:24.8303977Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 39))
+2026-11-22T07:24:25.2102853Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 40))
+2026-11-22T07:24:25.6184309Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 41))
+2026-11-22T07:24:26.0256836Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 42))
+2026-11-22T07:24:26.4820180Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 43))
+2026-11-22T07:24:26.5411995Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 44))
+2026-11-22T07:24:26.7419184Z Processing /home/runner/work/_temp/phase2-wheels/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 45))
+2026-11-22T07:24:26.7441025Z Processing /home/runner/work/_temp/phase2-wheels/packaging-26.3-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 46))
+2026-11-22T07:24:26.7466620Z Processing /home/runner/work/_temp/phase2-wheels/pillow-11.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 47))
+2026-11-22T07:24:26.7624237Z Processing /home/runner/work/_temp/phase2-wheels/platformdirs-4.14.8-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 48))
+2026-11-22T07:24:26.7662849Z Processing /home/runner/work/_temp/phase2-wheels/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 49))
+2026-11-22T07:24:26.7714383Z Processing /home/runner/work/_temp/phase2-wheels/pycparser-3.12-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 50))
+2026-11-22T07:24:26.7737355Z Processing /home/runner/work/_temp/phase2-wheels/pydantic-2.14.4-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 51))
+2026-11-22T07:24:26.7804088Z Processing /home/runner/work/_temp/phase2-wheels/pydantic_core-2.50.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 52))
+2026-11-22T07:24:26.7880020Z Processing /home/runner/work/_temp/phase2-wheels/pygments-2.21.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 53))
+2026-11-22T07:24:26.7942563Z Processing /home/runner/work/_temp/phase2-wheels/pyjwt-2.15.1-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 54))
+2026-11-22T07:24:26.7965555Z Processing /home/runner/work/_temp/phase2-wheels/pyyaml-6.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 55))
+2026-11-22T07:24:26.8002843Z Processing /home/runner/work/_temp/phase2-wheels/regex-2026.11.19-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 56))
+2026-11-22T07:24:26.8046409Z Processing /home/runner/work/_temp/phase2-wheels/requests-2.34.2-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 57))
+2026-11-22T07:24:26.8075648Z Processing /home/runner/work/_temp/phase2-wheels/rfc3161_client-1.0.9-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 58))
+2026-11-22T07:24:26.8147147Z Processing /home/runner/work/_temp/phase2-wheels/rfc8785-0.1.4-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 59))
+2026-11-22T07:24:26.8171059Z Processing /home/runner/work/_temp/phase2-wheels/rich-15.0.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 60))
+2026-11-22T07:24:26.8208592Z Processing /home/runner/work/_temp/phase2-wheels/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 61))
+2026-11-22T07:24:26.8265158Z Processing /home/runner/work/_temp/phase2-wheels/securesystemslib-1.6.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 62))
+2026-11-22T07:24:26.8311709Z Processing /home/runner/work/_temp/phase2-wheels/shellingham-1.5.4-py2.py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 63))
+2026-11-22T07:24:26.8332731Z Processing /home/runner/work/_temp/phase2-wheels/sigstore-4.5.1-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 64))
+2026-11-22T07:24:26.8364289Z Processing /home/runner/work/_temp/phase2-wheels/sigstore_models-0.0.6-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 65))
+2026-11-22T07:24:26.8384779Z Processing /home/runner/work/_temp/phase2-wheels/sigstore_rekor_types-0.0.18-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 66))
+2026-11-22T07:24:26.8430311Z Processing /home/runner/work/_temp/phase2-wheels/sympy-1.14.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 67))
+2026-11-22T07:24:26.8627057Z Processing /home/runner/work/_temp/phase2-wheels/tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 68))
+2026-11-22T07:24:26.8728820Z Processing /home/runner/work/_temp/phase2-wheels/tomlkit-0.15.2-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 69))
+2026-11-22T07:24:26.8749242Z Processing /home/runner/work/_temp/phase2-wheels/torch-2.10.0-3-cp311-cp311-manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 70))
+2026-11-22T07:24:28.2182580Z Processing /home/runner/work/_temp/phase2-wheels/torchvision-0.25.0-cp311-cp311-manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 71))
+2026-11-22T07:24:28.2325106Z Processing /home/runner/work/_temp/phase2-wheels/tqdm-4.70.1-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 72))
+2026-11-22T07:24:28.2376079Z Processing /home/runner/work/_temp/phase2-wheels/transformers-5.22.2-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 73))
+2026-11-22T07:24:28.2930039Z Processing /home/runner/work/_temp/phase2-wheels/triton-3.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 74))
+2026-11-22T07:24:28.5617676Z Processing /home/runner/work/_temp/phase2-wheels/tuf-7.0.1-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 75))
+2026-11-22T07:24:28.5640826Z Processing /home/runner/work/_temp/phase2-wheels/typer-0.29.2-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 76))
+2026-11-22T07:24:28.5672700Z Processing /home/runner/work/_temp/phase2-wheels/typing_extensions-4.16.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 77))
+2026-11-22T07:24:28.5692881Z Processing /home/runner/work/_temp/phase2-wheels/typing_inspection-0.4.5-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 78))
+2026-11-22T07:24:28.5711660Z Processing /home/runner/work/_temp/phase2-wheels/urllib3-2.8.0-py3-none-any.whl (from -r verification/phase2_resume_20261122/selected-wheels.lock (line 79))
+2026-11-22T07:24:28.8853803Z Installing collected packages: nvidia-cusparselt-cu12, mpmath, urllib3, typing-extensions, triton, tqdm, tomlkit, sympy, shellingham, securesystemslib, safetensors, rfc8785, regex, pyyaml, pyjwt, pygments, pycparser, psutil, platformdirs, pillow, packaging, nvidia-nvtx-cu12, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, mdurl, markupsafe, idna, hf-xet, h11, fsspec, filelock, dnspython, cuda-pathfinder, click, charset-normalizer, certifi, annotated-types, annotated-doc, typing-inspection, tuf, requests, pydantic-core, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, markdown-it-py, jinja2, id, httpcore, email-validator, cuda-bindings, cffi, anyio, rich, pydantic, nvidia-cusolver-cu12, httpx, cryptography, typer, torch, sigstore-models, rfc3161-client, huggingface-hub, torchvision, tokenizers, sigstore-rekor-types, accelerate, transformers, sigstore, kernels
+2026-11-22T07:25:17.9792079Z 
+2026-11-22T07:25:17.9830036Z Successfully installed accelerate-1.13.0 annotated-doc-0.0.7 annotated-types-0.8.0 anyio-4.16.0 certifi-2026.11.20 cffi-2.1.1 charset-normalizer-3.5.2 click-8.5.1 cryptography-50.0.2 cuda-bindings-12.9.4 cuda-pathfinder-1.9.1 dnspython-2.9.2 email-validator-2.4.0 filelock-4.2.12 fsspec-2026.9.0 h11-0.16.0 hf-xet-1.8.0 httpcore-1.0.9 httpx-0.28.1 huggingface-hub-1.31.0 id-1.6.1 idna-3.20 jinja2-3.1.6 kernels-0.17.2 markdown-it-py-4.3.0 markupsafe-3.0.4 mdurl-0.1.2 mpmath-1.3.0 networkx-3.6.1 numpy-2.4.6 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.5 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvshmem-cu12-3.4.5 nvidia-nvtx-cu12-12.8.90 packaging-26.3 pillow-11.3.0 platformdirs-4.14.8 psutil-7.2.2 pycparser-3.12 pydantic-2.14.4 pydantic-core-2.50.5 pygments-2.21.0 pyjwt-2.15.1 pyyaml-6.0.4 regex-2026.11.19 requests-2.34.2 rfc3161-client-1.0.9 rfc8785-0.1.4 rich-15.0.0 safetensors-0.8.0 securesystemslib-1.6.0 shellingham-1.5.4 sigstore-4.5.1 sigstore-models-0.0.6 sigstore-rekor-types-0.0.18 sympy-1.14.0 tokenizers-0.23.3 tomlkit-0.15.2 torch-2.10.0 torchvision-0.25.0 tqdm-4.70.1 transformers-5.22.2 triton-3.6.0 tuf-7.0.1 typer-0.29.2 typing-extensions-4.16.0 typing-inspection-0.4.5 urllib3-2.8.0
+2026-11-22T07:25:18.3012308Z No broken requirements found.
+2026-11-22T07:25:18.9961575Z ##[group]Run set -euo pipefail
+2026-11-22T07:25:18.9961928Z [36;1mset -euo pipefail[0m
+2026-11-22T07:25:18.9962298Z [36;1mpython -B -m unittest -v tests.test_phase2_offline_acquisition[0m
+2026-11-22T07:25:18.9962764Z [36;1mpython -B experiments/phase2_secure_cpu_probe.py \[0m
+2026-11-22T07:25:18.9963211Z [36;1m  "$RUNNER_TEMP/phase2-prefix" "$RUNNER_TEMP/phase2-sources" \[0m
+2026-11-22T07:25:18.9963756Z [36;1m  "$RUNNER_TEMP/phase2-results/source-receipt.json" "$RUNNER_TEMP/phase2-results" \[0m
+2026-11-22T07:25:18.9964280Z [36;1m  | tee "$RUNNER_TEMP/phase2-results/secure-startup.log"[0m
+2026-11-22T07:25:19.0028457Z shell: /usr/bin/bash -e {0}
+2026-11-22T07:25:19.0028717Z env:
+2026-11-22T07:25:19.0028934Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-22T07:25:19.0029201Z   CUDA_VISIBLE_DEVICES: 
+2026-11-22T07:25:19.0029507Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:25:19.0030300Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T07:25:19.0030749Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:25:19.0031153Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:25:19.0031544Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:25:19.0031945Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T07:25:19.0032286Z ##[endgroup]
+2026-11-22T07:25:19.1446641Z test_changed_publisher_index_cannot_select_an_alias_or_extra_component (tests.test_phase2_offline_acquisition.DistilledPreparationTests.test_changed_publisher_index_cannot_select_an_alias_or_extra_component) ... ok
+2026-11-22T07:25:19.1449921Z test_exact_source_keeps_original_bytes_and_pins_every_component_explicitly (tests.test_phase2_offline_acquisition.DistilledPreparationTests.test_exact_source_keeps_original_bytes_and_pins_every_component_explicitly) ... ok
+2026-11-22T07:25:19.1734559Z test_existing_service_exposes_preparation_without_worker_launch (tests.test_phase2_offline_acquisition.DistilledPreparationTests.test_existing_service_exposes_preparation_without_worker_launch) ... ok
+2026-11-22T07:25:19.1736176Z test_all_devices_and_grouped_kernel_must_pass (tests.test_phase2_offline_acquisition.FP8GateTests.test_all_devices_and_grouped_kernel_must_pass) ... ok
+2026-11-22T07:25:19.1737559Z test_exact_resolution_and_no_automatic_model_promotion (tests.test_phase2_offline_acquisition.FP8GateTests.test_exact_resolution_and_no_automatic_model_promotion) ... ok
+2026-11-22T07:25:19.1740252Z test_no_device_probe_before_secure_runtime_or_for_invalid_assignment (tests.test_phase2_offline_acquisition.FP8GateTests.test_no_device_probe_before_secure_runtime_or_for_invalid_assignment) ... ok
+2026-11-22T07:25:19.1741759Z test_real_backend_precision_mutation_is_rejected (tests.test_phase2_offline_acquisition.FP8GateTests.test_real_backend_precision_mutation_is_rejected) ... ok
+2026-11-22T07:25:19.1748073Z test_partial_or_symlink_never_becomes_verified_archive (tests.test_phase2_offline_acquisition.OfflineAcquisitionTests.test_partial_or_symlink_never_becomes_verified_archive) ... ok
+2026-11-22T07:25:19.1755779Z test_same_size_tamper_is_retained_and_rejected (tests.test_phase2_offline_acquisition.OfflineAcquisitionTests.test_same_size_tamper_is_retained_and_rejected) ... ok
+2026-11-22T07:25:19.1762524Z test_verified_complete_archive_is_never_downloaded_again (tests.test_phase2_offline_acquisition.OfflineAcquisitionTests.test_verified_complete_archive_is_never_downloaded_again) ... ok
+2026-11-22T07:25:19.1765795Z test_wrong_origin_path_and_digest_fail_before_network (tests.test_phase2_offline_acquisition.OfflineAcquisitionTests.test_wrong_origin_path_and_digest_fail_before_network) ... ok
+2026-11-22T07:25:19.1796295Z test_existing_source_tamper_cannot_be_replaced_by_network (tests.test_phase2_offline_acquisition.PublicSourceTests.test_existing_source_tamper_cannot_be_replaced_by_network) ... ok
+2026-11-22T07:25:19.1799070Z test_unreviewed_source_archive_rejected_before_extraction (tests.test_phase2_offline_acquisition.PublicSourceTests.test_unreviewed_source_archive_rejected_before_extraction) ... ok
+2026-11-22T07:25:19.2072375Z test_public_diagnostic_contract_does_not_promote_contract_only_models (tests.test_phase2_offline_acquisition.SelectedSpeakRuntimeTests.test_public_diagnostic_contract_does_not_promote_contract_only_models) ... ok
+2026-11-22T07:25:19.2075635Z test_selected_local_decoder_does_not_require_unrelated_pip_vocos (tests.test_phase2_offline_acquisition.SelectedSpeakRuntimeTests.test_selected_local_decoder_does_not_require_unrelated_pip_vocos) ... ok
+2026-11-22T07:25:19.2077450Z 
+2026-11-22T07:25:19.2078163Z ----------------------------------------------------------------------
+2026-11-22T07:25:19.2078754Z Ran 15 tests in 0.071s
+2026-11-22T07:25:19.2078983Z 
+2026-11-22T07:25:19.2079097Z OK
+2026-11-22T07:26:03.9501060Z Modular Diffusers is currently an experimental feature under active development. The API is subject to breaking changes in future releases.
+2026-11-22T07:26:04.9317752Z Guiders are currently an experimental feature under active development. The API is subject to breaking changes in future releases.
+2026-11-22T07:26:04.9327653Z {"component_tensor_equivalence": false, "cuda_initialized": false, "independent_artistic_acceptance": false, "kernel_files": 12, "kernel_revision": "3c8fcc86c0e42b7abe5bcf666d3a3afdce93a0e8", "kernel_version": "v4", "model_inference": false, "production_ready": false, "qwen_class": "Qwen3_5MoeForConditionalGeneration", "registry_routes_promoted": false, "status": "PASS", "torch": "2.10.0+cu128", "transformers": "5.22.2", "wan_blocks": "WanAnimate2DistilledBlocks", "wan_loader": "WanAnimate2DistilledModularPipeline", "weights_loaded": false}
+2026-11-22T07:26:19.9126654Z Modular Diffusers is currently an experimental feature under active development. The API is subject to breaking changes in future releases.
+2026-11-22T07:26:20.8799449Z Guiders are currently an experimental feature under active development. The API is subject to breaking changes in future releases.
+2026-11-22T07:26:20.8808969Z {"component_tensor_equivalence": false, "cuda_initialized": false, "independent_artistic_acceptance": false, "kernel_files": 12, "kernel_revision": "3c8fcc86c0e42b7abe5bcf666d3a3afdce93a0e8", "kernel_version": "v4", "model_inference": false, "production_ready": false, "qwen_class": "Qwen3_5MoeForConditionalGeneration", "registry_routes_promoted": false, "status": "PASS", "torch": "2.10.0+cu128", "transformers": "5.22.2", "wan_blocks": "WanAnimate2DistilledBlocks", "wan_loader": "WanAnimate2DistilledModularPipeline", "weights_loaded": false}
+2026-11-22T07:26:21.6573614Z ##[group]Run actions/upload-artifact@v6
+2026-11-22T07:26:21.6573937Z with:
+2026-11-22T07:26:21.6574197Z   name: phase2-approved-public-runtime-receipts
+2026-11-22T07:26:21.6574560Z   path: /home/runner/work/_temp/phase2-results/
+2026-11-22T07:26:21.6574876Z   if-no-files-found: error
+2026-11-22T07:26:21.6575124Z   retention-days: 14
+2026-11-22T07:26:21.6575357Z   compression-level: 6
+2026-11-22T07:26:21.6575576Z   overwrite: false
+2026-11-22T07:26:21.6575985Z   include-hidden-files: false
+2026-11-22T07:26:21.6576235Z env:
+2026-11-22T07:26:21.6576440Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-22T07:26:21.6576695Z   CUDA_VISIBLE_DEVICES: 
+2026-11-22T07:26:21.6576992Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:26:21.6577436Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-22T07:26:21.6577869Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:26:21.6578295Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:26:21.6578694Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-22T07:26:21.6579092Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-22T07:26:21.6579424Z ##[endgroup]
+2026-11-22T07:26:21.8344640Z With the provided path, there will be 7 files uploaded
+2026-11-22T07:26:21.8352132Z Artifact name is valid!
+2026-11-22T07:26:21.8352729Z Root directory input is valid!
+2026-11-22T07:26:22.0283937Z Beginning upload of artifact content to blob storage
+2026-11-22T07:26:22.1428596Z Uploaded bytes 74105
+2026-11-22T07:26:22.1584482Z Finished uploading artifact content to blob storage!
+2026-11-22T07:26:22.1585990Z SHA256 digest of uploaded artifact zip is 22c2d4b3324ec36c10018f59bbfd5d39b6a5a6e0e91961f2167447338de38f22
+2026-11-22T07:26:22.1587373Z Finalizing artifact upload
+2026-11-22T07:26:22.4665209Z Artifact phase2-approved-public-runtime-receipts.zip successfully finalized. Artifact ID 14744259018
+2026-11-22T07:26:22.4667841Z Artifact phase2-approved-public-runtime-receipts has been successfully uploaded! Final size is 74105 bytes. Artifact ID is 14744259018
+2026-11-22T07:26:22.4671842Z Artifact download URL: https://github.com/REDPADSTUDIO-UX/blank-app/actions/runs/44997981646/artifacts/14744259018
+2026-11-22T07:26:22.4861628Z Post job cleanup.
+2026-11-22T07:26:22.6351581Z Post job cleanup.
+2026-11-22T07:26:22.7516062Z [command]/usr/bin/git version
+2026-11-22T07:26:22.7590403Z git version 2.56.1
+2026-11-22T07:26:22.7626645Z Temporarily overriding HOME='/home/runner/work/_temp/72867bd5-a6a8-4784-93c6-9384022d32bc' before making global git config changes
+2026-11-22T07:26:22.7641462Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-22T07:26:22.7642734Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/blank-app/blank-app
+2026-11-22T07:26:22.7684639Z Removing SSH command configuration
+2026-11-22T07:26:22.7697653Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-22T07:26:22.7754525Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-22T07:26:22.8173789Z Removing HTTP extra header
+2026-11-22T07:26:22.8181275Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-22T07:26:22.8238309Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-22T07:26:22.8580491Z Removing includeIf entries pointing to credentials config files
+2026-11-22T07:26:22.8590456Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-22T07:26:22.8642218Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-22T07:26:22.9069010Z Cleaning up orphan processes
+

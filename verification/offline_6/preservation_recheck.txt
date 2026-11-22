@@ -1,0 +1,6 @@
+test_registry_profiles_and_other_thirteen_agents_preserved (tests.test_offline_six_preparation.OfflineSixTests.test_registry_profiles_and_other_thirteen_agents_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.015s
+
+OK

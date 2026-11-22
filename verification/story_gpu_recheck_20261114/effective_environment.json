@@ -1,0 +1,45 @@
+{
+  "checked_utc": "2026-11-14T08:48:33.318033+00:00",
+  "network_access_declared": "enabled by current environment instructions",
+  "effective_observation": "Colab, Kaggle, Hugging Face reachable by shell HTTP 200 and native browser. Lightning rendered regional restriction; shell HTTP 403. Old blanket destination block is not current evidence.",
+  "proxy_variable_names_only": [
+    "no_proxy",
+    "https_proxy",
+    "NO_PROXY",
+    "HTTPS_PROXY",
+    "HTTP_PROXY",
+    "http_proxy"
+  ],
+  "proxy_values_recorded": false,
+  "route_or_security_settings_modified": false,
+  "nvidia_smi_present": false,
+  "nvidia_device_nodes": [],
+  "container_ram_limit_bytes": 8589934592,
+  "disk_free_bytes": 63955419136,
+  "dependency_metadata_only": {
+    "torch": null,
+    "transformers": null,
+    "bitsandbytes": null,
+    "accelerate": null,
+    "safetensors": null
+  },
+  "cache_inventory": [
+    {
+      "path": "phase3_models",
+      "exists": false
+    },
+    {
+      "path": "/workspace/.cache/huggingface",
+      "exists": false
+    },
+    {
+      "path": "/workspace/shared/downloads",
+      "exists": true
+    }
+  ],
+  "gpu_allocated": false,
+  "gpu_specs": null,
+  "browser_control": "No callable extension Browser js found; cloud tab creation failed Browser Use could not read requirements. Native Chromium window input and screenshots worked through CUA. Sky input did not navigate; bound CUA app input did.",
+  "authenticated_provider_session_verified": false,
+  "gpu_notebook_connector_found": false
+}

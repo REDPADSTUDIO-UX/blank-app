@@ -1,0 +1,246 @@
+{
+  "qwen35_moe": {
+    "url": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B/raw/59d61f3ce65a6d9863b86d2e96597125219dc754/config.json",
+    "http_status": 200,
+    "bytes": 3544,
+    "sha256": "5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944",
+    "declared_symbols": [
+      "Qwen3_5MoeForConditionalGeneration"
+    ]
+  },
+  "wan_animate2_distilled": {
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/raw/59e4141466bcb1bf9733eca1bc78be6891c9fbdf/model_index.json",
+    "http_status": 200,
+    "bytes": 564,
+    "sha256": "da26517859f8e2766366795750dbfe3f758968fc9dfa6650f4c9f5beb1e6bc1d",
+    "declared_symbols": "WanAnimate2Pipeline"
+  },
+  "ltx25": {
+    "source_revision": "f0f2f8607189c78a72420b2b63cb1975b5eca179",
+    "reviewed_source": {
+      "packages/ltx-pipelines/src/ltx_pipelines/distilled.py": {
+        "url": "https://raw.githubusercontent.com/Lightricks/LTX-2/f0f2f8607189c78a72420b2b63cb1975b5eca179/packages/ltx-pipelines/src/ltx_pipelines/distilled.py",
+        "http_status": 200,
+        "bytes": 21554,
+        "sha256": "77f4cbd16186278abbdf62cdce4b10037b8681cce3d3c5a285cd0b0e83aa4add",
+        "expected_sha256": "77f4cbd16186278abbdf62cdce4b10037b8681cce3d3c5a285cd0b0e83aa4add",
+        "sha256_matches": true
+      },
+      "packages/ltx-pipelines/src/ltx_pipelines/utils/model_paths.py": {
+        "url": "https://raw.githubusercontent.com/Lightricks/LTX-2/f0f2f8607189c78a72420b2b63cb1975b5eca179/packages/ltx-pipelines/src/ltx_pipelines/utils/model_paths.py",
+        "http_status": 200,
+        "bytes": 8195,
+        "sha256": "29a2617e54b0ac19b5239b9c88c0423ea9ada4592e01db99436bcd14821a6acf",
+        "expected_sha256": "29a2617e54b0ac19b5239b9c88c0423ea9ada4592e01db99436bcd14821a6acf",
+        "sha256_matches": true
+      },
+      "packages/ltx-pipelines/src/ltx_pipelines/utils/types.py": {
+        "url": "https://raw.githubusercontent.com/Lightricks/LTX-2/f0f2f8607189c78a72420b2b63cb1975b5eca179/packages/ltx-pipelines/src/ltx_pipelines/utils/types.py",
+        "http_status": 200,
+        "bytes": 14504,
+        "sha256": "d918bb143622cbc092fe990602dabc7e16a0ad96bf2872d24934334803c48ce6",
+        "expected_sha256": "d918bb143622cbc092fe990602dabc7e16a0ad96bf2872d24934334803c48ce6",
+        "sha256_matches": true
+      },
+      "packages/ltx-pipelines/src/ltx_pipelines/utils/media_io/encode.py": {
+        "url": "https://raw.githubusercontent.com/Lightricks/LTX-2/f0f2f8607189c78a72420b2b63cb1975b5eca179/packages/ltx-pipelines/src/ltx_pipelines/utils/media_io/encode.py",
+        "http_status": 200,
+        "bytes": 14529,
+        "sha256": "ce5d57bbfaa3d117eac037de5ef3ad4c781ef64d127145eccedc944063e38b88",
+        "expected_sha256": "ce5d57bbfaa3d117eac037de5ef3ad4c781ef64d127145eccedc944063e38b88",
+        "sha256_matches": true
+      },
+      "packages/ltx-core/src/ltx_core/text_encoders/gemma/gemma_assets.py": {
+        "url": "https://raw.githubusercontent.com/Lightricks/LTX-2/f0f2f8607189c78a72420b2b63cb1975b5eca179/packages/ltx-core/src/ltx_core/text_encoders/gemma/gemma_assets.py",
+        "http_status": 200,
+        "bytes": 16676,
+        "sha256": "b9ffd8657610d3b37882bbe366edc455eb0ddcd2254577e7a9a7eb14926eb704",
+        "expected_sha256": "b9ffd8657610d3b37882bbe366edc455eb0ddcd2254577e7a9a7eb14926eb704",
+        "sha256_matches": true
+      }
+    },
+    "requirements": {
+      "url": "https://raw.githubusercontent.com/Lightricks/LTX-2/f0f2f8607189c78a72420b2b63cb1975b5eca179/packages/ltx-pipelines/pyproject.toml",
+      "http_status": 200,
+      "bytes": 653,
+      "sha256": "e53c18956224ee28b34a7cfcf8ae8d54d0576fd8cb741acaec090cc871140c2e"
+    },
+    "auxiliary_tree": {
+      "url": "https://huggingface.co/api/models/Lightricks/LTX-2.5/tree/49b093a39c19169a8a81721dcc541e07e945232f/latent_upscale_models?expand=true",
+      "http_status": 200,
+      "matching_entries": [
+        {
+          "path": "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+          "size": 995778752,
+          "lfs": {
+            "oid": "****************************************************************",
+            "size": 995778752,
+            "pointerSize": 134
+          }
+        }
+      ]
+    }
+  },
+  "wan_animate2": {
+    "source_revision": "3ad2fef7d61d6200c9c653e0fe47be7616b323f3",
+    "reviewed_source": {
+      "infer/wan_animate_2.yaml": {
+        "url": "https://raw.githubusercontent.com/Wan-Video/Wan-Animate-2/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/infer/wan_animate_2.yaml",
+        "http_status": 200,
+        "bytes": 2418,
+        "sha256": "746e96f463f72bf46e998a8b94b4208dd122b8b768c3b0daf5c0957791499849",
+        "expected_sha256": "746e96f463f72bf46e998a8b94b4208dd122b8b768c3b0daf5c0957791499849",
+        "sha256_matches": true
+      },
+      "pipelines/wan_animate_2_pipeline.py": {
+        "url": "https://raw.githubusercontent.com/Wan-Video/Wan-Animate-2/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/pipelines/wan_animate_2_pipeline.py",
+        "http_status": 200,
+        "bytes": 31957,
+        "sha256": "cfd5862c192a1fdff725a108d004250487f9c489767bdcf563f4ee3b4c39be43",
+        "expected_sha256": "cfd5862c192a1fdff725a108d004250487f9c489767bdcf563f4ee3b4c39be43",
+        "sha256_matches": true
+      },
+      "wanxiang/eval_i2v.py": {
+        "url": "https://raw.githubusercontent.com/Wan-Video/Wan-Animate-2/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/wanxiang/eval_i2v.py",
+        "http_status": 200,
+        "bytes": 6196,
+        "sha256": "9c984ab7f830ff6a9a543073272a387d9fe4af95197c035fb3c4fc52d4ef985d",
+        "expected_sha256": "9c984ab7f830ff6a9a543073272a387d9fe4af95197c035fb3c4fc52d4ef985d",
+        "sha256_matches": true
+      },
+      "pipelines/utils/utils.py": {
+        "url": "https://raw.githubusercontent.com/Wan-Video/Wan-Animate-2/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/pipelines/utils/utils.py",
+        "http_status": 200,
+        "bytes": 6662,
+        "sha256": "6ad0b233e6447c480dc0b738ab81aa32a94758657250b49a311ae6ea68053941",
+        "expected_sha256": "6ad0b233e6447c480dc0b738ab81aa32a94758657250b49a311ae6ea68053941",
+        "sha256_matches": true
+      }
+    },
+    "requirements": {
+      "url": "https://raw.githubusercontent.com/Wan-Video/Wan-Animate-2/3ad2fef7d61d6200c9c653e0fe47be7616b323f3/requirements.txt",
+      "http_status": 200,
+      "bytes": 1596,
+      "sha256": "e04bd8e624d29868303d076fc547090ecf5747c26f2c7c102cccc34ff39c787b"
+    }
+  },
+  "ace15": {
+    "source_revision": "ca1e85fe9430179831e6bc6be790c332190a3866",
+    "reviewed_source": {
+      "acestep/handler.py": {
+        "url": "https://raw.githubusercontent.com/ace-step/ACE-Step-1.5/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/handler.py",
+        "http_status": 200,
+        "bytes": 5589,
+        "sha256": "0a215d92aff3a85ea50be8cfa88e819175a0b8a4254f8024893c157a4dec6875",
+        "expected_sha256": "0a215d92aff3a85ea50be8cfa88e819175a0b8a4254f8024893c157a4dec6875",
+        "sha256_matches": true
+      },
+      "acestep/inference.py": {
+        "url": "https://raw.githubusercontent.com/ace-step/ACE-Step-1.5/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/inference.py",
+        "http_status": 200,
+        "bytes": 71074,
+        "sha256": "f43827def02a1122e2de483961b04f16544e4da9108eed9e42fd529175c15df5",
+        "expected_sha256": "f43827def02a1122e2de483961b04f16544e4da9108eed9e42fd529175c15df5",
+        "sha256_matches": true
+      },
+      "acestep/models/turbo/modeling_acestep_v15_turbo.py": {
+        "url": "https://raw.githubusercontent.com/ace-step/ACE-Step-1.5/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/models/turbo/modeling_acestep_v15_turbo.py",
+        "http_status": 200,
+        "bytes": 108712,
+        "sha256": "71b22e01b490bd9e149e4c0c5da2e1f512126f3ab3316e0ae97779af84d19512",
+        "expected_sha256": "71b22e01b490bd9e149e4c0c5da2e1f512126f3ab3316e0ae97779af84d19512",
+        "sha256_matches": true
+      },
+      "acestep/models/turbo/configuration_acestep_v15.py": {
+        "url": "https://raw.githubusercontent.com/ace-step/ACE-Step-1.5/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/models/turbo/configuration_acestep_v15.py",
+        "http_status": 200,
+        "bytes": 212,
+        "sha256": "5f15aa79fe793bba3c00b6992dd193a269954950603d5031ecd7703b0fa69da1",
+        "expected_sha256": "5f15aa79fe793bba3c00b6992dd193a269954950603d5031ecd7703b0fa69da1",
+        "sha256_matches": true
+      },
+      "acestep/models/common/configuration_acestep_v15.py": {
+        "url": "https://raw.githubusercontent.com/ace-step/ACE-Step-1.5/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/models/common/configuration_acestep_v15.py",
+        "http_status": 200,
+        "bytes": 13225,
+        "sha256": "0d66f38eba6a3d1665c9449a1a52724d68354477bc88dcf02389640e3602a0c7",
+        "expected_sha256": "0d66f38eba6a3d1665c9449a1a52724d68354477bc88dcf02389640e3602a0c7",
+        "sha256_matches": true
+      },
+      "acestep/core/generation/handler/init_service_orchestrator.py": {
+        "url": "https://raw.githubusercontent.com/ace-step/ACE-Step-1.5/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/core/generation/handler/init_service_orchestrator.py",
+        "http_status": 200,
+        "bytes": 8568,
+        "sha256": "df1e3ac43db9018793adae343760b43c56e7e81648cfcd057730162352c49d72",
+        "expected_sha256": "df1e3ac43db9018793adae343760b43c56e7e81648cfcd057730162352c49d72",
+        "sha256_matches": true
+      },
+      "acestep/core/generation/handler/init_service_downloads.py": {
+        "url": "https://raw.githubusercontent.com/ace-step/ACE-Step-1.5/ca1e85fe9430179831e6bc6be790c332190a3866/acestep/core/generation/handler/init_service_downloads.py",
+        "http_status": 200,
+        "bytes": 3184,
+        "sha256": "02a95f2293dc0cd82ff5046816503668f8339157ba0b18715e061f3142999f8f",
+        "expected_sha256": "02a95f2293dc0cd82ff5046816503668f8339157ba0b18715e061f3142999f8f",
+        "sha256_matches": true
+      }
+    },
+    "requirements": {
+      "url": "https://raw.githubusercontent.com/ace-step/ACE-Step-1.5/ca1e85fe9430179831e6bc6be790c332190a3866/pyproject.toml",
+      "http_status": 200,
+      "bytes": 4548,
+      "sha256": "b9288eabb1e8eea6334c70b8cd33c9ba07da20c24f7ff5ffb8ff4bb43cd9355b"
+    }
+  },
+  "indic_speak": {
+    "source_revision": "76e0814f189321efe550011850cd288dae366aad",
+    "runtime_authorized": false,
+    "reviewed_source": {
+      "inference.py": {
+        "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/inference.py",
+        "http_status": 401
+      },
+      "vocos/load.py": {
+        "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/vocos/load.py",
+        "http_status": 401
+      },
+      "vocos/model.py": {
+        "url": "https://huggingface.co/bodhan-ai/indic-speak/raw/76e0814f189321efe550011850cd288dae366aad/vocos/model.py",
+        "http_status": 401
+      }
+    }
+  },
+  "indicf5": {
+    "source_revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+    "runtime_authorized": false,
+    "reviewed_source": {
+      "f5_tts/infer/utils_infer.py": {
+        "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/infer/utils_infer.py",
+        "http_status": 401
+      },
+      "f5_tts/model/__init__.py": {
+        "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/model/__init__.py",
+        "http_status": 401
+      },
+      "f5_tts/model/backbones/dit.py": {
+        "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/model/backbones/dit.py",
+        "http_status": 401
+      },
+      "f5_tts/model/cfm.py": {
+        "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/model/cfm.py",
+        "http_status": 401
+      },
+      "f5_tts/model/modules.py": {
+        "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/model/modules.py",
+        "http_status": 401
+      },
+      "f5_tts/model/utils.py": {
+        "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/f5_tts/model/utils.py",
+        "http_status": 401
+      },
+      "model.py": {
+        "url": "https://huggingface.co/ai4bharat/IndicF5/raw/fb652a96e508091045890dae5bb99fe511facbcf/model.py",
+        "http_status": 401
+      }
+    }
+  }
+}

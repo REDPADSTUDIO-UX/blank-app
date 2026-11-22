@@ -1,0 +1,18 @@
+test_actual_outputs_reject_unknown_knowledge_without_repair (__main__.HandoffTests.test_actual_outputs_reject_unknown_knowledge_without_repair) ... ok
+test_causal_and_state_breaks_are_reported (__main__.HandoffTests.test_causal_and_state_breaks_are_reported) ... ok
+test_character_aliases_are_not_silently_normalized (__main__.HandoffTests.test_character_aliases_are_not_silently_normalized) ... ok
+test_duplicate_identity_and_missing_knowledge_are_rejected (__main__.HandoffTests.test_duplicate_identity_and_missing_knowledge_are_rejected) ... ok
+test_embedded_guard_matches_reviewable_source (__main__.HandoffTests.test_embedded_guard_matches_reviewable_source) ... ok
+test_existing_act2_entry_rejects_before_runtime_and_preserves_files (__main__.HandoffTests.test_existing_act2_entry_rejects_before_runtime_and_preserves_files) ... ok
+test_malformed_shapes_and_section_skips_fail_deterministically (__main__.HandoffTests.test_malformed_shapes_and_section_skips_fail_deterministically) ... ok
+test_new_invalid_model_output_is_preserved_but_never_completed (__main__.HandoffTests.test_new_invalid_model_output_is_preserved_but_never_completed)
+Mock transport only: not real model/GPU evidence. ... REDPAD_RESULT={"state": "stopped_with_evidence", "human_review": "pending", "production_approved": false, "automatic_retries": 0, "variant": "option_c_driverbound_schema_v1", "historical_calls": 2, "kernel_isolation_verified": false, "load_seconds": 4.105100015294738e-05, "owned_gpu_process": "123, 5000\n", "offload_lines": [], "exact_prompt_tokens": 1, "context_tokens": 4096, "output_ceiling": 1536, "template_sha256": "a47267147c8bcdf6b312d337842e11ee14fbc9f6ce74982539c2281a7d19999e", "raw_content": "{\"characters\": [{\"id\": \"N-01\"}, {\"id\": \"H\"}], \"initial_knowledge\": {\"N\": [\"job\"], \"H\": [\"ticket\"]}}", "raw_content_sha256": "931e1412b8f47aa7d791f7955abe861b1b50ab750fcedf58413d7f5ecb4c47e8", "finish_reason": "stop", "generation_seconds": 0.00024637600017740624, "peak_sampled_server_rss_bytes": null, "peak_sampled_device_used_mib": null, "memory_scope": "1s whole device sampling, includes baseline; not allocator peak", "schema_validated": true, "error_type": "StoryHandoffError", "error": "STORY_HANDOFF_INVALID: foundation.characters: expected_exact_N_H_ids; foundation.initial_knowledge: character_keys_mismatch", "handoff_findings": [{"path": "foundation.characters", "code": "expected_exact_N_H_ids", "repair_applied": false}, {"path": "foundation.initial_knowledge", "code": "character_keys_mismatch", "repair_applied": false}], "total_seconds": 0.0876741870006299, "server_stopped": true}
+ok
+test_unsupported_and_premature_knowledge_are_rejected (__main__.HandoffTests.test_unsupported_and_premature_knowledge_are_rejected) ... ok
+test_unsupported_reveal_and_emotional_reference_are_rejected (__main__.HandoffTests.test_unsupported_reveal_and_emotional_reference_are_rejected) ... ok
+test_valid_prefix_is_lossless_and_accepts_explicit_discovery (__main__.HandoffTests.test_valid_prefix_is_lossless_and_accepts_explicit_discovery) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.125s
+
+OK

@@ -1,0 +1,65 @@
+kernel-phase1	Run synthetic kernel canaries	﻿2026-11-21T15:23:56.9835672Z ##[group]Run python verification/kernel_phase1_20261121/probe.py
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:56.9838069Z [36;1mpython verification/kernel_phase1_20261121/probe.py[0m
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:56.9950501Z shell: /usr/bin/bash -e {0}
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:56.9951669Z env:
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:57.0048130Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:57.0050245Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:57.0052164Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:57.0053854Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:57.0055569Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:57.0057746Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:57.0059220Z ##[endgroup]
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9493135Z Linux 7.0.0-1017-azure x86_64 GNU/Linux
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9493537Z PRETTY_NAME="Ubuntu 24.04.5 LTS"
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9493787Z NAME="Ubuntu"
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9494260Z VERSION_ID="24.04"
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9494615Z VERSION="24.04.5 LTS (Noble Numbat)"
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9495019Z VERSION_CODENAME=noble
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9495338Z ID=ubuntu
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9495623Z ID_LIKE=debian
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9496340Z HOME_URL="https://www.ubuntu.com/"
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9496849Z SUPPORT_URL="https://help.ubuntu.com/"
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9497430Z BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9498262Z PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9499031Z UBUNTU_CODENAME=noble
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9499426Z LOGO=ubuntu-logo
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9499641Z
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9665558Z Traceback (most recent call last):
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9684912Z   File "/home/runner/work/blank-app/blank-app/verification/kernel_phase1_20261121/probe.py", line 153, in <module>
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9686313Z     raise SystemExit(main())
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9686628Z                      ~~~~^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9687567Z   File "/home/runner/work/blank-app/blank-app/verification/kernel_phase1_20261121/probe.py", line 121, in main
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9688383Z     print(subprocess.check_output(['/usr/bin/bwrap', '--version'], text=True).strip())
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9688949Z           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9689649Z   File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/subprocess.py", line 473, in check_output
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9690365Z     return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9690822Z            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9691176Z                **kwargs).stdout
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9691455Z                ^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9691988Z   File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/subprocess.py", line 555, in run
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9692492Z     with Popen(*popenargs, **kwargs) as process:
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9692836Z          ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9693336Z   File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/subprocess.py", line 1039, in __init__
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9693879Z     self._execute_child(args, executable, preexec_fn, close_fds,
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9694237Z     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9694538Z                         pass_fds, cwd, env,
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9694807Z                         ^^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9695053Z     ...<5 lines>...
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9695271Z                         gid, gids, uid, umask,
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9695548Z                         ^^^^^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9695837Z                         start_new_session, process_group)
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9696447Z                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9696988Z   File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/subprocess.py", line 1875, in _execute_child
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9697821Z     self._posix_spawn(args, executable, env, restore_signals, close_fds,
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9698219Z     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9698530Z                       p2cread, p2cwrite,
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9698792Z                       ^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9699041Z                       c2pread, c2pwrite,
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9699282Z                       ^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9699525Z                       errread, errwrite)
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9699775Z                       ^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9700267Z   File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/subprocess.py", line 1819, in _posix_spawn
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9700814Z     self.pid = os.posix_spawn(executable, args, env, **kwargs)
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9701166Z                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9701562Z FileNotFoundError: [Errno 2] No such file or directory: '/usr/bin/bwrap'
+kernel-phase1	Run synthetic kernel canaries	2026-11-21T15:23:58.9915112Z ##[error]Process completed with exit code 1.

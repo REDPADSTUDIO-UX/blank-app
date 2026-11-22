@@ -1,0 +1,95 @@
+{
+  "source": "original manually authored evaluation briefs, not generated writing or approved canon",
+  "shared_project": "ফিরতি টিকিট",
+  "human_review_completed": false,
+  "cases": [
+    {
+      "id": "family_breakfast",
+      "brief": "চাকরিতে যাওয়ার সকালে ঠান্ডা চা ও ব্যাগ সারানো ঘিরে বাবা-মেয়ের নাশতা। মমতা ও বিরক্তি একই কথায় থাকবে; রসিদ দেখার আগে নীরা সেটির কথা জানে না।",
+      "criteria": [
+        "responsive dialogue",
+        "visible care",
+        "knowledge continuity"
+      ],
+      "technical_acceptance": "Complete original output; correct speakers, locked facts and bounded version; schema pass is not creative acceptance.",
+      "artistic_acceptance": "Independent qualified Bengali editorial assessment required."
+    },
+    {
+      "id": "father_child",
+      "brief": "হাসান ব্যাগের সেলাইয়ে ভুল করেন; নীরা সাহায্য চাইতে গিয়ে নিজের ছোটবেলার মাপ নেওয়ার অভ্যাস চিনতে পারে। কোনো ত্যাগের বক্তৃতা নয়।",
+      "criteria": [
+        "emotional behavior",
+        "specific shared history",
+        "restraint"
+      ],
+      "technical_acceptance": "Complete original output; correct speakers, locked facts and bounded version; schema pass is not creative acceptance.",
+      "artistic_acceptance": "Independent qualified Bengali editorial assessment required."
+    },
+    {
+      "id": "romantic_first_encounter",
+      "brief": "রাজশাহীর অফিসে প্রথম দিন সহকর্মী সায়েম (২৯) নীরার একগাদা ফর্ম সরাতে সাহায্য চান, নীরা ভাবে তিনি সাহায্য দিতে এসেছেন। কাজ ও পারস্পরিক ভুলবোঝা থেকে পরিচয়; দুর্ঘটনা বা জোরের স্পর্শ নয়। এই cast addition benchmark variant, approved canon নয়।",
+      "criteria": [
+        "mutual agency",
+        "chemistry",
+        "plausible contact"
+      ],
+      "technical_acceptance": "Complete original output; correct speakers, locked facts and bounded version; schema pass is not creative acceptance.",
+      "artistic_acceptance": "Independent qualified Bengali editorial assessment required."
+    },
+    {
+      "id": "domestic_wit",
+      "brief": "নীরা ব্যাগের হাতলের বদলে বাবার ঘড়ির বেল্ট নিয়ে রসিকতা করে; বাবা ব্যবহারিক উত্তর দেন। প্রতিটি reply আগের কথার উত্তর হবে; stand-up punchline নয়।",
+      "criteria": [
+        "character habits",
+        "responsive wit",
+        "warmth"
+      ],
+      "technical_acceptance": "Complete original output; correct speakers, locked facts and bounded version; schema pass is not creative acceptance.",
+      "artistic_acceptance": "Independent qualified Bengali editorial assessment required."
+    },
+    {
+      "id": "quiet_confrontation",
+      "brief": "নীরা রসিদটি সামনে রেখে চুপ করে থাকে। হাসান কাজ চালিয়ে যেতে চান। বিরোধের বিষয় অনুমতি ও বিশ্বাস; কাউকে নিখুঁত নায়ক/খলনায়ক করা যাবে না।",
+      "criteria": [
+        "subtext",
+        "playable silence",
+        "motivation"
+      ],
+      "technical_acceptance": "Complete original output; correct speakers, locked facts and bounded version; schema pass is not creative acceptance.",
+      "artistic_acceptance": "Independent qualified Bengali editorial assessment required."
+    },
+    {
+      "id": "horror_opening",
+      "brief": "একই ঘরের রাতের test variant: একটিমাত্র চাবি হাসানের হাতে, বাইরে বন্ধ সেলাই মেশিনের পায়ে চাপের শব্দ। দৃশ্যমান পর্যবেক্ষণ থেকে সন্দেহ; আক্রমণ/দানব দেখিয়ে shortcut নয়। Canon tone change requires later owner decision.",
+      "criteria": [
+        "visual question",
+        "spatial logic",
+        "earned tension"
+      ],
+      "technical_acceptance": "Complete original output; correct speakers, locked facts and bounded version; schema pass is not creative acceptance.",
+      "artistic_acceptance": "Independent qualified Bengali editorial assessment required."
+    },
+    {
+      "id": "earned_cliffhanger",
+      "brief": "নীরা টিকিট রেখে রসিদের বিষয়ে বাবাকে একটি প্রশ্ন করে; বাবার ব্যবহারিক কাজ থেমে যাওয়ায় সম্পর্কের ঝুঁকি খুলবে। নতুন অচেনা উদ্ধারকারী/গোপন যমজ নয়।",
+      "criteria": [
+        "setup payoff",
+        "consequential decision",
+        "no arbitrary twist"
+      ],
+      "technical_acceptance": "Complete original output; correct speakers, locked facts and bounded version; schema pass is not creative acceptance.",
+      "artistic_acceptance": "Independent qualified Bengali editorial assessment required."
+    },
+    {
+      "id": "locked_revision",
+      "brief": "শুধু s3-এ নীরার শেষ প্রশ্নটি আরও সংযত কথ্য বাংলায় বদলাও; অন্য dialogue, action, speaker, prop holder, s1/s2, duration অপরিবর্তিত। পুরোনো ও নতুন raw response আলাদা থাকবে।",
+      "criteria": [
+        "exact target preservation",
+        "natural speech",
+        "actual changed target"
+      ],
+      "technical_acceptance": "Complete original output; correct speakers, locked facts and bounded version; schema pass is not creative acceptance.",
+      "artistic_acceptance": "Independent qualified Bengali editorial assessment required."
+    }
+  ]
+}

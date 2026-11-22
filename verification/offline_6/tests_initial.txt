@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/experiments/test_offline_six.py", line 40, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/experiments/test_offline_six.py", line 18, in run
+    import redpad_pipeline.youtube  # Only existing validator import, no account access.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/redpad_pipeline/youtube.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "qwen_class": "Qwen3_5MoeForConditionalGeneration",
+  "kernel_version": "v4",
+  "kernel_revision": "3c8fcc86c0e42b7abe5bcf666d3a3afdce93a0e8",
+  "kernel_files": 12,
+  "wan_loader": "WanAnimate2DistilledModularPipeline",
+  "wan_blocks": "WanAnimate2DistilledBlocks",
+  "torch": "2.10.0+cu128",
+  "transformers": "5.22.2",
+  "cuda_initialized": false,
+  "weights_loaded": false,
+  "model_inference": false,
+  "component_tensor_equivalence": false,
+  "registry_routes_promoted": false,
+  "production_ready": false,
+  "independent_artistic_acceptance": false
+}

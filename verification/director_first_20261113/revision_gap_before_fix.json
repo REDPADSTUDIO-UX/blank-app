@@ -1,0 +1,8 @@
+{
+  "checkpoint": "7f665cbbb819a5cb62750d62740160fffed25eea",
+  "kind": "software_fixture_not_model_inference",
+  "bug_reproduced": true,
+  "observation": "Unrequested wardrobe and door changes accepted despite camera-only revision note.",
+  "before": "নেভি শার্ট; দরজা বন্ধ",
+  "accepted_unrequested_change": "লাল শার্ট; দরজা খোলা"
+}

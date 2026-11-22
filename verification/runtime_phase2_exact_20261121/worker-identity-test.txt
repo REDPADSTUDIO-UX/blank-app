@@ -1,0 +1,6 @@
+test_isolated_child_environment_does_not_inherit_provider_tokens_or_proxies (tests.test_native_local_execution.NativeLocalTests.test_isolated_child_environment_does_not_inherit_provider_tokens_or_proxies) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.096s
+
+OK

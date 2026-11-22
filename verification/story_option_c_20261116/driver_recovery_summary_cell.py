@@ -1,0 +1,12 @@
+# Display genuine saved canary and final budget; no new model call.
+print('STORY AI — CUDA BINDING VERIFIED / CANARY COMPLETE')
+print('Driver: /usr/lib64-nvidia | enumerated device: '+binding['selected_device']+' Tesla T4')
+print('Actual model output (unchanged):')
+print(json.dumps(result['parsed'],ensure_ascii=False,indent=2))
+print('Technical: finish=stop; schema PASS; prompt 127 / output 118 tokens; 33/33 layers offloaded.')
+print('Total time: 142.11s | sampled GPU used: 5231 MiB | owned server stopped.')
+print('Creative warning: choice is a non-action; knowledge sentence uses অবহিত inconsistently.')
+print('Calls: historical 2 + new 1 = 3/7. Remaining: 4.')
+print('Full story needs 5 unchanged sections/calls; STOPPED at owner budget checkpoint, no sections skipped.')
+print('15-criterion full-story QC NOT RUN: no complete story. Independent human review PENDING.')
+print('No new downloads, production worker changes, Drive mount, deployment or publishing.')

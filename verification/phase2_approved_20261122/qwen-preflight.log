@@ -1,0 +1,16 @@
+test_already_dequantized (__main__.TestPreflight.test_already_dequantized) ... ok
+test_fallback (__main__.TestPreflight.test_fallback) ... ok
+test_grouped_missing (__main__.TestPreflight.test_grouped_missing) ... ok
+test_grouped_non_callable (__main__.TestPreflight.test_grouped_non_callable) ... ok
+test_malformed_capability (__main__.TestPreflight.test_malformed_capability) ... ok
+test_no_device (__main__.TestPreflight.test_no_device) ... ok
+test_non_cuda (__main__.TestPreflight.test_non_cuda) ... ok
+test_secondary_unsupported (__main__.TestPreflight.test_secondary_unsupported) ... ok
+test_state_unavailable (__main__.TestPreflight.test_state_unavailable) ... ok
+test_valid_mock (__main__.TestPreflight.test_valid_mock) ... ok
+test_validator_error_propagates (__main__.TestPreflight.test_validator_error_propagates) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.001s
+
+OK

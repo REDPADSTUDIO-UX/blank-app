@@ -1,0 +1,172 @@
+{
+  "scope": "No-inference analysis of all seven captured findings; historical outputs unmodified",
+  "source_commit": "a3d6252d2886827d7028ef328eff3fbf967901e4",
+  "source_guard_file": "verification/story_handoff_fix_20261120/guard_source.py",
+  "source_guard_blob_sha": "495b46891df83a5eac2d466f6b1d524ecdf0aef8",
+  "defects": [
+    {
+      "path": "act_2[0].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false,
+      "number": 1,
+      "beat": "B5",
+      "actual_value": "লাল_টিবু_হাতে_ধরে_খাবার_দিলেন",
+      "allowed_prior_ids": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "diagnosis": "Narrative/state prose used where an earlier actual beat ID is required. A valid ID alone would not prove semantic causality.",
+      "generation_input_requirement": "Choose an allowed earlier beat ID whose actual action causes the new choice/consequence. No manual relabeling of the historical result."
+    },
+    {
+      "path": "act_2[0].requires.H",
+      "code": "knowledge_not_established",
+      "repair_applied": false,
+      "number": 2,
+      "beat": "B5",
+      "actual_value": [
+        "TICKET_BOX_HIDDEN"
+      ],
+      "established_facts": [
+        "JOB_RAJ",
+        "TICKET_HIDDEN",
+        "ROOM_EAST_WINDOW",
+        "ROOM_WEST_DOOR",
+        "ROOM_NORTH_KITCHEN"
+      ],
+      "plant_namespace": {
+        "TICKET_BOX_HIDDEN": "B2 setup/plant, not an established knowledge fact"
+      },
+      "diagnosis": "TICKET_BOX_HIDDEN was never established as H knowledge. H already knows the distinct fact TICKET_HIDDEN.",
+      "generation_input_requirement": "Keep fact/plant namespaces separate. If the ticket is required, use the actually established fact TICKET_HIDDEN. Never alter Foundation/learns merely to satisfy the check."
+    },
+    {
+      "path": "act_2[1].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false,
+      "number": 3,
+      "beat": "B6",
+      "actual_value": "লাল_টিবু_হাতে_ধরে_খাবার_দিলেন",
+      "allowed_prior_ids": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5"
+      ],
+      "diagnosis": "Narrative/state prose used where an earlier actual beat ID is required. A valid ID alone would not prove semantic causality.",
+      "generation_input_requirement": "Choose an allowed earlier beat ID whose actual action causes the new choice/consequence. No manual relabeling of the historical result."
+    },
+    {
+      "path": "act_2[2].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false,
+      "number": 4,
+      "beat": "B7",
+      "actual_value": "প্লেট_ভরা,_হাসানের_চোখে_অস্থিরতা",
+      "allowed_prior_ids": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6"
+      ],
+      "diagnosis": "Narrative/state prose used where an earlier actual beat ID is required. A valid ID alone would not prove semantic causality.",
+      "generation_input_requirement": "Choose an allowed earlier beat ID whose actual action causes the new choice/consequence. No manual relabeling of the historical result."
+    },
+    {
+      "path": "act_2[2].before",
+      "code": "predecessor_state_mismatch",
+      "repair_applied": false,
+      "number": 5,
+      "beat": "B7",
+      "actual_value": {
+        "progress": "প্লেট_ভরা,_হাসানের_চোখে_অস্থিরতা"
+      },
+      "required_predecessor": "B6",
+      "required_before": {
+        "progress": "প্লেট_খালি,_নীরা_চুপ"
+      },
+      "copied_from": "B5.after",
+      "diagnosis": "B7 reverts to B5.after, skipping B6.after.",
+      "generation_input_requirement": "Copy the immediate predecessor after object literally to before, preserving the progress key; derive the new after from an actual consequence."
+    },
+    {
+      "path": "act_2[2].requires.H",
+      "code": "knowledge_not_established",
+      "repair_applied": false,
+      "number": 6,
+      "beat": "B7",
+      "actual_value": [
+        "TICKET_BOX_HIDDEN"
+      ],
+      "established_facts": [
+        "JOB_RAJ",
+        "TICKET_HIDDEN",
+        "ROOM_EAST_WINDOW",
+        "ROOM_WEST_DOOR",
+        "ROOM_NORTH_KITCHEN"
+      ],
+      "plant_namespace": {
+        "TICKET_BOX_HIDDEN": "B2 setup/plant, not an established knowledge fact"
+      },
+      "diagnosis": "TICKET_BOX_HIDDEN was never established as H knowledge. H already knows the distinct fact TICKET_HIDDEN.",
+      "generation_input_requirement": "Keep fact/plant namespaces separate. If the ticket is required, use the actually established fact TICKET_HIDDEN. Never alter Foundation/learns merely to satisfy the check."
+    },
+    {
+      "path": "act_2[3].cause",
+      "code": "earlier_causal_reference_required",
+      "repair_applied": false,
+      "number": 7,
+      "beat": "B8",
+      "actual_value": "ব্যাগ_সাজানো,_মেয়ে_স্বপ্নে_আছে",
+      "allowed_prior_ids": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7"
+      ],
+      "diagnosis": "Narrative/state prose used where an earlier actual beat ID is required. A valid ID alone would not prove semantic causality.",
+      "generation_input_requirement": "Choose an allowed earlier beat ID whose actual action causes the new choice/consequence. No manual relabeling of the historical result."
+    }
+  ],
+  "preliminary_creative_defects": [
+    {
+      "beat": "B5",
+      "field": "consequence",
+      "quote": "প্লেটের_ঘর_কাঁচা_বেশেছে",
+      "finding": "Not coherent natural Bengali; no clear consequential action."
+    },
+    {
+      "beat": "B6",
+      "field": "choice",
+      "quote": "বাতাসের_ধারে_প্লেট_হয়নি",
+      "finding": "Not an intelligible motivated choice."
+    },
+    {
+      "beat": "B6",
+      "field": "consequence",
+      "quote": "মেয়েকে_জানালেন_না_কেন_দিলেন",
+      "finding": "Actor is N (the daughter), but wording addresses an unexplained daughter; relationship drift hypothesis requiring editorial review."
+    },
+    {
+      "beat": "B7",
+      "field": "action",
+      "quote": "ব্যাগের_হাতল_সারানো_করেননি",
+      "finding": "Further bag-repair negation contradicts or repeats the already repaired bag without a new cause."
+    }
+  ],
+  "causal_hypotheses_not_proven": [
+    "The prior prompt states generic constraints but does not emphasize that a known fact ID differs from a visually similar plant ID.",
+    "Repeated underscored prior phrases may have been copied as prose/state references. This is an observation-based hypothesis, not an isolated prompt-effect experiment.",
+    "Tight multi-field output and context constraints may harm naturalness; no settings/schema change is authorized or justified as a measured remedy."
+  ],
+  "model_calls": 0,
+  "output_repair_applied": false
+}

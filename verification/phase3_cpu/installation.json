@@ -1,0 +1,41 @@
+{
+  "owner_authorization": "Explicit permission to install Ollama and only Qwen3-4B-Instruct-2507 Q4_K_M in the development environment",
+  "runtime_version": "0.40.15",
+  "runtime_archive_sha256": "628c018404a4206493efd38e46251c154ede5141b8b8dc85c659b3b027c47379",
+  "runtime_release": "https://github.com/ollama/ollama/releases/tag/v0.40.15",
+  "runtime_archive": "ollama-linux-amd64.tar.zst",
+  "runtime_install": "Development directory only; CUDA/ROCm/Vulkan directories not extracted",
+  "model": {
+    "name": "qwen3:4b-instruct-2507-q4_K_M",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "modified_at": "2026-11-06T18:59:09.813542241+06:00",
+    "size": 2497293803,
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "ggml"
+    },
+    "capabilities": [
+      "tools",
+      "thinking",
+      "completion"
+    ]
+  },
+  "weight_bytes": 2497293803,
+  "model_license": "Apache-2.0",
+  "system_service": false,
+  "cloud_disabled": true,
+  "paid": false,
+  "downloaded_additional_models": false,
+  "device": "CPU",
+  "loopback_note": "Command environments isolate loopback. Installed runtime and client run in one owned context; only the owned process is stopped."
+}

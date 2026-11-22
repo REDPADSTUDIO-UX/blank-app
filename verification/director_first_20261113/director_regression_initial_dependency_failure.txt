@@ -1,0 +1,60 @@
+test_invalid_response_no_partial_write (tests.test_director.DirectorTests.test_invalid_response_no_partial_write) ... ok
+test_malformed_and_authority_fields (tests.test_director.DirectorTests.test_malformed_and_authority_fields) ... ok
+test_manual_approval_dispatch_and_revision (tests.test_director.DirectorTests.test_manual_approval_dispatch_and_revision) ... ok
+test_missing_model_no_fallback (tests.test_director.DirectorTests.test_missing_model_no_fallback) ... ok
+test_only_owner_can_set_explicit_revision_scope (tests.test_director.DirectorTests.test_only_owner_can_set_explicit_revision_scope) ... ok
+test_revision_scope_cannot_change_scene_identity_or_expand_itself (tests.test_director.DirectorTests.test_revision_scope_cannot_change_scene_identity_or_expand_itself) ... ok
+test_simulation_is_not_inference_and_restart (tests.test_director.DirectorTests.test_simulation_is_not_inference_and_restart) ... ok
+test_targeted_revision_preserves_owner_locked_content_after_restart (tests.test_director.DirectorTests.test_targeted_revision_preserves_owner_locked_content_after_restart) ... ok
+test_director_ui (unittest.loader._FailedTest.test_director_ui) ... ERROR
+test_all_missing_models_block_without_network (tests.test_agent_foundation.FoundationTests.test_all_missing_models_block_without_network) ... ok
+test_all_twenty_pipeline_and_media_blocks (tests.test_agent_foundation.FoundationTests.test_all_twenty_pipeline_and_media_blocks) ... ok
+test_continuity_and_edit_checks (tests.test_agent_foundation.FoundationTests.test_continuity_and_edit_checks) ... ok
+test_cycles_and_unauthorized_bindings (tests.test_agent_foundation.FoundationTests.test_cycles_and_unauthorized_bindings) ... ok
+test_department_art (tests.test_agent_foundation.FoundationTests.test_department_art) ... ok
+test_department_casting (tests.test_agent_foundation.FoundationTests.test_department_casting) ... ok
+test_department_character (tests.test_agent_foundation.FoundationTests.test_department_character) ... ok
+test_department_cinematographer (tests.test_agent_foundation.FoundationTests.test_department_cinematographer) ... ok
+test_department_continuity (tests.test_agent_foundation.FoundationTests.test_department_continuity) ... ok
+test_department_costume (tests.test_agent_foundation.FoundationTests.test_department_costume) ... ok
+test_department_director (tests.test_agent_foundation.FoundationTests.test_department_director) ... ok
+test_department_editing (tests.test_agent_foundation.FoundationTests.test_department_editing) ... ok
+test_department_growth (tests.test_agent_foundation.FoundationTests.test_department_growth) ... ok
+test_department_location (tests.test_agent_foundation.FoundationTests.test_department_location) ... ok
+test_department_motion (tests.test_agent_foundation.FoundationTests.test_department_motion) ... ok
+test_department_music (tests.test_agent_foundation.FoundationTests.test_department_music) ... ok
+test_department_performance (tests.test_agent_foundation.FoundationTests.test_department_performance) ... ok
+test_department_production_manager (tests.test_agent_foundation.FoundationTests.test_department_production_manager) ... ok
+test_department_qc (tests.test_agent_foundation.FoundationTests.test_department_qc) ... ok
+test_department_script (tests.test_agent_foundation.FoundationTests.test_department_script) ... ok
+test_department_story (tests.test_agent_foundation.FoundationTests.test_department_story) ... ok
+test_department_storyboard (tests.test_agent_foundation.FoundationTests.test_department_storyboard) ... ok
+test_department_video (tests.test_agent_foundation.FoundationTests.test_department_video) ... ok
+test_department_voice (tests.test_agent_foundation.FoundationTests.test_department_voice) ... ok
+test_department_youtube (tests.test_agent_foundation.FoundationTests.test_department_youtube) ... ok
+test_dependency_scheduler_and_revision_scope (tests.test_agent_foundation.FoundationTests.test_dependency_scheduler_and_revision_scope) ... ok
+test_fail_retry_and_recovery (tests.test_agent_foundation.FoundationTests.test_fail_retry_and_recovery) ... ok
+test_media_bridge_isolation_and_preconditions (tests.test_agent_foundation.FoundationTests.test_media_bridge_isolation_and_preconditions) ... ok
+test_model_missing_and_simulation_disclosure (tests.test_agent_foundation.FoundationTests.test_model_missing_and_simulation_disclosure) ... ok
+test_quality_checks_and_owner_qc_review (tests.test_agent_foundation.FoundationTests.test_quality_checks_and_owner_qc_review) ... ok
+test_restart_preserves_runs (tests.test_agent_foundation.FoundationTests.test_restart_preserves_runs) ... ok
+test_revision_refreshes_dependency_versions (tests.test_agent_foundation.FoundationTests.test_revision_refreshes_dependency_versions) ... ok
+test_source_change_during_inference_discards_output (tests.test_agent_foundation.FoundationTests.test_source_change_during_inference_discards_output) ... ok
+
+======================================================================
+ERROR: test_director_ui (unittest.loader._FailedTest.test_director_ui)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_director_ui
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/19aa449d4f91/studio-intelligence/tests/test_director_ui.py", line 5, in <module>
+    from streamlit.testing.v1 import AppTest
+ModuleNotFoundError: No module named 'streamlit'
+
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.340s
+
+FAILED (errors=1)
