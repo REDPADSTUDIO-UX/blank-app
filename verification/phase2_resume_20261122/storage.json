@@ -1,0 +1,14 @@
+{
+  "local_archive_files": 98,
+  "local_archive_bytes": 4313802698,
+  "qwen_approved_archive_bytes": 4200362442,
+  "qwen_uncompressed_wheel_bytes": 7409262322,
+  "diffusers_source_archive_bytes": 11229951,
+  "logical_all_file_bytes_including_shared_hardlinks": 20023947560,
+  "unique_allocated_file_bytes_excluding_directories": 12489068544,
+  "du_allocated_bytes": 12513267712,
+  "filesystem_free_bytes": 7214448640,
+  "measurement_scope": "Local scratch model-free assets only; prefixes share hardlinks. Exact transfer total excludes unrecorded metadata/CPython compressed transfer; no invented transfer-byte total",
+  "cp_python_download": "Official python-build-standalone fallback; observed about 29.4 MiB compressed, exact compressed bytes not captured",
+  "model_weight_bytes": 0
+}

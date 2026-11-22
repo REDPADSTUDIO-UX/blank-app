@@ -1,0 +1,25 @@
+{
+  "indic_speak": {
+    "revision": "76e0814f189321efe550011850cd288dae366aad",
+    "license_file": "Bodhan_AI_Open_Model_License.md",
+    "bytes": 25546,
+    "sha256": "b39f2a9cb2d5ace3a03f4425cbc6db38ebd9a53ab7a7648d67dc1e0998ad75c2",
+    "scope": "Reviewed section 3.2 internal commercial production component; not third-party model/raw-output inference service",
+    "conditions": "Full license, attribution, scale thresholds, Llama/component checkpoint rights and voice consent still apply",
+    "new_terms_accepted": false,
+    "all_future_weight_licenses_cleared": false
+  },
+  "indicf5": {
+    "revision": "fb652a96e508091045890dae5bb99fe511facbcf",
+    "source": "MIT-labelled selected source, exact hashes verified; unsafe model.py NOT executed",
+    "vocos": "0.1.0 requires encodec==0.1.1",
+    "encodec": "CC BY-NC 4.0 published license; commercial integration gate CLOSED",
+    "encodec_source": "https://github.com/facebookresearch/encodec/blob/main/LICENSE",
+    "encodec_metadata": "https://pypi.org/pypi/encodec/0.1.1/json",
+    "vocos_metadata": "https://pypi.org/pypi/vocos/0.1.0/json",
+    "bigvgan": "Pinned CPU mel functions differ; no codec/weights substitution authorized",
+    "full_runtime_licensed": false
+  },
+  "new_repository_licenses_accepted": false,
+  "model_weights_downloaded": false
+}

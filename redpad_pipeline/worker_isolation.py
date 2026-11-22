@@ -14,6 +14,12 @@ from .native_local_bundle import digest_file, verify_tree
 
 ROOT = Path(__file__).resolve().parents[1]
 RUNTIME_PACKAGES = MappingProxyType({
+    # Model-free diagnostic contracts only. The registry's contract_only routes
+    # remain disabled; these entries do not authorize loading either checkpoint.
+    'qwen35_moe': {'torch', 'torchvision', 'transformers', 'kernels', 'triton', 'accelerate'},
+    # Diffusers is an immutable, separately hashed publisher source mount in
+    # this diagnostic, rather than an implicitly installed/fetched distribution.
+    'wan_animate2_distilled': {'torch', 'transformers', 'accelerate', 'safetensors', 'numpy', 'pillow'},
     'hf_text_nf4': {'torch', 'transformers', 'bitsandbytes', 'accelerate'},
     'flux2_klein': {'torch', 'diffusers', 'transformers', 'pillow', 'accelerate'},
     'z_image': {'torch', 'diffusers', 'transformers', 'pillow', 'accelerate'},
@@ -23,7 +29,9 @@ RUNTIME_PACKAGES = MappingProxyType({
     'wan_animate2': {'torch', 'omegaconf', 'transformers'},
     'ace15': {'torch', 'torchaudio', 'transformers', 'diffusers'},
     'indic_parler': {'torch', 'transformers', 'parler-tts'},
-    'indic_speak': {'torch', 'transformers', 'snac', 'vocos', 'soundfile', 'numpy'},
+    # The selected decoder is reviewed local vocos/model.py (torch only),
+    # not the unrelated pip Vocos/Encodec stack used by other candidates.
+    'indic_speak': {'torch', 'transformers', 'snac', 'einops', 'soundfile', 'numpy'},
     'indicf5': {'torch', 'torchaudio', 'transformers', 'vocos', 'soundfile', 'numpy', 'safetensors'},
     'stable_audio_small': {'torch', 'torchaudio', 'stable-audio-tools', 'soundfile', 'safetensors'},
 })

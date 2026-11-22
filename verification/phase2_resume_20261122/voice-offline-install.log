@@ -1,0 +1,8 @@
+Looking in links: /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/snac-1.2.1-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/voice-wheels.lock (line 1))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/einops-0.8.1-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/voice-wheels.lock (line 2))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/soundfile-0.14.0-py2.py3-none-manylinux_2_28_x86_64.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/voice-wheels.lock (line 3))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/torchaudio-2.10.0-cp311-cp311-manylinux_2_28_x86_64.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/voice-wheels.lock (line 4))
+Installing collected packages: torchaudio, snac, soundfile, einops
+
+Successfully installed einops-0.8.1 snac-1.2.1 soundfile-0.14.0 torchaudio-2.10.0

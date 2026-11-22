@@ -109,6 +109,10 @@ class SharedServices:
         """Map a current staged request to an existing local-worker payload, never run it."""
         from .offline_preparation import PreparedRequests
         return PreparedRequests(self.store).prepare(id,spec=spec,verify_bundle=verify_bundle)
+    def prepare_distilled_loader(self,stage_id):
+        """Inspect the reviewed modular loader; existing worker payload API stays separate."""
+        from .wan_distilled_preparation import prepare_staged
+        return prepare_staged(self.store,stage_id)
     def prepared_offline_request(self,id):
         from .offline_preparation import PreparedRequests
         return PreparedRequests(self.store).get(id)

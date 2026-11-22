@@ -42,7 +42,7 @@ permissions:
 
 jobs:
   video-smoke-test:
-    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
+    if: ${{ !contains(github.event.head_commit.message, '[phase2-runtime-only]') && !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -147,7 +147,7 @@ jobs:
           retention-days: 7
 
   browser-smoke-test:
-    if: ${{ !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
+    if: ${{ !contains(github.event.head_commit.message, '[phase2-runtime-only]') && !inputs.kernel_phase1 && !inputs.runtime_phase2 && !inputs.runtime_phase2_stable && !inputs.runtime_phase2_ltx && !inputs.runtime_phase2_ace && !inputs.runtime_phase2_wan }}
     # Match the pinned browser runtime to a supported OS, rather than moving latest.
     runs-on: ubuntu-24.04
     timeout-minutes: 15

@@ -1,0 +1,16 @@
+Looking in links: /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/audioread-3.1.0-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 1))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/decorator-5.3.2-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 2))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/joblib-1.6.0-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 3))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/lazy_loader-0.6-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 4))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/librosa-0.11.0-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 5))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/llvmlite-0.50.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 6))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/numba-0.68.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 7))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/pooch-1.9.0-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 8))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/scikit_learn-1.9.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 9))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 10))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/soxr-1.1.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 11))
+Processing /workspace/scratch/19aa449d4f91/phase2-local/wheelhouse/threadpoolctl-3.8.0-py3-none-any.whl (from -r /workspace/scratch/19aa449d4f91/phase2-local/mel-wheels.lock (line 12))
+Installing collected packages: threadpoolctl, soxr, scipy, scikit-learn, pooch, numba, llvmlite, librosa, lazy-loader, joblib, decorator, audioread
+
+Successfully installed audioread-3.1.0 decorator-5.3.2 joblib-1.6.0 lazy-loader-0.6 librosa-0.11.0 llvmlite-0.50.0 numba-0.68.1 pooch-1.9.0 scikit-learn-1.9.1 scipy-1.17.1 soxr-1.1.0 threadpoolctl-3.8.0

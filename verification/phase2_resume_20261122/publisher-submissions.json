@@ -1,0 +1,20 @@
+{
+  "ltx": {
+    "url": "https://huggingface.co/Lightricks/LTX-2.5/discussions/113",
+    "status": "SUBMITTED; authoritative SHA256 pending",
+    "artifact_access": "403 not in authorized list",
+    "weights_downloaded": false
+  },
+  "wan": {
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers/discussions/3",
+    "status": "SUBMITTED; component/processor confirmation pending",
+    "github_app_comment": "403 insufficient integration access; no GitHub comment created",
+    "github_browser": "Sign-in required; no login bypass"
+  },
+  "indicf5": {
+    "url": "https://huggingface.co/ai4bharat/IndicF5/discussions/48",
+    "status": "SUBMITTED; publisher-supported commercial codec and exact mel/checkpoint compatibility pending",
+    "existing_pretraining_question": "https://huggingface.co/ai4bharat/IndicF5/discussions/43",
+    "response_observed": false
+  }
+}

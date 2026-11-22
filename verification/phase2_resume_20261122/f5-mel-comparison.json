@@ -1,0 +1,25 @@
+{
+  "profile": "indicf5",
+  "source_sha256": "f72f28273af28cd3f31c660ff7d18136e250e29f1c3b3d3c29440d3bca08a619",
+  "fixture": "Authored 1-second CPU sine, not generated speech",
+  "sample_rate": 24000,
+  "channels": 100,
+  "hop_length": 256,
+  "vocos_shape": [
+    1,
+    100,
+    94
+  ],
+  "bigvgan_shape": [
+    1,
+    100,
+    93
+  ],
+  "mean_absolute_difference_over_common_frames": 3.221302032470703,
+  "common_frames_used_for_measurement_only": 93,
+  "frontends_interchangeable": false,
+  "real_decoder_or_checkpoint_tested": false,
+  "encodec_or_vocos_package_imported": false,
+  "gpu_or_model_inference": false,
+  "decision": "No decoder substitution authorized; trained-checkpoint compatibility and commercial codec rights remain unverified"
+}

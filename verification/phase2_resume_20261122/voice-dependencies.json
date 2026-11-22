@@ -1,0 +1,45 @@
+{
+  "scope": "Indic-Speak source-only CPU imports, no Vocos/Encodec package",
+  "files": [
+    {
+      "name": "snac",
+      "version": "1.2.1",
+      "filename": "snac-1.2.1-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/79/4f/6401dc74af3d9e9602209763eccbb7eac739c2501e499b51b560f71443c0/snac-1.2.1-py3-none-any.whl",
+      "bytes": 8444,
+      "sha256": "96f90e221121ad03d6e3b060a787268b1efdbe424560a58f6f732df6d4914dc7",
+      "status": "verified_existing",
+      "downloaded_bytes": 0
+    },
+    {
+      "name": "einops",
+      "version": "0.8.1",
+      "filename": "einops-0.8.1-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/87/62/9773de14fe6c45c23649e98b83231fffd7b9892b6cf863251dc2afa73643/einops-0.8.1-py3-none-any.whl",
+      "bytes": 64359,
+      "sha256": "919387eb55330f5757c6bea9165c5ff5cfe63a642682ea788a6d472576d81737",
+      "status": "verified_existing",
+      "downloaded_bytes": 0
+    },
+    {
+      "name": "soundfile",
+      "version": "0.14.0",
+      "filename": "soundfile-0.14.0-py2.py3-none-manylinux_2_28_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/7b/a2/70fd4432b924684c372df8b0a45708c36c057ef3596c9eb53e0a806b980b/soundfile-0.14.0-py2.py3-none-manylinux_2_28_x86_64.whl",
+      "bytes": 1315963,
+      "sha256": "1e38bac1853412871318e82a1ba69a8be677619b56025bbfcccdb41b6cafe82d",
+      "status": "verified_download",
+      "downloaded_bytes": 1315963
+    },
+    {
+      "name": "torchaudio",
+      "version": "2.10.0",
+      "filename": "torchaudio-2.10.0-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/13/ae/a2a34a64947c4fa4a61b4c86d8f36fbcb4ebfec30fdde140267db260f96c/torchaudio-2.10.0-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "bytes": 1894140,
+      "sha256": "b2c77fb9114dd463dc805560bf55a1ac2a52e219794cc32b7b32cf2aeffd2826",
+      "status": "verified_download",
+      "downloaded_bytes": 1894140
+    }
+  ]
+}
