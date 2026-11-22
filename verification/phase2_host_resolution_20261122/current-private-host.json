@@ -1,0 +1,21 @@
+{
+  "kernel": {
+    "boot_id": "ce4abab9-ca3d-406a-8df7-0ba3b3eeee37",
+    "python": "/home/rbpritam04/redpad-phase2-private-20261122/voice-runtime/bin/python3.11",
+    "result": "PASS",
+    "log_sha256": "882606b0881773501186f933340635e67b5082c7a1182c797443baf579af0902"
+  },
+  "disk_free_bytes": 4271915008,
+  "cpu_count": 2,
+  "meminfo": [
+    "MemTotal:        8134088 kB",
+    "MemFree:         4133904 kB",
+    "MemAvailable:    6228880 kB"
+  ],
+  "canonical_status": "RP_CANONICAL_LOCK_READY {\"pins\": 44, \"sha256\": \"9756073ed391a71a0b279c9c577d7cc7e7ead5c50abb486c95999b8979fa73fd\"}\n",
+  "provider": "Google Cloud Shell FREE private CPU",
+  "api_credentials_authorized": false,
+  "gpu_available": false,
+  "new_host_test_reason": "Replacement VM after actual connection loss",
+  "prior_15_profiles_rerun": false
+}

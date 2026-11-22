@@ -1,0 +1,280 @@
+{
+  "backbone.convnext.0.dwconv.bias": [
+    512
+  ],
+  "backbone.convnext.0.dwconv.weight": [
+    512,
+    1,
+    7
+  ],
+  "backbone.convnext.0.gamma": [
+    512
+  ],
+  "backbone.convnext.0.norm.bias": [
+    512
+  ],
+  "backbone.convnext.0.norm.weight": [
+    512
+  ],
+  "backbone.convnext.0.pwconv1.bias": [
+    1536
+  ],
+  "backbone.convnext.0.pwconv1.weight": [
+    1536,
+    512
+  ],
+  "backbone.convnext.0.pwconv2.bias": [
+    512
+  ],
+  "backbone.convnext.0.pwconv2.weight": [
+    512,
+    1536
+  ],
+  "backbone.convnext.1.dwconv.bias": [
+    512
+  ],
+  "backbone.convnext.1.dwconv.weight": [
+    512,
+    1,
+    7
+  ],
+  "backbone.convnext.1.gamma": [
+    512
+  ],
+  "backbone.convnext.1.norm.bias": [
+    512
+  ],
+  "backbone.convnext.1.norm.weight": [
+    512
+  ],
+  "backbone.convnext.1.pwconv1.bias": [
+    1536
+  ],
+  "backbone.convnext.1.pwconv1.weight": [
+    1536,
+    512
+  ],
+  "backbone.convnext.1.pwconv2.bias": [
+    512
+  ],
+  "backbone.convnext.1.pwconv2.weight": [
+    512,
+    1536
+  ],
+  "backbone.convnext.2.dwconv.bias": [
+    512
+  ],
+  "backbone.convnext.2.dwconv.weight": [
+    512,
+    1,
+    7
+  ],
+  "backbone.convnext.2.gamma": [
+    512
+  ],
+  "backbone.convnext.2.norm.bias": [
+    512
+  ],
+  "backbone.convnext.2.norm.weight": [
+    512
+  ],
+  "backbone.convnext.2.pwconv1.bias": [
+    1536
+  ],
+  "backbone.convnext.2.pwconv1.weight": [
+    1536,
+    512
+  ],
+  "backbone.convnext.2.pwconv2.bias": [
+    512
+  ],
+  "backbone.convnext.2.pwconv2.weight": [
+    512,
+    1536
+  ],
+  "backbone.convnext.3.dwconv.bias": [
+    512
+  ],
+  "backbone.convnext.3.dwconv.weight": [
+    512,
+    1,
+    7
+  ],
+  "backbone.convnext.3.gamma": [
+    512
+  ],
+  "backbone.convnext.3.norm.bias": [
+    512
+  ],
+  "backbone.convnext.3.norm.weight": [
+    512
+  ],
+  "backbone.convnext.3.pwconv1.bias": [
+    1536
+  ],
+  "backbone.convnext.3.pwconv1.weight": [
+    1536,
+    512
+  ],
+  "backbone.convnext.3.pwconv2.bias": [
+    512
+  ],
+  "backbone.convnext.3.pwconv2.weight": [
+    512,
+    1536
+  ],
+  "backbone.convnext.4.dwconv.bias": [
+    512
+  ],
+  "backbone.convnext.4.dwconv.weight": [
+    512,
+    1,
+    7
+  ],
+  "backbone.convnext.4.gamma": [
+    512
+  ],
+  "backbone.convnext.4.norm.bias": [
+    512
+  ],
+  "backbone.convnext.4.norm.weight": [
+    512
+  ],
+  "backbone.convnext.4.pwconv1.bias": [
+    1536
+  ],
+  "backbone.convnext.4.pwconv1.weight": [
+    1536,
+    512
+  ],
+  "backbone.convnext.4.pwconv2.bias": [
+    512
+  ],
+  "backbone.convnext.4.pwconv2.weight": [
+    512,
+    1536
+  ],
+  "backbone.convnext.5.dwconv.bias": [
+    512
+  ],
+  "backbone.convnext.5.dwconv.weight": [
+    512,
+    1,
+    7
+  ],
+  "backbone.convnext.5.gamma": [
+    512
+  ],
+  "backbone.convnext.5.norm.bias": [
+    512
+  ],
+  "backbone.convnext.5.norm.weight": [
+    512
+  ],
+  "backbone.convnext.5.pwconv1.bias": [
+    1536
+  ],
+  "backbone.convnext.5.pwconv1.weight": [
+    1536,
+    512
+  ],
+  "backbone.convnext.5.pwconv2.bias": [
+    512
+  ],
+  "backbone.convnext.5.pwconv2.weight": [
+    512,
+    1536
+  ],
+  "backbone.convnext.6.dwconv.bias": [
+    512
+  ],
+  "backbone.convnext.6.dwconv.weight": [
+    512,
+    1,
+    7
+  ],
+  "backbone.convnext.6.gamma": [
+    512
+  ],
+  "backbone.convnext.6.norm.bias": [
+    512
+  ],
+  "backbone.convnext.6.norm.weight": [
+    512
+  ],
+  "backbone.convnext.6.pwconv1.bias": [
+    1536
+  ],
+  "backbone.convnext.6.pwconv1.weight": [
+    1536,
+    512
+  ],
+  "backbone.convnext.6.pwconv2.bias": [
+    512
+  ],
+  "backbone.convnext.6.pwconv2.weight": [
+    512,
+    1536
+  ],
+  "backbone.convnext.7.dwconv.bias": [
+    512
+  ],
+  "backbone.convnext.7.dwconv.weight": [
+    512,
+    1,
+    7
+  ],
+  "backbone.convnext.7.gamma": [
+    512
+  ],
+  "backbone.convnext.7.norm.bias": [
+    512
+  ],
+  "backbone.convnext.7.norm.weight": [
+    512
+  ],
+  "backbone.convnext.7.pwconv1.bias": [
+    1536
+  ],
+  "backbone.convnext.7.pwconv1.weight": [
+    1536,
+    512
+  ],
+  "backbone.convnext.7.pwconv2.bias": [
+    512
+  ],
+  "backbone.convnext.7.pwconv2.weight": [
+    512,
+    1536
+  ],
+  "backbone.embed.bias": [
+    512
+  ],
+  "backbone.embed.weight": [
+    512,
+    100,
+    7
+  ],
+  "backbone.final_layer_norm.bias": [
+    512
+  ],
+  "backbone.final_layer_norm.weight": [
+    512
+  ],
+  "backbone.norm.bias": [
+    512
+  ],
+  "backbone.norm.weight": [
+    512
+  ],
+  "head.istft.window": [
+    1024
+  ],
+  "head.out.bias": [
+    1026
+  ],
+  "head.out.weight": [
+    1026,
+    512
+  ]
+}
